@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/IMG.JPG">
+  <link rel="icon" href="/img/IMG.JPG">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Cheng Liang">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="In mathematics, vector space is a set of objects that can be operated(added, multipled and so on) together with number A vector space is a triple(V, +, .) and it must obey the following 9 rules: (1) C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vector Space">
+<meta property="og:url" content="http://example.com/2021/12/23/post/index.html">
+<meta property="og:site_name" content="imchengliang">
+<meta property="og:description" content="In mathematics, vector space is a set of objects that can be operated(added, multipled and so on) together with number A vector space is a triple(V, +, .) and it must obey the following 9 rules: (1) C">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/maxresdefault.jpeg">
+<meta property="article:published_time" content="2021-12-23T14:15:11.000Z">
+<meta property="article:modified_time" content="2022-01-14T09:56:44.980Z">
+<meta property="article:author" content="Cheng Liang">
+<meta property="article:tag" content="Linear Algebra">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/maxresdefault.jpeg">
+  
+  
+  <title>Vector Space - imchengliang</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/===/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="imchengliang" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Blog of Cheng Liang</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/maxresdefault.jpeg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Vector Space">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-12-23 15:15" pubdate>
+        December 23, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Vector Space</h1>
+            
+            <div class="markdown-body">
+              <p>In mathematics, vector space is a set of objects that can be operated(added, multipled and so on) together with number</p>
+<h2 id="a-vector-space-is-a-triplev-.-and-it-must-obey-the-following-9-rules">A vector space is a triple(V, +, .) and it must obey the following 9 rules:</h2>
+<h3 id="closure-by-addition-forall-u-w-in-v-quad-uw-in-v-2-additive-associality-forall-u-v-w-in-v-quad-uvwuvw-3-additive-commutativity-forall-u-w-in-v-quad-uw-wu-4-additive-identity-exists-0-in-v-quad-u0-0u-5-additive-inverse-forall-u-in-v-quad--u-in-v-quad-s.t.-quad--uuu-u0-6-closure-by-scalar-multiplication-forall-k-in-r-quad-and-quad-u-in-v-quad-ku-in-v-7-multiplicative-associality-forall-kl-in-r-quad-and-quad-u-in-v-quad-kluklu-8-multiplicative-identity-exists-1-in-v-quad-1uu-9-distributive-property-forall-k-in-r-quad-and-quad-uw-in-v-quad-kuwkukw-forall-kl-in-r-quad-and-quad-u-in-v-quad-klukulu-notice-the-two-operation-in-a-triple-is-not-necessary-to-be-add-and-multiply">(1) Closure by addition: <span class="math display">\[ \forall u, w \in V, \quad u+w \in V \]</span> (2) Additive associality: <span class="math display">\[ \forall u, v, w \in V, \quad (u+v)+w=u+(v+w) \]</span> (3) Additive commutativity: <span class="math display">\[ \forall u, w \in V, \quad u+w = w+u \]</span> (4) Additive identity: <span class="math display">\[ \exists 0 \in V, \quad u+0 = 0+u \]</span> (5) Additive inverse: <span class="math display">\[ \forall u \in V, \quad -u \in V \quad s.t. \quad (-u)+u=u+(-u)=0 \]</span> (6) Closure by scalar multiplication: <span class="math display">\[ \forall k \in R \quad and \quad u \in V, \quad k*u \in V \]</span> (7) Multiplicative associality: <span class="math display">\[ \forall k,l \in R \quad and \quad u \in V, \quad (k*l)*u=k*(l*u)  \]</span> (8) Multiplicative identity: <span class="math display">\[ \exists 1 \in V, \quad 1*u=u\]</span> (9) Distributive property: <span class="math display">\[  \forall k \in R \quad and \quad u,w \in V, \quad k*(u+w)=k*u+k*w \]</span> <span class="math display">\[ \forall k,l \in R \quad and \quad u \in V, \quad (k+l)*u=k*u+l*u \]</span> *notice: the two operation in a triple is not necessary to be add and multiply</h3>
+<h2 id="example-let-vr_0-be-the-set-of-strictly-positive-real-numbers.-let-u-boxplus-v-uv-for-all-uv-in-v-and-k-odot-uuk-for-all-u-in-v-and-k-in-r.-show-that-v-boxplus-odot-is-a-vector-space.">Example: Let $ V=R_{&gt;0} $ be the set of strictly positive real numbers. Let <span class="math inline">\(u \boxplus v = u*v\)</span> for all <span class="math inline">\(u,v \in V\)</span> and <span class="math inline">\(k \odot u=u^k\)</span> for all <span class="math inline">\(u \in V\)</span> and <span class="math inline">\(k \in R\)</span>. Show that <span class="math inline">\((V, \boxplus, \odot)\)</span> is a vector space.</h2>
+<h3 id="let-uv-in-v-then-u-boxplus-v-uv-because-u-and-v-both-are-positive-real-number-therefore-u-v-is-also-a-positive-real-number-so-v-is-closure-under-boxplus.">Let <span class="math inline">\(u,v \in V\)</span>, then <span class="math inline">\(u \boxplus v = u*v\)</span> <br> <span class="math inline">\(\because u\)</span> and <span class="math inline">\(v\)</span> both are positive real number <br> <span class="math inline">\(\therefore u * v\)</span> is also a positive real number, so V is closure under <span class="math inline">\(\boxplus\)</span>.</h3>
+<h3 id="let-v1-in-v-then-v-boxplus-1-v1-v-therefore-v-has-boxplus-identity.">Let <span class="math inline">\(v,1 \in V\)</span>, then <span class="math inline">\(v \boxplus 1 = v*1 = v\)</span> <br> <span class="math inline">\(\therefore\)</span> V has <span class="math inline">\(\boxplus\)</span> identity.</h3>
+<h3 id="let-v-in-v-and-its-boxplus-identity-1-then-v-boxplus-1vv1v1-therefore-v-has-boxplus-inverse.">Let <span class="math inline">\(v \in V\)</span> and its <span class="math inline">\(\boxplus\)</span> identity <span class="math inline">\(=1\)</span>, then <span class="math inline">\(v \boxplus (1/v)=v*(1/v)=1\)</span>, <br> <span class="math inline">\(\therefore\)</span> V has <span class="math inline">\(\boxplus\)</span> inverse.</h3>
+<h3 id="let-uvx-in-v-then-u-boxplus-v-boxplus-xu-boxplus-vxuvxu-boxplus-vxu-boxplus-v-boxplus-x-therefore-v-has-boxplus-associality.">Let <span class="math inline">\(u,v,x \in V\)</span>, then <span class="math inline">\(u \boxplus (v \boxplus x)=u \boxplus (v*x)=u*v*x=(u \boxplus v)*x=(u \boxplus v) \boxplus x\)</span> <br> <span class="math inline">\(\therefore\)</span> V has <span class="math inline">\(\boxplus\)</span> associality.</h3>
+<h3 id="let-uv-in-v-then-u-boxplus-vuvvuv-boxplus-u-therefore-v-has-boxplus-commutativity.">Let <span class="math inline">\(u,v \in V\)</span>, then <span class="math inline">\(u \boxplus v=u*v=v*u=v \boxplus u\)</span> <br> <span class="math inline">\(\therefore\)</span> V has <span class="math inline">\(\boxplus\)</span> commutativity.</h3>
+<h3 id="let-v-in-v-k-in-r-then-k-odot-v-vk-because-v-is-a-positive-real-number-and-k-is-a-real-number-therefore-vk-is-also-a-positive-real-number-so-v-is-closure-under-odot.">Let <span class="math inline">\(v \in V\)</span>, <span class="math inline">\(k \in R\)</span>, then <span class="math inline">\(k \odot v = v^k\)</span> <br> <span class="math inline">\(\because v\)</span> is a positive real number and <span class="math inline">\(k\)</span> is a real number <br> <span class="math inline">\(\therefore\)</span> $v^k $ is also a positive real number, so V is closure under <span class="math inline">\(\odot\)</span>.</h3>
+<h3 id="let-v-in-v-then-1-odot-vv1v-therefore-v-has-odot-identity.">Let <span class="math inline">\(v \in V\)</span>, then <span class="math inline">\(1 \odot v=v^1=v\)</span> <br> <span class="math inline">\(\therefore\)</span> V has <span class="math inline">\(\odot\)</span> identity.</h3>
+<h3 id="let-v-in-v-and-ab-in-r-then-b-odot-a-odot-vvabb-odot-vab-odot-a-odot-v-therefore-v-has-odot-associality.">Let <span class="math inline">\(v \in V\)</span> and <span class="math inline">\(a,b \in R\)</span>, then <span class="math inline">\((b \odot a) \odot v=(v^a)^b=b \odot v^a=b \odot (a \odot v)\)</span> <br> <span class="math inline">\(\therefore\)</span> V has <span class="math inline">\(\odot\)</span> associality.</h3>
+<h3 id="let-uv-in-v-and-ab-in-r-then-a-odot-u-boxplus-va-odot-uvuvaua-vaa-odot-u-boxplus-a-odot-v-and-a-boxplus-b-odot-uab-odot-uuabua-uba-odot-u-boxplus-b-odot-u-therefore-v-has-distributive-property.">Let <span class="math inline">\(u,v \in V\)</span> and <span class="math inline">\(a,b \in R\)</span>, <br> then <span class="math inline">\(a \odot (u \boxplus v)=a \odot (u*v)=(u*v)^a=u^a * v^a=(a \odot u) \boxplus (a \odot v)\)</span> <br> and <span class="math inline">\((a \boxplus b) \odot u=(a*b) \odot u=u^{a*b}=u^a * u^b=(a \odot u) \boxplus (b \odot u)\)</span> <br> <span class="math inline">\(\therefore\)</span> V has distributive property.</h3>
+<h3 id="therefore-v-fits-all-9-rules-and-its-a-vector-space.">Therefore V fits all 9 rules and it's a vector space.</h3>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Linear-Algebra/">Linear Algebra</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    All articles in this blog adopt the <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 agreement</a> except for special statements. Please indicate the source for reprinting!
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/01/14/post-1/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Singular Value Decomposition (SVD)</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
