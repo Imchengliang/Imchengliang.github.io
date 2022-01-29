@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Show the Hidden File on Mac OS</title>
+    <link href="/2022/01/29/hidden-file/"/>
+    <url>/2022/01/29/hidden-file/</url>
+    
+    <content type="html"><![CDATA[<p>Sometimes we might need to edit the hidden file on Mac such as the configuration file but we don't know the path of this file. Therefore, letting the computer shows the hidden file allows us to locate and edit this file more convenient. This post would introduce two ways to show the hidden file on Mac.</p><h2 id="enter-the-command-of-show-hide-hidden-file">(1) Enter the command of show / hide hidden file</h2><h3 id="we-can-directly-enter-the-following-commands-on-terminal-to-show-or-hide-all-the-hidden-files.">We can directly enter the following commands on terminal to show or hide all the hidden files.</h3><figure class="highlight applescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs applescript"><span class="hljs-comment"># Show the hidden files</span><br>defaults <span class="hljs-built_in">write</span> com.apple.finder AppleShowAllFiles -<span class="hljs-built_in">boolean</span> <span class="hljs-literal">true</span>;killall Finder<br><span class="hljs-comment"># Hide the hidden files</span><br>defaults <span class="hljs-built_in">write</span> com.apple.finder AppleShowAllFiles -<span class="hljs-built_in">boolean</span> <span class="hljs-literal">false</span>;killall Finder<br></code></pre></td></tr></tbody></table></figure><h2 id="create-the-sh-file-that-contains-the-two-commands-above-and-use-the-file-to-show-hide-the-hidden-files">(2) Create the SH file that contains the two commands above, and use the file to show /hide the hidden files</h2><h3 id="the-commands-above-is-so-long-that-its-hard-to-remember-and-type-it-correctly.-hence-we-can-store-them-in-the-sh-file-and-each-time-we-run-the-sh-file-can-also-achieve-the-same-effect.">The commands above is so long that it's hard to remember and type it correctly. Hence, we can store them in the SH file, and each time we run the SH file can also achieve the same effect.</h3><figure class="highlight jboss-cli"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-comment"># Create the SH files </span><br>touch show_hidden_file.sh<br>touch hide_hidden_file.sh<br><br><span class="hljs-comment"># Write the show_hidden_files_command into show_hidden_file.sh</span><br><span class="hljs-comment"># Write the hide_hidden_files_command into hide_hidden_file.sh</span><br><br><span class="hljs-comment"># Show the hidden files</span><br><span class="hljs-string">./show_hidden_file.sh</span><br><span class="hljs-comment"># Hide the hidden files</span><br><span class="hljs-string">./hide_hidden_file.sh</span><br></code></pre></td></tr></tbody></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Mac</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Use SSH to connect the virtual machine on cloud and run jupyter notebook on it</title>
     <link href="/2022/01/21/cloud/"/>
     <url>/2022/01/21/cloud/</url>
