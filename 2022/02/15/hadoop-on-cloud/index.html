@@ -1,0 +1,511 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/IMG.JPG">
+  <link rel="icon" href="/img/IMG.JPG">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Cheng Liang">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="The main content of this blog is introducing how to run word count example by Hadoop and Java on the cloud, including set up the Hadoop configuration, generate and adjust the Java code for Hadoop, and">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Run Word-Count Example of Hadoop on Cloud (Java Version)">
+<meta property="og:url" content="http://example.com/2022/02/15/hadoop-on-cloud/index.html">
+<meta property="og:site_name" content="imchengliang">
+<meta property="og:description" content="The main content of this blog is introducing how to run word count example by Hadoop and Java on the cloud, including set up the Hadoop configuration, generate and adjust the Java code for Hadoop, and">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/2019.jpeg">
+<meta property="article:published_time" content="2022-02-15T12:19:11.000Z">
+<meta property="article:modified_time" content="2022-02-16T13:54:49.787Z">
+<meta property="article:author" content="Cheng Liang">
+<meta property="article:tag" content="Cloud Computing, Hadoop">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/2019.jpeg">
+  
+  
+  <title>Run Word-Count Example of Hadoop on Cloud (Java Version) - imchengliang</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/===/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="imchengliang" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Blog of Cheng Liang</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/2019.jpeg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Run Word-Count Example of Hadoop on Cloud (Java Version)">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-02-15 13:19" pubdate>
+        February 15, 2022 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Run Word-Count Example of Hadoop on Cloud (Java Version)</h1>
+            
+            <div class="markdown-body">
+              <p>The main content of this blog is introducing how to run word count example by Hadoop and Java on the cloud, including set up the Hadoop configuration, generate and adjust the Java code for Hadoop, and commands of running Hadoop. Before this, make sure that <a target="_blank" rel="noopener" href="https://imchengliang.top/2022/01/21/cloud/">Linux has been installed on your cloud service</a>, both Java and Hadoop are installed on your Linux system.</p>
+<h2 id="word-count-example-in-local-standalone-mode">(1) Word Count Example in Local (Standalone) Mode</h2>
+<p>The Standalone mode refers to an independent Java process that runs on a host and runs in non-distributed mode by default. It uses a local file system instead of a distributed file system and does not require any Hadoop daemons to be loaded.</p>
+<p>The default mode for Hadoop is standalone mode, so once hadoop is installed, we just need to put to data into input folder and run the command directly.</p>
+<p>Firstly, we create the input folder on local filesystem, and then we download the data that can be used for word-count from internet and put it into the input folder. </p><figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># On Ubuntu linux ‘wget’ command can be used to download data over http</span><br>wget http:<span class="hljs-regexp">//</span>www.gutenberg.org<span class="hljs-regexp">/ebooks/</span><span class="hljs-number">20417</span>.txt.utf-<span class="hljs-number">8</span><br></code></pre></td></tr></tbody></table></figure><p></p>
+<p>After the data is ready, we can run the following command (there is only one command!) to run the canonical MapReduce example.</p>
+<figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/hadoop-3.3.1/</span>bin<span class="hljs-regexp">/hadoop jar /u</span>sr<span class="hljs-regexp">/local/</span>hadoop-<span class="hljs-number">3.3</span>.<span class="hljs-number">1</span><span class="hljs-regexp">/share/</span>hadoop<span class="hljs-regexp">/mapreduce/</span>hadoop*examples*.jar wordcount <span class="hljs-regexp">/home/u</span>buntu<span class="hljs-regexp">/wordcount/i</span>nput <span class="hljs-regexp">/home/u</span>buntu<span class="hljs-regexp">/wordcount/</span>output<br></code></pre></td></tr></tbody></table></figure>
+<ul>
+<li>The format of this command: /installation directory of Hadoop/bin/hadoop jar /installation directory of Hadoop/share/hadoop/mapreduce/hadoop<em>examples</em>.jar wordcount /path of stored-data /path for the output</li>
+</ul>
+<p>Note: the folder names “input” and “output” are arbitrary - you can choose any names you like for the input and output directories. But the “input” folder should contain the downloaded file. Note that the output folder is created by Hadoop, so you should not create it manually before running the command above.</p>
+<h2 id="word-count-example-in-pseudo-distributed-mode">(2) Word Count Example in Pseudo-Distributed Mode</h2>
+<p>The Pseudo-distributed mode refers to running on one host, using multiple Java processes to imitate various nodes that run in fully distributed mode but not actually be used in production. The pseudo-distributed mode has the main functions of the fully distributed mode.</p>
+<p>Firstly, we need to edit the configuration file to switch Hadoop into pseudo-distributed mode. The two configuration files that are needed to be edited are 'core-site.xml' and 'hdfs-site.xml', and they are located on '/installation directory of Hadoop/etc/hadoop'.</p>
+<figure class="highlight dts"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-meta"># core-site.xml</span><br><span class="hljs-params">&lt;configuration&gt;</span><br>    <span class="hljs-params">&lt;property&gt;</span><br>        <span class="hljs-params">&lt;name&gt;</span>fs.defaultFS<span class="hljs-params">&lt;/name&gt;</span><br>        <span class="hljs-params">&lt;value&gt;</span>hdfs:<span class="hljs-comment">//localhost:9000&lt;/value&gt;</span><br>    <span class="hljs-params">&lt;/property&gt;</span><br><span class="hljs-params">&lt;/configuration&gt;</span><br></code></pre></td></tr></tbody></table></figure>
+<figure class="highlight dts"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-meta"># hdfs-site.xml</span><br><span class="hljs-params">&lt;configuration&gt;</span><br>    <span class="hljs-params">&lt;property&gt;</span><br>        <span class="hljs-params">&lt;name&gt;</span>dfs.replication<span class="hljs-params">&lt;/name&gt;</span><br>        <span class="hljs-params">&lt;value&gt;</span><span class="hljs-number">1</span><span class="hljs-params">&lt;/value&gt;</span><br>    <span class="hljs-params">&lt;/property&gt;</span><br><span class="hljs-params">&lt;/configuration&gt;</span><br></code></pre></td></tr></tbody></table></figure>
+<ul>
+<li>We configurate the global parameters of cluster including HDFS URL and temporary directory of Hadoop by editing core-site.xml. The parameters of HDFS are stored in hdfs-site.xml, such as the storage location of the name node and data node, the number of file copies, the read permission of the file, etc.</li>
+</ul>
+<p>After the configuration files are ready, let's check that if we can ssh to the localhost without a passphrase.</p>
+<figure class="highlight elixir"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>ssh localhost<br></code></pre></td></tr></tbody></table></figure>
+<p>If we cannot ssh to localhost without a passphrase, execute the following commands to setup passphraseless ssh</p>
+<figure class="highlight arcade"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs arcade">$ ssh-keygen -t rsa -P <span class="hljs-string">''</span> -f ~<span class="hljs-regexp">/.ssh/i</span>d_rsa<br>$ cat ~<span class="hljs-regexp">/.ssh/i</span>d_rsa.pub &gt;&gt; ~<span class="hljs-regexp">/.ssh/</span>authorized_keys<br>$ chmod <span class="hljs-number">0600</span> ~<span class="hljs-regexp">/.ssh/</span>authorized_keys<br></code></pre></td></tr></tbody></table></figure>
+<p>The next step is to use the following commands in the installation directory of Hadoop to start a MapReduce job in pseudo-distributed mode locally. </p><figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># Format the filesystem</span><br>$ bin/hdfs namenode -format<br><span class="hljs-comment"># Start NameNode daemon and DataNode daemon</span><br>$ sbin/start-dfs.sh<br><span class="hljs-comment"># Make the HDFS directories required to execute MapReduce jobs</span><br>$ bin<span class="hljs-regexp">/hdfs dfs -mkdir /u</span>ser<br>$ bin<span class="hljs-regexp">/hdfs dfs -mkdir /u</span>ser/&lt;username&gt;<br></code></pre></td></tr></tbody></table></figure><p></p>
+<p>We can check if the job starts successfully by the command 'jps'. </p><figure class="highlight vala"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs vala">$ jps<br><span class="hljs-meta"># if the following namenode, datanode, secondarynamenode are all shown, it means that the job has started</span><br><span class="hljs-meta"># 6818 DataNode</span><br><span class="hljs-meta"># 6651 NameNode</span><br><span class="hljs-meta"># 7067 SecondaryNameNode</span><br><span class="hljs-meta"># 91869 Jps</span><br></code></pre></td></tr></tbody></table></figure><p></p>
+<ul>
+<li>DataNode stores data block, NameNode is to accept the read and write requests from client and send them to DataNode, SecondaryNameNode helps NameNode merge edits log to reduce NameNode’s startup time.</li>
+</ul>
+<h2 id="create-and-modify-the-java-code-for-word-count-example">(3) Create and Modify the Java code for Word Count Example</h2>
+<p>Now we write the Java code to count the words in the txt file that is downloaded in step (1), the goal is that the output of the job should thus be a file containing lines like: a number_of_words_starting_with_a_or_A</p>
+<p>First of all, we create and edit the Java file in any path of the local filesystem we want. </p><figure class="highlight irpf90"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs irpf90"><span class="hljs-keyword">touch</span> &lt;Java <span class="hljs-keyword">file</span> <span class="hljs-keyword">name</span>&gt;.java<br>vim &lt;Java <span class="hljs-keyword">file</span> <span class="hljs-keyword">name</span>&gt;,java<br></code></pre></td></tr></tbody></table></figure><p></p>
+<p>The Java code is copied from the <a target="_blank" rel="noopener" href="https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html">official sample of Apache Hadoop</a>, and then adjust the code based on the requirement above. The two key function mapper and reducer after adjustment are shown as below, the full code can be find in <a target="_blank" rel="noopener" href="https://github.com/Imchengliang/Data-Engineering">there</a> </p><figure class="highlight angelscript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">public</span> static <span class="hljs-keyword">class</span> <span class="hljs-symbol">FirstLetterCountMapper</span><br>	<span class="hljs-symbol">extends</span> <span class="hljs-symbol">Mapper</span>&lt;<span class="hljs-symbol">LongWritable, <span class="hljs-symbol">Text</span>, <span class="hljs-symbol">Text</span>, <span class="hljs-symbol">IntWritable</span></span>&gt; {<br>    @Override<br>	<span class="hljs-keyword">public</span> <span class="hljs-built_in">void</span> map(LongWritable key, Text value, Context context) <br>		throws IOException, InterruptedException {<br>		# change the input data <span class="hljs-built_in">int</span>o <span class="hljs-built_in">string</span> <span class="hljs-keyword">and</span> make all the letters of it be lowercase<br>		String line = value.toString().toLowerCase();<br>		# split the <span class="hljs-built_in">string</span> data <span class="hljs-built_in">int</span>o individual word by blankspace<br>		String[] <span class="hljs-built_in">string</span>s = line. split(<span class="hljs-string">" "</span>);<br>		<span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>; i&lt;<span class="hljs-built_in">string</span>s.length; i++) {<br>			# filter <span class="hljs-keyword">out</span> empty <span class="hljs-built_in">string</span>s<br>			<span class="hljs-keyword">if</span> ( <span class="hljs-built_in">string</span>s[i] != <span class="hljs-literal">null</span> &amp;&amp; !<span class="hljs-built_in">string</span>s[i].isEmpty() ){<br>				# extract the first letter of <span class="hljs-keyword">this</span> word<br>				char firstLetter = <span class="hljs-built_in">string</span>s[i].charAt(<span class="hljs-number">0</span>);<br>					# find the words begin with a-z <span class="hljs-keyword">and</span> deliver their first letter to reducer <span class="hljs-keyword">class</span><br>    				<span class="hljs-symbol">if</span> (<span class="hljs-symbol">firstLetter</span> &gt;= '<span class="hljs-symbol">a</span>' &amp;&amp; <span class="hljs-symbol">firstLetter</span> &lt;= '<span class="hljs-symbol">z</span>') {<br>        				context.write(new Text(String.valueOf(firstLetter)), new IntWritable(<span class="hljs-number">1</span>));<br>					}<br>                }<br>            }<br>		}<br>    } <br><br><span class="hljs-keyword">public</span> static <span class="hljs-keyword">class</span> <span class="hljs-symbol">FirstLetterCountReducer</span><br>	<span class="hljs-symbol">extends</span> <span class="hljs-symbol">Reducer</span>&lt;<span class="hljs-symbol">Text, <span class="hljs-symbol">IntWritable</span>, <span class="hljs-symbol">Text</span>, <span class="hljs-symbol">IntWritable</span></span>&gt; {<br>		<span class="hljs-keyword">private</span> IntWritable result = new IntWritable();<br>		@Override<br>		<span class="hljs-keyword">public</span> <span class="hljs-built_in">void</span> reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context)  <br>			throws IOException, InterruptedException {<br>			<span class="hljs-built_in">int</span> sum = <span class="hljs-number">0</span>;<br>			# count the number of words begin with a-z <span class="hljs-keyword">in</span> a loop<br>			<span class="hljs-keyword">for</span> (IntWritable val : values) {<br>				sum += val.<span class="hljs-keyword">get</span>();<br>            }<br>			result.<span class="hljs-keyword">set</span>(sum);<br>			context.write(key, result);<br>   	    }<br>    }<br></code></pre></td></tr></tbody></table></figure><p></p>
+<p>After the file edition is finished, we need to compile the wordcount example and make a jar file. </p><figure class="highlight applescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs applescript">cd /directory <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> folder <span class="hljs-keyword">that</span> <span class="hljs-keyword">contains</span> Java <span class="hljs-built_in">file</span><br>javac -cp `/installation directory <span class="hljs-keyword">of</span> Hadoop/bin/hadoop classpath` &lt;Java <span class="hljs-built_in">file</span> <span class="hljs-built_in">name</span>&gt;.java<br>jar -cvf &lt;Java <span class="hljs-built_in">file</span> <span class="hljs-built_in">name</span>&gt;.jar  *.<span class="hljs-built_in">class</span><br></code></pre></td></tr></tbody></table></figure><p></p>
+<p>Now there is a file “<java file="" name="">.jar” in the same folder contains Java file. Next, load the file whose words we are counting into hdfs. </java></p><figure class="highlight livecodeserver"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">/installation <span class="hljs-built_in">directory</span> <span class="hljs-keyword">of</span> Hadoop/bin/hdfs dfs -<span class="hljs-built_in">put</span> /<span class="hljs-built_in">directory</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> data we are going <span class="hljs-built_in">to</span> <span class="hljs-built_in">process</span><br></code></pre></td></tr></tbody></table></figure><p></p>
+<ul>
+<li>There should be a file in hdfs now, and we can check it by this command: /installation directory of Hadoop/bin/hdfs dfs -ls input</li>
+</ul>
+<p>Then, we run the following command to run the Java code in Hadoop. </p><figure class="highlight applescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">/installation directory <span class="hljs-keyword">of</span> Hadoop/bin/hadoop jar &lt;Java <span class="hljs-built_in">file</span> <span class="hljs-built_in">name</span>&gt;.jar &lt;Java <span class="hljs-built_in">file</span> <span class="hljs-built_in">name</span>&gt; input output<br></code></pre></td></tr></tbody></table></figure><p></p>
+<p>If the hadoop run completes normally, verify that the output looks as expected. First check the content of the output directory in hdfs. Then check the content of the output file using the ‘-cat’ argument to ‘hdfs dfs’. </p><figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">/installation directory of Hadoop/</span>bin/hdfs dfs -ls output<br><span class="hljs-regexp">/installation directory of Hadoop/</span>bin<span class="hljs-regexp">/hdfs dfs -cat output/</span>part-r-<span class="hljs-number">00000</span><br></code></pre></td></tr></tbody></table></figure><p></p>
+<ul>
+<li>The output files are by default named part-x-yyyyy where: x is either 'm' or 'r', depending on whether the job was a map only job, or reduce. yyyyy is the mapper or reducer task number (zero based).</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Cloud-Computing-Hadoop/">Cloud Computing, Hadoop</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    All articles in this blog adopt the <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 agreement</a> except for special statements. Please indicate the source for reprinting!
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/01/29/hidden-file/">
+                        <span class="hidden-mobile">Show the Hidden File on Mac OS</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
