@@ -16,23 +16,23 @@
   <meta name="author" content="Cheng Liang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="In mathematics, vector space is a set of objects that can be operated(added, multipled and so on) together with number A vector space is a triple(V, +, .) and it must obey the following 9 rules:  Clos">
+    <meta name="description" content="Suppose that \(A\) is a \(m * n\) matrix that maps vectors in \(R^n\) to vectors in \(R^m\). The four fundamental subspaces associated with \(A\), two in \(R^n\) and two in \(R^n\). \[ A&#x3D;\left(\begin{">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vector Space">
-<meta property="og:url" content="http://example.com/2021/12/23/post/index.html">
+<meta property="og:title" content="The Four Fundamental Subspaces">
+<meta property="og:url" content="http://example.com/2022/03/27/subspace/index.html">
 <meta property="og:site_name" content="imchengliang">
-<meta property="og:description" content="In mathematics, vector space is a set of objects that can be operated(added, multipled and so on) together with number A vector space is a triple(V, +, .) and it must obey the following 9 rules:  Clos">
+<meta property="og:description" content="Suppose that \(A\) is a \(m * n\) matrix that maps vectors in \(R^n\) to vectors in \(R^m\). The four fundamental subspaces associated with \(A\), two in \(R^n\) and two in \(R^n\). \[ A&#x3D;\left(\begin{">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/img/maxresdefault.jpeg">
-<meta property="article:published_time" content="2021-12-23T14:15:11.000Z">
-<meta property="article:modified_time" content="2022-03-27T21:07:38.405Z">
+<meta property="article:published_time" content="2022-03-27T21:06:00.000Z">
+<meta property="article:modified_time" content="2022-03-28T14:04:43.962Z">
 <meta property="article:author" content="Cheng Liang">
 <meta property="article:tag" content="Linear Algebra">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/maxresdefault.jpeg">
   
   
-  <title>Vector Space - imchengliang</title>
+  <title>The Four Fundamental Subspaces - imchengliang</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -181,7 +181,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Vector Space">
+            <span class="h2" id="subtitle" title="The Four Fundamental Subspaces">
               
             </span>
 
@@ -191,8 +191,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-12-23 15:15" pubdate>
-        December 23, 2021 pm
+      <time datetime="2022-03-27 23:06" pubdate>
+        March 27, 2022 pm
       </time>
     </span>
   
@@ -228,34 +228,51 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Vector Space</h1>
+            <h1 style="display: none">The Four Fundamental Subspaces</h1>
             
             <div class="markdown-body">
-              <p>In mathematics, vector space is a set of objects that can be operated(added, multipled and so on) together with number</p>
-<h2 id="a-vector-space-is-a-triplev-.-and-it-must-obey-the-following-9-rules">A vector space is a triple(V, +, .) and it must obey the following 9 rules:</h2>
-<ol type="1">
-<li>Closure by addition: <span class="math display">\[ \forall u, w \in V, \quad u+w \in V \]</span></li>
-<li>Additive associality: <span class="math display">\[ \forall u, v, w \in V, \quad (u+v)+w=u+(v+w) \]</span></li>
-<li>Additive commutativity: <span class="math display">\[ \forall u, w \in V, \quad u+w = w+u \]</span></li>
-<li>Additive identity: <span class="math display">\[ \exists 0 \in V, \quad u+0 = 0+u \]</span></li>
-<li>Additive inverse: <span class="math display">\[ \forall u \in V, \quad -u \in V \quad s.t. \quad (-u)+u=u+(-u)=0 \]</span></li>
-<li>Closure by scalar multiplication: <span class="math display">\[ \forall k \in R \quad and \quad u \in V, \quad k*u \in V \]</span></li>
-<li>Multiplicative associality: <span class="math display">\[ \forall k,l \in R \quad and \quad u \in V, \quad (k*l)*u=k*(l*u)  \]</span></li>
-<li>Multiplicative identity: <span class="math display">\[ \exists 1 \in V, \quad 1*u=u\]</span></li>
-<li>Distributive property: <span class="math display">\[  \forall k \in R \quad and \quad u,w \in V, \quad k*(u+w)=k*u+k*w \]</span> <span class="math display">\[ \forall k,l \in R \quad and \quad u \in V, \quad (k+l)*u=k*u+l*u \]</span> *notice: the two operation in a triple is not necessary to be add and multiply</li>
-</ol>
-<h2 id="example">Example:</h2>
-<p>Let $ V=R_{&gt;0} $ be the set of strictly positive real numbers. Let <span class="math inline">\(u \boxplus v = u*v\)</span> for all <span class="math inline">\(u,v \in V\)</span> and <span class="math inline">\(k \odot u=u^k\)</span> for all <span class="math inline">\(u \in V\)</span> and <span class="math inline">\(k \in R\)</span>. Show that <span class="math inline">\((V, \boxplus, \odot)\)</span> is a vector space.</p>
-<p>Let <span class="math inline">\(u,v \in V\)</span>, then <span class="math inline">\(u \boxplus v = u*v\)</span> <br> <span class="math inline">\(\because u\)</span> and <span class="math inline">\(v\)</span> both are positive real number <br> <span class="math inline">\(\therefore u * v\)</span> is also a positive real number, so V is closure under <span class="math inline">\(\boxplus\)</span>.</p>
-<p>Let <span class="math inline">\(v,1 \in V\)</span>, then <span class="math inline">\(v \boxplus 1 = v*1 = v\)</span> <br> <span class="math inline">\(\therefore\)</span> V has <span class="math inline">\(\boxplus\)</span> identity.</p>
-<p>Let <span class="math inline">\(v \in V\)</span> and its <span class="math inline">\(\boxplus\)</span> identity <span class="math inline">\(=1\)</span>, then <span class="math inline">\(v \boxplus (1/v)=v*(1/v)=1\)</span>, <br> <span class="math inline">\(\therefore\)</span> V has <span class="math inline">\(\boxplus\)</span> inverse.</p>
-<p>Let <span class="math inline">\(u,v,x \in V\)</span>, then <span class="math inline">\(u \boxplus (v \boxplus x)=u \boxplus (v*x)=u*v*x=(u \boxplus v)*x=(u \boxplus v) \boxplus x\)</span> <br> <span class="math inline">\(\therefore\)</span> V has <span class="math inline">\(\boxplus\)</span> associality.</p>
-<p>Let <span class="math inline">\(u,v \in V\)</span>, then <span class="math inline">\(u \boxplus v=u*v=v*u=v \boxplus u\)</span> <br> <span class="math inline">\(\therefore\)</span> V has <span class="math inline">\(\boxplus\)</span> commutativity.</p>
-<p>Let <span class="math inline">\(v \in V\)</span>, <span class="math inline">\(k \in R\)</span>, then <span class="math inline">\(k \odot v = v^k\)</span> <br> <span class="math inline">\(\because v\)</span> is a positive real number and <span class="math inline">\(k\)</span> is a real number <br> <span class="math inline">\(\therefore\)</span> $v^k $ is also a positive real number, so V is closure under <span class="math inline">\(\odot\)</span>.</p>
-<p>Let <span class="math inline">\(v \in V\)</span>, then <span class="math inline">\(1 \odot v=v^1=v\)</span> <br> <span class="math inline">\(\therefore\)</span> V has <span class="math inline">\(\odot\)</span> identity.</p>
-<p>Let <span class="math inline">\(v \in V\)</span> and <span class="math inline">\(a,b \in R\)</span>, then <span class="math inline">\((b \odot a) \odot v=(v^a)^b=b \odot v^a=b \odot (a \odot v)\)</span> <br> <span class="math inline">\(\therefore\)</span> V has <span class="math inline">\(\odot\)</span> associality.</p>
-<p>Let <span class="math inline">\(u,v \in V\)</span> and <span class="math inline">\(a,b \in R\)</span>, <br> then <span class="math inline">\(a \odot (u \boxplus v)=a \odot (u*v)=(u*v)^a=u^a * v^a=(a \odot u) \boxplus (a \odot v)\)</span> <br> and <span class="math inline">\((a \boxplus b) \odot u=(a*b) \odot u=u^{a*b}=u^a * u^b=(a \odot u) \boxplus (b \odot u)\)</span> <br> <span class="math inline">\(\therefore\)</span> V has distributive property.</p>
-<p>Therefore V fits all 9 rules and it's a vector space.</p>
+              <p>Suppose that <span class="math inline">\(A\)</span> is a <span class="math inline">\(m * n\)</span> matrix that maps vectors in <span class="math inline">\(R^n\)</span> to vectors in <span class="math inline">\(R^m\)</span>. The four fundamental subspaces associated with <span class="math inline">\(A\)</span>, two in <span class="math inline">\(R^n\)</span> and two in <span class="math inline">\(R^n\)</span>.</p>
+<p><span class="math display">\[
+A=\left(\begin{array}{ll}
+a_{11} &amp; \dots &amp; a_{1n}\\
+\dots &amp; \dots &amp; \dots\\
+a_{m1} &amp; \dots &amp; a_{mn}
+\end{array}\right) = \left(\begin{array}{ll}
+1 &amp; 3 &amp; 3 \\
+2 &amp; 4 &amp; 6 \\
+1 &amp; 7 &amp; 3
+\end{array}\right) \in M_{m,n}(R) = M_{3,3}(R)
+\]</span></p>
+<h2 id="column-space">Column Space</h2>
+<p>The column space of A is the linear combination of all linearly independent non-zero columns in A (it works with or without Gaussian elimination), i.e. <span class="math inline">\(Ax\)</span>, subspace in <span class="math inline">\(R^m\)</span>.</p>
+<p>So <span class="math inline">\(C(A)\)</span> span <span class="math inline">\(\left\{\left(\begin{array}{c}a_{11} \\ \vdots \\ a_{m 1}\end{array}\right) \cdots\left(\begin{array}{c}a_{1 n} \\ \vdots \\ a_{m n}\end{array}\right) \right\}\)</span> , and the rank of A is equal to the dimension of column space.</p>
+<p>We apply Gaussian elimination on matrix A, then get <span class="math inline">\(A=\left(\begin{array}{lll} 1 &amp; 3 &amp; 3 \\ 2 &amp; 4 &amp; 6 \\ 1 &amp; 7 &amp; 3 \end{array}\right) {\longrightarrow}\left(\begin{array}{lll} 1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{array}\right)\)</span>.</p>
+<p>Because column 1 and column 3 are not linearly independent, <span class="math inline">\(C(A)\)</span> is the linear combination of column 2 and column 1 or column 2 and column 3, either of these two is correct.</p>
+<p>If we choose column 1 and column 2, then <span class="math inline">\(C(A) = \left\{\left(\begin{array}{c}1 \\ 0 \\ 0\end{array}\right) , \left(\begin{array}{c}0 \\ 1 \\ 0\end{array}\right) \right\}\)</span>, and <span class="math inline">\(Rank(A) = dim(C(A)) = 2\)</span>.</p>
+<h2 id="row-space">Row Space</h2>
+<p>The row space of A is the linear combination of all non-zero rows in A after Gaussian elimination, i.e. <span class="math inline">\(A^{T}y\)</span>, subspace in <span class="math inline">\(R^n\)</span>.</p>
+<p>So <span class="math inline">\(R(A) = C(A^T)\)</span> span <span class="math inline">\(\left\{\left(a_{11} \ldots a_{1 n}\right) \cdots\left(a_{m 1} \cdots a_{m n}\right)\right\}\)</span>.</p>
+<p>According to Gaussian elimination, we get <span class="math inline">\(A {\rightarrow}\left(\begin{array}{lll} 1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{array}\right)\)</span>, then row space of A is the non-zero rows (row 1 and row 2), <span class="math inline">\(R(A)=\left\{\left(1, 0, 3\right),\left(0, 1, 0\right)\right\}\)</span>.</p>
+<h2 id="nullspace">Nullspace</h2>
+<p>The nullspace of A is the linear combination of all solution of <span class="math inline">\(Ax = 0\)</span>, subspace in <span class="math inline">\(R^n\)</span>.</p>
+<p>According to Gaussian elimination, we get <span class="math inline">\(A {\rightarrow}\left(\begin{array}{lll} 1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{array}\right)\)</span>, then we get<br>
+</p>
+<p><span class="math inline">\(\left(\begin{array}{lll}1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0\end{array}\right) \cdot\left(\begin{array}{l}x_{1} \\ x_{2} \\ x_{3}\end{array}\right)=\left\{\begin{array}{c}x_{1}+3 x_{3}=0 \\ x_{2}=0\end{array} \rightarrow\left\{\begin{array}{c}x_{1}=-3 x_{3} \\ x_{2}=0 \\ x_{3} \in R\end{array} \rightarrow x=N(A)=\left(\begin{array}{c}-3 \\ 0 \\ 1\end{array}\right) \cdot x_{3}\right.\right.\)</span><br>
+</p>
+<p>So a basis of <span class="math inline">\(N(A)\)</span> is <span class="math inline">\((-3, 0, 1 )\)</span>, and nullity of A: <span class="math inline">\(null(A) = dim(N(A)) = 1\)</span>.</p>
+<h2 id="left-nullspace">Left Nullspace</h2>
+<p>The left nullspace of A is the linear combination of all solution of <span class="math inline">\(A^{T}y = 0\)</span>, subspace in <span class="math inline">\(R^m\)</span>.</p>
+<p>We apply Gaussian elimination on matrix <span class="math inline">\(A^T\)</span>, then get <span class="math inline">\(A^T=\left(\begin{array}{lll} 1 &amp; 2 &amp; 1 \\ 3 &amp; 4 &amp; 7 \\ 3 &amp; 6 &amp; 3 \end{array}\right) {\longrightarrow}\left(\begin{array}{lll} 1 &amp; 0 &amp; 5 \\ 0 &amp; 1 &amp; -2 \\ 0 &amp; 0 &amp; 0 \end{array}\right)\)</span><br>
+</p>
+<p><span class="math inline">\(\left(\begin{array}{lll}1 &amp; 0 &amp; 5 \\ 0 &amp; 1 &amp; -2 \\ 0 &amp; 0 &amp; 0\end{array}\right) \cdot\left(\begin{array}{l}y_{1} \\ y_{2} \\ y_{3}\end{array}\right)=\left\{\begin{array}{c}y_{1}+5 y_{3}=0 \\ y_{2}-2y_{3}=0\end{array} \rightarrow\left\{\begin{array}{c}y_{1}=-5 y_{3} \\ y_{2}=2 y_{3} \\ y_{3} \in R\end{array} \rightarrow y=N(A^T)=\left(\begin{array}{c}-5 \\ 2 \\ 1\end{array}\right) \cdot y_{3}\right.\right.\)</span> &nbsp;<br>
+</p>
+<p>So a basis of <span class="math inline">\(N(A^T)\)</span> is <span class="math inline">\((-5, 2, 1 )\)</span>, and <span class="math inline">\(null(A^T) = dim(N(A^T)) = 1\)</span>.</p>
+<h2 id="characteristic-of-these-four-subspaces">Characteristic of these four subspaces</h2>
+<p>Column space and left nullspace are orthogonal, row space and null space are orthogonal.<br>
+</p>
+<p><span class="math inline">\(C(A) \perp N\left(A^{\top}\right) \rightarrow(1,2,1) \cdot\left(\begin{array}{c}-5 \\ 2 \\ 1\end{array}\right)=(3,4,7) \cdot\left(\begin{array}{c}-5 \\ 2 \\ 1\end{array}\right)=0\)</span><br>
+</p>
+<p><span class="math inline">\(R(A) \perp N(A) \rightarrow(1,0,3) \cdot\left(\begin{array}{c}-3 \\ 0 \\ 1\end{array}\right)=(0,1,0) \cdot\left(\begin{array}{c}-3 \\ 0 \\ 1\end{array}\right)=0\)</span></p>
 
             </div>
             <hr>
@@ -283,15 +300,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/01/14/post-1/">
+                      <a href="/2022/03/28/subspace-1/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Singular Value Decomposition (SVD)</span>
+                        <span class="hidden-mobile">Subspace</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2022/02/16/hadoop-on-cloud-python/">
+                        <span class="hidden-mobile">Run Word-Count Example of Hadoop on Cloud (Python Version)</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
