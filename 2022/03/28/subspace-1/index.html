@@ -16,23 +16,23 @@
   <meta name="author" content="Cheng Liang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="In Linear Algebra, linear subspace is also known as vector subspace, which is a subset of a larger vector space. A linear subspace is normally called as subspace when the context serves to distinguish">
+    <meta name="description" content="Norm is a function from a real or complex vector space to the non-negative real numbers that behaves in certain ways, which can be used to measure the size of vectors (vector norm) and matrices (matri">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Subspace">
+<meta property="og:title" content="Norms and Condition Number">
 <meta property="og:url" content="http://example.com/2022/03/28/subspace-1/index.html">
 <meta property="og:site_name" content="imchengliang">
-<meta property="og:description" content="In Linear Algebra, linear subspace is also known as vector subspace, which is a subset of a larger vector space. A linear subspace is normally called as subspace when the context serves to distinguish">
+<meta property="og:description" content="Norm is a function from a real or complex vector space to the non-negative real numbers that behaves in certain ways, which can be used to measure the size of vectors (vector norm) and matrices (matri">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/img/maxresdefault.jpeg">
 <meta property="article:published_time" content="2022-03-28T12:27:12.000Z">
-<meta property="article:modified_time" content="2022-03-28T14:23:38.311Z">
+<meta property="article:modified_time" content="2022-04-11T21:22:08.653Z">
 <meta property="article:author" content="Cheng Liang">
 <meta property="article:tag" content="Linear Algebra">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/maxresdefault.jpeg">
   
   
-  <title>Subspace - imchengliang</title>
+  <title>Norms and Condition Number - imchengliang</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -181,7 +181,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Subspace">
+            <span class="h2" id="subtitle" title="Norms and Condition Number">
               
             </span>
 
@@ -228,24 +228,73 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Subspace</h1>
+            <h1 style="display: none">Norms and Condition Number</h1>
             
             <div class="markdown-body">
-              <p>In Linear Algebra, linear subspace is also known as vector subspace, which is a subset of a larger <a target="_blank" rel="noopener" href="https://imchengliang.top/2021/12/23/post/">vector space</a>. A linear subspace is normally called as subspace when the context serves to distinguish it from other types of subspaces.</p>
-<p>For all subspace <span class="math inline">\(U\)</span>, they have to satisfy the following 3 rules:</p>
-<h2 id="additive-identity">(1) Additive identity</h2>
-<p><span class="math inline">\(0, u \in U\)</span>, and <span class="math inline">\(0+u = u+0\)</span>, <span class="math inline">\(0\)</span> and <span class="math inline">\(u\)</span> here are vectors.</p>
-<h2 id="close-under-addition">(2) Close under addition</h2>
-<p>For all <span class="math inline">\(u, w \in U\)</span>, then <span class="math inline">\(u+w \in U\)</span>, <span class="math inline">\(u\)</span> and <span class="math inline">\(w\)</span> here are vectors.</p>
-<h2 id="close-under-scalar-multiplication">(3) Close under scalar multiplication</h2>
-<p>For all <span class="math inline">\(u \in U\)</span>, <span class="math inline">\(k \in R\)</span>, then <span class="math inline">\(k*u \in U\)</span>, <span class="math inline">\(u\)</span> is a vector and <span class="math inline">\(k\)</span> is a constant.</p>
-<h2 id="smallest-containing-subspace">Smallest containing subspace</h2>
-<p>If <span class="math inline">\(U_1, U_2, \dots , U_m\)</span> are subspaces of <span class="math inline">\(U\)</span>, then <span class="math inline">\(U_1+ U_2+ \dots + U_m\)</span> is the smallest subspace of <span class="math inline">\(U\)</span> that contains <span class="math inline">\(U_1, U_2, \dots , U_m\)</span>.</p>
+              <p>Norm is a function from a real or complex vector space to the non-negative real numbers that behaves in certain ways, which can be used to measure the size of vectors (vector norm) and matrices (matrix norm). And norm is denoted by <span class="math inline">\(\parallel . \parallel\)</span>.</p>
+<p>The condition number is an application of the derivative, and is formally defined as the value of the asymptotic worst-case relative change in output for a relative change in input. The "function" is the solution of a problem and the "arguments" are the data in the problem, so the condition number depends on the nature of the underlying problem.</p>
+<h2 id="conditions-of-norms">Conditions of Norms</h2>
+<p>To be valid and useful as norms, all norms must satisfy the following conditions:</p>
+<ol type="1">
+<li><p><span class="math inline">\(\parallel A \parallel\)</span> <span class="math inline">\(\ge 0\)</span> for vectors <span class="math inline">\(\parallel x \parallel\)</span> <span class="math inline">\(\ge 0\)</span></p></li>
+<li><p><span class="math inline">\(\parallel A \parallel\)</span> <span class="math inline">\(= 0\)</span> if and only if <span class="math inline">\(A=0\)</span></p></li>
+<li><p><span class="math inline">\(\parallel \alpha A \parallel\)</span> = <span class="math inline">\(\mid \alpha\mid.\parallel A \parallel\)</span></p></li>
+<li><p><span class="math inline">\(\parallel A+B \parallel\)</span> <span class="math inline">\(\le\)</span> <span class="math inline">\(\parallel A \parallel + \parallel B \parallel\)</span>, triangle inequality<br>
+</p></li>
+<li><p><span class="math inline">\(\parallel AB \parallel\)</span> <span class="math inline">\(\le\)</span> <span class="math inline">\(\parallel A \parallel . \parallel B \parallel\)</span>, Cauchy-Schwarz inequality also <span class="math inline">\(\parallel Ax \parallel\)</span> <span class="math inline">\(\le\)</span> <span class="math inline">\(\parallel A \parallel . \parallel x \parallel\)</span> is valid</p></li>
+</ol>
+<h2 id="vector-norms">Vector Norms</h2>
+<p>2-norm is most used but which one to use depends on the application. Let <span class="math inline">\(x\)</span> be a vector of length <span class="math inline">\(n\)</span></p>
+<ol type="1">
+<li><p>2-norm, Euclidian norm:<br>
+<span class="math inline">\(\|x\|_{2}=\sqrt{\left|x_{1}\right|^{2}+\left|x_{2}\right|^{2}+\cdots+\left|x_{n}\right|^{2}}=\sqrt{x^{T} x}\)</span></p></li>
+<li><p>1-norm, minimum norm:<br>
+<span class="math inline">\(\|x\|_{1}=\left|x_{1}\right|+\left|x_{2}\right|+\cdots+\left|x_{n}\right|\)</span></p></li>
+<li><p><span class="math inline">\(\infty\)</span> -norm, maximum norm:<br>
+<span class="math inline">\(\|x\|_{\infty}=\max _{i}\left\{\left|x_{1}\right|, \ldots,\left|x_{n}\right|\right\}\)</span></p></li>
+</ol>
+<h2 id="matrix-norms">Matrix Norms</h2>
+<ol type="1">
+<li><p>Frobenius norm (straightforward extension of the Euclidean norm):<br>
+<span class="math inline">\(\|A\|_{F}=\sqrt{\sum_{i=1}^{m} \sum_{i=1}^{n} a_{i j}^{2}}\)</span></p></li>
+<li><p>Another common matrix norm (<span class="math inline">\(Ax\)</span> and <span class="math inline">\(x\)</span> are vectors):<br>
+<span class="math inline">\(\|A\|=\max _{x \neq 0} \frac{\|A x\|}{\|x\|}\)</span></p></li>
+</ol>
+<h2 id="norms">Norms</h2>
+<ol type="1">
+<li><p>1-norm, min norm, <span class="math inline">\(l_1\)</span>-norm:<br>
+<span class="math inline">\(\|A\|_{1} = \max _{1 \le j \le n} \sum_{i=1}^{m} \left|a_{ij}\right|\)</span></p></li>
+<li><p><span class="math inline">\(\infty\)</span>-norm, max norm, <span class="math inline">\(l_{\infty}\)</span>-norm:<br>
+<span class="math inline">\(\|A\|_{\infty} = \max _{1 \le i \le m} \sum_{j=1}^{n} \left|a_{ij}\right|\)</span></p></li>
+<li><p>2-norm, Euclidian/spectral norm, <span class="math inline">\(l_2\)</span>-norm (<span class="math inline">\(\lambda(A^{T}A)\)</span> are the eigenvalues of <span class="math inline">\(A^{T}A\)</span>):<br>
+<span class="math inline">\(\|A\|_{2} = \sqrt{\max \{ \lambda (A^{T}A)\}}\)</span><br>
+</p></li>
+</ol>
+<h2 id="norm-calculation-in-python">Norm Calculation in Python</h2>
+<figure class="highlight apache"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">import</span> numpy as np<br><span class="hljs-attribute">A</span> = np.array([[<span class="hljs-number">1</span>,-<span class="hljs-number">2</span>],[<span class="hljs-number">6</span>,<span class="hljs-number">4</span>]])<br><span class="hljs-comment"># 1-norm</span><br><span class="hljs-attribute">np</span>.linalg.norm(A,<span class="hljs-number">1</span>)<br><span class="hljs-comment"># max-norm</span><br><span class="hljs-attribute">np</span>.linalg.norm(A,np.inf)<br><span class="hljs-comment"># 2-norm</span><br><span class="hljs-attribute">np</span>.linalg.norm(A,<span class="hljs-number">2</span>) <br><span class="hljs-comment"># Frobenius</span><br><span class="hljs-attribute">np</span>.linalg.norm(A,’fro’)<br><span class="hljs-comment"># Default</span><br><span class="hljs-attribute">np</span>.linalg.norm(A)            <br></code></pre></td></tr></tbody></table></figure>
+<h2 id="characteristics-of-condition-number">Characteristics of Condition Number</h2>
+<ol type="1">
+<li><p>A very big condition number suggests that matrix close to singular (<span class="math inline">\(cond \approx 10^{16}\)</span>), and it also means that the system is sensitive to these perturbations.</p></li>
+<li><p>Best possible case: Condition number = 1<br>
+<span class="math inline">\(cond(A)\)</span> <span class="math inline">\(=\)</span> <span class="math inline">\(\parallel A^{-1} \parallel . \parallel A \parallel\)</span> <span class="math inline">\(\le\)</span> <span class="math inline">\(\parallel A^{-1}A \parallel\)</span> <span class="math inline">\(=\)</span> <span class="math inline">\(\parallel I \parallel\)</span> <span class="math inline">\(= 1\)</span><br>
+meaning no magnification at all</p></li>
+<li><p>No sharp definition for what’s large/small.</p></li>
+<li><p>Condition number also tends to get bigger when matrix size increases.</p></li>
+</ol>
+<h2 id="condition-number-calculation-in-python">Condition Number Calculation in Python</h2>
+<figure class="highlight apache"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">import</span> numpy as np<br><span class="hljs-attribute">A</span> = np.array([[<span class="hljs-number">1</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>]])<br><span class="hljs-comment"># 1-norm condition no.</span><br><span class="hljs-attribute">np</span>.linalg.cond(A,<span class="hljs-number">1</span>)      <br><span class="hljs-comment"># max-norm condition no.</span><br><span class="hljs-attribute">np</span>.linalg.cond(A,np.inf) <br><span class="hljs-comment"># 2-norm condition no.</span><br><span class="hljs-attribute">np</span>.linalg.cond(A,<span class="hljs-number">2</span>)      <br><span class="hljs-comment"># Frobenius condition no.</span><br><span class="hljs-attribute">np</span>.linalg.cond(A,’fro’)  <br></code></pre></td></tr></tbody></table></figure>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Mathematics/">Mathematics</a>
+                    
+                  </div>
                 
                 
                   <div class="post-meta">
@@ -273,7 +322,7 @@
                     
                     
                       <a href="/2022/03/27/subspace/">
-                        <span class="hidden-mobile">The Four Fundamental Subspaces</span>
+                        <span class="hidden-mobile">Subspace</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -475,5 +524,20 @@
 <script  src="/js/boot.js" ></script>
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>

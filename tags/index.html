@@ -184,7 +184,7 @@
                 
 
 <div class="text-center tagcloud">
-  <a href="/tags/Hadoop/" style="font-size: 22.5px; color: #779bd3">Hadoop</a> <a href="/tags/Linear-Algebra/" style="font-size: 30px; color: #337ab7">Linear Algebra</a> <a href="/tags/Linux/" style="font-size: 15px; color: #bbe">Linux</a> <a href="/tags/Mac/" style="font-size: 15px; color: #bbe">Mac</a> <a href="/tags/Python/" style="font-size: 15px; color: #bbe">Python</a>
+  <a href="/tags/Hadoop/" style="font-size: 22.5px; color: #779bd3">Hadoop</a> <a href="/tags/Linear-Algebra/" style="font-size: 30px; color: #337ab7">Linear Algebra</a> <a href="/tags/Mac/" style="font-size: 15px; color: #bbe">Mac</a> <a href="/tags/Python/" style="font-size: 15px; color: #bbe">Python</a> <a href="/tags/Virtual-Machine/" style="font-size: 15px; color: #bbe">Virtual Machine</a>
 </div>
 
               </div>
@@ -309,5 +309,20 @@
 <script  src="/js/boot.js" ></script>
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
