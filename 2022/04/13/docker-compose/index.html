@@ -16,23 +16,23 @@
   <meta name="author" content="Cheng Liang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="In Linear Algebra, linear subspace is also known as vector subspace, which is a subset of a larger vector space. A linear subspace is normally called as subspace when the context serves to distinguish">
+    <meta name="description" content="Docker-Compose is used to manage your containers, kind of like a container steward. We write a file, declare the container to be started in this file, configure some parameters, execute this file, Doc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Subspace">
-<meta property="og:url" content="http://example.com/2022/03/27/subspace/index.html">
+<meta property="og:title" content="Introduction to Docker-Compose">
+<meta property="og:url" content="http://example.com/2022/04/13/docker-compose/index.html">
 <meta property="og:site_name" content="imchengliang">
-<meta property="og:description" content="In Linear Algebra, linear subspace is also known as vector subspace, which is a subset of a larger vector space. A linear subspace is normally called as subspace when the context serves to distinguish">
+<meta property="og:description" content="Docker-Compose is used to manage your containers, kind of like a container steward. We write a file, declare the container to be started in this file, configure some parameters, execute this file, Doc">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/img/maxresdefault.jpeg">
-<meta property="article:published_time" content="2022-03-27T21:06:00.000Z">
-<meta property="article:modified_time" content="2022-04-07T11:10:20.883Z">
+<meta property="og:image" content="http://example.com/img/2019.jpeg">
+<meta property="article:published_time" content="2022-04-13T20:27:36.000Z">
+<meta property="article:modified_time" content="2022-04-13T21:58:12.233Z">
 <meta property="article:author" content="Cheng Liang">
-<meta property="article:tag" content="Linear Algebra">
+<meta property="article:tag" content="Docker">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/maxresdefault.jpeg">
+<meta name="twitter:image" content="http://example.com/img/2019.jpeg">
   
   
-  <title>Subspace - imchengliang</title>
+  <title>Introduction to Docker-Compose - imchengliang</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -176,12 +176,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/maxresdefault.jpeg') no-repeat center center;
+         style="background: url('/img/2019.jpeg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Subspace">
+            <span class="h2" id="subtitle" title="Introduction to Docker-Compose">
               
             </span>
 
@@ -191,8 +191,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-03-27 23:06" pubdate>
-        March 27, 2022 pm
+      <time datetime="2022-04-13 22:27" pubdate>
+        April 13, 2022 pm
       </time>
     </span>
   
@@ -228,66 +228,22 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Subspace</h1>
+            <h1 style="display: none">Introduction to Docker-Compose</h1>
             
             <div class="markdown-body">
-              <p>In Linear Algebra, linear subspace is also known as vector subspace, which is a subset of a larger <a target="_blank" rel="noopener" href="https://imchengliang.top/2021/12/23/post/">vector space</a>. A linear subspace is normally called as subspace when the context serves to distinguish it from other types of subspaces.</p>
-<p>For all subspace <span class="math inline">\(U\)</span>, they have to satisfy the following 3 rules:</p>
-<ol type="1">
-<li><p>Additive identity <span class="math inline">\(0, u \in U\)</span>, and <span class="math inline">\(0+u = u+0\)</span>, <span class="math inline">\(0\)</span> and <span class="math inline">\(u\)</span> here are vectors.</p></li>
-<li><p>Close under addition For all <span class="math inline">\(u, w \in U\)</span>, then <span class="math inline">\(u+w \in U\)</span>, <span class="math inline">\(u\)</span> and <span class="math inline">\(w\)</span> here are vectors.</p></li>
-<li><p>Close under scalar multiplication For all <span class="math inline">\(u \in U\)</span>, <span class="math inline">\(k \in R\)</span>, then <span class="math inline">\(k*u \in U\)</span>, <span class="math inline">\(u\)</span> is a vector and <span class="math inline">\(k\)</span> is a constant.</p></li>
-</ol>
-<p>Suppose that <span class="math inline">\(A\)</span> is a <span class="math inline">\(m * n\)</span> matrix that maps vectors in <span class="math inline">\(R^n\)</span> to vectors in <span class="math inline">\(R^m\)</span>. The four fundamental subspaces associated with <span class="math inline">\(A\)</span>, two in <span class="math inline">\(R^n\)</span> and two in <span class="math inline">\(R^n\)</span>.</p>
-<p><span class="math display">\[
-A=\left(\begin{array}{ll}
-a_{11} &amp; \dots &amp; a_{1n}\\
-\dots &amp; \dots &amp; \dots\\
-a_{m1} &amp; \dots &amp; a_{mn}
-\end{array}\right) = \left(\begin{array}{ll}
-1 &amp; 3 &amp; 3 \\
-2 &amp; 4 &amp; 6 \\
-1 &amp; 7 &amp; 3
-\end{array}\right) \in M_{m,n}(R) = M_{3,3}(R)
-\]</span></p>
-<h2 id="column-space">Column Space</h2>
-<p>The column space of A is the linear combination of all linearly independent non-zero columns in A (it works with or without Gaussian elimination), i.e. <span class="math inline">\(Ax\)</span>, subspace in <span class="math inline">\(R^m\)</span>.</p>
-<p>So <span class="math inline">\(C(A)\)</span> span <span class="math inline">\(\left\{\left(\begin{array}{c}a_{11} \\ \vdots \\ a_{m 1}\end{array}\right) \cdots\left(\begin{array}{c}a_{1 n} \\ \vdots \\ a_{m n}\end{array}\right) \right\}\)</span> , and the rank of A is equal to the dimension of column space.</p>
-<p>We apply Gaussian elimination on matrix A, then get <span class="math inline">\(A=\left(\begin{array}{lll} 1 &amp; 3 &amp; 3 \\ 2 &amp; 4 &amp; 6 \\ 1 &amp; 7 &amp; 3 \end{array}\right) {\longrightarrow}\left(\begin{array}{lll} 1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{array}\right)\)</span>.</p>
-<p>Because column 1 and column 3 are not linearly independent, <span class="math inline">\(C(A)\)</span> is the linear combination of column 2 and column 1 or column 2 and column 3, either of these two is correct.</p>
-<p>If we choose column 1 and column 2, then <span class="math inline">\(C(A) = \left\{\left(\begin{array}{c}1 \\ 0 \\ 0\end{array}\right) , \left(\begin{array}{c}0 \\ 1 \\ 0\end{array}\right) \right\}\)</span>, and <span class="math inline">\(Rank(A) = dim(C(A)) = 2\)</span>.</p>
-<h2 id="row-space">Row Space</h2>
-<p>The row space of A is the linear combination of all non-zero rows in A after Gaussian elimination, i.e. <span class="math inline">\(A^{T}y\)</span>, subspace in <span class="math inline">\(R^n\)</span>.</p>
-<p>So <span class="math inline">\(R(A) = C(A^T)\)</span> span <span class="math inline">\(\left\{\left(a_{11} \ldots a_{1 n}\right) \cdots\left(a_{m 1} \cdots a_{m n}\right)\right\}\)</span>.</p>
-<p>According to Gaussian elimination, we get <span class="math inline">\(A {\rightarrow}\left(\begin{array}{lll} 1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{array}\right)\)</span>, then row space of A is the non-zero rows (row 1 and row 2), <span class="math inline">\(R(A)=\left\{\left(1, 0, 3\right),\left(0, 1, 0\right)\right\}\)</span>.</p>
-<h2 id="nullspace">Nullspace</h2>
-<p>The nullspace of A is the linear combination of all solution of <span class="math inline">\(Ax = 0\)</span>, subspace in <span class="math inline">\(R^n\)</span>.</p>
-<p>According to Gaussian elimination, we get <span class="math inline">\(A {\rightarrow}\left(\begin{array}{lll} 1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{array}\right)\)</span>, then we get<br>
-</p>
-<p><span class="math inline">\(\left(\begin{array}{lll}1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0\end{array}\right) \cdot\left(\begin{array}{l}x_{1} \\ x_{2} \\ x_{3}\end{array}\right)=\left\{\begin{array}{c}x_{1}+3 x_{3}=0 \\ x_{2}=0\end{array} \rightarrow\left\{\begin{array}{c}x_{1}=-3 x_{3} \\ x_{2}=0 \\ x_{3} \in R\end{array} \rightarrow x=N(A)=\left(\begin{array}{c}-3 \\ 0 \\ 1\end{array}\right) \cdot x_{3}\right.\right.\)</span><br>
-</p>
-<p>So a basis of <span class="math inline">\(N(A)\)</span> is <span class="math inline">\((-3, 0, 1 )\)</span>, and nullity of A: <span class="math inline">\(null(A) = dim(N(A)) = 1\)</span>.</p>
-<h2 id="left-nullspace">Left Nullspace</h2>
-<p>The left nullspace of A is the linear combination of all solution of <span class="math inline">\(A^{T}y = 0\)</span>, subspace in <span class="math inline">\(R^m\)</span>.</p>
-<p>We apply Gaussian elimination on matrix <span class="math inline">\(A^T\)</span>, then get <span class="math inline">\(A^T=\left(\begin{array}{lll} 1 &amp; 2 &amp; 1 \\ 3 &amp; 4 &amp; 7 \\ 3 &amp; 6 &amp; 3 \end{array}\right) {\longrightarrow}\left(\begin{array}{lll} 1 &amp; 0 &amp; 5 \\ 0 &amp; 1 &amp; -2 \\ 0 &amp; 0 &amp; 0 \end{array}\right)\)</span><br>
-</p>
-<p><span class="math inline">\(\left(\begin{array}{lll}1 &amp; 0 &amp; 5 \\ 0 &amp; 1 &amp; -2 \\ 0 &amp; 0 &amp; 0\end{array}\right) \cdot\left(\begin{array}{l}y_{1} \\ y_{2} \\ y_{3}\end{array}\right)=\left\{\begin{array}{c}y_{1}+5 y_{3}=0 \\ y_{2}-2y_{3}=0\end{array} \rightarrow\left\{\begin{array}{c}y_{1}=-5 y_{3} \\ y_{2}=2 y_{3} \\ y_{3} \in R\end{array} \rightarrow y=N(A^T)=\left(\begin{array}{c}-5 \\ 2 \\ 1\end{array}\right) \cdot y_{3}\right.\right.\)</span> &nbsp;<br>
-</p>
-<p>So a basis of <span class="math inline">\(N(A^T)\)</span> is <span class="math inline">\((-5, 2, 1 )\)</span>, and <span class="math inline">\(null(A^T) = dim(N(A^T)) = 1\)</span>.</p>
-<h2 id="characteristic-of-these-four-subspaces">Characteristic of these four subspaces</h2>
-<ol type="1">
-<li>Orthogonal: Column space and left nullspace are orthogonal, row space and null space are orthogonal.<br>
-</li>
-</ol>
-<p><span class="math inline">\(C(A) \perp N\left(A^{\top}\right) \rightarrow(1,2,1) \cdot\left(\begin{array}{c}-5 \\ 2 \\ 1\end{array}\right)=(3,4,7) \cdot\left(\begin{array}{c}-5 \\ 2 \\ 1\end{array}\right)=0\)</span><br>
-</p>
-<p><span class="math inline">\(R(A) \perp N(A) \rightarrow(1,0,3) \cdot\left(\begin{array}{c}-3 \\ 0 \\ 1\end{array}\right)=(0,1,0) \cdot\left(\begin{array}{c}-3 \\ 0 \\ 1\end{array}\right)=0\)</span></p>
-<ol start="2" type="1">
-<li>Rank-nullity:</li>
-</ol>
-<p>Rank + Nullity = Column Number<br>
-</p>
-<p>dim(Row Space) + dim(Left Nullsapce) = Row Number</p>
+              <p>Docker-Compose is used to manage your containers, kind of like a container steward. We write a file, declare the container to be started in this file, configure some parameters, execute this file, Docker will start all containers according to the declared configuration.</p>
+<p>Here is an example to build a multi-container Apache Spark cluster using docker-compose.</p>
+<h2 id="create-a-file-name-dockerfile-and-add-the-following-contents-in-the-file">(1) Create a file name “Dockerfile ” and add the following contents in the file</h2>
+<figure class="highlight apache"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">FROM</span> ubuntu:<span class="hljs-number">20</span>.<span class="hljs-number">04</span><br><span class="hljs-attribute">RUN</span> apt-get update<br><span class="hljs-attribute">RUN</span> apt-get -y upgrade<br><span class="hljs-attribute">RUN</span> apt install -y openjdk-<span class="hljs-number">8</span>-jre-headless<br><span class="hljs-attribute">RUN</span> apt install -y scala<br><span class="hljs-attribute">RUN</span> apt install -y wget<br><span class="hljs-attribute">RUN</span> apt install -y screen<br><span class="hljs-attribute">RUN</span> wget https://archive.apache.org/dist/spark/ spark-<span class="hljs-number">3</span>.<span class="hljs-number">2</span>.<span class="hljs-number">0</span>/spark-<span class="hljs-number">3</span>.<span class="hljs-number">2</span>.<span class="hljs-number">0</span>-bin-hadoop<span class="hljs-number">3</span>.<span class="hljs-number">2</span>.tgz<br><span class="hljs-attribute">RUN</span> tar xvf spark-<span class="hljs-number">3</span>.<span class="hljs-number">2</span>.<span class="hljs-number">0</span>-bin-hadoop<span class="hljs-number">3</span>.<span class="hljs-number">2</span>.tgz<br><span class="hljs-attribute">RUN</span> mv spark-<span class="hljs-number">3</span>.<span class="hljs-number">2</span>.<span class="hljs-number">0</span>-bin-hadoop<span class="hljs-number">3</span>.<span class="hljs-number">2</span>/ /usr/local/spark ENV PATH=<span class="hljs-string">"${PATH}:$SPARK_HOME/bin"</span><br><span class="hljs-attribute">ENV</span> SPARK_HOME=<span class="hljs-string">"/usr/local/spark"</span><br><span class="hljs-attribute">ENV</span> SPARK_NO_DAEMONIZE=<span class="hljs-string">"true"</span><br><span class="hljs-attribute">RUN</span> sleep <span class="hljs-number">15</span><br><span class="hljs-attribute">CMD</span> screen -d -m $SPARK_HOME/sbin/start-master.sh ; $SPARK_HOME/sbin/start-worker.sh spark://sparkmaster:<span class="hljs-number">7077</span><br></code></pre></td></tr></tbody></table></figure>
+<h2 id="build-the-image-based-on-the-dockerfile-and-run-the-container">(2) Build the image based on the Dockerfile and run the container</h2>
+<figure class="highlight applescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs applescript">docker build -t sparkaio/<span class="hljs-keyword">first</span>:v0 .<br>docker <span class="hljs-built_in">run</span> -h sparkmaster &lt;Generated-Image-ID <span class="hljs-keyword">or</span> image <span class="hljs-built_in">name</span>&gt;<br></code></pre></td></tr></tbody></table></figure>
+<p>The following commands are used to confirm that the spark setup is working correctly </p><figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">docker exec -it container_id <span class="hljs-regexp">/bin/</span>bash<br><span class="hljs-variable">$SPARK_HOME</span><span class="hljs-regexp">/bin/</span>spark-submit --class org.apache.spark.examples.SparkPi --master spark:<span class="hljs-regexp">//</span>sparkmaster:<span class="hljs-number">7077</span> <span class="hljs-variable">$SPARK_HOME</span><span class="hljs-regexp">/examples/</span>jars/spark-examples_2.<span class="hljs-number">12</span>-<span class="hljs-number">3.2</span>.<span class="hljs-number">0</span>.jar<br></code></pre></td></tr></tbody></table></figure><p></p>
+<p>Based on the above configurations, a single container-based Spark framework has been created.​ Next step is to prepare a configuration file, compatible with docker-compose, and run a Spark cluster with at least one master node and one additional worker.</p>
+<h2 id="create-a-docker-compose.yml-file-and-write-the-configuration-on-this-file">(3) Create a docker-compose.yml file and write the configuration on this file</h2>
+<p>Here, we set 1 master and 1 worker for the Spark cluster.</p>
+<figure class="highlight dts"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">version:</span> <span class="hljs-string">"2"</span><br><span class="hljs-symbol">services:</span><br><span class="hljs-symbol">  master:</span><br><span class="hljs-symbol">    image:</span> sparkaio/first:v0<br><span class="hljs-symbol">    command:</span> <span class="hljs-meta-keyword">/usr/</span>local<span class="hljs-meta-keyword">/spark/</span>sbin/start-master.sh<br><span class="hljs-symbol">    hostname:</span> master<br><span class="hljs-symbol">    ports:</span><br>      - <span class="hljs-string">"6066:6066"</span><br>      - <span class="hljs-string">"7070:7070"</span><br>      - <span class="hljs-string">"8080:8080"</span><br>      - <span class="hljs-string">"50070:50070"</span><br><span class="hljs-symbol">  worker:</span><br><span class="hljs-symbol">    image:</span> sparkaio/first:v0<br><span class="hljs-symbol">    command:</span> <span class="hljs-meta-keyword">/usr/</span>local<span class="hljs-meta-keyword">/spark/</span>sbin/start-worker.sh<br><span class="hljs-symbol">    links:</span><br>      - master<br></code></pre></td></tr></tbody></table></figure>
+<h2 id="startup-and-shutdown-of-docker-compose">(4) Startup and shutdown of docker-compose</h2>
+<figure class="highlight crmsh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs crmsh"><span class="hljs-comment"># We can start the container by using up</span><br>docker-compose up<br><span class="hljs-comment"># After the first time, we can simply use start to start the services</span><br>docker-compose <span class="hljs-literal">start</span><br><span class="hljs-comment"># To safely stop the active services, we can use stop</span><br>docker-compose <span class="hljs-literal">stop</span><br><span class="hljs-comment"># To reset the status of the project, we simply run down</span><br>docker-compose down<br></code></pre></td></tr></tbody></table></figure>
 
             </div>
             <hr>
@@ -297,7 +253,7 @@ a_{m1} &amp; \dots &amp; a_{mn}
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Mathematics/">Mathematics</a>
+                      <a class="hover-with-bg" href="/categories/Data-Engineering/">Data Engineering</a>
                     
                   </div>
                 
@@ -305,7 +261,7 @@ a_{m1} &amp; \dots &amp; a_{mn}
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Linear-Algebra/">Linear Algebra</a>
+                      <a class="hover-with-bg" href="/tags/Docker/">Docker</a>
                     
                   </div>
                 
@@ -322,18 +278,12 @@ a_{m1} &amp; \dots &amp; a_{mn}
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/03/28/subspace-1/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Norms and Condition Number</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/02/16/hadoop-on-cloud-python/">
-                        <span class="hidden-mobile">Run Word-Count Example of Hadoop (Python Version)</span>
+                      <a href="/2022/04/13/docker/">
+                        <span class="hidden-mobile">Basic Use of Docker</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

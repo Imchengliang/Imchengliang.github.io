@@ -16,23 +16,23 @@
   <meta name="author" content="Cheng Liang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="In Linear Algebra, linear subspace is also known as vector subspace, which is a subset of a larger vector space. A linear subspace is normally called as subspace when the context serves to distinguish">
+    <meta name="description" content="Docker is an open source application container that allows developers to package their applications and dependencies into a portable engine, and then publish them to operating system such as Linux or">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Subspace">
-<meta property="og:url" content="http://example.com/2022/03/27/subspace/index.html">
+<meta property="og:title" content="Basic Use of Docker">
+<meta property="og:url" content="http://example.com/2022/04/13/docker/index.html">
 <meta property="og:site_name" content="imchengliang">
-<meta property="og:description" content="In Linear Algebra, linear subspace is also known as vector subspace, which is a subset of a larger vector space. A linear subspace is normally called as subspace when the context serves to distinguish">
+<meta property="og:description" content="Docker is an open source application container that allows developers to package their applications and dependencies into a portable engine, and then publish them to operating system such as Linux or">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/img/maxresdefault.jpeg">
-<meta property="article:published_time" content="2022-03-27T21:06:00.000Z">
-<meta property="article:modified_time" content="2022-04-07T11:10:20.883Z">
+<meta property="og:image" content="http://example.com/img/2019.jpeg">
+<meta property="article:published_time" content="2022-04-13T09:32:34.000Z">
+<meta property="article:modified_time" content="2022-04-13T20:31:56.714Z">
 <meta property="article:author" content="Cheng Liang">
-<meta property="article:tag" content="Linear Algebra">
+<meta property="article:tag" content="Docker">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/maxresdefault.jpeg">
+<meta name="twitter:image" content="http://example.com/img/2019.jpeg">
   
   
-  <title>Subspace - imchengliang</title>
+  <title>Basic Use of Docker - imchengliang</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -176,12 +176,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/maxresdefault.jpeg') no-repeat center center;
+         style="background: url('/img/2019.jpeg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Subspace">
+            <span class="h2" id="subtitle" title="Basic Use of Docker">
               
             </span>
 
@@ -191,8 +191,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-03-27 23:06" pubdate>
-        March 27, 2022 pm
+      <time datetime="2022-04-13 11:32" pubdate>
+        April 13, 2022 am
       </time>
     </span>
   
@@ -228,66 +228,20 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Subspace</h1>
+            <h1 style="display: none">Basic Use of Docker</h1>
             
             <div class="markdown-body">
-              <p>In Linear Algebra, linear subspace is also known as vector subspace, which is a subset of a larger <a target="_blank" rel="noopener" href="https://imchengliang.top/2021/12/23/post/">vector space</a>. A linear subspace is normally called as subspace when the context serves to distinguish it from other types of subspaces.</p>
-<p>For all subspace <span class="math inline">\(U\)</span>, they have to satisfy the following 3 rules:</p>
-<ol type="1">
-<li><p>Additive identity <span class="math inline">\(0, u \in U\)</span>, and <span class="math inline">\(0+u = u+0\)</span>, <span class="math inline">\(0\)</span> and <span class="math inline">\(u\)</span> here are vectors.</p></li>
-<li><p>Close under addition For all <span class="math inline">\(u, w \in U\)</span>, then <span class="math inline">\(u+w \in U\)</span>, <span class="math inline">\(u\)</span> and <span class="math inline">\(w\)</span> here are vectors.</p></li>
-<li><p>Close under scalar multiplication For all <span class="math inline">\(u \in U\)</span>, <span class="math inline">\(k \in R\)</span>, then <span class="math inline">\(k*u \in U\)</span>, <span class="math inline">\(u\)</span> is a vector and <span class="math inline">\(k\)</span> is a constant.</p></li>
-</ol>
-<p>Suppose that <span class="math inline">\(A\)</span> is a <span class="math inline">\(m * n\)</span> matrix that maps vectors in <span class="math inline">\(R^n\)</span> to vectors in <span class="math inline">\(R^m\)</span>. The four fundamental subspaces associated with <span class="math inline">\(A\)</span>, two in <span class="math inline">\(R^n\)</span> and two in <span class="math inline">\(R^n\)</span>.</p>
-<p><span class="math display">\[
-A=\left(\begin{array}{ll}
-a_{11} &amp; \dots &amp; a_{1n}\\
-\dots &amp; \dots &amp; \dots\\
-a_{m1} &amp; \dots &amp; a_{mn}
-\end{array}\right) = \left(\begin{array}{ll}
-1 &amp; 3 &amp; 3 \\
-2 &amp; 4 &amp; 6 \\
-1 &amp; 7 &amp; 3
-\end{array}\right) \in M_{m,n}(R) = M_{3,3}(R)
-\]</span></p>
-<h2 id="column-space">Column Space</h2>
-<p>The column space of A is the linear combination of all linearly independent non-zero columns in A (it works with or without Gaussian elimination), i.e. <span class="math inline">\(Ax\)</span>, subspace in <span class="math inline">\(R^m\)</span>.</p>
-<p>So <span class="math inline">\(C(A)\)</span> span <span class="math inline">\(\left\{\left(\begin{array}{c}a_{11} \\ \vdots \\ a_{m 1}\end{array}\right) \cdots\left(\begin{array}{c}a_{1 n} \\ \vdots \\ a_{m n}\end{array}\right) \right\}\)</span> , and the rank of A is equal to the dimension of column space.</p>
-<p>We apply Gaussian elimination on matrix A, then get <span class="math inline">\(A=\left(\begin{array}{lll} 1 &amp; 3 &amp; 3 \\ 2 &amp; 4 &amp; 6 \\ 1 &amp; 7 &amp; 3 \end{array}\right) {\longrightarrow}\left(\begin{array}{lll} 1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{array}\right)\)</span>.</p>
-<p>Because column 1 and column 3 are not linearly independent, <span class="math inline">\(C(A)\)</span> is the linear combination of column 2 and column 1 or column 2 and column 3, either of these two is correct.</p>
-<p>If we choose column 1 and column 2, then <span class="math inline">\(C(A) = \left\{\left(\begin{array}{c}1 \\ 0 \\ 0\end{array}\right) , \left(\begin{array}{c}0 \\ 1 \\ 0\end{array}\right) \right\}\)</span>, and <span class="math inline">\(Rank(A) = dim(C(A)) = 2\)</span>.</p>
-<h2 id="row-space">Row Space</h2>
-<p>The row space of A is the linear combination of all non-zero rows in A after Gaussian elimination, i.e. <span class="math inline">\(A^{T}y\)</span>, subspace in <span class="math inline">\(R^n\)</span>.</p>
-<p>So <span class="math inline">\(R(A) = C(A^T)\)</span> span <span class="math inline">\(\left\{\left(a_{11} \ldots a_{1 n}\right) \cdots\left(a_{m 1} \cdots a_{m n}\right)\right\}\)</span>.</p>
-<p>According to Gaussian elimination, we get <span class="math inline">\(A {\rightarrow}\left(\begin{array}{lll} 1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{array}\right)\)</span>, then row space of A is the non-zero rows (row 1 and row 2), <span class="math inline">\(R(A)=\left\{\left(1, 0, 3\right),\left(0, 1, 0\right)\right\}\)</span>.</p>
-<h2 id="nullspace">Nullspace</h2>
-<p>The nullspace of A is the linear combination of all solution of <span class="math inline">\(Ax = 0\)</span>, subspace in <span class="math inline">\(R^n\)</span>.</p>
-<p>According to Gaussian elimination, we get <span class="math inline">\(A {\rightarrow}\left(\begin{array}{lll} 1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{array}\right)\)</span>, then we get<br>
-</p>
-<p><span class="math inline">\(\left(\begin{array}{lll}1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0\end{array}\right) \cdot\left(\begin{array}{l}x_{1} \\ x_{2} \\ x_{3}\end{array}\right)=\left\{\begin{array}{c}x_{1}+3 x_{3}=0 \\ x_{2}=0\end{array} \rightarrow\left\{\begin{array}{c}x_{1}=-3 x_{3} \\ x_{2}=0 \\ x_{3} \in R\end{array} \rightarrow x=N(A)=\left(\begin{array}{c}-3 \\ 0 \\ 1\end{array}\right) \cdot x_{3}\right.\right.\)</span><br>
-</p>
-<p>So a basis of <span class="math inline">\(N(A)\)</span> is <span class="math inline">\((-3, 0, 1 )\)</span>, and nullity of A: <span class="math inline">\(null(A) = dim(N(A)) = 1\)</span>.</p>
-<h2 id="left-nullspace">Left Nullspace</h2>
-<p>The left nullspace of A is the linear combination of all solution of <span class="math inline">\(A^{T}y = 0\)</span>, subspace in <span class="math inline">\(R^m\)</span>.</p>
-<p>We apply Gaussian elimination on matrix <span class="math inline">\(A^T\)</span>, then get <span class="math inline">\(A^T=\left(\begin{array}{lll} 1 &amp; 2 &amp; 1 \\ 3 &amp; 4 &amp; 7 \\ 3 &amp; 6 &amp; 3 \end{array}\right) {\longrightarrow}\left(\begin{array}{lll} 1 &amp; 0 &amp; 5 \\ 0 &amp; 1 &amp; -2 \\ 0 &amp; 0 &amp; 0 \end{array}\right)\)</span><br>
-</p>
-<p><span class="math inline">\(\left(\begin{array}{lll}1 &amp; 0 &amp; 5 \\ 0 &amp; 1 &amp; -2 \\ 0 &amp; 0 &amp; 0\end{array}\right) \cdot\left(\begin{array}{l}y_{1} \\ y_{2} \\ y_{3}\end{array}\right)=\left\{\begin{array}{c}y_{1}+5 y_{3}=0 \\ y_{2}-2y_{3}=0\end{array} \rightarrow\left\{\begin{array}{c}y_{1}=-5 y_{3} \\ y_{2}=2 y_{3} \\ y_{3} \in R\end{array} \rightarrow y=N(A^T)=\left(\begin{array}{c}-5 \\ 2 \\ 1\end{array}\right) \cdot y_{3}\right.\right.\)</span> &nbsp;<br>
-</p>
-<p>So a basis of <span class="math inline">\(N(A^T)\)</span> is <span class="math inline">\((-5, 2, 1 )\)</span>, and <span class="math inline">\(null(A^T) = dim(N(A^T)) = 1\)</span>.</p>
-<h2 id="characteristic-of-these-four-subspaces">Characteristic of these four subspaces</h2>
-<ol type="1">
-<li>Orthogonal: Column space and left nullspace are orthogonal, row space and null space are orthogonal.<br>
-</li>
-</ol>
-<p><span class="math inline">\(C(A) \perp N\left(A^{\top}\right) \rightarrow(1,2,1) \cdot\left(\begin{array}{c}-5 \\ 2 \\ 1\end{array}\right)=(3,4,7) \cdot\left(\begin{array}{c}-5 \\ 2 \\ 1\end{array}\right)=0\)</span><br>
-</p>
-<p><span class="math inline">\(R(A) \perp N(A) \rightarrow(1,0,3) \cdot\left(\begin{array}{c}-3 \\ 0 \\ 1\end{array}\right)=(0,1,0) \cdot\left(\begin{array}{c}-3 \\ 0 \\ 1\end{array}\right)=0\)</span></p>
-<ol start="2" type="1">
-<li>Rank-nullity:</li>
-</ol>
-<p>Rank + Nullity = Column Number<br>
-</p>
-<p>dim(Row Space) + dim(Left Nullsapce) = Row Number</p>
+              <p>Docker is an open source application container that allows developers to package their applications and dependencies into a portable engine, and then publish them to operating system such as Linux or Windows for virtualization.</p>
+<p>This blog covers basic introduction of the Docker environment, Dockerfile settings and construction of a multi-container environment using docker-compose (one of the essential tools to build, connect and run multiple containers).</p>
+<h2 id="docker-containers">(1) Docker containers</h2>
+<p>The following commands are used to install docker on virtual machine:</p>
+<figure class="highlight smali"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs smali">sudo bash<br>apt update; apt -y upgrade;<br><span class="hljs-comment"># Install the required packages</span><br>apt install apt-transport-https ca-certificates curl software-properties-common<br><span class="hljs-comment"># Add the GPG key for the official Docker repository to the system</span><br>curl -fsSL https://download.docker.com/ linux/ubuntu/gpg |sudo apt-key<span class="hljs-built_in"> add </span>-<br><span class="hljs-comment"># Add the Docker repository to APT sources</span><span class="hljs-built_in"></span><br><span class="hljs-built_in">add-apt-repository </span><span class="hljs-string">"deb [arch=amd64] https:// download.docker.com/linux/ubuntu bionic stable"</span><br><span class="hljs-comment"># Update the package database with the Docker packages from the newly added repo</span><br>apt-get update<br><span class="hljs-comment"># Install Docker</span><br>apt install docker-ce<br><span class="hljs-comment"># Check if docker has started</span><span class="hljs-keyword"></span><br><span class="hljs-keyword">system</span>ctl status docker<br></code></pre></td></tr></tbody></table></figure>
+<p>Then create a file name “Dockerfile ” and add the following contents in the file: </p><figure class="highlight routeros"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">FROM</span> ubuntu:20.04<br><span class="hljs-builtin-name">RUN</span> apt-<span class="hljs-builtin-name">get</span> update<br><span class="hljs-builtin-name">RUN</span> apt-<span class="hljs-builtin-name">get</span> -y<span class="hljs-built_in"> upgrade</span><br><span class="hljs-built_in"></span><span class="hljs-builtin-name">RUN</span> apt-<span class="hljs-builtin-name">get</span> install sl<br>ENV <span class="hljs-attribute">PATH</span>=<span class="hljs-string">"<span class="hljs-variable">${PATH}</span>:/usr/games/"</span><br>CMD [<span class="hljs-string">"echo"</span>, <span class="hljs-string">"Data Engineering-I."</span>]<br></code></pre></td></tr></tbody></table></figure><p></p>
+<p>Contextualize a container (create a new image that is contextualized according to the Dockerfile and start a container based on the contextualized image): </p><figure class="highlight applescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs applescript">docker build -t mycontainer/<span class="hljs-keyword">first</span>:v1 .<br><span class="hljs-comment"># In batch mode</span><br>docker <span class="hljs-built_in">run</span> mycontainer/<span class="hljs-keyword">first</span>:v1<br><span class="hljs-comment"># In interactive mode:</span><br>docker <span class="hljs-built_in">run</span> -<span class="hljs-keyword">it</span> mycontainer/<span class="hljs-keyword">first</span>:v1 bash<br></code></pre></td></tr></tbody></table></figure><p></p>
+<p>Now we have a running docker container with some extra packages installed in it.</p>
+<h2 id="dockerhub">(2) DockerHub</h2>
+<p><a target="_blank" rel="noopener" href="https://hub.docker.com/">DockerHub</a> is used to store the Docker images, and developers also can use the images that are stored on DockerHub so the required development-environment can be built quickly. To use DockerHub, we need to create an account on its official website firstly. And the following commands are use to operate DockerHub on virtual machine.</p>
+<figure class="highlight vala"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs vala"><span class="hljs-meta"># login the DockerHub account on virtual machine</span><br>docker login<br><span class="hljs-meta"># then input the username and password</span><br><br><span class="hljs-meta"># upload image to DockerHub</span><br><span class="hljs-meta"># docker tag 'image-name:tag-name or image-ID' 'username/ image-name:tag-name'</span><br>docker tag e7083fd898c7 arnieswap/my_repo:testing<br>docker push arnieswap/my_repo<br><span class="hljs-meta"># check if it's pushed successfully</span><br>docker search arnieswap/my_repo<br><br><span class="hljs-meta"># download image from DockerHub</span><br>docker pull arnieswap/my_repo<br></code></pre></td></tr></tbody></table></figure>
 
             </div>
             <hr>
@@ -297,7 +251,7 @@ a_{m1} &amp; \dots &amp; a_{mn}
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Mathematics/">Mathematics</a>
+                      <a class="hover-with-bg" href="/categories/Data-Engineering/">Data Engineering</a>
                     
                   </div>
                 
@@ -305,7 +259,7 @@ a_{m1} &amp; \dots &amp; a_{mn}
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Linear-Algebra/">Linear Algebra</a>
+                      <a class="hover-with-bg" href="/tags/Docker/">Docker</a>
                     
                   </div>
                 
@@ -322,9 +276,9 @@ a_{m1} &amp; \dots &amp; a_{mn}
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/03/28/subspace-1/">
+                      <a href="/2022/04/13/docker-compose/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Norms and Condition Number</span>
+                        <span class="hidden-mobile">Introduction to Docker-Compose</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -332,8 +286,8 @@ a_{m1} &amp; \dots &amp; a_{mn}
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/02/16/hadoop-on-cloud-python/">
-                        <span class="hidden-mobile">Run Word-Count Example of Hadoop (Python Version)</span>
+                      <a href="/2022/03/28/subspace-1/">
+                        <span class="hidden-mobile">Norms and Condition Number</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
