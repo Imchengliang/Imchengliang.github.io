@@ -16,23 +16,23 @@
   <meta name="author" content="Cheng Liang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Cholesky decomposition is to express a symmetric positive definite matrix as a decomposition of the product of a lower triangular matrix and its transpose. It requires that all eigenvalues of the matr">
+    <meta name="description" content="The Least Squares Problem is one of the most important problem in numerical approximation. The main idea of the least squares problem is to solve the unknown parameters , so that the sum of the square">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cholesky Decomposition">
-<meta property="og:url" content="http://example.com/2022/04/15/cholesky/index.html">
+<meta property="og:title" content="The Least Squares Problem">
+<meta property="og:url" content="http://example.com/2022/04/16/QR-decomposition/index.html">
 <meta property="og:site_name" content="imchengliang">
-<meta property="og:description" content="Cholesky decomposition is to express a symmetric positive definite matrix as a decomposition of the product of a lower triangular matrix and its transpose. It requires that all eigenvalues of the matr">
+<meta property="og:description" content="The Least Squares Problem is one of the most important problem in numerical approximation. The main idea of the least squares problem is to solve the unknown parameters , so that the sum of the square">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/img/maxresdefault.jpeg">
-<meta property="article:published_time" content="2022-04-15T14:52:50.000Z">
-<meta property="article:modified_time" content="2022-04-15T21:59:26.125Z">
+<meta property="article:published_time" content="2022-04-15T22:02:08.000Z">
+<meta property="article:modified_time" content="2022-07-06T09:40:58.938Z">
 <meta property="article:author" content="Cheng Liang">
 <meta property="article:tag" content="Linear Algebra">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/maxresdefault.jpeg">
   
   
-  <title>Cholesky Decomposition - imchengliang</title>
+  <title>The Least Squares Problem - imchengliang</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -181,7 +181,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Cholesky Decomposition">
+            <span class="h2" id="subtitle" title="The Least Squares Problem">
               
             </span>
 
@@ -191,8 +191,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-15 16:52" pubdate>
-        April 15, 2022 pm
+      <time datetime="2022-04-16 00:02" pubdate>
+        April 16, 2022 am
       </time>
     </span>
   
@@ -228,41 +228,80 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Cholesky Decomposition</h1>
+            <h1 style="display: none">The Least Squares Problem</h1>
             
             <div class="markdown-body">
-              <p>Cholesky decomposition is to express a symmetric positive definite matrix as a decomposition of the product of a lower triangular matrix and its transpose. It requires that all eigenvalues of the matrix must be positive, so the diagonal elements of the decomposed lower triangle are also positive. The Cholesky decomposition, also known as the square root method, is a modification of the <a target="_blank" rel="noopener" href="https://imchengliang.top/2022/04/14/LU/">LU decomposition</a> when matrix A is a symmetric positive definite matrix.</p>
-<h2 id="ldlt-decomposition">(1) LDLT decomposition</h2>
-<p>If <span class="math inline">\(A\)</span> is symmetric, we would expect some sort of symmetry in the LU decomposition.</p>
-<p><span class="math inline">\(U \ne L^T\)</span> due to diagonals in <span class="math inline">\(U\)</span> and <span class="math inline">\(L\)</span> not the same. But if we take <span class="math inline">\(u_{ii}\)</span> out of <span class="math inline">\(U\)</span> and store in diagonal matrix <span class="math inline">\(D\)</span> we get <span class="math inline">\(U = DL^T\)</span>, and <span class="math inline">\(A=LDL^T\)</span> called the LDLT decomposition.</p>
-<p>It's roughly half the cost of LU decomposition as we don’t need to compute the upper diagonal part of <span class="math inline">\(U\)</span>.</p>
-<h2 id="cholesky-decomposition">(2) Cholesky decomposition</h2>
-<p>When <span class="math inline">\(A\)</span> is symmetric, positive definite (<span class="math inline">\(d_{ii} &lt; 0\)</span> in <span class="math inline">\(D\)</span>), the LDLT decomposition becomes Cholesky decomposition (Cholesky is stable - no pivoting needed): <span class="math display">\[A=LD^{1/2}D^{1/2}L^T=GG^T\]</span></p>
-<p>It’s possible to calculate Cholesky directly without forming <span class="math inline">\(L\)</span> and <span class="math inline">\(D\)</span>. Use <span class="math display">\[
-A=\left(\begin{array}{ccc}
-a_{11} &amp; \cdots &amp; a_{1 n} \\
-\vdots &amp; \ddots &amp; \vdots \\
-a_{n 1} &amp; \cdots &amp; a_{n n}
-\end{array}\right)=\left(\begin{array}{ccc}
-g_{11} &amp; \cdots &amp; 0 \\
-\vdots &amp; \ddots &amp; \vdots \\
-g_{n 1} &amp; \cdots &amp; g_{n n}
-\end{array}\right)\left(\begin{array}{ccc}
-g_{11} &amp; \cdots &amp; g_{n 1} \\
-\vdots &amp; \ddots &amp; \vdots \\
-0 &amp; \cdots &amp; g_{n n}
+              <p>The Least Squares Problem is one of the most important problem in numerical approximation. The main idea of the least squares problem is to solve the unknown parameters , so that the sum of the squares of the difference between the predicted value and the observed value (i.e. the error, or residual) is minimized. In short, it can be interpreted as solving the equation of <span class="math inline">\(Ax=b\)</span>. In linear algebra, there are three common ways to solve the least squares problem, and their introduction and comparison are shown as below.</p>
+<h2 id="the-normal-equations">The normal equations</h2>
+<p>For an overdetermined systems (<span class="math inline">\(m*n\)</span>): <span class="math inline">\(Ax=b\)</span> such as: <span class="math display">\[
+\left(\begin{array}{ll}
+1 &amp; 4 \\
+1 &amp; 2 \\
+1 &amp; 3
+\end{array}\right)\left(\begin{array}{l}
+x_{1} \\
+x_{2}
+\end{array}\right)=\left(\begin{array}{l}
+3 \\
+3 \\
+2
+\end{array}\right) \Leftrightarrow\left(\begin{array}{l}
+1 \\
+1 \\
+1
+\end{array}\right) x_{1}+\left(\begin{array}{l}
+4 \\
+2 \\
+3
+\end{array}\right) x_{2}=\left(\begin{array}{l}
+3 \\
+3 \\
+2
 \end{array}\right)
+\]</span> We can't solve the system by <span class="math inline">\(a_{1}x_{1}+a_{2}x_{2}=b\)</span> because we can't reach <span class="math inline">\(b\)</span> through a linear combination of <span class="math inline">\(a_1\)</span> and <span class="math inline">\(a_2\)</span>. This method only works when <span class="math inline">\(b \in C(A)\)</span> (It's very unlikely when <span class="math inline">\(m&gt;n\)</span>).</p>
+<p>Therefore, we find the vector <span class="math inline">\(p\)</span> closest to <span class="math inline">\(b\)</span> in the same plane of <span class="math inline">\(a_1\)</span> and <span class="math inline">\(a_2\)</span>, and let <span class="math inline">\(e=b-p\)</span> to be as small as possible and orthogonal to <span class="math inline">\(a_1\)</span> and <span class="math inline">\(a_2\)</span> (<span class="math inline">\(C(A)\)</span>).</p>
+<p>Then find a solution <span class="math inline">\(\hat{x}\)</span> such that <span class="math inline">\(p=a_{1}\hat{x}_{1}+a_{2}\hat{x}_{2}\)</span>, and <span class="math inline">\(p\)</span> is the projection of <span class="math inline">\(b\)</span> onto <span class="math inline">\(C(A)\)</span>. <span class="math display">\[
+\begin{aligned}
+&amp;p=a_{1} \hat{x}_{1}+a_{2} \hat{x}_{2}=A \hat{x} \\
+&amp;e=b-p=b-A \hat{x} \\
+\end{aligned}
+\]</span> Orthogonality yield <span class="math display">\[
+\begin{aligned}
+&amp;\left\{\begin{array}{l}
+a_{1} \perp e \Leftrightarrow a_{1}^{T} e=0 \\
+a_{2} \perp e \Leftrightarrow a_{2}^{T} e=0
+\end{array} \Leftrightarrow A^{T} e=0 \Leftrightarrow A^{T}(b-A \hat{x})=0\right.
+\end{aligned}
 \]</span></p>
-<h2 id="how-to-determine-matrix-is-pos.-def">(3) How to determine matrix is pos. def</h2>
-<p>Definition <span class="math inline">\(x^{T}Ax &gt; 0\)</span> is not very useful, <span class="math inline">\(\lambda &gt; 0\)</span> works but it's too expensive to compute eigenvalues.</p>
-<p>If not:</p>
-<ol type="1">
-<li><p>Check if symmetric</p></li>
-<li><p>Check if all diagonal elements are positive (this is just a sign of pos. def.)</p></li>
-<li><p>Try Cholesky, and if Cholesky fail, exit and perform standard LU</p></li>
-</ol>
-<h2 id="cholesky-decomposition-in-python">(4) Cholesky decomposition in Python</h2>
-<figure class="highlight apache"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">import</span> numpy as np<br><span class="hljs-attribute">from</span> scipy.linalg import ldl<br><span class="hljs-attribute">from</span> scipy.linalg import cholesky<br><span class="hljs-attribute">from</span> scipy.linalg import solve<br><span class="hljs-attribute">A</span>=np.array([[<span class="hljs-number">9</span>,<span class="hljs-number">3</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">10</span>,<span class="hljs-number">7</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">7</span>,<span class="hljs-number">6</span>]]);<br><span class="hljs-comment"># LDLT-decomposition</span><br><span class="hljs-attribute">L</span>, D, P = ldl(A,lower=<span class="hljs-number">1</span>)<br><span class="hljs-comment"># Cholesky-decomposition</span><br><span class="hljs-attribute">G</span> = cholesky(A, lower=<span class="hljs-number">1</span>)<br><span class="hljs-comment"># <span class="hljs-doctag">Note:</span> scipy.solve can solve systems using</span><br><span class="hljs-comment"># Cholesky. Number of operations halved.</span><br><span class="hljs-comment"># assume_a='pos' =&gt; ldlt-solution</span><br><span class="hljs-attribute">b</span> = np.array([[<span class="hljs-number">8</span>],<span class="hljs-meta"> [-1], [-4]])</span><br><span class="hljs-meta">x = solve(A,b, assume_a='pos')</span><br></code></pre></td></tr></tbody></table></figure>
+<p>The normal equations is <span class="math inline">\(A^{T}A\hat{x}=A^{T}b\)</span>. It's a least squares question and normally requires <span class="math inline">\(A^{T}A\)</span> to be non-singular. It can prove that <span class="math inline">\(rank(A)=rank(A^{T}A)\)</span>, so <span class="math inline">\(A\)</span> must have independent columns. The normal equations can be solved with Cholesky decomposition (<span class="math inline">\(A^{T}A\)</span> symm. pos. def.) but <span class="math inline">\(A^{T}A\)</span> is often ill-conditioned.</p>
+<p>The normal equations requires less operation than other methods, but it won't work when <span class="math inline">\(A\)</span> is singular it also has a high condition number.</p>
+<h2 id="qr-decomposition">QR decomposition</h2>
+<p>QR decomposition <span class="math inline">\(A=QR\)</span> is one way to solve least squares problem. The solution is shown as below. <span class="math display">\[
+\begin{gathered}
+A^{T} A x=A^{T} b \Rightarrow(Q R)^{T} Q R x=(Q R)^{T} b \Rightarrow \\
+R^{T} Q^{T} Q R x=R^{T} Q^{T} b \Rightarrow R^{T} R x=R^{T} Q^{T} b \Rightarrow \\
+R x=Q^{T} b
+\end{gathered}
+\]</span> Solving <span class="math inline">\(R x=Q^{T} b\)</span> (with backward substitution) gives the least squares solution.</p>
+<p>The merit of QR decomposition is that it has nothing to do with condition number. But the operation of QR decomposition is expensive and matrix <span class="math inline">\(A\)</span> has to be singular otherwise there will be no solution for it.</p>
+<h2 id="persudo-inverse">Persudo-inverse</h2>
+<p>When <span class="math inline">\(A\)</span> is a full-rank square matrix, there is a solution for <span class="math inline">\(Ax=b\)</span> that <span class="math inline">\(x=A^{-1}b\)</span>. But when <span class="math inline">\(A\)</span> isn't a full-rank square matrix, there is no solution for this equation. So we need to find the approximate solution <span class="math inline">\(x^{\prime}=\arg \min \|A x-b\|=A^{+} b\)</span>, and <span class="math inline">\(A^{+}\)</span> is a pseudo-inverse matrix.</p>
+<p>Let the SVD of <span class="math inline">\(A\)</span> be <span class="math display">\[
+A=U\left(\begin{array}{ll}
+S &amp; 0 \\
+0 &amp; 0
+\end{array}\right) V^{T},
+\]</span> where <span class="math inline">\(U, V\)</span> are both orthogonal matrices, and <span class="math inline">\(S\)</span> is a diagonal matrix containing the (positive) singular values of <span class="math inline">\(A\)</span> on its diagonal. Then the pseudo-inverse of <span class="math inline">\(A\)</span> is the <span class="math inline">\(n \times m\)</span> matrix defined as <span class="math display">\[
+A^{+}=V\left(\begin{array}{cc}
+S^{-1} &amp; 0 \\
+0 &amp; 0
+\end{array}\right) U^{T} .
+\]</span> Note that <span class="math inline">\(A^{+}\)</span> has the same dimension as the transpose of <span class="math inline">\(A\)</span>.</p>
+<p>If <span class="math inline">\(A\)</span> is square, invertible, then its inverse is <span class="math inline">\(A^{+}=A^{-1}\)</span>.</p>
+<p>If <span class="math inline">\(A\)</span> is full column rank, meaning <span class="math inline">\(\operatorname{rank}(A)=n \leq m\)</span>, that is, <span class="math inline">\(A^{\top} A\)</span> is not singular, then <span class="math inline">\(A^{+}\)</span> is a left inverse of <span class="math inline">\(A\)</span>, in the sense that <span class="math inline">\(A^{+} A=I_{n}\)</span>. We have the closed-form expression <span class="math inline">\(A^{+}=\left(A^{\top} A\right)^{-1} A^{\top}\)</span></p>
+<p>If <span class="math inline">\(A\)</span> is full row rank, meaning <span class="math inline">\(\operatorname{rank}(A)=m \leq n\)</span>, that is, <span class="math inline">\(A A^{\top}\)</span> is not singular, then <span class="math inline">\(A^{+}\)</span> is a right inverse of <span class="math inline">\(A\)</span>, in the sense that <span class="math inline">\(A A^{+}=I_{m}\)</span>. We have the closed-form expression <span class="math inline">\(A^{+}=A^{\top}\left(A A^{\top}\right)^{-1}\)</span></p>
+<p>The solution to the least-squares problem <span class="math inline">\(\min _{x}\|A x-b\|_{2}\)</span> with minimum norm is <span class="math inline">\(x^{*}=A^{+} b\)</span>.</p>
+<p>Persudo-inverse will work all the time but its operation is also quite expensive due to the singular value decomposition part.</p>
 
             </div>
             <hr>
@@ -297,9 +336,9 @@ g_{11} &amp; \cdots &amp; g_{n 1} \\
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/04/16/QR-decomposition/">
+                      <a href="/2022/06/28/QR2/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">The Least Squares Problem</span>
+                        <span class="hidden-mobile">QR Decomposition</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -307,8 +346,8 @@ g_{11} &amp; \cdots &amp; g_{n 1} \\
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/04/14/LU/">
-                        <span class="hidden-mobile">LU Decomposition</span>
+                      <a href="/2022/04/15/cholesky/">
+                        <span class="hidden-mobile">Cholesky Decomposition</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -16,23 +16,23 @@
   <meta name="author" content="Cheng Liang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Cholesky decomposition is to express a symmetric positive definite matrix as a decomposition of the product of a lower triangular matrix and its transpose. It requires that all eigenvalues of the matr">
+    <meta name="description" content="The QR (orthogonal triangular) decomposition is the most effective and widely used method to find all the eigenvalues of a general matrix. It decomposes the matrix into a normal orthogonal matrix \(Q\">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cholesky Decomposition">
-<meta property="og:url" content="http://example.com/2022/04/15/cholesky/index.html">
+<meta property="og:title" content="QR Decomposition">
+<meta property="og:url" content="http://example.com/2022/06/28/QR2/index.html">
 <meta property="og:site_name" content="imchengliang">
-<meta property="og:description" content="Cholesky decomposition is to express a symmetric positive definite matrix as a decomposition of the product of a lower triangular matrix and its transpose. It requires that all eigenvalues of the matr">
+<meta property="og:description" content="The QR (orthogonal triangular) decomposition is the most effective and widely used method to find all the eigenvalues of a general matrix. It decomposes the matrix into a normal orthogonal matrix \(Q\">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/img/maxresdefault.jpeg">
-<meta property="article:published_time" content="2022-04-15T14:52:50.000Z">
-<meta property="article:modified_time" content="2022-04-15T21:59:26.125Z">
+<meta property="article:published_time" content="2022-06-28T12:50:21.000Z">
+<meta property="article:modified_time" content="2022-07-06T09:42:12.662Z">
 <meta property="article:author" content="Cheng Liang">
 <meta property="article:tag" content="Linear Algebra">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/maxresdefault.jpeg">
   
   
-  <title>Cholesky Decomposition - imchengliang</title>
+  <title>QR Decomposition - imchengliang</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -181,7 +181,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Cholesky Decomposition">
+            <span class="h2" id="subtitle" title="QR Decomposition">
               
             </span>
 
@@ -191,8 +191,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-15 16:52" pubdate>
-        April 15, 2022 pm
+      <time datetime="2022-06-28 14:50" pubdate>
+        June 28, 2022 pm
       </time>
     </span>
   
@@ -228,41 +228,37 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Cholesky Decomposition</h1>
+            <h1 style="display: none">QR Decomposition</h1>
             
             <div class="markdown-body">
-              <p>Cholesky decomposition is to express a symmetric positive definite matrix as a decomposition of the product of a lower triangular matrix and its transpose. It requires that all eigenvalues of the matrix must be positive, so the diagonal elements of the decomposed lower triangle are also positive. The Cholesky decomposition, also known as the square root method, is a modification of the <a target="_blank" rel="noopener" href="https://imchengliang.top/2022/04/14/LU/">LU decomposition</a> when matrix A is a symmetric positive definite matrix.</p>
-<h2 id="ldlt-decomposition">(1) LDLT decomposition</h2>
-<p>If <span class="math inline">\(A\)</span> is symmetric, we would expect some sort of symmetry in the LU decomposition.</p>
-<p><span class="math inline">\(U \ne L^T\)</span> due to diagonals in <span class="math inline">\(U\)</span> and <span class="math inline">\(L\)</span> not the same. But if we take <span class="math inline">\(u_{ii}\)</span> out of <span class="math inline">\(U\)</span> and store in diagonal matrix <span class="math inline">\(D\)</span> we get <span class="math inline">\(U = DL^T\)</span>, and <span class="math inline">\(A=LDL^T\)</span> called the LDLT decomposition.</p>
-<p>It's roughly half the cost of LU decomposition as we don’t need to compute the upper diagonal part of <span class="math inline">\(U\)</span>.</p>
-<h2 id="cholesky-decomposition">(2) Cholesky decomposition</h2>
-<p>When <span class="math inline">\(A\)</span> is symmetric, positive definite (<span class="math inline">\(d_{ii} &lt; 0\)</span> in <span class="math inline">\(D\)</span>), the LDLT decomposition becomes Cholesky decomposition (Cholesky is stable - no pivoting needed): <span class="math display">\[A=LD^{1/2}D^{1/2}L^T=GG^T\]</span></p>
-<p>It’s possible to calculate Cholesky directly without forming <span class="math inline">\(L\)</span> and <span class="math inline">\(D\)</span>. Use <span class="math display">\[
-A=\left(\begin{array}{ccc}
-a_{11} &amp; \cdots &amp; a_{1 n} \\
-\vdots &amp; \ddots &amp; \vdots \\
-a_{n 1} &amp; \cdots &amp; a_{n n}
-\end{array}\right)=\left(\begin{array}{ccc}
-g_{11} &amp; \cdots &amp; 0 \\
-\vdots &amp; \ddots &amp; \vdots \\
-g_{n 1} &amp; \cdots &amp; g_{n n}
-\end{array}\right)\left(\begin{array}{ccc}
-g_{11} &amp; \cdots &amp; g_{n 1} \\
-\vdots &amp; \ddots &amp; \vdots \\
-0 &amp; \cdots &amp; g_{n n}
-\end{array}\right)
-\]</span></p>
-<h2 id="how-to-determine-matrix-is-pos.-def">(3) How to determine matrix is pos. def</h2>
-<p>Definition <span class="math inline">\(x^{T}Ax &gt; 0\)</span> is not very useful, <span class="math inline">\(\lambda &gt; 0\)</span> works but it's too expensive to compute eigenvalues.</p>
-<p>If not:</p>
+              <p>The QR (orthogonal triangular) decomposition is the most effective and widely used method to find all the eigenvalues of a general matrix. It decomposes the matrix into a normal orthogonal matrix <span class="math inline">\(Q\)</span> and an upper triangular matrix <span class="math inline">\(R\)</span>, so it is called the QR decomposition. There are two common methods of QR decomposition, one is based on Gram-Schmidt, and the other one is based on Householder reflectors.</p>
+<h2 id="qr-decomposition-based-on-gram-schmidt">QR decomposition based on Gram-Schmidt</h2>
+<p>Let say a matrix <span class="math inline">\(A=(a_{1} \quad a_{2} \quad a_{3})\)</span> for example, then <span class="math inline">\(Ax=(a_{1} \quad a_{2} \quad a_{3})x=b\)</span>. To find the <span class="math inline">\(Q\)</span> and <span class="math inline">\(R\)</span> for <span class="math inline">\(A\)</span>, we need to orthogonalize and normalize every vector in <span class="math inline">\(A\)</span> (* for the first vector <span class="math inline">\(a_1\)</span>, only normalization is required).</p>
 <ol type="1">
-<li><p>Check if symmetric</p></li>
-<li><p>Check if all diagonal elements are positive (this is just a sign of pos. def.)</p></li>
-<li><p>Try Cholesky, and if Cholesky fail, exit and perform standard LU</p></li>
+<li><p>Normalize <span class="math inline">\(a_1\)</span>: <span class="math inline">\(\quad g_{1}=\frac{a_{1}}{\parallel a_{1} \parallel}, \quad a_{1}=\left\|a_{1}\right\| g_{1}\)</span></p></li>
+<li><p>Orthogonalize <span class="math inline">\(a_2\)</span>: <span class="math inline">\(\quad a_{2}^{\prime}=a_{2}-(a_{2}^{\top}g_{1})g_{1}\)</span></p></li>
+<li><p>Normalize <span class="math inline">\(a_2\)</span>: <span class="math inline">\(\quad g_{2}=\frac{a_{2}^{\prime}}{\left\|a_{2}^{\prime}\right\|}, \quad a_{2}=\left(a_{2}^{\top} g_{1}\right) g_{1}+\left\|a_{2}^{\prime}\right\| g_{2}\)</span></p></li>
+<li><p>Orthogonalise <span class="math inline">\(a_{3}\)</span>: <span class="math inline">\(\quad a_{3}^{\prime}=a_{3}-\left(a_{3}^{\top} g_{1}\right) g_{1}-\left(a_{3}^{\top} g_{2}\right) g_{2}\)</span></p></li>
+<li><p>Normalize <span class="math inline">\(a_{3}\)</span>: <span class="math inline">\(\quad g_{3}=\frac{a_{3}{ }^{\prime}}{\left\|a_{3}\right\|}, \quad a_{3}=\left(a_{3}^{\top} g_{1}\right) g_{1}+\left(a_{3}^{\top} g_{2}\right) g_{2}+\left\|a_{3}^{\prime}\right\| g_{3}\)</span></p></li>
 </ol>
-<h2 id="cholesky-decomposition-in-python">(4) Cholesky decomposition in Python</h2>
-<figure class="highlight apache"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">import</span> numpy as np<br><span class="hljs-attribute">from</span> scipy.linalg import ldl<br><span class="hljs-attribute">from</span> scipy.linalg import cholesky<br><span class="hljs-attribute">from</span> scipy.linalg import solve<br><span class="hljs-attribute">A</span>=np.array([[<span class="hljs-number">9</span>,<span class="hljs-number">3</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">10</span>,<span class="hljs-number">7</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">7</span>,<span class="hljs-number">6</span>]]);<br><span class="hljs-comment"># LDLT-decomposition</span><br><span class="hljs-attribute">L</span>, D, P = ldl(A,lower=<span class="hljs-number">1</span>)<br><span class="hljs-comment"># Cholesky-decomposition</span><br><span class="hljs-attribute">G</span> = cholesky(A, lower=<span class="hljs-number">1</span>)<br><span class="hljs-comment"># <span class="hljs-doctag">Note:</span> scipy.solve can solve systems using</span><br><span class="hljs-comment"># Cholesky. Number of operations halved.</span><br><span class="hljs-comment"># assume_a='pos' =&gt; ldlt-solution</span><br><span class="hljs-attribute">b</span> = np.array([[<span class="hljs-number">8</span>],<span class="hljs-meta"> [-1], [-4]])</span><br><span class="hljs-meta">x = solve(A,b, assume_a='pos')</span><br></code></pre></td></tr></tbody></table></figure>
+<p>After the orthogonalization and normalization, we get <span class="math inline">\(Q=\left(\begin{array}{lll} g_{1} &amp; g_{2} &amp; g_{3} \end{array}\right)\)</span> and <span class="math inline">\(R=\left(\begin{array}{ccc} \left\|a_{1}\right\| &amp; a_{2}^{\top} g_{1} &amp; a_{3}^{\top} g_{1} \\ 0 &amp; \left\|a_{2}\right\| &amp; a_{3}^{\top} g_{2} \\ 0 &amp; 0 &amp; \left\|a_{3}\right\| \end{array}\right)\)</span></p>
+<p>One problem with Gram-Schmidt is that <span class="math inline">\(g_{1}, g_{2}, g_{3}\)</span> won't be exactly orthogonal due to error in the computations (round-off).</p>
+<p>And as <span class="math inline">\(g_3\)</span> depends on <span class="math inline">\(g_1\)</span> and <span class="math inline">\(g_2\)</span>, the problem tends to get worse and worse. The vectors get less and less orthogonal in practice. Therefore, it's better to use Householder reflectors when we apply QR decomposition.</p>
+<h2 id="qr-decomposition-based-on-householder-reflectors">QR decomposition based on Householder reflectors</h2>
+<p>Householder reflector: <span class="math inline">\(H=I-2uu^{\top}=I-\frac{2 v v^{\top}}{\|v\|_{2}{ }^{2}}, \quad H^{2}=I\)</span></p>
+<p>For every reflector, it is orthogonal and doesn't change length <span class="math inline">\(\rightarrow H^{2}=H^{\top}H=I\)</span></p>
+<p>Now consider <span class="math inline">\(A\)</span> as a <span class="math inline">\(4*3\)</span> matrix for example, then <span class="math inline">\(Q_{n}\)</span> <span class="math inline">\((n=1,2,3)\)</span>, all are square matrix with size of <span class="math inline">\(4*4\)</span>. We can find <span class="math inline">\(Q_{n}\)</span> one by one following the steps below.</p>
+<p>Find <span class="math inline">\(Q_1\)</span> that makes <span class="math inline">\(Q_{1}A=\left(\begin{array}{ccc}x &amp; x &amp; x \\ 0 &amp; x &amp; x \\ 0 &amp; x &amp; x \\ 0 &amp; x &amp; x\end{array}\right)\)</span>:</p>
+<p><span class="math inline">\(\quad v=a_{1}+\left\|a_{1}\right\|e_{1} \quad\)</span> (<span class="math inline">\(a_{1}\)</span> is the first column in <span class="math inline">\(A\)</span>), <span class="math inline">\(\quad Q_{1}=I - \frac{2 v v^{\top}}{\|v\|_{2}{ }^{2}}\)</span></p>
+<p>Find <span class="math inline">\(Q_2\)</span> that makes <span class="math inline">\(Q_{2}(Q_{1}A)=\left(\begin{array}{ccc}x &amp; x &amp; x \\ 0 &amp; x &amp; x \\ 0 &amp; 0 &amp; x \\ 0 &amp; 0 &amp; x\end{array}\right)\)</span>:</p>
+<p><span class="math inline">\(\quad v=a_{2}+\left\|a_{2}\right\|e_{1} \quad\)</span> (<span class="math inline">\(a_{2}\)</span> is last three elements of the second column in <span class="math inline">\(Q_{1}A\)</span>)</p>
+<p><span class="math inline">\(\quad Q_{2}^{\prime}=I - \frac{2 v v^{\top}}{\|v\|_{2}{ }^{2}}\)</span>, <span class="math inline">\(\quad Q_{2}=\left(\begin{array}{cccc}1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; Q_{2_{1,1}}^{\prime} &amp; Q_{2_{1,2}}^{\prime} &amp; Q_{2_{1,3}}^{\prime} \\ 0 &amp; Q_{2_{2,1}}^{\prime} &amp; Q_{2_{2,2}}^{\prime} &amp; Q_{2_{2,3}}^{\prime} \\ 0 &amp; Q_{2_{3,1}}^{\prime} &amp; Q_{2_{3,2}}^{\prime} &amp; Q_{2_{3,3}}^{\prime} \end{array}\right)\)</span></p>
+<p>Find <span class="math inline">\(Q_3\)</span> that makes <span class="math inline">\(Q_{3}(Q_{2}Q_{1}A)=\left(\begin{array}{ccc}x &amp; x &amp; x \\ 0 &amp; x &amp; x \\ 0 &amp; 0 &amp; x \\ 0 &amp; 0 &amp; 0\end{array}\right)\)</span>:</p>
+<p><span class="math inline">\(\quad v=a_{3}+\left\|a_{3}\right\|e_{1} \quad\)</span> (<span class="math inline">\(a_{3}\)</span> is last two elements of the third column in <span class="math inline">\(Q_{2}(Q_{1}A)\)</span>)</p>
+<p><span class="math inline">\(\quad Q_{3}^{\prime}=I - \frac{2 v v^{\top}}{\|v\|_{2}{ }^{2}}\)</span>, <span class="math inline">\(\quad Q_{3}=\left(\begin{array}{cccc}1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; Q_{3_{1,1}}^{\prime} &amp; Q_{3_{1,2}}^{\prime} \\ 0 &amp; 0 &amp; Q_{3_{2,1}}^{\prime} &amp; Q_{3_{2,2}}^{\prime} \end{array}\right)\)</span></p>
+<p><span class="math inline">\(Q_{3} Q_{2} Q_{1} A=R \rightarrow A=Q_{1}^{\top} Q_{2}^{\top} Q_{3}^{\top} R=Q R\)</span>, and we get <span class="math inline">\(Q=Q_{1}^{\top} Q_{2}^{\top} Q_{3}^{\top}\)</span></p>
+<h2 id="qr-decomposition-in-python">QR Decomposition in Python</h2>
+<figure class="highlight maxima"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs maxima">import math<br>import argparse<br>import numpy as <span class="hljs-built_in">np</span><br>from typing import Union<br><br># QR decomposition based on Gram-Schmidt<br>def gram_schmidt(A):<br>    cols = A.shape[<span class="hljs-number">1</span>]<br>    Q = <span class="hljs-built_in">np</span>.<span class="hljs-built_in">copy</span>(A)<br>    R = <span class="hljs-built_in">np</span>.zeros((cols, cols))<br>    <span class="hljs-keyword">for</span> <span class="hljs-built_in">col</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(cols):<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">col</span>):<br>            k =  <span class="hljs-built_in">np</span>.<span class="hljs-built_in">sum</span>(a[:, <span class="hljs-built_in">col</span>] * Q[:, i]) / <span class="hljs-built_in">np</span>.<span class="hljs-built_in">sum</span>( <span class="hljs-built_in">np</span>.square(Q[:, i]) )<br>            Q[:, <span class="hljs-built_in">col</span>] -= k*Q[:, i]<br>        Q[:, <span class="hljs-built_in">col</span>] /= <span class="hljs-built_in">np</span>.linalg.norm(Q[:, <span class="hljs-built_in">col</span>])<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(cols):<br>            R[<span class="hljs-built_in">col</span>, i] = Q[:, <span class="hljs-built_in">col</span>].dot( A[:, i] )   <br>    <span class="hljs-built_in">return</span> Q, R  <br><br># QR decomposition based on Householder reflectors  <br>def householder(alpha: <span class="hljs-built_in">float</span>, x: <span class="hljs-built_in">np</span>.ndarray) -&gt; Union[<span class="hljs-built_in">np</span>.ndarray, int]:<br>    s = math.pow(<span class="hljs-built_in">np</span>.linalg.norm(x, ord=<span class="hljs-number">2</span>), <span class="hljs-number">2</span>)<br>    v = x<br>    <span class="hljs-keyword">if</span> s == <span class="hljs-number">0</span>:<br>        tau = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">else</span>:<br>        t = math.<span class="hljs-built_in">sqrt</span>(alpha * alpha + s)<br>        v_one = alpha - t <span class="hljs-keyword">if</span> alpha &lt;= <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> -s / (alpha + t)<br>        tau = <span class="hljs-number">2</span> * v_one * v_one / (s + v_one * v_one)<br>        v /= v_one<br>    <span class="hljs-built_in">return</span> v, tau<br><br>def qr_decomposition(A: <span class="hljs-built_in">np</span>.ndarray, m: int, n: int) -&gt; Union[<span class="hljs-built_in">np</span>.ndarray, <span class="hljs-built_in">np</span>.ndarray]:<br>    H = []<br>    R = A<br>    Q = A<br>    I = <span class="hljs-built_in">np</span>.eye(m, m)<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, n):<br>        # Apply Householder transformation.<br>        x = A[j + <span class="hljs-number">1</span>:m, j]<br>        v_householder, tau = householder(<span class="hljs-built_in">np</span>.linalg.norm(x), x)<br>        v = <span class="hljs-built_in">np</span>.zeros((<span class="hljs-number">1</span>, m))<br>        v[<span class="hljs-number">0</span>, j] = <span class="hljs-number">1</span><br>        v[<span class="hljs-number">0</span>, j + <span class="hljs-number">1</span>:m] = v_householder<br>        res = I - tau * v * <span class="hljs-built_in">np</span>.<span class="hljs-built_in">transpose</span>(v)<br>        R = <span class="hljs-built_in">np</span>.matmul(res, R)<br>        H.<span class="hljs-built_in">append</span>(res)<br>    <span class="hljs-built_in">return</span> Q, R<br></code></pre></td></tr></tbody></table></figure>
 
             </div>
             <hr>
@@ -297,18 +293,12 @@ g_{11} &amp; \cdots &amp; g_{n 1} \\
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/04/16/QR-decomposition/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">The Least Squares Problem</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/04/14/LU/">
-                        <span class="hidden-mobile">LU Decomposition</span>
+                      <a href="/2022/04/16/QR-decomposition/">
+                        <span class="hidden-mobile">The Least Squares Problem</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
