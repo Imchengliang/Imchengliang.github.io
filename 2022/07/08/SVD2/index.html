@@ -16,23 +16,23 @@
   <meta name="author" content="Cheng Liang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="LU decomposition is a common method to solve polynomial \(Ax&#x3D;b\), and this method is consist of three steps:  LU factorization: Gaussian elimination on matrix \(A\), factorize \(A\) to \(L,U\) such th">
+    <meta name="description" content="In Singular Value Decomposition (SVD) Part 1, I introduce one way to calculate SVD. And in this post, I would talk about other ideas about solving SVD. Matrix \(A\) is symmetric \[ \begin{aligned} A \">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LU Decomposition">
-<meta property="og:url" content="http://example.com/2022/04/14/LU/index.html">
+<meta property="og:title" content="Singular Value Decomposition (SVD) Part 2">
+<meta property="og:url" content="http://example.com/2022/07/08/SVD2/index.html">
 <meta property="og:site_name" content="imchengliang">
-<meta property="og:description" content="LU decomposition is a common method to solve polynomial \(Ax&#x3D;b\), and this method is consist of three steps:  LU factorization: Gaussian elimination on matrix \(A\), factorize \(A\) to \(L,U\) such th">
+<meta property="og:description" content="In Singular Value Decomposition (SVD) Part 1, I introduce one way to calculate SVD. And in this post, I would talk about other ideas about solving SVD. Matrix \(A\) is symmetric \[ \begin{aligned} A \">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/img/maxresdefault.jpeg">
-<meta property="article:published_time" content="2022-04-13T22:02:47.000Z">
-<meta property="article:modified_time" content="2022-04-15T21:49:39.343Z">
+<meta property="article:published_time" content="2022-07-08T09:00:21.000Z">
+<meta property="article:modified_time" content="2022-07-11T11:36:34.735Z">
 <meta property="article:author" content="Cheng Liang">
 <meta property="article:tag" content="Linear Algebra">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/maxresdefault.jpeg">
   
   
-  <title>LU Decomposition - imchengliang</title>
+  <title>Singular Value Decomposition (SVD) Part 2 - imchengliang</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -181,7 +181,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="LU Decomposition">
+            <span class="h2" id="subtitle" title="Singular Value Decomposition (SVD) Part 2">
               
             </span>
 
@@ -191,8 +191,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-14 00:02" pubdate>
-        April 14, 2022 am
+      <time datetime="2022-07-08 11:00" pubdate>
+        July 8, 2022 am
       </time>
     </span>
   
@@ -228,189 +228,48 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">LU Decomposition</h1>
+            <h1 style="display: none">Singular Value Decomposition (SVD) Part 2</h1>
             
             <div class="markdown-body">
-              <p>LU decomposition is a common method to solve polynomial <span class="math inline">\(Ax=b\)</span>, and this method is consist of three steps:</p>
+              <p>In <a target="_blank" rel="noopener" href="https://imchengliang.top/2022/01/14/post-1/">Singular Value Decomposition (SVD) Part 1</a>, I introduce one way to calculate SVD. And in this post, I would talk about other ideas about solving SVD.</p>
+<h2 id="matrix-a-is-symmetric">Matrix <span class="math inline">\(A\)</span> is symmetric</h2>
+<p><span class="math display">\[
+\begin{aligned}
+A \cdot\left(q_{1}, \ldots q_{n}\right)&amp;=\left(\lambda_{1} q_{1} \ldots \lambda_{n} q_{n}\right) \\
+&amp;=\left(\begin{array}{lll}q_{1} &amp; \cdots &amp; q_{n}\end{array}\right) \cdot\left(\begin{array}{ccc}\lambda_{1} &amp; \cdots &amp; \cdots \\ \vdots &amp; \ddots &amp; \vdots \\ \cdots &amp; \lambda_{n} &amp; \cdots\end{array}\right)
+\end{aligned}
+\]</span> When the matrix <span class="math inline">\(A\)</span> is symmetric, the eigenvectors <span class="math inline">\(Q\)</span> of <span class="math inline">\(A\)</span> would be orthogonal. And <span class="math inline">\(Q^{-1} = Q^{\top}\)</span> for orthogonal matrix. Then we get the SVD as below: <span class="math display">\[
+\begin{aligned}
+AQ=Q \lambda  \quad \rightarrow  \quad A=Q \lambda Q^{-1}=Q \lambda Q^{\top}
+\end{aligned}
+\]</span></p>
+<h2 id="matrix-a-isnt-symmetric">Matrix <span class="math inline">\(A\)</span> isn't symmetric</h2>
+<p>In big data world, <span class="math inline">\(A\)</span> is a data matrix but it's not always a square matrix. Under this situation, we can't work directly with the eigenvectors of <span class="math inline">\(A\)</span>, <span class="math inline">\(A^{\top}A\)</span> and <span class="math inline">\(AA^{\top}\)</span> are required for SVD. Then we get "sort of" <span class="math inline">\(\lambda ^{2}\)</span>, which are two sets of eigenvectors:</p>
 <ol type="1">
-<li><p>LU factorization: Gaussian elimination on matrix <span class="math inline">\(A\)</span>, factorize <span class="math inline">\(A\)</span> to <span class="math inline">\(L,U\)</span> such that <span class="math inline">\(PA=LU\)</span></p></li>
-<li><p>Forward substitution: Solve lower triangular system <span class="math inline">\(Ld = Pb\)</span></p></li>
-<li><p>Backward substitution: Solve upper triangular system <span class="math inline">\(Ux = d\)</span></p></li>
+<li><p>n right singular vectors, <span class="math inline">\(v_{1}, \cdots , v_{n}\)</span> orthogonal in <span class="math inline">\(R^n\)</span></p></li>
+<li><p>m left singular vectors, <span class="math inline">\(u_{1}, \cdots , u_{n}\)</span> orthogonal in <span class="math inline">\(R^m\)</span></p></li>
 </ol>
-<p>In the following part, I would use the example of <span class="math inline">\(A\)</span> and <span class="math inline">\(b\)</span> to explain the calculation of LU decomposition. <span class="math display">\[
-A=\left(\begin{array}{ccc}
-1 &amp; 2 &amp; 3 \\
-2 &amp; 5 &amp; 10 \\
-3 &amp; 10 &amp; 10
-\end{array}\right), \quad b=\left(\begin{array}{c}
-3 \\
-7 \\
-13
-\end{array}\right)
-\]</span></p>
-<h2 id="lu-factorization">(1) LU factorization</h2>
-<p>In LU factorization, we need to factorize <span class="math inline">\(A\)</span> into <span class="math inline">\(L\)</span> and <span class="math inline">\(U\)</span>, and let <span class="math inline">\(LU=PA\)</span> <span class="math display">\[
-L=\left(\begin{array}{ccc}
-a_1 &amp; 0 &amp; 0 \\
-a_2 &amp; a_3 &amp; 0 \\
-a_4 &amp; a_5 &amp; a_6
-\end{array}\right), \quad U=\left(\begin{array}{ccc}
-b_1 &amp; b_2 &amp; b_3 \\
-0 &amp; b_4 &amp; b_5 \\
-0 &amp; 0 &amp; b_6
-\end{array}\right)
-\]</span></p>
-<p>Sometimes, we can get the right result through the decomposition of <span class="math inline">\(LU=A\)</span>, but this decomposition isn't stable that might cause a large error in the calculation. Therefore, we need to do the "pivoting" procedure (<span class="math inline">\(P\)</span>) during the factorization step. "pivoting" means that we should keep the value of each non-zero element of each row to be larger the other elements of the same column below this one, and we can achieve this goal by row exchange.</p>
-<p><span class="math inline">\(U\)</span> is obtained from Gaussian elimination of <span class="math inline">\(A\)</span>, and <span class="math inline">\(L\)</span> is computed from <span class="math inline">\(U\)</span>. <span class="math inline">\(P\)</span> is the identity matrix at first, and if we exchange row during the Gaussian elimination, the same exchange need to be applied on <span class="math inline">\(P\)</span>. And <span class="math inline">\(A, P, L, U\)</span> all have the same size.</p>
-<p>The calculation below is LU factorization example:</p>
-<p><span class="math display">\[
-\begin{aligned}
-&amp;A=\left(\begin{array}{ccc}
-1 &amp; 2 &amp; 3 \\
-2 &amp; 5 &amp; 10 \\
-3 &amp; 10 &amp; 16
-\end{array}\right), \quad P=\left(\begin{array}{lll}
-1 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 0 \\
-0 &amp; 0 &amp; 1
-\end{array}\right) \\
-&amp;\stackrel{R_{1} \leftrightarrow R_{3}}{\longrightarrow}\left(\begin{array}{ccc}
-3 &amp; 10 &amp; 16 \\
-2 &amp; 5 &amp; 10 \\
-1 &amp; 2 &amp; 3
-\end{array}\right), \quad P=\left(\begin{array}{lll}
-0 &amp; 0 &amp; 1 \\
-0 &amp; 1 &amp; 0 \\
-1 &amp; 0 &amp; 0
-\end{array}\right) \\
-&amp;\stackrel{R_{2}-\frac{2}{3} R_{1}}{\longrightarrow}\left(\begin{array}{ccc}
-3 &amp; 10 &amp; 10 \\
-0 &amp; -\frac{5}{3} &amp; -\frac{2}{3} \\
-0 &amp; -\frac{4}{3} &amp; -\frac{1}{3}
-\end{array}\right), \quad P=\left(\begin{array}{lll}
-0 &amp; 0 &amp; 1 \\
-0 &amp; 1 &amp; 0 \\
-1 &amp; 0 &amp; 0
-\end{array}\right) \\
-&amp;\stackrel{R_{3}-\frac{1}{5} R_{1} R_{2}}{\longrightarrow}\left(\begin{array}{ccc}
-3 &amp; 10 &amp; 16 \\
-0 &amp; -\frac{5}{3} &amp; -\frac{2}{3} \\
-0 &amp; 0 &amp; -\frac{5}{5}
-\end{array}\right)=U, \quad P=\left(\begin{array}{lll}
-0 &amp; 0 &amp; 1 \\
-0 &amp; 1 &amp; 0 \\
-1 &amp; 0 &amp; 0
-\end{array}\right)
-\end{aligned}
-\]</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-L&amp;=\left(\left(\begin{array}{l}
-3 \\
-2 \\
-1
-\end{array}\right) / 3,\left(\begin{array}{c}
-0 \\
--\frac{5}{3} \\
--\frac{4}{3}
-\end{array}\right) / -\frac{5}{3},\left(\begin{array}{c}
-0 \\
-0 \\
--\frac{9}{5}
-\end{array}\right) /-\frac{9}{5}\right) \\
-&amp;=\left(\begin{array}{ccc}
-1 &amp; 0 &amp; 0 \\
-\frac{2}{3} &amp; 1 &amp; 0 \\
-\frac{1}{3} &amp; \frac{4}{5} &amp; 1
-\end{array}\right)
-\end{aligned}
-\]</span></p>
-<h2 id="forward-and-backward-substitution">(2) Forward and Backward substitution</h2>
-<p>Forward and Backward substitution is used to calculate the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> in the following functions. <span class="math display">\[
-\begin{aligned}
-&amp;\left\{\begin{array} { l } 
-{ A x = b } \\
-{ L U = P A } \\
-{ U x = y }
-\end{array} \rightarrow \left\{\begin{array}{l}
-L y=P b \\
-U x=y
-\end{array}\right.\right.\\
-\end{aligned}
-\]</span> Forward substitution: <span class="math display">\[
-\begin{aligned}
-&amp;P b=\left(\begin{array}{lll}
-0 &amp; 0 &amp; 1 \\
-0 &amp; 1 &amp; 0 \\
-1 &amp; 0 &amp; 0
-\end{array}\right) \cdot\left(\begin{array}{l}
-3 \\
-7 \\
-13
-\end{array}\right)=\left(\begin{array}{c}
-13 \\
-7 \\
-3
-\end{array}\right)\\
-&amp;L y=\left(\begin{array}{ccc}
-1 &amp; 0 &amp; 0 \\
-\frac{2}{3} &amp; 1 &amp; 0 \\
-\frac{1}{3} &amp; \frac{4}{5} &amp; 1
-\end{array}\right) \cdot\left(\begin{array}{l}
-y_{1} \\
-y_{2} \\
-y_{3}
-\end{array}\right)=\left(\begin{array}{c}
-13 \\
-7 \\
-3
-\end{array}\right)\\
-&amp;\rightarrow\left\{\begin{array} { l } 
-{ y _ { 1 } = 1 3 } \\
-{ \frac { 2 } { 3 } y _ { 1 } + y _ { 2 } = 1 } \\
-{ \frac { 1 } { 3 } y _ { 1 } + \frac { 4 } { 5 } y _ { 2 } + y _ { 3 } = 3 }
-\end{array} \rightarrow \left\{\begin{array}{l}
-y_{1}=13 \\
-y_{2}=-\frac{5}{3} \\
-y_{3}=0
-\end{array} \quad \rightarrow y=\left(\begin{array}{c}
-13 \\
--\frac{5}{3} \\
-0
-\end{array}\right)\right.\right.\\
-\end{aligned}
-\]</span> Backward substitution: <span class="math display">\[
-\begin{aligned}
-&amp;Ux=\left(\begin{array}{ccc}
-3 &amp; 10 &amp; 16 \\
-0 &amp; -\frac{5}{3} &amp; -\frac{2}{3} \\
-0 &amp; 0 &amp; -\frac{9}{5}
-\end{array}\right) \cdot\left(\begin{array}{l}
-x_{1} \\
-x_{2} \\
-x_{3}
-\end{array}\right)=\left(\begin{array}{c}
-13 \\
--\frac{5}{3} \\
-0
-\end{array}\right)\\
-&amp;\rightarrow\left\{\begin{array} { c } 
-{ 3 x _ { 1 } + 1 0 x _ { 2 } + 1 6 x _ { 3 } = 1 3 } \\
-{ - \frac { 5 } { 3 } x _ { 2 } - \frac { 2 } { 3 } x _ { 3 } = - \frac { 5 } { 3 } } \\
-{ - \frac { 9 } { 5 } x _ { 3 } = 0 }
-\end{array} \rightarrow \left\{\begin{array}{l}
-x_{1}=1 \\
-x_{2}=1 \\
-x_{3}=0
-\end{array} \rightarrow x=\left(\begin{array}{l}
-1 \\
-1 \\
-0
-\end{array}\right)\right.\right.
-\end{aligned}
-\]</span></p>
-<h2 id="lu-decomposition-in-python">(3) LU decomposition in Python</h2>
-<figure class="highlight routeros"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs routeros">import numpy as np<br><span class="hljs-keyword">from</span> scipy.linalg import lu<br><span class="hljs-keyword">from</span> scipy.linalg import solve_triangular<br><span class="hljs-attribute">A</span>=np.array([[3 -1 2],[1 0 -1],[4 2 -3]])<br>P, L, U =lu(A)<br><span class="hljs-attribute">b</span>=np.array([[8],[-1],[-4]])<br>b = P.T @ b # Row changes <span class="hljs-keyword">in</span> b<br><span class="hljs-comment"># Forward and backward substitution</span><br><span class="hljs-attribute">d</span>=solve_triangular(L, b, <span class="hljs-attribute">lower</span>=<span class="hljs-literal">True</span>)<br><span class="hljs-attribute">x</span>=solve_triangular(U, y)<br><span class="hljs-comment"># Check if the result from LU-decomposition is the same as direct computation</span><br>x2 = np.linalg.solve(A,b) <br></code></pre></td></tr></tbody></table></figure>
+<p>If <span class="math inline">\(A=U \Sigma V^{\top}\)</span>, then <span class="math inline">\(A^{\top} A=\left(U \Sigma V^{\top}\right)^{\top}\left(U \Sigma V^{\top}\right)=V^{\top} \Sigma^{\top} U^{\top} U \Sigma V^{\top}=V \Sigma^{\top} \Sigma V^{\top} \rightarrow n \times n\)</span></p>
+<p><span class="math inline">\(\Sigma^{\top} \Sigma=\left(\begin{array}{llll} \sigma_{1} &amp; &amp; \\ &amp; \ddots &amp; \\ &amp; &amp; \sigma_{n} \end{array}\right)\left(\begin{array}{lll} \sigma_{1} &amp; &amp; \\ &amp; \ddots &amp; \\ &amp; &amp; \sigma_{n} \end{array}\right)=\left(\begin{array}{lll} \sigma_{1}^{2} &amp; &amp; \\ &amp; \ddots &amp; \\ &amp; &amp; \sigma_{n}^{2} \end{array}\right)\)</span></p>
+<p><span class="math inline">\(\rightarrow\left(\sigma_{1}{ }^{2} \cdots \sigma_{n}{ }^{2}\right)\)</span> are eigenvalues of <span class="math inline">\(A^{\top} A\)</span></p>
+<p><span class="math inline">\(A A^{\top}=\left(U \Sigma V^{\top}\right)\left(U \Sigma V^{\top}\right)^{\top}=U \Sigma V^{\top} V^{\top} \Sigma^{\top} U^{\top}=U \Sigma \Sigma^{\top} U^{\top} \rightarrow m \times m\)</span></p>
+<p><span class="math inline">\(\Sigma \Sigma^{\top}=\left(\begin{array}{llll} \sigma_{1} &amp; &amp; \\ &amp; \ddots &amp; \\ &amp; &amp; \sigma_{m} \end{array}\right)\left(\begin{array}{lll} \sigma_{1} &amp; &amp; \\ &amp; \ddots &amp; \\ &amp; &amp; \sigma_{m} \end{array}\right)=\left(\begin{array}{lll} \sigma_{1}^{2} &amp; &amp; \\ &amp; \ddots &amp; \\ &amp; &amp; \sigma_{m}^{2} \end{array}\right)\)</span></p>
+<p><span class="math inline">\(\rightarrow\left(\sigma_{1}^{2} \cdots \sigma_{m}^{2}\right)\)</span> are eigenvalues of <span class="math inline">\(A A^{\top}\)</span></p>
+<p>Then in <span class="math inline">\(A=U \Sigma V^{\top}\)</span>, <span class="math inline">\(V\)</span> is the eigenvector of <span class="math inline">\(A^{\top}A\)</span>, <span class="math inline">\(U\)</span> is the eigenvectors of <span class="math inline">\(AA^{\top}\)</span>, the diagonal elements in <span class="math inline">\(\Sigma\)</span> are the root of the first same n non-zero eigenvalues of <span class="math inline">\(A^{\top}A\)</span> and <span class="math inline">\(AA^{\top}\)</span>.</p>
+<h2 id="example">Example</h2>
+<p><span class="math inline">\(A=\left(\begin{array}{ll} 1 &amp; 0 \\ 4 &amp; 6 \\ 0 &amp; 1 \end{array}\right) \quad, \quad A^{\top} A=\left(\begin{array}{ll} 17 &amp; 24 \\ 24 &amp; 37 \end{array}\right) \quad, \quad A A^{\top}=\left(\begin{array}{ccc}1 &amp; 4 &amp; 0 \\ 4 &amp; 52 &amp; 6 \\ 0 &amp; 6 &amp; 1\end{array}\right)\)</span></p>
+<p>For <span class="math inline">\(A^{\top} A\)</span></p>
+<p>Eigenvalues: <span class="math inline">\(\lambda_{1}=53, \lambda_{2}=1\)</span></p>
+<p>Eigenvectors: <span class="math inline">\(v_{1}=\left(\begin{array}{l}0.55 \\ 0.83\end{array}\right), \quad v_{2}=\left(\begin{array}{c}-0.83 \\ 0.55\end{array}\right)\)</span></p>
+<p><span class="math inline">\(A^{\top} A \cdot\left(\begin{array}{cc}0.55 &amp; -0.83 \\ 0.83 &amp; 0.55\end{array}\right)=\left(\begin{array}{cc}0.55 &amp; -0.83 \\ 0.83 &amp; 0.55\end{array}\right) \cdot\left(\begin{array}{cc}53 &amp; 0 \\ 0 &amp; 1\end{array}\right)\)</span></p>
+<p>For <span class="math inline">\(A A^{\top}\)</span></p>
+<p>Eigenvalues: <span class="math inline">\(\lambda_{1}=53, \lambda_{2}=1, \lambda_{3}=0\)</span></p>
+<p>Eigenvectors: <span class="math inline">\(u_{1}=\left(\begin{array}{l}0.08 \\ 0.99 \\ 0.11\end{array}\right), \quad u_{2}=\left(\begin{array}{c}-0.83 \\ 0 \\ 0.56\end{array}\right), \quad u_{3}=\left(\begin{array}{c}-0.55 \\ 0.14 \\ -0.82\end{array}\right)\)</span></p>
+<p>Order the same eigenvalues of <span class="math inline">\(A^{\top}A\)</span> and <span class="math inline">\(AA^{\top}\)</span> from large to small: <span class="math inline">\(\sigma_{1}=\sqrt{53}, \quad \sigma_{2}=1\)</span></p>
+<p><span class="math inline">\(A=U \Sigma V^{\top}=\left(\begin{array}{ccc} 0.08 &amp; -0.83 &amp; -0.55 \\ 0.99 &amp; 0 &amp; 0.14 \\ 0.11 &amp; 0.56 &amp; -0.82 \end{array}\right) \cdot\left(\begin{array}{cc} \sqrt{53} &amp; 0 \\ 0 &amp; 1 \\ 0 &amp; 0 \end{array}\right) \cdot\left(\begin{array}{cc} 0.55 &amp; 0.83 \\ -0.83 &amp; 0.35 \end{array}\right)\)</span></p>
+<h2 id="svd-in-python">SVD in Python</h2>
+<p>We can use numpy to construct a matrix in Python. The module linalg in numpy offers many functions of matrix operation</p>
+<figure class="highlight oxygene"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs oxygene">import numpy <span class="hljs-keyword">as</span> np<br>A = np.array([[<span class="hljs-number">1</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">0</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">0</span>]])<br># <span class="hljs-function"><span class="hljs-keyword">Method</span> 1:</span> use svd <span class="hljs-function"><span class="hljs-keyword">function</span></span><br><span class="hljs-function"># <span class="hljs-title">VT</span> <span class="hljs-title">is</span> <span class="hljs-title">the</span> <span class="hljs-title">Transpose</span> <span class="hljs-title">of</span> <span class="hljs-title">V</span>, <span class="hljs-title">if</span> <span class="hljs-title">we</span> <span class="hljs-title">want</span> <span class="hljs-title">the</span> <span class="hljs-title">matrix</span> <span class="hljs-title">V</span>, <span class="hljs-title">use</span> <span class="hljs-title">VT</span>.<span class="hljs-title">T</span></span><br><span class="hljs-function"><span class="hljs-title">U</span>, <span class="hljs-title">Sigma</span>, <span class="hljs-title">VT</span> = <span class="hljs-title">np</span>.<span class="hljs-title">linalg</span>.<span class="hljs-title">svd</span><span class="hljs-params">(A, full_matrices=<span class="hljs-keyword">True</span>)</span></span><br><span class="hljs-function"># <span class="hljs-title">Method</span> 2:</span> find svd through eigenvectors <span class="hljs-keyword">and</span> eigenvalues<br>ATA = np.dot(A.T, A)<br>eig1 = np.linalg.eig(ATA)<br>AAT = np.dot(A, A.T)<br>eig2 = np.linalg.eig(AAT)<br></code></pre></td></tr></tbody></table></figure>
 
             </div>
             <hr>
@@ -445,18 +304,12 @@ x_{3}=0
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/04/15/cholesky/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Cholesky Decomposition</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/04/13/docker-compose/">
-                        <span class="hidden-mobile">Introduction to Docker-Compose</span>
+                      <a href="/2022/07/06/Tensor-operation/">
+                        <span class="hidden-mobile">Tensor Operation</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
