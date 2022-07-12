@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/img/maxresdefault.jpeg">
 <meta property="article:published_time" content="2022-07-08T09:00:21.000Z">
-<meta property="article:modified_time" content="2022-07-11T11:36:34.735Z">
+<meta property="article:modified_time" content="2022-07-12T21:40:12.352Z">
 <meta property="article:author" content="Cheng Liang">
 <meta property="article:tag" content="Linear Algebra">
 <meta name="twitter:card" content="summary_large_image">
@@ -73,9 +73,9 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="imchengliang" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="imchengliang" type="application/atom+xml">
 </head>
 
 
@@ -269,7 +269,7 @@ AQ=Q \lambda  \quad \rightarrow  \quad A=Q \lambda Q^{-1}=Q \lambda Q^{\top}
 <p><span class="math inline">\(A=U \Sigma V^{\top}=\left(\begin{array}{ccc} 0.08 &amp; -0.83 &amp; -0.55 \\ 0.99 &amp; 0 &amp; 0.14 \\ 0.11 &amp; 0.56 &amp; -0.82 \end{array}\right) \cdot\left(\begin{array}{cc} \sqrt{53} &amp; 0 \\ 0 &amp; 1 \\ 0 &amp; 0 \end{array}\right) \cdot\left(\begin{array}{cc} 0.55 &amp; 0.83 \\ -0.83 &amp; 0.35 \end{array}\right)\)</span></p>
 <h2 id="svd-in-python">SVD in Python</h2>
 <p>We can use numpy to construct a matrix in Python. The module linalg in numpy offers many functions of matrix operation</p>
-<figure class="highlight oxygene"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs oxygene">import numpy <span class="hljs-keyword">as</span> np<br>A = np.array([[<span class="hljs-number">1</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">0</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">0</span>]])<br># <span class="hljs-function"><span class="hljs-keyword">Method</span> 1:</span> use svd <span class="hljs-function"><span class="hljs-keyword">function</span></span><br><span class="hljs-function"># <span class="hljs-title">VT</span> <span class="hljs-title">is</span> <span class="hljs-title">the</span> <span class="hljs-title">Transpose</span> <span class="hljs-title">of</span> <span class="hljs-title">V</span>, <span class="hljs-title">if</span> <span class="hljs-title">we</span> <span class="hljs-title">want</span> <span class="hljs-title">the</span> <span class="hljs-title">matrix</span> <span class="hljs-title">V</span>, <span class="hljs-title">use</span> <span class="hljs-title">VT</span>.<span class="hljs-title">T</span></span><br><span class="hljs-function"><span class="hljs-title">U</span>, <span class="hljs-title">Sigma</span>, <span class="hljs-title">VT</span> = <span class="hljs-title">np</span>.<span class="hljs-title">linalg</span>.<span class="hljs-title">svd</span><span class="hljs-params">(A, full_matrices=<span class="hljs-keyword">True</span>)</span></span><br><span class="hljs-function"># <span class="hljs-title">Method</span> 2:</span> find svd through eigenvectors <span class="hljs-keyword">and</span> eigenvalues<br>ATA = np.dot(A.T, A)<br>eig1 = np.linalg.eig(ATA)<br>AAT = np.dot(A, A.T)<br>eig2 = np.linalg.eig(AAT)<br></code></pre></td></tr></tbody></table></figure>
+<figure class="highlight apache"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">import</span> numpy as np<br><span class="hljs-attribute">A</span> = np.array([[<span class="hljs-number">1</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">0</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">0</span>]])<br><span class="hljs-comment"># VT is the Transpose of V, if we want the matrix V, use VT.T</span><br><span class="hljs-attribute">U</span>, Sigma, VT = np.linalg.svd(A, full_matrices=True)<br></code></pre></td></tr></tbody></table></figure>
 
             </div>
             <hr>
@@ -303,6 +303,12 @@ AQ=Q \lambda  \quad \rightarrow  \quad A=Q \lambda Q^{-1}=Q \lambda Q^{\top}
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2022/07/11/PCA/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Principal Component Analysis (PCA)</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">

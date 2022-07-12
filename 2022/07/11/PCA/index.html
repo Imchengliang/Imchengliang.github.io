@@ -16,23 +16,23 @@
   <meta name="author" content="Cheng Liang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="In machine learning&#x2F;big data we can think of a tensor as an nD-array. The picture below is an example of a rank 3 tensor with size (3,4,2).  Tensor unfolding Unfolding a tensor to a matrix (“matrizati">
+    <meta name="description" content="Principal Component Analysis is a technique for simplifying datasets. It is a linear transformation that transforms the data into a new coordinate system such that the first largest variance of any da">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tensor Operation">
-<meta property="og:url" content="http://example.com/2022/07/06/Tensor-operation/index.html">
+<meta property="og:title" content="Principal Component Analysis (PCA)">
+<meta property="og:url" content="http://example.com/2022/07/11/PCA/index.html">
 <meta property="og:site_name" content="imchengliang">
-<meta property="og:description" content="In machine learning&#x2F;big data we can think of a tensor as an nD-array. The picture below is an example of a rank 3 tensor with size (3,4,2).  Tensor unfolding Unfolding a tensor to a matrix (“matrizati">
+<meta property="og:description" content="Principal Component Analysis is a technique for simplifying datasets. It is a linear transformation that transforms the data into a new coordinate system such that the first largest variance of any da">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/img/maxresdefault.jpeg">
-<meta property="article:published_time" content="2022-07-06T09:50:08.000Z">
-<meta property="article:modified_time" content="2022-07-07T15:38:29.538Z">
+<meta property="article:published_time" content="2022-07-11T13:22:56.000Z">
+<meta property="article:modified_time" content="2022-07-12T21:41:17.901Z">
 <meta property="article:author" content="Cheng Liang">
 <meta property="article:tag" content="Linear Algebra">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/maxresdefault.jpeg">
   
   
-  <title>Tensor Operation - imchengliang</title>
+  <title>Principal Component Analysis (PCA) - imchengliang</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -181,7 +181,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Tensor Operation">
+            <span class="h2" id="subtitle" title="Principal Component Analysis (PCA)">
               
             </span>
 
@@ -191,8 +191,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-07-06 11:50" pubdate>
-        July 6, 2022 am
+      <time datetime="2022-07-11 15:22" pubdate>
+        July 11, 2022 pm
       </time>
     </span>
   
@@ -228,38 +228,41 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Tensor Operation</h1>
+            <h1 style="display: none">Principal Component Analysis (PCA)</h1>
             
             <div class="markdown-body">
-              <p>In machine learning/big data we can think of a tensor as an nD-array. The picture below is an example of a rank 3 tensor with size (3,4,2). <img src="https://cdn.mathpix.com/snip/images/Ti2SGPSC9LcV-zTuwcDBZ1hNsc58kzPE94fa5oCWhrE.original.fullsize.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="tensor-unfolding">Tensor unfolding</h2>
-<p>Unfolding a tensor to a matrix (“matrization”) is a fundamental operation for most tensor methods and we can do it in different ways (use the tensor above as example).</p>
-<p>Mode-1 unfolding: The column vectors of <span class="math inline">\(a_n\)</span> are column vectors of <span class="math inline">\(A_1\)</span> <span class="math display">\[A_{1}=\left(\begin{array}{cccccccc}
-0 &amp; 2 &amp; 4 &amp; 6 &amp; 1 &amp; 3 &amp; 5 &amp; 7 \\
-8 &amp; 10 &amp; 12 &amp; 14 &amp; 9 &amp; 11 &amp; 13 &amp; 15 \\
-16 &amp; 18 &amp; 20 &amp; 22 &amp; 17 &amp; 19 &amp; 21 &amp; 23
-\end{array}\right)\]</span></p>
-<p>Mode-2 unfolding: The row vectors of <span class="math inline">\(a_n\)</span> are column vectors of <span class="math inline">\(A_2\)</span> <span class="math display">\[
-A_{2}=\left(\begin{array}{cccccc}0 &amp; 8 &amp; 16 &amp; 1 &amp; 9 &amp; 17 \\ 2 &amp; 10 &amp; 18 &amp; 3 &amp; 11 &amp; 19 \\ 4 &amp; 12 &amp; 20 &amp; 5 &amp; 13 &amp; 21 \\ 6 &amp; 14 &amp; 22 &amp; 7 &amp; 15 &amp; 23\end{array}\right)\]</span></p>
-<p>Mode-3 unfolding: The mode-3 vectors of <span class="math inline">\(a_n\)</span> are columns vectors of <span class="math inline">\(A_3\)</span> <span class="math display">\[A_{3}=\left(\begin{array}{llllllllllll}0 &amp; 2 &amp; 4 &amp; 6 &amp; 8 &amp; 10 &amp; 12 &amp; 14 &amp; 16 &amp; 18 &amp; 20 &amp; 22 \\ 1 &amp; 3 &amp; 5 &amp; 7 &amp; 9 &amp; 11 &amp; 13 &amp; 15 &amp; 17 &amp; 19 &amp; 21 &amp; 23\end{array}\right)\]</span></p>
-<h2 id="tensor-matrix-multiplication">Tensor-matrix multiplication</h2>
-<p>1-mode multiplication: <span class="math inline">\(U \cdot a_n\)</span> (<span class="math inline">\(U\)</span> is the matrix that we need to multiply, and <span class="math inline">\(a_n\)</span> is the tensor we use)</p>
-<ol type="1">
-<li><p>Mode-1 unfolding the tensor <span class="math inline">\(a_n \rightarrow A_1\)</span></p></li>
-<li><p>Matrix-matrix multiplication <span class="math inline">\(U \cdot A_{1} = Y_{1}\)</span></p></li>
-<li><p>Refold (fold the matrix back to a tensor) <span class="math inline">\(Y_{1} \rightarrow y_{1}\)</span></p></li>
-</ol>
-<p>Same principle for mode-2 multiplication and mode-3 multiplication etc.</p>
-<h2 id="outer-product">Outer product</h2>
-<p>Outer product between two vectors <span class="math inline">\(a^{1}, a^{2}\)</span> is <span class="math inline">\(a^{1} \cdot a^{2^{\top}}\)</span>, which is a 2D-matrix of rank=1 .</p>
-<p>Outer product between three vectors <span class="math inline">\(a^{1}, a^{2}, a^{3}\)</span> is a tensor <span class="math inline">\(a_n\)</span> with three slices, and each slice is of rank=1. Each element in the tensor: <span class="math inline">\(a_n(i,j,k)\)</span> is defined by <span class="math inline">\({a^{1}}_{i} \cdot {a^{2}}_{j} \cdot {a^{3}}_{k}\)</span> (<span class="math inline">\(i\)</span> means i-th slice, <span class="math inline">\(j\)</span> means j-th row, <span class="math inline">\(k\)</span> means k-th column).</p>
-<p>Frontal slices: in a <span class="math inline">\(3*3*3\)</span> tensor, the frontal slices is tensor[n, n, n], and n can be :, 0, 1, 2. : means choose all, 0 means to choose the first one, 1 means to choose the second one, and 2 means to choose the third one. The first n represents slice, the second n represents row, and the last n represents column.</p>
-<figure class="highlight apache"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># Outer product</span><br><span class="hljs-attribute">import</span> numpy as np<br><span class="hljs-attribute">a1</span> = np.array([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>])<br><span class="hljs-attribute">a2</span> = np.array([<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>])<br><span class="hljs-attribute">a3</span> = np.array([<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>])<br><span class="hljs-attribute">t1</span> = np.outer(np.outer(a<span class="hljs-number">1</span>,a<span class="hljs-number">2</span>),a<span class="hljs-number">3</span>)<br><span class="hljs-attribute">t2</span> = t<span class="hljs-number">1</span>.reshape(<span class="hljs-number">3</span>,<span class="hljs-number">3</span>,<span class="hljs-number">3</span>)<br><span class="hljs-comment"># Frontal slices</span><br><span class="hljs-attribute">t2</span>[:,:,<span class="hljs-number">0</span>] # first column of each slice<br><span class="hljs-attribute">t2</span>[<span class="hljs-number">0</span>,:,:] # first slice<br></code></pre></td></tr></tbody></table></figure>
+              <p>Principal Component Analysis is a technique for simplifying datasets. It is a linear transformation that transforms the data into a new coordinate system such that the first largest variance of any data projection is in the first coordinate (called the first principal component), and the second largest variance is in the second coordinate (the second principal component). ingredients), and so on. Principal component analysis is often used to reduce the dimensionality of a dataset while maintaining the features of the dataset that contribute the most to the variance. This is done by keeping low-order principal components and ignoring high-order principal components. Such lower-order components tend to retain the most important aspects of the data.</p>
+<h2 id="covariance-matrix">Covariance matrix</h2>
+<p>Algorithms like PCA depend heavily on the covariance. Correlation coefficient tells us how variables are related and it is the covariance normalized to range <span class="math inline">\([-1 \quad 1]\)</span>. The covariance matrix is an <span class="math inline">\(m*m\)</span>-matrix (<span class="math inline">\(m\)</span> is the number of variables) and it's symmetric as covariance between <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> equals covariance between <span class="math inline">\(x_2\)</span> and <span class="math inline">\(x_1\)</span>. The diagonal entries are the variances (the covariance between <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_1\)</span> is the variance of <span class="math inline">\(x_1\)</span>). There two methods for calculating the covariance matrix, and they're shown with the example below:</p>
+<p><span class="math inline">\(x_{1}=\left(\begin{array}{l}2 \\ 3 \\ 4\end{array}\right), \quad \bar{x}_{1}=3, \quad x_{2}=\left(\begin{array}{l}3 \\ 1 \\ 2\end{array}\right), \quad \bar{x}_{2}=2\)</span></p>
+<p>sample <span class="math inline">\(n=\)</span> number of elements in <span class="math inline">\(x_{n}=3, \quad\)</span> variable <span class="math inline">\(m=\)</span> number of <span class="math inline">\(x_{n}=2\)</span></p>
+<p>Method 1:</p>
+<p><span class="math inline">\(\sigma^{2}\left(x_{1}\right)=\frac{1}{n-1} \sum_{j=1}^{m}\left(x_{1 j}-\bar{x}_{1}\right)^{2}=\frac{1}{2}\left((2-3)^{2}+(3-3)^{2}+(4-3)^{2}\right)=1\)</span></p>
+<p><span class="math inline">\(\sigma^{2}\left(x_{2}\right)=\frac{1}{n-1} \sum_{j=1}^{m}\left(x_{2 j}-\bar{x}_{2}\right)^{2}=\frac{1}{2}\left((3-2)^{2}+(1-2)^{2}+(2-2)^{2}\right)=1\)</span></p>
+<p><span class="math inline">\(\sigma^{2}\left(x_{1}, x_{2}\right)=\frac{1}{n-1} \sum_{j=1}^{m}\left(x_{1 j}-\bar{x}_{1}\right)\left(x_{2 j}-\bar{x}_{2}\right)=-\frac{1}{2}\)</span></p>
+<p><span class="math inline">\(\sigma^{2}\left(x_{2}, x_{1}\right)=\sigma^{2}\left(x_{1}, x_{2}\right)=-\frac{1}{2}\)</span></p>
+<p><span class="math inline">\(C\left(x_{2}, x_{1}\right)=\left(\begin{array}{ll}\sigma^{2}\left(x_{1}\right) &amp; \sigma^{2}\left(x_{1}, x_{2}\right) \\ \sigma^{2}\left(x_{2}, x_{1}\right) &amp; \sigma^{2}\left(x_{2}\right)\end{array}\right)=\left(\begin{array}{cc}1 &amp; -1 / 2 \\ -1 / 2 &amp; 1\end{array}\right)\)</span></p>
+<p>Method 2:</p>
+<p>Let <span class="math inline">\(\bar{A}=\left(\begin{array}{l} x_{1}^{\top} \\ x_{2}^{\top}\end{array}\right)=\left(\begin{array}{ccc}2 &amp; 3 &amp; 4 \\ 3 &amp; 1 &amp; 2 \end{array}\right)\)</span></p>
+<p>Apply scaling on matrix <span class="math inline">\(\bar{A}\)</span>: <span class="math inline">\(A=\left(\begin{array}{l} x_{1}^{\top}-\bar{x}_{1} \\ x_{2}^{\top}-\bar{x}_{2}\end{array}\right)=\left(\begin{array}{ccc}-1 &amp; 0 &amp; 1 \\ 1 &amp; -1 &amp; 0 \end{array}\right)\)</span></p>
+<p><span class="math inline">\(C\left(x_{2}, x_{1}\right)=\frac{1}{n-1} A A^{\top}=\frac{1}{2}\left(\begin{array}{cc}2 &amp; -1 \\ -1 &amp; 2\end{array}\right)=\left(\begin{array}{cc}1 &amp; -1 / 2 \\ -1 / 2 &amp; 1\end{array}\right)\)</span></p>
+<h2 id="svd-and-pca">SVD and PCA</h2>
+<p>In SVD, <span class="math inline">\(A=U \Sigma V^{\top}\)</span>, then <span class="math inline">\(AV\)</span> or <span class="math inline">\(U \Sigma\)</span> represent data points's principal components. <span class="math inline">\(U=(u_{1}, \cdots, u_{n})\)</span> are the left singular vectors of <span class="math inline">\(A\)</span> (eigenvector of <span class="math inline">\(C\)</span>) that represent the direction of the largest variance of the data, which can also be view principal directions. We can get eigenvalues of <span class="math inline">\(C\)</span> from SVD of <span class="math inline">\(A\)</span>: <span class="math inline">\(\lambda _{i}=\frac{1}{n-1} \sigma_{i}^2\)</span>, which is also the magnitude of data points. Eigenvalues <span class="math inline">\(\lambda _{i}\)</span> represent the fraction of the total spread (variance) in the <span class="math inline">\(u_i\)</span>-direction.</p>
+<p>Total variance = trace(<span class="math inline">\(C\)</span>) = the sum of eigenvalues of <span class="math inline">\(C\)</span> = the sum of diagonal elements of <span class="math inline">\(C\)</span>, and the number of each eigenvalue to be divided by total variance tells how many percents that each principal component explains the total variance. For example: there are 2 eigenvalues <span class="math inline">\(\lambda _{1}=28.9\)</span>, <span class="math inline">\(\lambda _{2}=0.1\)</span>, and trace(<span class="math inline">\(C\)</span>)=29, then <span class="math inline">\(\frac{\lambda _{1}}{trace(C)}= \frac{28.9}{29}=0.997\)</span>, so the first eigenvalue explains <span class="math inline">\(99\)</span>% of the total variance.</p>
+<h2 id="pca-in-python">PCA in Python</h2>
+<figure class="highlight stylus"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs stylus">import numpy as np<br>Q = np<span class="hljs-selector-class">.array</span>(<span class="hljs-selector-attr">[[5,5,0,4]</span>, <span class="hljs-selector-attr">[1,1,5,0]</span>, <span class="hljs-selector-attr">[3,2,0,4]</span>, <span class="hljs-selector-attr">[3,5,0,5]</span>, <span class="hljs-selector-attr">[0,0,4,0]</span>])<br>A = Q-Q<span class="hljs-selector-class">.mean</span>(axis=<span class="hljs-number">0</span>, keepdims=True)<br>ATA = np<span class="hljs-selector-class">.dot</span>(A<span class="hljs-selector-class">.T</span>, A)<br>eig1 = np<span class="hljs-selector-class">.linalg</span><span class="hljs-selector-class">.eig</span>(ATA)<br>AAT = np<span class="hljs-selector-class">.dot</span>(A, A.T)<br>eig2 = np<span class="hljs-selector-class">.linalg</span><span class="hljs-selector-class">.eig</span>(AAT)<br>PCA = np<span class="hljs-selector-class">.dot</span>(A, eig1<span class="hljs-selector-attr">[1]</span>)<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(PCA, <span class="hljs-string">'\n'</span>)</span></span><br></code></pre></td></tr></tbody></table></figure>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Mathematics/">Mathematics</a>
+                    
+                  </div>
                 
                 
                   <div class="post-meta">
@@ -282,18 +285,12 @@ A_{2}=\left(\begin{array}{cccccc}0 &amp; 8 &amp; 16 &amp; 1 &amp; 9 &amp; 17 \\ 
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/07/08/SVD2/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Singular Value Decomposition (SVD) Part 2</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/06/28/QR2/">
-                        <span class="hidden-mobile">QR Decomposition</span>
+                      <a href="/2022/07/08/SVD2/">
+                        <span class="hidden-mobile">Singular Value Decomposition (SVD) Part 2</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
