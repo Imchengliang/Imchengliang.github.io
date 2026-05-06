@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OntoWEEE Knowledge Graph Demo</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 20px;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .sidebar {
+            padding-right: 20px;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .sidebar h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .search-box {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: #333;
+            background: #f8f9fa;
+            transition: border-color 0.3s ease, background 0.3s ease;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: #667eea;
+            background: white;
+        }
+
+        .search-box input::placeholder {
+            color: #999;
+        }
+
+        .query-count {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 6px;
+        }
+
+        .query-empty-state {
+            padding: 14px;
+            background: #f8f9fa;
+            border: 1px dashed #d8dcef;
+            border-radius: 8px;
+            color: #666;
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        .title-suggestions {
+            display: none;
+            position: absolute;
+            top: calc(100% - 2px);
+            left: 0;
+            right: 0;
+            max-height: 280px;
+            overflow-y: auto;
+            background: white;
+            border: 1px solid #d9ddf5;
+            border-radius: 8px;
+            box-shadow: 0 10px 24px rgba(102, 126, 234, 0.18);
+            z-index: 20;
+        }
+
+        .title-suggestions.open {
+            display: block;
+        }
+
+        .title-suggestion {
+            width: 100%;
+            padding: 10px 12px;
+            border: 0;
+            border-bottom: 1px solid #edf0ff;
+            background: white;
+            color: #333;
+            cursor: pointer;
+            font-size: 0.88rem;
+            line-height: 1.35;
+            text-align: left;
+        }
+
+        .title-suggestion:hover,
+        .title-suggestion:focus {
+            background: #f0f2ff;
+            outline: none;
+        }
+
+        .title-suggestion:last-child {
+            border-bottom: 0;
+        }
+
+        .title-suggestion-meta {
+            display: block;
+            margin-top: 3px;
+            color: #888;
+            font-size: 0.75rem;
+        }
+
+        .title-suggestions-empty {
+            padding: 10px 12px;
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        .node-search-section {
+            display: none;
+            margin-bottom: 15px;
+        }
+
+        .node-search-section.open {
+            display: block;
+        }
+
+        .node-search-label {
+            display: block;
+            margin-bottom: 6px;
+            color: #667eea;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        .graph-filter-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-top: 8px;
+            color: #555;
+            font-size: 0.82rem;
+            line-height: 1.35;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .graph-filter-option input {
+            width: 14px;
+            height: 14px;
+            margin-top: 2px;
+            accent-color: #667eea;
+            cursor: pointer;
+            flex: 0 0 auto;
+        }
+
+        .query-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .query-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .query-card.active {
+            border-color: #667eea;
+            background: #f0f2ff;
+        }
+
+        .query-card h3 {
+            color: #333;
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .query-card p {
+            color: #666;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .query-card .tag {
+            display: inline-block;
+            padding: 3px 8px;
+            background: #667eea;
+            color: white;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-top: 8px;
+        }
+
+        .visualization-area {
+            padding-left: 20px;
+        }
+
+        #graph-container {
+            width: 100%;
+            height: 600px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+            border-radius: 12px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            box-shadow: inset 0 2px 8px rgba(102, 126, 234, 0.08);
+        }
+
+        .stats-panel {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .stats-panel h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .stat-item {
+            position: relative;
+            text-align: center;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .stat-item .value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-item .label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .stat-item.has-tooltip {
+            cursor: help;
+        }
+
+        .stat-tooltip {
+            display: none;
+            position: absolute;
+            left: 50%;
+            bottom: calc(100% + 10px);
+            transform: translateX(-50%);
+            width: min(320px, 70vw);
+            padding: 9px 11px;
+            background: #2d3748;
+            color: white;
+            border-radius: 6px;
+            box-shadow: 0 8px 20px rgba(45, 55, 72, 0.25);
+            font-size: 0.8rem;
+            font-weight: 500;
+            line-height: 1.35;
+            text-align: left;
+            z-index: 30;
+        }
+
+        .stat-tooltip::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: #2d3748;
+        }
+
+        .stat-item.has-tooltip:hover .stat-tooltip,
+        .stat-item.has-tooltip:focus-within .stat-tooltip {
+            display: block;
+        }
+
+        .edge-detail-panel {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #ffffff;
+            border: 1px solid #d9ddf5;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.12);
+        }
+
+        .edge-detail-panel.open {
+            display: block;
+        }
+
+        .edge-detail-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .edge-detail-title {
+            color: #4a5568;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        .edge-detail-close {
+            width: 28px;
+            height: 28px;
+            border: 0;
+            border-radius: 6px;
+            background: #edf0ff;
+            color: #667eea;
+            cursor: pointer;
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+
+        .edge-detail-summary {
+            color: #666;
+            font-size: 0.86rem;
+            line-height: 1.45;
+            margin-bottom: 12px;
+        }
+
+        .edge-detail-table-wrap {
+            max-height: 280px;
+            overflow: auto;
+            border: 1px solid #edf0ff;
+            border-radius: 6px;
+        }
+
+        .edge-detail-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+        }
+
+        .edge-detail-table th,
+        .edge-detail-table td {
+            padding: 8px 9px;
+            border-bottom: 1px solid #edf0ff;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .edge-detail-table th {
+            position: sticky;
+            top: 0;
+            background: #f8f9ff;
+            color: #667eea;
+            font-weight: 700;
+            z-index: 1;
+        }
+
+        .edge-detail-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .legend-panel {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .legend-panel h3 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .legend-section {
+            margin-bottom: 10px;
+        }
+
+        .legend-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .legend-subtitle {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            color: #333;
+        }
+
+        .legend-color {
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .legend-line {
+            width: 20px;
+            height: 3px;
+            border-radius: 2px;
+        }
+
+        .info-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+        }
+
+        .info-box h4 {
+            color: #856404;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .info-box ul {
+            color: #856404;
+            font-size: 0.85rem;
+            padding-left: 20px;
+        }
+
+        .info-box li {
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 600px;
+            color: #667eea;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+            border-radius: 12px;
+        }
+
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+                padding-right: 0;
+                padding-bottom: 20px;
+            }
+            .visualization-area {
+                padding-left: 0;
+                padding-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧪 OntoWEEE Knowledge Graph Demo</h1>
+            <p>Knowledge Extraction from Academic Literature · Conditional Query & Visual Exploration</p>
+        </header>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <h2>📊 Query Scenarios</h2>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search by title or description..." autocomplete="off" />
+                    <div class="title-suggestions" id="title-suggestions"></div>
+                </div>
+                <div class="search-box node-search-section" id="node-search-section">
+                    <label class="node-search-label" for="node-search-input">Root node in current graph</label>
+                    <input type="text" id="node-search-input" placeholder="Choose Product / Component root..." autocomplete="off" />
+                    <div class="title-suggestions" id="node-suggestions"></div>
+                    <label class="graph-filter-option" for="hide-material-no-value">
+                        <input type="checkbox" id="hide-material-no-value" />
+                        <span>Hide material edges without value</span>
+                    </label>
+                </div>
+                <div id="query-list">
+                    <div class="loading" style="height:auto;padding:20px;color:#667eea;font-size:0.95rem;">Loading queries...</div>
+                </div>
+
+                <div class="info-box">
+                    <h4>💡 Demo Instructions</h4>
+                    <ul>
+                        <li>Click a query card on the left to view results</li>
+                        <li>Graph supports zoom, pan, and hover details</li>
+                        <li>Data is loaded live from triples files — no code changes needed when data updates</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="visualization-area">
+                <div id="graph-container">
+                    <div class="loading">Select a query scenario to start demo...</div>
+                </div>
+
+                <div class="edge-detail-panel" id="edge-detail-panel" aria-live="polite"></div>
+
+                <div class="legend-panel" id="legend-panel">
+                    <h3>🎨 Graph Legend</h3>
+                    <div class="legend-section">
+                        <div class="legend-subtitle">Node Types</div>
+                        <div class="legend-items" id="legend-nodes"></div>
+                    </div>
+                    <div class="legend-section">
+                        <div class="legend-subtitle">Edge Types</div>
+                        <div class="legend-items" id="legend-edges"></div>
+                    </div>
+                </div>
+
+                <div class="stats-panel">
+                    <h3>📈 Results Statistics</h3>
+                    <div class="stats-grid" id="stats-grid">
+                        <div class="stat-item">
+                            <div class="value" id="stat-nodes">-</div>
+                            <div class="label">Nodes</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="value" id="stat-edges">-</div>
+                            <div class="label">Edges</div>
+                        </div>
+                        <div class="stat-item has-tooltip" id="stat-papers-item" tabindex="0">
+                            <div class="value" id="stat-papers">-</div>
+                            <div class="label">Source Papers</div>
+                            <div class="stat-tooltip" id="stat-papers-tooltip">Select a paper to view its source title</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            OntoWEEE Knowledge Graph Demo · 2026
+        </footer>
+    </div>
+
+    <script src="app.js?v=20260429-original-titles"></script>
+</body>
+</html>
