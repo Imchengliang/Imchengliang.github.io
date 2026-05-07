@@ -505,7 +505,9 @@ async function loadStaticJson() {
         const data = await response.json();
         fullQueries = sortQueriesByDisplayName(data.queries || []);
         queries = [...fullQueries];
-        allGraphs = data.graphs || {};
+        allGraphs = Object.fromEntries(
+            Object.entries(data.graphs || {}).map(([id, graphData]) => [id, filterInvalidSchemaEdges(graphData)])
+        );
         // 如果 JSON 中有 nodeColors，覆盖默认值
         if (data.nodeColors) {
             Object.assign(nodeColors, data.nodeColors);
@@ -539,8 +541,10 @@ async function fetchQueriesFromApi() {
 async function fetchGraphData(queryId) {
     // 模式 1：从静态 JSON 的内存缓存中读取
     if (useStaticJson && allGraphs[queryId]) {
-        graphDataCache.set(queryId, allGraphs[queryId]);
-        return allGraphs[queryId];
+        const graphData = filterInvalidSchemaEdges(allGraphs[queryId]);
+        allGraphs[queryId] = graphData;
+        graphDataCache.set(queryId, graphData);
+        return graphData;
     }
 
     // 模式 2：从 server API 读取并转换
@@ -548,7 +552,7 @@ async function fetchGraphData(queryId) {
         const response = await fetch(`/api/triples/${queryId}`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const triplesData = await response.json();
-        const graphData = transformTriplesToGraph(triplesData);
+        const graphData = filterInvalidSchemaEdges(transformTriplesToGraph(triplesData));
         // 缓存到 allGraphs 中，避免重复请求
         allGraphs[queryId] = graphData;
         graphDataCache.set(queryId, graphData);
@@ -1003,9 +1007,46 @@ function filterMaterialEdgesWithoutValue(graphData) {
     };
 }
 
+function filterInvalidSchemaEdges(graphData) {
+    if (!graphData) return graphData;
+
+    const nodeById = new Map(graphData.nodes.map(node => [node.id, node]));
+    const filteredEdges = graphData.edges.filter(edge => {
+        const predicate = getEdgePredicate(edge);
+        const sourceType = nodeById.get(edge.source)?.type;
+        const targetType = nodeById.get(edge.target)?.type;
+        return !(predicate === 'TRANSFORMED_TO' && sourceType === 'Component' && targetType === 'Material');
+    });
+
+    if (filteredEdges.length === graphData.edges.length) return graphData;
+
+    const connectedNodeIds = new Set();
+    filteredEdges.forEach(edge => {
+        connectedNodeIds.add(edge.source);
+        connectedNodeIds.add(edge.target);
+    });
+
+    if (currentRootNodeId && nodeById.has(currentRootNodeId)) {
+        connectedNodeIds.add(currentRootNodeId);
+    }
+
+    const filteredNodes = graphData.nodes.filter(node => connectedNodeIds.has(node.id));
+
+    return {
+        ...graphData,
+        nodes: filteredNodes,
+        edges: filteredEdges,
+        stats: {
+            nodes: filteredNodes.length,
+            edges: filteredEdges.length,
+            papers: graphData.stats?.papers || 1
+        }
+    };
+}
+
 function renderCurrentGraph() {
     if (!currentQuery || !currentViewGraphData) return;
-    renderGraph(currentQuery, filterMaterialEdgesWithoutValue(currentViewGraphData));
+    renderGraph(currentQuery, filterMaterialEdgesWithoutValue(filterInvalidSchemaEdges(currentViewGraphData)));
 }
 
 function extractRootSubgraph(graphData, rootNodeId) {
@@ -1172,6 +1213,12 @@ function renderGraph(queryId, graphData) {
 
     // 渲染
     const graphContainer = document.getElementById('graph-container');
+    if (graphContainer) {
+        if (window.Plotly?.purge) {
+            Plotly.purge(graphContainer);
+        }
+        graphContainer.replaceChildren();
+    }
     Plotly.newPlot('graph-container', traces, layout, config).then(() => {
         installNodeDrag(graphContainer, graphState);
         installEdgeDetailClick(graphContainer, graphState);
