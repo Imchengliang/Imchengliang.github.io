@@ -30,6 +30,18 @@ function queryMatchesKeyword(query, keyword) {
     return fields.some(field => String(field || '').toLowerCase().includes(keyword));
 }
 
+function getQueryDisplayName(query) {
+    return query.source_title || query.title || '';
+}
+
+function sortQueriesByDisplayName(queryList) {
+    return [...queryList].sort((a, b) =>
+        getQueryDisplayName(a).localeCompare(getQueryDisplayName(b), undefined, {
+            sensitivity: 'base'
+        })
+    );
+}
+
 // 节点类型颜色映射
 const nodeColors = {
     'Product': '#667eea',
@@ -491,7 +503,7 @@ async function loadStaticJson() {
         const response = await fetch(`graph_data.json?v=${Date.now()}`, { cache: 'no-store' });
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = await response.json();
-        fullQueries = data.queries || [];
+        fullQueries = sortQueriesByDisplayName(data.queries || []);
         queries = [...fullQueries];
         allGraphs = data.graphs || {};
         // 如果 JSON 中有 nodeColors，覆盖默认值
@@ -512,7 +524,7 @@ async function fetchQueriesFromApi() {
     try {
         const response = await fetch('/api/all');
         const data = await response.json();
-        fullQueries = data.queries;
+        fullQueries = sortQueriesByDisplayName(data.queries || []);
         queries = [...fullQueries];
         useStaticJson = false;
         console.log(`[Data] Loaded ${fullQueries.length} queries from server API`);
@@ -556,6 +568,8 @@ async function init() {
     }
     renderQueryList();
     setupEventListeners();
+    renderProcessSuggestions('');
+    renderMaterialSuggestions('');
 }
 
 // 渲染查询列表（可选：按关键词过滤）
@@ -574,14 +588,14 @@ function renderQueryList(filter = '') {
         return;
     }
 
-    queries = fullQueries.filter(q => queryMatchesKeyword(q, keyword));
+    queries = sortQueriesByDisplayName(fullQueries.filter(q => queryMatchesKeyword(q, keyword)));
 
     queries.forEach(query => {
         const card = document.createElement('div');
         card.className = 'query-card' + (currentQuery === query.id ? ' active' : '');
         card.dataset.queryId = query.id;
         card.innerHTML = `
-            <h3>${query.source_title || query.title}</h3>
+            <h3>${getQueryDisplayName(query)}</h3>
             <p>${query.description}</p>
             <span class="tag" style="background: ${query.color}">${query.tag}</span>
         `;
@@ -592,10 +606,11 @@ function renderQueryList(filter = '') {
 
 function getTitleSuggestionMatches(filter = '') {
     const keyword = filter.toLowerCase().trim();
-    if (!keyword) return [...fullQueries];
+    if (!keyword) return sortQueriesByDisplayName(fullQueries);
 
-    return fullQueries
-        .filter(query => queryMatchesKeyword(query, keyword));
+    return sortQueriesByDisplayName(
+        fullQueries.filter(query => queryMatchesKeyword(query, keyword))
+    );
 }
 
 function renderTitleSuggestions(filter = '') {
@@ -620,7 +635,7 @@ function renderTitleSuggestions(filter = '') {
         option.dataset.queryId = query.id;
 
         const title = document.createElement('span');
-        title.textContent = query.source_title || query.title;
+        title.textContent = getQueryDisplayName(query);
         option.appendChild(title);
 
         const meta = document.createElement('span');
@@ -734,6 +749,192 @@ function hideNodeSuggestions() {
     }
 }
 
+function getLoadedGraphEntries() {
+    return Object.entries(allGraphs || {})
+        .filter(([, graphData]) => graphData && Array.isArray(graphData.nodes) && Array.isArray(graphData.edges));
+}
+
+async function ensureAllGraphDataLoaded() {
+    if (useStaticJson) return;
+    const missingQueries = fullQueries.filter(query => !allGraphs[query.id]);
+    if (!missingQueries.length) return;
+    await Promise.allSettled(missingQueries.map(query => fetchGraphData(query.id)));
+}
+
+function getProcessSuggestionMatches(filter = '') {
+    const keyword = normalizeContextText(filter);
+    const processMap = new Map();
+
+    getLoadedGraphEntries().forEach(([queryId, graphData]) => {
+        graphData.nodes
+            .filter(node => node.type === 'Process')
+            .forEach(node => {
+                const label = node.label || node.id;
+                const haystack = `${label} ${node.id}`.toLowerCase();
+                if (keyword && !haystack.includes(keyword)) return;
+
+                const key = normalizeContextText(label);
+                if (!processMap.has(key)) {
+                    processMap.set(key, {
+                        label,
+                        papers: new Set(),
+                        nodes: 0
+                    });
+                }
+                const item = processMap.get(key);
+                item.papers.add(queryId);
+                item.nodes += 1;
+            });
+    });
+
+    return Array.from(processMap.values())
+        .sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }))
+        .slice(0, 80);
+}
+
+function renderProcessSuggestions(filter = '') {
+    const suggestions = document.getElementById('process-suggestions');
+    if (!suggestions) return;
+
+    const matches = getProcessSuggestionMatches(filter);
+    suggestions.innerHTML = '';
+
+    if (!matches.length) {
+        const empty = document.createElement('div');
+        empty.className = 'title-suggestions-empty';
+        empty.textContent = 'No matching process found in loaded triples.';
+        suggestions.appendChild(empty);
+        return;
+    }
+
+    matches.forEach(match => {
+        const option = document.createElement('button');
+        option.type = 'button';
+        option.className = 'title-suggestion';
+
+        const label = document.createElement('span');
+        label.textContent = match.label;
+        option.appendChild(label);
+
+        const meta = document.createElement('span');
+        meta.className = 'title-suggestion-meta';
+        meta.textContent = `${match.papers.size} paper${match.papers.size === 1 ? '' : 's'} · ${match.nodes} process node${match.nodes === 1 ? '' : 's'}`;
+        option.appendChild(meta);
+
+        option.addEventListener('click', () => selectProcessFacts(match.label));
+        suggestions.appendChild(option);
+    });
+}
+
+function showProcessSuggestions(showAll = false) {
+    const input = document.getElementById('process-search-input');
+    const suggestions = document.getElementById('process-suggestions');
+    if (!suggestions) return;
+
+    renderProcessSuggestions(showAll ? '' : (input ? input.value : ''));
+    suggestions.classList.add('open');
+}
+
+async function showProcessSuggestionsWithAllData(showAll = false) {
+    showProcessSuggestions(showAll);
+    await ensureAllGraphDataLoaded();
+    showProcessSuggestions(showAll);
+}
+
+function hideProcessSuggestions() {
+    const suggestions = document.getElementById('process-suggestions');
+    if (suggestions) {
+        suggestions.classList.remove('open');
+    }
+}
+
+function getMaterialSuggestionMatches(filter = '') {
+    const keyword = normalizeContextText(filter);
+    const materialMap = new Map();
+
+    getLoadedGraphEntries().forEach(([queryId, graphData]) => {
+        graphData.nodes
+            .filter(node => node.type === 'Material')
+            .forEach(node => {
+                const label = node.label || node.id;
+                const haystack = `${label} ${node.id}`.toLowerCase();
+                if (keyword && !haystack.includes(keyword)) return;
+
+                const key = normalizeContextText(label);
+                if (!materialMap.has(key)) {
+                    materialMap.set(key, {
+                        label,
+                        papers: new Set(),
+                        nodes: 0
+                    });
+                }
+                const item = materialMap.get(key);
+                item.papers.add(queryId);
+                item.nodes += 1;
+            });
+    });
+
+    return Array.from(materialMap.values())
+        .sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }))
+        .slice(0, 120);
+}
+
+function renderMaterialSuggestions(filter = '') {
+    const suggestions = document.getElementById('material-suggestions');
+    if (!suggestions) return;
+
+    const matches = getMaterialSuggestionMatches(filter);
+    suggestions.innerHTML = '';
+
+    if (!matches.length) {
+        const empty = document.createElement('div');
+        empty.className = 'title-suggestions-empty';
+        empty.textContent = 'No matching material found in loaded triples.';
+        suggestions.appendChild(empty);
+        return;
+    }
+
+    matches.forEach(match => {
+        const option = document.createElement('button');
+        option.type = 'button';
+        option.className = 'title-suggestion';
+
+        const label = document.createElement('span');
+        label.textContent = match.label;
+        option.appendChild(label);
+
+        const meta = document.createElement('span');
+        meta.className = 'title-suggestion-meta';
+        meta.textContent = `${match.papers.size} paper${match.papers.size === 1 ? '' : 's'} · ${match.nodes} material node${match.nodes === 1 ? '' : 's'}`;
+        option.appendChild(meta);
+
+        option.addEventListener('click', () => selectMaterialChains(match.label));
+        suggestions.appendChild(option);
+    });
+}
+
+function showMaterialSuggestions(showAll = false) {
+    const input = document.getElementById('material-search-input');
+    const suggestions = document.getElementById('material-suggestions');
+    if (!suggestions) return;
+
+    renderMaterialSuggestions(showAll ? '' : (input ? input.value : ''));
+    suggestions.classList.add('open');
+}
+
+async function showMaterialSuggestionsWithAllData(showAll = false) {
+    showMaterialSuggestions(showAll);
+    await ensureAllGraphDataLoaded();
+    showMaterialSuggestions(showAll);
+}
+
+function hideMaterialSuggestions() {
+    const suggestions = document.getElementById('material-suggestions');
+    if (suggestions) {
+        suggestions.classList.remove('open');
+    }
+}
+
 function setNodeSearchVisible(visible) {
     const section = document.getElementById('node-search-section');
     if (!section) return;
@@ -745,6 +946,18 @@ function resetNodeSearch() {
     const nodeInput = document.getElementById('node-search-input');
     if (nodeInput) nodeInput.value = '';
     hideNodeSuggestions();
+}
+
+function resetProcessSearch() {
+    const processInput = document.getElementById('process-search-input');
+    if (processInput) processInput.value = '';
+    hideProcessSuggestions();
+}
+
+function resetMaterialSearch() {
+    const materialInput = document.getElementById('material-search-input');
+    if (materialInput) materialInput.value = '';
+    hideMaterialSuggestions();
 }
 
 function edgeHasValue(edge) {
@@ -869,6 +1082,8 @@ async function selectQuery(queryId) {
     currentRenderedGraphData = null;
     clearEdgeDetailPanel();
     resetNodeSearch();
+    resetProcessSearch();
+    resetMaterialSearch();
     setNodeSearchVisible(false);
 
     // 更新激活状态（重新渲染列表以保持 active 状态同步）
@@ -898,6 +1113,7 @@ function renderGraph(queryId, graphData) {
         return;
     }
     currentRenderedGraphData = graphData;
+    setGraphInfoPanelsVisible(true);
 
     // 动态计算统计信息
     const calculatedStats = {
@@ -965,8 +1181,13 @@ function renderGraph(queryId, graphData) {
 function clearEdgeDetailPanel() {
     const panel = document.getElementById('edge-detail-panel');
     if (!panel) return;
-    panel.classList.remove('open');
+    panel.classList.remove('open', 'process-result-panel');
     panel.innerHTML = '';
+}
+
+function setGraphInfoPanelsVisible(visible) {
+    document.getElementById('legend-panel')?.classList.toggle('hidden', !visible);
+    document.getElementById('stats-panel')?.classList.toggle('hidden', !visible);
 }
 
 function isSingleValuedPanelMeasurement(predicate, details) {
@@ -1044,9 +1265,433 @@ function showEdgeDetailPanel(edge, graphState) {
     const source = graphState.nodes.find(node => node.id === edge.source);
     const target = graphState.nodes.find(node => node.id === edge.target);
     panel.innerHTML = buildEdgeDetailPanelHtml(edge, source, target);
+    panel.classList.remove('process-result-panel');
     panel.classList.add('open');
     panel.querySelector('.edge-detail-close')?.addEventListener('click', clearEdgeDetailPanel);
     panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function getGraphPaperTitle(graphData, queryId) {
+    const query = fullQueries.find(item => item.id === queryId);
+    const displayName = query ? getQueryDisplayName(query) : '';
+    return displayName || String(graphData?.paper || '').split(' | ')[0] || queryId;
+}
+
+function getEdgePredicate(edge) {
+    return String(edge?.label || '').split(' | ')[0];
+}
+
+function getPanelMeasurementsForEdge(edge) {
+    const predicate = getEdgePredicate(edge);
+    const details = edge.details || {};
+    if (Array.isArray(details.measurements) && details.measurements.length) {
+        return details.measurements;
+    }
+    if (isSingleValuedPanelMeasurement(predicate, details)) {
+        return [details];
+    }
+    if (details.value_range) {
+        return [{ value: details.value_range, unit: details.unit, condition: details.condition, scope: details.scope, property: details.property }];
+    }
+    return [{ condition: details.condition, scope: details.scope, property: details.property }];
+}
+
+function buildProcessFactRows(processKeyword) {
+    const normalizedKeyword = normalizeContextText(processKeyword);
+    if (!normalizedKeyword) return { rows: [], matchedProcessNames: [] };
+
+    const rows = [];
+    const rowKeys = new Set();
+    const matchedProcessNames = new Set();
+
+    getLoadedGraphEntries().forEach(([queryId, graphData]) => {
+        const nodeById = new Map(graphData.nodes.map(node => [node.id, node]));
+        const paperTitle = getGraphPaperTitle(graphData, queryId);
+        const processNodes = graphData.nodes.filter(node => {
+            if (node.type !== 'Process') return false;
+            const label = normalizeContextText(node.label);
+            const id = normalizeContextText(node.id);
+            return label === normalizedKeyword || label.includes(normalizedKeyword) || id.includes(normalizedKeyword);
+        });
+
+        processNodes.forEach(processNode => {
+            matchedProcessNames.add(processNode.label || processNode.id);
+            const processedEdges = graphData.edges.filter(edge =>
+                getEdgePredicate(edge) === 'PROCESSED_BY' &&
+                edge.target === processNode.id &&
+                ['Product', 'Component'].includes(nodeById.get(edge.source)?.type)
+            );
+            const outputEdges = graphData.edges.filter(edge =>
+                getEdgePredicate(edge) === 'HAS_OUTPUT' &&
+                edge.source === processNode.id &&
+                nodeById.get(edge.target)?.type === 'Material'
+            );
+
+            const processedSources = processedEdges.length
+                ? processedEdges.map(edge => ({
+                    label: nodeById.get(edge.source)?.label || edge.source,
+                    condition: edge.details?.condition
+                }))
+                : [{ label: '-', condition: null }];
+
+            const outputs = outputEdges.length ? outputEdges : [null];
+            processedSources.forEach(sourceInfo => {
+                outputs.forEach(outputEdge => {
+                    const materialNode = outputEdge ? nodeById.get(outputEdge.target) : null;
+                    const measurements = outputEdge ? getPanelMeasurementsForEdge(outputEdge) : [{ condition: null }];
+
+                    measurements.forEach(measurement => {
+                        const condition = formatDetailValue(
+                            measurement.condition ||
+                            outputEdge?.details?.condition ||
+                            sourceInfo.condition ||
+                            processNode.details?.condition
+                        ) || '-';
+                        const value = outputEdge
+                            ? (formatMeasurementValue(measurement) || formatMeasurementValue(outputEdge.details) || formatDetailValue(outputEdge.details?.value_range) || '-')
+                            : '-';
+                        const row = {
+                            paper: paperTitle,
+                            process: processNode.label || processNode.id,
+                            processed: sourceInfo.label,
+                            condition,
+                            value,
+                            material: materialNode?.label || '-'
+                        };
+                        const key = JSON.stringify(row);
+                        if (!rowKeys.has(key)) {
+                            rowKeys.add(key);
+                            rows.push(row);
+                        }
+                    });
+                });
+            });
+        });
+    });
+
+    return {
+        rows: rows.sort((a, b) =>
+            a.process.localeCompare(b.process, undefined, { sensitivity: 'base' }) ||
+            a.paper.localeCompare(b.paper, undefined, { sensitivity: 'base' }) ||
+            a.material.localeCompare(b.material, undefined, { sensitivity: 'base' })
+        ),
+        matchedProcessNames: Array.from(matchedProcessNames).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
+    };
+}
+
+function renderProcessFactPanel(processName, rows, matchedProcessNames = []) {
+    const graphContainer = document.getElementById('graph-container');
+    if (!graphContainer) return;
+
+    const processTitle = matchedProcessNames.length === 1 ? matchedProcessNames[0] : processName;
+    const summary = rows.length
+        ? `${rows.length} process-output row${rows.length === 1 ? '' : 's'} from ${new Set(rows.map(row => row.paper)).size} paper${new Set(rows.map(row => row.paper)).size === 1 ? '' : 's'}.`
+        : 'No HAS_OUTPUT rows found for this process.';
+
+    const tableRows = rows.map((row, index) => `
+        <tr>
+            <td>${index + 1}</td>
+            <td>${escapeHtml(row.paper)}</td>
+            <td>${escapeHtml(row.process)}</td>
+            <td>${escapeHtml(row.processed)}</td>
+            <td>${escapeHtml(row.condition)}</td>
+            <td>${escapeHtml(row.value)}</td>
+            <td>${escapeHtml(row.material)}</td>
+        </tr>
+    `).join('');
+
+    const tableHtml = rows.length ? `
+        <div class="edge-detail-table-wrap process-result-table-wrap">
+            <table class="edge-detail-table process-result-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Paper</th>
+                        <th>Process</th>
+                        <th>Processed product/component</th>
+                        <th>Process condition</th>
+                        <th>HAS_OUTPUT value</th>
+                        <th>Material</th>
+                    </tr>
+                </thead>
+                <tbody>${tableRows}</tbody>
+            </table>
+        </div>
+    ` : '';
+
+    graphContainer.innerHTML = `
+        <div class="process-result-in-graph">
+        <div class="edge-detail-header">
+            <div class="edge-detail-title">${escapeHtml(processTitle)}</div>
+            <button class="edge-detail-close" type="button" aria-label="Close process facts">×</button>
+        </div>
+        <div class="edge-detail-summary">${escapeHtml(summary)}</div>
+        ${tableHtml}
+        </div>
+    `;
+    clearEdgeDetailPanel();
+    graphContainer.querySelector('.edge-detail-close')?.addEventListener('click', () => {
+        renderCurrentGraph();
+    });
+    graphContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+async function selectProcessFacts(processName) {
+    const input = document.getElementById('process-search-input');
+    if (input) input.value = processName;
+    hideProcessSuggestions();
+
+    const graphContainer = document.getElementById('graph-container');
+    if (graphContainer) {
+        graphContainer.innerHTML = '<div class="loading">Loading process facts...</div>';
+    }
+    setGraphInfoPanelsVisible(false);
+
+    await ensureAllGraphDataLoaded();
+    const { rows, matchedProcessNames } = buildProcessFactRows(processName);
+    renderProcessFactPanel(processName, rows, matchedProcessNames);
+}
+
+function getProductComponentNamesForSource(sourceNode, graphData, nodeById) {
+    if (!sourceNode) {
+        return { product: '-', component: '-' };
+    }
+    if (sourceNode.type === 'Product') {
+        return { product: sourceNode.label || sourceNode.id, component: '-' };
+    }
+    if (sourceNode.type === 'Component') {
+        const productEdges = graphData.edges.filter(edge =>
+            getEdgePredicate(edge) === 'CONTAINS' &&
+            edge.target === sourceNode.id &&
+            nodeById.get(edge.source)?.type === 'Product'
+        );
+        const products = productEdges
+            .map(edge => nodeById.get(edge.source)?.label)
+            .filter(Boolean);
+        return {
+            product: products.length ? Array.from(new Set(products)).join('; ') : '-',
+            component: sourceNode.label || sourceNode.id
+        };
+    }
+    return { product: '-', component: sourceNode.label || sourceNode.id };
+}
+
+function getMeasurementScopeLabels(measurement) {
+    return asList(measurement?.scope)
+        .map(item => {
+            if (typeof item === 'object') {
+                return item.name || item.label || item.value || item.id || '';
+            }
+            return String(item || '');
+        })
+        .map(item => item.trim())
+        .filter(Boolean);
+}
+
+function isSummaryScopeLabel(label) {
+    const normalized = normalizeContextText(label);
+    return ['range', 'weighted average', 'weighted mean', 'average', 'mean'].includes(normalized);
+}
+
+function getProductComponentNamesForMeasurement(sourceNode, graphData, nodeById, measurement) {
+    const names = getProductComponentNamesForSource(sourceNode, graphData, nodeById);
+    const scopeLabels = getMeasurementScopeLabels(measurement).filter(label => !isSummaryScopeLabel(label));
+    if (!scopeLabels.length) return names;
+
+    if (sourceNode?.type === 'Component') {
+        return {
+            product: Array.from(new Set(scopeLabels)).join('; '),
+            component: sourceNode.label || sourceNode.id
+        };
+    }
+
+    if (sourceNode?.type === 'Product') {
+        return {
+            product: Array.from(new Set(scopeLabels)).join('; '),
+            component: names.component
+        };
+    }
+
+    return names;
+}
+
+function isPrintableTableValue(value) {
+    if (value === null || value === undefined) return false;
+    const text = String(value).trim();
+    return Boolean(text && text !== '-' && !isEmptyMeasurementValue(text));
+}
+
+function buildMaterialChainRows(materialKeyword) {
+    const normalizedKeyword = normalizeContextText(materialKeyword);
+    if (!normalizedKeyword) return { rows: [], matchedMaterialNames: [] };
+
+    const rows = [];
+    const rowKeys = new Set();
+    const matchedMaterialNames = new Set();
+
+    getLoadedGraphEntries().forEach(([queryId, graphData]) => {
+        const nodeById = new Map(graphData.nodes.map(node => [node.id, node]));
+        const paperTitle = getGraphPaperTitle(graphData, queryId);
+        const materialNodes = graphData.nodes.filter(node => {
+            if (node.type !== 'Material') return false;
+            const label = normalizeContextText(node.label);
+            const id = normalizeContextText(node.id);
+            return label === normalizedKeyword || label.includes(normalizedKeyword) || id.includes(normalizedKeyword);
+        });
+
+        materialNodes.forEach(materialNode => {
+            matchedMaterialNames.add(materialNode.label || materialNode.id);
+
+            const containsEdges = graphData.edges.filter(edge =>
+                getEdgePredicate(edge) === 'CONTAINS' &&
+                edge.target === materialNode.id &&
+                ['Product', 'Component'].includes(nodeById.get(edge.source)?.type)
+            );
+            containsEdges.forEach(edge => {
+                const sourceNode = nodeById.get(edge.source);
+                const measurements = getPanelMeasurementsForEdge(edge);
+                measurements.forEach(measurement => {
+                    if (getMeasurementScopeLabels(measurement).some(isSummaryScopeLabel)) return;
+                    const names = getProductComponentNamesForMeasurement(sourceNode, graphData, nodeById, measurement);
+                    const row = {
+                        paper: paperTitle,
+                        product: names.product,
+                        component: names.component,
+                        containsValue: formatMeasurementValue(measurement) || formatMeasurementValue(edge.details) || formatDetailValue(edge.details?.value_range) || '-',
+                        process: '-',
+                        hasOutputValue: '-'
+                    };
+                    if (!isPrintableTableValue(row.containsValue)) return;
+                    const key = JSON.stringify(row);
+                    if (!rowKeys.has(key)) {
+                        rowKeys.add(key);
+                        rows.push(row);
+                    }
+                });
+            });
+
+            const outputEdges = graphData.edges.filter(edge =>
+                getEdgePredicate(edge) === 'HAS_OUTPUT' &&
+                edge.target === materialNode.id &&
+                nodeById.get(edge.source)?.type === 'Process'
+            );
+            outputEdges.forEach(outputEdge => {
+                const processNode = nodeById.get(outputEdge.source);
+                const processedEdges = graphData.edges.filter(edge =>
+                    getEdgePredicate(edge) === 'PROCESSED_BY' &&
+                    edge.target === processNode?.id &&
+                    ['Product', 'Component'].includes(nodeById.get(edge.source)?.type)
+                );
+                const processedSources = processedEdges.length
+                    ? processedEdges.map(edge => nodeById.get(edge.source)).filter(Boolean)
+                    : [null];
+                const measurements = getPanelMeasurementsForEdge(outputEdge);
+
+                processedSources.forEach(sourceNode => {
+                    const names = getProductComponentNamesForSource(sourceNode, graphData, nodeById);
+                    measurements.forEach(measurement => {
+                        const row = {
+                            paper: paperTitle,
+                            product: names.product,
+                            component: names.component,
+                            containsValue: '-',
+                            process: processNode?.label || processNode?.id || '-',
+                            hasOutputValue: formatMeasurementValue(measurement) || formatMeasurementValue(outputEdge.details) || formatDetailValue(outputEdge.details?.value_range) || '-'
+                        };
+                        if (!isPrintableTableValue(row.hasOutputValue)) return;
+                        const key = JSON.stringify(row);
+                        if (!rowKeys.has(key)) {
+                            rowKeys.add(key);
+                            rows.push(row);
+                        }
+                    });
+                });
+            });
+        });
+    });
+
+    return {
+        rows: rows.sort((a, b) =>
+            a.paper.localeCompare(b.paper, undefined, { sensitivity: 'base' }) ||
+            a.product.localeCompare(b.product, undefined, { sensitivity: 'base' }) ||
+            a.component.localeCompare(b.component, undefined, { sensitivity: 'base' }) ||
+            a.process.localeCompare(b.process, undefined, { sensitivity: 'base' })
+        ),
+        matchedMaterialNames: Array.from(matchedMaterialNames).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
+    };
+}
+
+function renderMaterialChainPanel(materialName, rows, matchedMaterialNames = []) {
+    const graphContainer = document.getElementById('graph-container');
+    if (!graphContainer) return;
+
+    const materialTitle = matchedMaterialNames.length === 1 ? matchedMaterialNames[0] : materialName;
+    const summary = rows.length
+        ? `${rows.length} chain row${rows.length === 1 ? '' : 's'} from ${new Set(rows.map(row => row.paper)).size} paper${new Set(rows.map(row => row.paper)).size === 1 ? '' : 's'}.`
+        : 'No CONTAINS or HAS_OUTPUT rows found for this material.';
+
+    const tableRows = rows.map((row, index) => `
+        <tr>
+            <td>${index + 1}</td>
+            <td>${escapeHtml(row.paper)}</td>
+            <td>${escapeHtml(row.product)}</td>
+            <td>${escapeHtml(row.component)}</td>
+            <td>${escapeHtml(row.containsValue)}</td>
+            <td>${escapeHtml(row.process)}</td>
+            <td>${escapeHtml(row.hasOutputValue)}</td>
+        </tr>
+    `).join('');
+
+    const tableHtml = rows.length ? `
+        <div class="edge-detail-table-wrap process-result-table-wrap">
+            <table class="edge-detail-table process-result-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Paper</th>
+                        <th>Product</th>
+                        <th>Component</th>
+                        <th>CONTAINS value</th>
+                        <th>Process</th>
+                        <th>HAS_OUTPUT value</th>
+                    </tr>
+                </thead>
+                <tbody>${tableRows}</tbody>
+            </table>
+        </div>
+    ` : '';
+
+    graphContainer.innerHTML = `
+        <div class="process-result-in-graph">
+        <div class="edge-detail-header">
+            <div class="edge-detail-title">${escapeHtml(materialTitle)}</div>
+            <button class="edge-detail-close" type="button" aria-label="Close material chains">×</button>
+        </div>
+        <div class="edge-detail-summary">${escapeHtml(summary)}</div>
+        ${tableHtml}
+        </div>
+    `;
+    clearEdgeDetailPanel();
+    graphContainer.querySelector('.edge-detail-close')?.addEventListener('click', () => {
+        renderCurrentGraph();
+    });
+    graphContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+async function selectMaterialChains(materialName) {
+    const input = document.getElementById('material-search-input');
+    if (input) input.value = materialName;
+    hideMaterialSuggestions();
+
+    const graphContainer = document.getElementById('graph-container');
+    if (graphContainer) {
+        graphContainer.innerHTML = '<div class="loading">Loading material chains...</div>';
+    }
+    setGraphInfoPanelsVisible(false);
+
+    await ensureAllGraphDataLoaded();
+    const { rows, matchedMaterialNames } = buildMaterialChainRows(materialName);
+    renderMaterialChainPanel(materialName, rows, matchedMaterialNames);
 }
 
 function installEdgeDetailClick(graphContainer, graphState) {
@@ -2185,6 +2830,57 @@ function setupEventListeners() {
         });
     }
 
+    const processInput = document.getElementById('process-search-input');
+    if (processInput) {
+        processInput.addEventListener('input', () => {
+            renderProcessSuggestions(processInput.value);
+            showProcessSuggestions(false);
+        });
+
+        processInput.addEventListener('focus', () => showProcessSuggestionsWithAllData(true));
+        processInput.addEventListener('click', () => showProcessSuggestionsWithAllData(true));
+
+        processInput.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                hideProcessSuggestions();
+                processInput.blur();
+            }
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                const value = processInput.value.trim();
+                if (!value) return;
+                const firstMatch = getProcessSuggestionMatches(value)[0];
+                selectProcessFacts(firstMatch ? firstMatch.label : value);
+            }
+        });
+    }
+
+    const materialInput = document.getElementById('material-search-input');
+    if (materialInput) {
+        materialInput.addEventListener('input', () => {
+            renderMaterialSuggestions(materialInput.value);
+            showMaterialSuggestions(false);
+        });
+
+        materialInput.addEventListener('focus', () => showMaterialSuggestionsWithAllData(true));
+        materialInput.addEventListener('mousedown', () => showMaterialSuggestions(true));
+        materialInput.addEventListener('click', () => showMaterialSuggestionsWithAllData(true));
+
+        materialInput.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                hideMaterialSuggestions();
+                materialInput.blur();
+            }
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                const value = materialInput.value.trim();
+                if (!value) return;
+                const firstMatch = getMaterialSuggestionMatches(value)[0];
+                selectMaterialChains(firstMatch ? firstMatch.label : value);
+            }
+        });
+    }
+
     document.addEventListener('click', event => {
         const titleSearchBox = document.getElementById('search-input')?.closest('.search-box');
         if (titleSearchBox && !titleSearchBox.contains(event.target)) {
@@ -2194,6 +2890,16 @@ function setupEventListeners() {
         const nodeSearchBox = document.getElementById('node-search-input')?.closest('.search-box');
         if (nodeSearchBox && !nodeSearchBox.contains(event.target)) {
             hideNodeSuggestions();
+        }
+
+        const processSearchBox = document.getElementById('process-search-input')?.closest('.search-box');
+        if (processSearchBox && !processSearchBox.contains(event.target)) {
+            hideProcessSuggestions();
+        }
+
+        const materialSearchBox = document.getElementById('material-search-input')?.closest('.search-box');
+        if (materialSearchBox && !materialSearchBox.contains(event.target)) {
+            hideMaterialSuggestions();
         }
     });
 
@@ -2207,6 +2913,20 @@ function setupEventListeners() {
     const nodeSuggestions = document.getElementById('node-suggestions');
     if (nodeSuggestions) {
         nodeSuggestions.addEventListener('mousedown', event => {
+            event.preventDefault();
+        });
+    }
+
+    const processSuggestions = document.getElementById('process-suggestions');
+    if (processSuggestions) {
+        processSuggestions.addEventListener('mousedown', event => {
+            event.preventDefault();
+        });
+    }
+
+    const materialSuggestions = document.getElementById('material-suggestions');
+    if (materialSuggestions) {
+        materialSuggestions.addEventListener('mousedown', event => {
             event.preventDefault();
         });
     }

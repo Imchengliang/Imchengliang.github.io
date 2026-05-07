@@ -123,6 +123,17 @@
             display: block;
         }
 
+        .node-search-section .title-suggestions {
+            position: static;
+            top: auto;
+            left: auto;
+            right: auto;
+            transform: none;
+            max-height: 220px;
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }
+
         .title-suggestion {
             width: 100%;
             padding: 10px 12px;
@@ -160,11 +171,18 @@
         }
 
         .node-search-section {
-            display: none;
             margin-bottom: 15px;
         }
 
         .node-search-section.open {
+            display: block;
+        }
+
+        .root-node-search-group {
+            display: none;
+        }
+
+        .node-search-section.open .root-node-search-group {
             display: block;
         }
 
@@ -174,6 +192,10 @@
             color: #667eea;
             font-size: 0.88rem;
             font-weight: 600;
+        }
+
+        .process-search-label {
+            margin-top: 12px;
         }
 
         .graph-filter-option {
@@ -412,11 +434,48 @@
             border-bottom: 0;
         }
 
+        .process-result-panel .edge-detail-title {
+            color: #2d3748;
+        }
+
+        .process-result-table-wrap {
+            max-height: 520px;
+        }
+
+        .process-result-table {
+            min-width: 760px;
+        }
+
+        .process-result-table td {
+            line-height: 1.35;
+        }
+
+        .process-result-in-graph {
+            height: 100%;
+            min-height: 620px;
+            padding: 20px;
+            overflow: auto;
+            background: #ffffff;
+        }
+
+        .process-result-in-graph .edge-detail-header {
+            margin-bottom: 12px;
+        }
+
+        .process-result-in-graph .edge-detail-table-wrap {
+            max-height: none;
+        }
+
         .legend-panel {
             margin-top: 20px;
             padding: 15px;
             background: #f8f9fa;
             border-radius: 8px;
+        }
+
+        .legend-panel.hidden,
+        .stats-panel.hidden {
+            display: none;
         }
 
         .legend-panel h3 {
@@ -542,9 +601,17 @@
                     <div class="title-suggestions" id="title-suggestions"></div>
                 </div>
                 <div class="search-box node-search-section" id="node-search-section">
-                    <label class="node-search-label" for="node-search-input">Root node in current graph</label>
-                    <input type="text" id="node-search-input" placeholder="Choose Product / Component root..." autocomplete="off" />
-                    <div class="title-suggestions" id="node-suggestions"></div>
+                    <div class="root-node-search-group">
+                        <label class="node-search-label" for="node-search-input">Root node in current graph</label>
+                        <input type="text" id="node-search-input" placeholder="Choose Product / Component root..." autocomplete="off" />
+                        <div class="title-suggestions" id="node-suggestions"></div>
+                    </div>
+                    <label class="node-search-label process-search-label" for="process-search-input">Process facts across all papers</label>
+                    <input type="text" id="process-search-input" placeholder="Search process, e.g. bioleaching..." autocomplete="off" />
+                    <div class="title-suggestions" id="process-suggestions"></div>
+                    <label class="node-search-label process-search-label" for="material-search-input">Material chains across all papers</label>
+                    <input type="text" id="material-search-input" placeholder="Search material, e.g. Cu..." autocomplete="off" />
+                    <div class="title-suggestions" id="material-suggestions"></div>
                     <label class="graph-filter-option" for="hide-material-no-value">
                         <input type="checkbox" id="hide-material-no-value" />
                         <span>Hide material edges without value</span>
@@ -583,7 +650,7 @@
                     </div>
                 </div>
 
-                <div class="stats-panel">
+                <div class="stats-panel" id="stats-panel">
                     <h3>📈 Results Statistics</h3>
                     <div class="stats-grid" id="stats-grid">
                         <div class="stat-item">
@@ -609,6 +676,6 @@
         </footer>
     </div>
 
-    <script src="app.js?v=20260429-original-titles"></script>
+    <script src="app.js?v=20260507-process-material-search"></script>
 </body>
 </html>
