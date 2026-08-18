@@ -1,0 +1,721 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/IMG.JPG">
+  <link rel="icon" href="/img/IMG.JPG">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Cheng Liang">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Paper Info          Title Transfer Learning-Assisted Inverse Modeling in Nanophotonics Based on Mixture Density Networks   Authors Liang Cheng, Prashant Singh, Francesco Ferranti   Journal IEEE Acces">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Transfer Learning-Assisted Inverse Modeling in Nanophotonics Based on Mixture Density Networks">
+<meta property="og:url" content="http://example.com/2024/04/02/research-mdn-tl-nanophotonics/index.html">
+<meta property="og:site_name" content="imchengliang">
+<meta property="og:description" content="Paper Info          Title Transfer Learning-Assisted Inverse Modeling in Nanophotonics Based on Mixture Density Networks   Authors Liang Cheng, Prashant Singh, Francesco Ferranti   Journal IEEE Acces">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/ML.png">
+<meta property="article:published_time" content="2024-04-02T08:00:00.000Z">
+<meta property="article:modified_time" content="2026-08-18T21:12:22.481Z">
+<meta property="article:author" content="Cheng Liang">
+<meta property="article:tag" content="Nanophotonics">
+<meta property="article:tag" content="Mixture Density Network">
+<meta property="article:tag" content="Transfer Learning">
+<meta property="article:tag" content="Inverse Design">
+<meta property="article:tag" content="IEEE Access">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/ML.png">
+  
+  
+  <title>Transfer Learning-Assisted Inverse Modeling in Nanophotonics Based on Mixture Density Networks - imchengliang</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/===/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="imchengliang" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Welcome to my world</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/Research/">
+                <i class="iconfont icon-book-fill"></i>
+                Research
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/uhd_img_3623p-cc.jpeg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Transfer Learning-Assisted Inverse Modeling in Nanophotonics Based on Mixture Density Networks">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2024-04-02 10:00" pubdate>
+        April 2, 2024 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Transfer Learning-Assisted Inverse Modeling in Nanophotonics Based on Mixture Density Networks</h1>
+            
+            <div class="markdown-body">
+              <h2 id="paper-info"><a class="markdownIt-Anchor" href="#paper-info"></a> Paper Info</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Title</strong></td>
+<td>Transfer Learning-Assisted Inverse Modeling in Nanophotonics Based on Mixture Density Networks</td>
+</tr>
+<tr>
+<td><strong>Authors</strong></td>
+<td>Liang Cheng, Prashant Singh, Francesco Ferranti</td>
+</tr>
+<tr>
+<td><strong>Journal</strong></td>
+<td>IEEE Access, 2024</td>
+</tr>
+<tr>
+<td><strong>DOI</strong></td>
+<td><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/10486893">10.1109/ACCESS.2024.3383790</a></td>
+</tr>
+<tr>
+<td><strong>Code</strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Imchengliang/mdn-nanophotonics-inverse-modeling">GitHub: mdn-nanophotonics-inverse-modeling</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="motivation"><a class="markdownIt-Anchor" href="#motivation"></a> Motivation</h2>
+<p>Electromagnetic (EM) solvers (e.g. COMSOL) are the workhorse of nanophotonic design, but they’re <strong>computationally expensive</strong> — design optimization requires repeated simulations. Machine learning, especially deep neural networks, has emerged as a fast alternative for both forward and inverse modeling.</p>
+<p><strong>Inverse modeling</strong> is particularly attractive: given a desired optical response, directly predict the design parameters — no need to couple a forward model with an optimizer.</p>
+<p>The <strong>Mixture Density Network (MDN)</strong> is a natural fit for inverse problems because it outputs <strong>multiple possible solutions</strong> as a mixture of Gaussian distributions, each with its own importance weight. This handles the well-known multi-solution problem in inverse design (different parameter sets can produce similar spectra).</p>
+<p>However, MDNs face <strong>three key challenges</strong>:</p>
+<ol>
+<li><strong>The number of mixture components K is unknown</strong> — you need to try multiple values, but each requires full training</li>
+<li><strong>Joint optimization is expensive</strong> — mixing coefficients π, means μ, and standard deviations σ must all be optimized together</li>
+<li><strong>Numerical instability</strong> — optimizing everything at once often leads to NaN losses and degenerate predictions</li>
+</ol>
+<hr>
+<h2 id="method"><a class="markdownIt-Anchor" href="#method"></a> Method</h2>
+<h3 id="overall-architecture"><a class="markdownIt-Anchor" href="#overall-architecture"></a> Overall Architecture</h3>
+<figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs powershell">Input: Optical Spectrum (<span class="hljs-number">101</span> wavelength points)<br>    │<br>    ▼<br>┌──────────────────────────────────────┐<br>│  Optional Autoencoder (dimensionality  │<br>│  reduction → latent space)            │<br>└─────────────────┬────────────────────┘<br>                  │<br>                  ▼<br>┌──────────────────────────────────────┐<br>│  MDN (K Gaussian mixture components)  │<br>│  <span class="hljs-keyword">Hidden</span> layers: expand → dropout →    │<br>│  shrink → output: π_k, μ_k, σ_k       │<br>└──────────────────────────────────────┘<br>                  │<br>                  ▼<br>         K design <span class="hljs-keyword">parameter</span> PDFs<br>      (p, w, <span class="hljs-built_in">h</span>₁, <span class="hljs-built_in">h</span>₂, <span class="hljs-built_in">h</span>₃)<br></code></pre></td></tr></tbody></table></figure>
+<p>The MDN models the conditional probability:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>y</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>K</mi></munderover><msub><mi>π</mi><mi>k</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>⋅</mo><msub><mi>ϕ</mi><mi>k</mi></msub><mo stretchy="false">(</mo><mi>y</mi><mo separator="true">;</mo><msub><mi>μ</mi><mi>k</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><msub><mi>σ</mi><mi>k</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p(y|x) = \sum_{k=1}^{K} \pi_k(x) \cdot \phi_k(y; \mu_k(x), \sigma_k(x))
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">p</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord">∣</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.1304490000000005em;vertical-align:-1.302113em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283360000000002em;"><span style="top:-1.8478869999999998em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.300005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.07153em;">K</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.302113em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">ϕ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></span></p>
+<p>where φ_k is a Gaussian PDF, π_k are mixing coefficients (sum to 1), and the outputs y are the design parameters.</p>
+<p>The loss is the <strong>negative log-likelihood (NLL)</strong>, with a small epsilon (1e-5) added for numerical stability to prevent NaN.</p>
+<hr>
+<h3 id="core-innovation-transfer-learning-for-mdn"><a class="markdownIt-Anchor" href="#core-innovation-transfer-learning-for-mdn"></a> Core Innovation: Transfer Learning for MDN</h3>
+<p><strong>Key insight</strong>: MDNs with different K values share the same hidden layer structure — only the output layer differs. So we can <strong>reuse hidden layer weights</strong> when increasing K.</p>
+<p><strong>Training strategy</strong>: Start with K=1 (fully train it), then incrementally grow K from 2 to 10, each time initializing from the previous K-1 model.</p>
+<h4 id="two-output-layer-initialization-strategies"><a class="markdownIt-Anchor" href="#two-output-layer-initialization-strategies"></a> Two Output Layer Initialization Strategies</h4>
+<p>For π (mixing coefficients), both strategies initialize to <strong>all zeros</strong> → after softmax, π_k = 1/K, giving every component an equal starting chance.</p>
+<p>For μ and σ:</p>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>How the K-th (new) component is initialized</th>
+<th>Characteristic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TL1</strong></td>
+<td>Randomly clones one of the K-1 existing components</td>
+<td>Encourages diversity, exploratory</td>
+</tr>
+<tr>
+<td><strong>TL2</strong></td>
+<td>Clones the component with the highest π weight</td>
+<td>Less randomness, solutions tend to be similar</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why this works</strong>:</p>
+<ul>
+<li>TL1 introduces controlled randomness — the cloned component can then diverge during fine-tuning to discover new solution modes</li>
+<li>TL2 is more conservative — it doubles down on the strongest mode, useful when you expect clustered solutions</li>
+<li>Both avoid the cold-start problem: instead of random initialization, the new model starts from a proven-good feature extractor</li>
+</ul>
+<hr>
+<h2 id="validation"><a class="markdownIt-Anchor" href="#validation"></a> Validation</h2>
+<h3 id="experimental-setup"><a class="markdownIt-Anchor" href="#experimental-setup"></a> Experimental Setup</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Device</strong></td>
+<td>Grating-based multiband absorber (5-layer metal-insulator-metal periodic structure)</td>
+</tr>
+<tr>
+<td><strong>Design params</strong></td>
+<td>p (period), w (width), h₁, h₂, h₃ (thicknesses) → <strong>5D output</strong></td>
+</tr>
+<tr>
+<td><strong>Ranges</strong></td>
+<td>p∈[305,415]nm, w∈[45,190]nm, h₁∈[150,295]nm, h₂∈[25,200]nm, h₃∈[80,165]nm</td>
+</tr>
+<tr>
+<td><strong>Constraint</strong></td>
+<td>p − w ≥ 200 nm (inter-cell spacing)</td>
+</tr>
+<tr>
+<td><strong>Sampling</strong></td>
+<td>3848 Sobol quasi-random samples</td>
+</tr>
+<tr>
+<td><strong>Spectrum</strong></td>
+<td>Visible range [400–700] nm, 101 wavelength points</td>
+</tr>
+<tr>
+<td><strong>Simulation</strong></td>
+<td>COMSOL Multiphysics frequency-domain solver</td>
+</tr>
+<tr>
+<td><strong>Split</strong></td>
+<td>80% / 10% / 10% (train / val / test)</td>
+</tr>
+<tr>
+<td><strong>Platform</strong></td>
+<td>M1 Mac, PyTorch, 1000 epochs with early stopping</td>
+</tr>
+</tbody>
+</table>
+<h3 id="compared-methods"><a class="markdownIt-Anchor" href="#compared-methods"></a> Compared Methods</h3>
+<p>Four configurations, each trained for K = 1 through 10:</p>
+<ol>
+<li><strong>MDN</strong> — baseline (trained from scratch for each K)</li>
+<li><strong>MDN + TL1</strong> — transfer learning strategy 1</li>
+<li><strong>AE + MDN</strong> — autoencoder dimensionality reduction, then MDN</li>
+<li><strong>AE + MDN + TL1/TL2</strong> — autoencoder + transfer learning</li>
+</ol>
+<h3 id="key-results"><a class="markdownIt-Anchor" href="#key-results"></a> Key Results</h3>
+<p><strong>CPU Time</strong>:</p>
+<ul>
+<li>TL1 and TL2 <strong>dramatically reduce total training time</strong> across K=1…10 (hidden layers are reused, only output layers + fine-tuning needed)</li>
+<li>The autoencoder has its own training cost: it helps when TL is NOT used, but <strong>with TL the benefit disappears or reverses</strong></li>
+</ul>
+<p><strong>Accuracy (Test NLL loss)</strong>:</p>
+<ul>
+<li><strong>Transfer learning does NOT sacrifice accuracy</strong> — TL1 and TL2 achieve comparable or even better accuracy than training from scratch (better initialization → better optima)</li>
+<li>Autoencoder <strong>degrades overall accuracy</strong> (information loss from dimensionality reduction)</li>
+<li><strong>TL1 slightly outperforms TL2</strong> (diversity helps fit multi-modal distributions better)</li>
+</ul>
+<p><strong>Qualitative results (K=10)</strong>:</p>
+<ul>
+<li>MDN+TL1 identifies multiple design solutions more accurately than baseline MDN</li>
+<li>The Gaussian PDFs clearly show uncertainty ranges for each design parameter</li>
+<li>Predicted spectra from the top solutions closely match the target spectrum</li>
+</ul>
+<hr>
+<h2 id="key-takeaways"><a class="markdownIt-Anchor" href="#key-takeaways"></a> Key Takeaways</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Main contribution</strong></td>
+<td>First to apply transfer learning to MDN multi-K exploration, solving the “unknown K + expensive training + instability” trilemma</td>
+</tr>
+<tr>
+<td><strong>Speed</strong></td>
+<td>TL drastically cuts the total time for exploring multiple K values</td>
+</tr>
+<tr>
+<td><strong>Accuracy</strong></td>
+<td>TL matches or improves on from-scratch training — it’s not just a speed-up</td>
+</tr>
+<tr>
+<td><strong>Autoencoder</strong></td>
+<td>Not recommended with TL — the speed gain is negated and accuracy drops</td>
+</tr>
+<tr>
+<td><strong>TL1 vs TL2</strong></td>
+<td>TL1 (random clone) is generally better due to higher diversity</td>
+</tr>
+<tr>
+<td><strong>Practical value</strong></td>
+<td>MDN outputs PDFs (not single values), which can serve as initialization generators for further optimization</td>
+</tr>
+</tbody>
+</table>
+<p><strong>One-sentence summary</strong>: A “grow from K=1” transfer learning strategy for MDNs enables fast and accurate multi-solution inverse design of nanophotonic structures.</p>
+<hr>
+<h2 id="bibtex"><a class="markdownIt-Anchor" href="#bibtex"></a> BibTeX</h2>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bibtex">@article{cheng2024transfer,<br>  title={Transfer Learning-Assisted Inverse Modeling in Nanophotonics Based on Mixture Density Networks},<br>  author={Cheng, Liang and Singh, Prashant and Ferranti, Francesco},<br>  journal={IEEE Access},<br>  year={2024},<br>  volume={12},<br>  pages={55218--55227},<br>  doi={10.1109/ACCESS.2024.3383790}<br>}<br></code></pre></td></tr></tbody></table></figure>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Research/">Research</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Nanophotonics/">Nanophotonics</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Mixture-Density-Network/">Mixture Density Network</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Transfer-Learning/">Transfer Learning</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Inverse-Design/">Inverse Design</a>
+                    
+                      <a class="hover-with-bg" href="/tags/IEEE-Access/">IEEE Access</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    All articles in this blog adopt the <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 agreement</a> except for special statements. Please indicate the source for reprinting!
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2026/08/01/research-quality-utility-link/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Quality-Utility Link: A Framework for Trustworthy LLM-Generated Data in E-Waste Recycling</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/03/22/research-marginalia-htr/">
+                        <span class="hidden-mobile">Uncovering the Handwritten Text in the Margins: End-to-end Handwritten Text Detection and Recognition</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

@@ -1,0 +1,784 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/IMG.JPG">
+  <link rel="icon" href="/img/IMG.JPG">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Cheng Liang">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Paper Info          Title Uncovering the Handwritten Text in the Margins: End-to-end Handwritten Text Detection and Recognition   Authors Liang Cheng, Jonas Frankemölle, Adam Axelsson, Ekta Vats   Co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Uncovering the Handwritten Text in the Margins: End-to-end Handwritten Text Detection and Recognition">
+<meta property="og:url" content="http://example.com/2024/03/22/research-marginalia-htr/index.html">
+<meta property="og:site_name" content="imchengliang">
+<meta property="og:description" content="Paper Info          Title Uncovering the Handwritten Text in the Margins: End-to-end Handwritten Text Detection and Recognition   Authors Liang Cheng, Jonas Frankemölle, Adam Axelsson, Ekta Vats   Co">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/ML.png">
+<meta property="article:published_time" content="2024-03-22T09:00:00.000Z">
+<meta property="article:modified_time" content="2026-08-18T21:13:41.651Z">
+<meta property="article:author" content="Cheng Liang">
+<meta property="article:tag" content="Handwritten Text Recognition">
+<meta property="article:tag" content="Marginalia">
+<meta property="article:tag" content="Faster R-CNN">
+<meta property="article:tag" content="AttentionHTR">
+<meta property="article:tag" content="Digital Humanities">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/ML.png">
+  
+  
+  <title>Uncovering the Handwritten Text in the Margins: End-to-end Handwritten Text Detection and Recognition - imchengliang</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/===/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="imchengliang" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Welcome to my world</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/Research/">
+                <i class="iconfont icon-book-fill"></i>
+                Research
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/uhd_img_3623p-cc.jpeg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Uncovering the Handwritten Text in the Margins: End-to-end Handwritten Text Detection and Recognition">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2024-03-22 10:00" pubdate>
+        March 22, 2024 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Uncovering the Handwritten Text in the Margins: End-to-end Handwritten Text Detection and Recognition</h1>
+            
+            <div class="markdown-body">
+              <h2 id="paper-info"><a class="markdownIt-Anchor" href="#paper-info"></a> Paper Info</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Title</strong></td>
+<td>Uncovering the Handwritten Text in the Margins: End-to-end Handwritten Text Detection and Recognition</td>
+</tr>
+<tr>
+<td><strong>Authors</strong></td>
+<td>Liang Cheng, Jonas Frankemölle, Adam Axelsson, Ekta Vats</td>
+</tr>
+<tr>
+<td><strong>Conference</strong></td>
+<td>LaTeCH-CLfL 2024 (Joint Conference on Computational Linguistics and Intellectual Cultural Heritage)</td>
+</tr>
+<tr>
+<td><strong>Venue</strong></td>
+<td>St. Julian’s, Malta</td>
+</tr>
+<tr>
+<td><strong>Code</strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/adamaxelsson/Project-Marginalia">GitHub: Project-Marginalia</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="motivation"><a class="markdownIt-Anchor" href="#motivation"></a> Motivation</h2>
+<p>Libraries and archives worldwide are digitizing their historical collections at a massive scale. The <strong>printed text</strong> in early books is well-documented and searchable. But what about the <strong>handwritten notes in the margins</strong> — the marginalia?</p>
+<p>Marginalia are a precious historical resource:</p>
+<ul>
+<li>They reveal how earlier readers engaged with texts</li>
+<li>They provide insights into intellectual history, gender studies, and knowledge exploration</li>
+<li>Collections like the Walleriana at Uppsala University Library (dating back to the 1400s) contain rich marginalia that have never been digitally transcribed</li>
+</ul>
+<p><strong>Challenges</strong>:</p>
+<ol>
+<li><strong>High variability</strong> — different writers, centuries, languages, scripts</li>
+<li><strong>Data scarcity</strong> — expert annotation is expensive and time-consuming; only 513 labeled pages in our dataset</li>
+<li><strong>Under-explored problem</strong> — most HTR research focuses on main text, not marginalia</li>
+</ol>
+<hr>
+<h2 id="pipeline-overview"><a class="markdownIt-Anchor" href="#pipeline-overview"></a> Pipeline Overview</h2>
+<figure class="highlight livecodeserver"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">Scanned book page (<span class="hljs-number">350</span>×<span class="hljs-number">500</span>)<br>        │<br>        ▼<br>┌──────────────────────────┐<br>│ Marginalia Detection      │<br>│ (Faster R-CNN / R-CNN)    │ ← outputs bounding boxes<br>└────────────┬─────────────┘<br>             │ cropped marginalia regions<br>             ▼<br>┌──────────────────────────┐<br>│ Segmentation              │<br>│  • Sobel + horizontal     │ ← <span class="hljs-built_in">line</span> segmentation<br>│    projection             │<br>│  • Binarization + vertical│ ← <span class="hljs-built_in">word</span> segmentation<br>│    projection             │<br>└────────────┬─────────────┘<br>             │ individual <span class="hljs-built_in">word</span> images<br>             ▼<br>┌──────────────────────────┐<br>│ AttentionHTR              │<br>│  TPS → ResNet32 → BiLSTM  │ ← <span class="hljs-keyword">text</span> transcription<br>│  → attention decoder      │<br>└──────────────────────────┘<br>             │<br>             ▼<br>    Optional: Language model<br>    <span class="hljs-built_in">post</span>-processing (BERT)<br></code></pre></td></tr></tbody></table></figure>
+<hr>
+<h2 id="method-details"><a class="markdownIt-Anchor" href="#method-details"></a> Method Details</h2>
+<h3 id="1-data-preprocessing"><a class="markdownIt-Anchor" href="#1-data-preprocessing"></a> 1. Data &amp; Preprocessing</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Source</strong></td>
+<td>Uppsala University Library early book collections (Walleriana)</td>
+</tr>
+<tr>
+<td><strong>Labeled images</strong></td>
+<td>513 pages, expert-annotated with LabelMe (bounding boxes only)</td>
+</tr>
+<tr>
+<td><strong>Train/test split</strong></td>
+<td>9:1</td>
+</tr>
+<tr>
+<td><strong>Data augmentation</strong></td>
+<td>Horizontal flip + Gaussian noise + random brightness/contrast → <strong>1848 training samples</strong></td>
+</tr>
+<tr>
+<td><strong>Image size</strong></td>
+<td>Resized to 350×500</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-marginalia-detection-r-cnn-vs-faster-r-cnn"><a class="markdownIt-Anchor" href="#2-marginalia-detection-r-cnn-vs-faster-r-cnn"></a> 2. Marginalia Detection: R-CNN vs Faster R-CNN</h3>
+<p><strong>R-CNN baseline</strong>:</p>
+<ul>
+<li>Region proposals via <strong>MSER</strong> (Maximally Stable Extremal Regions) — a watershed-based algorithm</li>
+<li>Positive samples: crop from annotated boxes, resize to 227×227</li>
+<li>Negative samples: 4 MSER boxes with IoU=0 per image</li>
+<li>Classifier: <strong>AlexNet</strong> (5 conv + 2 FC layers, 2 output classes)</li>
+<li>Problem: depends entirely on MSER quality → fails when MSER doesn’t capture full marginalia</li>
+</ul>
+<p><strong>Faster R-CNN (our main method)</strong>:</p>
+<ul>
+<li>Backbone: <strong>ResNet-50</strong> (pre-trained)</li>
+<li><strong>RPN (Region Proposal Network)</strong> replaces selective search/MSER</li>
+<li>End-to-end training: RPN and Fast R-CNN share convolutional features</li>
+<li>Output: 2 classes (marginalia / non-marginalia) + 4 bounding box coordinates</li>
+<li>Training: 13 epochs, learning rate 0.001</li>
+</ul>
+<h3 id="3-segmentation"><a class="markdownIt-Anchor" href="#3-segmentation"></a> 3. Segmentation</h3>
+<p><strong>Line segmentation</strong>:</p>
+<ol>
+<li>Sobel edge detection to emphasize text strokes</li>
+<li>Horizontal projection (sum of pixel values per row)</li>
+<li>Peak detection to find line positions</li>
+<li>Threshold = midpoint between highest peak and lowest value</li>
+</ol>
+<p><strong>Word segmentation</strong>:</p>
+<ol>
+<li>Binarize each line image</li>
+<li>Vertical projection to find spaces</li>
+<li>Calculate average space width</li>
+<li>Split only on spaces wider than the average</li>
+</ol>
+<h3 id="4-recognition-attentionhtr"><a class="markdownIt-Anchor" href="#4-recognition-attentionhtr"></a> 4. Recognition: AttentionHTR</h3>
+<p>We reuse our previously developed <strong>AttentionHTR</strong> model (Kass &amp; Vats, 2022):</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TPS Transform</strong></td>
+<td>Thin-plate spline transformation to correct text distortion</td>
+</tr>
+<tr>
+<td><strong>ResNet-32</strong></td>
+<td>32-layer ResNet for feature extraction</td>
+</tr>
+<tr>
+<td><strong>2-layer BiLSTM</strong></td>
+<td>Bidirectional LSTM for sequence modeling</td>
+</tr>
+<tr>
+<td><strong>Attention + Decoder</strong></td>
+<td>Content-based attention mechanism with unidirectional LSTM decoder</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key advantage</strong>: Pre-trained on <strong>Imgur5K</strong> (5000 different writers), so it transfers well to our small dataset with no additional training needed.</p>
+<hr>
+<h2 id="results"><a class="markdownIt-Anchor" href="#results"></a> Results</h2>
+<h3 id="detection-performance"><a class="markdownIt-Anchor" href="#detection-performance"></a> Detection Performance</h3>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Performance</th>
+<th>IoU</th>
+<th>Key Failure Modes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-CNN</td>
+<td>~90.7% val accuracy</td>
+<td>Low</td>
+<td>(1) Boxes don’t fully align (2) Only partial marginalia captured (3) Fails on large marginalia</td>
+</tr>
+<tr>
+<td><strong>Faster R-CNN</strong></td>
+<td>Accurate across diverse cases</td>
+<td><strong>0.82</strong></td>
+<td>Robust to large marginalia, figures, and varying layouts</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why Faster R-CNN wins</strong>: It doesn’t depend on pre-segmentation (MSER). The RPN learns to propose relevant regions directly from the image feature map, and the shared convolutional backbone makes it both faster and more accurate.</p>
+<h3 id="segmentation-performance"><a class="markdownIt-Anchor" href="#segmentation-performance"></a> Segmentation Performance</h3>
+<ul>
+<li><strong>Works well when</strong>: lines don’t intersect, words are clearly separated</li>
+<li><strong>Fails when</strong>:
+<ul>
+<li>Handwriting rows overlap (letters from two lines share the same pixel rows) → whole block detected as one line</li>
+<li>Words are connected by strokes or underlines → can’t separate words</li>
+</ul>
+</li>
+<li><strong>Root cause</strong>: Projection-based methods are purely heuristic and can’t handle complex layouts</li>
+</ul>
+<h3 id="recognition-performance"><a class="markdownIt-Anchor" href="#recognition-performance"></a> Recognition Performance</h3>
+<table>
+<thead>
+<tr>
+<th>Input quality</th>
+<th>AttentionHTR performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear, well-segmented single word</td>
+<td><strong>Very accurate</strong> — words and numbers both recognized correctly</td>
+</tr>
+<tr>
+<td>Blurry/unreadable (even for humans)</td>
+<td>Fails — as expected</td>
+</tr>
+<tr>
+<td>Multiple words in one image</td>
+<td>Inaccurate</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key finding</strong>: Recognition accuracy is <strong>bounded by segmentation quality</strong>. The better the input, the better the output — and AttentionHTR requires zero fine-tuning on our data to work well.</p>
+<hr>
+<h2 id="discussion-limitations"><a class="markdownIt-Anchor" href="#discussion-limitations"></a> Discussion &amp; Limitations</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Discussion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Detection bottleneck</strong></td>
+<td>R-CNN’s dependence on MSER is its Achilles’ heel; Faster R-CNN solves this cleanly</td>
+</tr>
+<tr>
+<td><strong>Segmentation bottleneck</strong></td>
+<td>Projection-based segmentation is the weakest link in the pipeline</td>
+</tr>
+<tr>
+<td><strong>Future: better segmentation</strong></td>
+<td>Could use R-CNN at the word level too, but requires word-level annotation data</td>
+</tr>
+<tr>
+<td><strong>Other detectors</strong></td>
+<td>Mask R-CNN and YOLO not yet explored; data format is compatible → future work</td>
+</tr>
+<tr>
+<td><strong>Other recognizers</strong></td>
+<td>TrOCR (Transformer-based) not compared; we chose AttentionHTR for its strong pre-trained multi-writer model</td>
+</tr>
+<tr>
+<td><strong>Language model</strong></td>
+<td>Skip-gram or BERT post-processing could improve accuracy but adds compute cost</td>
+</tr>
+<tr>
+<td><strong>Data limitation</strong></td>
+<td>Only bounding box labels, no text annotations → can’t fine-tune the recognizer on our data</td>
+</tr>
+<tr>
+<td><strong>Generalization</strong></td>
+<td>Special scripts (Gothic, curlicue), blurry text, strike-throughs, very poor handwriting remain challenging</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="key-takeaways"><a class="markdownIt-Anchor" href="#key-takeaways"></a> Key Takeaways</h2>
+<ol>
+<li><strong>First end-to-end marginalia detection + recognition pipeline</strong> — to our knowledge, the first work addressing historical handwritten marginalia as a complete pipeline</li>
+<li><strong>Faster R-CNN is the right tool for detection</strong> — IoU 0.82, substantially better than MSER+R-CNN</li>
+<li><strong>Segmentation is the pipeline bottleneck</strong> — heuristic projection methods limit overall accuracy</li>
+<li><strong>Transfer learning makes it work with scarce data</strong> — pre-trained AttentionHTR handles the recognition side without additional training</li>
+<li><strong>Reproducible and extensible</strong> — modular code, adaptable data format, ready for future improvements (Mask R-CNN, YOLO, TrOCR, language models)</li>
+</ol>
+<p><strong>One-sentence summary</strong>: An end-to-end pipeline combining Faster R-CNN detection, projection-based segmentation, and transfer-learned attention HTR enables automatic extraction of handwritten marginalia from historical books, even with limited training data.</p>
+<hr>
+<h2 id="bibtex"><a class="markdownIt-Anchor" href="#bibtex"></a> BibTeX</h2>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bibtex">@inproceedings{cheng2024uncovering,<br>  title={Uncovering the Handwritten Text in the Margins: End-to-end Handwritten Text Detection and Recognition},<br>  author={Cheng, Liang and Frankem{\"o}lle, Jonas and Axelsson, Adam and Vats, Ekta},<br>  booktitle={Proceedings of the 8th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature (LaTeCH-CLfL)},<br>  pages={111--120},<br>  year={2024}<br>}<br></code></pre></td></tr></tbody></table></figure>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Research/">Research</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Handwritten-Text-Recognition/">Handwritten Text Recognition</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Marginalia/">Marginalia</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Faster-R-CNN/">Faster R-CNN</a>
+                    
+                      <a class="hover-with-bg" href="/tags/AttentionHTR/">AttentionHTR</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Digital-Humanities/">Digital Humanities</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    All articles in this blog adopt the <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 agreement</a> except for special statements. Please indicate the source for reprinting!
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/04/02/research-mdn-tl-nanophotonics/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Transfer Learning-Assisted Inverse Modeling in Nanophotonics Based on Mixture Density Networks</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/10/09/alpha-beta-pruning/">
+                        <span class="hidden-mobile">Alpha-Beta Pruning</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
