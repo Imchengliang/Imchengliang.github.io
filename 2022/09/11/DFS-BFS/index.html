@@ -16,16 +16,16 @@
   <meta name="author" content="Cheng Liang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Breadth-First Search (BFS) and Depth-First Search (DFS) are two ways of traversing all vertices in a graph. These two basic search algorithms are introduced below. Breadth-First Search • Idea behind B">
+    <meta name="description" content="Breadth-First Search (BFS) and Depth-First Search (DFS) are two ways of traversing all vertices in a graph. These two basic search algorithms are introduced below.  Breadth-First Search • Idea behind">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Breadth-First Search and Depth-First Search">
 <meta property="og:url" content="http://example.com/2022/09/11/DFS-BFS/index.html">
 <meta property="og:site_name" content="imchengliang">
-<meta property="og:description" content="Breadth-First Search (BFS) and Depth-First Search (DFS) are two ways of traversing all vertices in a graph. These two basic search algorithms are introduced below. Breadth-First Search • Idea behind B">
+<meta property="og:description" content="Breadth-First Search (BFS) and Depth-First Search (DFS) are two ways of traversing all vertices in a graph. These two basic search algorithms are introduced below.  Breadth-First Search • Idea behind">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/img/AI.png">
 <meta property="article:published_time" content="2022-09-11T13:45:14.000Z">
-<meta property="article:modified_time" content="2022-10-09T22:30:04.079Z">
+<meta property="article:modified_time" content="2026-08-18T21:56:14.090Z">
 <meta property="article:author" content="Cheng Liang">
 <meta property="article:tag" content="Artificial Intelligence">
 <meta name="twitter:card" content="summary_large_image">
@@ -114,33 +114,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                Archives
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                Categories
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                Tags
+              <a class="nav-link" href="/categories/Blog/">
+                <i class="iconfont icon-pen"></i>
+                Blog
               </a>
             </li>
           
@@ -244,77 +220,70 @@
             
             <div class="markdown-body">
               <p>Breadth-First Search (BFS) and Depth-First Search (DFS) are two ways of traversing all vertices in a graph. These two basic search algorithms are introduced below.</p>
-<h2 id="breadth-first-search">Breadth-First Search</h2>
+<h2 id="breadth-first-search"><a class="markdownIt-Anchor" href="#breadth-first-search"></a> Breadth-First Search</h2>
 <p><b>• Idea behind BFS</b></p>
-<p>BFS is a traversal strategy for connected graphs, which is similar to the level-order traversal algorithm of binary trees. Its basic idea is: first visit the starting vertex <span class="math inline">\(v\)</span>, then start from <span class="math inline">\(v\)</span>, and visit each unvisited adjacent vertex of <span class="math inline">\(v\)</span> in turn, <span class="math inline">\(w_{1} ,w_{2},w_{3}....w_{n}\)</span>, and then visit all the unvisited adjacent vertices of <span class="math inline">\(w_{1} ,w_{2},w_{3}....w_{n}\)</span> in turn, after this, start from these visited vertices, and visit all of their unvisited adjacent vertices. And so on until all vertices on the graph have been visited.</p>
+<p>BFS is a traversal strategy for connected graphs, which is similar to the level-order traversal algorithm of binary trees. Its basic idea is: first visit the starting vertex <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span>, then start from <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span>, and visit each unvisited adjacent vertex of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span> in turn, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>w</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>w</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>w</mi><mn>3</mn></msub><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><msub><mi>w</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">w_{1} ,w_{2},w_{3}....w_{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and then visit all the unvisited adjacent vertices of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>w</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>w</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>w</mi><mn>3</mn></msub><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><msub><mi>w</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">w_{1} ,w_{2},w_{3}....w_{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> in turn, after this, start from these visited vertices, and visit all of their unvisited adjacent vertices. And so on until all vertices on the graph have been visited.</p>
 <p><b>• Algorithm steps for BFS</b></p>
-<ol type="1">
-<li><p>Create an empty array and an empty queue, which are used to determine whether the location has been visited and enqueue unvisited nodes, respectively</p></li>
-<li><p>Add the starting node to queue and set the position of this node on array as 1</p></li>
-<li><p>Pop the first node on the queue out after getting its value, and determine whether the node is the target arrival point</p></li>
-<li><p>If it is the target point, return the result (it usually is the shortest time or the shortest path)</p></li>
-<li><p>If it is not the target point, continue to visit its adjacent nodes, enqueue the adjacent nodes that can be reached, and update the array</p></li>
-<li><p>Repeat step 3, 4, 5 when the queue is not empty</p></li>
-</ol>
+<p>(1) Create an empty array and an empty queue, which are used to determine whether the location has been visited and enqueue unvisited nodes, respectively</p>
+<p>(2) Add the starting node to queue and set the position of this node on array as 1</p>
+<p>(3) Pop the first node on the queue out after getting its value,  and determine whether the node is the target arrival point</p>
+<p>(4) If it is the target point, return the result (it usually is the shortest time or the shortest path)</p>
+<p>(5) If it is not the target point, continue to visit its adjacent nodes, enqueue the adjacent nodes that can be reached, and update the array</p>
+<p>(6) Repeat step 3, 4, 5 when the queue is not empty</p>
 <p><b>• Example of BFS</b></p>
-<p>The following picture is the search tree of BFS for N-Queen Problem. The number near the node represents the appearance order of each node, <span class="math inline">\(X\)</span> represents the node that queen would be killed, and the last node is the goal state (it might change for different problem). <img src="/img/bfs_dfs/BFS.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="depth-first-search">Depth-First Search</h2>
+<p>The following picture is the search tree of BFS for N-Queen Problem. The number near the node represents the appearance order of each node, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span></span></span></span> represents the node that queen would be killed, and the last node is the goal state (it might change for different problem).<br>
+<img src="/img/bfs_dfs/BFS.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h2 id="depth-first-search"><a class="markdownIt-Anchor" href="#depth-first-search"></a> Depth-First Search</h2>
 <p><b>• Idea behind DFS</b></p>
-<p>DFS is an algorithm for traversing or searching a tree or graph, which is based on backtracking method. It traverses the nodes of the tree along the depth of the tree, searching for branches of the tree as deep as possible. When the edges of the node <span class="math inline">\(v\)</span> have been explored or the node does not meet the conditions during the search, the search will backtrack to the starting node of the edge where the node <span class="math inline">\(v\)</span> is found. The whole process is repeated until all nodes are visited.</p>
+<p>DFS is an algorithm for traversing or searching a tree or graph, which is based on backtracking method. It traverses the nodes of the tree along the depth of the tree, searching for branches of the tree as deep as possible. When the edges of the node <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span> have been explored or the node does not meet the conditions during the search, the search will backtrack to the starting node of the edge where the node <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span> is found. The whole process is repeated until all nodes are visited.</p>
 <p><b>• Algorithm steps for DFS</b></p>
-<ol type="1">
-<li><p>Create an empty stack to save unvisited nodes and an empty list to save visited nodes</p></li>
-<li><p>Add the starting node and adjacent nodes stack and list in turn</p></li>
-<li><p>Pop out the last node into the stack and get the node's neighbors from the graph</p></li>
-<li><p>If the adjacent nodes are not on the list, add these nodes to stack and list</p></li>
-<li><p>Output the node that is popped out</p></li>
-<li><p>Repeat the step 3, 4, 5 until the stack is empty</p></li>
-</ol>
+<p>(1) Create an empty stack to save unvisited nodes and an empty list to save visited nodes</p>
+<p>(2) Add the starting node and adjacent nodes stack and list in turn</p>
+<p>(3) Pop out the last node into the stack and get the node’s neighbors from the graph</p>
+<p>(4) If the adjacent nodes are not on the list, add these nodes to stack and list</p>
+<p>(5) Output the node that is popped out</p>
+<p>(6) Repeat the step 3, 4, 5 until the stack is empty</p>
 <p><b>• Example of DFS</b></p>
-<p>The following picture is the search tree of DFS for N-Queen Problem. The number near the node represents the appearance order of each node, <span class="math inline">\(X\)</span> represents the node that queen would be killed, and the last node is the goal state (it might change for different problem). <img src="/img/bfs_dfs/DFS.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="difference-between-bfs-and-dfs">Difference Between BFS and DFS</h2>
+<p>The following picture is the search tree of DFS for N-Queen Problem. The number near the node represents the appearance order of each node, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span></span></span></span> represents the node that queen would be killed, and the last node is the goal state (it might change for different problem).<br>
+<img src="/img/bfs_dfs/DFS.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h2 id="difference-between-bfs-and-dfs"><a class="markdownIt-Anchor" href="#difference-between-bfs-and-dfs"></a> Difference Between BFS and DFS</h2>
 <table>
-<colgroup>
-<col style="width: 26%">
-<col style="width: 31%">
-<col style="width: 42%">
-</colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th></th>
 <th>BFS</th>
 <th>DFS</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Access Method</td>
 <td>Accessing nodes layer by layer on the graph</td>
 <td>Accessing nodes based on depth, visiting a node until reaching its last leaf or no unexplored node on the branch</td>
 </tr>
-<tr class="even">
+<tr>
 <td>When to visit next layer</td>
 <td>Before visiting the child nodes, all nodes on the same layer has to be explored</td>
 <td>Once an unexplored node is found, going the newly found node instead of keeping on exploring the current node</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Data Structure</td>
 <td>Using queue to store unexplored nodes</td>
 <td>Using stack to store unexplored nodes</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Characteristic</td>
 <td>Slow and require more memory</td>
 <td>Fast and need less memory</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Application</td>
 <td>Finding all connected components in a graph, searching the shortest path between two nodes, finding all nodes within a connected component, testing the biquality of a graph</td>
 <td>Topological sorting, searching connected components, solving puzzles like mazes, finding joints (tangent vertices) of graphs</td>
 </tr>
 </tbody>
 </table>
-<h2 id="bfs-and-dfs-in-python">BFS and DFS in Python</h2>
+<h2 id="bfs-and-dfs-in-python"><a class="markdownIt-Anchor" href="#bfs-and-dfs-in-python"></a> BFS and DFS in Python</h2>
 <figure class="highlight crmsh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">class Graph:<br>    def __init__(self, *args, **kwargs):<br>        self.neighbors = {}<br>        self.visited = {}<br><br>    def add_nodes(self, nodes):<br>        for <span class="hljs-keyword">node</span> <span class="hljs-title">in</span> nodes: <br>            self.add_node(<span class="hljs-keyword">node</span><span class="hljs-title">)</span><br><span class="hljs-title">    </span><br><span class="hljs-title">    def</span> add_node(self, <span class="hljs-keyword">node</span><span class="hljs-title">):</span><br><span class="hljs-title">        print</span>('self.nodes()',self.nodes())<br>        if <span class="hljs-keyword">node</span> <span class="hljs-title">not</span> <span class="hljs-keyword">in</span> self.nodes():<br>            self.neighbors[<span class="hljs-keyword">node</span><span class="hljs-title">] = [node</span>]<br><br>    def add_edge(self, edge):<br>        u, v = edge<br>        if u not <span class="hljs-keyword">in</span> self.neighbors[v] <span class="hljs-keyword">and</span> v not <span class="hljs-keyword">in</span> self.neighbors[u]:<br>            self.neighbors[u].append(v)<br>            if u != v:  <br>                self.neighbors[v].append(u)<br>    <br>    def nodes(self):<br>        return self.neighbors.keys()<br>   <br>    <span class="hljs-comment"># DFS with recursion</span><br>    def depth_first_search(self, root = None):<br>        <span class="hljs-keyword">order</span> <span class="hljs-title">= []</span><br><span class="hljs-title">      </span><br><span class="hljs-title">        def</span> dfs(<span class="hljs-keyword">node</span><span class="hljs-title">):</span><br><span class="hljs-title">            self</span>.visited[<span class="hljs-keyword">node</span><span class="hljs-title">] = True</span><br>            order.append(<span class="hljs-keyword">node</span><span class="hljs-title">)</span><br><span class="hljs-title">            for</span> n <span class="hljs-keyword">in</span> self.neighbors[<span class="hljs-keyword">node</span><span class="hljs-title">]:</span><br><span class="hljs-title">                if</span> n not <span class="hljs-keyword">in</span> self.visited:<br>                    dfs(n) <br>        if root:<br>            dfs(root)  <span class="hljs-comment"># dfs(0)</span><br>        <span class="hljs-comment"># print('visited', self.visited) </span><br>        for <span class="hljs-keyword">node</span> <span class="hljs-title">in</span> self.nodes():<br>            if <span class="hljs-keyword">node</span> <span class="hljs-title">not</span> <span class="hljs-keyword">in</span> self.visited:<br>                dfs(<span class="hljs-keyword">node</span><span class="hljs-title">)</span><br><span class="hljs-title">        self</span>.visited = {}<br>        print(order)<br>        <span class="hljs-comment"># print('final visited', self.visited)</span><br>        return <span class="hljs-keyword">order</span><br>    <br>    <span class="hljs-title"># DFS</span> without recursion<br>    def depth_first_search_2(self, <span class="hljs-attr">root=</span>None):<br>        stack = []<br>        <span class="hljs-keyword">order</span> <span class="hljs-title">= []</span><br><span class="hljs-title">        def</span> dfs():<br>            while stack:<br>                print('stack',stack)<br>                <span class="hljs-keyword">node</span> <span class="hljs-title">= stack</span>[-<span class="hljs-number">1</span>] <span class="hljs-comment"># 栈顶元素</span><br>                for n <span class="hljs-keyword">in</span> self.neighbors[<span class="hljs-keyword">node</span><span class="hljs-title">]:</span><br><span class="hljs-title">                    if</span> n not <span class="hljs-keyword">in</span> self.visited:<br>                        order.append(n)<br>                        stack.append(n)<br>                        <span class="hljs-comment"># stack.append(self.neighbors[n])</span><br>                        self.visited[n] = <span class="hljs-literal">True</span><br>                        print('self.visited', self.visited)<br>                        break<br>                else: <br>                    stack.pop() <br>                <br>        if root:<br>            stack.append(root)<br>            order.append(root)<br>            self.visited[root] = <span class="hljs-literal">True</span><br>            dfs()    <br>        for <span class="hljs-keyword">node</span> <span class="hljs-title">in</span> self.nodes():<br>            if <span class="hljs-keyword">node</span> <span class="hljs-title">not</span> <span class="hljs-keyword">in</span> self.visited:<br>                stack.append(<span class="hljs-keyword">node</span><span class="hljs-title">)</span><br><span class="hljs-title">                order</span>.append(<span class="hljs-keyword">node</span><span class="hljs-title">)</span><br><span class="hljs-title">                self</span>.visited[<span class="hljs-keyword">node</span><span class="hljs-title">] = True</span>    <br>                dfs()       <br>        <span class="hljs-comment"># self.visited = {}  </span><br>        print(order)<br>        return <span class="hljs-keyword">order</span><br>    <br>    <span class="hljs-title"># BFS</span><br>    def breadth_first_search(self,<span class="hljs-attr">root=</span>None):<br>        que = []<br>        <span class="hljs-keyword">order</span> <span class="hljs-title">= []</span><br><span class="hljs-title">        def</span> bfs():<br>            while len(que) &gt; <span class="hljs-number">0</span>: <br>                <span class="hljs-keyword">node</span> <span class="hljs-title">= que</span>.pop(<span class="hljs-number">0</span>) <br>                self.visited[<span class="hljs-keyword">node</span><span class="hljs-title">] = True</span><br>                for n <span class="hljs-keyword">in</span> self.neighbors[<span class="hljs-keyword">node</span><span class="hljs-title">]:</span><br><span class="hljs-title">                    print</span>('self.visited', self.visited)<br>                    print('que', que)<br>                    if n not <span class="hljs-keyword">in</span> self.visited <span class="hljs-keyword">and</span> n not <span class="hljs-keyword">in</span> que:<br>                        que.append(n)<br>                        order.append(n)<br>        if root:<br>            que.append(root)<br>            order.append(root)<br>            bfs()<br>            <br>        for <span class="hljs-keyword">node</span> <span class="hljs-title">in</span> self.nodes():<br>            if not <span class="hljs-keyword">node</span> <span class="hljs-title">in</span> self.visited:<br>                que.append(<span class="hljs-keyword">node</span><span class="hljs-title">)</span><br><span class="hljs-title">                order</span>.append(<span class="hljs-keyword">node</span><span class="hljs-title">)</span><br><span class="hljs-title">                </span><br><span class="hljs-title">        self</span>.visited = {}<br>        print(order)<br>        return <span class="hljs-keyword">order</span>        <span class="hljs-title"></span><br></code></pre></td></tr></tbody></table></figure>
 
             </div>
@@ -325,7 +294,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Data-Science/">Data Science</a>
+                      <a class="hover-with-bg" href="/categories/Blog/">Blog</a>
                     
                   </div>
                 

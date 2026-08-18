@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/img/2019.jpeg">
 <meta property="article:published_time" content="2022-04-13T20:27:36.000Z">
-<meta property="article:modified_time" content="2022-04-13T21:58:12.233Z">
+<meta property="article:modified_time" content="2026-08-18T21:56:14.093Z">
 <meta property="article:author" content="Cheng Liang">
 <meta property="article:tag" content="Docker">
 <meta name="twitter:card" content="summary_large_image">
@@ -114,33 +114,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                Archives
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                Categories
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                Tags
+              <a class="nav-link" href="/categories/Blog/">
+                <i class="iconfont icon-pen"></i>
+                Blog
               </a>
             </li>
           
@@ -245,18 +221,18 @@
             <div class="markdown-body">
               <p>Docker-Compose is used to manage your containers, kind of like a container steward. We write a file, declare the container to be started in this file, configure some parameters, execute this file, Docker will start all containers according to the declared configuration.</p>
 <p>Here is an example to build a multi-container Apache Spark cluster using docker-compose.</p>
-<h2 id="create-a-file-name-dockerfile-and-add-the-following-contents-in-the-file">(1) Create a file name “Dockerfile ” and add the following contents in the file</h2>
+<h2 id="1-create-a-file-name-dockerfile-and-add-the-following-contents-in-the-file"><a class="markdownIt-Anchor" href="#1-create-a-file-name-dockerfile-and-add-the-following-contents-in-the-file"></a> (1) Create a file name “Dockerfile ” and add the following contents in the file</h2>
 <figure class="highlight apache"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">FROM</span> ubuntu:<span class="hljs-number">20</span>.<span class="hljs-number">04</span><br><span class="hljs-attribute">RUN</span> apt-get update<br><span class="hljs-attribute">RUN</span> apt-get -y upgrade<br><span class="hljs-attribute">RUN</span> apt install -y openjdk-<span class="hljs-number">8</span>-jre-headless<br><span class="hljs-attribute">RUN</span> apt install -y scala<br><span class="hljs-attribute">RUN</span> apt install -y wget<br><span class="hljs-attribute">RUN</span> apt install -y screen<br><span class="hljs-attribute">RUN</span> wget https://archive.apache.org/dist/spark/ spark-<span class="hljs-number">3</span>.<span class="hljs-number">2</span>.<span class="hljs-number">0</span>/spark-<span class="hljs-number">3</span>.<span class="hljs-number">2</span>.<span class="hljs-number">0</span>-bin-hadoop<span class="hljs-number">3</span>.<span class="hljs-number">2</span>.tgz<br><span class="hljs-attribute">RUN</span> tar xvf spark-<span class="hljs-number">3</span>.<span class="hljs-number">2</span>.<span class="hljs-number">0</span>-bin-hadoop<span class="hljs-number">3</span>.<span class="hljs-number">2</span>.tgz<br><span class="hljs-attribute">RUN</span> mv spark-<span class="hljs-number">3</span>.<span class="hljs-number">2</span>.<span class="hljs-number">0</span>-bin-hadoop<span class="hljs-number">3</span>.<span class="hljs-number">2</span>/ /usr/local/spark ENV PATH=<span class="hljs-string">"${PATH}:$SPARK_HOME/bin"</span><br><span class="hljs-attribute">ENV</span> SPARK_HOME=<span class="hljs-string">"/usr/local/spark"</span><br><span class="hljs-attribute">ENV</span> SPARK_NO_DAEMONIZE=<span class="hljs-string">"true"</span><br><span class="hljs-attribute">RUN</span> sleep <span class="hljs-number">15</span><br><span class="hljs-attribute">CMD</span> screen -d -m $SPARK_HOME/sbin/start-master.sh ; $SPARK_HOME/sbin/start-worker.sh spark://sparkmaster:<span class="hljs-number">7077</span><br></code></pre></td></tr></tbody></table></figure>
-<h2 id="build-the-image-based-on-the-dockerfile-and-run-the-container">(2) Build the image based on the Dockerfile and run the container</h2>
+<h2 id="2-build-the-image-based-on-the-dockerfile-and-run-the-container"><a class="markdownIt-Anchor" href="#2-build-the-image-based-on-the-dockerfile-and-run-the-container"></a> (2) Build the image based on the Dockerfile and run the container</h2>
 <figure class="highlight applescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs applescript">docker build -t sparkaio/<span class="hljs-keyword">first</span>:v0 .<br>docker <span class="hljs-built_in">run</span> -h sparkmaster &lt;Generated-Image-ID <span class="hljs-keyword">or</span> image <span class="hljs-built_in">name</span>&gt;<br></code></pre></td></tr></tbody></table></figure>
-<p>The following commands are used to confirm that the spark setup is working correctly </p><figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">docker exec -it container_id <span class="hljs-regexp">/bin/</span>bash<br><span class="hljs-variable">$SPARK_HOME</span><span class="hljs-regexp">/bin/</span>spark-submit --class org.apache.spark.examples.SparkPi --master spark:<span class="hljs-regexp">//</span>sparkmaster:<span class="hljs-number">7077</span> <span class="hljs-variable">$SPARK_HOME</span><span class="hljs-regexp">/examples/</span>jars/spark-examples_2.<span class="hljs-number">12</span>-<span class="hljs-number">3.2</span>.<span class="hljs-number">0</span>.jar<br></code></pre></td></tr></tbody></table></figure><p></p>
+<p>The following commands are used to confirm that the spark setup is working correctly</p>
+<figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">docker exec -it container_id <span class="hljs-regexp">/bin/</span>bash<br><span class="hljs-variable">$SPARK_HOME</span><span class="hljs-regexp">/bin/</span>spark-submit --class org.apache.spark.examples.SparkPi --master spark:<span class="hljs-regexp">//</span>sparkmaster:<span class="hljs-number">7077</span> <span class="hljs-variable">$SPARK_HOME</span><span class="hljs-regexp">/examples/</span>jars/spark-examples_2.<span class="hljs-number">12</span>-<span class="hljs-number">3.2</span>.<span class="hljs-number">0</span>.jar<br></code></pre></td></tr></tbody></table></figure>
 <p>Based on the above configurations, a single container-based Spark framework has been created.​ Next step is to prepare a configuration file, compatible with docker-compose, and run a Spark cluster with at least one master node and one additional worker.</p>
-<h2 id="create-a-docker-compose.yml-file-and-write-the-configuration-on-this-file">(3) Create a docker-compose.yml file and write the configuration on this file</h2>
+<h2 id="3-create-a-docker-composeyml-file-and-write-the-configuration-on-this-file"><a class="markdownIt-Anchor" href="#3-create-a-docker-composeyml-file-and-write-the-configuration-on-this-file"></a> (3) Create a docker-compose.yml file and write the configuration on this file</h2>
 <p>Here, we set 1 master and 1 worker for the Spark cluster.</p>
 <figure class="highlight dts"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">version:</span> <span class="hljs-string">"2"</span><br><span class="hljs-symbol">services:</span><br><span class="hljs-symbol">  master:</span><br><span class="hljs-symbol">    image:</span> sparkaio/first:v0<br><span class="hljs-symbol">    command:</span> <span class="hljs-meta-keyword">/usr/</span>local<span class="hljs-meta-keyword">/spark/</span>sbin/start-master.sh<br><span class="hljs-symbol">    hostname:</span> master<br><span class="hljs-symbol">    ports:</span><br>      - <span class="hljs-string">"6066:6066"</span><br>      - <span class="hljs-string">"7070:7070"</span><br>      - <span class="hljs-string">"8080:8080"</span><br>      - <span class="hljs-string">"50070:50070"</span><br><span class="hljs-symbol">  worker:</span><br><span class="hljs-symbol">    image:</span> sparkaio/first:v0<br><span class="hljs-symbol">    command:</span> <span class="hljs-meta-keyword">/usr/</span>local<span class="hljs-meta-keyword">/spark/</span>sbin/start-worker.sh<br><span class="hljs-symbol">    links:</span><br>      - master<br></code></pre></td></tr></tbody></table></figure>
-<h2 id="startup-and-shutdown-of-docker-compose">(4) Startup and shutdown of docker-compose</h2>
+<h2 id="4-startup-and-shutdown-of-docker-compose"><a class="markdownIt-Anchor" href="#4-startup-and-shutdown-of-docker-compose"></a> (4) Startup and shutdown of docker-compose</h2>
 <figure class="highlight crmsh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs crmsh"><span class="hljs-comment"># We can start the container by using up</span><br>docker-compose up<br><span class="hljs-comment"># After the first time, we can simply use start to start the services</span><br>docker-compose <span class="hljs-literal">start</span><br><span class="hljs-comment"># To safely stop the active services, we can use stop</span><br>docker-compose <span class="hljs-literal">stop</span><br><span class="hljs-comment"># To reset the status of the project, we simply run down</span><br>docker-compose down<br></code></pre></td></tr></tbody></table></figure>
-
             </div>
             <hr>
             <div>
@@ -265,7 +241,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Data-Engineering/">Data Engineering</a>
+                      <a class="hover-with-bg" href="/categories/Blog/">Blog</a>
                     
                   </div>
                 

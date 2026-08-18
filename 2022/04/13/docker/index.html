@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/img/2019.jpeg">
 <meta property="article:published_time" content="2022-04-13T09:32:34.000Z">
-<meta property="article:modified_time" content="2022-04-13T20:31:56.714Z">
+<meta property="article:modified_time" content="2026-08-18T21:56:14.093Z">
 <meta property="article:author" content="Cheng Liang">
 <meta property="article:tag" content="Docker">
 <meta name="twitter:card" content="summary_large_image">
@@ -114,33 +114,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                Archives
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                Categories
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                Tags
+              <a class="nav-link" href="/categories/Blog/">
+                <i class="iconfont icon-pen"></i>
+                Blog
               </a>
             </li>
           
@@ -245,13 +221,15 @@
             <div class="markdown-body">
               <p>Docker is an open source application container that allows developers to package their applications and dependencies into a portable engine, and then publish them to operating system such as Linux or Windows for virtualization.</p>
 <p>This blog covers basic introduction of the Docker environment, Dockerfile settings and construction of a multi-container environment using docker-compose (one of the essential tools to build, connect and run multiple containers).</p>
-<h2 id="docker-containers">(1) Docker containers</h2>
+<h2 id="1-docker-containers"><a class="markdownIt-Anchor" href="#1-docker-containers"></a> (1) Docker containers</h2>
 <p>The following commands are used to install docker on virtual machine:</p>
 <figure class="highlight smali"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs smali">sudo bash<br>apt update; apt -y upgrade;<br><span class="hljs-comment"># Install the required packages</span><br>apt install apt-transport-https ca-certificates curl software-properties-common<br><span class="hljs-comment"># Add the GPG key for the official Docker repository to the system</span><br>curl -fsSL https://download.docker.com/ linux/ubuntu/gpg |sudo apt-key<span class="hljs-built_in"> add </span>-<br><span class="hljs-comment"># Add the Docker repository to APT sources</span><span class="hljs-built_in"></span><br><span class="hljs-built_in">add-apt-repository </span><span class="hljs-string">"deb [arch=amd64] https:// download.docker.com/linux/ubuntu bionic stable"</span><br><span class="hljs-comment"># Update the package database with the Docker packages from the newly added repo</span><br>apt-get update<br><span class="hljs-comment"># Install Docker</span><br>apt install docker-ce<br><span class="hljs-comment"># Check if docker has started</span><span class="hljs-keyword"></span><br><span class="hljs-keyword">system</span>ctl status docker<br></code></pre></td></tr></tbody></table></figure>
-<p>Then create a file name “Dockerfile ” and add the following contents in the file: </p><figure class="highlight routeros"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">FROM</span> ubuntu:20.04<br><span class="hljs-builtin-name">RUN</span> apt-<span class="hljs-builtin-name">get</span> update<br><span class="hljs-builtin-name">RUN</span> apt-<span class="hljs-builtin-name">get</span> -y<span class="hljs-built_in"> upgrade</span><br><span class="hljs-built_in"></span><span class="hljs-builtin-name">RUN</span> apt-<span class="hljs-builtin-name">get</span> install sl<br>ENV <span class="hljs-attribute">PATH</span>=<span class="hljs-string">"<span class="hljs-variable">${PATH}</span>:/usr/games/"</span><br>CMD [<span class="hljs-string">"echo"</span>, <span class="hljs-string">"Data Engineering-I."</span>]<br></code></pre></td></tr></tbody></table></figure><p></p>
-<p>Contextualize a container (create a new image that is contextualized according to the Dockerfile and start a container based on the contextualized image): </p><figure class="highlight applescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs applescript">docker build -t mycontainer/<span class="hljs-keyword">first</span>:v1 .<br><span class="hljs-comment"># In batch mode</span><br>docker <span class="hljs-built_in">run</span> mycontainer/<span class="hljs-keyword">first</span>:v1<br><span class="hljs-comment"># In interactive mode:</span><br>docker <span class="hljs-built_in">run</span> -<span class="hljs-keyword">it</span> mycontainer/<span class="hljs-keyword">first</span>:v1 bash<br></code></pre></td></tr></tbody></table></figure><p></p>
+<p>Then create a file name “Dockerfile ” and add the following contents in the file:</p>
+<figure class="highlight routeros"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">FROM</span> ubuntu:20.04<br><span class="hljs-builtin-name">RUN</span> apt-<span class="hljs-builtin-name">get</span> update<br><span class="hljs-builtin-name">RUN</span> apt-<span class="hljs-builtin-name">get</span> -y<span class="hljs-built_in"> upgrade</span><br><span class="hljs-built_in"></span><span class="hljs-builtin-name">RUN</span> apt-<span class="hljs-builtin-name">get</span> install sl<br>ENV <span class="hljs-attribute">PATH</span>=<span class="hljs-string">"<span class="hljs-variable">${PATH}</span>:/usr/games/"</span><br>CMD [<span class="hljs-string">"echo"</span>, <span class="hljs-string">"Data Engineering-I."</span>]<br></code></pre></td></tr></tbody></table></figure>
+<p>Contextualize a container (create a new image that is contextualized according to the Dockerfile and start a container based on the contextualized image):</p>
+<figure class="highlight applescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs applescript">docker build -t mycontainer/<span class="hljs-keyword">first</span>:v1 .<br><span class="hljs-comment"># In batch mode</span><br>docker <span class="hljs-built_in">run</span> mycontainer/<span class="hljs-keyword">first</span>:v1<br><span class="hljs-comment"># In interactive mode:</span><br>docker <span class="hljs-built_in">run</span> -<span class="hljs-keyword">it</span> mycontainer/<span class="hljs-keyword">first</span>:v1 bash<br></code></pre></td></tr></tbody></table></figure>
 <p>Now we have a running docker container with some extra packages installed in it.</p>
-<h2 id="dockerhub">(2) DockerHub</h2>
+<h2 id="2-dockerhub"><a class="markdownIt-Anchor" href="#2-dockerhub"></a> (2) DockerHub</h2>
 <p><a target="_blank" rel="noopener" href="https://hub.docker.com/">DockerHub</a> is used to store the Docker images, and developers also can use the images that are stored on DockerHub so the required development-environment can be built quickly. To use DockerHub, we need to create an account on its official website firstly. And the following commands are use to operate DockerHub on virtual machine.</p>
 <figure class="highlight vala"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs vala"><span class="hljs-meta"># login the DockerHub account on virtual machine</span><br>docker login<br><span class="hljs-meta"># then input the username and password</span><br><br><span class="hljs-meta"># upload image to DockerHub</span><br><span class="hljs-meta"># docker tag 'image-name:tag-name or image-ID' 'username/ image-name:tag-name'</span><br>docker tag e7083fd898c7 arnieswap/my_repo:testing<br>docker push arnieswap/my_repo<br><span class="hljs-meta"># check if it's pushed successfully</span><br>docker search arnieswap/my_repo<br><br><span class="hljs-meta"># download image from DockerHub</span><br>docker pull arnieswap/my_repo<br></code></pre></td></tr></tbody></table></figure>
 
@@ -263,7 +241,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Data-Engineering/">Data Engineering</a>
+                      <a class="hover-with-bg" href="/categories/Blog/">Blog</a>
                     
                   </div>
                 
