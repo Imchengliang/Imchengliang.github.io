@@ -1,0 +1,786 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/IMG.JPG">
+  <link rel="icon" href="/img/IMG.JPG">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Cheng Liang">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Paper Info          Title Autoencoder-Based Likelihood-Free Parameter Inference of Gene Regulatory Network   Author Liang Cheng   Degree Master of Science in Data Science, Uppsala University   Paper">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Autoencoder-Based Likelihood-Free Parameter Inference of Gene Regulatory Network">
+<meta property="og:url" content="http://example.com/2023/06/15/research-ae-summary-stats-lfi/index.html">
+<meta property="og:site_name" content="imchengliang">
+<meta property="og:description" content="Paper Info          Title Autoencoder-Based Likelihood-Free Parameter Inference of Gene Regulatory Network   Author Liang Cheng   Degree Master of Science in Data Science, Uppsala University   Paper">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/ML.png">
+<meta property="article:published_time" content="2023-06-15T08:00:00.000Z">
+<meta property="article:modified_time" content="2026-08-19T08:35:07.912Z">
+<meta property="article:author" content="Cheng Liang">
+<meta property="article:tag" content="Likelihood-Free Inference">
+<meta property="article:tag" content="Autoencoder">
+<meta property="article:tag" content="Gene Regulatory Network">
+<meta property="article:tag" content="Summary Statistics">
+<meta property="article:tag" content="SNPE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/ML.png">
+  
+  
+  <title>Autoencoder-Based Likelihood-Free Parameter Inference of Gene Regulatory Network - imchengliang</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/===/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="imchengliang" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Welcome to my world</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/Blog/">
+                <i class="iconfont icon-pen"></i>
+                Blog
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/Research/">
+                <i class="iconfont icon-book"></i>
+                Research
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/uhd_img_3623p-cc.jpeg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Autoencoder-Based Likelihood-Free Parameter Inference of Gene Regulatory Network">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2023-06-15 10:00" pubdate>
+        June 15, 2023 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Autoencoder-Based Likelihood-Free Parameter Inference of Gene Regulatory Network</h1>
+            
+            <div class="markdown-body">
+              <h2 id="paper-info"><a class="markdownIt-Anchor" href="#paper-info"></a> Paper Info</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Title</strong></td>
+<td>Autoencoder-Based Likelihood-Free Parameter Inference of Gene Regulatory Network</td>
+</tr>
+<tr>
+<td><strong>Author</strong></td>
+<td>Liang Cheng</td>
+</tr>
+<tr>
+<td><strong>Degree</strong></td>
+<td>Master of Science in Data Science, Uppsala University</td>
+</tr>
+<tr>
+<td><strong>Paper</strong></td>
+<td><a target="_blank" rel="noopener" href="https://uu.diva-portal.org/smash/record.jsf?pid=diva2%3A1777819&amp;dswid=4101">DiVA: diva2:1777819</a></td>
+</tr>
+<tr>
+<td><strong>Code</strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Imchengliang/autoencoder-as-summary-statistics-for-likelihood-free-parameter-inference">GitHub: autoencoder-as-summary-statistics-for-likelihood-free-parameter-inference</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="motivation"><a class="markdownIt-Anchor" href="#motivation"></a> Motivation</h2>
+<p>Gene regulatory networks (GRNs) are fundamental to understanding how cells function. A key question is: given observed time-series data of gene expression, can we infer the <strong>underlying kinetic parameters</strong> that govern the network?</p>
+<p>Traditional Bayesian inference requires computing the <strong>likelihood</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>x</mi><mi mathvariant="normal">∣</mi><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p(x|\theta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">p</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mord">∣</span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span> — the probability of observing data <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> given parameters <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span></span></span></span>. But for GRNs modeled with stochastic simulators (e.g., Gillespie algorithm), the likelihood is <strong>intractable</strong>: we can simulate data, but we can’t compute its probability analytically.</p>
+<p>This is where <strong>Likelihood-Free Inference (LFI)</strong> comes in. LFI methods like Approximate Bayesian Computation (ABC) and Neural Posterior Estimation (NPE) work by comparing simulated data to observed data using <strong>summary statistics</strong> — hand-crafted features that capture the essence of the data.</p>
+<p><strong>The problem</strong>: Choosing good summary statistics is hard, especially for time-series data. Poor summary statistics throw away information and lead to inaccurate posterior estimates.</p>
+<p><strong>Our idea</strong>: Instead of hand-designing summary statistics, <strong>let an autoencoder learn them automatically</strong>. The autoencoder’s latent space becomes a compressed, information-preserving representation of the time-series data — exactly what we need for LFI.</p>
+<hr>
+<h2 id="pipeline-overview"><a class="markdownIt-Anchor" href="#pipeline-overview"></a> Pipeline Overview</h2>
+<figure class="highlight gams"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs gams">     θ (<span class="hljs-keyword">parameters</span>: 15-dim)<br>     │<br>     ▼<br>┌──────────────────────────┐<br>│  Gillespie <span class="hljs-comment">Simulator</span>      │  ← <span class="hljs-comment">Vilar genetic oscillator</span><br>│  (Vilar <span class="hljs-comment">GRN model)</span>        │<br>└────────────┬─────────────┘<br>             │<br>             │ x <span class="hljs-comment">(time series: 3 species</span> × <span class="hljs-comment">201 time steps)</span><br>             ▼<br>┌──────────────────────────┐<br>│   Noise <span class="hljs-comment">Conditional</span>       │<br>│   Autoencoder <span class="hljs-comment">(ENCA)</span>      │  ← <span class="hljs-comment">learns compressed representation</span><br>│                           │<br>│  Encoder → <span class="hljs-comment">z (16-dim)</span> →   │<br>│  Decoder → <span class="hljs-comment">x</span>̂              │<br>└────────────┬─────────────┘<br>             │<br>             │ z <span class="hljs-comment">= summary statistics</span><br>             ▼<br>┌──────────────────────────┐<br>│   SNPE <span class="hljs-comment">(Sequential Neural</span> │<br>│   Posterior <span class="hljs-comment">Estimation)</span>   │  ← <span class="hljs-comment">infers p(</span>θ|<span class="hljs-comment">z_obs)</span><br>└────────────┬─────────────┘<br>             │<br>             ▼<br>     Posterior <span class="hljs-comment">distribution</span><br>     p(θ | x_obs)<br></code></pre></td></tr></tbody></table></figure>
+<hr>
+<h2 id="method-details"><a class="markdownIt-Anchor" href="#method-details"></a> Method Details</h2>
+<h3 id="1-task-setup-vilar-genetic-oscillator"><a class="markdownIt-Anchor" href="#1-task-setup-vilar-genetic-oscillator"></a> 1. Task Setup: Vilar Genetic Oscillator</h3>
+<p>We study a well-known <strong>Vilar oscillator</strong> — a gene regulatory network with 3 species (mRNA, protein A, protein R) governed by 15 kinetic parameters.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Model</strong></td>
+<td>Vilar genetic oscillator (stochastic GRN)</td>
+</tr>
+<tr>
+<td><strong>Simulator</strong></td>
+<td>Gillespie algorithm (exact stochastic simulation)</td>
+</tr>
+<tr>
+<td><strong>Observables</strong></td>
+<td>3 molecular species × 201 time steps → 603 values per trajectory</td>
+</tr>
+<tr>
+<td><strong>Parameters</strong></td>
+<td>15 kinetic parameters to infer</td>
+</tr>
+<tr>
+<td><strong>Data</strong></td>
+<td>10,000 simulated trajectories (8,000 train / 2,000 test)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-summary-statistics-the-core-problem"><a class="markdownIt-Anchor" href="#2-summary-statistics-the-core-problem"></a> 2. Summary Statistics: The Core Problem</h3>
+<p>The quality of likelihood-free inference depends entirely on the <strong>summary statistics</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">S(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span></span></span></span>:</p>
+<ul>
+<li><strong>Hand-crafted statistics</strong>: mean, std, autocorrelation, FFT features… domain expertise required, may discard critical information</li>
+<li><strong>Raw data</strong>: too high-dimensional (603-D) → curse of dimensionality, inefficient for ABC/NPE</li>
+</ul>
+<p><strong>Our approach</strong>: Use an autoencoder to learn a low-dimensional latent representation <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>z</mi><mo>=</mo><mtext>Encoder</mtext><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">z = \text{Encoder}(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Encoder</span></span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span></span></span></span> that preserves the information needed for parameter inference.</p>
+<h3 id="3-explicit-noise-conditional-autoencoder-enca"><a class="markdownIt-Anchor" href="#3-explicit-noise-conditional-autoencoder-enca"></a> 3. Explicit Noise Conditional Autoencoder (ENCA)</h3>
+<p>We design a special autoencoder variant called <strong>ENCA</strong> (Explicit Noise Conditional Autoencoder):</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Architecture</strong></td>
+<td>Symmetric encoder-decoder</td>
+</tr>
+<tr>
+<td><strong>Input</strong></td>
+<td>Time series of 3 species × 201 time steps</td>
+</tr>
+<tr>
+<td><strong>Latent dimension</strong></td>
+<td>16 (much smaller than 603 raw dimensions)</td>
+</tr>
+<tr>
+<td><strong>Noise conditioning</strong></td>
+<td>Explicit noise level injected during training for robustness</td>
+</tr>
+<tr>
+<td><strong>Loss</strong></td>
+<td>Reconstruction loss (MSE between input and reconstructed output)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why ENCA?</strong> Stochastic simulation produces noisy trajectories — multiple runs with the same <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span></span></span></span> look different. The noise conditioning helps the autoencoder learn to extract the <strong>signal</strong> (the underlying dynamics determined by <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span></span></span></span>) from the <strong>noise</strong> (stochastic fluctuations).</p>
+<h3 id="4-autoencoder-architectures-compared"><a class="markdownIt-Anchor" href="#4-autoencoder-architectures-compared"></a> 4. Autoencoder Architectures Compared</h3>
+<p>We test four different autoencoder architectures to see which learns the best summary statistics:</p>
+<table>
+<thead>
+<tr>
+<th>Architecture</th>
+<th>Strength</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FNN</strong></td>
+<td>Simple baseline</td>
+<td>Treats data as flat vector</td>
+</tr>
+<tr>
+<td><strong>LSTM</strong></td>
+<td>Sequential modeling</td>
+<td>Standard for time series</td>
+</tr>
+<tr>
+<td><strong>CNN</strong></td>
+<td>Local pattern detection</td>
+<td>Captures temporal motifs</td>
+</tr>
+<tr>
+<td><strong>TCN</strong> (Temporal Convolutional Network)</td>
+<td>Long-range dependencies</td>
+<td>Dilated convolutions for time series</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-lfi-with-snpe"><a class="markdownIt-Anchor" href="#5-lfi-with-snpe"></a> 5. LFI with SNPE</h3>
+<p>Once we have the autoencoder, we use its encoder to convert time series into 16-D latent vectors, then run <strong>SNPE</strong> (Sequential Neural Posterior Estimation):</p>
+<figure class="highlight perl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs perl">Round <span class="hljs-number">1</span>: sample θ ~ prior → simulate <span class="hljs-keyword">x</span> → encode z → train neural density estimator<br>    │<br>    ▼<br>Round <span class="hljs-number">2</span>: sample θ ~ <span class="hljs-string">q(θ|z_obs)</span> → simulate <span class="hljs-keyword">x</span> → encode z → refine estimator<br>    │<br>    ▼<br>Round N: final posterior estimate <span class="hljs-string">q(θ|z_obs)</span> ≈ p(θ|x_obs)<br></code></pre></td></tr></tbody></table></figure>
+<p><strong>Baselines compared</strong>:</p>
+<ul>
+<li><strong>Traditional CNN features</strong>: hand-designed feature extraction</li>
+<li><strong>ABC-SMC</strong>: Approximate Bayesian Computation with Sequential Monte Carlo (planned but encountered library conflicts)</li>
+</ul>
+<hr>
+<h2 id="results"><a class="markdownIt-Anchor" href="#results"></a> Results</h2>
+<h3 id="1-autoencoder-reconstruction-quality"><a class="markdownIt-Anchor" href="#1-autoencoder-reconstruction-quality"></a> 1. Autoencoder Reconstruction Quality</h3>
+<table>
+<thead>
+<tr>
+<th>Architecture</th>
+<th>Reconstruction Error</th>
+<th>Quality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FNN</td>
+<td>Highest</td>
+<td>Poor — treats time series as unstructured vector</td>
+</tr>
+<tr>
+<td>LSTM</td>
+<td>Medium</td>
+<td>Decent — captures sequential patterns but struggles with fine details</td>
+</tr>
+<tr>
+<td><strong>CNN</strong></td>
+<td><strong>Lowest</strong></td>
+<td><strong>Best — captures local temporal patterns effectively</strong></td>
+</tr>
+<tr>
+<td>TCN</td>
+<td>Medium-High</td>
+<td>Good but underperforms CNN on this task</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Surprising finding</strong>: CNN outperforms LSTM and TCN on this GRN reconstruction task. The local temporal features (peaks, troughs, oscillation periods) are more important than long-range sequential dependencies for this particular system.</p>
+<h3 id="2-parameter-inference-performance"><a class="markdownIt-Anchor" href="#2-parameter-inference-performance"></a> 2. Parameter Inference Performance</h3>
+<p>We compare inference quality using the autoencoder’s latent space as summary statistics vs. traditional CNN feature extraction:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Inference Quality</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Traditional CNN features</td>
+<td>Baseline</td>
+<td>Hand-designed features</td>
+</tr>
+<tr>
+<td><strong>FNN autoencoder</strong></td>
+<td>Limited</td>
+<td>Poor reconstruction → poor summary statistics</td>
+</tr>
+<tr>
+<td><strong>LSTM autoencoder</strong></td>
+<td>Moderate</td>
+<td>Better than FNN, but not optimal</td>
+</tr>
+<tr>
+<td><strong>CNN autoencoder</strong></td>
+<td><strong>Best</strong></td>
+<td><strong>Learned features outperform hand-designed ones</strong></td>
+</tr>
+<tr>
+<td>TCN autoencoder</td>
+<td>Good</td>
+<td>Below CNN on most parameters</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-key-findings"><a class="markdownIt-Anchor" href="#3-key-findings"></a> 3. Key Findings</h3>
+<ol>
+<li><strong>Learned summary statistics beat hand-crafted ones</strong> — CNN autoencoder latent space consistently produces better parameter estimates than traditional feature extraction</li>
+<li><strong>CNN is the best autoencoder architecture for this task</strong> — despite LSTM/TCN being designed for sequences, local temporal patterns matter more for GRN inference</li>
+<li><strong>Dimensionality reduction works</strong> — going from 603-D raw data to 16-D latent space preserves enough information for accurate parameter inference</li>
+<li><strong>Parameters with smaller numerical ranges are harder to infer</strong> — the method shows varying accuracy across the 15 parameters</li>
+</ol>
+<hr>
+<h2 id="discussion-limitations"><a class="markdownIt-Anchor" href="#discussion-limitations"></a> Discussion &amp; Limitations</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Discussion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ABC-SMC not implemented</strong></td>
+<td>PyTorch multiprocessing conflicts with ABC library prevented ABC-SMC comparison; SNPE was used as the primary inference method instead</td>
+</tr>
+<tr>
+<td><strong>One test system</strong></td>
+<td>Results are on the Vilar oscillator only; generalizability to other GRN topologies needs verification</td>
+</tr>
+<tr>
+<td><strong>Latent dimension choice</strong></td>
+<td>16-D was chosen empirically; systematic study of dimensionality vs. inference quality could be valuable</td>
+</tr>
+<tr>
+<td><strong>Information-theoretic guarantee</strong></td>
+<td>Autoencoder optimizes reconstruction loss, not information about <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span></span></span></span> — information-preserving but not necessarily information-optimal for inference</td>
+</tr>
+<tr>
+<td><strong>Future: contrastive learning</strong></td>
+<td>Could train the encoder directly to maximize mutual information with <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span></span></span></span> (e.g., via contrastive learning or InfoNCE loss) instead of reconstruction</td>
+</tr>
+<tr>
+<td><strong>Future: larger networks</strong></td>
+<td>More complex GRNs with more species and parameters would be a more challenging test</td>
+</tr>
+<tr>
+<td><strong>Future: real experimental data</strong></td>
+<td>All experiments are on simulated data; validation on real biological data remains an open challenge</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="key-takeaways"><a class="markdownIt-Anchor" href="#key-takeaways"></a> Key Takeaways</h2>
+<ol>
+<li><strong>Autoencoders can learn effective summary statistics</strong> for likelihood-free inference — no hand-engineering required</li>
+<li><strong>CNN autoencoders work surprisingly well for time series</strong> — don’t assume LSTM/TCN are always better for sequential data</li>
+<li><strong>The encoder latent space is information-preserving</strong> — a 16-D vector from a 603-D input still captures enough signal for parameter inference</li>
+<li><strong>Explicit noise conditioning helps</strong> — ENCA makes the learned representation robust to stochastic simulation noise</li>
+<li><strong>A practical pipeline for GRN inference</strong> — autoencoder + SNPE provides an end-to-end approach for inferring gene regulatory network parameters</li>
+</ol>
+<p><strong>One-sentence summary</strong>: A noise-conditional CNN autoencoder learns compressed, information-preserving summary statistics from stochastic gene expression time series, enabling accurate likelihood-free parameter inference of gene regulatory networks via sequential neural posterior estimation.</p>
+<hr>
+<h2 id="bibtex"><a class="markdownIt-Anchor" href="#bibtex"></a> BibTeX</h2>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bibtex">@mastersthesis{cheng2023autoencoder,<br>  title={Autoencoder-Based Likelihood-Free Parameter Inference of Gene Regulatory Network},<br>  author={Cheng, Liang},<br>  year={2023},<br>  school={Uppsala University},<br>  type={Master's Thesis in Data Science (30 credits)},<br>  url={https://uu.diva-portal.org/smash/record.jsf?pid=diva2%3A1777819}<br>}<br></code></pre></td></tr></tbody></table></figure>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Research/">Research</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Likelihood-Free-Inference/">Likelihood-Free Inference</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Autoencoder/">Autoencoder</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Gene-Regulatory-Network/">Gene Regulatory Network</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Summary-Statistics/">Summary Statistics</a>
+                    
+                      <a class="hover-with-bg" href="/tags/SNPE/">SNPE</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    All articles in this blog adopt the <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 agreement</a> except for special statements. Please indicate the source for reprinting!
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/03/22/research-marginalia-htr/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Uncovering the Handwritten Text in the Margins: End-to-end Handwritten Text Detection and Recognition</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/10/09/alpha-beta-pruning/">
+                        <span class="hidden-mobile">Alpha-Beta Pruning</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
