@@ -1,0 +1,395 @@
+[
+  {
+    "chunk_id": "Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti__table__TABLE_Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti_0001",
+    "table_id": "TABLE_Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti_0001",
+    "result": {
+      "table_id": "TABLE_Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti_0001",
+      "entity_count": 0,
+      "relation_count": 0,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "entities": [],
+      "relations": [],
+      "conditions": [],
+      "context_records": [],
+      "table_structure": {
+        "table_id": "TABLE_Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti_0001",
+        "extraction_mode": "semantic_ir",
+        "table_role": "non_target_context",
+        "extractability": {
+          "decision": "skip",
+          "table_role": "non_target_context",
+          "reason": "Skip this table; it reports thermodynamic parameters of leaching reactions, not target composition or treatment outcomes.",
+          "confidence": 0.9
+        }
+      },
+      "source_table": {
+        "table_id": "TABLE_Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti_0001",
+        "page_number": 6,
+        "caption": "Comparison of the thermodynamic parameter changes between chemical leaching using FeSO4 / H2O2 as deoxidizer and bioleaching processes under different reaction temperatures.a",
+        "section": "3.6. Bioleaching dynamics of both Co and Li at pulp density of 2%",
+        "explicit_references": [],
+        "headers": [
+          "T (K)",
+          "H (kJ mol ^-1 ) (The traditional chemical leaching ( FeSO4 as deoxidizer))",
+          "S (J K ^-1 mol ^-1 ) (The traditional chemical leaching ( FeSO4 as deoxidizer))",
+          "G (kJ mol ^-1 ) (The traditional chemical leaching ( FeSO4 as deoxidizer))",
+          "H (kJ mol ^-1 ) (The traditional chemical leaching ( H2O2 as deoxidizer))",
+          "S (J K ^-1 mol ^-1 ) (The traditional chemical leaching ( H2O2 as deoxidizer))",
+          "G (kJ mol ^-1 ) (The traditional chemical leaching ( H2O2 as deoxidizer))",
+          "H (kJ mol ^-1 ) (The current bioleaching)",
+          "S (J K ^-1 mol ^-1 ) (The current bioleaching)",
+          "G (kJ mol -1 ) (The current bioleaching)"
+        ],
+        "header_rows": [
+          [
+            "T (K)",
+            "The traditional chemical leaching ( FeSO4 as deoxidizer)",
+            "The traditional chemical leaching ( FeSO4 as deoxidizer)",
+            "The traditional chemical leaching ( FeSO4 as deoxidizer)",
+            "The traditional chemical leaching ( H2O2 as deoxidizer)",
+            "The traditional chemical leaching ( H2O2 as deoxidizer)",
+            "The traditional chemical leaching ( H2O2 as deoxidizer)",
+            "The current bioleaching",
+            "The current bioleaching",
+            "The current bioleaching"
+          ],
+          [
+            "T (K)",
+            "H (kJ mol ^-1 )",
+            "S (J K ^-1 mol ^-1 )",
+            "G (kJ mol ^-1 )",
+            "H (kJ mol ^-1 )",
+            "S (J K ^-1 mol ^-1 )",
+            "G (kJ mol ^-1 )",
+            "H (kJ mol ^-1 )",
+            "S (J K ^-1 mol ^-1 )",
+            "G (kJ mol _-1 )"
+          ]
+        ],
+        "column_descriptors": [
+          {
+            "id": "c0",
+            "index": 0,
+            "flat_label": "T (K)",
+            "header_path": [
+              "T (K)"
+            ],
+            "header_leaf": "T (K)",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "T (K)",
+                "header_row": 0,
+                "column": 0
+              },
+              {
+                "text": "T (K)",
+                "header_row": 1,
+                "column": 0
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c1",
+            "index": 1,
+            "flat_label": "H (kJ mol ^-1 ) (The traditional chemical leaching ( FeSO4 as deoxidizer))",
+            "header_path": [
+              "The traditional chemical leaching ( FeSO4 as deoxidizer)",
+              "H (kJ mol ^-1 )"
+            ],
+            "header_leaf": "H (kJ mol ^-1 )",
+            "header_group": "The traditional chemical leaching ( FeSO4 as deoxidizer)",
+            "raw_header_cells": [
+              {
+                "text": "The traditional chemical leaching ( FeSO4 as deoxidizer)",
+                "header_row": 0,
+                "column": 1
+              },
+              {
+                "text": "H (kJ mol ^-1 )",
+                "header_row": 1,
+                "column": 1
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c2",
+            "index": 2,
+            "flat_label": "S (J K ^-1 mol ^-1 ) (The traditional chemical leaching ( FeSO4 as deoxidizer))",
+            "header_path": [
+              "The traditional chemical leaching ( FeSO4 as deoxidizer)",
+              "S (J K ^-1 mol ^-1 )"
+            ],
+            "header_leaf": "S (J K ^-1 mol ^-1 )",
+            "header_group": "The traditional chemical leaching ( FeSO4 as deoxidizer)",
+            "raw_header_cells": [
+              {
+                "text": "The traditional chemical leaching ( FeSO4 as deoxidizer)",
+                "header_row": 0,
+                "column": 2
+              },
+              {
+                "text": "S (J K ^-1 mol ^-1 )",
+                "header_row": 1,
+                "column": 2
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c3",
+            "index": 3,
+            "flat_label": "G (kJ mol ^-1 ) (The traditional chemical leaching ( FeSO4 as deoxidizer))",
+            "header_path": [
+              "The traditional chemical leaching ( FeSO4 as deoxidizer)",
+              "G (kJ mol ^-1 )"
+            ],
+            "header_leaf": "G (kJ mol ^-1 )",
+            "header_group": "The traditional chemical leaching ( FeSO4 as deoxidizer)",
+            "raw_header_cells": [
+              {
+                "text": "The traditional chemical leaching ( FeSO4 as deoxidizer)",
+                "header_row": 0,
+                "column": 3
+              },
+              {
+                "text": "G (kJ mol ^-1 )",
+                "header_row": 1,
+                "column": 3
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c4",
+            "index": 4,
+            "flat_label": "H (kJ mol ^-1 ) (The traditional chemical leaching ( H2O2 as deoxidizer))",
+            "header_path": [
+              "The traditional chemical leaching ( H2O2 as deoxidizer)",
+              "H (kJ mol ^-1 )"
+            ],
+            "header_leaf": "H (kJ mol ^-1 )",
+            "header_group": "The traditional chemical leaching ( H2O2 as deoxidizer)",
+            "raw_header_cells": [
+              {
+                "text": "The traditional chemical leaching ( H2O2 as deoxidizer)",
+                "header_row": 0,
+                "column": 4
+              },
+              {
+                "text": "H (kJ mol ^-1 )",
+                "header_row": 1,
+                "column": 4
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c5",
+            "index": 5,
+            "flat_label": "S (J K ^-1 mol ^-1 ) (The traditional chemical leaching ( H2O2 as deoxidizer))",
+            "header_path": [
+              "The traditional chemical leaching ( H2O2 as deoxidizer)",
+              "S (J K ^-1 mol ^-1 )"
+            ],
+            "header_leaf": "S (J K ^-1 mol ^-1 )",
+            "header_group": "The traditional chemical leaching ( H2O2 as deoxidizer)",
+            "raw_header_cells": [
+              {
+                "text": "The traditional chemical leaching ( H2O2 as deoxidizer)",
+                "header_row": 0,
+                "column": 5
+              },
+              {
+                "text": "S (J K ^-1 mol ^-1 )",
+                "header_row": 1,
+                "column": 5
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c6",
+            "index": 6,
+            "flat_label": "G (kJ mol ^-1 ) (The traditional chemical leaching ( H2O2 as deoxidizer))",
+            "header_path": [
+              "The traditional chemical leaching ( H2O2 as deoxidizer)",
+              "G (kJ mol ^-1 )"
+            ],
+            "header_leaf": "G (kJ mol ^-1 )",
+            "header_group": "The traditional chemical leaching ( H2O2 as deoxidizer)",
+            "raw_header_cells": [
+              {
+                "text": "The traditional chemical leaching ( H2O2 as deoxidizer)",
+                "header_row": 0,
+                "column": 6
+              },
+              {
+                "text": "G (kJ mol ^-1 )",
+                "header_row": 1,
+                "column": 6
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c7",
+            "index": 7,
+            "flat_label": "H (kJ mol ^-1 ) (The current bioleaching)",
+            "header_path": [
+              "The current bioleaching",
+              "H (kJ mol ^-1 )"
+            ],
+            "header_leaf": "H (kJ mol ^-1 )",
+            "header_group": "The current bioleaching",
+            "raw_header_cells": [
+              {
+                "text": "The current bioleaching",
+                "header_row": 0,
+                "column": 7
+              },
+              {
+                "text": "H (kJ mol ^-1 )",
+                "header_row": 1,
+                "column": 7
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c8",
+            "index": 8,
+            "flat_label": "S (J K ^-1 mol ^-1 ) (The current bioleaching)",
+            "header_path": [
+              "The current bioleaching",
+              "S (J K ^-1 mol ^-1 )"
+            ],
+            "header_leaf": "S (J K ^-1 mol ^-1 )",
+            "header_group": "The current bioleaching",
+            "raw_header_cells": [
+              {
+                "text": "The current bioleaching",
+                "header_row": 0,
+                "column": 8
+              },
+              {
+                "text": "S (J K ^-1 mol ^-1 )",
+                "header_row": 1,
+                "column": 8
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c9",
+            "index": 9,
+            "flat_label": "G (kJ mol -1 ) (The current bioleaching)",
+            "header_path": [
+              "The current bioleaching",
+              "G (kJ mol _-1 )"
+            ],
+            "header_leaf": "G (kJ mol _-1 )",
+            "header_group": "The current bioleaching",
+            "raw_header_cells": [
+              {
+                "text": "The current bioleaching",
+                "header_row": 0,
+                "column": 9
+              },
+              {
+                "text": "G (kJ mol _-1 )",
+                "header_row": 1,
+                "column": 9
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          }
+        ],
+        "unit_scope_candidates": [],
+        "rows": [
+          [
+            "298(25 °C)",
+            "-379.04",
+            "-381.21",
+            "-265.44",
+            "-272.13",
+            "71.54",
+            "-293.45",
+            "-4534.96",
+            "-3037.01",
+            "-3629.93"
+          ],
+          [
+            "303 (30 °C)",
+            "",
+            "",
+            "-263.53",
+            "",
+            "",
+            "-293.81",
+            "",
+            "",
+            "-3614.74"
+          ],
+          [
+            "308(35 °C)",
+            "",
+            "",
+            "-261.63",
+            "",
+            "",
+            "-294.17",
+            "",
+            "",
+            "-3599.56"
+          ],
+          [
+            "313(40 °C)",
+            "",
+            "",
+            "-259.72",
+            "",
+            "",
+            "-294.52",
+            "",
+            "",
+            "-3584.37"
+          ]
+        ],
+        "row_contexts": [],
+        "notes": [
+          "DH and DS are independent of temperature. a 298 K (25 \u0003C) means standard state."
+        ],
+        "raw_markdown": "| T (K) | The traditional chemical leaching ( FeSO4 as deoxidizer) | The traditional chemical leaching ( FeSO4 as deoxidizer) | The traditional chemical leaching ( FeSO4 as deoxidizer) | The traditional chemical leaching ( H2O2 as deoxidizer) | The traditional chemical leaching ( H2O2 as deoxidizer) | The traditional chemical leaching ( H2O2 as deoxidizer) | The current bioleaching | The current bioleaching | The current bioleaching |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| T (K) | H (kJ mol ^-1 ) | S (J K ^-1 mol ^-1 ) | G (kJ mol ^-1 ) | H (kJ mol ^-1 ) | S (J K ^-1 mol ^-1 ) | G (kJ mol ^-1 ) | H (kJ mol ^-1 ) | S (J K ^-1 mol ^-1 ) | G (kJ mol _-1 ) |\n| 298(25 °C) | -379.04 | -381.21 | -265.44 | -272.13 | 71.54 | -293.45 | -4534.96 | -3037.01 | -3629.93 |\n| 303 (30 °C) |  |  | -263.53 |  |  | -293.81 |  |  | -3614.74 |\n| 308(35 °C) |  |  | -261.63 |  |  | -294.17 |  |  | -3599.56 |\n| 313(40 °C) |  |  | -259.72 |  |  | -294.52 |  |  | -3584.37 |",
+        "position_start": 19602,
+        "position_end": 19781,
+        "source": "mineru_content_list",
+        "source_kind": "standalone_table",
+        "layout_context": {
+          "previous_block_type": "text",
+          "next_block_type": "text",
+          "between_image_blocks": false
+        },
+        "raw_html": "<table><tr><td rowspan=\"2\">T (K)</td><td colspan=\"3\">The traditional chemical leaching ( $FeSO_4$  as deoxidizer)</td><td colspan=\"3\">The traditional chemical leaching ( $H_2O_2$  as deoxidizer)</td><td colspan=\"3\">The current bioleaching</td></tr><tr><td> $\\Delta H$ (kJ mol $^{-1}$ )</td><td> $\\Delta S$ (J K $^{-1}$  mol $^{-1}$ )</td><td> $\\Delta G$ (kJ mol $^{-1}$ )</td><td> $\\Delta H$ (kJ mol $^{-1}$ )</td><td> $\\Delta S$ (J K $^{-1}$  mol $^{-1}$ )</td><td> $\\Delta G$ (kJ mol $^{-1}$ )</td><td> $\\Delta H$ (kJ mol $^{-1}$ )</td><td> $\\Delta S$ (J K $^{-1}$  mol $^{-1}$ )</td><td> $\\Delta G$ (kJ mol $_{-1}$ )</td></tr><tr><td>298(25 °C)</td><td>-379.04</td><td>-381.21</td><td>-265.44</td><td>-272.13</td><td>71.54</td><td>-293.45</td><td>-4534.96</td><td>-3037.01</td><td>-3629.93</td></tr><tr><td>303 (30 °C)</td><td></td><td></td><td>-263.53</td><td></td><td></td><td>-293.81</td><td></td><td></td><td>-3614.74</td></tr><tr><td>308(35 °C)</td><td></td><td></td><td>-261.63</td><td></td><td></td><td>-294.17</td><td></td><td></td><td>-3599.56</td></tr><tr><td>313(40 °C)</td><td></td><td></td><td>-259.72</td><td></td><td></td><td>-294.52</td><td></td><td></td><td>-3584.37</td></tr></table>",
+        "image_path": "images/3589dd86c3b63e93fff8b185cacc810d6182600926be72d9429ebd1b0c32c72a.jpg",
+        "bbox": [
+          68,
+          117,
+          944,
+          254
+        ],
+        "metadata": {
+          "table_reference_sentences": [
+            "The bioleaching thermodynamics of both Co and Li from LiCoO2 using elemental sulfur and pyrite as mixed energy substrates were calculated and compared with those of the traditional chemical leaching in the presence of 2 SO4 + FeSO4 / H2O2 (Table 1)."
+          ]
+        },
+        "table_reference_sentences": [
+          "The bioleaching thermodynamics of both Co and Li from LiCoO2 using elemental sulfur and pyrite as mixed energy substrates were calculated and compared with those of the traditional chemical leaching in the presence of 2 SO4 + FeSO4 / H2O2 (Table 1)."
+        ]
+      }
+    }
+  }
+]

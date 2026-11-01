@@ -1,0 +1,201 @@
+{
+  "report": {
+    "initial": {
+      "process_aliases_merged": 0,
+      "typed_processes_rebound": 0,
+      "signature_processes_rebound": 0,
+      "ambiguous_result_signature_bindings": 0,
+      "settings_inherited": 17,
+      "settings_evidence_bound": 0,
+      "relations_without_setting": 0,
+      "unresolved_setting_bindings": [],
+      "relations_deduplicated": 0,
+      "process_revision_requests": [],
+      "alias_merges": [],
+      "process_revision_request_count": 0
+    },
+    "revision": {
+      "committed": false,
+      "applied": 0,
+      "errors": [],
+      "skipped": true
+    },
+    "final": {
+      "process_aliases_merged": 0,
+      "typed_processes_rebound": 0,
+      "signature_processes_rebound": 0,
+      "ambiguous_result_signature_bindings": 0,
+      "settings_inherited": 17,
+      "settings_evidence_bound": 0,
+      "relations_without_setting": 0,
+      "unresolved_setting_bindings": [],
+      "relations_deduplicated": 0,
+      "process_revision_requests": [],
+      "alias_merges": [],
+      "process_revision_request_count": 0
+    },
+    "llm_calls": 0,
+    "error": null,
+    "process_design": {
+      "process_stages": [
+        {
+          "name": "one-step bioleaching",
+          "parent_process": null,
+          "aliases": [],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "In the one-step bioleaching process, 1 mL of spore suspension was inoculated into sucrose medium (containing battery powder) and incubated for 30 days."
+        },
+        {
+          "name": "two-step bioleaching",
+          "parent_process": null,
+          "aliases": [],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "In the two-step approach, the fungi were, firstly, pre-cultured in sucrose medium; no battery powder was added until the fungi entered the logarithmic phase. The autoclaved battery powder was then added to the culture medium and bioleached in a shaker-incubator for 27 days."
+        },
+        {
+          "name": "spent medium bioleaching",
+          "parent_process": null,
+          "aliases": [],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "In the spent medium process, the fungi were primarily cultured in sucrose medium without battery powder until the fungi entered the stationary phase... the battery powder was added to the filtrate which included fungal metabolites and then bioleached in a shaker-incubator for 16 days."
+        },
+        {
+          "name": "chemical leaching",
+          "parent_process": null,
+          "aliases": [],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "Chemical leaching of the spent battery powder was carried out to evaluate the leaching effectiveness of organic acids through the use of a mixture of commercial citric acid, oxalic acid, malic acid and gluconic acid at a concentration similar to the bioleaching experiment."
+        },
+        {
+          "name": "control bioleaching",
+          "parent_process": null,
+          "aliases": [],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "A control experiment was performed in a parallel manner, using fresh sucrose medium without inoculation."
+        }
+      ],
+      "experiment_settings": [
+        {
+          "name": "one-step bioleaching conditions",
+          "stage_name": "one-step bioleaching",
+          "sample": "sterilized battery powder",
+          "sample_aliases": [],
+          "treatment": "A. niger spore suspension",
+          "treatment_members": [
+            "A. niger"
+          ],
+          "treatment_aliases": [],
+          "aliases": [],
+          "condition_summary": "100 mL sucrose medium; 1% (w/v) battery powder; pH 6; 130 rpm; 30 °C; 30 days",
+          "evidence_hint": "In the one-step bioleaching process, 1 mL of spore suspension was inoculated into sucrose medium (containing battery powder) and incubated for 30 days."
+        },
+        {
+          "name": "two-step bioleaching conditions",
+          "stage_name": "two-step bioleaching",
+          "sample": "sterilized battery powder",
+          "sample_aliases": [],
+          "treatment": "A. niger pre-culture",
+          "treatment_members": [
+            "A. niger"
+          ],
+          "treatment_aliases": [],
+          "aliases": [],
+          "condition_summary": "100 mL sucrose medium; 1% (w/v) battery powder; pH 6; 130 rpm; 30 °C; 27 days after 3 days pre-culture",
+          "evidence_hint": "The autoclaved battery powder was then added to the culture medium and bioleached in a shaker-incubator for 27 days."
+        },
+        {
+          "name": "spent medium bioleaching conditions",
+          "stage_name": "spent medium bioleaching",
+          "sample": "sterilized battery powder",
+          "sample_aliases": [],
+          "treatment": "cell-free spent medium",
+          "treatment_members": [
+            "fungal metabolites"
+          ],
+          "treatment_aliases": [],
+          "aliases": [],
+          "condition_summary": "100 mL sucrose medium; 1% (w/v) battery powder; pH 6; 130 rpm; 30 °C; 16 days after 14 days cultivation",
+          "evidence_hint": "The battery powder was added to the filtrate which included fungal metabolites and then bioleached in a shaker-incubator for 16 days."
+        },
+        {
+          "name": "chemical leaching conditions",
+          "stage_name": "chemical leaching",
+          "sample": "spent battery powder",
+          "sample_aliases": [],
+          "treatment": "organic acid mixture",
+          "treatment_members": [
+            "citric acid",
+            "oxalic acid",
+            "malic acid",
+            "gluconic acid"
+          ],
+          "treatment_aliases": [],
+          "aliases": [],
+          "condition_summary": "100 mL acid mixture; 1% (w/v) battery powder; 130 rpm; 30 °C",
+          "evidence_hint": "The leaching test was performed in 250 mL Erlenmeyer flask containing 100 mL of acid and 1% (w v -1) battery powder. As in the bioleaching, the flasks were shaken at 130 rpm and 30 C."
+        },
+        {
+          "name": "control bioleaching conditions",
+          "stage_name": "control bioleaching",
+          "sample": "sterilized battery powder",
+          "sample_aliases": [],
+          "treatment": "fresh sucrose medium without inoculation",
+          "treatment_members": [],
+          "treatment_aliases": [],
+          "aliases": [],
+          "condition_summary": "100 mL sucrose medium; 1% (w/v) battery powder; pH 6; 130 rpm; 30 °C",
+          "evidence_hint": "A control experiment was performed in a parallel manner, using fresh sucrose medium without inoculation."
+        }
+      ],
+      "process_targets": [
+        {
+          "name": "one-step bioleaching",
+          "parent_process": null,
+          "aliases": [],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "In the one-step bioleaching process, 1 mL of spore suspension was inoculated into sucrose medium (containing battery powder) and incubated for 30 days."
+        },
+        {
+          "name": "two-step bioleaching",
+          "parent_process": null,
+          "aliases": [],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "In the two-step approach, the fungi were, firstly, pre-cultured in sucrose medium; no battery powder was added until the fungi entered the logarithmic phase. The autoclaved battery powder was then added to the culture medium and bioleached in a shaker-incubator for 27 days."
+        },
+        {
+          "name": "spent medium bioleaching",
+          "parent_process": null,
+          "aliases": [],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "In the spent medium process, the fungi were primarily cultured in sucrose medium without battery powder until the fungi entered the stationary phase... the battery powder was added to the filtrate which included fungal metabolites and then bioleached in a shaker-incubator for 16 days."
+        },
+        {
+          "name": "chemical leaching",
+          "parent_process": null,
+          "aliases": [],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "Chemical leaching of the spent battery powder was carried out to evaluate the leaching effectiveness of organic acids through the use of a mixture of commercial citric acid, oxalic acid, malic acid and gluconic acid at a concentration similar to the bioleaching experiment."
+        },
+        {
+          "name": "control bioleaching",
+          "parent_process": null,
+          "aliases": [],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "A control experiment was performed in a parallel manner, using fresh sucrose medium without inoculation."
+        }
+      ]
+    }
+  },
+  "prompt": null,
+  "response": null
+}

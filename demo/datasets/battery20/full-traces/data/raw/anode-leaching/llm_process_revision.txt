@@ -1,0 +1,117 @@
+{
+  "report": {
+    "initial": {
+      "typed_processes_rebound": 0,
+      "settings_inherited": 8,
+      "settings_evidence_bound": 0,
+      "relations_without_setting": 2,
+      "unresolved_setting_bindings": [
+        {
+          "relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+          "process_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+          "reason": "setting_condition_conflict",
+          "candidate_setting_ids": [
+            "setting:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):reductive-hydrochloric-acid-leaching-conditions"
+          ]
+        },
+        {
+          "relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+          "process_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+          "reason": "setting_condition_conflict",
+          "candidate_setting_ids": [
+            "setting:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):reductive-hydrochloric-acid-leaching-conditions"
+          ]
+        }
+      ],
+      "relations_deduplicated": 0,
+      "process_revision_requests": [],
+      "process_revision_request_count": 0
+    },
+    "revision": {
+      "committed": false,
+      "applied": 0,
+      "errors": [],
+      "skipped": true
+    },
+    "final": {
+      "typed_processes_rebound": 0,
+      "settings_inherited": 8,
+      "settings_evidence_bound": 0,
+      "relations_without_setting": 2,
+      "unresolved_setting_bindings": [
+        {
+          "relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+          "process_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+          "reason": "setting_condition_conflict",
+          "candidate_setting_ids": [
+            "setting:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):reductive-hydrochloric-acid-leaching-conditions"
+          ]
+        },
+        {
+          "relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+          "process_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+          "reason": "setting_condition_conflict",
+          "candidate_setting_ids": [
+            "setting:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):reductive-hydrochloric-acid-leaching-conditions"
+          ]
+        }
+      ],
+      "relations_deduplicated": 0,
+      "process_revision_requests": [],
+      "process_revision_request_count": 0
+    },
+    "llm_calls": 0,
+    "error": null,
+    "process_design": {
+      "process_stages": [
+        {
+          "name": "reductive hydrochloric acid leaching of calcined powder",
+          "parent_process": null,
+          "aliases": [],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "Hydrochloric acid was taken as leachate to recycle lithium from the calcined powder materials; reductive leaching was carried out with H2O2 as the reducing agent."
+        }
+      ],
+      "experiment_settings": [
+        {
+          "name": "reductive hydrochloric acid leaching conditions",
+          "stage_name": "reductive hydrochloric acid leaching of calcined powder",
+          "sample": "calcined powder materials",
+          "sample_aliases": [],
+          "treatment": "hydrochloric acid with hydrogen peroxide",
+          "treatment_members": [
+            "hydrochloric acid",
+            "hydrogen peroxide"
+          ],
+          "treatment_aliases": [],
+          "aliases": [],
+          "condition_summary": "thermostatic water bath; manual constant agitation; effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated",
+          "evidence_hint": "Leaching processes were conducted in a thermostatic water bath; powder samples were put into a beaker, and hydrochloric acid and hydrogen peroxide were added into the beaker in sequence."
+        }
+      ],
+      "process_targets": [
+        {
+          "name": "reductive hydrochloric acid leaching of calcined powder",
+          "parent_process": null,
+          "aliases": [],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "Hydrochloric acid was taken as leachate to recycle lithium from the calcined powder materials; reductive leaching was carried out with H2O2 as the reducing agent."
+        }
+      ]
+    },
+    "missing_process": {
+      "requests": 0,
+      "revision_requested": 0,
+      "approved": 0,
+      "approved_request_ids": [],
+      "no_change": 0,
+      "rebound_relations": 0,
+      "postcondition_failures": [],
+      "remaining_unresolved": 0
+    }
+  },
+  "prompt": null,
+  "response": null
+}

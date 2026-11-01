@@ -1,0 +1,92 @@
+{
+  "case": "smartphones",
+  "title": "Battery composition: cohorts, units and uncertainty",
+  "steps": [
+    {
+      "title": "Check why Table 1 was accepted",
+      "question": "What kind of measurement does Gate recognize?",
+      "look": "Gate accepts polymeric and metallic composition fractions for the phone and its components, grouped by manufacturing era.",
+      "boundary": "Composition is not recovery efficiency. Gate approval alone does not verify every extracted fact.",
+      "stage": "gate",
+      "where": {
+        "table_id": "TABLE_Assessment_of_Smartphones__Components_and_Materials_for_a_Recycling_Perspective-_Tendencies_of_Composition_and_Target_Elements_0001"
+      }
+    },
+    {
+      "title": "Read the battery polymer fraction",
+      "question": "What does 23.54 ± 1.42 describe?",
+      "look": "Table 1 reports the battery polymer fraction for the before-2015 cohort. The extraction separates the value 23.54 from uncertainty 1.42.",
+      "boundary": "This describes a battery batch, not a catalog model. The uncertainty is retained without inferring its statistical definition.",
+      "stage": "table",
+      "where": {
+        "attributes.raw_cell": "23.54 ± 1.42",
+        "attributes.row_idx": 3,
+        "attributes.col_idx": 1
+      }
+    },
+    {
+      "title": "Read the battery metal fraction",
+      "question": "How much of the battery sample is metallic?",
+      "look": "The before-2015 battery cell reports 63.01 ± 3.49%. The column identifies the metallic fraction and its manufacturing cohort.",
+      "boundary": "Total metallic fraction is not a concentration of one element and is not a recovery rate.",
+      "stage": "table",
+      "where": {
+        "attributes.raw_cell": "63.01 ± 3.49",
+        "attributes.row_idx": 3,
+        "attributes.col_idx": 2
+      }
+    },
+    {
+      "title": "Keep the other manufacturing cohort separate",
+      "question": "Can we combine both battery metal measurements?",
+      "look": "The after-2015 battery metal fraction is 59.46 ± 3.54%. Its different source column keeps it separate from the 63.01% observation.",
+      "boundary": "Before/after here mean manufacturing eras, not treatment stages. No statistical significance or pooled estimate is inferred.",
+      "stage": "table",
+      "where": {
+        "attributes.raw_cell": "59.46 ± 3.54",
+        "attributes.row_idx": 3,
+        "attributes.col_idx": 5
+      }
+    },
+    {
+      "title": "Attach scope: identify the study population",
+      "question": "Does this observation describe a named phone model?",
+      "look": "After document merge and revision, Scope adds source context. Scope describes 30 smartphones from nine brands, grouped by manufacturing year before and after 2015. No model was repeated.",
+      "boundary": "This is batch evidence, not a measurement for a named catalog model. The Scope description is an archived summary. Scope is post-merge provenance, not an upstream extraction input.",
+      "stage": "scope",
+      "where": {
+        "scope_subject_text": "mobile phone"
+      }
+    },
+    {
+      "title": "Follow the battery observation into the final graph",
+      "question": "What survived normalization?",
+      "look": "Battery → CONTAINS → Metals retains 63.01%, uncertainty 3.49 and the before-2015 cohort.",
+      "boundary": "A normalized entity name does not make this batch a specific catalog battery.",
+      "stage": "final",
+      "where": {
+        "id": "REL_Component_battery_CONTAINS_Material_Metals",
+        "properties.value": "63.01"
+      }
+    },
+    {
+      "title": "Retain both cohort observations",
+      "question": "Are identical endpoints enough to deduplicate?",
+      "look": "The second Battery → Metals observation retains 59.46%, uncertainty 3.54 and its after-2015 condition.",
+      "boundary": "Different cohort and cell anchors are distinct measurements even when subject, predicate and object match.",
+      "stage": "final",
+      "where": {
+        "id": "REL_Component_battery_CONTAINS_Material_Metals",
+        "properties.value": "59.46"
+      }
+    },
+    {
+      "title": "Open battery evidence in the fused graph",
+      "question": "Can we navigate back to the composition cell?",
+      "look": "Inspect the battery’s CONTAINS observations, choose a metallic fraction, and use View evidence in replay to return to its archived table cell.",
+      "boundary": "These are composition observations. Catalog battery specifications and treatment recoveries remain different evidence types.",
+      "entity": "Component_battery",
+      "fusion": true
+    }
+  ]
+}

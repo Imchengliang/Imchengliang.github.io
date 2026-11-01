@@ -1,0 +1,91 @@
+{
+  "paper": "Bioleaching of Valuable Metals from Spent Lithium-Ion Mobile Phone Batteries Using Aspergillus Niger",
+  "source_file": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/demo/ontoweee/datasets/battery20/updates/measurement-semantics-20261101/inputs/Bioleaching of Valuable Metals from Spent Lithium-Ion Mobile Phone Batteries Using Aspergillus Niger/triples_final.txt",
+  "source_sha256": "702c4208e30fd8bd1e7eeaffd58360d0b1d9ce77e2e665ade40b9c7d769e13da",
+  "transactions": [
+    {
+      "index": 11,
+      "original": {
+        "id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_chemical_leaching",
+        "subject": "Component_lithium_ion_battery",
+        "subject_name": "lithium-ion battery",
+        "subject_type": "Component",
+        "predicate": "PROCESSED_BY",
+        "object": "Process_chemical_leaching",
+        "object_name": "chemical leaching",
+        "object_type": "Process",
+        "properties": {
+          "study_scope": "current_study",
+          "process_role": "main_process",
+          "source_sample": "battery powder",
+          "conditions": "1 g battery powder and 100 mL deionized water, various amounts of 1.0 M HNO3 added to achieve pH from that of the sample to about 4, shaken at room temperature for 5 days",
+          "process_agent": "1.0 M HNO3",
+          "treatment_members": [
+            "HNO3"
+          ],
+          "measurement_method": "pH measurement",
+          "condition_keys": [
+            {
+              "key": "temperature",
+              "value": "room",
+              "unit": "°C",
+              "raw_text": "1 g battery powder and 100 mL deionized water, various amounts of 1.0 M HNO3 added to achieve pH from that of the sample to about 4, shaken at room temperature for 5 days"
+            }
+          ],
+          "condition_labels": [
+            "1 g battery powder and 100 mL deionized water, various amounts of 1.0 M HNO3 added to achieve pH from that of the sample to about 4, shaken at room temperature for 5 days"
+          ],
+          "condition": "1 g battery powder and 100 mL deionized water, various amounts of 1.0 M HNO3 added to achieve pH from that of the sample to about 4, shaken at room temperature for 5 days",
+          "condition_ids": [
+            "COND_168b536238f6"
+          ],
+          "raw_relation_type": "PROCESSED_BY",
+          "normalized_relation_type": "PROCESSED_BY",
+          "normalized_from_raw": false,
+          "source_name": "lithium-ion battery",
+          "target_name": "chemical leaching",
+          "evidence_span": "The acid neutralizing capacity (ANC) test is the leaching procedure for solidified products that gives information as to hydration progression and the overall buffering capacity of materials against acidification and chemical attack.",
+          "evidence_spans": [
+            "The acid neutralizing capacity (ANC) test is the leaching procedure for solidified products that gives information as to hydration progression and the overall buffering capacity of materials against acidification and chemical attack."
+          ]
+        },
+        "conditions": [
+          {
+            "id": "COND_168b536238f6",
+            "name": "temperature",
+            "type": "Temperature",
+            "value": "room",
+            "unit": "°C"
+          }
+        ]
+      },
+      "source_evidence": [
+        {
+          "file": "source/text.md",
+          "line": 55,
+          "quote": "The acid neutralizing capacity (ANC) test is the leaching procedure for solidified products that gives information as to hydration progression and the overall buffering capacity of materials against acidification and chemical attack. ANC is defined by measuring the amount of acid needed to change the pH value of the sample to a different chosen amount. The test was performed in Erlenmeyer flasks (containing 1 g battery powder and 100 mL deionized water) to which various amounts of 1.0 M HNO3 were added so as to have disparate pHs ranging from that of the sample to about 4. All flasks were shaken at room temperature for 5 days. After shaking and equilibration, the pH values of the solution were measured."
+        },
+        {
+          "file": "source/text.md",
+          "line": 57,
+          "quote": "## 2.3. Microorganism and growth condition"
+        }
+      ],
+      "action": "retain_operation_evidence",
+      "operation_role": "acid neutralizing capacity assay"
+    }
+  ],
+  "added_processes": [],
+  "removed_unreferenced_entities": [],
+  "view_counts": {
+    "triples": 1,
+    "filtered_triples": 1,
+    "canonical_triples": 1,
+    "filtered_canonical_triples": 1,
+    "relations": 1,
+    "canonical_relations": 1,
+    "evidence_relations": 1
+  },
+  "original_final_count": 70,
+  "corrected_final_count": 69
+}

@@ -1,0 +1,108 @@
+[
+  {
+    "id": "setting:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:solvent-method-recovery-conditions",
+    "name": "solvent method recovery conditions",
+    "stage_name": "solvent method for scrap material recovery",
+    "stage_id": "stage:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:solvent-method-for-scrap-material-recovery",
+    "sample": "separated Al foil with scrap materials",
+    "sample_aliases": [],
+    "treatment": "solvent method",
+    "treatment_members": [],
+    "treatment_aliases": [],
+    "aliases": [],
+    "condition_summary": "solvent method as described above; no further conditions stated",
+    "condition_keys": [
+      {
+        "key": "other",
+        "value": "solvent method as described above",
+        "unit": null,
+        "raw_text": "solvent method as described above"
+      },
+      {
+        "key": "other",
+        "value": "no further conditions stated",
+        "unit": null,
+        "raw_text": "no further conditions stated",
+        "negated": true
+      }
+    ],
+    "source": "process_pass",
+    "source_table_id": null,
+    "evidence_hint": "The separated Al foil was treated again as above recovery method.",
+    "evidence": {}
+  },
+  {
+    "id": "setting:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:naoh-dissolution-conditions",
+    "name": "NaOH dissolution conditions",
+    "stage_name": "NaOH dissolution of Al foil mixtures",
+    "stage_id": "stage:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:naoh-dissolution-of-al-foil-mixtures",
+    "sample": "impure Al foil mixtures",
+    "sample_aliases": [],
+    "treatment": "excessive NaOH solution",
+    "treatment_members": [
+      "NaOH"
+    ],
+    "treatment_aliases": [],
+    "aliases": [],
+    "condition_summary": "excessive NaOH solution; no further conditions stated",
+    "condition_keys": [
+      {
+        "key": "medium",
+        "value": "excessive NaOH solution",
+        "unit": null,
+        "raw_text": "excessive NaOH solution"
+      },
+      {
+        "key": "other",
+        "value": "no further conditions stated",
+        "unit": null,
+        "raw_text": "no further conditions stated",
+        "negated": true
+      }
+    ],
+    "source": "process_pass",
+    "source_table_id": null,
+    "evidence_hint": "After dissolving Al foil mixtures with excessive NaOH solution, the wasted scrap materials (m2) could be weighed.",
+    "evidence": {}
+  },
+  {
+    "id": "setting:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:electrochemical-cycling-conditions",
+    "name": "electrochemical cycling conditions",
+    "stage_name": "electrochemical cycling of recovered scrap material electrodes",
+    "stage_id": "stage:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:electrochemical-cycling-of-recovered-scrap-material-electrodes",
+    "sample": "recovered scrap material electrode",
+    "sample_aliases": [],
+    "treatment": "CR2032 coin-type test cell with lithium foil anode and 1 M LiPF6 in EC:DEC (1:1 v/v)",
+    "treatment_members": [
+      "lithium foil",
+      "1 M LiPF6 in ethylene carbonate and diethyl carbonate (1:1 in volume)"
+    ],
+    "treatment_aliases": [],
+    "aliases": [],
+    "condition_summary": "charged and discharged between 3.0 V and 4.3 V versus Li+/Li; current density 30 mA g-1; temperature 25 °C",
+    "condition_keys": [
+      {
+        "key": "other",
+        "value": "charged and discharged between 3.0 V and 4.3 V versus Li+/Li",
+        "unit": null,
+        "raw_text": "charged and discharged between 3.0 V and 4.3 V versus Li+/Li"
+      },
+      {
+        "key": "other",
+        "value": "current density 30 mA g-1",
+        "unit": null,
+        "raw_text": "current density 30 mA g-1"
+      },
+      {
+        "key": "temperature",
+        "value": 25.0,
+        "unit": "°C",
+        "raw_text": "temperature 25 °C"
+      }
+    ],
+    "source": "process_pass",
+    "source_table_id": null,
+    "evidence_hint": "The cells were charged and discharged between 3.0 V and 4.3 V versus Li+/Li by applying a current density of 30 mA g-1 at 25 °C.",
+    "evidence": {}
+  }
+]

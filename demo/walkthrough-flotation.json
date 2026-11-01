@@ -1,0 +1,98 @@
+{
+  "case": "flotation",
+  "title": "Flotation: a failed table channel with partial text results",
+  "steps": [
+    {
+      "title": "Confirm Gate allowed the table",
+      "question": "Was this an intentional skip?",
+      "look": "Gate accepts the flotation results: 12 grade/yield cells across REM, PEM and PUEM. Paper Table 2 is archive table object 3.",
+      "boundary": "Gate approval does not guarantee correct IR. The other two objects are XPS tables.",
+      "stage": "gate",
+      "where": {
+        "table_id": "TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0003"
+      }
+    },
+    {
+      "title": "Check the text-side Process",
+      "question": "Are the treatment routes missing too?",
+      "look": "Process content describes PUEM flotation and its operating conditions. Separate REM and PEM routes also exist in the archive.",
+      "boundary": "A Process description is a summary, not an exact quote or a replacement for missing table measurements.",
+      "stage": "process",
+      "where": {
+        "phase": "Process content",
+        "canonical_name": "flotation of pyrolysis-ultrasonic pretreated electrode material mixture"
+      }
+    },
+    {
+      "title": "Inspect the reversed output direction",
+      "question": "Why did execution reject the candidates?",
+      "look": "Open Semantic IR steps: HAS_OUTPUT runs Material → Process, backwards. Grade and yield each select both rows, skipping 12 attempts apiece.",
+      "boundary": "24 rejections cover 12 cells, not 24 measurements. The overlapping row selectors also need checking.",
+      "stage": "table",
+      "where": {
+        "semantic_ir_and_verification.table_id": "TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0003"
+      }
+    },
+    {
+      "title": "Check the failed repair",
+      "question": "Did repair restore any table facts?",
+      "look": "The log says direct repair response contains no triples; extraction has zero relations. Click yield 31.87 for empty-cell feedback, then Reopen step.",
+      "boundary": "No raw repair response is available here. The cause of its empty result is unverified.",
+      "stage": "table",
+      "where": {
+        "semantic_ir_and_verification.table_id": "TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0003"
+      }
+    },
+    {
+      "title": "Follow the surviving prose result",
+      "question": "Why does 93.89% still appear?",
+      "look": "Relation extraction reads 93.89% LiCoO2 grade from the PUEM results paragraph. Its exact source sentence is highlighted.",
+      "boundary": "The same number in text and table does not prove table extraction succeeded.",
+      "stage": "relation",
+      "where": {
+        "id": "REL_text_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_text_Material_LiCoO2",
+        "properties.value": 93.89
+      }
+    },
+    {
+      "title": "Separate the two repair mechanisms",
+      "question": "Did Process Revision repair this table?",
+      "look": "Process Revision was skipped: zero LLM calls and applied operations. The reconciliation pass inherited 14 settings, not 14 repaired cells.",
+      "boundary": "This log is separate from Table repair. Archive timestamps do not establish a continuous before/after run.",
+      "stage": "revision",
+      "where": {
+        "revision.skipped": true,
+        "llm_calls": 0
+      }
+    },
+    {
+      "title": "Attach the method family after merge",
+      "question": "When is the Process given its broader method context?",
+      "look": "The archived Scope assigns the PUEM Process to the flotation method family. The current pipeline adds Scope after merge and revision, before final export.",
+      "boundary": "Method context does not repair missing table measurements or validate Process-result bindings.",
+      "stage": "scope",
+      "where": {
+        "scope_subject_text": "flotation of pyrolysis-ultrasonic pretreated electrode material mixture"
+      }
+    },
+    {
+      "title": "Distinguish partial results from coverage",
+      "question": "What is still missing?",
+      "look": "The final 93.89% result keeps its Setting. Five numeric outputs survive, all LiCoO2; none carry this table's provenance. No numeric graphite or yield outputs survive.",
+      "boundary": "Qualitative graphite outputs were restored offline without inventing values. All 12 cell-linked measurements remain absent.",
+      "stage": "final",
+      "where": {
+        "id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
+        "properties.value": 93.89
+      }
+    },
+    {
+      "title": "Trace the partial result from fusion",
+      "question": "Which channel supplied the graph observation?",
+      "look": "Open PUEM's 93.89% LiCoO2 observation, then View evidence in replay. It returns to the text Relation candidate, not the failed table.",
+      "boundary": "Fusion preserves useful partial evidence; it does not recover absent measurements or repair this table.",
+      "entity": "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
+      "fusion": true
+    }
+  ]
+}

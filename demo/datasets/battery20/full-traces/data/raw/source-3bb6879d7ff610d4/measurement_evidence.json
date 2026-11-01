@@ -1,0 +1,858 @@
+[
+  {
+    "reason": "measurement_semantics_revision",
+    "measurement": {
+      "property": "activation_energy",
+      "value": 66.0,
+      "unit": "kJ/mol",
+      "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+      "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
+      "source_sample": null,
+      "analyte": "Mn",
+      "measured_entity": "Process_L_tartaric_acid_leaching",
+      "measurement_method": "Arrhenius equation",
+      "measurement_basis": "kinetic parameter for dissolution of the named metal, not a material output",
+      "archived_context": "first stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+      "conditions": null
+    },
+    "original_relation": {
+      "id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
+      "subject": "Process_L_tartaric_acid_leaching",
+      "predicate": "HAS_OUTPUT",
+      "object": "Material_Mn",
+      "subject_type": "Process",
+      "object_type": "Material",
+      "confidence": 0.8,
+      "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+      "source_name": "L-tartaric acid leaching",
+      "target_name": "Mn",
+      "properties": {
+        "property": "activation_energy",
+        "value": 66.0,
+        "unit": "kJ/mol",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "first stage",
+        "measurement_method": "Arrhenius equation",
+        "treatment_members": [],
+        "condition_keys": [
+          {
+            "key": "other",
+            "value": "first stage",
+            "unit": null,
+            "raw_text": "first stage"
+          }
+        ],
+        "condition_labels": [
+          "first stage"
+        ],
+        "condition": "first stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "condition_ids": [
+          "COND_551e22671f0d"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false,
+        "source_name": "L-tartaric acid leaching",
+        "target_name": "Mn",
+        "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+        "source": "text",
+        "setting_id": "setting:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:l-tartaric-acid-leaching-conditions",
+        "setting_binding_basis": "unique_process_setting",
+        "setting_stage_name": "L-tartaric acid leaching",
+        "setting_condition_keys": [
+          {
+            "key": "concentration",
+            "value": 5.0,
+            "unit": "vol%",
+            "raw_text": "H2O2 0–5 vol%"
+          },
+          {
+            "key": "concentration",
+            "value": 2.5,
+            "unit": "M",
+            "raw_text": "L-tartaric acid 0.25–2.5 M"
+          },
+          {
+            "key": "pulp_density",
+            "value": "14–33 g/L",
+            "unit": null,
+            "raw_text": "pulp density 14–33 g/L"
+          },
+          {
+            "key": "temperature",
+            "value": 80.0,
+            "unit": "°C",
+            "raw_text": "temperature 40–80 °C"
+          },
+          {
+            "key": "time",
+            "value": 300.0,
+            "unit": "min",
+            "raw_text": "time up to 300 min"
+          },
+          {
+            "key": "agitation",
+            "value": 400.0,
+            "unit": null,
+            "raw_text": "stirring 400 rpm"
+          }
+        ],
+        "setting_condition": "H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "evidence_spans": [
+          "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively."
+        ]
+      }
+    }
+  },
+  {
+    "reason": "measurement_semantics_revision",
+    "measurement": {
+      "property": "activation_energy",
+      "value": 54.03,
+      "unit": "kJ/mol",
+      "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+      "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
+      "source_sample": null,
+      "analyte": "Li",
+      "measured_entity": "Process_L_tartaric_acid_leaching",
+      "measurement_method": "Arrhenius equation",
+      "measurement_basis": "kinetic parameter for dissolution of the named metal, not a material output",
+      "archived_context": "first stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+      "conditions": null
+    },
+    "original_relation": {
+      "id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
+      "subject": "Process_L_tartaric_acid_leaching",
+      "predicate": "HAS_OUTPUT",
+      "object": "Material_Li",
+      "subject_type": "Process",
+      "object_type": "Material",
+      "confidence": 0.8,
+      "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+      "source_name": "L-tartaric acid leaching",
+      "target_name": "Li",
+      "properties": {
+        "property": "activation_energy",
+        "value": 54.03,
+        "unit": "kJ/mol",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "first stage",
+        "measurement_method": "Arrhenius equation",
+        "treatment_members": [],
+        "condition_keys": [
+          {
+            "key": "other",
+            "value": "first stage",
+            "unit": null,
+            "raw_text": "first stage"
+          }
+        ],
+        "condition_labels": [
+          "first stage"
+        ],
+        "condition": "first stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "condition_ids": [
+          "COND_551e22671f0d"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false,
+        "source_name": "L-tartaric acid leaching",
+        "target_name": "Li",
+        "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+        "source": "text",
+        "setting_id": "setting:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:l-tartaric-acid-leaching-conditions",
+        "setting_binding_basis": "unique_process_setting",
+        "setting_stage_name": "L-tartaric acid leaching",
+        "setting_condition_keys": [
+          {
+            "key": "concentration",
+            "value": 5.0,
+            "unit": "vol%",
+            "raw_text": "H2O2 0–5 vol%"
+          },
+          {
+            "key": "concentration",
+            "value": 2.5,
+            "unit": "M",
+            "raw_text": "L-tartaric acid 0.25–2.5 M"
+          },
+          {
+            "key": "pulp_density",
+            "value": "14–33 g/L",
+            "unit": null,
+            "raw_text": "pulp density 14–33 g/L"
+          },
+          {
+            "key": "temperature",
+            "value": 80.0,
+            "unit": "°C",
+            "raw_text": "temperature 40–80 °C"
+          },
+          {
+            "key": "time",
+            "value": 300.0,
+            "unit": "min",
+            "raw_text": "time up to 300 min"
+          },
+          {
+            "key": "agitation",
+            "value": 400.0,
+            "unit": null,
+            "raw_text": "stirring 400 rpm"
+          }
+        ],
+        "setting_condition": "H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "evidence_spans": [
+          "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively."
+        ]
+      }
+    }
+  },
+  {
+    "reason": "measurement_semantics_revision",
+    "measurement": {
+      "property": "activation_energy",
+      "value": 58.18,
+      "unit": "kJ/mol",
+      "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+      "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
+      "source_sample": null,
+      "analyte": "Co",
+      "measured_entity": "Process_L_tartaric_acid_leaching",
+      "measurement_method": "Arrhenius equation",
+      "measurement_basis": "kinetic parameter for dissolution of the named metal, not a material output",
+      "archived_context": "first stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+      "conditions": null
+    },
+    "original_relation": {
+      "id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
+      "subject": "Process_L_tartaric_acid_leaching",
+      "predicate": "HAS_OUTPUT",
+      "object": "Material_Co",
+      "subject_type": "Process",
+      "object_type": "Material",
+      "confidence": 0.8,
+      "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+      "source_name": "L-tartaric acid leaching",
+      "target_name": "Co",
+      "properties": {
+        "property": "activation_energy",
+        "value": 58.18,
+        "unit": "kJ/mol",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "first stage",
+        "measurement_method": "Arrhenius equation",
+        "treatment_members": [],
+        "condition_keys": [
+          {
+            "key": "other",
+            "value": "first stage",
+            "unit": null,
+            "raw_text": "first stage"
+          }
+        ],
+        "condition_labels": [
+          "first stage"
+        ],
+        "condition": "first stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "condition_ids": [
+          "COND_551e22671f0d"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false,
+        "source_name": "L-tartaric acid leaching",
+        "target_name": "Co",
+        "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+        "source": "text",
+        "setting_id": "setting:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:l-tartaric-acid-leaching-conditions",
+        "setting_binding_basis": "unique_process_setting",
+        "setting_stage_name": "L-tartaric acid leaching",
+        "setting_condition_keys": [
+          {
+            "key": "concentration",
+            "value": 5.0,
+            "unit": "vol%",
+            "raw_text": "H2O2 0–5 vol%"
+          },
+          {
+            "key": "concentration",
+            "value": 2.5,
+            "unit": "M",
+            "raw_text": "L-tartaric acid 0.25–2.5 M"
+          },
+          {
+            "key": "pulp_density",
+            "value": "14–33 g/L",
+            "unit": null,
+            "raw_text": "pulp density 14–33 g/L"
+          },
+          {
+            "key": "temperature",
+            "value": 80.0,
+            "unit": "°C",
+            "raw_text": "temperature 40–80 °C"
+          },
+          {
+            "key": "time",
+            "value": 300.0,
+            "unit": "min",
+            "raw_text": "time up to 300 min"
+          },
+          {
+            "key": "agitation",
+            "value": 400.0,
+            "unit": null,
+            "raw_text": "stirring 400 rpm"
+          }
+        ],
+        "setting_condition": "H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "evidence_spans": [
+          "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively."
+        ]
+      }
+    }
+  },
+  {
+    "reason": "measurement_semantics_revision",
+    "measurement": {
+      "property": "activation_energy",
+      "value": 73.28,
+      "unit": "kJ/mol",
+      "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+      "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
+      "source_sample": null,
+      "analyte": "Ni",
+      "measured_entity": "Process_L_tartaric_acid_leaching",
+      "measurement_method": "Arrhenius equation",
+      "measurement_basis": "kinetic parameter for dissolution of the named metal, not a material output",
+      "archived_context": "first stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+      "conditions": null
+    },
+    "original_relation": {
+      "id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
+      "subject": "Process_L_tartaric_acid_leaching",
+      "predicate": "HAS_OUTPUT",
+      "object": "Material_Ni",
+      "subject_type": "Process",
+      "object_type": "Material",
+      "confidence": 0.8,
+      "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+      "source_name": "L-tartaric acid leaching",
+      "target_name": "Ni",
+      "properties": {
+        "property": "activation_energy",
+        "value": 73.28,
+        "unit": "kJ/mol",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "first stage",
+        "measurement_method": "Arrhenius equation",
+        "treatment_members": [],
+        "condition_keys": [
+          {
+            "key": "other",
+            "value": "first stage",
+            "unit": null,
+            "raw_text": "first stage"
+          }
+        ],
+        "condition_labels": [
+          "first stage"
+        ],
+        "condition": "first stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "condition_ids": [
+          "COND_551e22671f0d"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false,
+        "source_name": "L-tartaric acid leaching",
+        "target_name": "Ni",
+        "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+        "source": "text",
+        "setting_id": "setting:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:l-tartaric-acid-leaching-conditions",
+        "setting_binding_basis": "unique_process_setting",
+        "setting_stage_name": "L-tartaric acid leaching",
+        "setting_condition_keys": [
+          {
+            "key": "concentration",
+            "value": 5.0,
+            "unit": "vol%",
+            "raw_text": "H2O2 0–5 vol%"
+          },
+          {
+            "key": "concentration",
+            "value": 2.5,
+            "unit": "M",
+            "raw_text": "L-tartaric acid 0.25–2.5 M"
+          },
+          {
+            "key": "pulp_density",
+            "value": "14–33 g/L",
+            "unit": null,
+            "raw_text": "pulp density 14–33 g/L"
+          },
+          {
+            "key": "temperature",
+            "value": 80.0,
+            "unit": "°C",
+            "raw_text": "temperature 40–80 °C"
+          },
+          {
+            "key": "time",
+            "value": 300.0,
+            "unit": "min",
+            "raw_text": "time up to 300 min"
+          },
+          {
+            "key": "agitation",
+            "value": 400.0,
+            "unit": null,
+            "raw_text": "stirring 400 rpm"
+          }
+        ],
+        "setting_condition": "H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "evidence_spans": [
+          "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively."
+        ]
+      }
+    }
+  },
+  {
+    "reason": "measurement_semantics_revision",
+    "measurement": {
+      "property": "activation_energy",
+      "value": 55.68,
+      "unit": "kJ/mol",
+      "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+      "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
+      "source_sample": null,
+      "analyte": "Mn",
+      "measured_entity": "Process_L_tartaric_acid_leaching",
+      "measurement_method": "Arrhenius equation",
+      "measurement_basis": "kinetic parameter for dissolution of the named metal, not a material output",
+      "archived_context": "second stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+      "conditions": null
+    },
+    "original_relation": {
+      "id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
+      "subject": "Process_L_tartaric_acid_leaching",
+      "predicate": "HAS_OUTPUT",
+      "object": "Material_Mn",
+      "subject_type": "Process",
+      "object_type": "Material",
+      "confidence": 0.8,
+      "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+      "source_name": "L-tartaric acid leaching",
+      "target_name": "Mn",
+      "properties": {
+        "property": "activation_energy",
+        "value": 55.68,
+        "unit": "kJ/mol",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "second stage",
+        "measurement_method": "Arrhenius equation",
+        "treatment_members": [],
+        "condition_keys": [
+          {
+            "key": "other",
+            "value": "second stage",
+            "unit": null,
+            "raw_text": "second stage"
+          }
+        ],
+        "condition_labels": [
+          "second stage"
+        ],
+        "condition": "second stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "condition_ids": [
+          "COND_c6c9a2ff255e"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false,
+        "source_name": "L-tartaric acid leaching",
+        "target_name": "Mn",
+        "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+        "source": "text",
+        "setting_id": "setting:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:l-tartaric-acid-leaching-conditions",
+        "setting_binding_basis": "unique_process_setting",
+        "setting_stage_name": "L-tartaric acid leaching",
+        "setting_condition_keys": [
+          {
+            "key": "concentration",
+            "value": 5.0,
+            "unit": "vol%",
+            "raw_text": "H2O2 0–5 vol%"
+          },
+          {
+            "key": "concentration",
+            "value": 2.5,
+            "unit": "M",
+            "raw_text": "L-tartaric acid 0.25–2.5 M"
+          },
+          {
+            "key": "pulp_density",
+            "value": "14–33 g/L",
+            "unit": null,
+            "raw_text": "pulp density 14–33 g/L"
+          },
+          {
+            "key": "temperature",
+            "value": 80.0,
+            "unit": "°C",
+            "raw_text": "temperature 40–80 °C"
+          },
+          {
+            "key": "time",
+            "value": 300.0,
+            "unit": "min",
+            "raw_text": "time up to 300 min"
+          },
+          {
+            "key": "agitation",
+            "value": 400.0,
+            "unit": null,
+            "raw_text": "stirring 400 rpm"
+          }
+        ],
+        "setting_condition": "H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "evidence_spans": [
+          "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively."
+        ]
+      }
+    }
+  },
+  {
+    "reason": "measurement_semantics_revision",
+    "measurement": {
+      "property": "activation_energy",
+      "value": 53.86,
+      "unit": "kJ/mol",
+      "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+      "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
+      "source_sample": null,
+      "analyte": "Li",
+      "measured_entity": "Process_L_tartaric_acid_leaching",
+      "measurement_method": "Arrhenius equation",
+      "measurement_basis": "kinetic parameter for dissolution of the named metal, not a material output",
+      "archived_context": "second stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+      "conditions": null
+    },
+    "original_relation": {
+      "id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
+      "subject": "Process_L_tartaric_acid_leaching",
+      "predicate": "HAS_OUTPUT",
+      "object": "Material_Li",
+      "subject_type": "Process",
+      "object_type": "Material",
+      "confidence": 0.8,
+      "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+      "source_name": "L-tartaric acid leaching",
+      "target_name": "Li",
+      "properties": {
+        "property": "activation_energy",
+        "value": 53.86,
+        "unit": "kJ/mol",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "second stage",
+        "measurement_method": "Arrhenius equation",
+        "treatment_members": [],
+        "condition_keys": [
+          {
+            "key": "other",
+            "value": "second stage",
+            "unit": null,
+            "raw_text": "second stage"
+          }
+        ],
+        "condition_labels": [
+          "second stage"
+        ],
+        "condition": "second stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "condition_ids": [
+          "COND_c6c9a2ff255e"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false,
+        "source_name": "L-tartaric acid leaching",
+        "target_name": "Li",
+        "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+        "source": "text",
+        "setting_id": "setting:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:l-tartaric-acid-leaching-conditions",
+        "setting_binding_basis": "unique_process_setting",
+        "setting_stage_name": "L-tartaric acid leaching",
+        "setting_condition_keys": [
+          {
+            "key": "concentration",
+            "value": 5.0,
+            "unit": "vol%",
+            "raw_text": "H2O2 0–5 vol%"
+          },
+          {
+            "key": "concentration",
+            "value": 2.5,
+            "unit": "M",
+            "raw_text": "L-tartaric acid 0.25–2.5 M"
+          },
+          {
+            "key": "pulp_density",
+            "value": "14–33 g/L",
+            "unit": null,
+            "raw_text": "pulp density 14–33 g/L"
+          },
+          {
+            "key": "temperature",
+            "value": 80.0,
+            "unit": "°C",
+            "raw_text": "temperature 40–80 °C"
+          },
+          {
+            "key": "time",
+            "value": 300.0,
+            "unit": "min",
+            "raw_text": "time up to 300 min"
+          },
+          {
+            "key": "agitation",
+            "value": 400.0,
+            "unit": null,
+            "raw_text": "stirring 400 rpm"
+          }
+        ],
+        "setting_condition": "H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "evidence_spans": [
+          "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively."
+        ]
+      }
+    }
+  },
+  {
+    "reason": "measurement_semantics_revision",
+    "measurement": {
+      "property": "activation_energy",
+      "value": 58.94,
+      "unit": "kJ/mol",
+      "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+      "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
+      "source_sample": null,
+      "analyte": "Co",
+      "measured_entity": "Process_L_tartaric_acid_leaching",
+      "measurement_method": "Arrhenius equation",
+      "measurement_basis": "kinetic parameter for dissolution of the named metal, not a material output",
+      "archived_context": "second stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+      "conditions": null
+    },
+    "original_relation": {
+      "id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
+      "subject": "Process_L_tartaric_acid_leaching",
+      "predicate": "HAS_OUTPUT",
+      "object": "Material_Co",
+      "subject_type": "Process",
+      "object_type": "Material",
+      "confidence": 0.8,
+      "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+      "source_name": "L-tartaric acid leaching",
+      "target_name": "Co",
+      "properties": {
+        "property": "activation_energy",
+        "value": 58.94,
+        "unit": "kJ/mol",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "second stage",
+        "measurement_method": "Arrhenius equation",
+        "treatment_members": [],
+        "condition_keys": [
+          {
+            "key": "other",
+            "value": "second stage",
+            "unit": null,
+            "raw_text": "second stage"
+          }
+        ],
+        "condition_labels": [
+          "second stage"
+        ],
+        "condition": "second stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "condition_ids": [
+          "COND_c6c9a2ff255e"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false,
+        "source_name": "L-tartaric acid leaching",
+        "target_name": "Co",
+        "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+        "source": "text",
+        "setting_id": "setting:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:l-tartaric-acid-leaching-conditions",
+        "setting_binding_basis": "unique_process_setting",
+        "setting_stage_name": "L-tartaric acid leaching",
+        "setting_condition_keys": [
+          {
+            "key": "concentration",
+            "value": 5.0,
+            "unit": "vol%",
+            "raw_text": "H2O2 0–5 vol%"
+          },
+          {
+            "key": "concentration",
+            "value": 2.5,
+            "unit": "M",
+            "raw_text": "L-tartaric acid 0.25–2.5 M"
+          },
+          {
+            "key": "pulp_density",
+            "value": "14–33 g/L",
+            "unit": null,
+            "raw_text": "pulp density 14–33 g/L"
+          },
+          {
+            "key": "temperature",
+            "value": 80.0,
+            "unit": "°C",
+            "raw_text": "temperature 40–80 °C"
+          },
+          {
+            "key": "time",
+            "value": 300.0,
+            "unit": "min",
+            "raw_text": "time up to 300 min"
+          },
+          {
+            "key": "agitation",
+            "value": 400.0,
+            "unit": null,
+            "raw_text": "stirring 400 rpm"
+          }
+        ],
+        "setting_condition": "H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "evidence_spans": [
+          "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively."
+        ]
+      }
+    }
+  },
+  {
+    "reason": "measurement_semantics_revision",
+    "measurement": {
+      "property": "activation_energy",
+      "value": 47.78,
+      "unit": "kJ/mol",
+      "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+      "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
+      "source_sample": null,
+      "analyte": "Ni",
+      "measured_entity": "Process_L_tartaric_acid_leaching",
+      "measurement_method": "Arrhenius equation",
+      "measurement_basis": "kinetic parameter for dissolution of the named metal, not a material output",
+      "archived_context": "second stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+      "conditions": null
+    },
+    "original_relation": {
+      "id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
+      "subject": "Process_L_tartaric_acid_leaching",
+      "predicate": "HAS_OUTPUT",
+      "object": "Material_Ni",
+      "subject_type": "Process",
+      "object_type": "Material",
+      "confidence": 0.8,
+      "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+      "source_name": "L-tartaric acid leaching",
+      "target_name": "Ni",
+      "properties": {
+        "property": "activation_energy",
+        "value": 47.78,
+        "unit": "kJ/mol",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "second stage",
+        "measurement_method": "Arrhenius equation",
+        "treatment_members": [],
+        "condition_keys": [
+          {
+            "key": "other",
+            "value": "second stage",
+            "unit": null,
+            "raw_text": "second stage"
+          }
+        ],
+        "condition_labels": [
+          "second stage"
+        ],
+        "condition": "second stage; H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "condition_ids": [
+          "COND_c6c9a2ff255e"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false,
+        "source_name": "L-tartaric acid leaching",
+        "target_name": "Ni",
+        "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+        "source": "text",
+        "setting_id": "setting:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:l-tartaric-acid-leaching-conditions",
+        "setting_binding_basis": "unique_process_setting",
+        "setting_stage_name": "L-tartaric acid leaching",
+        "setting_condition_keys": [
+          {
+            "key": "concentration",
+            "value": 5.0,
+            "unit": "vol%",
+            "raw_text": "H2O2 0–5 vol%"
+          },
+          {
+            "key": "concentration",
+            "value": 2.5,
+            "unit": "M",
+            "raw_text": "L-tartaric acid 0.25–2.5 M"
+          },
+          {
+            "key": "pulp_density",
+            "value": "14–33 g/L",
+            "unit": null,
+            "raw_text": "pulp density 14–33 g/L"
+          },
+          {
+            "key": "temperature",
+            "value": 80.0,
+            "unit": "°C",
+            "raw_text": "temperature 40–80 °C"
+          },
+          {
+            "key": "time",
+            "value": 300.0,
+            "unit": "min",
+            "raw_text": "time up to 300 min"
+          },
+          {
+            "key": "agitation",
+            "value": 400.0,
+            "unit": null,
+            "raw_text": "stirring 400 rpm"
+          }
+        ],
+        "setting_condition": "H2O2 0–5 vol%; L-tartaric acid 0.25–2.5 M; pulp density 14–33 g/L; temperature 40–80 °C; time up to 300 min; stirring 400 rpm",
+        "evidence_spans": [
+          "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively."
+        ]
+      }
+    }
+  }
+]

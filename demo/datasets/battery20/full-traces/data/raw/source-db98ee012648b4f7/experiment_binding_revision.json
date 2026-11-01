@@ -1,0 +1,84 @@
+{
+  "paper": "Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti",
+  "source_file": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/demo/ontoweee/datasets/battery20/updates/measurement-semantics-20261101/inputs/Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti/triples_final.txt",
+  "source_sha256": "8ec2f45e3bae67746048dafbe4163bc7c3d95b1d270e67eb5dedd2cf6456a337",
+  "transactions": [
+    {
+      "index": 7,
+      "original": {
+        "id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
+        "subject": "Product_lithium_ion_battery",
+        "predicate": "PROCESSED_BY",
+        "object": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
+        "subject_type": "Product",
+        "object_type": "Process",
+        "confidence": 0.8,
+        "evidence_span": "The Alicyclobacillus sp. as sulfur-oxidizing bacteria (SOB) and the Sulfobacillus sp. as iron-oxidizing bacteria (IOB) were utilized for bioleaching the spent LIBs in the form of mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v)",
+        "source_name": "lithium ion battery",
+        "target_name": "bioleaching of Co and Li from spent LIB powder",
+        "properties": {
+          "source_sample": "spent LIB powder",
+          "sample_state": "powdered physical form of the spent lithium ion battery",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "process_agent": "Alicyclobacillus sp. and Sulfobacillus sp. mixed culture",
+          "treatment_members": [
+            "Alicyclobacillus sp.",
+            "Sulfobacillus sp."
+          ],
+          "conditions": "mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v)",
+          "condition_keys": [
+            {
+              "key": "time",
+              "value": 30.0,
+              "unit": "d",
+              "raw_text": "mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v)"
+            }
+          ],
+          "condition_labels": [
+            "mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v)"
+          ],
+          "condition": "mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v)",
+          "condition_ids": [
+            "COND_46066c1f54f9"
+          ],
+          "raw_relation_type": "PROCESSED_BY",
+          "normalized_relation_type": "PROCESSED_BY",
+          "normalized_from_raw": false,
+          "source_name": "lithium ion battery",
+          "target_name": "bioleaching of Co and Li from spent LIB powder",
+          "evidence_span": "The Alicyclobacillus sp. as sulfur-oxidizing bacteria (SOB) and the Sulfobacillus sp. as iron-oxidizing bacteria (IOB) were utilized for bioleaching the spent LIBs in the form of mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v)",
+          "source": "text",
+          "evidence_spans": [
+            "The Alicyclobacillus sp. as sulfur-oxidizing bacteria (SOB) and the Sulfobacillus sp. as iron-oxidizing bacteria (IOB) were utilized for bioleaching the spent LIBs in the form of mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v)"
+          ]
+        }
+      },
+      "source_evidence": [
+        {
+          "file": "source/text.md",
+          "line": 39,
+          "quote": "The Alicyclobacillus sp. as sulfur-oxidizing bacteria (SOB) and the Sulfobacillus sp. as iron-oxidizing bacteria (IOB) were utilized for bioleaching the spent LIBs in the form of mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v) (higher dose of over 1.0% evidently inhibited the growth of both cells). The detailed procedures and methods about screen, culture, maintain, inoculum and identification of the SOB and IOB were described in the previous paper (Xin et al., 2011)."
+        },
+        {
+          "file": "source/text.md",
+          "line": 43,
+          "quote": "Bioleaching experiments were conducted according to the previous paper (Xin et al., 2009). Unless specifically stated, bioleaching media containing 4.0 g L ^-1 of mixed energy matters (sulfur and pyrite) was inoculated respectively with SOB and IOB as the mixed culture, followed by incubation at 30 \u0003C until the pH value dropped to ca 1.0 and the ORP value rose to ca 450 mV. At that time, the spent LIB powder was added into the media to a final concentration of 2% to initiate the bioleaching after its pH value was adjusted precisely to pH 1.0. Three pulp densities (1%, 2% and 4%) were set to examine bioleaching behavior of Co and Li when pulp density increased from 1% to 4%. Three doses of mixed energy substrates (2.0, 4.0 and 8.0 g L ^-1) were set to assess the feasibility of improving extraction of Co and Li by lifting energy matters dose. The pH value of the media was controlled at pH 2.0 during bioleaching by adding H2S04 to assess the possibility of suitable pH for cells growth to promote extraction of Co and Li (bioleaching dose was obtained by measured dose subtracted released one in blank flasks with addition of the same amount of exogenous H2S04). Three bioleaching temperatures (30, 35, and 40 ^∘C) were set to inspect the feasibility of rising temperature to improve performance. The suitable controls including cells-free media, pure H2S04 solution at pH 1.0, H2SO4 at t pH 1.0 + FeSO4 at 2.0 g L ^-1, H2S04 at pH 1.0 + Fe2 (SO4)3 at 2.0 g L ^-1 were run. During bioleaching, release dose of Co and Li, Fe ^2+ and Fe ^3+ dosage, pH, ORP and cell number were periodically monitored. All experiments were carried out in triplicates."
+        }
+      ],
+      "action": "retain_operation_evidence",
+      "operation_role": "microbial acclimation"
+    }
+  ],
+  "added_processes": [],
+  "removed_unreferenced_entities": [],
+  "view_counts": {
+    "triples": 1,
+    "filtered_triples": 1,
+    "relations": 1,
+    "evidence_relations": 1
+  },
+  "original_final_count": 27,
+  "corrected_final_count": 26
+}

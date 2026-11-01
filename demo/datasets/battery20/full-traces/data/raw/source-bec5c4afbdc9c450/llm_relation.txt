@@ -1,0 +1,1950 @@
+[
+  {
+    "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_ABSTRACT_9bc930bd",
+    "section_name": "ABSTRACT",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_1. Introduction_52f572c6",
+    "section_name": "1. Introduction",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_2.1. Materials and reagents_6014fba9",
+    "section_name": "2.1. Materials and reagents",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 3,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Component_cathode_material",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Component_cathode_material",
+          "target_name": "cathode material",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The cathode material was separated from aluminum foil by using concentrated N-methyl pyrrolidone (NMP).",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs",
+            "sample_state": "spent/discharged end-of-life state",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "product_scope": {
+              "product_label": "BL-5CA",
+              "evidence_text": "The spent LIBs ofBL-5CA (Nokia mobile) series used in this work were collected in the local market."
+            },
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "cathode material",
+            "evidence_span": "The cathode material was separated from aluminum foil by using concentrated N-methyl pyrrolidone (NMP).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Component_aluminum_foil",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Component_aluminum_foil",
+          "target_name": "aluminum foil",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The cathode material was separated from aluminum foil by using concentrated N-methyl pyrrolidone (NMP).",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs",
+            "sample_state": "spent/discharged end-of-life state",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "product_scope": {
+              "product_label": "BL-5CA",
+              "evidence_text": "The spent LIBs ofBL-5CA (Nokia mobile) series used in this work were collected in the local market."
+            },
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "aluminum foil",
+            "evidence_span": "The cathode material was separated from aluminum foil by using concentrated N-methyl pyrrolidone (NMP).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_material_PROCESSED_BY_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_id": "text_Component_cathode_material",
+          "source_name": "cathode material",
+          "target_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "target_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The leaching reagents used in this work consisted of glycine and ascorbic acid which were mild organic acids.",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "glycine and ascorbic acid",
+            "treatment_members": [
+              "glycine",
+              "ascorbic acid"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "cathode material",
+            "target_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "evidence_span": "The leaching reagents used in this work consisted of glycine and ascorbic acid which were mild organic acids.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_2.2.1. Dismantling and separation_b7a63370",
+    "section_name": "2.2.1. Dismantling and separation",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 9,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Component_cathode_material",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Component_cathode_material",
+          "target_name": "cathode material",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "the spent LIBs were discharged completely and dismantled to separate the cathode and anode materials coated on Al- and Cu-foil, respectively.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs",
+            "sample_state": "spent/discharged end-of-life state",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "cathode material",
+            "evidence_span": "the spent LIBs were discharged completely and dismantled to separate the cathode and anode materials coated on Al- and Cu-foil, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Component_anode",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Component_anode",
+          "target_name": "anode",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "the spent LIBs were discharged completely and dismantled to separate the cathode and anode materials coated on Al- and Cu-foil, respectively.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs",
+            "sample_state": "spent/discharged end-of-life state",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "anode",
+            "evidence_span": "the spent LIBs were discharged completely and dismantled to separate the cathode and anode materials coated on Al- and Cu-foil, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_material_CONTAINS_text_Component_Al_foil",
+          "source_id": "text_Component_cathode_material",
+          "source_name": "cathode material",
+          "target_id": "text_Component_Al_foil",
+          "target_name": "Al foil",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "the cathode and anode materials coated on Al- and Cu-foil, respectively.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode material",
+            "target_name": "Al foil",
+            "evidence_span": "the cathode and anode materials coated on Al- and Cu-foil, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_anode_CONTAINS_text_Component_Cu_foil",
+          "source_id": "text_Component_anode",
+          "source_name": "anode",
+          "target_id": "text_Component_Cu_foil",
+          "target_name": "Cu foil",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "the cathode and anode materials coated on Al- and Cu-foil, respectively.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "anode",
+            "target_name": "Cu foil",
+            "evidence_span": "the cathode and anode materials coated on Al- and Cu-foil, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_material_PROCESSED_BY_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_id": "text_Component_cathode_material",
+          "source_name": "cathode material",
+          "target_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "target_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "the oxide thus obtained was found to be LiCoO2 based on XRD and SEM/EDX analysis.",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "evidence_only",
+            "process_role": "unclear",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "cathode material",
+            "target_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "evidence_span": "the oxide thus obtained was found to be LiCoO2 based on XRD and SEM/EDX analysis.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_material_CONTAINS_text_Material_polyvinylidene_fluoride",
+          "source_id": "text_Component_cathode_material",
+          "source_name": "cathode material",
+          "target_id": "text_Material_polyvinylidene_fluoride",
+          "target_name": "polyvinylidene fluoride",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "heated at 700 ^∘C for 2 h to burn off the organics such as carbon and polyvinylidene fluoride.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode material",
+            "target_name": "polyvinylidene fluoride",
+            "evidence_span": "heated at 700 ^∘C for 2 h to burn off the organics such as carbon and polyvinylidene fluoride.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_material_CONTAINS_text_Material_carbon",
+          "source_id": "text_Component_cathode_material",
+          "source_name": "cathode material",
+          "target_id": "text_Material_carbon",
+          "target_name": "C",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "heated at 700 ^∘C for 2 h to burn off the organics such as carbon and polyvinylidene fluoride.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode material",
+            "target_name": "C",
+            "evidence_span": "heated at 700 ^∘C for 2 h to burn off the organics such as carbon and polyvinylidene fluoride.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_material_CONTAINS_text_Material_acetylene_black",
+          "source_id": "text_Component_cathode_material",
+          "source_name": "cathode material",
+          "target_id": "text_Material_acetylene_black",
+          "target_name": "acetylene black",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The origin for such carbon might be from the acetylene black used to ensure the electronic conductivity in the cathodes.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode material",
+            "target_name": "acetylene black",
+            "evidence_span": "The origin for such carbon might be from the acetylene black used to ensure the electronic conductivity in the cathodes.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_LiCoO_CONTAINS_text_Material_carbon",
+          "source_id": "text_Material_LiCoO",
+          "source_name": "LiCoO",
+          "target_id": "text_Material_carbon",
+          "target_name": "C",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The rock salt structured LiCoO was found to contain residual carbon, 5–10 wt.%, due to organic burn off.",
+          "properties": {
+            "property": "composition",
+            "value": "5-10",
+            "unit": "wt.%",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO",
+            "target_name": "C",
+            "evidence_span": "The rock salt structured LiCoO was found to contain residual carbon, 5–10 wt.%, due to organic burn off.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_2.2.2. Dissolution of LiCoO2 in mixture of glycine and ascorbic acid_ae956fe1",
+    "section_name": "2.2.2. Dissolution of LiCoO2 in mixture of glycine and ascorbic acid",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 1,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_volume_100_0_ml",
+          "name": "volume",
+          "type": "volume",
+          "value": 100.0,
+          "unit": "mL",
+          "source": {
+            "doc_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+            "title": "Recovery of cobalt as cobalt oxalate from spent lithium ion batteries by using glycine as leaching agent",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_2.2.2. Dissolution of LiCoO2 in mixture of glycine and ascorbic acid_ae956fe1",
+            "text": "## 2.2.2. Dissolution of LiCoO2 in mixture of glycine and ascorbic acid\nThe above cathode material (LiCoO2, 0.2: g) was subjected for chemical dissolution using mild organic acids, an aqueous mixture of glycine and ascorbic acid were taken in a three necked roundbottomed flask with volume of100 mL and the flask was placed in a water bath to control the reaction temperature during the leaching. The flask was fitted with vapor condenser and a magnetic stirrer. In the leaching process, the concentration of tartaric acid was varied (0.1–0.5 M) by keeping ascorbic acid concentration constant (0.02 M). After 6 h leaching at 80 ^∘𝖢,, the solution and insoluble residue were separated by filtration by using (0.2 mm) membrane filter paper and washed with distilled water, yielding a pink filtrate and a black residue.",
+            "parent_chunk_id": null,
+            "section_name": "2.2.2. Dissolution of LiCoO2 in mixture of glycine and ascorbic acid",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 8339,
+            "position_end": 9157,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_2.2.2. Dissolution of LiCoO2 in mixture of glycine and ascorbic acid_ae956fe1",
+              "doc_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+              "title": "Recovery of cobalt as cobalt oxalate from spent lithium ion batteries by using glycine as leaching agent",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent/text.md",
+              "section_name": "2.2.2. Dissolution of LiCoO2 in mixture of glycine and ascorbic acid",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 8339,
+              "position_end": 9157,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Component_cathode_material_PROCESSED_BY_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_id": "text_Component_cathode_material",
+          "source_name": "cathode material",
+          "target_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "target_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The above cathode material (LiCoO2, 0.2: g) was subjected for chemical dissolution using mild organic acids, an aqueous mixture of glycine and ascorbic acid were taken in a three necked roundbottomed flask with volume of100 mL and the flask was placed in a water bath to control the reaction temperature during the leaching.",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "aqueous mixture of glycine and ascorbic acid, 100 mL, water bath, vapor condenser, magnetic stirrer",
+            "process_agent": "glycine and ascorbic acid",
+            "treatment_members": [
+              "glycine",
+              "ascorbic acid"
+            ],
+            "source_sample": "cathode material (LiCoO2, 0.2 g)",
+            "condition_keys": [
+              {
+                "key": "volume",
+                "value": 100.0,
+                "unit": "mL",
+                "raw_text": "aqueous mixture of glycine and ascorbic acid, 100 mL, water bath, vapor condenser, magnetic stirrer"
+              }
+            ],
+            "condition_labels": [
+              "aqueous mixture of glycine and ascorbic acid, 100 mL, water bath, vapor condenser, magnetic stirrer"
+            ],
+            "condition": "aqueous mixture of glycine and ascorbic acid, 100 mL, water bath, vapor condenser, magnetic stirrer",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_2_2_2_Dissolution_of_LiCoO2_in_mixture_of_glycine_and_ascorbic_acid_ae956fe1__cond_volume_100_0_ml"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "cathode material",
+            "target_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "evidence_span": "The above cathode material (LiCoO2, 0.2: g) was subjected for chemical dissolution using mild organic acids, an aqueous mixture of glycine and ascorbic acid were taken in a three necked roundbottomed flask with volume of100 mL and the flask was placed in a water bath to control the reaction temperature during the leaching.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_2.3. Analytical methods_06860d57",
+    "section_name": "2.3. Analytical methods",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.1. Characterization of the LiCoO2 in spent LIBs_7812e725",
+    "section_name": "3.1. Characterization of the LiCoO2 in spent LIBs",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 4,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_LiCoO2",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Material_LiCoO2",
+          "target_name": "LiCoO2",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "the main compositions of this spent cathode material are LiCoO2 and CoO",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs",
+            "sample_state": "spent/discharged end-of-life state",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "LiCoO2",
+            "evidence_span": "the main compositions of this spent cathode material are LiCoO2 and CoO",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_CoO",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Material_CoO",
+          "target_name": "CoO",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "the main compositions of this spent cathode material are LiCoO2 and CoO",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs",
+            "sample_state": "spent/discharged end-of-life state",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "CoO",
+            "evidence_span": "the main compositions of this spent cathode material are LiCoO2 and CoO",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_carbon",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Material_carbon",
+          "target_name": "C",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "SEM/EDX analysis confirms the residual carbon present along with this cathode material due to organic burn off",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs",
+            "sample_state": "spent/discharged end-of-life state",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "C",
+            "evidence_span": "SEM/EDX analysis confirms the residual carbon present along with this cathode material due to organic burn off",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_acetylene_black",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Material_acetylene_black",
+          "target_name": "acetylene black",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The source for such carbon might be from the acetylene black used to make sure the electronic conductivity in the cathodes",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs",
+            "sample_state": "spent/discharged end-of-life state",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "acetylene black",
+            "evidence_span": "The source for such carbon might be from the acetylene black used to make sure the electronic conductivity in the cathodes",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.2. Effect of glycine concentration on leaching_4a2b60ca",
+    "section_name": "3.2. Effect of glycine concentration on leaching",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 2,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_temperature_80_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 80.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+            "title": "Recovery of cobalt as cobalt oxalate from spent lithium ion batteries by using glycine as leaching agent",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.2. Effect of glycine concentration on leaching_4a2b60ca",
+            "text": "## 3.2. Effect of glycine concentration on leaching\nThe effect of glycine concentration on the leaching efficiency of waste LiCoO2 have been studied by varying concentration from\n0.1 M to 0.5 M at temperature of 80 ^∘C for 6 h. The ascorbic acid (reductant) concentration used is 0.02 M and was kept constant. Fig. 4 shows the concentration dependency for leaching cobalt. The leaching efficiency of Co increases from 70% to 95% as the glycine concentration increases from 0.1 to 0.5 M. Therefore, here we used 0.5 M glycine with 0.02 M ascorbic acid for further leaching studies.\nThere are many studies on organic acid leaching. They have obtained more than 90% leaching of Co and about 100% leaching of Li in about 90–120 min by using 1.25 M citric acid [30], 1.5 M DL-malic acid [19], 1.0 M oxalic acid [31] along with H O as reducing agent. In all these studies they have used more concentrations to dissolve the metal ions completely, but in our case as reported in our previous study we have used mild concentrations; 0.1 M citric acid gives 80%, 0.4 M tartaric acid gives more than 90%, 0.1 M iminodiacetic acid gives 91% and 0.1 M maleic acid gives 97% Co and nearly 100% Li ions dissolution in the presence of 0.02 M ascorbic acid [20,24,25].",
+            "parent_chunk_id": null,
+            "section_name": "3.2. Effect of glycine concentration on leaching",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 10858,
+            "position_end": 12112,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.2. Effect of glycine concentration on leaching_4a2b60ca",
+              "doc_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+              "title": "Recovery of cobalt as cobalt oxalate from spent lithium ion batteries by using glycine as leaching agent",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent/text.md",
+              "section_name": "3.2. Effect of glycine concentration on leaching",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 10858,
+              "position_end": 12112,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Material_LiCoO2_PROCESSED_BY_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_id": "text_Material_LiCoO2",
+          "source_name": "LiCoO2",
+          "target_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "target_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The effect of glycine concentration on the leaching efficiency of waste LiCoO2 have been studied by varying concentration from 0.1 M to 0.5 M at temperature of 80 ^∘C for 6 h.",
+          "properties": {
+            "source_sample": "waste LiCoO2",
+            "sample_state": "waste form of LiCoO2 used as leaching feed",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "glycine concentration 0.1 M to 0.5 M, 80 °C, 6 h, 0.02 M ascorbic acid",
+            "process_agent": "glycine and ascorbic acid",
+            "treatment_members": [
+              "glycine",
+              "ascorbic acid"
+            ],
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 80.0,
+                "unit": "°C",
+                "raw_text": "glycine concentration 0.1 M to 0.5 M, 80 °C, 6 h, 0.02 M ascorbic acid"
+              }
+            ],
+            "condition_labels": [
+              "glycine concentration 0.1 M to 0.5 M, 80 °C, 6 h, 0.02 M ascorbic acid"
+            ],
+            "condition": "glycine concentration 0.1 M to 0.5 M, 80 °C, 6 h, 0.02 M ascorbic acid",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_3_2_Effect_of_glycine_concentration_on_leaching_4a2b60ca__cond_temperature_80_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2",
+            "target_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "evidence_span": "The effect of glycine concentration on the leaching efficiency of waste LiCoO2 have been studied by varying concentration from 0.1 M to 0.5 M at temperature of 80 ^∘C for 6 h.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching efficiency of Co increases from 70% to 95% as the glycine concentration increases from 0.1 to 0.5 M.",
+          "properties": {
+            "property": "leaching",
+            "value": 95,
+            "unit": "%",
+            "secondary_value": 70,
+            "secondary_unit": "%",
+            "source_sample": "waste LiCoO2",
+            "sample_state": "waste form of LiCoO2 used as leaching feed",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "glycine concentration 0.5 M, 80 °C, 6 h, 0.02 M ascorbic acid",
+            "process_agent": "glycine and ascorbic acid",
+            "treatment_members": [
+              "glycine",
+              "ascorbic acid"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 80.0,
+                "unit": "°C",
+                "raw_text": "glycine concentration 0.5 M, 80 °C, 6 h, 0.02 M ascorbic acid"
+              }
+            ],
+            "condition_labels": [
+              "glycine concentration 0.5 M, 80 °C, 6 h, 0.02 M ascorbic acid"
+            ],
+            "condition": "glycine concentration 0.5 M, 80 °C, 6 h, 0.02 M ascorbic acid",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_3_2_Effect_of_glycine_concentration_on_leaching_4a2b60ca__cond_temperature_80_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "Co",
+            "evidence_span": "The leaching efficiency of Co increases from 70% to 95% as the glycine concentration increases from 0.1 to 0.5 M.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.3. Leaching with glycine and ascorbic acid_f95cd361",
+    "section_name": "3.3. Leaching with glycine and ascorbic acid",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 6,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_temperature_80_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 80.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+            "title": "Recovery of cobalt as cobalt oxalate from spent lithium ion batteries by using glycine as leaching agent",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.3. Leaching with glycine and ascorbic acid_f95cd361",
+            "text": "## 3.3. Leaching with glycine and ascorbic acid\nFig. 5 shows the percentage of Co ions released from LiCoO in glycine and ascorbic acid (0.02 M) mixture at 80 \u0001C for 6 h. Here, in leaching of waste LiCoO we have tried the dissolution for stoichiometric glycine and ascorbic acid ratio with respect to the cathode material used. We used 0.02 M metal ion worth of LiCoO2 sample and was added to 100 mL water containing 0.1 - 0.5 N glycine and 0.02 M metal ion worth of ascorbic acid. This is because of the availability of stoichiometric amounts of H ^+ ions from these reagents during dissolution. However, it was observed that rate of dissolution increases with increase in glycine concentration by keeping ascorbic acid concentration constant. We can observe about 70, 75, 86, 93 and 95% of Co ions dissolution takes place for 0.1, 0.2, 0.3, 0.4 and 0.5 M respectively. When the concentration of glycine was 0.5 M, nearly all the Co ions dissolved from LiCoO2. As the glycine concentration increases from 0.1 to 0.5 M, the leaching efficiency also increases. During the leaching process, the lattice gets disturbed by the reduction of Co(III) to Co (II). Once the lattice is disturbed, the surrounding Co and Li ions are impelled from the LiCoO2 by hydrogen ion which leads to the disturbance in the lattice [20]. Once the lattice gets disturbed and leached to the solution, both Co and Li ions are expected as glycine complexes.\nDuring the leaching, 0.02 M of ascorbic acid was added along with glycine to enhance the leaching reaction by reductive– complexing mechanism. On adding 0.02 M ascorbic acid, nearly all the Co(III) in LiCoO2 was further reduced to a soluble Co(II) which helps in complete dissolution. Previous studies of Li et al. [18,19,23,24,30] have clearly shown that the leaching efficiency was increased by adding reducing agent and also a similar behavior was observed in our previous reports [24,25]. Thus, it is advantageous to have a reducing agent along with glycine.",
+            "parent_chunk_id": null,
+            "section_name": "3.3. Leaching with glycine and ascorbic acid",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 12112,
+            "position_end": 14107,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.3. Leaching with glycine and ascorbic acid_f95cd361",
+              "doc_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+              "title": "Recovery of cobalt as cobalt oxalate from spent lithium ion batteries by using glycine as leaching agent",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent/text.md",
+              "section_name": "3.3. Leaching with glycine and ascorbic acid",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 12112,
+              "position_end": 14107,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Material_LiCoO2_PROCESSED_BY_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_id": "text_Material_LiCoO2",
+          "source_name": "LiCoO2",
+          "target_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "target_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Fig. 5 shows the percentage of Co ions released from LiCoO in glycine and ascorbic acid (0.02 M) mixture at 80 C for 6 h.",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "80 C for 6 h",
+            "process_agent": "glycine and ascorbic acid (0.02 M) mixture",
+            "treatment_members": [
+              "glycine",
+              "ascorbic acid"
+            ],
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 80.0,
+                "unit": "°C",
+                "raw_text": "80 C for 6 h"
+              }
+            ],
+            "condition_labels": [
+              "80 C for 6 h"
+            ],
+            "condition": "80 C for 6 h",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_3_3_Leaching_with_glycine_and_ascorbic_acid_f95cd361__cond_temperature_80_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2",
+            "target_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "evidence_span": "Fig. 5 shows the percentage of Co ions released from LiCoO in glycine and ascorbic acid (0.02 M) mixture at 80 C for 6 h.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "We can observe about 70, 75, 86, 93 and 95% of Co ions dissolution takes place for 0.1, 0.2, 0.3, 0.4 and 0.5 M respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 70,
+            "unit": "%",
+            "process_agent": "glycine",
+            "conditions": "0.1 M glycine, 0.02 M ascorbic acid, 80 C for 6 h",
+            "treatment_members": [
+              "glycine",
+              "ascorbic acid"
+            ],
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 80.0,
+                "unit": "°C",
+                "raw_text": "0.1 M glycine, 0.02 M ascorbic acid, 80 C for 6 h"
+              }
+            ],
+            "condition_labels": [
+              "0.1 M glycine, 0.02 M ascorbic acid, 80 C for 6 h"
+            ],
+            "condition": "0.1 M glycine, 0.02 M ascorbic acid, 80 C for 6 h",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_3_3_Leaching_with_glycine_and_ascorbic_acid_f95cd361__cond_temperature_80_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "Co",
+            "evidence_span": "We can observe about 70, 75, 86, 93 and 95% of Co ions dissolution takes place for 0.1, 0.2, 0.3, 0.4 and 0.5 M respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "We can observe about 70, 75, 86, 93 and 95% of Co ions dissolution takes place for 0.1, 0.2, 0.3, 0.4 and 0.5 M respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 75,
+            "unit": "%",
+            "process_agent": "glycine",
+            "conditions": "0.2 M glycine, 0.02 M ascorbic acid, 80 C for 6 h",
+            "treatment_members": [
+              "glycine",
+              "ascorbic acid"
+            ],
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 80.0,
+                "unit": "°C",
+                "raw_text": "0.2 M glycine, 0.02 M ascorbic acid, 80 C for 6 h"
+              }
+            ],
+            "condition_labels": [
+              "0.2 M glycine, 0.02 M ascorbic acid, 80 C for 6 h"
+            ],
+            "condition": "0.2 M glycine, 0.02 M ascorbic acid, 80 C for 6 h",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_3_3_Leaching_with_glycine_and_ascorbic_acid_f95cd361__cond_temperature_80_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "Co",
+            "evidence_span": "We can observe about 70, 75, 86, 93 and 95% of Co ions dissolution takes place for 0.1, 0.2, 0.3, 0.4 and 0.5 M respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "We can observe about 70, 75, 86, 93 and 95% of Co ions dissolution takes place for 0.1, 0.2, 0.3, 0.4 and 0.5 M respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 86,
+            "unit": "%",
+            "process_agent": "glycine",
+            "conditions": "0.3 M glycine, 0.02 M ascorbic acid, 80 C for 6 h",
+            "treatment_members": [
+              "glycine",
+              "ascorbic acid"
+            ],
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 80.0,
+                "unit": "°C",
+                "raw_text": "0.3 M glycine, 0.02 M ascorbic acid, 80 C for 6 h"
+              }
+            ],
+            "condition_labels": [
+              "0.3 M glycine, 0.02 M ascorbic acid, 80 C for 6 h"
+            ],
+            "condition": "0.3 M glycine, 0.02 M ascorbic acid, 80 C for 6 h",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_3_3_Leaching_with_glycine_and_ascorbic_acid_f95cd361__cond_temperature_80_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "Co",
+            "evidence_span": "We can observe about 70, 75, 86, 93 and 95% of Co ions dissolution takes place for 0.1, 0.2, 0.3, 0.4 and 0.5 M respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "We can observe about 70, 75, 86, 93 and 95% of Co ions dissolution takes place for 0.1, 0.2, 0.3, 0.4 and 0.5 M respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 93,
+            "unit": "%",
+            "process_agent": "glycine",
+            "conditions": "0.4 M glycine, 0.02 M ascorbic acid, 80 C for 6 h",
+            "treatment_members": [
+              "glycine",
+              "ascorbic acid"
+            ],
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 80.0,
+                "unit": "°C",
+                "raw_text": "0.4 M glycine, 0.02 M ascorbic acid, 80 C for 6 h"
+              }
+            ],
+            "condition_labels": [
+              "0.4 M glycine, 0.02 M ascorbic acid, 80 C for 6 h"
+            ],
+            "condition": "0.4 M glycine, 0.02 M ascorbic acid, 80 C for 6 h",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_3_3_Leaching_with_glycine_and_ascorbic_acid_f95cd361__cond_temperature_80_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "Co",
+            "evidence_span": "We can observe about 70, 75, 86, 93 and 95% of Co ions dissolution takes place for 0.1, 0.2, 0.3, 0.4 and 0.5 M respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "We can observe about 70, 75, 86, 93 and 95% of Co ions dissolution takes place for 0.1, 0.2, 0.3, 0.4 and 0.5 M respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 95,
+            "unit": "%",
+            "process_agent": "glycine",
+            "conditions": "0.5 M glycine, 0.02 M ascorbic acid, 80 C for 6 h",
+            "treatment_members": [
+              "glycine",
+              "ascorbic acid"
+            ],
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 80.0,
+                "unit": "°C",
+                "raw_text": "0.5 M glycine, 0.02 M ascorbic acid, 80 C for 6 h"
+              }
+            ],
+            "condition_labels": [
+              "0.5 M glycine, 0.02 M ascorbic acid, 80 C for 6 h"
+            ],
+            "condition": "0.5 M glycine, 0.02 M ascorbic acid, 80 C for 6 h",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_3_3_Leaching_with_glycine_and_ascorbic_acid_f95cd361__cond_temperature_80_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "Co",
+            "evidence_span": "We can observe about 70, 75, 86, 93 and 95% of Co ions dissolution takes place for 0.1, 0.2, 0.3, 0.4 and 0.5 M respectively.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.4. Effect of temperature and time on the leaching_5afe5238",
+    "section_name": "3.4. Effect of temperature and time on the leaching",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 4,
+      "condition_count": 2,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_other_higher_reaction_temperature",
+          "name": "other",
+          "type": "other",
+          "value": "higher reaction temperature",
+          "unit": null,
+          "source": {
+            "doc_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+            "title": "Recovery of cobalt as cobalt oxalate from spent lithium ion batteries by using glycine as leaching agent",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.4. Effect of temperature and time on the leaching_5afe5238",
+            "text": "## 3.4. Effect of temperature and time on the leaching\nThe energy consumption of leaching will be a function of the working temperature and time. The effect of temperature and time on the leaching efficiency was studied by fixing the concentration of ascorbic acid (0.02 M) with glycine (0.1–0.5 M). There are many studies have shown the better leaching capacity for about 80 - 90 ^∘𝖢,, on the basis of these studies we have carried out leaching at 80 \u0001C [15,21,31]. Higher reaction temperature enhances the metal leaching, is due to the endothermicity of leachant dissociation, which translates to greater acid dissolution and increased reaction rates at elevated temperatures [19]. Above 90 ^∘ C, recovery of metal ions decreases because the acids begin to volatilize and the leachant solution becomes less.",
+            "parent_chunk_id": null,
+            "section_name": "3.4. Effect of temperature and time on the leaching",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 14107,
+            "position_end": 14917,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.4. Effect of temperature and time on the leaching_5afe5238",
+              "doc_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+              "title": "Recovery of cobalt as cobalt oxalate from spent lithium ion batteries by using glycine as leaching agent",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent/text.md",
+              "section_name": "3.4. Effect of temperature and time on the leaching",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 14107,
+              "position_end": 14917,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_temperature_90_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 90.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+            "title": "Recovery of cobalt as cobalt oxalate from spent lithium ion batteries by using glycine as leaching agent",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.4. Effect of temperature and time on the leaching_5afe5238",
+            "text": "## 3.4. Effect of temperature and time on the leaching\nThe energy consumption of leaching will be a function of the working temperature and time. The effect of temperature and time on the leaching efficiency was studied by fixing the concentration of ascorbic acid (0.02 M) with glycine (0.1–0.5 M). There are many studies have shown the better leaching capacity for about 80 - 90 ^∘𝖢,, on the basis of these studies we have carried out leaching at 80 \u0001C [15,21,31]. Higher reaction temperature enhances the metal leaching, is due to the endothermicity of leachant dissociation, which translates to greater acid dissolution and increased reaction rates at elevated temperatures [19]. Above 90 ^∘ C, recovery of metal ions decreases because the acids begin to volatilize and the leachant solution becomes less.",
+            "parent_chunk_id": null,
+            "section_name": "3.4. Effect of temperature and time on the leaching",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 14107,
+            "position_end": 14917,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.4. Effect of temperature and time on the leaching_5afe5238",
+              "doc_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+              "title": "Recovery of cobalt as cobalt oxalate from spent lithium ion batteries by using glycine as leaching agent",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent/text.md",
+              "section_name": "3.4. Effect of temperature and time on the leaching",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 14107,
+              "position_end": 14917,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Higher reaction temperature enhances the metal leaching, is due to the endothermicity of leachant dissociation, which translates to greater acid dissolution and increased reaction rates at elevated temperatures [19].",
+          "properties": {
+            "property": "leaching",
+            "value": "increased",
+            "study_scope": "background",
+            "graph_status": "evidence_only",
+            "process_role": "main_process",
+            "conditions": "higher reaction temperature",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "higher reaction temperature",
+                "unit": null,
+                "raw_text": "higher reaction temperature"
+              }
+            ],
+            "condition_labels": [
+              "higher reaction temperature"
+            ],
+            "condition": "higher reaction temperature",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_3_4_Effect_of_temperature_and_time_on_the_leaching_5afe5238__cond_other_higher_reaction_temperature"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "Li",
+            "evidence_span": "Higher reaction temperature enhances the metal leaching, is due to the endothermicity of leachant dissociation, which translates to greater acid dissolution and increased reaction rates at elevated temperatures [19].",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Higher reaction temperature enhances the metal leaching, is due to the endothermicity of leachant dissociation, which translates to greater acid dissolution and increased reaction rates at elevated temperatures [19].",
+          "properties": {
+            "property": "leaching",
+            "value": "increased",
+            "study_scope": "background",
+            "graph_status": "evidence_only",
+            "process_role": "main_process",
+            "conditions": "higher reaction temperature",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "higher reaction temperature",
+                "unit": null,
+                "raw_text": "higher reaction temperature"
+              }
+            ],
+            "condition_labels": [
+              "higher reaction temperature"
+            ],
+            "condition": "higher reaction temperature",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_3_4_Effect_of_temperature_and_time_on_the_leaching_5afe5238__cond_other_higher_reaction_temperature"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "Co",
+            "evidence_span": "Higher reaction temperature enhances the metal leaching, is due to the endothermicity of leachant dissociation, which translates to greater acid dissolution and increased reaction rates at elevated temperatures [19].",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Above 90 ^∘ C, recovery of metal ions decreases because the acids begin to volatilize and the leachant solution becomes less.",
+          "properties": {
+            "property": "recovery",
+            "value": "decreases",
+            "study_scope": "background",
+            "graph_status": "evidence_only",
+            "process_role": "main_process",
+            "conditions": "above 90 °C",
+            "treatment_members": [],
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 90.0,
+                "unit": "°C",
+                "raw_text": "above 90 °C"
+              }
+            ],
+            "condition_labels": [
+              "above 90 °C"
+            ],
+            "condition": "above 90 °C",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_3_4_Effect_of_temperature_and_time_on_the_leaching_5afe5238__cond_temperature_90_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "Li",
+            "evidence_span": "Above 90 ^∘ C, recovery of metal ions decreases because the acids begin to volatilize and the leachant solution becomes less.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Above 90 ^∘ C, recovery of metal ions decreases because the acids begin to volatilize and the leachant solution becomes less.",
+          "properties": {
+            "property": "recovery",
+            "value": "decreases",
+            "study_scope": "background",
+            "graph_status": "evidence_only",
+            "process_role": "main_process",
+            "conditions": "above 90 °C",
+            "treatment_members": [],
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 90.0,
+                "unit": "°C",
+                "raw_text": "above 90 °C"
+              }
+            ],
+            "condition_labels": [
+              "above 90 °C"
+            ],
+            "condition": "above 90 °C",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_3_4_Effect_of_temperature_and_time_on_the_leaching_5afe5238__cond_temperature_90_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "Co",
+            "evidence_span": "Above 90 ^∘ C, recovery of metal ions decreases because the acids begin to volatilize and the leachant solution becomes less.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.5. Complexation and reduction of cobalt_b09c0ddd",
+    "section_name": "3.5. Complexation and reduction of cobalt",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 2,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_Co_II__glycine",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_Co_II__glycine",
+          "target_name": "Co(II)–glycine",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The figure clearly indicates the reduction behaviour of Co(III)–glycine to Co(II)– glycine by ascorbic acid.",
+          "properties": {
+            "output_role": "generated_material",
+            "process_agent": "ascorbic acid",
+            "treatment_members": [
+              "ascorbic acid"
+            ],
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "Co(II)–glycine",
+            "evidence_span": "The figure clearly indicates the reduction behaviour of Co(III)–glycine to Co(II)– glycine by ascorbic acid.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_Co_II_",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_Co_II_",
+          "target_name": "Co(II)",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "In presence of ascorbic acid, the peak of Co(III)–glycine get reduced due to the reduction of Co(III)– to Co(II), which helps in making the reaction easy [32–34].",
+          "properties": {
+            "output_role": "generated_material",
+            "process_agent": "ascorbic acid",
+            "treatment_members": [
+              "ascorbic acid"
+            ],
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "Co(II)",
+            "evidence_span": "In presence of ascorbic acid, the peak of Co(III)–glycine get reduced due to the reduction of Co(III)– to Co(II), which helps in making the reaction easy [32–34].",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.6. Recovery of cobalt as cobalt oxalate_38ee07fa",
+    "section_name": "3.6. Recovery of cobalt as cobalt oxalate",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 3,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_temperature_room_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": "room",
+          "unit": "°C",
+          "source": {
+            "doc_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+            "title": "Recovery of cobalt as cobalt oxalate from spent lithium ion batteries by using glycine as leaching agent",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.6. Recovery of cobalt as cobalt oxalate_38ee07fa",
+            "text": "## 3.6. Recovery of cobalt as cobalt oxalate\nAfter 6 h of dissolution, on adding oxalic acid to the filtrate, Co (II)–glycine ions were precipitated as Co(II)–oxalate at room temperature immediately. The solid Co(II)–oxalate formed here was separated easily by filtration and washed with excess deionized water, dried in an oven. There was no Co remained in the filtrate. Therefore, a complete recovery of Co is achieved here. Fig. 7 shows the XRD pattern and Fig. 8 shows the FTIR spectrum of this solid powder sample. The XRD pattern of solid residues was confirmed to be well crystallized orthorhombic structured Co(II)– oxalate with space group of Cccm (JCPDS file: 25-0250) [15,20,31]. The FTIR band approximately3340 cm ^-1 has been assigned to O H stretching vibration and the band approximately1710 cm ^-1 has been assigned to CO stretching. The two peaks around 1310 cm\u00051 and 1200 cm ^-1 are due to the presence of carbonyl group. The peak around 966 cm ^-1 could be ascribed to double bond stretching vibration of recovered compounds. The spectrum indicates O H group of the molecular water and the carbonyl group double bond group present in Co(II)– oxalate. These values are similar to the previous reports [20,21]. This cobalt oxalate be used as a Co precursor in preparing the LiCoO2 cathode material",
+            "parent_chunk_id": null,
+            "section_name": "3.6. Recovery of cobalt as cobalt oxalate",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 16880,
+            "position_end": 18195,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_3.6. Recovery of cobalt as cobalt oxalate_38ee07fa",
+              "doc_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+              "title": "Recovery of cobalt as cobalt oxalate from spent lithium ion batteries by using glycine as leaching agent",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent/text.md",
+              "section_name": "3.6. Recovery of cobalt as cobalt oxalate",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 16880,
+              "position_end": 18195,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Material_LiCoO2_PROCESSED_BY_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_id": "text_Material_LiCoO2",
+          "source_name": "LiCoO2",
+          "target_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "target_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "After 6 h of dissolution, on adding oxalic acid to the filtrate, Co (II)–glycine ions were precipitated as Co(II)–oxalate at room temperature immediately.",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "6 h dissolution, room temperature",
+            "extra_qualifiers": "dissolution in glycine and ascorbic acid",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": "room",
+                "unit": "°C",
+                "raw_text": "6 h dissolution, room temperature"
+              }
+            ],
+            "condition_labels": [
+              "6 h dissolution, room temperature"
+            ],
+            "condition": "6 h dissolution, room temperature",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_3_6_Recovery_of_cobalt_as_cobalt_oxalate_38ee07fa__cond_temperature_room_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2",
+            "target_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "evidence_span": "After 6 h of dissolution, on adding oxalic acid to the filtrate, Co (II)–glycine ions were precipitated as Co(II)–oxalate at room temperature immediately.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_cobalt_oxalate",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_cobalt_oxalate",
+          "target_name": "cobalt oxalate",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "After 6 h of dissolution, on adding oxalic acid to the filtrate, Co (II)–glycine ions were precipitated as Co(II)–oxalate at room temperature immediately.",
+          "properties": {
+            "output_role": "precipitated_material",
+            "source_sample": "solid Co(II)–oxalate",
+            "sample_state": "solid precipitated form separated by filtration, washed, and dried",
+            "process_agent": "oxalic acid",
+            "conditions": "room temperature, immediate precipitation",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "treatment_members": [
+              "oxalic acid"
+            ],
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": "room",
+                "unit": "°C",
+                "raw_text": "room temperature, immediate precipitation"
+              }
+            ],
+            "condition_labels": [
+              "room temperature, immediate precipitation"
+            ],
+            "condition": "room temperature, immediate precipitation",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_3_6_Recovery_of_cobalt_as_cobalt_oxalate_38ee07fa__cond_temperature_room_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "cobalt oxalate",
+            "evidence_span": "After 6 h of dissolution, on adding oxalic acid to the filtrate, Co (II)–glycine ions were precipitated as Co(II)–oxalate at room temperature immediately.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "There was no Co remained in the filtrate. Therefore, a complete recovery of Co is achieved here.",
+          "properties": {
+            "output_role": "recovered_material",
+            "property": "recovery",
+            "value": 100,
+            "unit": "%",
+            "source_sample": "solid Co(II)–oxalate",
+            "sample_state": "solid precipitated form separated by filtration, washed, and dried",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "treatment_members": [],
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "Co",
+            "evidence_span": "There was no Co remained in the filtrate. Therefore, a complete recovery of Co is achieved here.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_4. Conclusion_fcaf7478",
+    "section_name": "4. Conclusion",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_abstract_result_evidence",
+    "section_name": "Abstract Result Evidence",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 2,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_temperature_80_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 80.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+            "title": "Recovery of cobalt as cobalt oxalate from spent lithium ion batteries by using glycine as leaching agent",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_abstract_result_evidence",
+            "text": "A condition for achieving a recovery of more than 95% Co has been achieved experimentally by varying the concentrations of leachant and time of the reaction. Leaching with 0.5 M glycine, 0.02 M ascorbic acid and 0.2 g LiCoO2 in a batch extractor, results in a highly efficient recovery of Co within 360 min of the processing time at 80 ^∘C. This hydrometallurgical process is found to be simple, eco friendly and satisfactory for the recovery of cobalt from spent LIBs. ã 2016 Published by Elsevier Ltd.",
+            "parent_chunk_id": null,
+            "section_name": "Abstract Result Evidence",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 0,
+            "position_end": 0,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent_abstract_result_evidence",
+              "doc_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+              "title": "Recovery of cobalt as cobalt oxalate from spent lithium ion batteries by using glycine as leaching agent",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent/text.md",
+              "section_name": "Abstract Result Evidence",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 0,
+              "position_end": 0,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "is_abstract_result_evidence": true
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Material_LiCoO2_PROCESSED_BY_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_id": "text_Material_LiCoO2",
+          "source_name": "LiCoO2",
+          "target_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "target_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Leaching with 0.5 M glycine, 0.02 M ascorbic acid and 0.2 g LiCoO2 in a batch extractor, results in a highly efficient recovery of Co within 360 min of the processing time at 80 ^∘C.",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "glycine, ascorbic acid",
+            "conditions": "0.5 M glycine, 0.02 M ascorbic acid, 0.2 g LiCoO2, batch extractor, 360 min, 80 °C",
+            "treatment_members": [
+              "glycine",
+              "ascorbic acid"
+            ],
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 80.0,
+                "unit": "°C",
+                "raw_text": "0.5 M glycine, 0.02 M ascorbic acid, 0.2 g LiCoO2, batch extractor, 360 min, 80 °C"
+              }
+            ],
+            "condition_labels": [
+              "0.5 M glycine, 0.02 M ascorbic acid, 0.2 g LiCoO2, batch extractor, 360 min, 80 °C"
+            ],
+            "condition": "0.5 M glycine, 0.02 M ascorbic acid, 0.2 g LiCoO2, batch extractor, 360 min, 80 °C",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_abstract_result_evidence__cond_temperature_80_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2",
+            "target_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "evidence_span": "Leaching with 0.5 M glycine, 0.02 M ascorbic acid and 0.2 g LiCoO2 in a batch extractor, results in a highly efficient recovery of Co within 360 min of the processing time at 80 ^∘C.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+          "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "A condition for achieving a recovery of more than 95% Co has been achieved experimentally by varying the concentrations of leachant and time of the reaction.",
+          "properties": {
+            "property": "recovery",
+            "value": ">95",
+            "unit": "%",
+            "output_role": "recovered_material",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "glycine, ascorbic acid",
+            "conditions": "0.5 M glycine, 0.02 M ascorbic acid, 0.2 g LiCoO2, batch extractor, 360 min, 80 °C",
+            "treatment_members": [
+              "glycine",
+              "ascorbic acid"
+            ],
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 80.0,
+                "unit": "°C",
+                "raw_text": "0.5 M glycine, 0.02 M ascorbic acid, 0.2 g LiCoO2, batch extractor, 360 min, 80 °C"
+              }
+            ],
+            "condition_labels": [
+              "0.5 M glycine, 0.02 M ascorbic acid, 0.2 g LiCoO2, batch extractor, 360 min, 80 °C"
+            ],
+            "condition": "0.5 M glycine, 0.02 M ascorbic acid, 0.2 g LiCoO2, batch extractor, 360 min, 80 °C",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Cobalt_as_Cobalt_Oxalate_from_Spent_Lithium_Ion_Batteries_by_Using_Glycine_as_Leaching_Agent_abstract_result_evidence__cond_temperature_80_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 dissolution in glycine and ascorbic acid",
+            "target_name": "Co",
+            "evidence_span": "A condition for achieving a recovery of more than 95% Co has been achieved experimentally by varying the concentrations of leachant and time of the reaction.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  }
+]

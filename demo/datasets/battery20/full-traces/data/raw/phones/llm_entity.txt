@@ -1,0 +1,3566 @@
+[
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_ABSTRACT_f6aad0ce",
+    "section_name": "ABSTRACT",
+    "page_number": 1,
+    "result": {
+      "entity_count": 0,
+      "entities": [],
+      "text_context_summary": ""
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_1. Introduction_3a0e8d82_sub0",
+    "section_name": "1. Introduction Challenges faced in WEEE (Waste of Electrical and Electronic Equipment) management are not only due to the growing quantities of generated waste, but also to their complexity. Numerous modern technologies are integrated in electrical and electronic products and each one of them is composed of various materials and components: WEEE represent a waste category characterized by high content of heavy metals and harmful substances that are hazardous for human health and the environment. They are produced in high quantities and this implies greater difficulties in the disposal processes; moreover, the extreme heterogeneity of the contained materials makes their recovery challenging (Sun et al., 2016). The principal items found in WEEE for economic importance are mobile phones (MPs) that every day become a part of the lifestyle of increasing numbers of people everywhere. This growth in popular use is encouraged by technological improvements and by more and better services from the equipment as they become more and more sophisticated each day and lead the users to discard their older models and buy newer, smaller, lighter or more modern handsets. There is an enormous growth in MP consumption worldwide which leads to generation of a large volume of MP waste every year (Sarath et al., 2015). It is estimated that in 2017 Europe 28, imported 210,784,723 MPs, for a total weight of 64,210 tons (elaborations from https://comtrade.un.org/data). MPs are subject to a continuous technological progress and to frequent replacement with more performing models, so their life time is rather reduced. The characterization of constituent components of the MPs is a crucial step in the disassembly procedure in order to quickly and accurately identify the components for which it may be convenient to attempt a recovery, separating them from the ones that must be stored or disposed of, each according to the more sustainable process. Materials contained in MPs are variable to some extent, based on the model and its manufacturer, with no fixed formula or list of contents applicable as such; for this reason, the list of materials in an average MP may also be misleading since different/several substances might be used as additives in very low quantities or traces by different manufacturers in the production of microelectronic components. Nevertheless, the general composition of MPs is identical in nature. Few are recent studies focusing on the fractional composition of MPs: Bhuie et al. (2004) generically cited their material composition but did not identify plastic materials; Tan et al. (2017) established that from manual dismantling it is possible to obtain plastic (25.75 wt%), batteries (21.12 wt%), printed circuit boards (PCBs) (17.67 wt%), metals (17.30 wt%), and displays (8.37 wt%). This product variability, both over time and from manufacturer to manufacturer, represents a significant issue when dealing with WEEE recycling: a treatment process would instead require constant inputs to ensure optimal performance in terms of efficiency and purity of the recovered materials. Also literature addressing the MPs plastic characterization is not exhaustive: this might be due to the fact that polymer recovery from mobile phones is still in its early stages and then not much interesting in economic terms. Kasper et al. (2011) identified polymeric components by the symbols or codes or both recorded on the surfaces and analyzed the plastic fraction recovered from PCBs by Fourier-transform infrared spectroscopy (FTIR). The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA). Palmieri et al. (2014) carried out a study to investigate the combined utilization of electronic and chemical imaging based techniques to characterize plastic materials from MPs, adopting plastic codes for initial identification of polymers and a combination of Raman spectroscopy, Scanning Electron Microscope (SEM) and Hyper-Spectral Imaging (HIS) to characterize plastic waste.",
+    "page_number": 1,
+    "result": {
+      "entity_count": 12,
+      "entities": [
+        {
+          "id": "text_Product_mobile_phone",
+          "name": "mobile phone",
+          "mention_text": "mobile phones",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "MPs",
+            "mobile phones",
+            "mobile phone",
+            "mobile phone e-waste",
+            "mobile phone ewaste",
+            "mobile-phone e-waste",
+            "mobile-phone ewaste",
+            "cell phone",
+            "cell phones",
+            "smartphone",
+            "smartphones"
+          ],
+          "evidence_span": "The principal items found in WEEE for economic importance are mobile phones (MPs) that every day become a part of the lifestyle of increasing numbers of people everywhere.",
+          "evidence_texts": [
+            "The principal items found in WEEE for economic importance are mobile phones (MPs) that every day become a part of the lifestyle of increasing numbers of people everywhere.",
+            "mobile phones"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_battery",
+          "name": "battery",
+          "mention_text": "batteries",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "batteries",
+            "battery"
+          ],
+          "evidence_span": "Tan et al. (2017) established that from manual dismantling it is possible to obtain plastic (25.75 wt%), batteries (21.12 wt%), printed circuit boards (PCBs) (17.67 wt%), metals (17.30 wt%), and displays (8.37 wt%).",
+          "evidence_texts": [
+            "Tan et al. (2017) established that from manual dismantling it is possible to obtain plastic (25.75 wt%), batteries (21.12 wt%), printed circuit boards (PCBs) (17.67 wt%), metals (17.30 wt%), and displays (8.37 wt%).",
+            "batteries"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_printed_circuit_board",
+          "name": "printed circuit board",
+          "mention_text": "printed circuit boards",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "PCBs",
+            "printed circuit boards",
+            "printed circuit board",
+            "PCB",
+            "WPCB",
+            "WPCBs",
+            "cell phone PCB",
+            "cell phone PCBs",
+            "cell phone PCB powder",
+            "cell phone PCBs powder",
+            "cell phone printed circuit board",
+            "cell phone printed circuit boards",
+            "cell phone printed circuit board powder",
+            "cell phone printed circuit boards powder",
+            "waste PCB",
+            "waste PCBs",
+            "waste cell phone PCB",
+            "waste cell phone PCBs",
+            "waste cell phone PCB powder",
+            "waste cell phone PCBs powder",
+            "waste cell phone printed circuit board",
+            "waste cell phone printed circuit boards",
+            "waste cell phone printed circuit board powder",
+            "waste cell phone printed circuit boards powder",
+            "waste printed circuit board",
+            "waste printed circuit boards",
+            "printed-circuit board",
+            "printed-circuit boards",
+            "printed_circuit_board",
+            "printed_circuit_boards",
+            "PCBA",
+            "PCBAs"
+          ],
+          "evidence_span": "Tan et al. (2017) established that from manual dismantling it is possible to obtain plastic (25.75 wt%), batteries (21.12 wt%), printed circuit boards (PCBs) (17.67 wt%), metals (17.30 wt%), and displays (8.37 wt%).",
+          "evidence_texts": [
+            "Tan et al. (2017) established that from manual dismantling it is possible to obtain plastic (25.75 wt%), batteries (21.12 wt%), printed circuit boards (PCBs) (17.67 wt%), metals (17.30 wt%), and displays (8.37 wt%).",
+            "printed circuit boards"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_display",
+          "name": "display",
+          "mention_text": "displays",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "displays",
+            "display"
+          ],
+          "evidence_span": "Tan et al. (2017) established that from manual dismantling it is possible to obtain plastic (25.75 wt%), batteries (21.12 wt%), printed circuit boards (PCBs) (17.67 wt%), metals (17.30 wt%), and displays (8.37 wt%).",
+          "evidence_texts": [
+            "Tan et al. (2017) established that from manual dismantling it is possible to obtain plastic (25.75 wt%), batteries (21.12 wt%), printed circuit boards (PCBs) (17.67 wt%), metals (17.30 wt%), and displays (8.37 wt%).",
+            "displays"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_housing_components",
+          "name": "housing components",
+          "mention_text": "mobile phone frames",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "mobile phone frames",
+            "frame",
+            "housing components",
+            "housing component",
+            "housing parts",
+            "housing part",
+            "frames",
+            "cover",
+            "covers",
+            "enclosure",
+            "enclosures",
+            "case",
+            "cases",
+            "battery enclosure",
+            "battery enclosures"
+          ],
+          "evidence_span": "The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA).",
+          "evidence_texts": [
+            "The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA).",
+            "mobile phone frames"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_acrylonitrile_butadiene_styrene",
+          "name": "acrylonitrile butadiene styrene",
+          "mention_text": "acrylonitrile–butadienestyrene",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "ABS",
+            "acrylonitrile–butadienestyrene",
+            "acrylonitrile butadiene styrene"
+          ],
+          "evidence_span": "The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA).",
+          "evidence_texts": [
+            "The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA).",
+            "acrylonitrile–butadienestyrene"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_polycarbonate",
+          "name": "polycarbonate",
+          "mention_text": "polycarbonate",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "PC",
+            "polycarbonate"
+          ],
+          "evidence_span": "The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA).",
+          "evidence_texts": [
+            "The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA).",
+            "polycarbonate"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_Pa",
+          "name": "Pa",
+          "mention_text": "polyamide",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "PA",
+            "polyamide",
+            "Pa",
+            "Protactinium"
+          ],
+          "evidence_span": "The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA).",
+          "evidence_texts": [
+            "The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA).",
+            "polyamide"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_5110__1998_",
+          "name": "Nokia 5110 (1998)",
+          "mention_text": "1",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 5110 (1998)",
+            "1"
+          ],
+          "evidence_span": "1",
+          "evidence_texts": [
+            "1"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "1"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_1600__2005_",
+          "name": "Nokia 1600 (2005)",
+          "mention_text": "8",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 1600 (2005)",
+            "8"
+          ],
+          "evidence_span": "8",
+          "evidence_texts": [
+            "8"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "8"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_E51__2008_",
+          "name": "Nokia E51 (2008)",
+          "mention_text": "12",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia E51 (2008)",
+            "12"
+          ],
+          "evidence_span": "12",
+          "evidence_texts": [
+            "12"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "12"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Alcatel_OneT__217D__2011_",
+          "name": "Alcatel OneT. 217D (2011)",
+          "mention_text": "17",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Alcatel OneT. 217D (2011)",
+            "17"
+          ],
+          "evidence_span": "17",
+          "evidence_texts": [
+            "17"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "17"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        }
+      ],
+      "text_context_summary": "The introduction discusses challenges in WEEE management, focusing on mobile phones as a key waste stream, their material composition, and the need for characterization to improve recycling.",
+      "deleted_entities": []
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_1. Introduction_3a0e8d82_sub1",
+    "section_name": "1. Introduction",
+    "page_number": 1,
+    "result": {
+      "entity_count": 0,
+      "entities": [],
+      "text_context_summary": ""
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_1. Introduction_3a0e8d82_sub2",
+    "section_name": "1. Introduction",
+    "page_number": 1,
+    "result": {
+      "entity_count": 0,
+      "entities": [],
+      "text_context_summary": ""
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2. Material and methods_aa28a19e",
+    "section_name": "2. Material and methods",
+    "page_number": 1,
+    "result": {
+      "entity_count": 10,
+      "entities": [
+        {
+          "id": "text_Product_mobile_phone",
+          "name": "mobile phone",
+          "mention_text": "end-of-life MPs",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "MPs",
+            "end-of-life MPs",
+            "mobile phone",
+            "mobile phones",
+            "mobile phone e-waste",
+            "mobile phone ewaste",
+            "mobile-phone e-waste",
+            "mobile-phone ewaste",
+            "cell phone",
+            "cell phones",
+            "smartphone",
+            "smartphones"
+          ],
+          "evidence_span": "20 different types of end-of-life MPs selected among the most popular brands were collected and first classified taking into account manufacturer and model.",
+          "evidence_texts": [
+            "20 different types of end-of-life MPs selected among the most popular brands were collected and first classified taking into account manufacturer and model.",
+            "end-of-life MPs"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_battery",
+          "name": "battery",
+          "mention_text": "batteries",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "batteries",
+            "battery"
+          ],
+          "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+          "evidence_texts": [
+            "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+            "batteries"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_electronic_parts",
+          "name": "electronic parts",
+          "mention_text": "electronic parts",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "electronic parts",
+            "electronic part",
+            "electronic components",
+            "electronic component",
+            "connected component",
+            "connected components",
+            "desoldered component",
+            "desoldered components"
+          ],
+          "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+          "evidence_texts": [
+            "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+            "electronic parts",
+            "The leaching stage involved the characterization of printed circuit boards and connected components present in the waste materials.",
+            "connected components"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_metal_parts",
+          "name": "metal parts",
+          "mention_text": "metal parts",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "metal parts",
+            "metal part",
+            "metal components",
+            "metal component"
+          ],
+          "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+          "evidence_texts": [
+            "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+            "metal parts"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_plastic_material",
+          "name": "plastic material",
+          "mention_text": "plastic materials",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "plastic materials",
+            "plastic material"
+          ],
+          "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+          "evidence_texts": [
+            "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+            "plastic materials"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_display",
+          "name": "display",
+          "mention_text": "displays",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "displays",
+            "display"
+          ],
+          "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+          "evidence_texts": [
+            "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+            "displays"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_printed_circuit_board",
+          "name": "printed circuit board",
+          "mention_text": "printed circuit boards",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "PCBs",
+            "printed circuit boards",
+            "printed circuit board",
+            "PCB",
+            "WPCB",
+            "WPCBs",
+            "cell phone PCB",
+            "cell phone PCBs",
+            "cell phone PCB powder",
+            "cell phone PCBs powder",
+            "cell phone printed circuit board",
+            "cell phone printed circuit boards",
+            "cell phone printed circuit board powder",
+            "cell phone printed circuit boards powder",
+            "waste PCB",
+            "waste PCBs",
+            "waste cell phone PCB",
+            "waste cell phone PCBs",
+            "waste cell phone PCB powder",
+            "waste cell phone PCBs powder",
+            "waste cell phone printed circuit board",
+            "waste cell phone printed circuit boards",
+            "waste cell phone printed circuit board powder",
+            "waste cell phone printed circuit boards powder",
+            "waste printed circuit board",
+            "waste printed circuit boards",
+            "printed-circuit board",
+            "printed-circuit boards",
+            "printed_circuit_board",
+            "printed_circuit_boards",
+            "PCBA",
+            "PCBAs"
+          ],
+          "evidence_span": "The leaching stage involved the characterization of printed circuit boards and connected components present in the waste materials.",
+          "evidence_texts": [
+            "The leaching stage involved the characterization of printed circuit boards and connected components present in the waste materials.",
+            "printed circuit boards"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_5110__1998_",
+          "name": "Nokia 5110 (1998)",
+          "mention_text": "1",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 5110 (1998)",
+            "1"
+          ],
+          "evidence_span": "1",
+          "evidence_texts": [
+            "1"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "1"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Ericsson_R380S__2000_",
+          "name": "Ericsson R380S (2000)",
+          "mention_text": "2",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Ericsson R380S (2000)",
+            "2"
+          ],
+          "evidence_span": "2",
+          "evidence_texts": [
+            "2"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "2"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Brondi_Amico_Flip___2016_",
+          "name": "Brondi Amico Flip+ (2016)",
+          "mention_text": "20",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Brondi Amico Flip+ (2016)",
+            "20"
+          ],
+          "evidence_span": "20",
+          "evidence_texts": [
+            "20"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "20"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        }
+      ],
+      "text_context_summary": "The methods section describes collection and classification of 20 end-of-life mobile phones, manual dismantling into batteries, electronic parts, metal parts, plastic materials and displays, and characterization of printed circuit boards and connected components.",
+      "deleted_entities": []
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2.1. Manual disassembly_4c0ce955",
+    "section_name": "2.1. Manual disassembly",
+    "page_number": 1,
+    "result": {
+      "entity_count": 13,
+      "entities": [
+        {
+          "id": "text_Product_mobile_phone",
+          "name": "mobile phone",
+          "mention_text": "mobile phone",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "mobile phone",
+            "mobile phones",
+            "mobile phone e-waste",
+            "mobile phone ewaste",
+            "mobile-phone e-waste",
+            "mobile-phone ewaste",
+            "cell phone",
+            "cell phones",
+            "smartphone",
+            "smartphones"
+          ],
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "evidence_texts": [
+            "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+            "mobile phone",
+            "smartphones"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_polymeric_frame",
+          "name": "polymeric frame",
+          "mention_text": "polymeric frame",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "polymeric frame"
+          ],
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "evidence_texts": [
+            "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+            "polymeric frame"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_printed_circuit_board",
+          "name": "printed circuit board",
+          "mention_text": "printed circuit board",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "printed circuit board",
+            "PCB",
+            "PCBs",
+            "WPCB",
+            "WPCBs",
+            "cell phone PCB",
+            "cell phone PCBs",
+            "cell phone PCB powder",
+            "cell phone PCBs powder",
+            "cell phone printed circuit board",
+            "cell phone printed circuit boards",
+            "cell phone printed circuit board powder",
+            "cell phone printed circuit boards powder",
+            "waste PCB",
+            "waste PCBs",
+            "waste cell phone PCB",
+            "waste cell phone PCBs",
+            "waste cell phone PCB powder",
+            "waste cell phone PCBs powder",
+            "waste cell phone printed circuit board",
+            "waste cell phone printed circuit boards",
+            "waste cell phone printed circuit board powder",
+            "waste cell phone printed circuit boards powder",
+            "waste printed circuit board",
+            "waste printed circuit boards",
+            "printed circuit boards",
+            "printed-circuit board",
+            "printed-circuit boards",
+            "printed_circuit_board",
+            "printed_circuit_boards",
+            "PCBA",
+            "PCBAs"
+          ],
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "evidence_texts": [
+            "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+            "printed circuit board"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_battery",
+          "name": "battery",
+          "mention_text": "battery",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "battery",
+            "batteries"
+          ],
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "evidence_texts": [
+            "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+            "battery"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_keypad",
+          "name": "keypad",
+          "mention_text": "keyboard",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "keyboard",
+            "keypad",
+            "keypads",
+            "keyboards"
+          ],
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "evidence_texts": [
+            "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+            "keyboard"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_LCD_screen",
+          "name": "LCD screen",
+          "mention_text": "LCD screen",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "LCD screen",
+            "LCD screens",
+            "liquid crystal display",
+            "liquid crystal displays",
+            "liquid-crystal display",
+            "liquid-crystal displays",
+            "liquid-crystal display screen",
+            "liquid-crystal display screens",
+            "liquid-crystal displays screen",
+            "liquid-crystal displays screens"
+          ],
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "evidence_texts": [
+            "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+            "LCD screen"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_antenna",
+          "name": "antenna",
+          "mention_text": "antenna",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "antenna",
+            "antennas"
+          ],
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "evidence_texts": [
+            "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+            "antenna"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_integrated_circuit",
+          "name": "integrated circuit",
+          "mention_text": "integrated circuit",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "integrated circuit",
+            "IC",
+            "ICs"
+          ],
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "evidence_texts": [
+            "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+            "integrated circuit"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_video_camera",
+          "name": "video camera",
+          "mention_text": "video cameras",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "video cameras",
+            "video camera",
+            "camera",
+            "cameras"
+          ],
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "evidence_texts": [
+            "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+            "video cameras"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_speaker",
+          "name": "speaker",
+          "mention_text": "speakers",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "speakers",
+            "speaker"
+          ],
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "evidence_texts": [
+            "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+            "speakers"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_5110__1998_",
+          "name": "Nokia 5110 (1998)",
+          "mention_text": "1",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 5110 (1998)",
+            "1"
+          ],
+          "evidence_span": "1",
+          "evidence_texts": [
+            "1"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "1"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Ericsson_R380S__2000_",
+          "name": "Ericsson R380S (2000)",
+          "mention_text": "2",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Ericsson R380S (2000)",
+            "2"
+          ],
+          "evidence_span": "2",
+          "evidence_texts": [
+            "2"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "2"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Brondi_Amico_Flip___2016_",
+          "name": "Brondi Amico Flip+ (2016)",
+          "mention_text": "20",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Brondi Amico Flip+ (2016)",
+            "20"
+          ],
+          "evidence_span": "20",
+          "evidence_texts": [
+            "20"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "20"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        }
+      ],
+      "text_context_summary": "The section describes manual disassembly of end-of-life mobile phones, listing typical components and material fractions collected.",
+      "deleted_entities": [
+        {
+          "reason": "generic entity excluded by entity blacklist",
+          "entity": {
+            "name": "metal",
+            "mention_text": "metal coating",
+            "type": "Material",
+            "synonyms": [],
+            "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers."
+          },
+          "normalized_name": "metal",
+          "mention_text": "metal coating",
+          "type": "Material"
+        }
+      ]
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2.2.1. Plastic materials analysis_abf480bf",
+    "section_name": "2.2. MPs material analysis",
+    "page_number": 1,
+    "result": {
+      "entity_count": 7,
+      "entities": [
+        {
+          "id": "text_Component_printed_circuit_board",
+          "name": "printed circuit board",
+          "mention_text": "PCBs",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "printed circuit boards",
+            "PCBs",
+            "printed circuit board",
+            "PCB",
+            "WPCB",
+            "WPCBs",
+            "cell phone PCB",
+            "cell phone PCBs",
+            "cell phone PCB powder",
+            "cell phone PCBs powder",
+            "cell phone printed circuit board",
+            "cell phone printed circuit boards",
+            "cell phone printed circuit board powder",
+            "cell phone printed circuit boards powder",
+            "waste PCB",
+            "waste PCBs",
+            "waste cell phone PCB",
+            "waste cell phone PCBs",
+            "waste cell phone PCB powder",
+            "waste cell phone PCBs powder",
+            "waste cell phone printed circuit board",
+            "waste cell phone printed circuit boards",
+            "waste cell phone printed circuit board powder",
+            "waste cell phone printed circuit boards powder",
+            "waste printed circuit board",
+            "waste printed circuit boards",
+            "printed-circuit board",
+            "printed-circuit boards",
+            "printed_circuit_board",
+            "printed_circuit_boards",
+            "PCBA",
+            "PCBAs"
+          ],
+          "evidence_span": "Frames, covers and enclosures were characterized to perform the identification of polymers, whereas PCBs (composed by a vari ety of different materials), screws, etc. were separately processed in order to identify the different valuable materials and elements.",
+          "evidence_texts": [
+            "Frames, covers and enclosures were characterized to perform the identification of polymers, whereas PCBs (composed by a vari ety of different materials), screws, etc. were separately processed in order to identify the different valuable materials and elements.",
+            "PCBs"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_housing_components",
+          "name": "housing components",
+          "mention_text": "Frames",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Frames",
+            "frame",
+            "housing components",
+            "housing component",
+            "housing parts",
+            "housing part",
+            "frames",
+            "cover",
+            "covers",
+            "enclosure",
+            "enclosures",
+            "case",
+            "cases",
+            "battery enclosure",
+            "battery enclosures"
+          ],
+          "evidence_span": "Frames, covers and enclosures were characterized to perform the identification of polymers, whereas PCBs (composed by a vari ety of different materials), screws, etc. were separately processed in order to identify the different valuable materials and elements.",
+          "evidence_texts": [
+            "Frames, covers and enclosures were characterized to perform the identification of polymers, whereas PCBs (composed by a vari ety of different materials), screws, etc. were separately processed in order to identify the different valuable materials and elements.",
+            "Frames",
+            "covers",
+            "enclosures"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_screw",
+          "name": "screw",
+          "mention_text": "screws",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "screws",
+            "screw"
+          ],
+          "evidence_span": "Frames, covers and enclosures were characterized to perform the identification of polymers, whereas PCBs (composed by a vari ety of different materials), screws, etc. were separately processed in order to identify the different valuable materials and elements.",
+          "evidence_texts": [
+            "Frames, covers and enclosures were characterized to perform the identification of polymers, whereas PCBs (composed by a vari ety of different materials), screws, etc. were separately processed in order to identify the different valuable materials and elements.",
+            "screws"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_5110__1998_",
+          "name": "Nokia 5110 (1998)",
+          "mention_text": "1",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 5110 (1998)",
+            "1"
+          ],
+          "evidence_span": "1",
+          "evidence_texts": [
+            "1"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "1"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Ericsson_R380S__2000_",
+          "name": "Ericsson R380S (2000)",
+          "mention_text": "2",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Ericsson R380S (2000)",
+            "2"
+          ],
+          "evidence_span": "2",
+          "evidence_texts": [
+            "2"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "2"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_1600__2005_",
+          "name": "Nokia 1600 (2005)",
+          "mention_text": "8",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 1600 (2005)",
+            "8"
+          ],
+          "evidence_span": "8",
+          "evidence_texts": [
+            "8"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "8"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_6111__2005_",
+          "name": "Nokia 6111 (2005)",
+          "mention_text": "10",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 6111 (2005)",
+            "10"
+          ],
+          "evidence_span": "10",
+          "evidence_texts": [
+            "10"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "10"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        }
+      ],
+      "text_context_summary": "The section describes the material analysis of mobile phone components, focusing on polymer identification in frames, covers, and enclosures, and separate processing of PCBs and screws for valuable materials. It details FTIR spectroscopy methods and the creation of a polymer spectral library.",
+      "deleted_entities": [
+        {
+          "reason": "generic entity excluded by entity blacklist",
+          "entity": {
+            "name": "plastic",
+            "mention_text": "Plastic components",
+            "type": "Material",
+            "synonyms": [],
+            "evidence_span": "Plastic components of each item were analyzed by FTIR spectroscopy and then classified according to the plastic polymer type; no particular preparation of the analyzed samples was necessary."
+          },
+          "normalized_name": "plastic",
+          "mention_text": "Plastic components",
+          "type": "Material"
+        },
+        {
+          "reason": "generic entity excluded by entity blacklist",
+          "entity": {
+            "name": "polymer",
+            "mention_text": "polymers",
+            "type": "Material",
+            "synonyms": [],
+            "evidence_span": "Frames, covers and enclosures were characterized to perform the identification of polymers, whereas PCBs (composed by a vari ety of different materials), screws, etc. were separately processed in order to identify the different valuable materials and elements."
+          },
+          "normalized_name": "polymer",
+          "mention_text": "polymers",
+          "type": "Material"
+        }
+      ]
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2.2.2. Electronic parts analysis_4194a212",
+    "section_name": "2.2.2. Electronic parts analysis",
+    "page_number": 1,
+    "result": {
+      "entity_count": 4,
+      "entities": [
+        {
+          "id": "text_Product_Nokia_5110__1998_",
+          "name": "Nokia 5110 (1998)",
+          "mention_text": "1",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 5110 (1998)",
+            "1"
+          ],
+          "evidence_span": "1",
+          "evidence_texts": [
+            "1"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "1"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Ericsson_R380S__2000_",
+          "name": "Ericsson R380S (2000)",
+          "mention_text": "2",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Ericsson R380S (2000)",
+            "2"
+          ],
+          "evidence_span": "2",
+          "evidence_texts": [
+            "2"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "2"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_6210__2000_",
+          "name": "Nokia 6210 (2000)",
+          "mention_text": "3",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 6210 (2000)",
+            "3"
+          ],
+          "evidence_span": "3",
+          "evidence_texts": [
+            "3"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "3"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Sony_Ericsson_T230__2003_",
+          "name": "Sony Ericsson T230 (2003)",
+          "mention_text": "5",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Sony Ericsson T230 (2003)",
+            "5"
+          ],
+          "evidence_span": "5",
+          "evidence_texts": [
+            "5"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "5"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        }
+      ],
+      "text_context_summary": "",
+      "deleted_entities": []
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_3.1. Manual disassembly_db5ab5d3",
+    "section_name": "3.1. Manual disassembly",
+    "page_number": 1,
+    "result": {
+      "entity_count": 22,
+      "entities": [
+        {
+          "id": "text_Product_mobile_phone",
+          "name": "mobile phone",
+          "mention_text": "MP",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "MPs",
+            "MP",
+            "mobile phone",
+            "mobile phones",
+            "mobile phone e-waste",
+            "mobile phone ewaste",
+            "mobile-phone e-waste",
+            "mobile-phone ewaste",
+            "cell phone",
+            "cell phones",
+            "smartphone",
+            "smartphones"
+          ],
+          "evidence_span": "When the MP has reached the end of life stage and it reaches the recycling plant, as a general rule it is shredded as a whole after the removal of the battery, because currently the components are not designed for rapid disassembly to make the process economically viable.",
+          "evidence_texts": [
+            "When the MP has reached the end of life stage and it reaches the recycling plant, as a general rule it is shredded as a whole after the removal of the battery, because currently the components are not designed for rapid disassembly to make the process economically viable.",
+            "MP",
+            "In samples n. 18 and 19 (so-called smartphones) it has been observed that producers used glass (8.5% and 12.0% respectively) in addition to other materials.",
+            "smartphones"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_battery",
+          "name": "battery",
+          "mention_text": "battery",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "batteries",
+            "battery"
+          ],
+          "evidence_span": "When the MP has reached the end of life stage and it reaches the recycling plant, as a general rule it is shredded as a whole after the removal of the battery, because currently the components are not designed for rapid disassembly to make the process economically viable.",
+          "evidence_texts": [
+            "When the MP has reached the end of life stage and it reaches the recycling plant, as a general rule it is shredded as a whole after the removal of the battery, because currently the components are not designed for rapid disassembly to make the process economically viable.",
+            "battery"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_printed_circuit_board",
+          "name": "printed circuit board",
+          "mention_text": "PCBs",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "PCBs",
+            "printed circuit board",
+            "PCB",
+            "WPCB",
+            "WPCBs",
+            "cell phone PCB",
+            "cell phone PCBs",
+            "cell phone PCB powder",
+            "cell phone PCBs powder",
+            "cell phone printed circuit board",
+            "cell phone printed circuit boards",
+            "cell phone printed circuit board powder",
+            "cell phone printed circuit boards powder",
+            "waste PCB",
+            "waste PCBs",
+            "waste cell phone PCB",
+            "waste cell phone PCBs",
+            "waste cell phone PCB powder",
+            "waste cell phone PCBs powder",
+            "waste cell phone printed circuit board",
+            "waste cell phone printed circuit boards",
+            "waste cell phone printed circuit board powder",
+            "waste cell phone printed circuit boards powder",
+            "waste printed circuit board",
+            "waste printed circuit boards",
+            "printed circuit boards",
+            "printed-circuit board",
+            "printed-circuit boards",
+            "printed_circuit_board",
+            "printed_circuit_boards",
+            "PCBA",
+            "PCBAs"
+          ],
+          "evidence_span": "After the analysis undertaken it was established that the overall generic structure of the MP remained similar from device to device, however issues such as screw type, screw position, cable attachment, position of PCBs etc. were subjected to variations",
+          "evidence_texts": [
+            "After the analysis undertaken it was established that the overall generic structure of the MP remained similar from device to device, however issues such as screw type, screw position, cable attachment, position of PCBs etc. were subjected to variations",
+            "PCBs"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_glass",
+          "name": "glass",
+          "mention_text": "glasses",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "glass",
+            "glasses"
+          ],
+          "evidence_span": "Basically, it is not energy intensive to unlock the associated materials such as glasses and metals with different mechanical properties, depending on the locking regimes of materials involved.",
+          "evidence_texts": [
+            "Basically, it is not energy intensive to unlock the associated materials such as glasses and metals with different mechanical properties, depending on the locking regimes of materials involved.",
+            "glasses"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_electronic_parts",
+          "name": "electronic parts",
+          "mention_text": "electronic parts",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "electronics",
+            "electronic parts",
+            "electronic part",
+            "electronic components",
+            "electronic component",
+            "connected component",
+            "connected components",
+            "desoldered component",
+            "desoldered components"
+          ],
+          "evidence_span": "From dismantling operations, plastics, metals, electronic parts, batteries and displays were collected: the results are shown in Table 1.",
+          "evidence_texts": [
+            "From dismantling operations, plastics, metals, electronic parts, batteries and displays were collected: the results are shown in Table 1.",
+            "electronic parts"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_display",
+          "name": "display",
+          "mention_text": "displays",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "display",
+            "displays"
+          ],
+          "evidence_span": "From dismantling operations, plastics, metals, electronic parts, batteries and displays were collected: the results are shown in Table 1.",
+          "evidence_texts": [
+            "From dismantling operations, plastics, metals, electronic parts, batteries and displays were collected: the results are shown in Table 1.",
+            "displays"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_lithium_ion_battery",
+          "name": "lithium-ion battery",
+          "mention_text": "Li-ion",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Li-ion",
+            "lithium-ion battery",
+            "LIB",
+            "LIBs",
+            "Li-ion battery",
+            "Li-ion batteries",
+            "Li ion battery",
+            "Li ion batteries",
+            "lithium ion battery",
+            "lithium ion batteries"
+          ],
+          "evidence_span": "All the batteries were Li-ion, with the exception of the sample n. 20 which was a Ni-MH.",
+          "evidence_texts": [
+            "All the batteries were Li-ion, with the exception of the sample n. 20 which was a Ni-MH.",
+            "Li-ion"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_nickel_metal_hydride_battery",
+          "name": "nickel-metal hydride battery",
+          "mention_text": "Ni-MH",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Ni-MH",
+            "nickel-metal hydride battery"
+          ],
+          "evidence_span": "All the batteries were Li-ion, with the exception of the sample n. 20 which was a Ni-MH.",
+          "evidence_texts": [
+            "All the batteries were Li-ion, with the exception of the sample n. 20 which was a Ni-MH.",
+            "Ni-MH"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Brondi_Amico_Flip_",
+          "name": "Brondi Amico Flip+",
+          "mention_text": "sample n. 20",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "sample n. 20",
+            "Brondi Amico Flip+"
+          ],
+          "evidence_span": "All the batteries were Li-ion, with the exception of the sample n. 20 which was a Ni-MH.",
+          "evidence_texts": [
+            "All the batteries were Li-ion, with the exception of the sample n. 20 which was a Ni-MH.",
+            "sample n. 20"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_5110",
+          "name": "Nokia 5110",
+          "mention_text": "sample 1",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "sample 1",
+            "Nokia 5110"
+          ],
+          "evidence_span": "It can be observed that batteries, electronics, plastics and displays percentages do not deviate much from the average value with only the exception of some samples (for instance in sample 1 the battery weight percentage is much higher than the average value).",
+          "evidence_texts": [
+            "It can be observed that batteries, electronics, plastics and displays percentages do not deviate much from the average value with only the exception of some samples (for instance in sample 1 the battery weight percentage is much higher than the average value).",
+            "sample 1"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_Lumia_620",
+          "name": "Nokia Lumia 620",
+          "mention_text": "samples n. 18",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "samples n. 18",
+            "Nokia Lumia 620"
+          ],
+          "evidence_span": "In samples n. 18 and 19 (so-called smartphones) it has been observed that producers used glass (8.5% and 12.0% respectively) in addition to other materials.",
+          "evidence_texts": [
+            "In samples n. 18 and 19 (so-called smartphones) it has been observed that producers used glass (8.5% and 12.0% respectively) in addition to other materials.",
+            "samples n. 18"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Wiko_Lenny__2014_",
+          "name": "Wiko Lenny (2014)",
+          "mention_text": "19",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Wiko Lenny (2014)",
+            "19"
+          ],
+          "evidence_span": "In samples n. 18 and 19 (so-called smartphones) it has been observed that producers used glass (8.5% and 12.0% respectively) in addition to other materials.",
+          "evidence_texts": [
+            "In samples n. 18 and 19 (so-called smartphones) it has been observed that producers used glass (8.5% and 12.0% respectively) in addition to other materials.",
+            "19"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "19"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_5110__1998_",
+          "name": "Nokia 5110 (1998)",
+          "mention_text": "1",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 5110 (1998)",
+            "1"
+          ],
+          "evidence_span": "1",
+          "evidence_texts": [
+            "1"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "1"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_6210__2000_",
+          "name": "Nokia 6210 (2000)",
+          "mention_text": "3",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 6210 (2000)",
+            "3"
+          ],
+          "evidence_span": "3",
+          "evidence_texts": [
+            "3"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "3"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Sony_Ericsson_T230__2003_",
+          "name": "Sony Ericsson T230 (2003)",
+          "mention_text": "5",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Sony Ericsson T230 (2003)",
+            "5"
+          ],
+          "evidence_span": "5",
+          "evidence_texts": [
+            "5"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "5"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Motorola_RAZR_V3__2004_",
+          "name": "Motorola RAZR V3 (2004)",
+          "mention_text": "6",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Motorola RAZR V3 (2004)",
+            "6"
+          ],
+          "evidence_span": "6",
+          "evidence_texts": [
+            "6"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "6"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_LG_U8120__2004_",
+          "name": "LG U8120 (2004)",
+          "mention_text": "7",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "LG U8120 (2004)",
+            "7"
+          ],
+          "evidence_span": "7",
+          "evidence_texts": [
+            "7"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "7"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_1600__2005_",
+          "name": "Nokia 1600 (2005)",
+          "mention_text": "8",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 1600 (2005)",
+            "8"
+          ],
+          "evidence_span": "8",
+          "evidence_texts": [
+            "8"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "8"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Sagem_My_2002X__2005_",
+          "name": "Sagem My 2002X (2005)",
+          "mention_text": "9",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Sagem My 2002X (2005)",
+            "9"
+          ],
+          "evidence_span": "9",
+          "evidence_texts": [
+            "9"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "9"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_E51__2008_",
+          "name": "Nokia E51 (2008)",
+          "mention_text": "12",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia E51 (2008)",
+            "12"
+          ],
+          "evidence_span": "12",
+          "evidence_texts": [
+            "12"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "12"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_Lumia_620__2013_",
+          "name": "Nokia Lumia 620 (2013)",
+          "mention_text": "18",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia Lumia 620 (2013)",
+            "18"
+          ],
+          "evidence_span": "18",
+          "evidence_texts": [
+            "18"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "18"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Brondi_Amico_Flip___2016_",
+          "name": "Brondi Amico Flip+ (2016)",
+          "mention_text": "20",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Brondi Amico Flip+ (2016)",
+            "20"
+          ],
+          "evidence_span": "20",
+          "evidence_texts": [
+            "20"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "20"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        }
+      ],
+      "text_context_summary": "The section describes manual disassembly of mobile phones, reporting the generic structure, material locking mechanisms, and the fractions collected (plastics, metals, electronic parts, batteries, displays). It notes that all batteries were Li-ion except sample 20 (Ni-MH), and that samples 18 and 19 (smartphones) contained glass.",
+      "deleted_entities": [
+        {
+          "reason": "generic entity excluded by entity blacklist",
+          "entity": {
+            "name": "metal",
+            "mention_text": "metals",
+            "type": "Material",
+            "synonyms": [
+              "metal"
+            ],
+            "evidence_span": "Basically, it is not energy intensive to unlock the associated materials such as glasses and metals with different mechanical properties, depending on the locking regimes of materials involved."
+          },
+          "normalized_name": "metal",
+          "mention_text": "metals",
+          "type": "Material"
+        },
+        {
+          "reason": "generic entity excluded by entity blacklist",
+          "entity": {
+            "name": "plastic",
+            "mention_text": "plastics",
+            "type": "Material",
+            "synonyms": [
+              "plastic"
+            ],
+            "evidence_span": "From dismantling operations, plastics, metals, electronic parts, batteries and displays were collected: the results are shown in Table 1."
+          },
+          "normalized_name": "plastic",
+          "mention_text": "plastics",
+          "type": "Material"
+        }
+      ]
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_3.2.1. Plastic materials analysis_dd3887b6",
+    "section_name": "3.2. Materials analysis",
+    "page_number": 1,
+    "result": {
+      "entity_count": 15,
+      "entities": [
+        {
+          "id": "text_Product_mobile_phone",
+          "name": "mobile phone",
+          "mention_text": "MPs",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "MPs",
+            "mobile phone",
+            "mobile phones",
+            "mobile phone e-waste",
+            "mobile phone ewaste",
+            "mobile-phone e-waste",
+            "mobile-phone ewaste",
+            "cell phone",
+            "cell phones",
+            "smartphone",
+            "smartphones"
+          ],
+          "evidence_span": "The following sections outline a material composition analysis undertaken on the disassembled MPs.",
+          "evidence_texts": [
+            "The following sections outline a material composition analysis undertaken on the disassembled MPs.",
+            "MPs"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_housing_components",
+          "name": "housing components",
+          "mention_text": "case",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "case",
+            "housing components",
+            "housing component",
+            "housing parts",
+            "housing part",
+            "frame",
+            "frames",
+            "cover",
+            "covers",
+            "enclosure",
+            "enclosures",
+            "cases",
+            "battery enclosure",
+            "battery enclosures"
+          ],
+          "evidence_span": "From dismantling discussion, it is clear that plastic materials are used for structural components such as the case and cover.",
+          "evidence_texts": [
+            "From dismantling discussion, it is clear that plastic materials are used for structural components such as the case and cover.",
+            "case",
+            "cover"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_mounting_bracket",
+          "name": "mounting bracket",
+          "mention_text": "mounting brackets",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "mounting brackets",
+            "mounting bracket"
+          ],
+          "evidence_span": "In addition to enclosures, plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions.",
+          "evidence_texts": [
+            "In addition to enclosures, plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions.",
+            "mounting brackets"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_guide",
+          "name": "guide",
+          "mention_text": "guides",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "guides",
+            "guide"
+          ],
+          "evidence_span": "In addition to enclosures, plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions.",
+          "evidence_texts": [
+            "In addition to enclosures, plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions.",
+            "guides"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_insulator_sheet",
+          "name": "insulator sheet",
+          "mention_text": "insulator sheets",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "insulator sheets",
+            "insulator sheet"
+          ],
+          "evidence_span": "In addition to enclosures, plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions.",
+          "evidence_texts": [
+            "In addition to enclosures, plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions.",
+            "insulator sheets"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_vibration_cushion",
+          "name": "vibration cushion",
+          "mention_text": "vibration cushions",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "vibration cushions",
+            "vibration cushion"
+          ],
+          "evidence_span": "In addition to enclosures, plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions.",
+          "evidence_texts": [
+            "In addition to enclosures, plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions.",
+            "vibration cushions"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_polycarbonate",
+          "name": "polycarbonate",
+          "mention_text": "polycarbonate",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "PC",
+            "polycarbonate"
+          ],
+          "evidence_span": "it was found that polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone; the experimental data are summarized in Table 2.",
+          "evidence_texts": [
+            "it was found that polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone; the experimental data are summarized in Table 2.",
+            "polycarbonate"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_acrylonitrile_butadiene_styrene",
+          "name": "acrylonitrile butadiene styrene",
+          "mention_text": "acrylonitrile–butadienestyrene",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "ABS",
+            "acrylonitrile–butadienestyrene",
+            "acrylonitrile butadiene styrene"
+          ],
+          "evidence_span": "it was found that polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone; the experimental data are summarized in Table 2.",
+          "evidence_texts": [
+            "it was found that polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone; the experimental data are summarized in Table 2.",
+            "acrylonitrile–butadienestyrene"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_polymethyl_methacrylate",
+          "name": "polymethyl methacrylate",
+          "mention_text": "polymethylmethacrylate",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "PMMA",
+            "polymethylmethacrylate",
+            "polymethyl methacrylate",
+            "acrylic"
+          ],
+          "evidence_span": "it was found that polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone; the experimental data are summarized in Table 2.",
+          "evidence_texts": [
+            "it was found that polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone; the experimental data are summarized in Table 2.",
+            "polymethylmethacrylate"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_Pu",
+          "name": "Pu",
+          "mention_text": "polyurethane",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "PU",
+            "polyurethane",
+            "Pu",
+            "Plutonium"
+          ],
+          "evidence_span": "it was found that polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone; the experimental data are summarized in Table 2.",
+          "evidence_texts": [
+            "it was found that polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone; the experimental data are summarized in Table 2.",
+            "polyurethane"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_silicone",
+          "name": "silicone",
+          "mention_text": "silicone",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "silicone"
+          ],
+          "evidence_span": "it was found that polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone; the experimental data are summarized in Table 2.",
+          "evidence_texts": [
+            "it was found that polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone; the experimental data are summarized in Table 2.",
+            "silicone"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_5110__1998_",
+          "name": "Nokia 5110 (1998)",
+          "mention_text": "sample n. 1",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "sample n. 1",
+            "Nokia 5110 (1998)"
+          ],
+          "evidence_span": "in Fig. 4 the spectra of dismantled and identified plastics from sample n. 1 are reported as an example.",
+          "evidence_texts": [
+            "in Fig. 4 the spectra of dismantled and identified plastics from sample n. 1 are reported as an example.",
+            "sample n. 1"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "1"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Ericsson_R380S__2000_",
+          "name": "Ericsson R380S (2000)",
+          "mention_text": "2",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Ericsson R380S (2000)",
+            "2"
+          ],
+          "evidence_span": "2",
+          "evidence_texts": [
+            "2"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "2"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_6210__2000_",
+          "name": "Nokia 6210 (2000)",
+          "mention_text": "3",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 6210 (2000)",
+            "3"
+          ],
+          "evidence_span": "3",
+          "evidence_texts": [
+            "3"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "3"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Ericsson_T68__2001_",
+          "name": "Ericsson T68 (2001)",
+          "mention_text": "4",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Ericsson T68 (2001)",
+            "4"
+          ],
+          "evidence_span": "4",
+          "evidence_texts": [
+            "4"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "4"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        }
+      ],
+      "text_context_summary": "The section describes material composition analysis of disassembled mobile phones, focusing on plastic components and identifying five polymers used in their construction.",
+      "deleted_entities": []
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_3.2.2. Electronic parts analysis_ad4a55c2",
+    "section_name": "3.2.2. Electronic parts analysis",
+    "page_number": 1,
+    "result": {
+      "entity_count": 20,
+      "entities": [
+        {
+          "id": "text_Material_Pd",
+          "name": "Pd",
+          "mention_text": "palladium",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Pd",
+            "palladium",
+            "Palladium"
+          ],
+          "evidence_span": "Among the most valuable metals, palladium, generally used in connectors to improve conductivity (Reuter et al., 2013) as well as in ceramic capacitors (Chancerel and Rotter, 2009; Delfini et al., 2011; Fontana et al., 2018), should be present, but in MPs that kind of electronic components constitute an extremely small fraction of the electronic parts, therefore the quantity of Pd is below the limits of the instruments’ detectability.",
+          "evidence_texts": [
+            "Among the most valuable metals, palladium, generally used in connectors to improve conductivity (Reuter et al., 2013) as well as in ceramic capacitors (Chancerel and Rotter, 2009; Delfini et al., 2011; Fontana et al., 2018), should be present, but in MPs that kind of electronic components constitute an extremely small fraction of the electronic parts, therefore the quantity of Pd is below the limits of the instruments’ detectability.",
+            "palladium"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_connector",
+          "name": "connector",
+          "mention_text": "connectors",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "connectors",
+            "connector"
+          ],
+          "evidence_span": "Among the most valuable metals, palladium, generally used in connectors to improve conductivity (Reuter et al., 2013) as well as in ceramic capacitors (Chancerel and Rotter, 2009; Delfini et al., 2011; Fontana et al., 2018), should be present, but in MPs that kind of electronic components constitute an extremely small fraction of the electronic parts, therefore the quantity of Pd is below the limits of the instruments’ detectability.",
+          "evidence_texts": [
+            "Among the most valuable metals, palladium, generally used in connectors to improve conductivity (Reuter et al., 2013) as well as in ceramic capacitors (Chancerel and Rotter, 2009; Delfini et al., 2011; Fontana et al., 2018), should be present, but in MPs that kind of electronic components constitute an extremely small fraction of the electronic parts, therefore the quantity of Pd is below the limits of the instruments’ detectability.",
+            "connectors"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_ceramic_capacitor",
+          "name": "ceramic capacitor",
+          "mention_text": "ceramic capacitors",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "ceramic capacitors",
+            "ceramic capacitor"
+          ],
+          "evidence_span": "Among the most valuable metals, palladium, generally used in connectors to improve conductivity (Reuter et al., 2013) as well as in ceramic capacitors (Chancerel and Rotter, 2009; Delfini et al., 2011; Fontana et al., 2018), should be present, but in MPs that kind of electronic components constitute an extremely small fraction of the electronic parts, therefore the quantity of Pd is below the limits of the instruments’ detectability.",
+          "evidence_texts": [
+            "Among the most valuable metals, palladium, generally used in connectors to improve conductivity (Reuter et al., 2013) as well as in ceramic capacitors (Chancerel and Rotter, 2009; Delfini et al., 2011; Fontana et al., 2018), should be present, but in MPs that kind of electronic components constitute an extremely small fraction of the electronic parts, therefore the quantity of Pd is below the limits of the instruments’ detectability.",
+            "ceramic capacitors"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_Cd",
+          "name": "Cd",
+          "mention_text": "Cd",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Cd",
+            "cadmium",
+            "Cadmium"
+          ],
+          "evidence_span": "Other metals <0.2% are Cd, Mo, Pt, V and Mg.",
+          "evidence_texts": [
+            "Other metals <0.2% are Cd, Mo, Pt, V and Mg.",
+            "Cd"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_Mo",
+          "name": "Mo",
+          "mention_text": "Mo",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Mo",
+            "molybdenum",
+            "Molybdenum"
+          ],
+          "evidence_span": "Other metals <0.2% are Cd, Mo, Pt, V and Mg.",
+          "evidence_texts": [
+            "Other metals <0.2% are Cd, Mo, Pt, V and Mg.",
+            "Mo"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_Pt",
+          "name": "Pt",
+          "mention_text": "Pt",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Pt",
+            "platinum",
+            "Platinum"
+          ],
+          "evidence_span": "Other metals <0.2% are Cd, Mo, Pt, V and Mg.",
+          "evidence_texts": [
+            "Other metals <0.2% are Cd, Mo, Pt, V and Mg.",
+            "Pt"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_V",
+          "name": "V",
+          "mention_text": "V",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "V",
+            "vanadium",
+            "Vanadium"
+          ],
+          "evidence_span": "Other metals <0.2% are Cd, Mo, Pt, V and Mg.",
+          "evidence_texts": [
+            "Other metals <0.2% are Cd, Mo, Pt, V and Mg.",
+            "V"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_Mg",
+          "name": "Mg",
+          "mention_text": "Mg",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Mg",
+            "magnesium",
+            "Magnesium"
+          ],
+          "evidence_span": "Other metals <0.2% are Cd, Mo, Pt, V and Mg.",
+          "evidence_texts": [
+            "Other metals <0.2% are Cd, Mo, Pt, V and Mg.",
+            "Mg"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_C",
+          "name": "C",
+          "mention_text": "carbon",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "carbon",
+            "C",
+            "Carbon"
+          ],
+          "evidence_span": "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%.",
+          "evidence_texts": [
+            "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%.",
+            "carbon"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_H",
+          "name": "H",
+          "mention_text": "hydrogen",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "hydrogen",
+            "H",
+            "Hydrogen"
+          ],
+          "evidence_span": "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%.",
+          "evidence_texts": [
+            "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%.",
+            "hydrogen"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_N",
+          "name": "N",
+          "mention_text": "nitrogen",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "nitrogen",
+            "N",
+            "Nitrogen"
+          ],
+          "evidence_span": "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%.",
+          "evidence_texts": [
+            "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%.",
+            "nitrogen"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_S",
+          "name": "S",
+          "mention_text": "sulfur",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "sulfur",
+            "S",
+            "Sulfur"
+          ],
+          "evidence_span": "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%.",
+          "evidence_texts": [
+            "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%.",
+            "sulfur"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_O",
+          "name": "O",
+          "mention_text": "oxygen",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "oxygen",
+            "O",
+            "Oxygen"
+          ],
+          "evidence_span": "The oxygen was calculated as 20.8%.",
+          "evidence_texts": [
+            "The oxygen was calculated as 20.8%.",
+            "oxygen"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_5110__1998_",
+          "name": "Nokia 5110 (1998)",
+          "mention_text": "1",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 5110 (1998)",
+            "1"
+          ],
+          "evidence_span": "1",
+          "evidence_texts": [
+            "1"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "1"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Ericsson_R380S__2000_",
+          "name": "Ericsson R380S (2000)",
+          "mention_text": "2",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Ericsson R380S (2000)",
+            "2"
+          ],
+          "evidence_span": "2",
+          "evidence_texts": [
+            "2"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "2"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_6210__2000_",
+          "name": "Nokia 6210 (2000)",
+          "mention_text": "3",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 6210 (2000)",
+            "3"
+          ],
+          "evidence_span": "3",
+          "evidence_texts": [
+            "3"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "3"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Ericsson_T68__2001_",
+          "name": "Ericsson T68 (2001)",
+          "mention_text": "4",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Ericsson T68 (2001)",
+            "4"
+          ],
+          "evidence_span": "4",
+          "evidence_texts": [
+            "4"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "4"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Motorola_RAZR_V3__2004_",
+          "name": "Motorola RAZR V3 (2004)",
+          "mention_text": "6",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Motorola RAZR V3 (2004)",
+            "6"
+          ],
+          "evidence_span": "6",
+          "evidence_texts": [
+            "6"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "6"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_1600__2005_",
+          "name": "Nokia 1600 (2005)",
+          "mention_text": "8",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 1600 (2005)",
+            "8"
+          ],
+          "evidence_span": "8",
+          "evidence_texts": [
+            "8"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "8"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Brondi_Amico_Flip___2016_",
+          "name": "Brondi Amico Flip+ (2016)",
+          "mention_text": "20",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Brondi Amico Flip+ (2016)",
+            "20"
+          ],
+          "evidence_span": "20",
+          "evidence_texts": [
+            "20"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "20"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        }
+      ],
+      "text_context_summary": "Characterization of leached electronic parts from manually dismantled mobile phones, reporting metal content (palladium, Cd, Mo, Pt, V, Mg) and elemental composition (C, H, N, S, O) of the solid residue.",
+      "deleted_entities": []
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_3.3. Recycling potentials of end-of-life MPs_cbd31eb8",
+    "section_name": "3.3. Recycling potentials of end-of-life MPs",
+    "page_number": 1,
+    "result": {
+      "entity_count": 14,
+      "entities": [
+        {
+          "id": "text_Product_mobile_phone",
+          "name": "mobile phone",
+          "mention_text": "MPs",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "MPs",
+            "mobile phone",
+            "mobile phones",
+            "mobile phone e-waste",
+            "mobile phone ewaste",
+            "mobile-phone e-waste",
+            "mobile-phone ewaste",
+            "cell phone",
+            "cell phones",
+            "smartphone",
+            "smartphones"
+          ],
+          "evidence_span": "Considering all materials found in MPs, gold constitutes the vast majority of the total value, although present in the electronic parts as a weighted average of only 0.12% (Table 4): the value of recoverable Au from 1 t of MPs (overall 276 g) is estimated to be about 9300 € (http://www.legor.com/it/quotazione-metalli; https:// www.ilsole24ore.com/finanza-e-mercati/materie-prime.shtml).",
+          "evidence_texts": [
+            "Considering all materials found in MPs, gold constitutes the vast majority of the total value, although present in the electronic parts as a weighted average of only 0.12% (Table 4): the value of recoverable Au from 1 t of MPs (overall 276 g) is estimated to be about 9300 € (http://www.legor.com/it/quotazione-metalli; https:// www.ilsole24ore.com/finanza-e-mercati/materie-prime.shtml).",
+            "MPs"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_Au",
+          "name": "Au",
+          "mention_text": "gold",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Au",
+            "gold",
+            "Gold"
+          ],
+          "evidence_span": "Considering all materials found in MPs, gold constitutes the vast majority of the total value, although present in the electronic parts as a weighted average of only 0.12% (Table 4): the value of recoverable Au from 1 t of MPs (overall 276 g) is estimated to be about 9300 € (http://www.legor.com/it/quotazione-metalli; https:// www.ilsole24ore.com/finanza-e-mercati/materie-prime.shtml).",
+          "evidence_texts": [
+            "Considering all materials found in MPs, gold constitutes the vast majority of the total value, although present in the electronic parts as a weighted average of only 0.12% (Table 4): the value of recoverable Au from 1 t of MPs (overall 276 g) is estimated to be about 9300 € (http://www.legor.com/it/quotazione-metalli; https:// www.ilsole24ore.com/finanza-e-mercati/materie-prime.shtml).",
+            "gold"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_Cu",
+          "name": "Cu",
+          "mention_text": "Copper",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Copper",
+            "copper",
+            "Cu"
+          ],
+          "evidence_span": "Copper is present in this fraction in a higher amount (132 kg/t) and contributes about 870 euros to the total value.",
+          "evidence_texts": [
+            "Copper is present in this fraction in a higher amount (132 kg/t) and contributes about 870 euros to the total value.",
+            "Copper"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_Ni",
+          "name": "Ni",
+          "mention_text": "nickel",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "nickel",
+            "Ni",
+            "Nickel"
+          ],
+          "evidence_span": "Profit margin could be increased through the recovery of other metals (such as nickel and tin) in addition to the currently recycled gold and copper which already make up most of the metal value of MPs.",
+          "evidence_texts": [
+            "Profit margin could be increased through the recovery of other metals (such as nickel and tin) in addition to the currently recycled gold and copper which already make up most of the metal value of MPs.",
+            "nickel"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_Sn",
+          "name": "Sn",
+          "mention_text": "tin",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "tin",
+            "Sn",
+            "Tin"
+          ],
+          "evidence_span": "Profit margin could be increased through the recovery of other metals (such as nickel and tin) in addition to the currently recycled gold and copper which already make up most of the metal value of MPs.",
+          "evidence_texts": [
+            "Profit margin could be increased through the recovery of other metals (such as nickel and tin) in addition to the currently recycled gold and copper which already make up most of the metal value of MPs.",
+            "tin"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Material_Al",
+          "name": "Al",
+          "mention_text": "aluminum",
+          "type": "Material",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Al",
+            "aluminum",
+            "Aluminum",
+            "Aluminium"
+          ],
+          "evidence_span": "Metal parts have been mainly identified as non-ferrous (with the exception of screws) and in particular as aluminum (Al) and their value is about 460 €/t (http://www.borsinorifiuti.com).",
+          "evidence_texts": [
+            "Metal parts have been mainly identified as non-ferrous (with the exception of screws) and in particular as aluminum (Al) and their value is about 460 €/t (http://www.borsinorifiuti.com).",
+            "aluminum"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_battery",
+          "name": "battery",
+          "mention_text": "batteries",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "batteries",
+            "battery"
+          ],
+          "evidence_span": "From personal communication with WEEE recycling plants, it can be assumed that the scrap value of batteries is around 120 € per t (value confirmed from http://www.borsinorifiuti.com); if so, the cost of collecting, sorting and shipping used batteries to a recycler exceeds the scrap value, so batteries tend to be disposed of.",
+          "evidence_texts": [
+            "From personal communication with WEEE recycling plants, it can be assumed that the scrap value of batteries is around 120 € per t (value confirmed from http://www.borsinorifiuti.com); if so, the cost of collecting, sorting and shipping used batteries to a recycler exceeds the scrap value, so batteries tend to be disposed of.",
+            "batteries"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_display",
+          "name": "display",
+          "mention_text": "displays",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "displays",
+            "display"
+          ],
+          "evidence_span": "For the displays it is very difficult to find information about the scrap value; probably the most similar market for these materials is that of the LCD monitors that, however, seem to be not industrially exploited yet.",
+          "evidence_texts": [
+            "For the displays it is very difficult to find information about the scrap value; probably the most similar market for these materials is that of the LCD monitors that, however, seem to be not industrially exploited yet.",
+            "displays"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_LCD_monitor",
+          "name": "LCD monitor",
+          "mention_text": "LCD monitors",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "LCD monitors",
+            "LCD monitor"
+          ],
+          "evidence_span": "For the displays it is very difficult to find information about the scrap value; probably the most similar market for these materials is that of the LCD monitors that, however, seem to be not industrially exploited yet.",
+          "evidence_texts": [
+            "For the displays it is very difficult to find information about the scrap value; probably the most similar market for these materials is that of the LCD monitors that, however, seem to be not industrially exploited yet.",
+            "LCD monitors"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_5110__1998_",
+          "name": "Nokia 5110 (1998)",
+          "mention_text": "1",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 5110 (1998)",
+            "1"
+          ],
+          "evidence_span": "1",
+          "evidence_texts": [
+            "1"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "1"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_6210__2000_",
+          "name": "Nokia 6210 (2000)",
+          "mention_text": "3",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 6210 (2000)",
+            "3"
+          ],
+          "evidence_span": "3",
+          "evidence_texts": [
+            "3"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "3"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Ericsson_T68__2001_",
+          "name": "Ericsson T68 (2001)",
+          "mention_text": "4",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Ericsson T68 (2001)",
+            "4"
+          ],
+          "evidence_span": "4",
+          "evidence_texts": [
+            "4"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "4"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_6111__2005_",
+          "name": "Nokia 6111 (2005)",
+          "mention_text": "10",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia 6111 (2005)",
+            "10"
+          ],
+          "evidence_span": "10",
+          "evidence_texts": [
+            "10"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "10"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Nokia_E51__2008_",
+          "name": "Nokia E51 (2008)",
+          "mention_text": "12",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Nokia E51 (2008)",
+            "12"
+          ],
+          "evidence_span": "12",
+          "evidence_texts": [
+            "12"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "12"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        }
+      ],
+      "text_context_summary": "The section discusses the economic viability of recycling end-of-life mobile phones, highlighting the value of recoverable materials such as gold, copper, nickel, tin, aluminum, and plastics, as well as the scrap value of batteries and displays.",
+      "deleted_entities": [
+        {
+          "reason": "generic entity excluded by entity blacklist",
+          "entity": {
+            "name": "plastic",
+            "mention_text": "Plastic materials",
+            "type": "Material",
+            "synonyms": [],
+            "evidence_span": "Plastic materials, although of different types, have a similar value of about 1 €/kg (http://www.borsinorifiuti.com) when properly separated during the collection; currently they are not differentiated so their management is a cost and not an added value."
+          },
+          "normalized_name": "plastic",
+          "mention_text": "Plastic materials",
+          "type": "Material"
+        }
+      ]
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_4. Conclusions_7ff2bd61",
+    "section_name": "4. Conclusions",
+    "page_number": 1,
+    "result": {
+      "entity_count": 0,
+      "entities": [],
+      "text_context_summary": ""
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_abstract_result_evidence",
+    "section_name": "Abstract Result Evidence",
+    "page_number": 1,
+    "result": {
+      "entity_count": 5,
+      "entities": [
+        {
+          "id": "text_Component_battery",
+          "name": "battery",
+          "mention_text": "batteries",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "batteries",
+            "battery"
+          ],
+          "evidence_span": "From dismantling operations, it was found that plastics, metals, electronic components, batteries and displays account for 33%, 11%, 23%, 24% and 9% respectively, as a weighted average.",
+          "evidence_texts": [
+            "From dismantling operations, it was found that plastics, metals, electronic components, batteries and displays account for 33%, 11%, 23%, 24% and 9% respectively, as a weighted average.",
+            "batteries"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Component_display",
+          "name": "display",
+          "mention_text": "displays",
+          "type": "Component",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "displays",
+            "display"
+          ],
+          "evidence_span": "From dismantling operations, it was found that plastics, metals, electronic components, batteries and displays account for 33%, 11%, 23%, 24% and 9% respectively, as a weighted average.",
+          "evidence_texts": [
+            "From dismantling operations, it was found that plastics, metals, electronic components, batteries and displays account for 33%, 11%, 23%, 24% and 9% respectively, as a weighted average.",
+            "displays"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Sagem_My_2002X__2005_",
+          "name": "Sagem My 2002X (2005)",
+          "mention_text": "9",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Sagem My 2002X (2005)",
+            "9"
+          ],
+          "evidence_span": "9",
+          "evidence_texts": [
+            "9"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "9"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "text_Product_Samsung_SGH_Z510__2005_",
+          "name": "Samsung SGH-Z510 (2005)",
+          "mention_text": "11",
+          "type": "Product",
+          "type_hints": [],
+          "type_flags": [],
+          "synonyms": [
+            "Samsung SGH-Z510 (2005)",
+            "11"
+          ],
+          "evidence_span": "11",
+          "evidence_texts": [
+            "11"
+          ],
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [
+            "11"
+          ],
+          "process_content": null,
+          "equipment": [],
+          "process_agents": [],
+          "attributes": {}
+        },
+        {
+          "id": "recovered_component_8bdf7d9060",
+          "name": "electronic components",
+          "mention_text": "electronic components",
+          "type": "Component",
+          "synonyms": [
+            "electronic component",
+            "electronic components"
+          ],
+          "evidence_span": "From dismantling operations, it was found that plastics, metals, electronic components, batteries and displays account for 33%, 11%, 23%, 24% and 9% respectively, as a weighted average.",
+          "scope_description": null,
+          "sample_size": null,
+          "sample_identifiers": [],
+          "attributes": {}
+        }
+      ],
+      "text_context_summary": "The abstract result evidence reports the weight percentages of plastics, metals, electronic components, batteries, and displays obtained from dismantling operations.",
+      "deleted_entities": [
+        {
+          "reason": "generic entity excluded by entity blacklist",
+          "entity": {
+            "name": "plastic",
+            "mention_text": "plastics",
+            "type": "Material",
+            "synonyms": [],
+            "evidence_span": "From dismantling operations, it was found that plastics, metals, electronic components, batteries and displays account for 33%, 11%, 23%, 24% and 9% respectively, as a weighted average."
+          },
+          "normalized_name": "plastic",
+          "mention_text": "plastics",
+          "type": "Material"
+        },
+        {
+          "reason": "generic entity excluded by entity blacklist",
+          "entity": {
+            "name": "metal",
+            "mention_text": "metals",
+            "type": "Material",
+            "synonyms": [],
+            "evidence_span": "From dismantling operations, it was found that plastics, metals, electronic components, batteries and displays account for 33%, 11%, 23%, 24% and 9% respectively, as a weighted average."
+          },
+          "normalized_name": "metal",
+          "mention_text": "metals",
+          "type": "Material"
+        },
+        {
+          "reason": "generic entity excluded by entity blacklist",
+          "entity": {
+            "name": "electronic component",
+            "mention_text": "electronic components",
+            "type": "Component",
+            "synonyms": [],
+            "evidence_span": "From dismantling operations, it was found that plastics, metals, electronic components, batteries and displays account for 33%, 11%, 23%, 24% and 9% respectively, as a weighted average."
+          },
+          "normalized_name": "electronic parts",
+          "mention_text": "electronic components",
+          "type": "Component"
+        }
+      ]
+    }
+  }
+]

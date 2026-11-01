@@ -1,0 +1,498 @@
+[
+  {
+    "reason": "measurement_semantics_revision",
+    "measurement": {
+      "property": "activation_energy",
+      "value": 45.73,
+      "unit": "kJ/mol",
+      "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+      "source_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
+      "source_sample": "spent LIBs powder",
+      "analyte": "Li",
+      "measured_entity": "Process_glycine_leaching_of_spent_LIBs_powder",
+      "measurement_method": "kinetic analysis",
+      "measurement_basis": "kinetic parameter for dissolution of the named metal, not a material output",
+      "archived_context": "temperature range 25 to 65 °C; 20 g spent LIBs powder; glycine solution at specific concentration; 30% H2O2 as reducing agent; pH adjusted with NaOH; temperature controlled in water bath or high-pressure reactor; stirred with magnetic stirrer; reaction timed; leachate and residue separated by vacuum filtration; concentrations converted to 100 mL solution.",
+      "conditions": null
+    },
+    "original_relation": {
+      "id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
+      "subject": "Process_glycine_leaching_of_spent_LIBs_powder",
+      "predicate": "HAS_OUTPUT",
+      "object": "Material_Li",
+      "subject_type": "Process",
+      "object_type": "Material",
+      "confidence": 0.8,
+      "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+      "source_name": "glycine leaching of spent LIBs powder",
+      "target_name": "Li",
+      "properties": {
+        "property": "activation_energy",
+        "value": 45.73,
+        "unit": "kJ/mol",
+        "source_sample": "spent LIBs powder",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "temperature range 25 to 65 °C",
+        "condition_keys": [
+          {
+            "key": "temperature",
+            "value": 65.0,
+            "unit": "°C",
+            "raw_text": "temperature range 25 to 65 °C"
+          }
+        ],
+        "condition_labels": [
+          "temperature range 25 to 65 °C"
+        ],
+        "condition": "temperature range 25 to 65 °C; 20 g spent LIBs powder; glycine solution at specific concentration; 30% H2O2 as reducing agent; pH adjusted with NaOH; temperature controlled in water bath or high-pressure reactor; stirred with magnetic stirrer; reaction timed; leachate and residue separated by vacuum filtration; concentrations converted to 100 mL solution.",
+        "condition_ids": [
+          "COND_9bd2e04aed97"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false,
+        "source_name": "glycine leaching of spent LIBs powder",
+        "target_name": "Li",
+        "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+        "source": "text",
+        "setting_id": "setting:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:glycine-leaching-conditions",
+        "setting_binding_basis": "unique_process_setting",
+        "setting_stage_name": "glycine leaching of spent LIBs powder",
+        "setting_condition_keys": [
+          {
+            "key": "mass",
+            "value": 20.0,
+            "unit": "g",
+            "raw_text": "20 g spent LIBs powder"
+          },
+          {
+            "key": "medium",
+            "value": "glycine solution at specific concentration",
+            "unit": null,
+            "raw_text": "glycine solution at specific concentration"
+          },
+          {
+            "key": "concentration",
+            "value": 30.0,
+            "unit": "%",
+            "raw_text": "30% H2O2 as reducing agent"
+          },
+          {
+            "key": "other",
+            "value": "pH adjusted with NaOH",
+            "unit": null,
+            "raw_text": "pH adjusted with NaOH"
+          },
+          {
+            "key": "medium",
+            "value": "temperature controlled in water bath or high-pressure reactor",
+            "unit": null,
+            "raw_text": "temperature controlled in water bath or high-pressure reactor"
+          },
+          {
+            "key": "other",
+            "value": "stirred with magnetic stirrer",
+            "unit": null,
+            "raw_text": "stirred with magnetic stirrer"
+          },
+          {
+            "key": "other",
+            "value": "reaction timed",
+            "unit": null,
+            "raw_text": "reaction timed"
+          },
+          {
+            "key": "other",
+            "value": "leachate and residue separated by vacuum filtration",
+            "unit": null,
+            "raw_text": "leachate and residue separated by vacuum filtration"
+          },
+          {
+            "key": "volume",
+            "value": 100.0,
+            "unit": "mL",
+            "raw_text": "concentrations converted to 100 mL solution"
+          }
+        ],
+        "setting_condition": "20 g spent LIBs powder; glycine solution at specific concentration; 30% H2O2 as reducing agent; pH adjusted with NaOH; temperature controlled in water bath or high-pressure reactor; stirred with magnetic stirrer; reaction timed; leachate and residue separated by vacuum filtration; concentrations converted to 100 mL solution.",
+        "evidence_spans": [
+          "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively."
+        ]
+      }
+    }
+  },
+  {
+    "reason": "measurement_semantics_revision",
+    "measurement": {
+      "property": "activation_energy",
+      "value": 53.13,
+      "unit": "kJ/mol",
+      "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+      "source_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni",
+      "source_sample": "spent LIBs powder",
+      "analyte": "Ni",
+      "measured_entity": "Process_glycine_leaching_of_spent_LIBs_powder",
+      "measurement_method": "kinetic analysis",
+      "measurement_basis": "kinetic parameter for dissolution of the named metal, not a material output",
+      "archived_context": "temperature range 25 to 65 °C; 20 g spent LIBs powder; glycine solution at specific concentration; 30% H2O2 as reducing agent; pH adjusted with NaOH; temperature controlled in water bath or high-pressure reactor; stirred with magnetic stirrer; reaction timed; leachate and residue separated by vacuum filtration; concentrations converted to 100 mL solution.",
+      "conditions": null
+    },
+    "original_relation": {
+      "id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni",
+      "subject": "Process_glycine_leaching_of_spent_LIBs_powder",
+      "predicate": "HAS_OUTPUT",
+      "object": "Material_Ni",
+      "subject_type": "Process",
+      "object_type": "Material",
+      "confidence": 0.8,
+      "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+      "source_name": "glycine leaching of spent LIBs powder",
+      "target_name": "Ni",
+      "properties": {
+        "property": "activation_energy",
+        "value": 53.13,
+        "unit": "kJ/mol",
+        "source_sample": "spent LIBs powder",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "temperature range 25 to 65 °C",
+        "condition_keys": [
+          {
+            "key": "temperature",
+            "value": 65.0,
+            "unit": "°C",
+            "raw_text": "temperature range 25 to 65 °C"
+          }
+        ],
+        "condition_labels": [
+          "temperature range 25 to 65 °C"
+        ],
+        "condition": "temperature range 25 to 65 °C; 20 g spent LIBs powder; glycine solution at specific concentration; 30% H2O2 as reducing agent; pH adjusted with NaOH; temperature controlled in water bath or high-pressure reactor; stirred with magnetic stirrer; reaction timed; leachate and residue separated by vacuum filtration; concentrations converted to 100 mL solution.",
+        "condition_ids": [
+          "COND_9bd2e04aed97"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false,
+        "source_name": "glycine leaching of spent LIBs powder",
+        "target_name": "Ni",
+        "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+        "source": "text",
+        "setting_id": "setting:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:glycine-leaching-conditions",
+        "setting_binding_basis": "unique_process_setting",
+        "setting_stage_name": "glycine leaching of spent LIBs powder",
+        "setting_condition_keys": [
+          {
+            "key": "mass",
+            "value": 20.0,
+            "unit": "g",
+            "raw_text": "20 g spent LIBs powder"
+          },
+          {
+            "key": "medium",
+            "value": "glycine solution at specific concentration",
+            "unit": null,
+            "raw_text": "glycine solution at specific concentration"
+          },
+          {
+            "key": "concentration",
+            "value": 30.0,
+            "unit": "%",
+            "raw_text": "30% H2O2 as reducing agent"
+          },
+          {
+            "key": "other",
+            "value": "pH adjusted with NaOH",
+            "unit": null,
+            "raw_text": "pH adjusted with NaOH"
+          },
+          {
+            "key": "medium",
+            "value": "temperature controlled in water bath or high-pressure reactor",
+            "unit": null,
+            "raw_text": "temperature controlled in water bath or high-pressure reactor"
+          },
+          {
+            "key": "other",
+            "value": "stirred with magnetic stirrer",
+            "unit": null,
+            "raw_text": "stirred with magnetic stirrer"
+          },
+          {
+            "key": "other",
+            "value": "reaction timed",
+            "unit": null,
+            "raw_text": "reaction timed"
+          },
+          {
+            "key": "other",
+            "value": "leachate and residue separated by vacuum filtration",
+            "unit": null,
+            "raw_text": "leachate and residue separated by vacuum filtration"
+          },
+          {
+            "key": "volume",
+            "value": 100.0,
+            "unit": "mL",
+            "raw_text": "concentrations converted to 100 mL solution"
+          }
+        ],
+        "setting_condition": "20 g spent LIBs powder; glycine solution at specific concentration; 30% H2O2 as reducing agent; pH adjusted with NaOH; temperature controlled in water bath or high-pressure reactor; stirred with magnetic stirrer; reaction timed; leachate and residue separated by vacuum filtration; concentrations converted to 100 mL solution.",
+        "evidence_spans": [
+          "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively."
+        ]
+      }
+    }
+  },
+  {
+    "reason": "measurement_semantics_revision",
+    "measurement": {
+      "property": "activation_energy",
+      "value": 50.64,
+      "unit": "kJ/mol",
+      "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+      "source_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co",
+      "source_sample": "spent LIBs powder",
+      "analyte": "Co",
+      "measured_entity": "Process_glycine_leaching_of_spent_LIBs_powder",
+      "measurement_method": "kinetic analysis",
+      "measurement_basis": "kinetic parameter for dissolution of the named metal, not a material output",
+      "archived_context": "temperature range 25 to 65 °C; 20 g spent LIBs powder; glycine solution at specific concentration; 30% H2O2 as reducing agent; pH adjusted with NaOH; temperature controlled in water bath or high-pressure reactor; stirred with magnetic stirrer; reaction timed; leachate and residue separated by vacuum filtration; concentrations converted to 100 mL solution.",
+      "conditions": null
+    },
+    "original_relation": {
+      "id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co",
+      "subject": "Process_glycine_leaching_of_spent_LIBs_powder",
+      "predicate": "HAS_OUTPUT",
+      "object": "Material_Co",
+      "subject_type": "Process",
+      "object_type": "Material",
+      "confidence": 0.8,
+      "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+      "source_name": "glycine leaching of spent LIBs powder",
+      "target_name": "Co",
+      "properties": {
+        "property": "activation_energy",
+        "value": 50.64,
+        "unit": "kJ/mol",
+        "source_sample": "spent LIBs powder",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "temperature range 25 to 65 °C",
+        "condition_keys": [
+          {
+            "key": "temperature",
+            "value": 65.0,
+            "unit": "°C",
+            "raw_text": "temperature range 25 to 65 °C"
+          }
+        ],
+        "condition_labels": [
+          "temperature range 25 to 65 °C"
+        ],
+        "condition": "temperature range 25 to 65 °C; 20 g spent LIBs powder; glycine solution at specific concentration; 30% H2O2 as reducing agent; pH adjusted with NaOH; temperature controlled in water bath or high-pressure reactor; stirred with magnetic stirrer; reaction timed; leachate and residue separated by vacuum filtration; concentrations converted to 100 mL solution.",
+        "condition_ids": [
+          "COND_9bd2e04aed97"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false,
+        "source_name": "glycine leaching of spent LIBs powder",
+        "target_name": "Co",
+        "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+        "source": "text",
+        "setting_id": "setting:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:glycine-leaching-conditions",
+        "setting_binding_basis": "unique_process_setting",
+        "setting_stage_name": "glycine leaching of spent LIBs powder",
+        "setting_condition_keys": [
+          {
+            "key": "mass",
+            "value": 20.0,
+            "unit": "g",
+            "raw_text": "20 g spent LIBs powder"
+          },
+          {
+            "key": "medium",
+            "value": "glycine solution at specific concentration",
+            "unit": null,
+            "raw_text": "glycine solution at specific concentration"
+          },
+          {
+            "key": "concentration",
+            "value": 30.0,
+            "unit": "%",
+            "raw_text": "30% H2O2 as reducing agent"
+          },
+          {
+            "key": "other",
+            "value": "pH adjusted with NaOH",
+            "unit": null,
+            "raw_text": "pH adjusted with NaOH"
+          },
+          {
+            "key": "medium",
+            "value": "temperature controlled in water bath or high-pressure reactor",
+            "unit": null,
+            "raw_text": "temperature controlled in water bath or high-pressure reactor"
+          },
+          {
+            "key": "other",
+            "value": "stirred with magnetic stirrer",
+            "unit": null,
+            "raw_text": "stirred with magnetic stirrer"
+          },
+          {
+            "key": "other",
+            "value": "reaction timed",
+            "unit": null,
+            "raw_text": "reaction timed"
+          },
+          {
+            "key": "other",
+            "value": "leachate and residue separated by vacuum filtration",
+            "unit": null,
+            "raw_text": "leachate and residue separated by vacuum filtration"
+          },
+          {
+            "key": "volume",
+            "value": 100.0,
+            "unit": "mL",
+            "raw_text": "concentrations converted to 100 mL solution"
+          }
+        ],
+        "setting_condition": "20 g spent LIBs powder; glycine solution at specific concentration; 30% H2O2 as reducing agent; pH adjusted with NaOH; temperature controlled in water bath or high-pressure reactor; stirred with magnetic stirrer; reaction timed; leachate and residue separated by vacuum filtration; concentrations converted to 100 mL solution.",
+        "evidence_spans": [
+          "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively."
+        ]
+      }
+    }
+  },
+  {
+    "reason": "measurement_semantics_revision",
+    "measurement": {
+      "property": "activation_energy",
+      "value": 60.36,
+      "unit": "kJ/mol",
+      "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+      "source_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn",
+      "source_sample": "spent LIBs powder",
+      "analyte": "Mn",
+      "measured_entity": "Process_glycine_leaching_of_spent_LIBs_powder",
+      "measurement_method": "kinetic analysis",
+      "measurement_basis": "kinetic parameter for dissolution of the named metal, not a material output",
+      "archived_context": "temperature range 25 to 65 °C; 20 g spent LIBs powder; glycine solution at specific concentration; 30% H2O2 as reducing agent; pH adjusted with NaOH; temperature controlled in water bath or high-pressure reactor; stirred with magnetic stirrer; reaction timed; leachate and residue separated by vacuum filtration; concentrations converted to 100 mL solution.",
+      "conditions": null
+    },
+    "original_relation": {
+      "id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn",
+      "subject": "Process_glycine_leaching_of_spent_LIBs_powder",
+      "predicate": "HAS_OUTPUT",
+      "object": "Material_Mn",
+      "subject_type": "Process",
+      "object_type": "Material",
+      "confidence": 0.8,
+      "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+      "source_name": "glycine leaching of spent LIBs powder",
+      "target_name": "Mn",
+      "properties": {
+        "property": "activation_energy",
+        "value": 60.36,
+        "unit": "kJ/mol",
+        "source_sample": "spent LIBs powder",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "temperature range 25 to 65 °C",
+        "condition_keys": [
+          {
+            "key": "temperature",
+            "value": 65.0,
+            "unit": "°C",
+            "raw_text": "temperature range 25 to 65 °C"
+          }
+        ],
+        "condition_labels": [
+          "temperature range 25 to 65 °C"
+        ],
+        "condition": "temperature range 25 to 65 °C; 20 g spent LIBs powder; glycine solution at specific concentration; 30% H2O2 as reducing agent; pH adjusted with NaOH; temperature controlled in water bath or high-pressure reactor; stirred with magnetic stirrer; reaction timed; leachate and residue separated by vacuum filtration; concentrations converted to 100 mL solution.",
+        "condition_ids": [
+          "COND_9bd2e04aed97"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false,
+        "source_name": "glycine leaching of spent LIBs powder",
+        "target_name": "Mn",
+        "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+        "source": "text",
+        "setting_id": "setting:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:glycine-leaching-conditions",
+        "setting_binding_basis": "unique_process_setting",
+        "setting_stage_name": "glycine leaching of spent LIBs powder",
+        "setting_condition_keys": [
+          {
+            "key": "mass",
+            "value": 20.0,
+            "unit": "g",
+            "raw_text": "20 g spent LIBs powder"
+          },
+          {
+            "key": "medium",
+            "value": "glycine solution at specific concentration",
+            "unit": null,
+            "raw_text": "glycine solution at specific concentration"
+          },
+          {
+            "key": "concentration",
+            "value": 30.0,
+            "unit": "%",
+            "raw_text": "30% H2O2 as reducing agent"
+          },
+          {
+            "key": "other",
+            "value": "pH adjusted with NaOH",
+            "unit": null,
+            "raw_text": "pH adjusted with NaOH"
+          },
+          {
+            "key": "medium",
+            "value": "temperature controlled in water bath or high-pressure reactor",
+            "unit": null,
+            "raw_text": "temperature controlled in water bath or high-pressure reactor"
+          },
+          {
+            "key": "other",
+            "value": "stirred with magnetic stirrer",
+            "unit": null,
+            "raw_text": "stirred with magnetic stirrer"
+          },
+          {
+            "key": "other",
+            "value": "reaction timed",
+            "unit": null,
+            "raw_text": "reaction timed"
+          },
+          {
+            "key": "other",
+            "value": "leachate and residue separated by vacuum filtration",
+            "unit": null,
+            "raw_text": "leachate and residue separated by vacuum filtration"
+          },
+          {
+            "key": "volume",
+            "value": 100.0,
+            "unit": "mL",
+            "raw_text": "concentrations converted to 100 mL solution"
+          }
+        ],
+        "setting_condition": "20 g spent LIBs powder; glycine solution at specific concentration; 30% H2O2 as reducing agent; pH adjusted with NaOH; temperature controlled in water bath or high-pressure reactor; stirred with magnetic stirrer; reaction timed; leachate and residue separated by vacuum filtration; concentrations converted to 100 mL solution.",
+        "evidence_spans": [
+          "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively."
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,1119 @@
+{
+  "date": "2026-11-01",
+  "extraction_api_calls": 0,
+  "basis": "Source-reviewed experiment binding corrections. No result values inferred.",
+  "papers": [
+    {
+      "paper": "A Combined Recovery Process of Metals in Spent Lithium-Ion Batteries",
+      "source_file": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/demo/ontoweee/datasets/battery20/updates/measurement-semantics-20261101/inputs/A Combined Recovery Process of Metals in Spent Lithium-Ion Batteries/triples_final.txt",
+      "source_sha256": "0950b1cb9f5bf5a350a7680575da65afa507ef7180b67ca6033442110347b2ea",
+      "transactions": [
+        {
+          "index": 10,
+          "original": {
+            "id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
+            "subject": "Component_lithium_ion_battery",
+            "subject_name": "lithium-ion battery",
+            "subject_type": "Component",
+            "predicate": "PROCESSED_BY",
+            "object": "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
+            "object_name": "hydrochloric acid leaching of recovered electrodes",
+            "object_type": "Process",
+            "properties": {
+              "study_scope": "current_study",
+              "process_role": "main_process",
+              "conditions": "heated and agitated at 90 °C for 4 h",
+              "condition_keys": [
+                {
+                  "key": "temperature",
+                  "value": 90.0,
+                  "unit": "°C",
+                  "raw_text": "heated and agitated at 90 °C for 4 h"
+                }
+              ],
+              "condition_labels": [
+                "heated and agitated at 90 °C for 4 h"
+              ],
+              "condition": "heated and agitated at 90 °C for 4 h",
+              "condition_ids": [
+                "COND_37a0ceed72f1"
+              ],
+              "raw_relation_type": "PROCESSED_BY",
+              "normalized_relation_type": "PROCESSED_BY",
+              "normalized_from_raw": false,
+              "source_name": "lithium-ion battery",
+              "target_name": "hydrochloric acid leaching of recovered electrodes",
+              "evidence_span": "Then, all of the parts were put into hydrochloric acid, heated and agitated at 90 -C for 4 h, dissolving all of the metals.",
+              "evidence_spans": [
+                "Then, all of the parts were put into hydrochloric acid, heated and agitated at 90 -C for 4 h, dissolving all of the metals."
+              ]
+            },
+            "conditions": [
+              {
+                "id": "COND_37a0ceed72f1",
+                "name": "temperature",
+                "type": "Temperature",
+                "value": 90.0,
+                "unit": "°C"
+              }
+            ]
+          },
+          "source_evidence": [
+            {
+              "file": "source/text.md",
+              "line": 25,
+              "quote": "The spent LIBs used in this study were provided by TES-AMM Co. Ltd. LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively. The components of LIBs were separated and measured in the laboratory as follows. First, the crust was removed with pincers and saws. Then, all of the parts were put into hydrochloric acid, heated and agitated at 90 -C for 4 h, dissolving all of the metals. The concentrations of different metals were measured with an inductive coupled plasma atomic emission spectrometer (ICP-AES). Finally, the content of each metal in the battery was calculated. The results indicated that Co accounted for 16% and Li, Cu, Al, Fe accounted for 2%, 10%, 3%, and 19% of the mass, respectively."
+            }
+          ],
+          "action": "retain_operation_evidence",
+          "operation_role": "analytical digestion"
+        }
+      ],
+      "added_processes": [],
+      "removed_unreferenced_entities": [],
+      "view_counts": {
+        "triples": 1,
+        "filtered_triples": 1,
+        "canonical_triples": 1,
+        "filtered_canonical_triples": 1,
+        "relations": 1,
+        "canonical_relations": 1,
+        "evidence_relations": 1
+      },
+      "original_final_count": 32,
+      "corrected_final_count": 31,
+      "derived_sha256": "d556d7c7344e397076f72c6f3d22681a47df8914ddcf1999e7bfcfa8d932d18c"
+    },
+    {
+      "paper": "A Copper-Catalyzed Bioleaching Process for Enhancement of Cobalt Dissolution from Spent Lithium-Ion Batteries",
+      "source_file": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/demo/ontoweee/datasets/battery20/updates/measurement-semantics-20261101/inputs/A Copper-Catalyzed Bioleaching Process for Enhancement of Cobalt Dissolution from Spent Lithium-Ion Batteries/triples_final.txt",
+      "source_sha256": "f1eac77d1d2a75148be1963d933157ed7cbe2dd65415161d95d3404814774daf",
+      "transactions": [
+        {
+          "index": 5,
+          "original": {
+            "id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
+            "subject": "Component_lithium_ion_battery",
+            "subject_name": "lithium-ion battery",
+            "subject_type": "Component",
+            "predicate": "PROCESSED_BY",
+            "object": "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
+            "object_name": "A. ferrooxidans bioleaching with 1.0 g/L copper ion",
+            "object_type": "Process",
+            "properties": {
+              "study_scope": "current_study",
+              "process_role": "pretreatment",
+              "conditions": "adapted to copper ion 10 g/L for a month",
+              "process_agent": "copper ion",
+              "treatment_members": [
+                "copper ion"
+              ],
+              "extra_qualifiers": "adaptation of A. ferrooxidans cultures to copper ion",
+              "condition_keys": [
+                {
+                  "key": "mass",
+                  "value": 10.0,
+                  "unit": "g",
+                  "raw_text": "adapted to copper ion 10 g/L for a month"
+                }
+              ],
+              "condition_labels": [
+                "adapted to copper ion 10 g/L for a month"
+              ],
+              "condition": "adapted to copper ion 10 g/L for a month",
+              "condition_ids": [
+                "COND_15973e4339a6"
+              ],
+              "raw_relation_type": "PROCESSED_BY",
+              "normalized_relation_type": "PROCESSED_BY",
+              "normalized_from_raw": false,
+              "source_name": "lithium-ion battery",
+              "target_name": "A. ferrooxidans bioleaching with 1.0 g/L copper ion",
+              "evidence_span": "These cultures were also adapted to the catalytic ions of copper ion 10 g/L for a month.",
+              "evidence_spans": [
+                "These cultures were also adapted to the catalytic ions of copper ion 10 g/L for a month."
+              ]
+            },
+            "conditions": [
+              {
+                "id": "COND_15973e4339a6",
+                "name": "mass",
+                "type": "mass",
+                "value": 10.0,
+                "unit": "g"
+              }
+            ]
+          },
+          "source_evidence": [
+            {
+              "file": "source/text.md",
+              "line": 35,
+              "quote": "## 2.2. Microorganisms and culture"
+            },
+            {
+              "file": "source/text.md",
+              "line": 37,
+              "quote": "Acidithiobacillus ferrooxidans (A.f) were applied in the experiments. The original bacteria were collected and isolated from the acidic mine drainage taken from Dexing Mine, Jiangxi Province, China. The bacteria were cultured in the 9 K medium (g/L): (NH4)2 SO4 3.0, K Cl0.1, K2HPO4 0.5, MgSO4 7 H2 O0.5, Ca (NO3)2 0.01 and FeSO4 7 H2O 44.8. The medium was adjusted to pH value 2.0 by sulfuric acid (3 mol L ^-1). Erlenmneyer flasks of 250 mL were used, containing 200 mL culture medium, and inoculum were 10% (v/v), and flasks were shaken at 160 rpm on an orbital shaker at 35 ^∘𝖢. The only energy source for bacteria growth was FeSO4,, and the isolates were identified as A. ferrooxidans. Before the bioleaching period of the experiment, these bacteria had been sub-cultured in medium containing 1% spent battery samples at 35 ^∘𝖢 for three months, so that they could adapt to the spent lithium-ion batteries circumstance faster. These cultures were also adapted to the catalytic ions of copper ion 10 g/L for a month."
+            },
+            {
+              "file": "source/text.md",
+              "line": 39,
+              "quote": "## 2.3. Bioleaching procedure"
+            }
+          ],
+          "action": "retain_operation_evidence",
+          "operation_role": "microbial acclimation"
+        },
+        {
+          "index": 18,
+          "original": {
+            "id": "REL_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion_HAS_OUTPUT_Material_Co",
+            "subject": "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
+            "subject_name": "A. ferrooxidans bioleaching with 1.0 g/L copper ion",
+            "subject_type": "Process",
+            "predicate": "HAS_OUTPUT",
+            "object": "Material_Co",
+            "object_name": "Co",
+            "object_type": "Material",
+            "properties": {
+              "property": "dissolution",
+              "value": 32.7,
+              "unit": "%",
+              "source_sample": "spent lithium-ion batteries",
+              "study_scope": "current_study",
+              "process_role": "main_process",
+              "conditions": "copper ion concentration 10 g/L",
+              "treatment_members": [
+                "copper ion"
+              ],
+              "property_raw": "dissolution_percentage",
+              "measure_key": "dissolution",
+              "condition_keys": [
+                {
+                  "key": "concentration",
+                  "value": "10 g/L",
+                  "unit": null,
+                  "raw_text": "copper ion concentration 10 g/L"
+                }
+              ],
+              "condition_labels": [
+                "copper ion concentration 10 g/L"
+              ],
+              "condition": "copper ion concentration 10 g/L",
+              "condition_ids": [
+                "COND_62855161dff2"
+              ],
+              "raw_relation_type": "HAS_OUTPUT",
+              "normalized_relation_type": "HAS_OUTPUT",
+              "normalized_from_raw": false,
+              "source_name": "A. ferrooxidans bioleaching with 1.0 g/L copper ion",
+              "target_name": "Co",
+              "evidence_span": "when the copper ions concentrations were 0.01, 0.1 and 10 g/L, cobalt dissolution percentages were 46.0%, 86.4% and 32.7%, respectively",
+              "evidence_spans": [
+                "when the copper ions concentrations were 0.01, 0.1 and 10 g/L, cobalt dissolution percentages were 46.0%, 86.4% and 32.7%, respectively"
+              ]
+            },
+            "conditions": [
+              {
+                "id": "COND_62855161dff2",
+                "name": "concentration",
+                "type": "Concentration",
+                "value": "10 g/L",
+                "unit": null
+              }
+            ]
+          },
+          "corrected": {
+            "id": "REL_reviewed_ca2b9ad47a5b8ec4",
+            "subject": "Process_reviewed_5a8f38ab000de8",
+            "subject_name": "A. ferrooxidans bioleaching with 10 g/L copper ion",
+            "subject_type": "Process",
+            "predicate": "HAS_OUTPUT",
+            "object": "Material_Co",
+            "object_name": "Co",
+            "object_type": "Material",
+            "properties": {
+              "property": "dissolution",
+              "value": 32.7,
+              "unit": "%",
+              "source_sample": "spent lithium-ion batteries",
+              "study_scope": "current_study",
+              "process_role": "main_process",
+              "conditions": "copper ion 10 g/L",
+              "treatment_members": [
+                "copper ion"
+              ],
+              "property_raw": "dissolution_percentage",
+              "measure_key": "dissolution",
+              "condition_keys": [
+                {
+                  "key": "concentration",
+                  "value": 10.0,
+                  "unit": "g/L",
+                  "raw_text": "copper ion 10 g/L"
+                }
+              ],
+              "condition_labels": [
+                "copper ion 10 g/L"
+              ],
+              "condition": "copper ion 10 g/L",
+              "condition_ids": [],
+              "raw_relation_type": "HAS_OUTPUT",
+              "normalized_relation_type": "HAS_OUTPUT",
+              "normalized_from_raw": false,
+              "source_name": "A. ferrooxidans bioleaching with 10 g/L copper ion",
+              "target_name": "Co",
+              "evidence_span": "when the copper ions concentrations were 0.01, 0.1 and 10 g/L, cobalt dissolution percentages were 46.0%, 86.4% and 32.7%, respectively",
+              "evidence_spans": [
+                "when the copper ions concentrations were 0.01, 0.1 and 10 g/L, cobalt dissolution percentages were 46.0%, 86.4% and 32.7%, respectively"
+              ],
+              "setting_id": "setting:reviewed:67f598994de7b2",
+              "setting_stage_name": "A. ferrooxidans bioleaching with 10 g/L copper ion",
+              "setting_condition": "copper ion 10 g/L",
+              "setting_condition_keys": [
+                {
+                  "key": "concentration",
+                  "value": 10.0,
+                  "unit": "g/L",
+                  "raw_text": "copper ion 10 g/L"
+                }
+              ],
+              "setting_binding_basis": "evidence_reviewed_revision"
+            },
+            "source_name": "A. ferrooxidans bioleaching with 10 g/L copper ion"
+          },
+          "source_evidence": [
+            {
+              "file": "source/text.md",
+              "line": 67,
+              "quote": "The dissolution percentages of cobalt catalyzed under different Cu ^2+ concentrations are shown in Fig. 3, which show that copper ion has an important catalytic effect on the dissolution rate and cobalt dissolution percentage. The best catalytic effect was obtained using 0.75 g copper/L at 6 days, cobalt dissolution percentage increased from 43.1% in the absence of copper ions to 99.9% at the copper concentration of 0.75 g / L, and the corresponding Co concentration was 4.8 g/L. However, when the copper ions concentrations were 0.01, 0.1 and 10 g/L, cobalt dissolution percentages were 46.0%, 86.4% and 32.7%, respectively. It shows that additional amounts of Cu ^2+ increased the percentage of leached cobalt, which is in agreement with the previous study. Ballester et al. [18] reported that the microbiological dissolution ofthe sphalerite improves considerably when using Ag ^+ and Cu ^2+ as catalysts, with zinc dissolution of 90%. Furthermore, it showed that additional amounts of Cu ^2+ increased the percentage of metal leached."
+            }
+          ],
+          "action": "correct_binding"
+        }
+      ],
+      "added_processes": [
+        {
+          "id": "Process_reviewed_5a8f38ab000de8",
+          "name": "A. ferrooxidans bioleaching with 10 g/L copper ion",
+          "mention_text": "A. ferrooxidans bioleaching with 10 g/L copper ion",
+          "type": "Process",
+          "synonyms": [
+            "A. ferrooxidans bioleaching with 10 g/L copper ion"
+          ],
+          "description": "The dissolution percentages of cobalt catalyzed under different Cu ^2+ concentrations are shown in Fig. 3, which show that copper ion has an important catalytic effect on the dissolution rate and cobalt dissolution percentage. The best catalytic effect was obtained using 0.75 g copper/L at 6 days, cobalt dissolution percentage increased from 43.1% in the absence of copper ions to 99.9% at the copper concentration of 0.75 g / L, and the corresponding Co concentration was 4.8 g/L. However, when the copper ions concentrations were 0.01, 0.1 and 10 g/L, cobalt dissolution percentages were 46.0%, 86.4% and 32.7%, respectively. It shows that additional amounts of Cu ^2+ increased the percentage of leached cobalt, which is in agreement with the previous study. Ballester et al. [18] reported that the microbiological dissolution ofthe sphalerite improves considerably when using Ag ^+ and Cu ^2+ as catalysts, with zinc dissolution of 90%. Furthermore, it showed that additional amounts of Cu ^2+ increased the percentage of metal leached.",
+          "process_content": "The dissolution percentages of cobalt catalyzed under different Cu ^2+ concentrations are shown in Fig. 3, which show that copper ion has an important catalytic effect on the dissolution rate and cobalt dissolution percentage. The best catalytic effect was obtained using 0.75 g copper/L at 6 days, cobalt dissolution percentage increased from 43.1% in the absence of copper ions to 99.9% at the copper concentration of 0.75 g / L, and the corresponding Co concentration was 4.8 g/L. However, when the copper ions concentrations were 0.01, 0.1 and 10 g/L, cobalt dissolution percentages were 46.0%, 86.4% and 32.7%, respectively. It shows that additional amounts of Cu ^2+ increased the percentage of leached cobalt, which is in agreement with the previous study. Ballester et al. [18] reported that the microbiological dissolution ofthe sphalerite improves considerably when using Ag ^+ and Cu ^2+ as catalysts, with zinc dissolution of 90%. Furthermore, it showed that additional amounts of Cu ^2+ increased the percentage of metal leached.",
+          "evidence_span": "The dissolution percentages of cobalt catalyzed under different Cu ^2+ concentrations are shown in Fig. 3, which show that copper ion has an important catalytic effect on the dissolution rate and cobalt dissolution percentage. The best catalytic effect was obtained using 0.75 g copper/L at 6 days, cobalt dissolution percentage increased from 43.1% in the absence of copper ions to 99.9% at the copper concentration of 0.75 g / L, and the corresponding Co concentration was 4.8 g/L. However, when the copper ions concentrations were 0.01, 0.1 and 10 g/L, cobalt dissolution percentages were 46.0%, 86.4% and 32.7%, respectively. It shows that additional amounts of Cu ^2+ increased the percentage of leached cobalt, which is in agreement with the previous study. Ballester et al. [18] reported that the microbiological dissolution ofthe sphalerite improves considerably when using Ag ^+ and Cu ^2+ as catalysts, with zinc dissolution of 90%. Furthermore, it showed that additional amounts of Cu ^2+ increased the percentage of metal leached.",
+          "parent_process": null,
+          "source_mark": "evidence_reviewed_revision"
+        }
+      ],
+      "removed_unreferenced_entities": [],
+      "view_counts": {
+        "triples": 2,
+        "filtered_triples": 2,
+        "canonical_triples": 2,
+        "filtered_canonical_triples": 2,
+        "relations": 2,
+        "canonical_relations": 2,
+        "evidence_relations": 2
+      },
+      "original_final_count": 55,
+      "corrected_final_count": 55,
+      "derived_sha256": "56eb0f2e0df1a4801f2e410e4e6d175a548380d2828cd361cec7d2ea786a3841",
+      "entity_corrections": [
+        {
+          "entity_id": "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
+          "original_synonyms": [
+            "A. ferrooxidans bioleaching with 1.0 g/L copper ion",
+            "A. ferrooxidans bioleaching with 10 g/L copper ion"
+          ],
+          "corrected_synonyms": [
+            "A. ferrooxidans bioleaching with 1.0 g/L copper ion"
+          ],
+          "original_evidence_texts": [
+            "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 1.0 g/L copper ion; Co concentration determined over 10 days.",
+            "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 10 g/L copper ion; Co concentration determined over 10 days.",
+            "A. ferrooxidans bioleaching with 10 g/L copper ion",
+            "These cultures were also adapted to the catalytic ions of copper ion 10 g/L for a month.",
+            "A. ferrooxidans bioleaching with 1.0 g/L copper ion"
+          ],
+          "corrected_evidence_texts": [
+            "35 ^∘𝖢. In each bioleaching experiment, the pulp density was kept at 1% (s/v) in 250 mL flasks with 200 mL medium while the volume fraction of inoculation was 5% (v / v).. When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively. A controlled experiment was performed in parallel without copper ion for comparison. All experiments were carried out for 10 days. During the bioleaching experiment, 1 mL of solution was sampled every 24 h, the solution filtered through a 0.45 -m membrane was used for Co and Cu concentrations determination. By the end of the experiment, leaching solution were also filtered through a 0.45 -m membrane, and the residues dried in vacuum dry oven at 35 ^∘C for _ X - r a y diffraction (XRD), energy spectrum analysis (EDX) and scanning electron microscopy (SEM) analyses, the solution after separation were used for pH and redox potential determination."
+          ],
+          "basis": "Distinct concentrations are not aliases; source protocol lists 1.0 and 10 g/L separately. Culture adaptation is not evidence for this recovery arm."
+        }
+      ]
+    },
+    {
+      "paper": "Bioleaching of Valuable Metals from Spent Lithium-Ion Mobile Phone Batteries Using Aspergillus Niger",
+      "source_file": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/demo/ontoweee/datasets/battery20/updates/measurement-semantics-20261101/inputs/Bioleaching of Valuable Metals from Spent Lithium-Ion Mobile Phone Batteries Using Aspergillus Niger/triples_final.txt",
+      "source_sha256": "702c4208e30fd8bd1e7eeaffd58360d0b1d9ce77e2e665ade40b9c7d769e13da",
+      "transactions": [
+        {
+          "index": 11,
+          "original": {
+            "id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_chemical_leaching",
+            "subject": "Component_lithium_ion_battery",
+            "subject_name": "lithium-ion battery",
+            "subject_type": "Component",
+            "predicate": "PROCESSED_BY",
+            "object": "Process_chemical_leaching",
+            "object_name": "chemical leaching",
+            "object_type": "Process",
+            "properties": {
+              "study_scope": "current_study",
+              "process_role": "main_process",
+              "source_sample": "battery powder",
+              "conditions": "1 g battery powder and 100 mL deionized water, various amounts of 1.0 M HNO3 added to achieve pH from that of the sample to about 4, shaken at room temperature for 5 days",
+              "process_agent": "1.0 M HNO3",
+              "treatment_members": [
+                "HNO3"
+              ],
+              "measurement_method": "pH measurement",
+              "condition_keys": [
+                {
+                  "key": "temperature",
+                  "value": "room",
+                  "unit": "°C",
+                  "raw_text": "1 g battery powder and 100 mL deionized water, various amounts of 1.0 M HNO3 added to achieve pH from that of the sample to about 4, shaken at room temperature for 5 days"
+                }
+              ],
+              "condition_labels": [
+                "1 g battery powder and 100 mL deionized water, various amounts of 1.0 M HNO3 added to achieve pH from that of the sample to about 4, shaken at room temperature for 5 days"
+              ],
+              "condition": "1 g battery powder and 100 mL deionized water, various amounts of 1.0 M HNO3 added to achieve pH from that of the sample to about 4, shaken at room temperature for 5 days",
+              "condition_ids": [
+                "COND_168b536238f6"
+              ],
+              "raw_relation_type": "PROCESSED_BY",
+              "normalized_relation_type": "PROCESSED_BY",
+              "normalized_from_raw": false,
+              "source_name": "lithium-ion battery",
+              "target_name": "chemical leaching",
+              "evidence_span": "The acid neutralizing capacity (ANC) test is the leaching procedure for solidified products that gives information as to hydration progression and the overall buffering capacity of materials against acidification and chemical attack.",
+              "evidence_spans": [
+                "The acid neutralizing capacity (ANC) test is the leaching procedure for solidified products that gives information as to hydration progression and the overall buffering capacity of materials against acidification and chemical attack."
+              ]
+            },
+            "conditions": [
+              {
+                "id": "COND_168b536238f6",
+                "name": "temperature",
+                "type": "Temperature",
+                "value": "room",
+                "unit": "°C"
+              }
+            ]
+          },
+          "source_evidence": [
+            {
+              "file": "source/text.md",
+              "line": 55,
+              "quote": "The acid neutralizing capacity (ANC) test is the leaching procedure for solidified products that gives information as to hydration progression and the overall buffering capacity of materials against acidification and chemical attack. ANC is defined by measuring the amount of acid needed to change the pH value of the sample to a different chosen amount. The test was performed in Erlenmeyer flasks (containing 1 g battery powder and 100 mL deionized water) to which various amounts of 1.0 M HNO3 were added so as to have disparate pHs ranging from that of the sample to about 4. All flasks were shaken at room temperature for 5 days. After shaking and equilibration, the pH values of the solution were measured."
+            },
+            {
+              "file": "source/text.md",
+              "line": 57,
+              "quote": "## 2.3. Microorganism and growth condition"
+            }
+          ],
+          "action": "retain_operation_evidence",
+          "operation_role": "acid neutralizing capacity assay"
+        }
+      ],
+      "added_processes": [],
+      "removed_unreferenced_entities": [],
+      "view_counts": {
+        "triples": 1,
+        "filtered_triples": 1,
+        "canonical_triples": 1,
+        "filtered_canonical_triples": 1,
+        "relations": 1,
+        "canonical_relations": 1,
+        "evidence_relations": 1
+      },
+      "original_final_count": 70,
+      "corrected_final_count": 69,
+      "derived_sha256": "747dd8cd1c0bbdcc3c9fccb6b0d2ed11104011e540e2210ed7384ed594fcca4d"
+    },
+    {
+      "paper": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
+      "source_file": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/demo/ontoweee/datasets/battery20/updates/measurement-semantics-20261101/inputs/Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)/triples_final.txt",
+      "source_sha256": "1e44c8a315500665ff6477e514cdb26860f831a4f2a3744b4e5b9b0eb15d6110",
+      "transactions": [
+        {
+          "index": 13,
+          "original": {
+            "id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+            "subject": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+            "predicate": "HAS_OUTPUT",
+            "object": "Material_Li",
+            "subject_type": "Process",
+            "object_type": "Material",
+            "confidence": 0.8,
+            "evidence_span": "in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water",
+            "source_name": "reductive hydrochloric acid leaching of calcined powder",
+            "target_name": "Li",
+            "properties": {
+              "property": "leaching",
+              "value": 84,
+              "unit": "%",
+              "process_agent": "deionized water",
+              "treatment_members": [
+                "deionized water"
+              ],
+              "study_scope": "current_study",
+              "graph_status": "active",
+              "process_role": "main_process",
+              "property_raw": "leaching_efficiency",
+              "measure_key": "leaching",
+              "raw_relation_type": "HAS_OUTPUT",
+              "normalized_relation_type": "HAS_OUTPUT",
+              "normalized_from_raw": false,
+              "source_name": "reductive hydrochloric acid leaching of calcined powder",
+              "target_name": "Li",
+              "evidence_span": "in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water",
+              "source": "text",
+              "condition_ids": [],
+              "setting_id": "setting:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):reductive-hydrochloric-acid-leaching-conditions",
+              "setting_binding_basis": "unique_process_setting",
+              "setting_stage_name": "reductive hydrochloric acid leaching of calcined powder",
+              "setting_condition_keys": [
+                {
+                  "key": "medium",
+                  "value": "thermostatic water bath",
+                  "unit": null,
+                  "raw_text": "thermostatic water bath"
+                },
+                {
+                  "key": "other",
+                  "value": "manual constant agitation",
+                  "unit": null,
+                  "raw_text": "manual constant agitation"
+                },
+                {
+                  "key": "other",
+                  "value": "effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated",
+                  "unit": null,
+                  "raw_text": "effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated"
+                }
+              ],
+              "setting_condition": "thermostatic water bath; manual constant agitation; effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated",
+              "condition": "thermostatic water bath; manual constant agitation; effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated",
+              "evidence_spans": [
+                "in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water"
+              ]
+            }
+          },
+          "corrected": {
+            "id": "REL_reviewed_a9a09b1adf9bea5e",
+            "subject": "Process_reviewed_c2ca1a770bfa07",
+            "predicate": "HAS_OUTPUT",
+            "object": "Material_Li",
+            "subject_type": "Process",
+            "object_type": "Material",
+            "confidence": 0.8,
+            "evidence_span": "in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water",
+            "source_name": "deionized water leaching of calcined anode powder",
+            "target_name": "Li",
+            "properties": {
+              "property": "leaching",
+              "value": 84,
+              "unit": "%",
+              "process_agent": "deionized water",
+              "treatment_members": [
+                "deionized water"
+              ],
+              "study_scope": "current_study",
+              "graph_status": "active",
+              "process_role": "main_process",
+              "property_raw": "leaching_efficiency",
+              "measure_key": "leaching",
+              "raw_relation_type": "HAS_OUTPUT",
+              "normalized_relation_type": "HAS_OUTPUT",
+              "normalized_from_raw": false,
+              "source_name": "deionized water leaching of calcined anode powder",
+              "target_name": "Li",
+              "evidence_span": "in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water",
+              "source": "text",
+              "condition_ids": [],
+              "setting_id": "setting:reviewed:683fbd90c18558",
+              "setting_binding_basis": "evidence_reviewed_revision",
+              "setting_stage_name": "deionized water leaching of calcined anode powder",
+              "setting_condition_keys": [
+                {
+                  "key": "medium",
+                  "value": "deionized water only",
+                  "unit": null,
+                  "raw_text": "deionized water only"
+                },
+                {
+                  "key": "other",
+                  "value": "without HCl",
+                  "unit": null,
+                  "raw_text": "without HCl",
+                  "negated": true
+                }
+              ],
+              "setting_condition": "deionized water only; without HCl",
+              "condition": "deionized water only; without HCl",
+              "evidence_spans": [
+                "in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water"
+              ],
+              "conditions": "deionized water only; without HCl",
+              "condition_labels": [
+                "deionized water only; without HCl"
+              ],
+              "condition_keys": [
+                {
+                  "key": "medium",
+                  "value": "deionized water only",
+                  "unit": null,
+                  "raw_text": "deionized water only"
+                },
+                {
+                  "key": "other",
+                  "value": "without HCl",
+                  "unit": null,
+                  "raw_text": "without HCl",
+                  "negated": true
+                }
+              ]
+            },
+            "subject_name": "deionized water leaching of calcined anode powder"
+          },
+          "source_evidence": [
+            {
+              "file": "source/text.md",
+              "line": 75,
+              "quote": "As described above, the main forms of Li in the anode active material are Li2CO3,, Li O, LiF, ROCO Li, CH OLi. Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water. While others are almost insoluble in water and inlaid in the anode active materials, such as ROCO Li, LiF, and they will occur decomposition reaction in HCl solution. Therefore, the leaching reaction between anode materials and HCl solution is a multiple process (Aurbach et al., 2002; Jiangfeng et al., 2004): (1) the hydrolysis of lithium salt (2) double decomposition reaction between lithium salt and HCl solution."
+            },
+            {
+              "file": "source/text.md",
+              "line": 103,
+              "quote": "As shown in Fig. 5, leaching efficiency was firstly increasing and then decreasing with the continuous increasing of acid concentration. At the first stage, the hydrolysis of lithium salt was dominated that caused leaching efficiency can reach 83.6% when only using deionized water as the leachate merely (see Eqs. (1)–(3)). After adding HCl, it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M. This is because that the increasing acid concentration brings incremental amount of proton which can replace more Li+. On the other hand, when HCl was consumed at the solid liquid interphase, the concentration gradient of H+ between solid–liquid interface and solution was gradually increased. It leaded to a quicker diffusion velocity. Both of them can promote the leaching process and bring higher leaching efficiency. Henceforth, the leaching reaction reached equilibrium, and the leaching efficiency of lithium reached its maximum. This is because that the diffusion velocity would not change with further increase of HCl concentration, and the Li+ had been replaced sufficiently. From the figure, 3 M was employed as the optimum acid concentration."
+            }
+          ],
+          "action": "correct_binding"
+        },
+        {
+          "index": 14,
+          "original": {
+            "id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+            "subject": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+            "predicate": "HAS_OUTPUT",
+            "object": "Material_Li",
+            "subject_type": "Process",
+            "object_type": "Material",
+            "confidence": 0.8,
+            "evidence_span": "it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M",
+            "source_name": "reductive hydrochloric acid leaching of calcined powder",
+            "target_name": "Li",
+            "properties": {
+              "property": "leaching",
+              "value": 98,
+              "unit": "%",
+              "secondary_value": 84,
+              "secondary_unit": "%",
+              "source_sample": "calcined powder",
+              "study_scope": "current_study",
+              "graph_status": "active",
+              "process_role": "main_process",
+              "conditions": "HCl concentration increasing from 2.5 to 3 M; leaching temperature 80 C; S/L ratio 1:50 g/mL; HCl-H2O volume ratio 10:1; leaching time 90 min",
+              "process_agent": "HCl",
+              "treatment_members": [
+                "HCl"
+              ],
+              "extra_qualifiers": "optimum acid concentration 3 M",
+              "property_raw": "leaching_efficiency",
+              "measure_key": "leaching",
+              "condition_keys": [
+                {
+                  "key": "concentration",
+                  "value": 3.0,
+                  "unit": "M",
+                  "raw_text": "HCl concentration increasing from 2.5 to 3 M"
+                },
+                {
+                  "key": "temperature",
+                  "value": 80.0,
+                  "unit": "°C",
+                  "raw_text": "leaching temperature 80 C"
+                },
+                {
+                  "key": "solid_liquid_ratio",
+                  "value": "1:50",
+                  "unit": null,
+                  "raw_text": "S/L ratio 1:50 g/mL"
+                },
+                {
+                  "key": "other",
+                  "value": "HCl-H2O volume ratio 10:1",
+                  "unit": null,
+                  "raw_text": "HCl-H2O volume ratio 10:1"
+                },
+                {
+                  "key": "time",
+                  "value": 90.0,
+                  "unit": "min",
+                  "raw_text": "leaching time 90 min"
+                }
+              ],
+              "condition_labels": [
+                "HCl concentration increasing from 2.5 to 3 M",
+                "leaching temperature 80 C",
+                "S/L ratio 1:50 g/mL",
+                "HCl-H2O volume ratio 10:1",
+                "leaching time 90 min"
+              ],
+              "condition": "HCl concentration increasing from 2.5 to 3 M; leaching temperature 80 C; S/L ratio 1:50 g/mL; HCl-H2O volume ratio 10:1; leaching time 90 min",
+              "condition_ids": [
+                "COND_6257e27fbf09",
+                "COND_db51691a6b8c",
+                "COND_60305e98ab7e",
+                "COND_0069c5de012a",
+                "COND_b7d72e3adb05"
+              ],
+              "raw_relation_type": "HAS_OUTPUT",
+              "normalized_relation_type": "HAS_OUTPUT",
+              "normalized_from_raw": false,
+              "source_name": "reductive hydrochloric acid leaching of calcined powder",
+              "target_name": "Li",
+              "evidence_span": "it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M",
+              "source": "text",
+              "evidence_spans": [
+                "it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M"
+              ]
+            }
+          },
+          "corrected": {
+            "id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+            "subject": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+            "predicate": "HAS_OUTPUT",
+            "object": "Material_Li",
+            "subject_type": "Process",
+            "object_type": "Material",
+            "confidence": 0.8,
+            "evidence_span": "it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M",
+            "source_name": "reductive hydrochloric acid leaching of calcined powder",
+            "target_name": "Li",
+            "properties": {
+              "property": "leaching",
+              "value": 98,
+              "unit": "%",
+              "source_sample": "calcined powder",
+              "study_scope": "current_study",
+              "graph_status": "active",
+              "process_role": "main_process",
+              "conditions": "HCl concentration increasing from 2.5 to 3 M; leaching temperature 80 C; S/L ratio 1:50 g/mL; HCl-H2O volume ratio 10:1; leaching time 90 min",
+              "process_agent": "HCl",
+              "treatment_members": [
+                "HCl"
+              ],
+              "extra_qualifiers": "optimum acid concentration 3 M",
+              "property_raw": "leaching_efficiency",
+              "measure_key": "leaching",
+              "condition_keys": [
+                {
+                  "key": "concentration",
+                  "value": 3.0,
+                  "unit": "M",
+                  "raw_text": "HCl concentration increasing from 2.5 to 3 M"
+                },
+                {
+                  "key": "temperature",
+                  "value": 80.0,
+                  "unit": "°C",
+                  "raw_text": "leaching temperature 80 C"
+                },
+                {
+                  "key": "solid_liquid_ratio",
+                  "value": "1:50",
+                  "unit": null,
+                  "raw_text": "S/L ratio 1:50 g/mL"
+                },
+                {
+                  "key": "other",
+                  "value": "HCl-H2O volume ratio 10:1",
+                  "unit": null,
+                  "raw_text": "HCl-H2O volume ratio 10:1"
+                },
+                {
+                  "key": "time",
+                  "value": 90.0,
+                  "unit": "min",
+                  "raw_text": "leaching time 90 min"
+                }
+              ],
+              "condition_labels": [
+                "HCl concentration increasing from 2.5 to 3 M",
+                "leaching temperature 80 C",
+                "S/L ratio 1:50 g/mL",
+                "HCl-H2O volume ratio 10:1",
+                "leaching time 90 min"
+              ],
+              "condition": "HCl concentration increasing from 2.5 to 3 M; leaching temperature 80 C; S/L ratio 1:50 g/mL; HCl-H2O volume ratio 10:1; leaching time 90 min",
+              "condition_ids": [
+                "COND_6257e27fbf09",
+                "COND_db51691a6b8c",
+                "COND_60305e98ab7e",
+                "COND_0069c5de012a",
+                "COND_b7d72e3adb05"
+              ],
+              "raw_relation_type": "HAS_OUTPUT",
+              "normalized_relation_type": "HAS_OUTPUT",
+              "normalized_from_raw": false,
+              "source_name": "reductive hydrochloric acid leaching of calcined powder",
+              "target_name": "Li",
+              "evidence_span": "it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M",
+              "source": "text",
+              "evidence_spans": [
+                "it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M"
+              ],
+              "comparison_evidence": {
+                "value": 84,
+                "unit": "%",
+                "treatment": "deionized water only",
+                "evidence_span": "As shown in Fig. 5, leaching efficiency was firstly increasing and then decreasing with the continuous increasing of acid concentration. At the first stage, the hydrolysis of lithium salt was dominated that caused leaching efficiency can reach 83.6% when only using deionized water as the leachate merely (see Eqs. (1)–(3)). After adding HCl, it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M. This is because that the increasing acid concentration brings incremental amount of proton which can replace more Li+. On the other hand, when HCl was consumed at the solid liquid interphase, the concentration gradient of H+ between solid–liquid interface and solution was gradually increased. It leaded to a quicker diffusion velocity. Both of them can promote the leaching process and bring higher leaching efficiency. Henceforth, the leaching reaction reached equilibrium, and the leaching efficiency of lithium reached its maximum. This is because that the diffusion velocity would not change with further increase of HCl concentration, and the Li+ had been replaced sufficiently. From the figure, 3 M was employed as the optimum acid concentration."
+              }
+            }
+          },
+          "source_evidence": [
+            {
+              "file": "source/text.md",
+              "line": 103,
+              "quote": "As shown in Fig. 5, leaching efficiency was firstly increasing and then decreasing with the continuous increasing of acid concentration. At the first stage, the hydrolysis of lithium salt was dominated that caused leaching efficiency can reach 83.6% when only using deionized water as the leachate merely (see Eqs. (1)–(3)). After adding HCl, it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M. This is because that the increasing acid concentration brings incremental amount of proton which can replace more Li+. On the other hand, when HCl was consumed at the solid liquid interphase, the concentration gradient of H+ between solid–liquid interface and solution was gradually increased. It leaded to a quicker diffusion velocity. Both of them can promote the leaching process and bring higher leaching efficiency. Henceforth, the leaching reaction reached equilibrium, and the leaching efficiency of lithium reached its maximum. This is because that the diffusion velocity would not change with further increase of HCl concentration, and the Li+ had been replaced sufficiently. From the figure, 3 M was employed as the optimum acid concentration."
+            }
+          ],
+          "action": "separate_cross_group_baseline"
+        },
+        {
+          "index": 20,
+          "original": {
+            "id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+            "subject": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+            "predicate": "HAS_OUTPUT",
+            "object": "Material_Li",
+            "subject_type": "Process",
+            "object_type": "Material",
+            "confidence": 0.8,
+            "evidence_span": "the leaching efficiency of Li was 97.1% without H2O2",
+            "source_name": "reductive hydrochloric acid leaching of calcined powder",
+            "target_name": "Li",
+            "properties": {
+              "property": "leaching",
+              "value": 97.1,
+              "unit": "%",
+              "source_sample": "calcined powder",
+              "study_scope": "current_study",
+              "graph_status": "active",
+              "process_role": "main_process",
+              "conditions": "HCl concentration 3 M, S/L 1:50, leaching time 90 min, leaching temperature 80 °C, without H2O2",
+              "process_agent": "HCl",
+              "treatment_members": [],
+              "experiment_group": "without H2O2",
+              "property_raw": "leaching_efficiency",
+              "measure_key": "leaching",
+              "condition_keys": [
+                {
+                  "key": "temperature",
+                  "value": 80.0,
+                  "unit": "°C",
+                  "raw_text": "HCl concentration 3 M, S/L 1:50, leaching time 90 min, leaching temperature 80 °C, without H2O2"
+                }
+              ],
+              "condition_labels": [
+                "HCl concentration 3 M, S/L 1:50, leaching time 90 min, leaching temperature 80 °C, without H2O2"
+              ],
+              "condition": "HCl concentration 3 M, S/L 1:50, leaching time 90 min, leaching temperature 80 °C, without H2O2; thermostatic water bath; manual constant agitation; effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated",
+              "condition_ids": [
+                "COND_db51691a6b8c"
+              ],
+              "raw_relation_type": "HAS_OUTPUT",
+              "normalized_relation_type": "HAS_OUTPUT",
+              "normalized_from_raw": false,
+              "source_name": "reductive hydrochloric acid leaching of calcined powder",
+              "target_name": "Li",
+              "evidence_span": "the leaching efficiency of Li was 97.1% without H2O2",
+              "source": "text",
+              "setting_id": "setting:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):reductive-hydrochloric-acid-leaching-conditions",
+              "setting_binding_basis": "unique_process_setting",
+              "setting_stage_name": "reductive hydrochloric acid leaching of calcined powder",
+              "setting_condition_keys": [
+                {
+                  "key": "medium",
+                  "value": "thermostatic water bath",
+                  "unit": null,
+                  "raw_text": "thermostatic water bath"
+                },
+                {
+                  "key": "other",
+                  "value": "manual constant agitation",
+                  "unit": null,
+                  "raw_text": "manual constant agitation"
+                },
+                {
+                  "key": "other",
+                  "value": "effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated",
+                  "unit": null,
+                  "raw_text": "effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated"
+                }
+              ],
+              "setting_condition": "thermostatic water bath; manual constant agitation; effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated",
+              "evidence_spans": [
+                "the leaching efficiency of Li was 97.1% without H2O2"
+              ]
+            }
+          },
+          "corrected": {
+            "id": "REL_reviewed_283200192ce04a28",
+            "subject": "Process_reviewed_8daa8098cc6a94",
+            "predicate": "HAS_OUTPUT",
+            "object": "Material_Li",
+            "subject_type": "Process",
+            "object_type": "Material",
+            "confidence": 0.8,
+            "evidence_span": "the leaching efficiency of Li was 97.1% without H2O2",
+            "source_name": "hydrochloric acid leaching of calcined anode powder without H2O2",
+            "target_name": "Li",
+            "properties": {
+              "property": "leaching",
+              "value": 97.1,
+              "unit": "%",
+              "source_sample": "calcined powder",
+              "study_scope": "current_study",
+              "graph_status": "active",
+              "process_role": "main_process",
+              "conditions": "HCl 3 M; S/L 1:50; 90 min; 80 °C; without H2O2",
+              "process_agent": "HCl",
+              "treatment_members": [],
+              "experiment_group": "without H2O2",
+              "property_raw": "leaching_efficiency",
+              "measure_key": "leaching",
+              "condition_keys": [
+                {
+                  "key": "concentration",
+                  "value": 3.0,
+                  "unit": "M",
+                  "raw_text": "HCl 3 M"
+                },
+                {
+                  "key": "solid_liquid_ratio",
+                  "value": "1:50",
+                  "unit": null,
+                  "raw_text": "S/L 1:50"
+                },
+                {
+                  "key": "time",
+                  "value": 90.0,
+                  "unit": "min",
+                  "raw_text": "90 min"
+                },
+                {
+                  "key": "temperature",
+                  "value": 80.0,
+                  "unit": "°C",
+                  "raw_text": "80 °C"
+                },
+                {
+                  "key": "other",
+                  "value": "without H2O2",
+                  "unit": null,
+                  "raw_text": "without H2O2",
+                  "negated": true
+                }
+              ],
+              "condition_labels": [
+                "HCl 3 M; S/L 1:50; 90 min; 80 °C; without H2O2"
+              ],
+              "condition": "HCl 3 M; S/L 1:50; 90 min; 80 °C; without H2O2",
+              "condition_ids": [],
+              "raw_relation_type": "HAS_OUTPUT",
+              "normalized_relation_type": "HAS_OUTPUT",
+              "normalized_from_raw": false,
+              "source_name": "hydrochloric acid leaching of calcined anode powder without H2O2",
+              "target_name": "Li",
+              "evidence_span": "the leaching efficiency of Li was 97.1% without H2O2",
+              "source": "text",
+              "setting_id": "setting:reviewed:31120b62ecfde6",
+              "setting_binding_basis": "evidence_reviewed_revision",
+              "setting_stage_name": "hydrochloric acid leaching of calcined anode powder without H2O2",
+              "setting_condition_keys": [
+                {
+                  "key": "concentration",
+                  "value": 3.0,
+                  "unit": "M",
+                  "raw_text": "HCl 3 M"
+                },
+                {
+                  "key": "solid_liquid_ratio",
+                  "value": "1:50",
+                  "unit": null,
+                  "raw_text": "S/L 1:50"
+                },
+                {
+                  "key": "time",
+                  "value": 90.0,
+                  "unit": "min",
+                  "raw_text": "90 min"
+                },
+                {
+                  "key": "temperature",
+                  "value": 80.0,
+                  "unit": "°C",
+                  "raw_text": "80 °C"
+                },
+                {
+                  "key": "other",
+                  "value": "without H2O2",
+                  "unit": null,
+                  "raw_text": "without H2O2",
+                  "negated": true
+                }
+              ],
+              "setting_condition": "HCl 3 M; S/L 1:50; 90 min; 80 °C; without H2O2",
+              "evidence_spans": [
+                "the leaching efficiency of Li was 97.1% without H2O2"
+              ]
+            },
+            "subject_name": "hydrochloric acid leaching of calcined anode powder without H2O2"
+          },
+          "source_evidence": [
+            {
+              "file": "source/text.md",
+              "line": 125,
+              "quote": "Fig. 9 shows the alteration of the leaching efficiency of Li as a function of HCl - H2O2 ratio in the range of 1:0–25:1 by using HCl concentration of 3 M, S/L of 1:50, leaching time of 90 min and leaching temperature of 80 ^∘C. It can be observed from Fig. 7 that the leaching efficiency of Li was 97.1% without H2O2. And it reached to 99.4% with HCl - H2O2 ration being 10:1. A conclusion can be drawn from the experiment that H2O2 had a slight role in the leaching process of Li. In the leaching process for Hydrometallurgy, H2O2 was added as reductant to convert undissolved high valence ions to soluble low ones to promote the reaction process. Because of the absence of intermediate valence of Li, H2O2 can reduce Co(III) to Co (II) and thus facilitate the forward reaction. The result shows that the amount of H2O2 was sufficient for the complete dissolution of lithium, as further increasing the concentration of H2O2 did not show a significant effect in the recovery efficiency compared to consumption of expensive of lithium. Considering lower energy consumption and relatively better leaching efficiency, the suitable leaching agent was HCl without H2O2."
+            }
+          ],
+          "action": "correct_binding"
+        }
+      ],
+      "added_processes": [
+        {
+          "id": "Process_reviewed_c2ca1a770bfa07",
+          "name": "deionized water leaching of calcined anode powder",
+          "mention_text": "deionized water leaching of calcined anode powder",
+          "type": "Process",
+          "synonyms": [
+            "deionized water leaching of calcined anode powder"
+          ],
+          "description": "As described above, the main forms of Li in the anode active material are Li2CO3,, Li O, LiF, ROCO Li, CH OLi. Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water. While others are almost insoluble in water and inlaid in the anode active materials, such as ROCO Li, LiF, and they will occur decomposition reaction in HCl solution. Therefore, the leaching reaction between anode materials and HCl solution is a multiple process (Aurbach et al., 2002; Jiangfeng et al., 2004): (1) the hydrolysis of lithium salt (2) double decomposition reaction between lithium salt and HCl solution.",
+          "process_content": "As described above, the main forms of Li in the anode active material are Li2CO3,, Li O, LiF, ROCO Li, CH OLi. Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water. While others are almost insoluble in water and inlaid in the anode active materials, such as ROCO Li, LiF, and they will occur decomposition reaction in HCl solution. Therefore, the leaching reaction between anode materials and HCl solution is a multiple process (Aurbach et al., 2002; Jiangfeng et al., 2004): (1) the hydrolysis of lithium salt (2) double decomposition reaction between lithium salt and HCl solution.",
+          "evidence_span": "As described above, the main forms of Li in the anode active material are Li2CO3,, Li O, LiF, ROCO Li, CH OLi. Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water. While others are almost insoluble in water and inlaid in the anode active materials, such as ROCO Li, LiF, and they will occur decomposition reaction in HCl solution. Therefore, the leaching reaction between anode materials and HCl solution is a multiple process (Aurbach et al., 2002; Jiangfeng et al., 2004): (1) the hydrolysis of lithium salt (2) double decomposition reaction between lithium salt and HCl solution.",
+          "parent_process": null,
+          "source_mark": "evidence_reviewed_revision"
+        },
+        {
+          "id": "Process_reviewed_8daa8098cc6a94",
+          "name": "hydrochloric acid leaching of calcined anode powder without H2O2",
+          "mention_text": "hydrochloric acid leaching of calcined anode powder without H2O2",
+          "type": "Process",
+          "synonyms": [
+            "hydrochloric acid leaching of calcined anode powder without H2O2"
+          ],
+          "description": "Fig. 9 shows the alteration of the leaching efficiency of Li as a function of HCl - H2O2 ratio in the range of 1:0–25:1 by using HCl concentration of 3 M, S/L of 1:50, leaching time of 90 min and leaching temperature of 80 ^∘C. It can be observed from Fig. 7 that the leaching efficiency of Li was 97.1% without H2O2. And it reached to 99.4% with HCl - H2O2 ration being 10:1. A conclusion can be drawn from the experiment that H2O2 had a slight role in the leaching process of Li. In the leaching process for Hydrometallurgy, H2O2 was added as reductant to convert undissolved high valence ions to soluble low ones to promote the reaction process. Because of the absence of intermediate valence of Li, H2O2 can reduce Co(III) to Co (II) and thus facilitate the forward reaction. The result shows that the amount of H2O2 was sufficient for the complete dissolution of lithium, as further increasing the concentration of H2O2 did not show a significant effect in the recovery efficiency compared to consumption of expensive of lithium. Considering lower energy consumption and relatively better leaching efficiency, the suitable leaching agent was HCl without H2O2.",
+          "process_content": "Fig. 9 shows the alteration of the leaching efficiency of Li as a function of HCl - H2O2 ratio in the range of 1:0–25:1 by using HCl concentration of 3 M, S/L of 1:50, leaching time of 90 min and leaching temperature of 80 ^∘C. It can be observed from Fig. 7 that the leaching efficiency of Li was 97.1% without H2O2. And it reached to 99.4% with HCl - H2O2 ration being 10:1. A conclusion can be drawn from the experiment that H2O2 had a slight role in the leaching process of Li. In the leaching process for Hydrometallurgy, H2O2 was added as reductant to convert undissolved high valence ions to soluble low ones to promote the reaction process. Because of the absence of intermediate valence of Li, H2O2 can reduce Co(III) to Co (II) and thus facilitate the forward reaction. The result shows that the amount of H2O2 was sufficient for the complete dissolution of lithium, as further increasing the concentration of H2O2 did not show a significant effect in the recovery efficiency compared to consumption of expensive of lithium. Considering lower energy consumption and relatively better leaching efficiency, the suitable leaching agent was HCl without H2O2.",
+          "evidence_span": "Fig. 9 shows the alteration of the leaching efficiency of Li as a function of HCl - H2O2 ratio in the range of 1:0–25:1 by using HCl concentration of 3 M, S/L of 1:50, leaching time of 90 min and leaching temperature of 80 ^∘C. It can be observed from Fig. 7 that the leaching efficiency of Li was 97.1% without H2O2. And it reached to 99.4% with HCl - H2O2 ration being 10:1. A conclusion can be drawn from the experiment that H2O2 had a slight role in the leaching process of Li. In the leaching process for Hydrometallurgy, H2O2 was added as reductant to convert undissolved high valence ions to soluble low ones to promote the reaction process. Because of the absence of intermediate valence of Li, H2O2 can reduce Co(III) to Co (II) and thus facilitate the forward reaction. The result shows that the amount of H2O2 was sufficient for the complete dissolution of lithium, as further increasing the concentration of H2O2 did not show a significant effect in the recovery efficiency compared to consumption of expensive of lithium. Considering lower energy consumption and relatively better leaching efficiency, the suitable leaching agent was HCl without H2O2.",
+          "parent_process": null,
+          "source_mark": "evidence_reviewed_revision"
+        }
+      ],
+      "removed_unreferenced_entities": [],
+      "view_counts": {
+        "triples": 3,
+        "filtered_triples": 2,
+        "relations": 3,
+        "evidence_relations": 3
+      },
+      "original_final_count": 27,
+      "corrected_final_count": 29,
+      "derived_sha256": "228d9a2f12239132e9acf7f0a841d1cec4f11f392f420448f2d43b3dae8c450b"
+    },
+    {
+      "paper": "Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti",
+      "source_file": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/demo/ontoweee/datasets/battery20/updates/measurement-semantics-20261101/inputs/Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti/triples_final.txt",
+      "source_sha256": "8ec2f45e3bae67746048dafbe4163bc7c3d95b1d270e67eb5dedd2cf6456a337",
+      "transactions": [
+        {
+          "index": 7,
+          "original": {
+            "id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
+            "subject": "Product_lithium_ion_battery",
+            "predicate": "PROCESSED_BY",
+            "object": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
+            "subject_type": "Product",
+            "object_type": "Process",
+            "confidence": 0.8,
+            "evidence_span": "The Alicyclobacillus sp. as sulfur-oxidizing bacteria (SOB) and the Sulfobacillus sp. as iron-oxidizing bacteria (IOB) were utilized for bioleaching the spent LIBs in the form of mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v)",
+            "source_name": "lithium ion battery",
+            "target_name": "bioleaching of Co and Li from spent LIB powder",
+            "properties": {
+              "source_sample": "spent LIB powder",
+              "sample_state": "powdered physical form of the spent lithium ion battery",
+              "study_scope": "current_study",
+              "graph_status": "active",
+              "process_role": "main_process",
+              "process_agent": "Alicyclobacillus sp. and Sulfobacillus sp. mixed culture",
+              "treatment_members": [
+                "Alicyclobacillus sp.",
+                "Sulfobacillus sp."
+              ],
+              "conditions": "mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v)",
+              "condition_keys": [
+                {
+                  "key": "time",
+                  "value": 30.0,
+                  "unit": "d",
+                  "raw_text": "mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v)"
+                }
+              ],
+              "condition_labels": [
+                "mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v)"
+              ],
+              "condition": "mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v)",
+              "condition_ids": [
+                "COND_46066c1f54f9"
+              ],
+              "raw_relation_type": "PROCESSED_BY",
+              "normalized_relation_type": "PROCESSED_BY",
+              "normalized_from_raw": false,
+              "source_name": "lithium ion battery",
+              "target_name": "bioleaching of Co and Li from spent LIB powder",
+              "evidence_span": "The Alicyclobacillus sp. as sulfur-oxidizing bacteria (SOB) and the Sulfobacillus sp. as iron-oxidizing bacteria (IOB) were utilized for bioleaching the spent LIBs in the form of mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v)",
+              "source": "text",
+              "evidence_spans": [
+                "The Alicyclobacillus sp. as sulfur-oxidizing bacteria (SOB) and the Sulfobacillus sp. as iron-oxidizing bacteria (IOB) were utilized for bioleaching the spent LIBs in the form of mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v)"
+              ]
+            }
+          },
+          "source_evidence": [
+            {
+              "file": "source/text.md",
+              "line": 39,
+              "quote": "The Alicyclobacillus sp. as sulfur-oxidizing bacteria (SOB) and the Sulfobacillus sp. as iron-oxidizing bacteria (IOB) were utilized for bioleaching the spent LIBs in the form of mixed culture after acclimation of 30 d by contact with the spent LIB powder at dose ranging from 0.25% to 1.0% (w/v) (higher dose of over 1.0% evidently inhibited the growth of both cells). The detailed procedures and methods about screen, culture, maintain, inoculum and identification of the SOB and IOB were described in the previous paper (Xin et al., 2011)."
+            },
+            {
+              "file": "source/text.md",
+              "line": 43,
+              "quote": "Bioleaching experiments were conducted according to the previous paper (Xin et al., 2009). Unless specifically stated, bioleaching media containing 4.0 g L ^-1 of mixed energy matters (sulfur and pyrite) was inoculated respectively with SOB and IOB as the mixed culture, followed by incubation at 30 \u0003C until the pH value dropped to ca 1.0 and the ORP value rose to ca 450 mV. At that time, the spent LIB powder was added into the media to a final concentration of 2% to initiate the bioleaching after its pH value was adjusted precisely to pH 1.0. Three pulp densities (1%, 2% and 4%) were set to examine bioleaching behavior of Co and Li when pulp density increased from 1% to 4%. Three doses of mixed energy substrates (2.0, 4.0 and 8.0 g L ^-1) were set to assess the feasibility of improving extraction of Co and Li by lifting energy matters dose. The pH value of the media was controlled at pH 2.0 during bioleaching by adding H2S04 to assess the possibility of suitable pH for cells growth to promote extraction of Co and Li (bioleaching dose was obtained by measured dose subtracted released one in blank flasks with addition of the same amount of exogenous H2S04). Three bioleaching temperatures (30, 35, and 40 ^∘C) were set to inspect the feasibility of rising temperature to improve performance. The suitable controls including cells-free media, pure H2S04 solution at pH 1.0, H2SO4 at t pH 1.0 + FeSO4 at 2.0 g L ^-1, H2S04 at pH 1.0 + Fe2 (SO4)3 at 2.0 g L ^-1 were run. During bioleaching, release dose of Co and Li, Fe ^2+ and Fe ^3+ dosage, pH, ORP and cell number were periodically monitored. All experiments were carried out in triplicates."
+            }
+          ],
+          "action": "retain_operation_evidence",
+          "operation_role": "microbial acclimation"
+        }
+      ],
+      "added_processes": [],
+      "removed_unreferenced_entities": [],
+      "view_counts": {
+        "triples": 1,
+        "filtered_triples": 1,
+        "relations": 1,
+        "evidence_relations": 1
+      },
+      "original_final_count": 27,
+      "corrected_final_count": 26,
+      "derived_sha256": "d0adcfb7d1d909fd4b92060c6565c94167415b6809b19bbcc09c94074adf9d01"
+    }
+  ]
+}

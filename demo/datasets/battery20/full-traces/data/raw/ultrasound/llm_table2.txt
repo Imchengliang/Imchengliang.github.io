@@ -1,0 +1,258 @@
+[
+  {
+    "chunk_id": "Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries__table__TABLE_Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries_0001",
+    "table_id": "TABLE_Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries_0001",
+    "result": {
+      "table_id": "TABLE_Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries_0001",
+      "entity_count": 0,
+      "relation_count": 0,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "entities": [],
+      "relations": [],
+      "conditions": [],
+      "context_records": [],
+      "table_structure": {
+        "table_id": "TABLE_Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries_0001",
+        "extraction_mode": "semantic_ir",
+        "table_role": "literature_summary",
+        "extractability": {
+          "decision": "skip",
+          "table_role": "literature_summary",
+          "reason": "Do not emit facts; this is a literature summary of leaching conditions from cited studies, not current-study target composition or treatment outcome.",
+          "confidence": 0.95
+        }
+      },
+      "source_table": {
+        "table_id": "TABLE_Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries_0001",
+        "page_number": 3,
+        "caption": "Table 1 Summary of leaching conditions for metal recovery from spent LIBs",
+        "section": "1. Introduction",
+        "explicit_references": [
+          "These are shown in Table 1."
+        ],
+        "headers": [
+          "References",
+          "Sample",
+          "Leaching conditions"
+        ],
+        "header_rows": [
+          [
+            "References",
+            "Sample",
+            "Leaching conditions"
+          ]
+        ],
+        "column_descriptors": [
+          {
+            "id": "c0",
+            "index": 0,
+            "flat_label": "References",
+            "header_path": [
+              "References"
+            ],
+            "header_leaf": "References",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "References",
+                "header_row": 0,
+                "column": 0
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c1",
+            "index": 1,
+            "flat_label": "Sample",
+            "header_path": [
+              "Sample"
+            ],
+            "header_leaf": "Sample",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Sample",
+                "header_row": 0,
+                "column": 1
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c2",
+            "index": 2,
+            "flat_label": "Leaching conditions",
+            "header_path": [
+              "Leaching conditions"
+            ],
+            "header_leaf": "Leaching conditions",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Leaching conditions",
+                "header_row": 0,
+                "column": 2
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          }
+        ],
+        "unit_scope_candidates": [
+          {
+            "scope": "row",
+            "source": "row[2]",
+            "coverage": 0.692,
+            "evidence_cells": [
+              {
+                "row_index": 3,
+                "column_index": 2,
+                "source": "row[2]",
+                "text": "4 M H2SO4+10 vol.% of H2O2 , 85 °C, 120 min"
+              },
+              {
+                "row_index": 4,
+                "column_index": 2,
+                "source": "row[2]",
+                "text": "2 M H2SO4+6 vol.% of H2O2 , 60 °C, 10 min"
+              },
+              {
+                "row_index": 5,
+                "column_index": 2,
+                "source": "row[2]",
+                "text": "1 M HNO3+0.8 vol.% H2O2 75 °C, 30 min"
+              },
+              {
+                "row_index": 6,
+                "column_index": 2,
+                "source": "row[2]",
+                "text": "H2SO4+15 vol.% H2O2 , 75 °C, 10 min"
+              },
+              {
+                "row_index": 7,
+                "column_index": 2,
+                "source": "row[2]",
+                "text": "2 M H2SO4+5 vol.% of H2O2 , 75 °C, 30 min"
+              },
+              {
+                "row_index": 8,
+                "column_index": 2,
+                "source": "row[2]",
+                "text": "6 vol.% of H2SO4+H2O2 ,65 °C, 1 h"
+              },
+              {
+                "row_index": 9,
+                "column_index": 2,
+                "source": "row[2]",
+                "text": "2 M H2SO4+10% g/gscraps C6H8O6 80 °C, 5 h"
+              },
+              {
+                "row_index": 10,
+                "column_index": 2,
+                "source": "row[2]",
+                "text": "1.5 M C4H5O6+2 vol.% of H2O2 , 90 °C, 40 min"
+              }
+            ],
+            "interpretation": "unit markers are located in row cells; bind the unit from this row source when values are measured elsewhere in the same row"
+          }
+        ],
+        "rows": [
+          [
+            "Ku et al. [2]",
+            "NixCoyMnz batteries",
+            "1 M (NH4)2SO3 80 °C, 1 h"
+          ],
+          [
+            "Li et al. [3]",
+            "LiCoO2 batteries",
+            "4.0 M HCl 80°C, 2 h"
+          ],
+          [
+            "Chen et al. [6]",
+            "Li Co Ni Mn batteries",
+            "4 M H2SO4+10 vol.% of H2O2 , 85 °C, 120 min"
+          ],
+          [
+            "Kang et al. [7]",
+            "Li Co Ni batteries",
+            "2 M H2SO4+6 vol.% of H2O2 , 60 °C, 10 min"
+          ],
+          [
+            "Lee et al. [8]",
+            "LiCoO2 batteries",
+            "1 M HNO3+0.8 vol.% H2O2 75 °C, 30 min"
+          ],
+          [
+            "Shin et al. [9]",
+            "LiCoO2 batteries",
+            "H2SO4+15 vol.% H2O2 , 75 °C, 10 min"
+          ],
+          [
+            "Swain et al. [10]",
+            "LiCoO2 batteries",
+            "2 M H2SO4+5 vol.% of H2O2 , 75 °C, 30 min"
+          ],
+          [
+            "Dorella and Mansur [11]",
+            "LiCoO2 batteries",
+            "6 vol.% of H2SO4+H2O2 ,65 °C, 1 h"
+          ],
+          [
+            "Aaltonen et al. [12]",
+            "LiCoO2 batteries",
+            "2 M H2SO4+10% g/gscraps C6H8O6 80 °C, 5 h"
+          ],
+          [
+            "Li et al. [13]",
+            "LiCoO2 batteries",
+            "1.5 M C4H5O6+2 vol.% of H2O2 , 90 °C, 40 min"
+          ],
+          [
+            "Li et al. [14]",
+            "LiCoO2 batteries",
+            "1.25 M C6H8O7 H2O+1 vol.% of H2O2 , 90 °C, 30 min"
+          ],
+          [
+            "Li et al. [15]",
+            "LiCoO2 batteries",
+            "1.25 M C6H8O6 , 70 °C, 20 min"
+          ],
+          [
+            "Li et al. [16]",
+            "LiCoO2 batteries",
+            "0.5 M C6H8O7 H2O+0.55 M H2O2 , 60 °C, 5 h"
+          ]
+        ],
+        "row_contexts": [],
+        "notes": [],
+        "raw_markdown": "| References | Sample | Leaching conditions |\n| --- | --- | --- |\n| Ku et al. [2] | NixCoyMnz batteries | 1 M (NH4)2SO3 80 °C, 1 h |\n| Li et al. [3] | LiCoO2 batteries | 4.0 M HCl 80°C, 2 h |\n| Chen et al. [6] | Li Co Ni Mn batteries | 4 M H2SO4+10 vol.% of H2O2 , 85 °C, 120 min |\n| Kang et al. [7] | Li Co Ni batteries | 2 M H2SO4+6 vol.% of H2O2 , 60 °C, 10 min |\n| Lee et al. [8] | LiCoO2 batteries | 1 M HNO3+0.8 vol.% H2O2 75 °C, 30 min |\n| Shin et al. [9] | LiCoO2 batteries | H2SO4+15 vol.% H2O2 , 75 °C, 10 min |\n| Swain et al. [10] | LiCoO2 batteries | 2 M H2SO4+5 vol.% of H2O2 , 75 °C, 30 min |\n| Dorella and Mansur [11] | LiCoO2 batteries | 6 vol.% of H2SO4+H2O2 ,65 °C, 1 h |\n| Aaltonen et al. [12] | LiCoO2 batteries | 2 M H2SO4+10% g/gscraps C6H8O6 80 °C, 5 h |\n| Li et al. [13] | LiCoO2 batteries | 1.5 M C4H5O6+2 vol.% of H2O2 , 90 °C, 40 min |\n| Li et al. [14] | LiCoO2 batteries | 1.25 M C6H8O7 H2O+1 vol.% of H2O2 , 90 °C, 30 min |\n| Li et al. [15] | LiCoO2 batteries | 1.25 M C6H8O6 , 70 °C, 20 min |\n| Li et al. [16] | LiCoO2 batteries | 0.5 M C6H8O7 H2O+0.55 M H2O2 , 60 °C, 5 h |",
+        "position_start": 4408,
+        "position_end": 4510,
+        "source": "mineru_content_list",
+        "source_kind": "standalone_table",
+        "layout_context": {
+          "previous_block_type": "text",
+          "next_block_type": "text",
+          "between_image_blocks": false
+        },
+        "raw_html": "<table><tr><td>References</td><td>Sample</td><td>Leaching conditions</td></tr><tr><td>Ku et al. [2]</td><td> $Ni_xCo_yMn_z$  batteries</td><td>1 M  $(NH_4)_2SO_3$  80 °C, 1 h</td></tr><tr><td>Li et al. [3]</td><td> $LiCoO_2$  batteries</td><td>4.0 M HCl 80°C, 2 h</td></tr><tr><td>Chen et al. [6]</td><td>Li Co Ni Mn batteries</td><td>4 M  $H_2SO_4+10$  vol.% of  $H_2O_2$ , 85 °C, 120 min</td></tr><tr><td>Kang et al. [7]</td><td>Li Co Ni batteries</td><td>2 M  $H_2SO_4+6$  vol.% of  $H_2O_2$ , 60 °C, 10 min</td></tr><tr><td>Lee et al. [8]</td><td> $LiCoO_2$  batteries</td><td>1 M  $HNO_3+0.8$  vol.%  $H_2O_2$  75 °C, 30 min</td></tr><tr><td>Shin et al. [9]</td><td> $LiCoO_2$  batteries</td><td> $H_2SO_4+15$  vol.% $H_2O_2$ , 75 °C, 10 min</td></tr><tr><td>Swain et al. [10]</td><td> $LiCoO_2$  batteries</td><td>2 M  $H_2SO_4+5$  vol.% of  $H_2O_2$ , 75 °C, 30 min</td></tr><tr><td>Dorella and Mansur [11]</td><td> $LiCoO_2$  batteries</td><td>6 vol.% of  $H_2SO_4+H_2O_2$ ,65 °C, 1 h</td></tr><tr><td>Aaltonen et al. [12]</td><td> $LiCoO_2$  batteries</td><td>2 M  $H_2SO_4+10\\%$  g/gscraps  $C_6H_8O_6$  80 °C, 5 h</td></tr><tr><td>Li et al. [13]</td><td> $LiCoO_2$  batteries</td><td>1.5 M  $C_4H_5O_6+2$  vol.% of  $H_2O_2$ , 90 °C, 40 min</td></tr><tr><td>Li et al. [14]</td><td> $LiCoO_2$  batteries</td><td>1.25 M  $C_6H_8O_7\\cdot H_2O+1$  vol.% of  $H_2O_2$ , 90 °C, 30 min</td></tr><tr><td>Li et al. [15]</td><td> $LiCoO_2$  batteries</td><td>1.25 M  $C_6H_8O_6$ , 70 °C, 20 min</td></tr><tr><td>Li et al. [16]</td><td> $LiCoO_2$  batteries</td><td>0.5 M  $C_6H_8O_7\\cdot H_2O+0.55$  M  $H_2O_2$ , 60 °C, 5 h</td></tr></table>",
+        "image_path": "images/b12ec521328608cc9064b7c066613578f695b35f04882bad6c4107500bf9009e.jpg",
+        "bbox": [
+          106,
+          469,
+          872,
+          782
+        ],
+        "metadata": {
+          "table_reference_sentences": [
+            "These are shown in Table 1."
+          ]
+        },
+        "table_reference_sentences": [
+          "These are shown in Table 1."
+        ]
+      }
+    }
+  }
+]

@@ -1,2999 +1,694 @@
-// OntoWEEE Demo Application
-// 数据加载策略：
-//   1. 优先从 graph_data.json 加载（由 convert_triples_to_graph.py 生成，无需服务器）
-//   2. 回退到 server.py API（/api/queries + /api/triples/{id}）
-//
-// 数据更新流程：
-//   1. 运行 python convert_triples_to_graph.py  重新生成 graph_data.json
-//   2. 刷新页面即可看到新数据
-
-let currentQuery = null;
-const graphPositionMemory = new Map();
-let allGraphs = {};       // 静态 JSON 模式：所有图数据
-let queries = [];         // 当前显示的查询列表（可能经过过滤）
-let fullQueries = [];     // 完整查询列表（所有可发现的 triples 源）
-let useStaticJson = false;// 当前使用的数据模式
-const graphDataCache = new Map();
-let currentFullGraphData = null;
-let currentViewGraphData = null;
-let currentRenderedGraphData = null;
-let currentRootNodeId = null;
-let hideMaterialNoValueEdges = false;
-function queryMatchesKeyword(query, keyword) {
-    const fields = [
-        query.title,
-        query.description,
-        query.source_title,
-        query.folder_name,
-        query.search_terms
-    ];
-    return fields.some(field => String(field || '').toLowerCase().includes(keyword));
-}
-
-function getQueryDisplayName(query) {
-    return query.source_title || query.title || '';
-}
-
-function sortQueriesByDisplayName(queryList) {
-    return [...queryList].sort((a, b) =>
-        getQueryDisplayName(a).localeCompare(getQueryDisplayName(b), undefined, {
-            sensitivity: 'base'
-        })
-    );
-}
-
-// 节点类型颜色映射
-const nodeColors = {
-    'Product': '#667eea',
-    'Component': '#764ba2',   // 紫色，同 PROCESSED_BY 边
-    'Material': '#f6ad55',    // 橙黄，同 HAS_INPUT / HAS_OBSERVATION / TRANSFORMED_TO 边
-    'Process': '#ed64a6',     // 粉红，同 HAS_OUTPUT 边
-    'Equipment': '#a0aec0',
-    'Hazard': '#fc8181',
-    'Observation': '#4fd1c5'
-};
-
-// Remove 'Component' so Component nodes also aggregate and show details (scope/condition etc.)
-const compactNodeDetailTypes = new Set(['Product', 'Material', 'Process']);
-
-// 根据边类型返回宽度
-function getEdgeWidth(predicate) {
-    const widths = {
-        'CONTAINS': 4,
-        'PROCESSED_BY': 3,
-        'HAS_OUTPUT': 3,
-        'HAS_OBSERVATION': 3,
-        'HAS_INPUT': 3,
-        'HAS_CONTEXT': 2,
-        'RELATED_TO': 2,
-        'TRANSFORMED_TO': 3
-    };
-    return widths[predicate] || 2;
-}
-
-// 根据节点类型返回大小
-function getNodeSize(type) {
-    const sizes = {
-        'Product': 36,
-        'Component': 30,
-        'Material': 24,
-        'Process': 28,
-        'Equipment': 18,
-        'Hazard': 18,
-        'Observation': 16
-    };
-    return sizes[type] || 20;
-}
-
-function asList(value) {
-    if (isEmptyMeasurementValue(value)) return [];
-    return Array.isArray(value) ? value : [value];
-}
-
-function addUnique(target, value) {
-    asList(value).forEach(item => {
-        if (isEmptyMeasurementValue(item)) return;
-        const itemKey = JSON.stringify(item);
-        if (!target.some(existing => JSON.stringify(existing) === itemKey)) {
-            target.push(item);
-        }
-    });
-}
-
-function formatMeasurementValue(details) {
-    const value = details?.value;
-    if (isEmptyMeasurementValue(value)) return '';
-    const unit = details.unit;
-    return unit === null || unit === undefined || unit === '' ? String(value) : `${value}${unit}`;
-}
-
-function normalizeContextText(value) {
-    return String(value ?? '')
-        .toLowerCase()
-        .replace(/[_-]+/g, ' ')
-        .replace(/\s+/g, ' ')
-        .trim();
-}
-
-function isEmptyMeasurementValue(value) {
-    if (value === null || value === undefined) return true;
-    if (Array.isArray(value)) return value.every(item => isEmptyMeasurementValue(item));
-    if (typeof value === 'string') {
-        const label = value.trim().toLowerCase().replace(/\s+/g, ' ').replace(/^[*•\s]+|[*•\s]+$/g, '');
-        return new Set([
-            '',
-            '-',
-            '–',
-            '—',
-            'n/a',
-            'n.a.',
-            'na',
-            'n.a',
-            'not applicable',
-            'not available',
-            'none',
-            'null',
-            'nil',
-            'no data'
-        ]).has(label);
-    }
-    return false;
-}
-
-function isEmptyValuedComponentContains(triple) {
-    const props = triple.properties || {};
-    return (
-        triple.predicate === 'CONTAINS' &&
-        ['Product', 'Component'].includes(triple.subject_type) &&
-        triple.object_type === 'Component' &&
-        Object.prototype.hasOwnProperty.call(props, 'value') &&
-        isEmptyMeasurementValue(props.value)
-    );
-}
-
-function escapeHtml(value) {
-    return String(value ?? '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#039;');
-}
-
-function formatDetailValue(value) {
-    return asList(value).map(item => {
-        if (item === null || item === undefined || item === '') return '';
-        if (typeof item === 'object') {
-            return item.name || item.label || item.value || item.id || JSON.stringify(item);
-        }
-        return String(item);
-    }).filter(Boolean).join('; ');
-}
-
-function aggregateGraphEdges(edges, nodeMap = new Map()) {
-    const groups = new Map();
-    edges.forEach(edge => {
-        const predicate = edge.label.split(' | ')[0];
-        const key = `${edge.source}→${predicate}→${edge.target}`;
-        if (!groups.has(key)) groups.set(key, []);
-        groups.get(key).push(edge);
-    });
-
-    const aggregated = [];
-    groups.forEach(group => {
-        if (group.length > 1 && isValuePrunableEdge(group[0], nodeMap) && group.some(edge => formatMeasurementValue(edge.details))) {
-            group = group.filter(edge => formatMeasurementValue(edge.details));
-        }
-
-        if (group.length === 1) {
-            aggregated.push(group[0]);
-            return;
-        }
-
-        const first = group[0];
-        const predicate = first.label.split(' | ')[0];
-        const details = {
-            measurement_count: group.length,
-            measurements: [],
-            condition: [],
-            scope: [],
-            property: []
-        };
-        const numericValues = [];
-        let commonUnit = null;
-        let mixedUnits = false;
-
-        group.forEach(edge => {
-            const edgeDetails = edge.details || {};
-            const measurement = {
-                value: edgeDetails.value,
-                unit: edgeDetails.unit,
-                secondary_value: edgeDetails.secondary_value,
-                secondary_unit: edgeDetails.secondary_unit,
-                condition: edgeDetails.condition,
-                scope: edgeDetails.scope,
-                property: edgeDetails.property
-            };
-            details.measurements.push(measurement);
-            addUnique(details.condition, edgeDetails.condition);
-            addUnique(details.scope, edgeDetails.scope);
-            addUnique(details.property, edgeDetails.property);
-
-            const parsed = Number(edgeDetails.value);
-            if (!Number.isNaN(parsed)) {
-                numericValues.push(parsed);
-                if (commonUnit === null) commonUnit = edgeDetails.unit || '';
-                if ((edgeDetails.unit || '') !== commonUnit) mixedUnits = true;
-            }
-        });
-
-        if (numericValues.length > 0) {
-            const min = Math.min(...numericValues);
-            const max = Math.max(...numericValues);
-            details.value_range = min === max ? String(min) : `${min}-${max}`;
-            if (!mixedUnits && commonUnit) details.unit = commonUnit;
-        }
-
-        if (details.condition.length === 0) delete details.condition;
-        if (details.scope.length === 0) delete details.scope;
-        if (details.property.length === 0) delete details.property;
-
-        const hasValues = group.some(edge => formatMeasurementValue(edge.details));
-        aggregated.push({
-            source: first.source,
-            target: first.target,
-            label: `${predicate} | ${group.length} ${hasValues ? 'measurements' : 'facts'}`,
-            width: Math.max(first.width, 3),
-            details
-        });
-    });
-
-    return aggregated;
-}
-
-function isComponentContainsEdge(edge, nodeMap) {
-    const sourceNode = nodeMap.get(edge.source);
-    const targetNode = nodeMap.get(edge.target);
-    const predicate = edge.label.split(' | ')[0];
-    return (
-        predicate === 'CONTAINS' &&
-        ['Product', 'Component'].includes(sourceNode?.type) &&
-        targetNode?.type === 'Component'
-    );
-}
-
-function isValuePrunableEdge(edge, nodeMap) {
-    const sourceNode = nodeMap.get(edge.source);
-    const targetNode = nodeMap.get(edge.target);
-    const predicate = edge.label.split(' | ')[0];
-    return (
-        isComponentContainsEdge(edge, nodeMap) ||
-        (
-            predicate === 'HAS_OUTPUT' &&
-            sourceNode?.type === 'Process' &&
-            ['Component', 'Material'].includes(targetNode?.type)
-        )
-    );
-}
-
-function asNormalizedContextList(value) {
-    return asList(value)
-        .map(item => {
-            if (typeof item === 'object') {
-                return normalizeContextText(item.name || item.label || item.value || item.id || JSON.stringify(item));
-            }
-            return normalizeContextText(item);
-        })
-        .filter(Boolean);
-}
-
-function detailMatchesRootScope(details, rootNode) {
-    const rootLabel = normalizeContextText(rootNode?.label);
-    const rootId = normalizeContextText(rootNode?.id);
-    if (!rootLabel && !rootId) return false;
-
-    return asNormalizedContextList(details?.scope).some(scope => (
-        scope === rootLabel ||
-        scope === rootId ||
-        (rootLabel && scope.includes(rootLabel)) ||
-        (rootId && scope.includes(rootId))
-    ));
-}
-
-function rebuildAggregatedEdgeDetails(edge, measurements) {
-    const details = {
-        measurement_count: measurements.length,
-        measurements,
-        condition: [],
-        scope: [],
-        property: []
-    };
-    const numericValues = [];
-    let commonUnit = null;
-    let mixedUnits = false;
-
-    measurements.forEach(measurement => {
-        addUnique(details.condition, measurement.condition);
-        addUnique(details.scope, measurement.scope);
-        addUnique(details.property, measurement.property);
-
-        const parsed = Number(measurement.value);
-        if (!Number.isNaN(parsed)) {
-            numericValues.push(parsed);
-            const unit = measurement.unit || '';
-            if (commonUnit === null) commonUnit = unit;
-            if (unit !== commonUnit) mixedUnits = true;
-        }
-    });
-
-    if (numericValues.length > 0) {
-        const min = Math.min(...numericValues);
-        const max = Math.max(...numericValues);
-        details.value_range = min === max ? String(min) : `${min}-${max}`;
-        if (!mixedUnits && commonUnit) details.unit = commonUnit;
-    }
-
-    if (details.condition.length === 0) delete details.condition;
-    if (details.scope.length === 0) delete details.scope;
-    if (details.property.length === 0) delete details.property;
-
-    const predicate = edge.label.split(' | ')[0];
-    return {
-        ...edge,
-        label: `${predicate} | ${measurements.length} measurements`,
-        details
-    };
-}
-
-function trimEdgeToRootContext(edge, rootNode, nodeMap) {
-    if (!rootNode) return edge;
-    const sourceNode = nodeMap.get(edge.source);
-    const targetNode = nodeMap.get(edge.target);
-    const predicate = edge.label.split(' | ')[0];
-    const isScopedMeasurementEdge = (
-        predicate === 'CONTAINS' &&
-        sourceNode?.type === 'Component' &&
-        targetNode?.type === 'Material'
-    );
-    if (!isScopedMeasurementEdge) return edge;
-
-    const details = edge.details || {};
-    if (Array.isArray(details.measurements)) {
-        const scopedMeasurements = details.measurements.filter(measurement => detailMatchesRootScope(measurement, rootNode));
-        if (scopedMeasurements.length > 0) {
-            return rebuildAggregatedEdgeDetails(edge, scopedMeasurements);
-        }
-
-        const hasScopedMeasurements = details.measurements.some(measurement => asNormalizedContextList(measurement.scope).length > 0);
-        return hasScopedMeasurements ? null : edge;
-    }
-
-    const scopes = asNormalizedContextList(details.scope);
-    if (scopes.length > 0 && !detailMatchesRootScope(details, rootNode)) {
-        return null;
-    }
-    return edge;
-}
-
-// 将原始 triples 数据转换为图格式（nodes + edges）
-function transformTriplesToGraph(triplesData) {
-    const nodeMap = new Map();
-    let edges = [];
-
-    triplesData.triples.forEach(triple => {
-        if (triple.predicate === 'HAS_OBSERVATION') return;
-        if (isEmptyValuedComponentContains(triple)) return;
-
-        const { subject, subject_name, subject_type, predicate, object, object_name, object_type, properties } = triple;
-
-        // 添加 subject 节点
-        if (!nodeMap.has(subject)) {
-            nodeMap.set(subject, {
-                id: subject,
-                label: subject_name,
-                type: subject_type,
-                size: getNodeSize(subject_type)
-            });
-        }
-
-        // 添加 object 节点
-        if (!nodeMap.has(object)) {
-            nodeMap.set(object, {
-                id: object,
-                label: object_name,
-                type: object_type,
-                size: getNodeSize(object_type)
-            });
-        }
-
-        // 构建边标签
-        let edgeLabel = predicate;
-        const props = properties || {};
-        const value = props.value;
-        const unit = props.unit;
-        if (!isEmptyMeasurementValue(value)) {
-            if (unit !== null && unit !== undefined && unit !== '') {
-                edgeLabel += ` | ${value}${unit}`;
-            } else {
-                edgeLabel += ` | ${value}`;
-            }
-        }
-
-        // 构建边详情
-        const details = {};
-        if (props.value !== null && props.value !== undefined) details.value = props.value;
-        if (props.unit !== null && props.unit !== undefined) details.unit = props.unit;
-        if (props.secondary_value !== null && props.secondary_value !== undefined) details.secondary_value = props.secondary_value;
-        if (props.secondary_unit !== null && props.secondary_unit !== undefined) details.secondary_unit = props.secondary_unit;
-        if (props.condition !== null && props.condition !== undefined) details.condition = props.condition;
-        if (props.conditions !== null && props.conditions !== undefined) details.condition = props.conditions;
-        if (props.condition_labels !== null && props.condition_labels !== undefined) details.condition = props.condition_labels;
-        if (props.experiment_group !== null && props.experiment_group !== undefined) details.experiment_group = props.experiment_group;
-        if (props.process_agents !== null && props.process_agents !== undefined) details.process_agents = props.process_agents;
-        if (props.media !== null && props.media !== undefined) details.media = props.media;
-        if (props.equipment !== null && props.equipment !== undefined) details.equipment = props.equipment;
-        if (props.property !== null && props.property !== undefined) details.property = props.property;
-        if (props.source_sample !== null && props.source_sample !== undefined) details.scope = props.source_sample;
-        if (props.scope !== null && props.scope !== undefined) details.scope = props.scope;
-        if (props.scope_description !== null && props.scope_description !== undefined) details.scope = props.scope_description;
-
-        edges.push({
-            source: subject,
-            target: object,
-            label: edgeLabel,
-            width: getEdgeWidth(predicate),
-            details: details
-        });
-    });
-    edges = aggregateGraphEdges(edges, nodeMap);
-
-    // 聚合每个节点关联边的 details（去重）
-    const nodeDetailsMap = new Map();
-    edges.forEach(edge => {
-        const edgeDetails = edge.details || {};
-        ['condition', 'conditions', 'experiment_group', 'process_agents', 'media', 'equipment', 'property', 'value', 'unit', 'scope'].forEach(key => {
-            const val = edgeDetails[key];
-            if (val !== null && val !== undefined && val !== '' && (Array.isArray(val) ? val.length > 0 : true)) {
-                [edge.source, edge.target].forEach(nodeId => {
-                    const node = nodeMap.get(nodeId);
-                    if (node && compactNodeDetailTypes.has(node.type)) return;
-                    if (!nodeDetailsMap.has(nodeId)) nodeDetailsMap.set(nodeId, {});
-                    const nd = nodeDetailsMap.get(nodeId);
-                    if (!nd[key]) nd[key] = [];
-                    const items = Array.isArray(val) ? val : [val];
-                    items.forEach(item => {
-                        // 用 JSON.stringify 做深度比较去重
-                        const itemStr = JSON.stringify(item);
-                        if (!nd[key].some(existing => JSON.stringify(existing) === itemStr)) {
-                            nd[key].push(item);
-                        }
-                    });
-                });
-            }
-        });
-    });
-    nodeMap.forEach((node, id) => {
-        const nd = nodeDetailsMap.get(id);
-        if (nd && Object.keys(nd).length > 0) node.details = nd;
-    });
-
-    const nodes = Array.from(nodeMap.values());
-    const docId = triplesData.doc_id || 'unknown';
-    const tripleCount = triplesData.triple_count || triplesData.triples.length;
-
-    return {
-        nodes: nodes,
-        edges: edges,
-        stats: {
-            nodes: nodes.length,
-            edges: edges.length,
-            papers: 1
-        },
-        paper: `${docId} | ${tripleCount} triples`
-    };
-}
-
-// ---------------------------------------------------------------------------
-// 数据加载：优先 graph_data.json，回退 server API
-// ---------------------------------------------------------------------------
-
-// 模式 1：从 graph_data.json 加载全部数据（无需服务器）
-async function loadStaticJson() {
-    try {
-        const response = await fetch(`graph_data.json?v=${Date.now()}`, { cache: 'no-store' });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data = await response.json();
-        fullQueries = sortQueriesByDisplayName(data.queries || []);
-        queries = [...fullQueries];
-        allGraphs = Object.fromEntries(
-            Object.entries(data.graphs || {}).map(([id, graphData]) => [id, filterInvalidSchemaEdges(graphData)])
-        );
-        // 如果 JSON 中有 nodeColors，覆盖默认值
-        if (data.nodeColors) {
-            Object.assign(nodeColors, data.nodeColors);
-        }
-        useStaticJson = true;
-        console.log(`[Data] Loaded ${fullQueries.length} queries from graph_data.json`);
-        return true;
-    } catch (err) {
-        console.warn(`[Data] graph_data.json not available (${err.message}), falling back to server API`);
-        return false;
-    }
-}
-
-// 模式 2：从 server.py API 获取查询列表（使用 /api/all 获取全部）
-async function fetchQueriesFromApi() {
-    try {
-        const response = await fetch('/api/all');
-        const data = await response.json();
-        fullQueries = sortQueriesByDisplayName(data.queries || []);
-        queries = [...fullQueries];
-        useStaticJson = false;
-        console.log(`[Data] Loaded ${fullQueries.length} queries from server API`);
-    } catch (err) {
-        console.error('Failed to fetch queries:', err);
-        fullQueries = [];
-        queries = [];
-    }
-}
-
-// 获取图数据（根据当前模式选择来源）
-async function fetchGraphData(queryId) {
-    // 模式 1：从静态 JSON 的内存缓存中读取
-    if (useStaticJson && allGraphs[queryId]) {
-        const graphData = filterInvalidSchemaEdges(allGraphs[queryId]);
-        allGraphs[queryId] = graphData;
-        graphDataCache.set(queryId, graphData);
-        return graphData;
-    }
-
-    // 模式 2：从 server API 读取并转换
-    try {
-        const response = await fetch(`/api/triples/${queryId}`);
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const triplesData = await response.json();
-        const graphData = filterInvalidSchemaEdges(transformTriplesToGraph(triplesData));
-        // 缓存到 allGraphs 中，避免重复请求
-        allGraphs[queryId] = graphData;
-        graphDataCache.set(queryId, graphData);
-        return graphData;
-    } catch (err) {
-        console.error(`Failed to fetch graph data for ${queryId}:`, err);
-        return null;
-    }
-}
-
-// 初始化应用
-async function init() {
-    // 先尝试静态 JSON，失败则回退 server API
-    const loaded = await loadStaticJson();
-    if (!loaded) {
-        await fetchQueriesFromApi();
-    }
-    renderQueryList();
-    setupEventListeners();
-    renderProcessSuggestions('');
-    renderMaterialSuggestions('');
-}
-
-// 渲染查询列表（可选：按关键词过滤）
-function renderQueryList(filter = '') {
-    const queryList = document.getElementById('query-list');
-    queryList.innerHTML = '';
-
-    const keyword = filter.toLowerCase().trim();
-    if (!keyword) {
-        queries = [];
-
-        const emptyState = document.createElement('div');
-        emptyState.className = 'query-empty-state';
-        emptyState.textContent = 'Click the search box to choose a paper title, or type keywords to filter papers.';
-        queryList.appendChild(emptyState);
-        return;
-    }
-
-    queries = sortQueriesByDisplayName(fullQueries.filter(q => queryMatchesKeyword(q, keyword)));
-
-    queries.forEach(query => {
-        const card = document.createElement('div');
-        card.className = 'query-card' + (currentQuery === query.id ? ' active' : '');
-        card.dataset.queryId = query.id;
-        card.innerHTML = `
-            <h3>${getQueryDisplayName(query)}</h3>
-            <p>${query.description}</p>
-            <span class="tag" style="background: ${query.color}">${query.tag}</span>
-        `;
-        card.addEventListener('click', () => selectQuery(query.id));
-        queryList.appendChild(card);
-    });
-}
-
-function getTitleSuggestionMatches(filter = '') {
-    const keyword = filter.toLowerCase().trim();
-    if (!keyword) return sortQueriesByDisplayName(fullQueries);
-
-    return sortQueriesByDisplayName(
-        fullQueries.filter(query => queryMatchesKeyword(query, keyword))
-    );
-}
-
-function renderTitleSuggestions(filter = '') {
-    const suggestions = document.getElementById('title-suggestions');
-    if (!suggestions) return;
-
-    const matches = getTitleSuggestionMatches(filter);
-    suggestions.innerHTML = '';
-
-    if (matches.length === 0) {
-        const empty = document.createElement('div');
-        empty.className = 'title-suggestions-empty';
-        empty.textContent = 'No matching papers';
-        suggestions.appendChild(empty);
-        return;
-    }
-
-    matches.forEach(query => {
-        const option = document.createElement('button');
-        option.type = 'button';
-        option.className = 'title-suggestion';
-        option.dataset.queryId = query.id;
-
-        const title = document.createElement('span');
-        title.textContent = getQueryDisplayName(query);
-        option.appendChild(title);
-
-        const meta = document.createElement('span');
-        meta.className = 'title-suggestion-meta';
-        meta.textContent = query.tag || '';
-        option.appendChild(meta);
-
-        option.addEventListener('click', () => {
-            const searchInput = document.getElementById('search-input');
-            if (searchInput) {
-                searchInput.value = query.title;
-            }
-            hideTitleSuggestions();
-            renderQueryList(query.title);
-            selectQuery(query.id);
-        });
-
-        suggestions.appendChild(option);
-    });
-}
-
-function showTitleSuggestions() {
-    const searchInput = document.getElementById('search-input');
-    const suggestions = document.getElementById('title-suggestions');
-    if (!suggestions) return;
-
-    renderTitleSuggestions(searchInput ? searchInput.value : '');
-    suggestions.classList.add('open');
-}
-
-function hideTitleSuggestions() {
-    const suggestions = document.getElementById('title-suggestions');
-    if (suggestions) {
-        suggestions.classList.remove('open');
-    }
-}
-
-function getRootNodeMatches(filter = '') {
-    if (!currentFullGraphData) return [];
-
-    const keyword = filter.toLowerCase().trim();
-    return currentFullGraphData.nodes
-        .filter(node => node.type === 'Product' || node.type === 'Component')
-        .filter(node => {
-            if (!keyword) return true;
-            return node.label.toLowerCase().includes(keyword) ||
-                node.type.toLowerCase().includes(keyword);
-        })
-        .sort((a, b) => {
-            const typeOrder = { Product: 0, Component: 1 };
-            const typeCompare = typeOrder[a.type] - typeOrder[b.type];
-            if (typeCompare !== 0) return typeCompare;
-
-            const labelCompare = a.label.localeCompare(b.label, undefined, {
-                sensitivity: 'base',
-                numeric: true
-            });
-            if (labelCompare !== 0) return labelCompare;
-            return a.type.localeCompare(b.type);
-        });
-}
-
-function renderNodeSuggestions(filter = '') {
-    const suggestions = document.getElementById('node-suggestions');
-    if (!suggestions) return;
-
-    const matches = getRootNodeMatches(filter);
-    suggestions.innerHTML = '';
-
-    if (matches.length === 0) {
-        const empty = document.createElement('div');
-        empty.className = 'title-suggestions-empty';
-        empty.textContent = 'No Product / Component nodes';
-        suggestions.appendChild(empty);
-        return;
-    }
-
-    matches.forEach(node => {
-        const option = document.createElement('button');
-        option.type = 'button';
-        option.className = 'title-suggestion';
-        option.dataset.nodeId = node.id;
-
-        const label = document.createElement('span');
-        label.textContent = node.label;
-        option.appendChild(label);
-
-        const meta = document.createElement('span');
-        meta.className = 'title-suggestion-meta';
-        meta.textContent = node.type;
-        option.appendChild(meta);
-
-        option.addEventListener('click', () => selectRootNode(node.id));
-        suggestions.appendChild(option);
-    });
-}
-
-function showNodeSuggestions(showAll = false) {
-    const nodeInput = document.getElementById('node-search-input');
-    const suggestions = document.getElementById('node-suggestions');
-    if (!suggestions) return;
-
-    renderNodeSuggestions(showAll ? '' : (nodeInput ? nodeInput.value : ''));
-    suggestions.classList.add('open');
-}
-
-function hideNodeSuggestions() {
-    const suggestions = document.getElementById('node-suggestions');
-    if (suggestions) {
-        suggestions.classList.remove('open');
-    }
-}
-
-function getLoadedGraphEntries() {
-    return Object.entries(allGraphs || {})
-        .filter(([, graphData]) => graphData && Array.isArray(graphData.nodes) && Array.isArray(graphData.edges));
-}
-
-async function ensureAllGraphDataLoaded() {
-    if (useStaticJson) return;
-    const missingQueries = fullQueries.filter(query => !allGraphs[query.id]);
-    if (!missingQueries.length) return;
-    await Promise.allSettled(missingQueries.map(query => fetchGraphData(query.id)));
-}
-
-function getProcessSuggestionMatches(filter = '') {
-    const keyword = normalizeContextText(filter);
-    const processMap = new Map();
-
-    getLoadedGraphEntries().forEach(([queryId, graphData]) => {
-        graphData.nodes
-            .filter(node => node.type === 'Process')
-            .forEach(node => {
-                const label = node.label || node.id;
-                const haystack = `${label} ${node.id}`.toLowerCase();
-                if (keyword && !haystack.includes(keyword)) return;
-
-                const key = normalizeContextText(label);
-                if (!processMap.has(key)) {
-                    processMap.set(key, {
-                        label,
-                        papers: new Set(),
-                        nodes: 0
-                    });
-                }
-                const item = processMap.get(key);
-                item.papers.add(queryId);
-                item.nodes += 1;
-            });
-    });
-
-    return Array.from(processMap.values())
-        .sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }))
-        .slice(0, 80);
-}
-
-function renderProcessSuggestions(filter = '') {
-    const suggestions = document.getElementById('process-suggestions');
-    if (!suggestions) return;
-
-    const matches = getProcessSuggestionMatches(filter);
-    suggestions.innerHTML = '';
-
-    if (!matches.length) {
-        const empty = document.createElement('div');
-        empty.className = 'title-suggestions-empty';
-        empty.textContent = 'No matching process found in loaded triples.';
-        suggestions.appendChild(empty);
-        return;
-    }
-
-    matches.forEach(match => {
-        const option = document.createElement('button');
-        option.type = 'button';
-        option.className = 'title-suggestion';
-
-        const label = document.createElement('span');
-        label.textContent = match.label;
-        option.appendChild(label);
-
-        const meta = document.createElement('span');
-        meta.className = 'title-suggestion-meta';
-        meta.textContent = `${match.papers.size} paper${match.papers.size === 1 ? '' : 's'} · ${match.nodes} process node${match.nodes === 1 ? '' : 's'}`;
-        option.appendChild(meta);
-
-        option.addEventListener('click', () => selectProcessFacts(match.label));
-        suggestions.appendChild(option);
-    });
-}
-
-function showProcessSuggestions(showAll = false) {
-    const input = document.getElementById('process-search-input');
-    const suggestions = document.getElementById('process-suggestions');
-    if (!suggestions) return;
-
-    renderProcessSuggestions(showAll ? '' : (input ? input.value : ''));
-    suggestions.classList.add('open');
-}
-
-async function showProcessSuggestionsWithAllData(showAll = false) {
-    showProcessSuggestions(showAll);
-    await ensureAllGraphDataLoaded();
-    showProcessSuggestions(showAll);
-}
-
-function hideProcessSuggestions() {
-    const suggestions = document.getElementById('process-suggestions');
-    if (suggestions) {
-        suggestions.classList.remove('open');
-    }
-}
-
-function getMaterialSuggestionMatches(filter = '') {
-    const keyword = normalizeContextText(filter);
-    const materialMap = new Map();
-
-    getLoadedGraphEntries().forEach(([queryId, graphData]) => {
-        graphData.nodes
-            .filter(node => node.type === 'Material')
-            .forEach(node => {
-                const label = node.label || node.id;
-                const haystack = `${label} ${node.id}`.toLowerCase();
-                if (keyword && !haystack.includes(keyword)) return;
-
-                const key = normalizeContextText(label);
-                if (!materialMap.has(key)) {
-                    materialMap.set(key, {
-                        label,
-                        papers: new Set(),
-                        nodes: 0
-                    });
-                }
-                const item = materialMap.get(key);
-                item.papers.add(queryId);
-                item.nodes += 1;
-            });
-    });
-
-    return Array.from(materialMap.values())
-        .sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }))
-        .slice(0, 120);
-}
-
-function renderMaterialSuggestions(filter = '') {
-    const suggestions = document.getElementById('material-suggestions');
-    if (!suggestions) return;
-
-    const matches = getMaterialSuggestionMatches(filter);
-    suggestions.innerHTML = '';
-
-    if (!matches.length) {
-        const empty = document.createElement('div');
-        empty.className = 'title-suggestions-empty';
-        empty.textContent = 'No matching material found in loaded triples.';
-        suggestions.appendChild(empty);
-        return;
-    }
-
-    matches.forEach(match => {
-        const option = document.createElement('button');
-        option.type = 'button';
-        option.className = 'title-suggestion';
-
-        const label = document.createElement('span');
-        label.textContent = match.label;
-        option.appendChild(label);
-
-        const meta = document.createElement('span');
-        meta.className = 'title-suggestion-meta';
-        meta.textContent = `${match.papers.size} paper${match.papers.size === 1 ? '' : 's'} · ${match.nodes} material node${match.nodes === 1 ? '' : 's'}`;
-        option.appendChild(meta);
-
-        option.addEventListener('click', () => selectMaterialChains(match.label));
-        suggestions.appendChild(option);
-    });
-}
-
-function showMaterialSuggestions(showAll = false) {
-    const input = document.getElementById('material-search-input');
-    const suggestions = document.getElementById('material-suggestions');
-    if (!suggestions) return;
-
-    renderMaterialSuggestions(showAll ? '' : (input ? input.value : ''));
-    suggestions.classList.add('open');
-}
-
-async function showMaterialSuggestionsWithAllData(showAll = false) {
-    showMaterialSuggestions(showAll);
-    await ensureAllGraphDataLoaded();
-    showMaterialSuggestions(showAll);
-}
-
-function hideMaterialSuggestions() {
-    const suggestions = document.getElementById('material-suggestions');
-    if (suggestions) {
-        suggestions.classList.remove('open');
-    }
-}
-
-function setNodeSearchVisible(visible) {
-    const section = document.getElementById('node-search-section');
-    if (!section) return;
-    section.classList.toggle('open', visible);
-}
-
-function resetNodeSearch() {
-    currentRootNodeId = null;
-    const nodeInput = document.getElementById('node-search-input');
-    if (nodeInput) nodeInput.value = '';
-    hideNodeSuggestions();
-}
-
-function resetProcessSearch() {
-    const processInput = document.getElementById('process-search-input');
-    if (processInput) processInput.value = '';
-    hideProcessSuggestions();
-}
-
-function resetMaterialSearch() {
-    const materialInput = document.getElementById('material-search-input');
-    if (materialInput) materialInput.value = '';
-    hideMaterialSuggestions();
-}
-
-function edgeHasValue(edge) {
-    const value = edge.details?.value;
-    if (edge.details?.value_range) return true;
-    if (Array.isArray(edge.details?.measurements)) {
-        return edge.details.measurements.some(item => formatMeasurementValue(item));
-    }
-    return !isEmptyMeasurementValue(value);
-}
-
-function filterMaterialEdgesWithoutValue(graphData) {
-    if (!hideMaterialNoValueEdges || !graphData) return graphData;
-
-    const nodeById = new Map(graphData.nodes.map(node => [node.id, node]));
-    const filteredEdges = graphData.edges.filter(edge => {
-        const targetNode = nodeById.get(edge.target);
-        if (targetNode?.type !== 'Material') return true;
-        return edgeHasValue(edge);
-    });
-
-    const connectedNodeIds = new Set();
-    filteredEdges.forEach(edge => {
-        connectedNodeIds.add(edge.source);
-        connectedNodeIds.add(edge.target);
-    });
-
-    if (currentRootNodeId && nodeById.has(currentRootNodeId)) {
-        connectedNodeIds.add(currentRootNodeId);
-    }
-
-    const filteredNodes = graphData.nodes.filter(node => connectedNodeIds.has(node.id));
-
-    return {
-        ...graphData,
-        nodes: filteredNodes,
-        edges: filteredEdges,
-        stats: {
-            nodes: filteredNodes.length,
-            edges: filteredEdges.length,
-            papers: graphData.stats?.papers || 1
-        }
-    };
-}
-
-function filterInvalidSchemaEdges(graphData) {
-    if (!graphData) return graphData;
-
-    const nodeById = new Map(graphData.nodes.map(node => [node.id, node]));
-    const filteredEdges = graphData.edges.filter(edge => {
-        const predicate = getEdgePredicate(edge);
-        const sourceType = nodeById.get(edge.source)?.type;
-        const targetType = nodeById.get(edge.target)?.type;
-        return !(predicate === 'TRANSFORMED_TO' && sourceType === 'Component' && targetType === 'Material');
-    });
-
-    if (filteredEdges.length === graphData.edges.length) return graphData;
-
-    const connectedNodeIds = new Set();
-    filteredEdges.forEach(edge => {
-        connectedNodeIds.add(edge.source);
-        connectedNodeIds.add(edge.target);
-    });
-
-    if (currentRootNodeId && nodeById.has(currentRootNodeId)) {
-        connectedNodeIds.add(currentRootNodeId);
-    }
-
-    const filteredNodes = graphData.nodes.filter(node => connectedNodeIds.has(node.id));
-
-    return {
-        ...graphData,
-        nodes: filteredNodes,
-        edges: filteredEdges,
-        stats: {
-            nodes: filteredNodes.length,
-            edges: filteredEdges.length,
-            papers: graphData.stats?.papers || 1
-        }
-    };
-}
-
-function renderCurrentGraph() {
-    if (!currentQuery || !currentViewGraphData) return;
-    renderGraph(currentQuery, filterMaterialEdgesWithoutValue(filterInvalidSchemaEdges(currentViewGraphData)));
-}
-
-function extractRootSubgraph(graphData, rootNodeId) {
-    const nodeMap = new Map(graphData.nodes.map(node => [node.id, node]));
-    const adjacency = new Map();
-    graphData.edges.forEach((edge, index) => {
-        if (!adjacency.has(edge.source)) adjacency.set(edge.source, []);
-        adjacency.get(edge.source).push({ target: edge.target, index });
-    });
-
-    const reachable = new Set([rootNodeId]);
-    const usedEdges = new Set();
-    const queue = [rootNodeId];
-
-    while (queue.length > 0) {
-        const nodeId = queue.shift();
-        const outgoing = adjacency.get(nodeId) || [];
-        outgoing.forEach(({ target, index }) => {
-            usedEdges.add(index);
-            if (!reachable.has(target)) {
-                reachable.add(target);
-                queue.push(target);
-            }
-        });
-    }
-
-    const rootNode = nodeMap.get(rootNodeId);
-    const subgraphNodes = graphData.nodes.filter(node => reachable.has(node.id));
-    const subgraphEdges = graphData.edges
-        .filter((_, index) => usedEdges.has(index))
-        .map(edge => trimEdgeToRootContext(edge, rootNode, nodeMap))
-        .filter(Boolean);
-    const visibleNodeIds = new Set([rootNodeId]);
-    subgraphEdges.forEach(edge => {
-        visibleNodeIds.add(edge.source);
-        visibleNodeIds.add(edge.target);
-    });
-    const visibleSubgraphNodes = subgraphNodes.filter(node => visibleNodeIds.has(node.id));
-
-    return {
-        ...graphData,
-        nodes: visibleSubgraphNodes,
-        edges: subgraphEdges,
-        stats: {
-            nodes: visibleSubgraphNodes.length,
-            edges: subgraphEdges.length,
-            papers: graphData.stats?.papers || 1
-        },
-        paper: rootNode ? `${rootNode.label} subgraph` : graphData.paper
-    };
-}
-
-function selectRootNode(nodeId) {
-    if (!currentQuery || !currentFullGraphData) return;
-
-    const node = currentFullGraphData.nodes.find(item => item.id === nodeId);
-    if (!node) return;
-
-    currentRootNodeId = nodeId;
-    const nodeInput = document.getElementById('node-search-input');
-    if (nodeInput) nodeInput.value = node.label;
-
-    hideNodeSuggestions();
-    const subgraphData = extractRootSubgraph(currentFullGraphData, nodeId);
-    currentViewGraphData = subgraphData;
-    renderCurrentGraph();
-}
-
-// 选择查询
-async function selectQuery(queryId) {
-    currentQuery = queryId;
-    currentFullGraphData = null;
-    currentViewGraphData = null;
-    currentRenderedGraphData = null;
-    clearEdgeDetailPanel();
-    resetNodeSearch();
-    resetProcessSearch();
-    resetMaterialSearch();
-    setNodeSearchVisible(false);
-
-    // 更新激活状态（重新渲染列表以保持 active 状态同步）
-    const searchInput = document.getElementById('search-input');
-    renderQueryList(searchInput ? searchInput.value : '');
-
-    // 显示加载状态
-    const graphContainer = document.getElementById('graph-container');
-    graphContainer.innerHTML = '<div class="loading">Loading graph data...</div>';
-
-    // 获取图数据并渲染
-    const graphData = await fetchGraphData(queryId);
-    if (graphData) {
-        currentFullGraphData = graphData;
-        currentViewGraphData = graphData;
-        setNodeSearchVisible(true);
-        renderCurrentGraph();
-    } else {
-        graphContainer.innerHTML = '<div class="loading" style="color:#e53e3e">Failed to load graph data. Is the server running?</div>';
-    }
-}
-
-// 渲染图谱
-function renderGraph(queryId, graphData) {
-    if (!graphData) {
-        console.error('Graph data is null/undefined for query:', queryId);
-        return;
-    }
-    currentRenderedGraphData = graphData;
-    setGraphInfoPanelsVisible(true);
-
-    // 动态计算统计信息
-    const calculatedStats = {
-        nodes: graphData.nodes.length,
-        edges: graphData.edges.length,
-        papers: graphData.stats?.papers || 1
-    };
-    updateStats(calculatedStats);
-
-    // 渲染图例
-    renderLegend(graphData);
-
-    // 准备 Plotly 数据
-    const graphState = preparePlotlyData(graphData, queryId);
-    const traces = graphState.traces;
-
-    // 配置布局
-    const layout = {
-        showlegend: false,
-        hovermode: 'closest',
-        clickmode: 'event',
-        dragmode: 'pan',  // 默认启用平移模式
-        margin: { t: 20, b: 20, l: 20, r: 20 },
-        xaxis: {
-            showgrid: false,
-            zeroline: false,
-            showticklabels: false,
-            fixedrange: false,
-            range: [-6, 6],
-            title: ''
-        },
-        yaxis: {
-            showgrid: true,
-            gridcolor: 'rgba(102, 126, 234, 0.1)',
-            zeroline: false,
-            showticklabels: false,
-            scaleanchor: 'x',
-            fixedrange: false,
-            range: [-6, 6],
-            title: ''
-        },
-        plot_bgcolor: '#f8f9ff',
-        paper_bgcolor: '#f8f9ff',
-        annotations: []
-    };
-
-    // 配置项
-    const config = {
-        responsive: true,
-        displayModeBar: true,
-        scrollZoom: true,
-        displaylogo: false,
-        modeBarButtons: [['zoom2d', 'pan2d', 'zoomIn2d', 'zoomOut2d', 'resetScale2d', 'toImage']],
-        editable: false
-    };
-
-    // 渲染
-    const graphContainer = document.getElementById('graph-container');
-    if (graphContainer) {
-        if (window.Plotly?.purge) {
-            Plotly.purge(graphContainer);
-        }
-        graphContainer.replaceChildren();
-    }
-    Plotly.newPlot('graph-container', traces, layout, config).then(() => {
-        installNodeDrag(graphContainer, graphState);
-        installEdgeDetailClick(graphContainer, graphState);
-    });
-}
-
-function clearEdgeDetailPanel() {
-    const panel = document.getElementById('edge-detail-panel');
-    if (!panel) return;
-    panel.classList.remove('open', 'process-result-panel');
-    panel.innerHTML = '';
-}
-
-function setGraphInfoPanelsVisible(visible) {
-    document.getElementById('legend-panel')?.classList.toggle('hidden', !visible);
-    document.getElementById('stats-panel')?.classList.toggle('hidden', !visible);
-}
-
-function isSingleValuedPanelMeasurement(predicate, details) {
-    return ['CONTAINS', 'HAS_OUTPUT'].includes(predicate) &&
-        !details.measurement_count &&
-        formatMeasurementValue(details);
-}
-
-function getEdgePanelMeasurements(predicate, details) {
-    if (Array.isArray(details.measurements)) return details.measurements;
-    return isSingleValuedPanelMeasurement(predicate, details) ? [details] : [];
-}
-
-function buildEdgeDetailPanelHtml(edge, source, target) {
-    const predicate = edge.label.split(' | ')[0];
-    const details = edge.details || {};
-    const title = `${escapeHtml(source?.label || edge.source)} → ${escapeHtml(target?.label || edge.target)}`;
-    const measurements = getEdgePanelMeasurements(predicate, details);
-    const summaryParts = [`Type: ${escapeHtml(predicate)}`];
-    const singlePanelValue = isSingleValuedPanelMeasurement(predicate, details) ? formatMeasurementValue(details) : '';
-
-    if (details.measurement_count || singlePanelValue) {
-        summaryParts.push(`Measurements: ${escapeHtml(details.measurement_count || 1)}`);
-    }
-    if (details.value_range) {
-        summaryParts.push(`Value range: ${escapeHtml(details.value_range)}${escapeHtml(details.unit || '')}`);
-    } else if (singlePanelValue) {
-        summaryParts.push(`Value range: ${escapeHtml(singlePanelValue)}`);
-    }
-
-    const tableRows = measurements.map((measurement, index) => `
-        <tr>
-            <td>${index + 1}</td>
-            <td>${escapeHtml(formatMeasurementValue(measurement) || 'n/a')}</td>
-            <td>${escapeHtml(formatDetailValue(measurement.scope) || '-')}</td>
-            <td>${escapeHtml(formatDetailValue(measurement.condition) || '-')}</td>
-            <td>${escapeHtml(formatDetailValue(measurement.property) || '-')}</td>
-        </tr>
-    `).join('');
-
-    let tableHtml = '';
-    if (measurements.length > 0) {
-        tableHtml = `<div class="edge-detail-table-wrap">
-            <table class="edge-detail-table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Value</th>
-                        <th>Scope</th>
-                        <th>Condition</th>
-                        <th>Property</th>
-                    </tr>
-                </thead>
-                <tbody>${tableRows}</tbody>
-            </table>
-        </div>`;
-    } else if (predicate !== 'CONTAINS') {
-        tableHtml = `<div class="edge-detail-summary">No measurement table is available for this edge.</div>`;
-    }
-
-    return `
-        <div class="edge-detail-header">
-            <div class="edge-detail-title">${title}</div>
-            <button class="edge-detail-close" type="button" aria-label="Close edge details">×</button>
-        </div>
-        <div class="edge-detail-summary">${summaryParts.join('<br>')}</div>
-        ${tableHtml}
-    `;
-}
-
-function showEdgeDetailPanel(edge, graphState) {
-    const panel = document.getElementById('edge-detail-panel');
-    if (!panel || !edge) return;
-
-    const source = graphState.nodes.find(node => node.id === edge.source);
-    const target = graphState.nodes.find(node => node.id === edge.target);
-    panel.innerHTML = buildEdgeDetailPanelHtml(edge, source, target);
-    panel.classList.remove('process-result-panel');
-    panel.classList.add('open');
-    panel.querySelector('.edge-detail-close')?.addEventListener('click', clearEdgeDetailPanel);
-    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-function getGraphPaperTitle(graphData, queryId) {
-    const query = fullQueries.find(item => item.id === queryId);
-    const displayName = query ? getQueryDisplayName(query) : '';
-    return displayName || String(graphData?.paper || '').split(' | ')[0] || queryId;
-}
-
-function getEdgePredicate(edge) {
-    return String(edge?.label || '').split(' | ')[0];
-}
-
-function getPanelMeasurementsForEdge(edge) {
-    const predicate = getEdgePredicate(edge);
-    const details = edge.details || {};
-    if (Array.isArray(details.measurements) && details.measurements.length) {
-        return details.measurements;
-    }
-    if (isSingleValuedPanelMeasurement(predicate, details)) {
-        return [details];
-    }
-    if (details.value_range) {
-        return [{ value: details.value_range, unit: details.unit, condition: details.condition, scope: details.scope, property: details.property }];
-    }
-    return [{ condition: details.condition, scope: details.scope, property: details.property }];
-}
-
-function buildProcessFactRows(processKeyword) {
-    const normalizedKeyword = normalizeContextText(processKeyword);
-    if (!normalizedKeyword) return { rows: [], matchedProcessNames: [] };
-
-    const rows = [];
-    const rowKeys = new Set();
-    const matchedProcessNames = new Set();
-
-    getLoadedGraphEntries().forEach(([queryId, graphData]) => {
-        const nodeById = new Map(graphData.nodes.map(node => [node.id, node]));
-        const paperTitle = getGraphPaperTitle(graphData, queryId);
-        const processNodes = graphData.nodes.filter(node => {
-            if (node.type !== 'Process') return false;
-            const label = normalizeContextText(node.label);
-            const id = normalizeContextText(node.id);
-            return label === normalizedKeyword || label.includes(normalizedKeyword) || id.includes(normalizedKeyword);
-        });
-
-        processNodes.forEach(processNode => {
-            matchedProcessNames.add(processNode.label || processNode.id);
-            const processedEdges = graphData.edges.filter(edge =>
-                getEdgePredicate(edge) === 'PROCESSED_BY' &&
-                edge.target === processNode.id &&
-                ['Product', 'Component'].includes(nodeById.get(edge.source)?.type)
-            );
-            const outputEdges = graphData.edges.filter(edge =>
-                getEdgePredicate(edge) === 'HAS_OUTPUT' &&
-                edge.source === processNode.id &&
-                nodeById.get(edge.target)?.type === 'Material'
-            );
-
-            const processedSources = processedEdges.length
-                ? processedEdges.map(edge => ({
-                    label: nodeById.get(edge.source)?.label || edge.source,
-                    condition: edge.details?.condition
-                }))
-                : [{ label: '-', condition: null }];
-
-            const outputs = outputEdges.length ? outputEdges : [null];
-            processedSources.forEach(sourceInfo => {
-                outputs.forEach(outputEdge => {
-                    const materialNode = outputEdge ? nodeById.get(outputEdge.target) : null;
-                    const measurements = outputEdge ? getPanelMeasurementsForEdge(outputEdge) : [{ condition: null }];
-
-                    measurements.forEach(measurement => {
-                        const condition = formatDetailValue(
-                            measurement.condition ||
-                            outputEdge?.details?.condition ||
-                            sourceInfo.condition ||
-                            processNode.details?.condition
-                        ) || '-';
-                        const value = outputEdge
-                            ? (formatMeasurementValue(measurement) || formatMeasurementValue(outputEdge.details) || formatDetailValue(outputEdge.details?.value_range) || '-')
-                            : '-';
-                        const row = {
-                            paper: paperTitle,
-                            process: processNode.label || processNode.id,
-                            processed: sourceInfo.label,
-                            condition,
-                            value,
-                            material: materialNode?.label || '-'
-                        };
-                        const key = JSON.stringify(row);
-                        if (!rowKeys.has(key)) {
-                            rowKeys.add(key);
-                            rows.push(row);
-                        }
-                    });
-                });
-            });
-        });
-    });
-
-    return {
-        rows: rows.sort((a, b) =>
-            a.process.localeCompare(b.process, undefined, { sensitivity: 'base' }) ||
-            a.paper.localeCompare(b.paper, undefined, { sensitivity: 'base' }) ||
-            a.material.localeCompare(b.material, undefined, { sensitivity: 'base' })
-        ),
-        matchedProcessNames: Array.from(matchedProcessNames).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
-    };
-}
-
-function renderProcessFactPanel(processName, rows, matchedProcessNames = []) {
-    const graphContainer = document.getElementById('graph-container');
-    if (!graphContainer) return;
-
-    const processTitle = matchedProcessNames.length === 1 ? matchedProcessNames[0] : processName;
-    const summary = rows.length
-        ? `${rows.length} process-output row${rows.length === 1 ? '' : 's'} from ${new Set(rows.map(row => row.paper)).size} paper${new Set(rows.map(row => row.paper)).size === 1 ? '' : 's'}.`
-        : 'No HAS_OUTPUT rows found for this process.';
-
-    const tableRows = rows.map((row, index) => `
-        <tr>
-            <td>${index + 1}</td>
-            <td>${escapeHtml(row.paper)}</td>
-            <td>${escapeHtml(row.process)}</td>
-            <td>${escapeHtml(row.processed)}</td>
-            <td>${escapeHtml(row.condition)}</td>
-            <td>${escapeHtml(row.value)}</td>
-            <td>${escapeHtml(row.material)}</td>
-        </tr>
-    `).join('');
-
-    const tableHtml = rows.length ? `
-        <div class="edge-detail-table-wrap process-result-table-wrap">
-            <table class="edge-detail-table process-result-table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Paper</th>
-                        <th>Process</th>
-                        <th>Processed product/component</th>
-                        <th>Process condition</th>
-                        <th>HAS_OUTPUT value</th>
-                        <th>Material</th>
-                    </tr>
-                </thead>
-                <tbody>${tableRows}</tbody>
-            </table>
-        </div>
-    ` : '';
-
-    graphContainer.innerHTML = `
-        <div class="process-result-in-graph">
-        <div class="edge-detail-header">
-            <div class="edge-detail-title">${escapeHtml(processTitle)}</div>
-            <button class="edge-detail-close" type="button" aria-label="Close process facts">×</button>
-        </div>
-        <div class="edge-detail-summary">${escapeHtml(summary)}</div>
-        ${tableHtml}
-        </div>
-    `;
-    clearEdgeDetailPanel();
-    graphContainer.querySelector('.edge-detail-close')?.addEventListener('click', () => {
-        renderCurrentGraph();
-    });
-    graphContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-async function selectProcessFacts(processName) {
-    const input = document.getElementById('process-search-input');
-    if (input) input.value = processName;
-    hideProcessSuggestions();
-
-    const graphContainer = document.getElementById('graph-container');
-    if (graphContainer) {
-        graphContainer.innerHTML = '<div class="loading">Loading process facts...</div>';
-    }
-    setGraphInfoPanelsVisible(false);
-
-    await ensureAllGraphDataLoaded();
-    const { rows, matchedProcessNames } = buildProcessFactRows(processName);
-    renderProcessFactPanel(processName, rows, matchedProcessNames);
-}
-
-function getProductComponentNamesForSource(sourceNode, graphData, nodeById) {
-    if (!sourceNode) {
-        return { product: '-', component: '-' };
-    }
-    if (sourceNode.type === 'Product') {
-        return { product: sourceNode.label || sourceNode.id, component: '-' };
-    }
-    if (sourceNode.type === 'Component') {
-        const productEdges = graphData.edges.filter(edge =>
-            getEdgePredicate(edge) === 'CONTAINS' &&
-            edge.target === sourceNode.id &&
-            nodeById.get(edge.source)?.type === 'Product'
-        );
-        const products = productEdges
-            .map(edge => nodeById.get(edge.source)?.label)
-            .filter(Boolean);
-        return {
-            product: products.length ? Array.from(new Set(products)).join('; ') : '-',
-            component: sourceNode.label || sourceNode.id
-        };
-    }
-    return { product: '-', component: sourceNode.label || sourceNode.id };
-}
-
-function getMeasurementScopeLabels(measurement) {
-    return asList(measurement?.scope)
-        .map(item => {
-            if (typeof item === 'object') {
-                return item.name || item.label || item.value || item.id || '';
-            }
-            return String(item || '');
-        })
-        .map(item => item.trim())
-        .filter(Boolean);
-}
-
-function isSummaryScopeLabel(label) {
-    const normalized = normalizeContextText(label);
-    return ['range', 'weighted average', 'weighted mean', 'average', 'mean'].includes(normalized);
-}
-
-function getProductComponentNamesForMeasurement(sourceNode, graphData, nodeById, measurement) {
-    const names = getProductComponentNamesForSource(sourceNode, graphData, nodeById);
-    const scopeLabels = getMeasurementScopeLabels(measurement).filter(label => !isSummaryScopeLabel(label));
-    if (!scopeLabels.length) return names;
-
-    if (sourceNode?.type === 'Component') {
-        return {
-            product: Array.from(new Set(scopeLabels)).join('; '),
-            component: sourceNode.label || sourceNode.id
-        };
-    }
-
-    if (sourceNode?.type === 'Product') {
-        return {
-            product: Array.from(new Set(scopeLabels)).join('; '),
-            component: names.component
-        };
-    }
-
-    return names;
-}
-
-function isPrintableTableValue(value) {
-    if (value === null || value === undefined) return false;
-    const text = String(value).trim();
-    return Boolean(text && text !== '-' && !isEmptyMeasurementValue(text));
-}
-
-function buildMaterialChainRows(materialKeyword) {
-    const normalizedKeyword = normalizeContextText(materialKeyword);
-    if (!normalizedKeyword) return { rows: [], matchedMaterialNames: [] };
-
-    const rows = [];
-    const rowKeys = new Set();
-    const matchedMaterialNames = new Set();
-
-    getLoadedGraphEntries().forEach(([queryId, graphData]) => {
-        const nodeById = new Map(graphData.nodes.map(node => [node.id, node]));
-        const paperTitle = getGraphPaperTitle(graphData, queryId);
-        const materialNodes = graphData.nodes.filter(node => {
-            if (node.type !== 'Material') return false;
-            const label = normalizeContextText(node.label);
-            const id = normalizeContextText(node.id);
-            return label === normalizedKeyword || label.includes(normalizedKeyword) || id.includes(normalizedKeyword);
-        });
-
-        materialNodes.forEach(materialNode => {
-            matchedMaterialNames.add(materialNode.label || materialNode.id);
-
-            const containsEdges = graphData.edges.filter(edge =>
-                getEdgePredicate(edge) === 'CONTAINS' &&
-                edge.target === materialNode.id &&
-                ['Product', 'Component'].includes(nodeById.get(edge.source)?.type)
-            );
-            containsEdges.forEach(edge => {
-                const sourceNode = nodeById.get(edge.source);
-                const measurements = getPanelMeasurementsForEdge(edge);
-                measurements.forEach(measurement => {
-                    if (getMeasurementScopeLabels(measurement).some(isSummaryScopeLabel)) return;
-                    const names = getProductComponentNamesForMeasurement(sourceNode, graphData, nodeById, measurement);
-                    const row = {
-                        paper: paperTitle,
-                        product: names.product,
-                        component: names.component,
-                        containsValue: formatMeasurementValue(measurement) || formatMeasurementValue(edge.details) || formatDetailValue(edge.details?.value_range) || '-',
-                        process: '-',
-                        hasOutputValue: '-'
-                    };
-                    if (!isPrintableTableValue(row.containsValue)) return;
-                    const key = JSON.stringify(row);
-                    if (!rowKeys.has(key)) {
-                        rowKeys.add(key);
-                        rows.push(row);
-                    }
-                });
-            });
-
-            const outputEdges = graphData.edges.filter(edge =>
-                getEdgePredicate(edge) === 'HAS_OUTPUT' &&
-                edge.target === materialNode.id &&
-                nodeById.get(edge.source)?.type === 'Process'
-            );
-            outputEdges.forEach(outputEdge => {
-                const processNode = nodeById.get(outputEdge.source);
-                const processedEdges = graphData.edges.filter(edge =>
-                    getEdgePredicate(edge) === 'PROCESSED_BY' &&
-                    edge.target === processNode?.id &&
-                    ['Product', 'Component'].includes(nodeById.get(edge.source)?.type)
-                );
-                const processedSources = processedEdges.length
-                    ? processedEdges.map(edge => nodeById.get(edge.source)).filter(Boolean)
-                    : [null];
-                const measurements = getPanelMeasurementsForEdge(outputEdge);
-
-                processedSources.forEach(sourceNode => {
-                    const names = getProductComponentNamesForSource(sourceNode, graphData, nodeById);
-                    measurements.forEach(measurement => {
-                        const row = {
-                            paper: paperTitle,
-                            product: names.product,
-                            component: names.component,
-                            containsValue: '-',
-                            process: processNode?.label || processNode?.id || '-',
-                            hasOutputValue: formatMeasurementValue(measurement) || formatMeasurementValue(outputEdge.details) || formatDetailValue(outputEdge.details?.value_range) || '-'
-                        };
-                        if (!isPrintableTableValue(row.hasOutputValue)) return;
-                        const key = JSON.stringify(row);
-                        if (!rowKeys.has(key)) {
-                            rowKeys.add(key);
-                            rows.push(row);
-                        }
-                    });
-                });
-            });
-        });
-    });
-
-    return {
-        rows: rows.sort((a, b) =>
-            a.paper.localeCompare(b.paper, undefined, { sensitivity: 'base' }) ||
-            a.product.localeCompare(b.product, undefined, { sensitivity: 'base' }) ||
-            a.component.localeCompare(b.component, undefined, { sensitivity: 'base' }) ||
-            a.process.localeCompare(b.process, undefined, { sensitivity: 'base' })
-        ),
-        matchedMaterialNames: Array.from(matchedMaterialNames).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
-    };
-}
-
-function renderMaterialChainPanel(materialName, rows, matchedMaterialNames = []) {
-    const graphContainer = document.getElementById('graph-container');
-    if (!graphContainer) return;
-
-    const materialTitle = matchedMaterialNames.length === 1 ? matchedMaterialNames[0] : materialName;
-    const summary = rows.length
-        ? `${rows.length} chain row${rows.length === 1 ? '' : 's'} from ${new Set(rows.map(row => row.paper)).size} paper${new Set(rows.map(row => row.paper)).size === 1 ? '' : 's'}.`
-        : 'No CONTAINS or HAS_OUTPUT rows found for this material.';
-
-    const tableRows = rows.map((row, index) => `
-        <tr>
-            <td>${index + 1}</td>
-            <td>${escapeHtml(row.paper)}</td>
-            <td>${escapeHtml(row.product)}</td>
-            <td>${escapeHtml(row.component)}</td>
-            <td>${escapeHtml(row.containsValue)}</td>
-            <td>${escapeHtml(row.process)}</td>
-            <td>${escapeHtml(row.hasOutputValue)}</td>
-        </tr>
-    `).join('');
-
-    const tableHtml = rows.length ? `
-        <div class="edge-detail-table-wrap process-result-table-wrap">
-            <table class="edge-detail-table process-result-table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Paper</th>
-                        <th>Product</th>
-                        <th>Component</th>
-                        <th>CONTAINS value</th>
-                        <th>Process</th>
-                        <th>HAS_OUTPUT value</th>
-                    </tr>
-                </thead>
-                <tbody>${tableRows}</tbody>
-            </table>
-        </div>
-    ` : '';
-
-    graphContainer.innerHTML = `
-        <div class="process-result-in-graph">
-        <div class="edge-detail-header">
-            <div class="edge-detail-title">${escapeHtml(materialTitle)}</div>
-            <button class="edge-detail-close" type="button" aria-label="Close material chains">×</button>
-        </div>
-        <div class="edge-detail-summary">${escapeHtml(summary)}</div>
-        ${tableHtml}
-        </div>
-    `;
-    clearEdgeDetailPanel();
-    graphContainer.querySelector('.edge-detail-close')?.addEventListener('click', () => {
-        renderCurrentGraph();
-    });
-    graphContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-async function selectMaterialChains(materialName) {
-    const input = document.getElementById('material-search-input');
-    if (input) input.value = materialName;
-    hideMaterialSuggestions();
-
-    const graphContainer = document.getElementById('graph-container');
-    if (graphContainer) {
-        graphContainer.innerHTML = '<div class="loading">Loading material chains...</div>';
-    }
-    setGraphInfoPanelsVisible(false);
-
-    await ensureAllGraphDataLoaded();
-    const { rows, matchedMaterialNames } = buildMaterialChainRows(materialName);
-    renderMaterialChainPanel(materialName, rows, matchedMaterialNames);
-}
-
-function installEdgeDetailClick(graphContainer, graphState) {
-    if (!graphContainer) return;
-    graphContainer.__edgeGraphState = graphState;
-    if (graphContainer.__edgeDetailClickHandler && graphContainer.removeListener) {
-        graphContainer.removeListener('plotly_click', graphContainer.__edgeDetailClickHandler);
-    }
-    graphContainer.__edgeDetailClickInstalled = true;
-    graphContainer.__edgeDetailClickHandler = event => {
-        const activeState = graphContainer.__edgeGraphState;
-        const point = event?.points?.[0];
-        const customdata = point?.customdata;
-        const edgeIndex = typeof customdata === 'number' ? customdata : customdata?.edgeIndex;
-        if (typeof edgeIndex !== 'number') return;
-        showEdgeDetailPanel(activeState.edges[edgeIndex], activeState);
-    };
-    graphContainer.on('plotly_click', graphContainer.__edgeDetailClickHandler);
-}
-
-// 构建边的详细 hover 文本
-function buildEdgeHoverText(edge, source, target, predicate) {
-    const details = edge.details || {};
-
-    function formatDetailItem(item) {
-        if (item === null || item === undefined) {
-            return '';
-        }
-        if (typeof item === 'string' || typeof item === 'number' || typeof item === 'boolean') {
-            return String(item);
-        }
-        if (typeof item === 'object') {
-            const name = item.name || item.label || item.id || '';
-            const value = item.value;
-            const unit = item.unit || '';
-            if (name && !isEmptyMeasurementValue(value)) {
-                return `${name} (${value}${unit})`;
-            }
-            if (name) {
-                return String(name);
-            }
-            const compact = Object.entries(item)
-                .filter(([, v]) => v !== null && v !== undefined && v !== '')
-                .slice(0, 3)
-                .map(([k, v]) => `${k}: ${v}`)
-                .join(', ');
-            return compact || JSON.stringify(item);
-        }
-        return String(item);
-    }
-
-    function formatDetailList(value) {
-        const list = Array.isArray(value) ? value : (value ? [value] : []);
-        return list.map(formatDetailItem).filter(Boolean);
-    }
-
-    function formatValueWithUnit(value, unit) {
-        if (unit === undefined || unit === null || unit === '') {
-            return String(value);
-        }
-        return `${value}${unit}`;
-    }
-
-    function formatValuesWithUnits(values, units) {
-        const valueList = Array.isArray(values) ? values : [values];
-        const unitList = Array.isArray(units) ? units : [units];
-        return valueList.map((value, index) => formatValueWithUnit(value, unitList[index] ?? unitList[0])).join(', ');
-    }
-
-    let text = `<b>${source.label}</b> → <b>${target.label}</b><br>`;
-    text += `Type: ${predicate}<br>`;
-
-    const singlePanelValue = isSingleValuedPanelMeasurement(predicate, details) ? formatMeasurementValue(details) : '';
-    if (singlePanelValue) {
-        text += `Measurements: 1<br>`;
-        text += `Value range: ${singlePanelValue}<br>`;
-        text += `Click edge for details`;
-        return text;
-    }
-
-    if (
-        predicate === 'CONTAINS' &&
-        ['Product', 'Component'].includes(source.type) &&
-        target.type === 'Component'
-    ) {
-        const value = details.value;
-        const hasSingleValue = !isEmptyMeasurementValue(value) && !Array.isArray(value);
-        if (hasSingleValue && !details.measurement_count) {
-            text += `Value: ${formatMeasurementValue(details)}<br>`;
-        }
-        return text;
-    }
-
-    if (details.measurement_count && Array.isArray(details.measurements)) {
-        text += `Measurements: ${details.measurement_count}<br>`;
-        if (details.value_range) {
-            text += `Value range: ${details.value_range}${details.unit || ''}<br>`;
-        }
-        text += `Click edge for details`;
-        return text;
-    }
-
-    // CONTAINS 边只显示一个 value+unit，避免重复展示多个 value。
-    if (predicate === 'CONTAINS') {
-        const value = details.value;
-        const unit = details.unit;
-        if (!isEmptyMeasurementValue(value)) {
-            if (unit !== undefined && unit !== null && unit !== '') {
-                text += `Value: ${value}${unit}<br>`;
-            } else {
-                text += `Value: ${value}<br>`;
-            }
-        } else {
-            const labelParts = edge.label.split(' | ');
-            if (labelParts.length >= 2) {
-                const valuePart = labelParts.slice(1).join(' | ');
-                text += `Value: ${valuePart}<br>`;
-            }
-        }
-        const conditions = Array.isArray(details.condition)
-            ? details.condition
-            : (details.condition ? [details.condition] : []);
-        if (conditions.length > 0) {
-            text += `Condition: ${conditions.join('; ')}<br>`;
-        }
-        const scopes = Array.isArray(details.scope)
-            ? details.scope
-            : (details.scope ? [details.scope] : []);
-        if (scopes.length > 0) {
-            text += `Scope: ${scopes.join('; ')}<br>`;
-        }
-        return text;
-    }
-
-    // experiment_group 可能是数组或字符串
-    const groups = Array.isArray(details.experiment_group)
-        ? details.experiment_group
-        : (details.experiment_group ? [details.experiment_group] : []);
-    if (groups.length > 0) {
-        text += `Group: ${groups.map(g => g.replace(/_/g, ' ')).join(', ')}<br>`;
-    }
-
-    // value 可能是数组或字符串
-    const values = Array.isArray(details.value)
-        ? details.value.filter(value => !isEmptyMeasurementValue(value))
-        : (!isEmptyMeasurementValue(details.value) ? [details.value] : []);
-    if (values.length > 0) {
-        text += `Value: ${formatValuesWithUnits(values, details.unit)}<br>`;
-    }
-
-    // secondary_value 可能是数组或字符串
-    const secondaryValues = Array.isArray(details.secondary_value)
-        ? details.secondary_value
-        : (details.secondary_value ? [details.secondary_value] : []);
-    if (secondaryValues.length > 0) {
-        text += `Secondary: ${formatValuesWithUnits(secondaryValues, details.secondary_unit)}<br>`;
-    }
-
-    // condition 可能是数组或字符串
-    const conditions = Array.isArray(details.condition)
-        ? details.condition
-        : (details.condition ? [details.condition] : []);
-    if (conditions.length > 0) {
-        text += `Condition: ${conditions.join('; ')}<br>`;
-    }
-
-    // 添加 process_agents
-    const agents = formatDetailList(details.process_agents);
-    if (agents.length > 0) {
-        text += `Agents: ${agents.join(', ')}<br>`;
-    }
-
-    // 添加 media
-    const media = formatDetailList(details.media);
-    if (media.length > 0) {
-        text += `Media: ${media.join(', ')}<br>`;
-    }
-
-    // 添加 equipment
-    const equipment = formatDetailList(details.equipment);
-    if (equipment.length > 0) {
-        text += `Equipment: ${equipment.join(', ')}`;
-    }
-
-    return text;
-}
-
-function buildParallelEdgeMeta(edges) {
-    const groups = new Map();
-    edges.forEach((edge, index) => {
-        const key = `${edge.source}→${edge.target}`;
-        if (!groups.has(key)) groups.set(key, []);
-        groups.get(key).push(index);
-    });
-
-    const meta = new Map();
-    groups.forEach(indices => {
-        indices.forEach((edgeIndex, parallelIndex) => {
-            meta.set(edgeIndex, {
-                parallelIndex,
-                parallelCount: indices.length
-            });
-        });
-    });
-    return meta;
-}
-
-function buildEdgePath(sourcePosition, targetPosition, parallelIndex = 0, parallelCount = 1) {
-    const dx = targetPosition.x - sourcePosition.x;
-    const dy = targetPosition.y - sourcePosition.y;
-    const length = Math.sqrt(dx * dx + dy * dy) || 1;
-    const perpX = -dy / length;
-    const perpY = dx / length;
-    const spacing = parallelCount > 8 ? 0.11 : 0.16;
-    const offset = parallelCount <= 1 ? 0 : (parallelIndex - (parallelCount - 1) / 2) * spacing;
-    const control = {
-        x: (sourcePosition.x + targetPosition.x) / 2 + perpX * offset,
-        y: (sourcePosition.y + targetPosition.y) / 2 + perpY * offset
-    };
-
-    const x = [];
-    const y = [];
-    for (let step = 0; step <= 12; step += 1) {
-        const t = step / 12;
-        const oneMinusT = 1 - t;
-        x.push(
-            oneMinusT * oneMinusT * sourcePosition.x +
-            2 * oneMinusT * t * control.x +
-            t * t * targetPosition.x
-        );
-        y.push(
-            oneMinusT * oneMinusT * sourcePosition.y +
-            2 * oneMinusT * t * control.y +
-            t * t * targetPosition.y
-        );
-    }
-
-    return {
-        x,
-        y,
-        hover: control,
-        arrowSource: { x: x[x.length - 2], y: y[y.length - 2] }
-    };
-}
-
-// 准备 Plotly 数据
-function preparePlotlyData(graphData, queryId) {
-    const nodes = graphData.nodes;
-    const edges = graphData.edges;
-
-    // 节点坐标计算（力导向布局简化版）
-    const positions = calculateForceLayout(nodes, edges);
-    const savedPositions = graphPositionMemory.get(queryId);
-    if (savedPositions) {
-        positions.forEach(position => {
-            const cached = savedPositions[position.id];
-            if (!cached) return;
-            if (typeof cached.x !== 'number' || typeof cached.y !== 'number') return;
-            position.x = cached.x;
-            position.y = cached.y;
-        });
-    }
-
-    // 构建节点的hover信息
-    function buildNodeHoverText(node, edges) {
-        let text = `<b>Name:</b> ${node.label}<br><b>Type:</b> ${node.type}`;
-        if (['Product', 'Component', 'Material'].includes(node.type)) {
-            return text;
-        }
-
-        const details = node.details || {};
-
-        if (compactNodeDetailTypes.has(node.type)) {
-            return text;
-        }
-
-        const condList = details.condition || details.conditions || [];
-        if (!['Product', 'Component'].includes(node.type) && condList.length > 0) {
-            text += `<br><b>Condition:</b> ${condList.join('; ')}`;
-        }
-
-        // experiment_group
-        const groups = details.experiment_group || [];
-        if (groups.length > 0) {
-            text += `<br><b>Group:</b> ${groups.map(g => g.replace(/_/g, ' ')).join(', ')}`;
-        }
-
-        // property + value + unit
-        const prop = details.property;
-        const val = details.value;
-        const unit = details.unit;
-        if (prop) {
-            const propStr = Array.isArray(prop) ? prop.join(', ') : prop;
-            let propLine = `<br><b>${propStr}</b>`;
-            if (val !== undefined && val !== null && val !== '') {
-                const valStr = Array.isArray(val) ? val.join(', ') : val;
-                const unitStr = unit ? (Array.isArray(unit) ? unit.join(', ') : unit) : '';
-                propLine += `: ${valStr}${unitStr}`;
-            }
-            text += propLine;
-        }
-
-        // process_agents (show names)
-        const agents = details.process_agents || [];
-        if (agents.length > 0) {
-            const agentNames = agents.map(a => typeof a === 'object' ? (a.name || String(a)) : String(a));
-            text += `<br><b>Agents:</b> ${agentNames.join(', ')}`;
-        }
-
-        // media (show names)
-        const media = details.media || [];
-        if (media.length > 0) {
-            const mediaNames = media.map(m => typeof m === 'object' ? (m.name || String(m)) : String(m));
-            text += `<br><b>Media:</b> ${mediaNames.join(', ')}`;
-        }
-
-        // equipment (show names)
-        const equip = details.equipment || [];
-        if (equip.length > 0) {
-            const equipNames = equip.map(e => typeof e === 'object' ? (e.name || String(e)) : String(e));
-            text += `<br><b>Equipment:</b> ${equipNames.join(', ')}`;
-        }
-
-        return text;
-    }
-
-    // 节点轨迹
-    const nodeTrace = {
-        x: positions.map(p => p.x),
-        y: positions.map(p => p.y),
-        mode: 'markers+text',
-        type: 'scatter',
-        marker: {
-            size: nodes.map(n => n.size),
-            color: nodes.map(n => nodeColors[n.type] || '#667eea'),
-            line: {
-                color: '#ffffff',
-                width: 2
-            },
-            opacity: 0.95,
-            shadow: {
-                color: 'rgba(102, 126, 234, 0.4)',
-                size: 8,
-                opacity: 0.3
-            }
-        },
-        text: nodes.map(n => n.label),
-        textposition: 'bottom center',
-        textfont: {
-            size: 11,
-            color: '#5a5a6e',
-            family: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif'
-        },
-        hoverinfo: 'text',
-        hovertemplate: '%{hovertext}<extra></extra>',
-        hovertext: nodes.map(n => buildNodeHoverText(n, edges)),
-        name: '节点'
-    };
-
-    // 边类型颜色映射
-    const edgeColors = {
-        'CONTAINS': '#667eea',
-        'HAS_OUTPUT': '#ed64a6',
-        'HAS_OBSERVATION': '#f6ad55',
-        'HAS_INPUT': '#f6ad55',
-        'HAS_CONTEXT': '#48bb78',
-        'PROCESSED_BY': '#764ba2',
-        'RELATED_TO': '#48bb78',
-        'TRANSFORMED_TO': '#f6ad55'
-    };
-
-    // 提取边的谓词类型
-    function getEdgePredicate(label) {
-        const parts = label.split(' | ');
-        return parts[0];
-    }
-
-    // 边轨迹
-    const edgeTraces = [];
-    const renderedEdges = [];
-    const parallelEdgeMeta = buildParallelEdgeMeta(edges);
-    edges.forEach((edge, edgeIndex) => {
-        const source = nodes.find(n => n.id === edge.source);
-        const target = nodes.find(n => n.id === edge.target);
-
-        if (!source || !target) return;
-
-        const sourcePos = positions.find(p => p.id === edge.source);
-        const targetPos = positions.find(p => p.id === edge.target);
-
-        if (!sourcePos || !targetPos) return;
-
-        const predicate = getEdgePredicate(edge.label);
-        const edgeColor = edgeColors[predicate] || '#764ba2';
-        const lineTraceIndex = edgeTraces.length;
-        const edgeMeta = parallelEdgeMeta.get(edgeIndex) || { parallelIndex: 0, parallelCount: 1 };
-        const edgePath = buildEdgePath(
-            sourcePos,
-            targetPos,
-            edgeMeta.parallelIndex,
-            edgeMeta.parallelCount
-        );
-
-        edgeTraces.push({
-            x: edgePath.x,
-            y: edgePath.y,
-            mode: 'lines',
-            type: 'scatter',
-            line: {
-                color: edgeColor,
-                width: Math.max(edge.width * 0.8, 3),
-                opacity: 0.7
-            },
-            hoverinfo: 'text',
-            hoveron: 'points+fills',
-            hoverlabel: {
-                bgcolor: edgeColor,
-                bordercolor: '#fff',
-                font: { color: '#fff', size: 12 }
-            },
-            hovertext: buildEdgeHoverText(edge, source, target, predicate),
-            customdata: edgePath.x.map(() => edgeIndex),
-            name: edge.label,
-            showlegend: false
-        });
-
-        const arrowHead = buildEdgeArrowHead(edgePath.arrowSource, targetPos);
-        const arrowTraceIndex = edgeTraces.length;
-
-        edgeTraces.push({
-            x: arrowHead.x,
-            y: arrowHead.y,
-            mode: 'lines',
-            type: 'scatter',
-            line: {
-                color: edgeColor,
-                width: 2.4,
-                opacity: 0.95
-            },
-            hoverinfo: 'skip',
-            showlegend: false,
-            name: edge.label + '_arrow'
-        });
-
-        // 添加不可见的中间点用于 hover 检测
-        const hoverTraceIndex = edgeTraces.length;
-
-        edgeTraces.push({
-            x: [edgePath.hover.x],
-            y: [edgePath.hover.y],
-            mode: 'markers',
-            type: 'scatter',
-            marker: {
-                size: 28,
-                color: 'rgba(102, 126, 234, 0.01)',
-                opacity: 0.01
-            },
-            hoverinfo: 'text',
-            hoveron: 'points',
-            hoverlabel: {
-                bgcolor: edgeColor,
-                bordercolor: '#fff',
-                font: { color: '#fff', size: 12 }
-            },
-            hovertext: buildEdgeHoverText(edge, source, target, predicate),
-            customdata: [edgeIndex],
-            name: edge.label + '_hover',
-            showlegend: false
-        });
-
-        renderedEdges.push({
-            source: edge.source,
-            target: edge.target,
-            lineTraceIndex,
-            hoverTraceIndex,
-            arrowTraceIndex,
-            parallelIndex: edgeMeta.parallelIndex,
-            parallelCount: edgeMeta.parallelCount
-        });
-    });
-
-    // 合并所有轨迹
-    return {
-        traces: [...edgeTraces, nodeTrace],
-        nodes,
-        edges,
-        positions,
-        renderedEdges,
-        nodeTraceIndex: edgeTraces.length,
-        queryId
-    };
-}
-
-function buildEdgeArrowHead(sourcePosition, targetPosition) {
-    const dx = targetPosition.x - sourcePosition.x;
-    const dy = targetPosition.y - sourcePosition.y;
-    const length = Math.sqrt(dx * dx + dy * dy) || 1;
-    const unitX = dx / length;
-    const unitY = dy / length;
-    const perpX = -unitY;
-    const perpY = unitX;
-    const tipDistance = 0.72;
-    const baseDistance = 1.08;
-    const halfWidth = 0.18;
-    const tip = {
-        x: targetPosition.x - unitX * tipDistance,
-        y: targetPosition.y - unitY * tipDistance
-    };
-    const base = {
-        x: targetPosition.x - unitX * baseDistance,
-        y: targetPosition.y - unitY * baseDistance
-    };
-    const left = {
-        x: base.x + perpX * halfWidth,
-        y: base.y + perpY * halfWidth
-    };
-    const right = {
-        x: base.x - perpX * halfWidth,
-        y: base.y - perpY * halfWidth
-    };
-
-    return {
-        x: [left.x, tip.x, right.x],
-        y: [left.y, tip.y, right.y]
-    };
-}
-
-// 安装节点拖拽：拖动节点时同步更新相连边
-function installNodeDrag(graphContainer, graphState) {
-    if (graphContainer._nodeDragAbort) {
-        graphContainer._nodeDragAbort.abort();
-    }
-
-    const abortController = new AbortController();
-    graphContainer._nodeDragAbort = abortController;
-    const listenerOptions = { signal: abortController.signal };
-    const captureOptions = { signal: abortController.signal, capture: true };
-    const positions = graphState.positions.map(position => ({ ...position }));
-    const positionById = new Map(positions.map(position => [position.id, position]));
-    let hoveredPointIndex = null;
-    let draggedPointIndex = null;
-
-    // 节流相关
-    let rafId = null;
-    let pendingUpdate = false;
-
-    if (graphContainer._nodeDragPlotlyHandlers && typeof graphContainer.removeListener === 'function') {
-        const handlers = graphContainer._nodeDragPlotlyHandlers;
-        graphContainer.removeListener('plotly_hover', handlers.hover);
-        graphContainer.removeListener('plotly_unhover', handlers.unhover);
-    }
-
-    const hoverHandler = eventData => {
-        const point = eventData.points && eventData.points[0];
-        if (point && point.curveNumber === graphState.nodeTraceIndex) {
-            hoveredPointIndex = point.pointIndex;
-            graphContainer.style.cursor = 'grab';
-        }
-    };
-
-    const unhoverHandler = () => {
-        if (draggedPointIndex === null) {
-            hoveredPointIndex = null;
-            graphContainer.style.cursor = '';
-        }
-    };
-
-    graphContainer._nodeDragPlotlyHandlers = {
-        hover: hoverHandler,
-        unhover: unhoverHandler
-    };
-    graphContainer.on('plotly_hover', hoverHandler);
-    graphContainer.on('plotly_unhover', unhoverHandler);
-
-    graphContainer.addEventListener('pointerdown', event => {
-        if (hoveredPointIndex === null || event.button !== 0) return;
-
-        draggedPointIndex = hoveredPointIndex;
-        graphContainer.setPointerCapture(event.pointerId);
-        graphContainer.style.cursor = 'grabbing';
-        Plotly.relayout(graphContainer, { dragmode: false });
-        event.preventDefault();
-        event.stopPropagation();
-    }, captureOptions);
-
-    graphContainer.addEventListener('pointermove', event => {
-        if (draggedPointIndex === null) return;
-
-        const nextPosition = pointerToDataCoordinates(graphContainer, event);
-        if (!nextPosition) return;
-
-        const draggedPosition = positions[draggedPointIndex];
-        draggedPosition.x = nextPosition.x;
-        draggedPosition.y = nextPosition.y;
-
-        // 使用节流：标记需要更新但不立即执行
-        if (!pendingUpdate) {
-            pendingUpdate = true;
-            rafId = requestAnimationFrame(() => {
-                pendingUpdate = false;
-                if (rafId !== null) {
-                    updateDraggedNode();
-                    updateConnectedEdges(draggedPosition.id);
-                    rafId = null;
-                }
-            });
-        }
-
-        event.preventDefault();
-    }, captureOptions);
-
-    graphContainer.addEventListener('pointerup', finishDrag, listenerOptions);
-    graphContainer.addEventListener('pointercancel', finishDrag, listenerOptions);
-
-    function finishDrag(event) {
-        if (rafId !== null) {
-            cancelAnimationFrame(rafId);
-            rafId = null;
-        }
-        // 执行最后一次更新确保位置正确
-        if (draggedPointIndex !== null) {
-            updateDraggedNode();
-            updateConnectedEdges(positions[draggedPointIndex].id);
-        }
-
-        if (draggedPointIndex === null) return;
-
-        // 保存当前子图的节点坐标，切换后返回时恢复用户拖拽布局。
-        const snapshot = {};
-        positions.forEach(position => {
-            snapshot[position.id] = { x: position.x, y: position.y };
-        });
-        graphPositionMemory.set(graphState.queryId, snapshot);
-
-        if (graphContainer.hasPointerCapture(event.pointerId)) {
-            graphContainer.releasePointerCapture(event.pointerId);
-        }
-        draggedPointIndex = null;
-        pendingUpdate = false;
-        graphContainer.style.cursor = hoveredPointIndex === null ? '' : 'grab';
-        Plotly.relayout(graphContainer, { dragmode: 'pan' });
-    }
-
-    function updateDraggedNode() {
-        Plotly.restyle(graphContainer, {
-            x: [positions.map(position => position.x)],
-            y: [positions.map(position => position.y)]
-        }, [graphState.nodeTraceIndex]);
-    }
-
-    function updateConnectedEdges(nodeId) {
-        // 批量更新：收集所有需要更新的边数据
-        const lineXUpdates = [];
-        const lineYUpdates = [];
-        const hoverXUpdates = [];
-        const hoverYUpdates = [];
-        const arrowXUpdates = [];
-        const arrowYUpdates = [];
-        const lineIndices = [];
-        const hoverIndices = [];
-        const arrowIndices = [];
-
-        graphState.renderedEdges.forEach(edge => {
-            if (edge.source !== nodeId && edge.target !== nodeId) return;
-
-            const sourcePosition = positionById.get(edge.source);
-            const targetPosition = positionById.get(edge.target);
-            if (!sourcePosition || !targetPosition) return;
-            const edgePath = buildEdgePath(
-                sourcePosition,
-                targetPosition,
-                edge.parallelIndex,
-                edge.parallelCount
-            );
-
-            lineIndices.push(edge.lineTraceIndex);
-            lineXUpdates.push(edgePath.x);
-            lineYUpdates.push(edgePath.y);
-
-            hoverIndices.push(edge.hoverTraceIndex);
-            hoverXUpdates.push([edgePath.hover.x]);
-            hoverYUpdates.push([edgePath.hover.y]);
-
-            const arrowHead = buildEdgeArrowHead(edgePath.arrowSource, targetPosition);
-            arrowIndices.push(edge.arrowTraceIndex);
-            arrowXUpdates.push(arrowHead.x);
-            arrowYUpdates.push(arrowHead.y);
-        });
-
-        // 批量执行更新
-        if (lineIndices.length > 0) {
-            Plotly.restyle(graphContainer, {
-                x: lineXUpdates,
-                y: lineYUpdates
-            }, lineIndices);
-
-            Plotly.restyle(graphContainer, {
-                x: hoverXUpdates,
-                y: hoverYUpdates
-            }, hoverIndices);
-
-            Plotly.restyle(graphContainer, {
-                x: arrowXUpdates,
-                y: arrowYUpdates
-            }, arrowIndices);
-        }
-    }
-}
-
-function pointerToDataCoordinates(graphContainer, event) {
-    const fullLayout = graphContainer._fullLayout;
-    if (!fullLayout || !fullLayout._size) return null;
-
-    const bounds = graphContainer.getBoundingClientRect();
-    const size = fullLayout._size;
-    const plotX = event.clientX - bounds.left - size.l;
-    const plotY = event.clientY - bounds.top - size.t;
-    const xRange = fullLayout.xaxis.range;
-    const yRange = fullLayout.yaxis.range;
-
-    return {
-        x: xRange[0] + (plotX / size.w) * (xRange[1] - xRange[0]),
-        y: yRange[1] - (plotY / size.h) * (yRange[1] - yRange[0])
-    };
-}
-
-// 语义模板初始化 + 轻量力导向微调
-function calculateForceLayout(nodes, edges) {
-    const positions = buildSemanticInitialPositions(nodes, edges);
-    const templatePositions = Object.fromEntries(
-        Object.entries(positions).map(([id, position]) => [id, { ...position }])
-    );
-
-    // 模板已经表达语义方向，力导向只负责轻微拉开重叠节点。
-    for (let iter = 0; iter < 36; iter++) {
-        const forces = {};
-
-        nodes.forEach(node => {
-            forces[node.id] = { x: 0, y: 0 };
-        });
-
-        for (let i = 0; i < nodes.length; i++) {
-            for (let j = i + 1; j < nodes.length; j++) {
-                const nodeA = nodes[i];
-                const nodeB = nodes[j];
-                const posA = positions[nodeA.id];
-                const posB = positions[nodeB.id];
-                
-                const dx = posB.x - posA.x;
-                const dy = posB.y - posA.y;
-                const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
-
-                const labelPadding = Math.min((nodeA.label.length + nodeB.label.length) * 0.006, 0.28);
-                const force = (0.22 + labelPadding) / (dist * dist);
-                const fx = (dx / dist) * force;
-                const fy = (dy / dist) * force;
-
-                forces[nodeA.id].x -= fx;
-                forces[nodeA.id].y -= fy;
-                forces[nodeB.id].x += fx;
-                forces[nodeB.id].y += fy;
-            }
-        }
-
-        edges.forEach(edge => {
-            const posA = positions[edge.source];
-            const posB = positions[edge.target];
-
-            if (!posA || !posB) return;
-
-            const dx = posB.x - posA.x;
-            const dy = posB.y - posA.y;
-            const dist = Math.sqrt(dx * dx + dy * dy) || 0.1;
-            const targetDistance = getTargetEdgeDistance(edge.label);
-            const force = (dist - targetDistance) * 0.012;
-            const fx = (dx / dist) * force;
-            const fy = (dy / dist) * force;
-
-            forces[edge.source].x += fx;
-            forces[edge.source].y += fy;
-            forces[edge.target].x -= fx;
-            forces[edge.target].y -= fy;
-        });
-
-        nodes.forEach(node => {
-            const pos = positions[node.id];
-            const force = forces[node.id];
-            const anchor = templatePositions[node.id];
-
-            force.x += (anchor.x - pos.x) * 0.045;
-            force.y += (anchor.y - pos.y) * 0.045;
-
-            pos.x += force.x * 0.12;
-            pos.y += force.y * 0.12;
-
-            pos.x = clamp(pos.x, -5.35, 5.35);
-            pos.y = clamp(pos.y, -5.2, 5.2);
-        });
-    }
-
-    return nodes.map(node => ({
-        id: node.id,
-        x: positions[node.id].x,
-        y: positions[node.id].y
+/* Frozen data explorer. Rendering and filters never change extraction results. */
+'use strict';
+const $ = selector => document.querySelector(selector);
+const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const list = value => Array.isArray(value) ? value : value == null ? [] : [value];
+const text = value => list(value).map(x => typeof x === 'object' ? JSON.stringify(x) : String(x)).join('; ');
+const colors = {Product:'#1f7a8c',Component:'#4a6fa5',Process:'#b5703a',Material:'#8a8a2e',ProductFamily:'#6b8f71',MethodFamily:'#8a7aa8'};
+const labels = {contains:'CONTAINS',processedBy:'PROCESSED_BY',hasOutput:'HAS_OUTPUT',observedForProductModel:'Observed for product model',variantOf:'Variant of',observedUnderScope:'Observed under scope',modelInDeclaredPopulation:'Model in declared population',comparableSamplePopulation:'Comparable sample population',sameModelStudied:'Same model studied'};
+const state = {data:null, nodes:new Map(), positions:new Map(), shownNodes:[], shownEdges:[], hierarchy:true, expanded:new Set(), navPath:[], graphHistory:[], displayNodes:new Map(), focus:null, selected:null, view:'fusion', case:null, stage:'gate', sourceTab:'text', evidence:'', locationSummary:false, textChoice:null, table:null, located:null, trace:null, spotlight:null, cellLookup:null, cellIndex:new Map(), cache:new Map(), request:0};
+let walkthrough=null;
+const canvas = $('#graph'), ctx = canvas.getContext('2d');
+let width=0, height=0, zoom=1, offset={x:0,y:0}, pointer=null, frame=0, edgeLabels=[];
+function notify(message){ $('#status').textContent=message; }
+async function fetchJSON(url){ const response=await fetch(url,{cache:'no-cache'}); if(!response.ok) throw Error(`${url}: HTTP ${response.status}`); return response.json(); }
+function fields(object){ return Object.entries(object || {}).filter(([,v])=>text(v)).map(([k,v])=>`<dl class="field"><dt>${esc(k)}</dt><dd>${esc(text(v))}</dd></dl>`).join(''); }
+function conditionFields(object){
+  const seen=new Set();
+  return fields(Object.fromEntries(Object.entries(object).filter(([,value])=>{
+    const key=text(value).replace(/\s+/g,' ').trim();
+    if(!key||seen.has(key))return false;
+    seen.add(key);return true;
+  })));
+}
+function jsonDetails(value){ return `<details><summary>View complete record JSON</summary><pre>${esc(JSON.stringify(value,null,2))}</pre></details>`; }
+function sourceName(id){ return state.data.sources.find(s=>s.id===id)?.label || id || 'Shared material / family'; }
+function relationName(edge){ return edge.predicates?`${Object.keys(edge.predicates).length} relation types`:labels[edge.predicate] || edge.predicate; }
+function isCatalog(node){return node.source.startsWith('catalog:');}
+function displayNode(id){return state.displayNodes.get(id)||state.nodes.get(id);}
+function nodeSize(node){return node.group?(node.level===0?39:16):node.type==='Product'?7:node.type==='Material'?4.5:6;}
+function updateNavigation(){
+  const container=$('#graph-path');container.replaceChildren();
+  const overview=document.createElement('button');overview.textContent='Overview';overview.onclick=resetHierarchy;container.append(overview);
+  state.navPath.forEach((id,index)=>{
+    const item=state.hierarchyData.groups.get(id)||state.nodes.get(id);
+    if(!item)return;
+    const separator=document.createElement('span');separator.textContent='›';separator.setAttribute('aria-hidden','true');container.append(separator);
+    const button=document.createElement('button');button.textContent=item.label;button.title=item.label;
+    if(index===state.navPath.length-1)button.setAttribute('aria-current','location');
+    button.onclick=()=>item.group?navigateGroup(id):focusNode(id);container.append(button);
+  });
+  if(!state.navPath.length)overview.setAttribute('aria-current','location');
+  $('#graph-back').disabled=!state.graphHistory.length&&!state.navPath.length;
+}
+// Entity drill-down history is separate from the taxonomy breadcrumb path.
+function rememberGraph(){
+  const copy=positions=>positions&&new Map([...positions].map(([id,p])=>[id,{...p}]));
+  state.graphHistory.push({hierarchy:state.hierarchy,focus:state.focus,expanded:[...state.expanded],navPath:[...state.navPath],selected:state.selected,
+    filters:Object.fromEntries(['source-filter','type-filter','relation-filter'].map(id=>[id,$('#'+id).value])),fusion:$('#fusion-toggle').checked,
+    positions:copy(state.positions),localPositions:copy(state.localPositions),zoom,offset:{...offset}});
+}
+function restoreGraph(previous){
+  state.hierarchy=previous.hierarchy;state.focus=previous.focus;state.expanded=new Set(previous.expanded);state.selected=previous.selected;
+  for(const [id,value] of Object.entries(previous.filters))$('#'+id).value=value;
+  $('#fusion-toggle').checked=previous.fusion;updateGraph(false);
+  state.positions=previous.positions;state.localPositions=previous.localPositions;zoom=previous.zoom;offset=previous.offset;
+  const selected=state.selected;
+  if(selected?.kind==='node')selectNode(selected.id);
+  else if(selected?.kind==='edge')selectEdge(selected.id);
+  else $('#inspector').innerHTML='<h3>Previous graph view</h3><p>Select an entity or relation to inspect its evidence.</p>';
+  state.navPath=previous.navPath;updateNavigation();draw();
+}
+function closeBranch(id){
+  for(const group of [...state.expanded])if(state.hierarchyData.path(group).includes(id))state.expanded.delete(group);
+}
+function navigateGroup(id){
+  state.graphHistory=[];
+  closeBranch(id);state.hierarchy=true;state.focus=null;
+  state.hierarchyData.path(id).forEach(group=>state.expanded.add(group));
+  updateGraph();selectGroup(id);
+}
+function collapseGroup(id){
+  state.graphHistory=[];
+  closeBranch(id);state.hierarchy=true;state.focus=null;updateGraph();selectGroup(id);
+}
+function goUp(){
+  if(state.graphHistory.length){restoreGraph(state.graphHistory.pop());return;}
+  const path=state.navPath.slice(),current=path.pop();if(!current)return;
+  if(!state.hierarchyData.groups.has(current)){
+    if(path.length)navigateGroup(path.at(-1));else resetHierarchy();
+    return;
+  }
+  closeBranch(current);state.hierarchy=true;state.focus=null;state.navPath=path;updateGraph();
+  if(path.length)selectGroup(path.at(-1));else $('#inspector').innerHTML='<h3>Overview</h3><p>Select a group to continue exploring. Other expanded branches are preserved.</p>';
+}
+function resetHierarchy(){
+  state.graphHistory=[];
+  state.hierarchy=true;state.expanded.clear();state.navPath=[];state.focus=null;state.selected=null;
+  updateGraph();
+  $('#inspector').innerHTML='<div class="eyebrow">GRAPH OVERVIEW</div><h3>Four entry points.</h3><p>Select Product, Component, Process or Material to inspect its contents, then expand the group.</p><p>Use the breadcrumb trail and Back to move between levels. Collapse group closes only that branch.</p>';
+}
+function showAllEntities(){
+  state.graphHistory=[];state.hierarchy=false;state.focus=null;state.navPath=[];state.selected=null;
+  updateGraph();
+}
+function setView(view,loadDefault=true){
+  state.view=view;
+  document.querySelectorAll('[data-view]').forEach(button=>button.classList.toggle('active',button.dataset.view===view));
+  $('#fusion-view').hidden=view!=='fusion'; $('#replay-view').hidden=view!=='replay';
+  if($('#papers-view'))$('#papers-view').hidden=view!=='papers';
+  $('#fusion-controls').hidden=view!=='fusion'; $('#case-on-graph').hidden=view!=='replay';
+  $('#case-controls').hidden=view!=='replay';
+  walkthrough?.viewChanged(view);
+  if(view==='fusion'){resize();} else if(view==='replay'&&loadDefault&&state.case?.id!==$('#case-select').value){openReplay($('#case-select').value);}
+}
+function initializePositions(){
+  const papers=state.data.sources.filter(s=>s.kind==='paper');
+  const groups=new Map(papers.map((s,i)=>[s.id,{x:680*Math.cos(i/papers.length*Math.PI*2),y:680*Math.sin(i/papers.length*Math.PI*2),nodes:[]}]));
+  const catalogs=state.data.sources.filter(s=>s.kind==='catalog');
+  catalogs.forEach((s,i)=>groups.set(s.id,{x:-1150+(i%3)*120,y:-640+Math.floor(i/3)*220,nodes:[]}));
+  groups.set('',{x:0,y:0,nodes:[]});
+  state.data.nodes.forEach(node=>groups.get(node.source)?.nodes.push(node));
+  groups.forEach((group,key)=>group.nodes.forEach((node,i)=>{
+    const theta=i*2.399963, radius=(key?12:30)*Math.sqrt(i+1);
+    state.positions.set(node.id,{x:group.x+radius*Math.cos(theta),y:group.y+radius*Math.sin(theta)});
+  }));
+}
+function updateGraph(fit=true){
+  const source=$('#source-filter').value, kind=$('#type-filter').value;
+  const families=kind.endsWith('Family')||state.nodes.get(state.focus)?.type.endsWith('Family');
+  let edges=state.data.edges.filter(e=>($('#fusion-toggle').checked||!e.fusion)&&(!$('#relation-filter').value||e.predicate===$('#relation-filter').value));
+  let nodes=state.data.nodes;
+  if(source){
+    edges=edges.filter(e=>e.sources.includes(source));
+    const ids=new Set(edges.flatMap(e=>[e.source,e.target]));
+    nodes=nodes.filter(n=>n.source===source||ids.has(n.id));
+  }
+  nodes=nodes.filter(n=>(families || !n.type.endsWith('Family')) && (!kind||n.type===kind));
+  const allowed=new Set(nodes.map(n=>n.id));
+  edges=edges.filter(e=>allowed.has(e.source)&&allowed.has(e.target));
+  if(state.focus){
+    const ids=new Set(allowed.has(state.focus)?[state.focus]:[]);
+    edges.forEach(e=>{if(e.source===state.focus||e.target===state.focus){ids.add(e.source);ids.add(e.target);}});
+    nodes=nodes.filter(n=>ids.has(n.id)); edges=edges.filter(e=>ids.has(e.source)&&ids.has(e.target));
+  }
+  state.shownNodes=nodes; state.shownEdges=edges;
+  state.visibleEntityIds=new Set(nodes.map(node=>node.id));
+  state.localPositions=null;
+  if(state.focus || source){
+    const levels=new Map();
+    if(state.focus){
+      levels.set(state.focus,0);
+      edges.forEach(edge=>{
+        if(edge.source===state.focus&&!levels.has(edge.target))levels.set(edge.target,1);
+        if(edge.target===state.focus&&!levels.has(edge.source))levels.set(edge.source,1);
+      });
+    }else{
+      nodes.forEach(node=>levels.set(node.id,['Product','Component','Process','Material','ProductFamily','MethodFamily'].indexOf(node.type)));
+    }
+    const columns=new Map();
+    nodes.forEach(node=>{const level=levels.get(node.id)??0;if(!columns.has(level))columns.set(level,[]);columns.get(level).push(node);});
+    state.localPositions=new Map();
+    columns.forEach((group,level)=>group.sort((a,b)=>a.label.localeCompare(b.label)).forEach((node,i)=>{
+      state.localPositions.set(node.id,{x:level*400,y:(i-(group.length-1)/2)*75});
     }));
+  }
+  $('#visible-stats').textContent=`${nodes.length} entities · ${edges.length} displayed relations · ${edges.filter(e=>e.fusion).length} fusion links`;
+  $('#graph-caption').textContent=state.focus?`Focus: ${state.nodes.get(state.focus)?.label || ''} · direct neighborhood`:
+    source?`Source: ${sourceName(source)}`:'Grouped by source. Relations display separate observation records; measurements are not pooled or averaged.';
+  if(state.hierarchy){
+    const projection=state.hierarchyData.project(nodes,edges,state.expanded);
+    state.shownNodes=projection.nodes;state.shownEdges=projection.edges;
+    state.localPositions=state.hierarchyData.positions(projection.nodes);
+    $('#visible-stats').textContent=`${projection.nodes.length} displayed nodes · ${nodes.filter(n=>!n.type.endsWith('Family')).length} underlying entities`;
+    $('#graph-caption').textContent='Product · Component · Process · Material. Select a group to expand; materials stay grouped until opened.';
+  }
+  state.displayNodes=new Map(state.shownNodes.map(node=>[node.id,node]));
+  if(state.selected && !(state.selected.kind==='node'?state.displayNodes.has(state.selected.id):state.shownEdges.some(edge=>edge.id===state.selected.id)))state.selected=null;
+  updateNavigation();$('#graph-tooltip').hidden=true;
+  if(fit) fitGraph(); else draw();
 }
-
-function buildSemanticInitialPositions(nodes, edges) {
-    const positions = {};
-    const nodeIds = new Set(nodes.map(node => node.id));
-    const has = id => nodeIds.has(id);
-    const set = (id, x, y) => {
-        if (has(id)) positions[id] = { x, y };
-    };
-    const placeColumn = (ids, x, topY, gap) => {
-        ids.filter(has).forEach((id, index) => set(id, x, topY - index * gap));
-    };
-    const placeGrid = (ids, startX, startY, columns, xGap, yGap) => {
-        ids.filter(has).forEach((id, index) => {
-            const col = index % columns;
-            const row = Math.floor(index / columns);
-            set(id, startX + col * xGap, startY - row * yGap);
-        });
-    };
-
-    if (has('bioleaching')) {
-        // Product & Components (left column)
-        set('mobile_phone', -4.2, 3.2);
-        set('printed_circuit_board', -4.2, 1.6);
-        set('cover', -4.2, 0.1);
-        set('silver', -1.65, 3.2);
-        set('gold', -1.65, 1.6);
-        set('copper', -1.65, 0.1);
-        // Process center
-        set('bioleaching', -0.25, 2.0);
-        set('gold_leaching', -0.25, 0.5);
-        set('metal_leaching', -0.25, -1.0);
-        // Equipment (bottom)
-        set('incubator_shaker', -0.25, -2.0);
-        set('erlenmeyer_flask', 1.55, -2.0);
-        set('orbital_shaker', 1.55, -3.0);
-    } else if (has('dissolution')) {
-        set('li_battery', -4.5, 0.9);
-        set('cathode', -3, 0.45);
-        set('licoo2', -1.35, 0.1);
-        set('dissolution', 0.55, 0.1);
-        set('phosphoric_acid', 0.2, 1.85);
-        set('h2o2', -1.05, 1.75);
-        set('lithium', 2.35, 0.9);
-        set('cobalt', 2.35, -0.85);
-        set('li3po4', 4.25, 1.15);
-        set('coc2o4', 4.25, -1.1);
-        set('mn', 0.5, -2.15);
-    } else if (has('leaching') && has('bmim_hso4')) {
-        set('wpcb', -4.45, 0.35);
-        set('leaching', -1.45, 0.35);
-        set('copper', 2.45, 0.2);
-        placeColumn(['bso4hpy', 'bso3hpy', 'bmim_hso4', 'bso3hmim', 'mim_hso4', 'bso4hmim'], 0.55, 2.55, 0.86);
-        set('hydrogen_peroxide', -1.55, -1.65);
-        set('nitric_acid', -0.35, -2.45);
-        set('water_bath', -4.1, -1.65);
-        set('icp', 4.15, -1.45);
-    } else if (has('Product_Nokia_5110_Instance')) {
-        set('Product_Nokia_5110_Instance', -4.2, 0.25);
-        placeColumn([
-            'Component_battery_Class',
-            'Component_electronic_parts_Class',
-            'Component_Metal_parts__mounts__screws_Class',
-            'Component_Plastic_parts__housing_components__cases__enclosures__covers_Class',
-            'Component_display_Class'
-        ], -2.1, 1.9, 0.95);
-        placeGrid([
-            'Material_Cu_Class', 'Material_Fe_Class', 'Material_Ni_Class', 'Material_Sn_Class',
-            'Material_Ag_Class', 'Material_Au_Class', 'Material_Pb_Class', 'Material_Cr_Class',
-            'Material_Zn_Class', 'Material_Co_Class', 'Material_Ti_Class', 'Material_Ca_Class',
-            'Material_Mn_Class', 'Material_Al_Class', 'Material_Pd_Class', 'Material_Pt_Class',
-            'Material_Mg_Class', 'Material_Mo_Class', 'Material_V_Class', 'Material_Cd_Class',
-            'Material_Other_metals_Class'
-        ], 0.3, 2.6, 5, 1.08, 0.78);
-    } else if (has('sony_t230')) {
-        set('sony_t230', -4.15, 0.25);
-        placeColumn(['battery', 'electronic_part', 'plastic_parts', 'display', 'metal_part'], -2.25, 2.35, 1.05);
-        set('total_weight', -4.25, -2.45);
-        set('pc_abs', -0.35, 0.25);
-        placeGrid(['cu', 'fe', 'sn', 'ni', 'cr', 'pb', 'ag', 'au', 'al', 'zn', 'mn', 'co', 'ca', 'ti'], 0.2, 2.75, 4, 1.18, 0.82);
-    } else if (has('primary_amide')) {
-        set('phone', -4, 0.85);
-        set('gold', -0.25, 0.25);
-        placeColumn(['fe', 'cu', 'sn', 'zn'], -3.35, -0.65, 0.7);
-        set('solvent_extraction', 1.55, -0.75);
-        set('primary_amide', 2.15, 1.6);
-        set('primary_amide_l', 2.15, 0.72);
-        set('toluene', 4.05, 1.75);
-        set('hcl', 4.05, 0.82);
-        set('aucl4', 0.55, -2.05);
-        set('mibk', 2.6, -2.35);
-        set('dbc', 3.85, -1.7);
+function resize(){
+  if(state.view!=='fusion')return;
+  const rect=canvas.getBoundingClientRect(); width=rect.width;height=rect.height;
+  const dpr=window.devicePixelRatio||1;canvas.width=width*dpr;canvas.height=height*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+  fitGraph();
+}
+function fitGraph(){
+  if(!width||!height)return;
+  const points=state.shownNodes.map(n=>(state.localPositions||state.positions).get(n.id));
+  if(!points.length){draw();return;}
+  const xs=points.map(p=>p.x),ys=points.map(p=>p.y),left=Math.min(...xs),right=Math.max(...xs),top=Math.min(...ys),bottom=Math.max(...ys);
+  zoom=Math.min((width-240)/Math.max(150,right-left),(height-160)/Math.max(150,bottom-top),2.5);
+  offset={x:(width-110)/2-((left+right)/2)*zoom,y:height/2-((top+bottom)/2)*zoom+10};draw();
+}
+function point(id){const p=(state.localPositions||state.positions).get(id);return {x:p.x*zoom+offset.x,y:p.y*zoom+offset.y};}
+function draw(){if(frame)return;frame=requestAnimationFrame(()=>{frame=0;paint();});}
+function paintArrow(source,target){
+  const a=point(source),b=point(target),node=displayNode(target),angle=Math.atan2(b.y-a.y,b.x-a.x);
+  const radius=nodeSize(node)+(state.selected?.kind==='node'&&state.selected.id===target&&!node.group?4:0)+4;
+  if(Math.hypot(b.x-a.x,b.y-a.y)<=radius)return;
+  const x=b.x-Math.cos(angle)*radius,y=b.y-Math.sin(angle)*radius;
+  ctx.setLineDash([]);ctx.fillStyle=ctx.strokeStyle;ctx.beginPath();ctx.moveTo(x,y);
+  ctx.lineTo(x-9*Math.cos(angle-.45),y-9*Math.sin(angle-.45));ctx.lineTo(x-9*Math.cos(angle+.45),y-9*Math.sin(angle+.45));ctx.fill();
+}
+function paint(){
+  ctx.clearRect(0,0,width,height);
+  edgeLabels=[];
+  ctx.fillStyle='#e3ece6';for(let x=((offset.x%30)+30)%30;x<width;x+=30)for(let y=((offset.y%30)+30)%30;y<height;y+=30)ctx.fillRect(x,y,1,1);
+  const chosen=state.selected?.kind==='node'?state.selected.id:null;
+  const adjacent=new Set();if(chosen)state.shownEdges.forEach(e=>{if(e.source===chosen||e.target===chosen){adjacent.add(e.source);adjacent.add(e.target);}});
+  const isRoot=id=>displayNode(id)?.group&&displayNode(id).level===0;
+  const selectedEdgeId=state.selected?.kind==='edge'?state.selected.id:null;
+  const ordered=[...state.shownEdges].sort((a,b)=>(a.id===selectedEdgeId)-(b.id===selectedEdgeId));
+  for(const edge of ordered){
+    const a=point(edge.source),b=point(edge.target),selected=selectedEdgeId===edge.id;
+    const touches=chosen&&(edge.source===chosen||edge.target===chosen);
+    // In the grouped view, links from opened types/families stay faint until one end is selected.
+    const quiet=state.hierarchy&&!(isRoot(edge.source)&&isRoot(edge.target))&&!touches&&!selected;
+    ctx.globalAlpha=quiet?.09:chosen&&!touches ? .2 : 1;
+    ctx.strokeStyle=selected?'#c27032':edge.fusion?'#1c8a78':'#8fa5a3';ctx.lineWidth=selected?2.8:edge.fusion?1.8:touches?1.4:1;
+    ctx.setLineDash(edge.fusion?[7,3,2,3]:[]);ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
+    if(edge.members){
+      // Summary endpoints are sorted for grouping, not ordered by triple direction.
+      const targets=new Set(Object.keys(edge.directions).map(direction=>JSON.parse(direction)[2]));
+      for(const target of targets)paintArrow(target===edge.source?edge.target:edge.source,target);
+    }else paintArrow(edge.source,edge.target);
+    if(edge.members){
+      if(quiet)continue;
+      const t=Math.abs(b.x-a.x)>60&&Math.abs(b.y-a.y)>60?.27:.5,x=a.x+(b.x-a.x)*t,y=a.y+(b.y-a.y)*t-8;
+      const counts=Object.entries(edge.predicates).sort((a,b)=>b[1]-a[1]);
+      const lines=counts.slice(0,2).map(([predicate,count])=>(labels[predicate]||predicate)+' · '+count);
+      if(counts.length>2)lines.push(`+${counts.length-2} more types · ${edge.members.length} total`);
+      ctx.globalAlpha=1;ctx.font='10px sans-serif';const size=Math.max(...lines.map(line=>ctx.measureText(line).width));
+      ctx.fillStyle='#fafcfbf2';ctx.fillRect(x-5,y-12,size+10,lines.length*15+5);
+      ctx.fillStyle=selected?'#a45d2c':'#506b66';lines.forEach((line,index)=>ctx.fillText(line,x,y+index*15));
+      edgeLabels.push({id:edge.id,x:x-5,y:y-12,width:size+10,height:lines.length*15+5});continue;
     }
+    if(selected||(touches&&!state.hierarchy)){const label=(edge.fusion?'⇢ fusion · ':'')+relationName(edge);ctx.font=`${selected?'600 ':''}10px sans-serif`;const mx=(a.x+b.x)/2,my=(a.y+b.y)/2-7,w=ctx.measureText(label).width;
+      ctx.fillStyle='#fafcfbe6';ctx.fillRect(mx-w/2-4,my-10,w+8,14);ctx.fillStyle=selected?'#a45d2c':edge.fusion?'#17705f':'#506b66';ctx.textAlign='center';ctx.fillText(label,mx,my);ctx.textAlign='left';}
+  }
+  ctx.globalAlpha=1;ctx.setLineDash([]);
+  for(const node of state.shownNodes){
+    const p=point(node.id),selected=chosen===node.id,r=nodeSize(node)+(selected&&!node.group?4:0);
+    if(p.x< -100||p.x>width+100||p.y< -50||p.y>height+50)continue;
+    ctx.globalAlpha=chosen&&!adjacent.has(node.id)&&!selected ? .35 : 1;
+    if(selected){ctx.fillStyle='#c2703233';ctx.beginPath();ctx.arc(p.x,p.y,r+9,0,Math.PI*2);ctx.fill();}
+    ctx.fillStyle=colors[node.type]||'#8c979b';ctx.beginPath();
+    // Shape carries meaning beyond colour: catalog records are squares, paper-derived entities are circles.
+    if(!node.group&&isCatalog(node))ctx.rect(p.x-r,p.y-r,r*2,r*2);else ctx.arc(p.x,p.y,r,0,Math.PI*2);
+    ctx.fill();
+    ctx.strokeStyle=selected?'#112f34':isCatalog(node)?'#e4ab61':'#fff';ctx.lineWidth=selected?3:isCatalog(node)?2:1;ctx.stroke();
+    if(node.group){
+      ctx.globalAlpha=1;ctx.fillStyle=node.level===0?'#fff':'#ffffff';ctx.font=`600 ${node.level===0?'20':'11'}px sans-serif`;ctx.textAlign='center';ctx.fillText(node.members.length,p.x,p.y+(node.level===0?6:4));
+      const max=node.level===0?35:20,label=node.label.length>max?node.label.slice(0,max-2)+'…':node.label;
+      ctx.font=`600 ${node.level===0?13:11}px sans-serif`;ctx.lineWidth=3;ctx.strokeStyle='#fafcfb';ctx.strokeText(label,p.x,p.y+r+15);ctx.fillStyle='#25424a';ctx.fillText(label,p.x,p.y+r+15);
+      if(node.level>0){ctx.font='9px sans-serif';ctx.fillStyle='#68817e';ctx.fillText(`${node.members.length} ${node.members.length===1?'entity':'entities'} · group`,p.x,p.y+r+27);}
+      ctx.textAlign='left';continue;
+    }
+    if(state.hierarchy){const label=node.label.length>22?node.label.slice(0,20)+'…':node.label;ctx.textAlign='center';
+      ctx.font=`${selected?'600 ':''}10px sans-serif`;ctx.lineWidth=3;ctx.strokeStyle='#fafcfb';ctx.strokeText(label,p.x,p.y+r+13);ctx.fillStyle='#314b50';ctx.fillText(label,p.x,p.y+r+13);ctx.textAlign='left';continue;}
+    if(zoom>.8||selected||adjacent.has(node.id)||state.shownNodes.length<50){const label=node.label.length>34?node.label.slice(0,32)+'…':node.label;
+      ctx.font=`${selected?'600 13':'11'}px -apple-system, sans-serif`;ctx.lineWidth=3;ctx.strokeStyle='#fafcfb';ctx.strokeText(label,p.x+r+6,p.y+4);ctx.fillStyle=selected?'#112f34':'#314b50';ctx.fillText(label,p.x+r+6,p.y+4);}
+  }ctx.globalAlpha=1;
+  if(!state.shownNodes.length){ctx.fillStyle='#68817e';ctx.font='14px sans-serif';ctx.fillText('No entities match. Clear the focus or adjust the filters.',25,height/2);}
+}
+function selectNode(id){
+  if(displayNode(id)?.group){selectGroup(id);return;}
+  const node=state.nodes.get(id);if(!node)return;state.selected={kind:'node',id};state.navPath=state.hierarchyData.path(id);updateNavigation();draw();
+  const connections=state.shownEdges.filter(e=>e.source===id||e.target===id);
+  const classification=state.hierarchyData.classifications.get(id);
+  $('#inspector').innerHTML=`<span class="tag">${esc(node.type)}${isCatalog(node)?' · CATALOG':''}</span><h3>${esc(node.label)}</h3><p>${esc(sourceName(node.source))}</p><div class="button-row"><button id="expand-node">Expand neighborhood</button><button id="node-replay">Open paper replay</button></div>${fields(node.attrs)}${node.scopes.length?'<h4>Scope · '+node.scopes.length+'</h4>'+node.scopes.map(s=>`<div class="observation">${fields(s)}</div>`).join(''):''}<h4>Relations in this view · ${connections.length}</h4><div id="connections"></div><details><summary>Node IRI</summary><p class="edge-key">${esc(id)}</p></details>`;
+  if(classification){
+    const note=document.createElement('p');note.className='notice';
+    note.textContent=`Display group: ${classification.label}. ${classification.basis}; matched “${classification.matchedLabel}”. Vocabulary source: “${state.nodes.get(classification.declaredBy).label}” (${sourceName(state.nodes.get(classification.declaredBy).source)}). This is browsing only: no entity equivalence, sample membership or inherited experimental conditions are asserted; entities and measurements remain separate.`;
+    $('#inspector h3').after(note);
+  }
+  $('#expand-node').onclick=()=>focusNode(id);
+  const match=state.data.cases.find(c=>c.paper===node.source);$('#node-replay').hidden=!match;
+  $('#node-replay').onclick=()=>openReplay(match.id);
+  for(const edge of connections){const button=document.createElement('button');button.className='connection';
+      button.innerHTML=`${esc(relationName(edge))} <small>${esc(displayNode(edge.source===id?edge.target:edge.source).label)} · ${edge.members?edge.members.length+' underlying relations':edge.records.length+' evidence / observation records'}</small>`;
+    button.onclick=()=>selectEdge(edge.id);$('#connections').append(button);}
+  $('#inspector').scrollTop=0;
+}
+function replaySource(edge,record){
+  const declared=list(record.sourcePaper);
+  const candidates=declared.length?declared:edge.sources;
+  const sources=state.data.sources.filter(source=>source.kind==='paper'&&source.replay_url&&candidates.includes(source.id));
+  return sources.length===1?sources[0]:null;
+}
+function selectEdge(id,selectedRecord=null){
+  const aggregate=state.shownEdges.find(edge=>edge.id===id&&edge.members);
+  if(aggregate){
+    state.selected={kind:'edge',id};draw();
+    const rows=Object.entries(aggregate.directions).map(([key,count])=>{const [from,predicate,to]=JSON.parse(key);return `<tr><td>${esc(displayNode(from).label)}</td><td>${esc(labels[predicate]||predicate)}</td><td>${esc(displayNode(to).label)}</td><td>${count}</td></tr>`;}).join('');
+    $('#inspector').innerHTML=`<span class="tag">DISPLAY SUMMARY</span><h3>${esc(displayNode(aggregate.source).label)} ↔ ${esc(displayNode(aggregate.target).label)}</h3><p>${aggregate.members.length} underlying relations. This is a display aggregate, not an additional KG assertion.</p><table class="relation-breakdown"><thead><tr><th>From</th><th>Relation</th><th>To</th><th>Count</th></tr></thead><tbody>${rows}</tbody></table><h4>Original relations</h4><div id="summary-relations"></div>`;
+    let count=0;
+    const more=()=>{const container=$('#summary-relations');container.querySelector('.load-more')?.remove();for(const member of aggregate.members.slice(count,count+25)){const edge=state.data.edges.find(item=>item.id===member);const button=document.createElement('button');button.className='connection';button.textContent=state.nodes.get(edge.source).label+' → '+relationName(edge)+' → '+state.nodes.get(edge.target).label;button.onclick=()=>selectEdge(member);container.append(button);}count+=25;if(count<aggregate.members.length){const button=document.createElement('button');button.className='load-more';button.textContent='Load more relations';button.onclick=more;container.append(button);}};
+    more();$('#inspector').scrollTop=0;return;
+  }
+  const edge=state.data.edges.find(e=>e.id===id);if(!edge)return;state.selected={kind:'edge',id};draw();
+  const fusionNote=edge.predicate==='observedForProductModel'?
+    'Model alignment, not measurement pooling. The paper sample and catalog model remain distinct entities, not the same physical device. Measurements keep their original subjects and evidence; values are not copied to the catalog or averaged across sources.':
+    'Fusion links connect source entities; they do not copy or average measured values. Model, variant and scope links have different meanings. Scope applicability alone does not establish that a model was experimentally tested.';
+  $('#inspector').innerHTML=`<span class="tag">${edge.fusion?'FUSION LINK':'SOURCE RELATION'}</span><h3>${esc(state.nodes.get(edge.source).label)}</h3><span class="tag">${esc(relationName(edge))} →</span><h3>${esc(state.nodes.get(edge.target).label)}</h3><p>${edge.records.length} archived evidence / observation records. Records displayed together remain distinct; values are not pooled or averaged.</p>${edge.fusion?`<p class="notice">${esc(fusionNote)}</p>`:''}<div id="edge-records"></div>`;
+  const records=selectedRecord?[selectedRecord,...edge.records.filter(record=>record!==selectedRecord)]:edge.records;
+  let shown=0;
+  function more(){
+    $('#edge-records .load-more')?.remove();
+    for(const record of records.slice(shown,shown+20)){
+      const card=document.createElement('div');card.className='observation'+(record===selectedRecord?' trace-highlight':'');
+      const value=text(record.observationValue),unit=text(record.observationUnit);
+      card.innerHTML=`${value?`<strong>${esc(value)} ${esc(unit)}</strong>`:''}${fields({Measure:record.observationProperty,Uncertainty:record.observationUncertainty,Qualifier:record.observationQualifier,'Source sample':record.sourceSample,'Sample state':record.sampleState,'Measurement basis':record.measurementBasis})}${conditionFields({Condition:record.condition,'Condition labels':record.conditionLabel,'Setting condition':record.settingCondition})}${edge.fusion?fields({Basis:record.linkBasis,Reason:record.linkReason,'Alignment score':record.alignmentScore,'Scope role':record.scopeRole}):''}${text(record.sourcePaper)?`<p class="record-source" title="${esc(text(record.sourcePaper))}">Source: ${esc(text(record.sourcePaper))}</p>`:''}${text(record.evidenceSpan)?`<p class="evidence">${esc(text(record.evidenceSpan))}</p>`:''}${jsonDetails(record)}`;
+      const source=replaySource(edge,record);
+      if(source){const button=document.createElement('button');button.textContent='View evidence in replay';button.onclick=()=>openReplay(source.replay_id,text(record.evidenceSpan),text(record.tableId),{edge,record});card.append(button);}
+      $('#edge-records').append(card);
+    }shown+=20;
+    if(shown<edge.records.length){const button=document.createElement('button');button.className='load-more';button.textContent=`More records (${edge.records.length-shown} remaining)`;button.onclick=more;$('#edge-records').append(button);}
+  }more();
+  if(!edge.records.length)$('#edge-records').innerHTML='<p>The frozen RDF contains no sentence-level evidence for this relation. Inspect the source descriptions of its endpoints.</p>';
+  $('#inspector').scrollTop=0;
+}
+function selectGroup(id){
+  const raw=state.hierarchyData.groups.get(id);if(!raw)return;
+  const group={...raw,members:raw.members.filter(member=>state.visibleEntityIds.has(member))};
+  state.selected=state.displayNodes.has(id)?{kind:'node',id}:null;
+  state.navPath=state.hierarchyData.path(id);updateNavigation();draw();
+  const children=group.children.filter(child=>state.hierarchyData.groups.get(child).members.some(member=>group.members.includes(member)));
+  const members=children.length?children:group.members;
+  const derivedCount=group.members.filter(member=>state.hierarchyData.classifications.has(member)).length;
+  $('#inspector').innerHTML=`<span class="tag">${group.level===0?'TOP LEVEL':group.nameGroup?'NAME GROUP':'TYPE / FAMILY'}</span><h3>${esc(group.label)}</h3><p>${group.members.length} underlying entities.</p><p>${esc(group.basis||'A display entry point into the frozen graph. Expand to browse its types, families or individual materials.')}</p><div class="button-row"><button id="expand-group" ${state.expanded.has(id)?'disabled':''}>Expand group</button><button id="collapse-group" ${state.expanded.has(id)?'':'disabled'}>Collapse group</button></div><h4>${children.length?'Types / families':'Entities'} · ${members.length}</h4><div id="group-members"></div>`;
+  if(derivedCount){
+    const note=document.createElement('p');note.className='notice';
+    note.textContent=`${derivedCount} entities use label-based display classification. Product prefixes require a unique type declared in the same source; Components require an exact type/catalog label or a registered alias. Select an entity to inspect its grouping basis. Samples, scopes, conditions and measurements are not merged.`;
+    $('#inspector h3').after(note);
+  }
+  $('#expand-group').onclick=()=>expandGroup(id);
+  $('#collapse-group').onclick=()=>collapseGroup(id);
+  for(const member of members){const node=state.hierarchyData.groups.get(member)||state.nodes.get(member);const button=document.createElement('button');button.className='connection';button.textContent=node.label+(node.group?' · '+node.members.filter(entity=>group.members.includes(entity)).length:'');button.onclick=()=>{if(node.group){state.expanded.add(id);updateGraph();selectGroup(member);}else focusNode(member);};$('#group-members').append(button);}
+  $('#inspector').scrollTop=0;
+}
+function expandGroup(id){state.graphHistory=[];state.hierarchyData.path(id).forEach(group=>state.expanded.add(group));updateGraph();selectGroup(id);}
+function focusNode(id,clearFilters=false){
+  if(displayNode(id)?.group){expandGroup(id);return;}
+  const filters=['source-filter','type-filter','relation-filter'];
+  if(state.focus===id&&!state.hierarchy&&(!clearFilters||filters.every(key=>!$('#'+key).value))){selectNode(id);return;}
+  rememberGraph();
+  if(clearFilters)for(const key of filters)$('#'+key).value='';
+  state.hierarchy=false;state.focus=id;updateGraph();selectNode(id);
+}
+function searchNodes(){
+  const query=$('#search').value.trim().toLowerCase();$('#search-results').replaceChildren();if(!query)return;
+  const rank=node=>node.label.toLowerCase()===query?0:node.label.toLowerCase().includes(query)?1:2;
+  const found=state.data.nodes.filter(n=>(n.label+' '+n.type+' '+sourceName(n.source)).toLowerCase().includes(query)).sort((a,b)=>rank(a)-rank(b)||Number(isCatalog(b))-Number(isCatalog(a))||a.label.localeCompare(b.label));
+  for(const node of found.slice(0,25)){const button=document.createElement('button');button.className='search-result';button.setAttribute('role','listitem');button.innerHTML=`${esc(node.label)}<small>${esc(node.type+' · '+sourceName(node.source))}</small>`;
+    button.onclick=()=>focusNode(node.id,true);$('#search-results').append(button);}
+  if(!found.length)$('#search-results').textContent='No matching entities.';
+}
+function hitTest(x,y){
+  const node=state.shownNodes.slice().reverse().find(n=>{const p=point(n.id);return Math.hypot(p.x-x,p.y-y)<nodeSize(n)+5;});if(node)return {kind:'node',id:node.id};
+  const label=edgeLabels.find(label=>x>=label.x&&x<=label.x+label.width&&y>=label.y&&y<=label.y+label.height);if(label)return {kind:'edge',id:label.id};
+  let nearest=null, distance=7;
+  for(const edge of state.shownEdges){const a=point(edge.source),b=point(edge.target),dx=b.x-a.x,dy=b.y-a.y;const t=Math.max(0,Math.min(1,((x-a.x)*dx+(y-a.y)*dy)/(dx*dx+dy*dy||1)));const d=Math.hypot(x-a.x-t*dx,y-a.y-t*dy);if(d<distance){nearest={kind:'edge',id:edge.id};distance=d;}}return nearest;
+}
+function scale(factor,x=width/2,y=height/2){const previous=zoom;zoom=Math.max(.08,Math.min(10,zoom*factor));offset={x:x-(x-offset.x)*zoom/previous,y:y-(y-offset.y)*zoom/previous};draw();}
+function showTooltip(event){
+  const tooltip=$('#graph-tooltip'),hit=hitTest(event.offsetX,event.offsetY);
+  const edge=hit?.kind==='edge'?state.shownEdges.find(edge=>edge.id===hit.id):null;
+  if(!edge){tooltip.hidden=true;canvas.style.cursor='grab';return;}
+  canvas.style.cursor='pointer';
+  const counts=edge.predicates||{[edge.predicate]:1};
+  tooltip.innerHTML=`<strong>${esc(displayNode(edge.source).label)} ${edge.members?'↔':'→'} ${esc(displayNode(edge.target).label)}</strong>${Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([predicate,count])=>`<div>${esc(labels[predicate]||predicate)} · ${count}</div>`).join('')}<div class="muted">Click for directions and original evidence.</div>`;
+  tooltip.hidden=false;
+  tooltip.style.left=Math.max(8,Math.min(event.offsetX+15,width-tooltip.offsetWidth-8))+'px';
+  tooltip.style.top=Math.max(8,Math.min(event.offsetY+15,height-tooltip.offsetHeight-8))+'px';
+}
+canvas.addEventListener('wheel',e=>{e.preventDefault();scale(Math.exp(-e.deltaY*.0015),e.offsetX,e.offsetY);},{passive:false});
+canvas.addEventListener('pointerdown',e=>{
+  if(pointer||e.button!==0)return;
+  const hit=hitTest(e.offsetX,e.offsetY),positions=state.localPositions||state.positions;
+  $('#graph-tooltip').hidden=true;
+  pointer={id:e.pointerId,hit,positions,startX:e.offsetX,startY:e.offsetY,moved:false,
+    origin:{...(hit?.kind==='node'?positions.get(hit.id):offset)}};
+  canvas.style.cursor=hit?.kind==='edge'?'pointer':'grabbing';
+  canvas.setPointerCapture(e.pointerId);e.preventDefault();
+});
+canvas.addEventListener('pointermove',e=>{
+  if(!pointer){showTooltip(e);return;}
+  if(e.pointerId!==pointer.id)return;
+  const dx=e.offsetX-pointer.startX,dy=e.offsetY-pointer.startY;
+  if(!pointer.moved&&Math.hypot(dx,dy)<=4)return;
+  pointer.moved=true;
+  if(pointer.hit?.kind==='node')pointer.positions.set(pointer.hit.id,{x:pointer.origin.x+dx/zoom,y:pointer.origin.y+dy/zoom});
+  else if(!pointer.hit)offset={x:pointer.origin.x+dx,y:pointer.origin.y+dy};
+  draw();
+});
+canvas.addEventListener('pointerleave',()=>{$('#graph-tooltip').hidden=true;});
+function finishPointer(e){
+  if(!pointer||e.pointerId!==pointer.id)return;
+  const gesture=pointer;pointer=null;canvas.style.cursor='grab';
+  if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId);
+  if(e.type==='pointerup'&&!gesture.moved&&gesture.hit){const hit=gesture.hit;hit.kind==='node'?selectNode(hit.id):selectEdge(hit.id);}
+}
+for(const type of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(type,finishPointer);
+canvas.addEventListener('dblclick',e=>{const hit=hitTest(e.offsetX,e.offsetY);if(hit?.kind==='node')focusNode(hit.id);});
+canvas.addEventListener('keydown',e=>{if(e.key==='+'||e.key==='=')scale(1.25);if(e.key==='-')scale(.8);if(e.key==='Escape')goUp();});
 
-    // 通用分层布局：优先按类型从左到右排列，保证 Product -> Component -> Material 可读。
-    const degreeMap = new Map(nodes.map(node => [node.id, 0]));
-    edges.forEach(edge => {
-        degreeMap.set(edge.source, (degreeMap.get(edge.source) || 0) + 1);
-        degreeMap.set(edge.target, (degreeMap.get(edge.target) || 0) + 1);
+function renderCaseSelection(){
+  const item=state.data.cases.find(item=>item.id===$('#case-select').value);
+  if(item)$('#case-summary').innerHTML=`<p><span class="tag">${esc(item.tag)}</span></p><p>${esc(item.description)}</p><p>${item.triple_count} final relations · ${item.tables} tables</p>`;
+}
+async function loadCase(id){
+  const request=++state.request;notify('Loading archived case…');
+  try{
+    const source=state.data.sources.find(source=>source.replay_id===id);
+    if(!state.cache.has(id))state.cache.set(id,await fetchJSON(source?.replay_url||`data/cases/${id}.json`));
+    if(request!==state.request)return false;
+    if(state.case?.id!==id)state.cellLookup=null;
+    state.case=state.cache.get(id);
+    if(state.case.source_only){state.stage='final';walkthrough?.reset();}
+    else if($('#case-select').value!==id){$('#case-select').value=id;walkthrough?.reset();}
+    state.cellIndex=Replay.cellIndex(state.case);$('#case-title').textContent=state.case.paper;
+    $('.replay-note').textContent=state.case.source_only?'Source evidence only · Final relations and source text / tables are available for this paper. Intermediate stages are not bundled. The six case studies remain available in the sidebar.':'Archived replay · Browse actual stage outputs. Files may have been updated at different times and do not necessarily represent a single continuous run.';
+    const item=state.case;
+    renderCaseSelection();
+    $('#stages').innerHTML=processMap(item);
+    $('#stages').querySelectorAll('button').forEach(b=>b.onclick=()=>selectStage(b.dataset.stage));
+    renderTrace();renderSource();renderStage();notify('');return true;
+  }catch(error){if(request===state.request)notify('Case loading failed: '+error.message);return false;}
+}
+async function openReplay(id,evidence='',table=null,origin=null){
+  state.trace=null;state.spotlight=null;state.cellLookup=null;state.evidence=evidence;state.table=table;state.located=null;state.sourceTab=table?'tables':'text';
+  state.locationSummary=false;state.textChoice=null;
+  $('#record-search').value='';
+  // Avoid the default replay tab's automatic load racing the requested case.
+  setView('replay',false);
+  if(!await loadCase(id))return;
+  if(!origin)return;
+  const result=Trace.resolve(state.case,origin.edge,origin.record);
+  state.trace={...origin,...result,active:result.preferred};renderTrace();
+  if(result.preferred)selectTraceTarget(result.preferred);
+  else{state.stage=!state.case.source_only&&(origin.edge.fusion||text(origin.record.linkOrigin).startsWith('scope'))?'scope':'final';renderStage();}
+}
+function selectTraceTarget(target){
+  state.trace.active=target;state.stage=target.stage;$('#record-search').value='';
+  locateRecord(target.data);renderTrace();renderStage();
+  scrollOutputTo('#trace-target');
+}
+function scrollOutputTo(selector,reveal=false){
+  requestAnimationFrame(()=>{
+    const pane=$('.output-pane'),card=$(selector);
+    if(!card?.isConnected)return;
+    pane.scrollTop+=card.getBoundingClientRect().top-pane.getBoundingClientRect().top-pane.querySelector('.pane-heading').offsetHeight-12;
+    if(reveal){card.tabIndex=-1;card.focus({preventScroll:true});}
+    if(reveal&&window.matchMedia('(max-width:800px)').matches)pane.scrollIntoView({block:'start'});
+  });
+}
+function renderTrace(){
+  const panel=$('#trace-panel'),trace=state.trace;panel.replaceChildren();panel.hidden=!trace;if(!trace)return;
+  const heading=document.createElement('strong');heading.textContent='GRAPH → ARCHIVED OUTPUT → SOURCE EVIDENCE';panel.append(heading);
+  const relation=document.createElement('p');relation.textContent=state.nodes.get(trace.edge.source).label+' → '+relationName(trace.edge)+' → '+state.nodes.get(trace.edge.target).label;panel.append(relation);
+  const note=document.createElement('p');note.textContent=trace.message;panel.append(note);
+  const actions=document.createElement('div');actions.className='button-row';panel.append(actions);
+  for(const [name,targets] of [['Final record',trace.final],['Earlier output',trace.origin],['Table Gate',trace.gate],['Source scope',trace.scope||[]]])targets.forEach((target,index)=>{
+    const button=document.createElement('button');button.textContent=name+(targets.length>1?' '+(index+1):'');
+    button.classList.toggle('active',trace.active===target&&state.stage===target.stage);button.onclick=()=>selectTraceTarget(target);actions.append(button);
+  });
+  const back=document.createElement('button');back.textContent='← Back to graph relation';back.onclick=()=>{setView('fusion');selectEdge(trace.edge.id,trace.record);};actions.append(back);
+  const clear=document.createElement('button');clear.textContent='Clear trace';clear.onclick=()=>{state.trace=null;renderTrace();renderStage();};actions.append(clear);
+}
+function scrollSourceTo(element){
+  if(!element?.isConnected)return;
+  const pane=$('.source-pane'),bounds=pane.getBoundingClientRect(),rect=element.getBoundingClientRect();
+  pane.scrollTop+=rect.top-bounds.top-pane.querySelector('.pane-heading').offsetHeight-30;
+  const tableScroll=element.closest('.table-scroll');
+  if(tableScroll){const bounds=tableScroll.getBoundingClientRect();if(rect.left<bounds.left||rect.right>bounds.right)tableScroll.scrollLeft+=rect.left-bounds.left-25;}
+}
+function renderSource(){
+  if(!state.case)return;
+  $('#text-tab').classList.toggle('active',state.sourceTab==='text');$('#tables-tab').classList.toggle('active',state.sourceTab==='tables');
+  const container=$('#source-content');container.replaceChildren();
+  const note=document.createElement('p');note.className='source-note';note.textContent=state.case.source_note;container.append(note);
+  const label=$('#source-match-label');label.hidden=true;
+  if(state.sourceTab==='text'){
+    const pre=document.createElement('div');pre.className='prose';const source=state.case.text,result=Replay.locateText(source,state.evidence);
+    const choice=state.textChoice;
+    const manual=choice?.case===state.case.id&&choice.query===state.evidence;
+    const index=manual?choice.index:state.locationSummary?null:result.selected,match=index===null?null:result.matches[index];
+    const approximate=state.locationSummary||!['exact','normalized'].includes(result.kind);
+    let status=null;
+    if(state.evidence){
+      const title=state.locationSummary?'Summary search · navigation only':result.kind==='exact'?'Exact match':result.kind==='normalized'?'Normalized match':match?'Approximate match · navigation only':result.matches.length?'Choose a passage · navigation only':'No matching passage';
+      label.textContent=title;label.hidden=false;
+      status=document.createElement('section');status.className='match-status';status.setAttribute('aria-label','Text location result');
+      const heading=document.createElement('strong');heading.textContent=title;status.append(heading);
+      const explanation=document.createElement('p');explanation.textContent=state.locationSummary?'This is a Process summary, not an archived quotation. '+(result.matches.length?'Candidate passages are for navigation only.':'No sufficiently similar passage was found.'):result.kind==='ambiguous'?'Several passages are similar. No unique passage was selected automatically.':result.kind==='approximate'?'Text overlap suggests related passages, not verified provenance. Check the original wording and values.':result.kind==='unmatched'?'No sufficiently similar passage was found. The archived text is unchanged.':'Highlighting uses the original source characters.';status.append(explanation);
+      if(result.matches.length&&(approximate||result.matches.length>1))result.matches.forEach((candidate,i)=>{
+        const card=document.createElement('div');card.className='text-candidate';
+        const button=document.createElement('button');button.textContent=`Candidate ${i+1} · text overlap ${Math.round(candidate.score*100)}%`;button.setAttribute('aria-pressed',String(index===i));
+        button.onclick=()=>{state.textChoice={case:state.case.id,query:state.evidence,index:i};renderSource();};
+        const excerpt=document.createElement('p');excerpt.textContent=source.slice(candidate.start,candidate.end);
+        card.append(button,excerpt);
+        if(candidate.conflicts.length){const warning=document.createElement('p');warning.className='notice';warning.textContent='Check: '+candidate.conflicts.join('; ')+'.';card.append(warning);}
+        status.append(card);
+      });
+      const query=document.createElement('details'),summary=document.createElement('summary'),quotation=document.createElement('p');summary.textContent=state.locationSummary?'Search summary':'Archived quotation';quotation.textContent=state.evidence;query.append(summary,quotation);status.append(query);container.append(status);
+    }
+    if(match){
+      pre.append(document.createTextNode(source.slice(0,match.start)));const mark=document.createElement('mark');mark.className=approximate?'text-approximate':'';mark.title=label.textContent;mark.textContent=source.slice(match.start,match.end);pre.append(mark,document.createTextNode(source.slice(match.end)));
+    }else pre.textContent=source;
+    container.append(pre);requestAnimationFrame(()=>scrollSourceTo(pre.querySelector('mark')||status));
+  }else{
+    const hint=document.createElement('p');hint.className='source-note';hint.textContent=state.case.source_only?'Click a cell to inspect its final-output records. Table Agent stages are not bundled for this paper.':'Click a cell to inspect its archived Table Agent and final-output records.';container.append(hint);
+    state.case.tables.forEach((table,index)=>{
+      const selected=state.table&&Replay.tableKey(table.table_id)===Replay.tableKey(state.table);
+      const match=selected?Replay.tableMatch(table,state.located||{}):{};
+      const block=document.createElement('article');block.className='table-block'+(selected?' source-table-selected':'');block.dataset.table=Replay.tableKey(table.table_id);
+      block.innerHTML=`<h3>Table ${index+1} · ${esc(table.caption || table.table_id)}</h3><span class="muted">${esc(table.section || '')} · page ${esc(table.page_number ?? '—')}</span>${match.message?`<p class="match-status">${esc(match.message)}</p>`:''}<div class="table-scroll"><table><thead>${(table.header_rows?.length?table.header_rows:[table.headers||[]]).map(row=>'<tr>'+row.map((v,col)=>`<th class="${col===match.col?'source-column':''}">${esc(v)}</th>`).join('')+'</tr>').join('')}</thead><tbody>${(table.rows||[]).map((row,index)=>`<tr data-row="${index+1}" class="${index+1===match.row?'source-row':''}">`+row.map((v,col)=>`<td data-col="${col}" class="${index+1===match.row&&col===match.col?'source-cell':''}">${esc(v)}</td>`).join('')+'</tr>').join('')}</tbody></table></div>${jsonDetails(table)}`;container.append(block);
+      block.querySelectorAll('tbody td').forEach(cell=>{
+        const row=Number(cell.parentElement.dataset.row),col=Number(cell.dataset.col),value=cell.textContent;
+        const button=document.createElement('button');button.className='cell-link';button.textContent=value||'\u00a0';
+        button.setAttribute('aria-label',`Locate extraction: Table ${index+1}, data row ${row}, column ${col+1}: ${value}`);
+        button.onclick=()=>openCell(table,row,col);cell.replaceChildren(button);
+      });
     });
-
-    const rankByType = {
-        Product: 0,
-        Component: 1,
-        Process: 2,
-        ProcessAgent: 2,
-        Material: 3,
-        Observation: 4,
-        Equipment: 4,
-        Hazard: 4
-    };
-
-    const unpositioned = nodes.filter(node => !positions[node.id]);
-    const layers = new Map();
-    unpositioned.forEach(node => {
-        const rank = rankByType[node.type] !== undefined ? rankByType[node.type] : 3;
-        if (!layers.has(rank)) {
-            layers.set(rank, []);
-        }
-        layers.get(rank).push(node);
+    if(state.table)requestAnimationFrame(()=>{const block=container.querySelector('.source-table-selected');scrollSourceTo(block?.querySelector('.source-cell')||block);});
+  }
+}
+function locateRecord(record){
+  if(state.cellLookup){state.cellLookup=null;renderStage();}
+  const props=record.properties||record.attributes||{};
+  state.located=record;state.evidence=record.location_query??Replay.evidence(record);state.locationSummary=!!record.location_is_summary;state.textChoice=null;
+  state.table=record.table_id||props.table_id||record.semantic_ir_and_verification?.table_id;state.sourceTab=state.table?'tables':'text';renderSource();
+}
+function openCell(table,row,col){
+  const targets=state.cellIndex.get(Replay.cellKey(table.table_id,row,col))||[];
+  const local=targets.filter(target=>target.stage===state.stage),raw=targets.filter(target=>target.stage==='table');
+  const active=local.length===1?local[0]:local.length>1?null:raw.length===1?raw[0]:raw.length===0&&targets.length===1?targets[0]:null;
+  state.trace=null;state.spotlight=null;state.cellLookup={table,row,col,targets,active};
+  state.table=table.table_id;state.evidence='';state.located={table_id:table.table_id,properties:{row_idx:row,col_idx:col,raw_cell:table.rows[row-1][col]}};
+  state.locationSummary=false;state.textChoice=null;
+  state.stage=active?.stage||(state.case.source_only?'final':'table');$('#record-search').value='';renderSource();renderStage();
+  scrollOutputTo('#cell-results',true);
+}
+function renderCellResults(container){
+  const lookup=state.cellLookup;if(!lookup)return;
+  const panel=document.createElement('section');panel.id='cell-results';panel.className='cell-results';panel.setAttribute('aria-label','Cell extraction matches');
+  const heading=document.createElement('strong');heading.textContent=`CELL → EXTRACTION · DATA ROW ${lookup.row}, COLUMN ${lookup.col+1}`;panel.append(heading);
+  const note=document.createElement('p');note.textContent=lookup.targets.length?`${lookup.targets.length} archived records for this cell. Table Agent and final outputs are separate versions, not additional independent facts.${lookup.active?'':' Choose a record to inspect; no unique candidate was selected.'}`:'No cell-level extraction record is archived for this cell. No match is inferred from its value alone.';panel.append(note);
+  const actions=document.createElement('div');actions.className='button-row';const counts={};
+  lookup.targets.forEach(target=>{
+    const button=document.createElement('button'),p=target.data.properties||target.data.attributes||{};
+    counts[target.stage]=(counts[target.stage]||0)+1;
+    const phase=target.stage==='table'?'Table extraction':'Final record';
+    button.textContent=`${phase} ${counts[target.stage]} · ${text(target.data.predicate||target.data.relation_type||target.kind)} → ${text(target.data.object_name||target.data.target_name||target.data.label)}${p.value!==undefined?' · '+text(p.value)+' '+text(p.unit):''}`;
+    button.classList.toggle('active',lookup.active===target&&state.stage===target.stage);
+    button.onclick=()=>{lookup.active=target;state.stage=target.stage;$('#record-search').value='';renderStage();scrollOutputTo('#cell-results',true);};actions.append(button);
+  });
+  if(!lookup.targets.length){
+    const gate=state.case.stages.find(stage=>stage.id==='gate')?.records.find(record=>Replay.tableKey(record.table_id)===Replay.tableKey(lookup.table.table_id));
+    if(gate){const reason=document.createElement('p');reason.textContent=`Table Gate: ${gate.decision?.decision||'—'} · ${gate.decision?.table_role||'—'}. ${gate.decision?.ir_instruction||''}`;panel.append(reason);}
+  }
+  const clear=document.createElement('button');clear.textContent='Clear cell selection';clear.onclick=()=>{state.cellLookup=null;renderStage();};actions.append(clear);panel.append(actions);container.append(panel);
+}
+function graphRecord(record){
+  const node=state.case.entity_map[record.subject];if(!state.nodes.has(node))return;
+  setView('fusion');$('#source-filter').value=state.case.paper;$('#type-filter').value='';$('#relation-filter').value='';focusNode(node);
+  const target=state.case.entity_map[record.object],predicates={CONTAINS:'contains',HAS_OUTPUT:'hasOutput',PROCESSED_BY:'processedBy'};
+  const edge=state.shownEdges.find(e=>e.source===node&&e.target===target&&e.predicate===predicates[record.predicate]);
+  if(edge){const matches=edge.records.filter(candidate=>Trace.graphMatches(state.case,edge,candidate,record));selectEdge(edge.id,matches.length===1?matches[0]:null);}
+}
+function selectStage(id){
+  state.stage=id;$('#record-search').value='';
+  const tab={gate:'tables',table:'tables',process:'text',entity:'text',relation:'text'}[id];
+  if(tab){state.sourceTab=tab;renderSource();}
+  renderStage();
+}
+function renderStage(){
+  if(!state.case)return;
+  const stage=state.case.stages.find(s=>s.id===state.stage)||state.case.stages[0];
+  $('#stages').querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.stage===stage.id));
+  renderTrace();
+  $('#stage-heading').innerHTML=`<strong>${esc(stage.label)}</strong><span class="muted">ARCHIVED OUTPUT</span>`+stageFlow(stage.id);
+  const container=$('#stage-records');container.replaceChildren();
+  const note=document.createElement('div');note.className='stage-note';note.textContent=stage.note;container.append(note);
+  const files=document.createElement('div');files.className='file-links';
+  stage.files.forEach(file=>{const link=document.createElement('a');link.href=file.url;link.download=file.name;link.textContent=file.name+' ↗';link.title='SHA-256: '+file.sha256;files.append(link);});container.append(files);
+  const times=document.createElement('div');times.className='file-time';times.textContent=stage.files.map(f=>`${f.name}: ${new Date(f.modified).toLocaleString('en-GB')}`).join(' · ');container.append(times);
+  renderCellResults(container);
+  const spotlight=state.spotlight?.case===state.case.id?state.spotlight.target:null;
+  const cellTarget=state.cellLookup?.active;
+  const located=cellTarget||spotlight||state.trace?.active;
+  if(located?.stage===stage.id&&!$('#record-search').value){
+    const match=Replay.render(located,{locate:locateRecord,graph:graphRecord});match.id=cellTarget?'cell-target':spotlight?'walkthrough-target':'trace-target';match.classList.add('trace-highlight');
+    const tag=document.createElement('div');tag.className='trace-match-label';tag.textContent=cellTarget?'CELL EXTRACTION':spotlight?'WALKTHROUGH EVIDENCE':'LOCATED ARCHIVED RECORD';match.prepend(tag);container.append(match);
+  }
+  const entries=Replay.entries(stage),query=$('#record-search').value.toLowerCase();
+  const items=entries.filter(item=>!query||(item.kind+' '+(item.title||'')+' '+(item.section||'')+' '+JSON.stringify(item.data)).toLowerCase().includes(query));$('#record-count').textContent=`${items.length} / ${entries.length} cards`;
+  const summary=document.createElement('p');summary.className='stage-summary';
+  const counts={};entries.forEach(item=>counts[item.kind]=(counts[item.kind]||0)+1);summary.textContent=Object.entries(counts).map(([kind,count])=>kind.replaceAll('_',' ')+' · '+count).join(' / ');container.append(summary);
+  let count=0;function more(){container.querySelector(':scope > .load-more')?.remove();items.slice(count,count+25).forEach(item=>container.append(Replay.render(item,{locate:locateRecord,graph:graphRecord})));count+=25;if(count<items.length){const button=document.createElement('button');button.className='load-more';button.textContent=`Load more (${items.length-count} remaining)`;button.onclick=more;container.append(button);}}more();
+  if(!items.length){const p=document.createElement('p');p.className='muted';p.textContent='No matching records in this stage.';container.append(p);}
+}
+function renderPapers(papers){
+  const list=$('#paper-list');list.replaceChildren();
+  for(const paper of [...papers].sort((a,b)=>a.title.localeCompare(b.title,'en',{sensitivity:'base'}))){
+    const item=document.createElement('li'),link=document.createElement('a');
+    link.textContent=paper.title;link.href=paper.url;link.target='_blank';link.rel='noopener noreferrer';
+    item.append(link);list.append(item);
+  }
+}
+function configureDataset(){
+  const picker=$('#case-select'),previous=new Map([...picker.options].map(option=>[option.value,option.dataset]));
+  picker.replaceChildren();
+  for(const item of [...state.data.cases].sort((a,b)=>a.paper.localeCompare(b.paper,'en',{sensitivity:'base'}))){
+    const option=document.createElement('option');option.value=item.id;option.textContent=item.paper;
+    option.dataset.guide=item.guide_url||previous.get(item.id)?.guide||'';
+    option.dataset.summary=item.guide_summary||previous.get(item.id)?.summary||'';
+    picker.append(option);
+  }
+  picker.value=picker.options[0]?.value||'';
+  const papers=state.data.sources.filter(source=>source.kind==='paper').length;
+  const catalogs=state.data.sources.filter(source=>source.kind==='catalog').length;
+  $('#source-filter').options[0].textContent=`All ${papers+catalogs} sources`;
+  $('#snapshot-counts').textContent=`${papers} papers · ${catalogs} catalog records`;
+  $('#snapshot-manifest').href=state.data.snapshot.manifest_url||'data/manifest.json';
+}
+async function start(){
+  try{
+    state.data=await fetchJSON(document.body.dataset.graph||'data/graph.json');configureDataset();state.nodes=new Map(state.data.nodes.map(n=>[n.id,n]));state.hierarchyData=createHierarchy(state.data);initializePositions();
+    const entityCount=state.data.nodes.filter(n=>['Product','Component','Process','Material'].includes(n.type)).length;
+    $('#legend').innerHTML=Object.entries(colors).map(([name,color])=>`<span><i class="dot" style="background:${color}"></i>${name}</span>`).join('')+'<span>┄┄ fusion link</span>';
+    for(const kind of ['paper','catalog']){const sources=state.data.sources.filter(s=>s.kind===kind),group=document.createElement('optgroup');group.label=`${sources.length} ${kind==='paper'?'papers':'catalog records'}`;sources.forEach(source=>{const option=document.createElement('option');option.value=source.id;option.textContent=source.label;group.append(option);});$('#source-filter').append(group);}
+    for(const kind of Object.keys(colors)){$('#type-filter').insertAdjacentHTML('beforeend',`<option>${kind}</option>`);}
+    for(const predicate of [...new Set(state.data.edges.map(edge=>edge.predicate))].sort()){
+      const option=document.createElement('option');option.value=predicate;option.textContent=labels[predicate]||predicate;$('#relation-filter').append(option);
+    }
+    for(const option of $('#case-select').options){const item=state.data.cases.find(item=>item.id===option.value);if(!item)throw Error('Unknown paper case: '+option.value);option.textContent=item.paper;}
+    document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setView(b.dataset.view));
+    if(document.body.dataset.papers){
+      fetchJSON(document.body.dataset.papers).then(renderPapers).catch(error=>{
+        $('#paper-list').textContent='Unable to load the paper list. Please reload the page.';console.error(error);
+      });
+    }
+    for(const id of ['source-filter','type-filter','relation-filter','fusion-toggle'])$('#'+id).onchange=()=>{state.graphHistory=[];if(id==='source-filter'){state.focus=null;state.navPath=[];}if(id==='type-filter'&&$('#type-filter').value.endsWith('Family'))state.hierarchy=false;updateGraph();};
+    $('#top-level').onclick=resetHierarchy;$('#graph-back').onclick=goUp;
+    $('#search').oninput=searchNodes;$('#show-all').onclick=showAllEntities;
+    $('#clear-focus').onclick=()=>{state.graphHistory=[];state.focus=null;state.navPath=[];updateGraph();};$('#fit').onclick=fitGraph;$('#zoom-in').onclick=()=>scale(1.3);$('#zoom-out').onclick=()=>scale(1/1.3);
+    $('#case-select').onchange=()=>{state.request++;walkthrough?.reset();renderCaseSelection();if(state.view==='replay')openReplay($('#case-select').value);};
+    $('#case-browse').onclick=()=>{walkthrough?.reset();return openReplay($('#case-select').value);};
+    $('#text-tab').onclick=()=>{state.sourceTab='text';renderSource();};$('#tables-tab').onclick=()=>{state.sourceTab='tables';renderSource();};$('#record-search').oninput=renderStage;
+    $('#case-on-graph').onclick=()=>{setView('fusion');state.graphHistory=[];state.hierarchy=false;state.focus=null;state.navPath=[];$('#source-filter').value=state.data.cases.find(item=>item.id===$('#case-select').value).paper;$('#type-filter').value='';$('#relation-filter').value='';updateGraph();};
+    $('#inspector').innerHTML=`<div class="eyebrow">TRACEABLE KNOWLEDGE</div><div class="intro-icon">⌘</div><h3>Four entry points.<br>Explore one level at a time.</h3><p>Select Product, Component, Process or Material. Expand a group to browse types and families, then individual entities.</p><h4>What is underneath?</h4><p>${entityCount} entities and ${state.data.edges.length} displayed relations. ${state.data.observations} quantitative observations remain available in relation details.</p><p>Top-level links summarize existing relations; they are not new KG assertions. Unclassified groups retain entities without a declared type or method family.</p>`;
+    walkthrough=Walkthrough.mount({
+      graph:state.data,loadGuide:path=>fetchJSON(path),
+      loadArchive:async id=>{if(!state.cache.has(id))state.cache.set(id,await fetchJSON(state.data.sources.find(source=>source.replay_id===id)?.replay_url||`data/cases/${id}.json`));return state.cache.get(id);},
+      replay:async(archive,target)=>{
+        await openReplay(archive.id);
+        if(state.case!==archive)throw Error('The active case changed. Reopen this step to continue.');
+        state.spotlight={case:archive.id,target};state.stage=target.stage;locateRecord(target.data);renderStage();
+        scrollOutputTo('#walkthrough-target');
+      },
+      graphView:({node,edge},step)=>{
+        state.graphHistory=[];
+        state.spotlight=null;state.trace=null;renderTrace();setView('fusion');
+        for(const id of ['source-filter','type-filter','relation-filter','search'])$('#'+id).value='';
+        searchNodes();$('#fusion-toggle').checked=step.fusion;focusNode(node);
+        if(edge)selectEdge(edge.id);
+      },
+      clear:()=>{state.spotlight=null;if(state.case)renderStage();},
     });
-
-    const activeRanks = Array.from(layers.keys()).sort((a, b) => a - b);
-    const rankCount = Math.max(activeRanks.length, 1);
-
-    activeRanks.forEach((rank, rankIndex) => {
-        const layerNodes = layers.get(rank);
-        layerNodes.sort((a, b) => {
-            const degreeDiff = (degreeMap.get(b.id) || 0) - (degreeMap.get(a.id) || 0);
-            if (degreeDiff !== 0) return degreeDiff;
-            return String(a.label).localeCompare(String(b.label));
-        });
-
-        const x = rankCount === 1
-            ? 0
-            : -4.4 + (rankIndex * (8.8 / (rankCount - 1)));
-        const count = layerNodes.length;
-        const yGap = count <= 1 ? 0 : Math.min(0.95, 6.8 / (count - 1));
-        const topY = count <= 1 ? 0 : ((count - 1) * yGap) / 2;
-
-        layerNodes.forEach((node, index) => {
-            positions[node.id] = {
-                x,
-                y: topY - index * yGap
-            };
-        });
-    });
-
-    return positions;
+    $('#case-select').disabled=false;$('#case-browse').disabled=false;renderCaseSelection();
+    window.addEventListener('resize',resize);new ResizeObserver(resize).observe(canvas.parentElement);updateGraph();resize();notify('');
+  }catch(error){notify('Loading failed: '+error.message+'. Open this page through the local HTTP server.');console.error(error);}
 }
+start();
 
-function getTargetEdgeDistance(label) {
-    const predicate = label.split(' | ')[0];
-    const distances = {
-        CONTAINS: 1.75,
-        PROCESSED_BY: 2.05,
-        TRANSFORMED_TO: 1.85,
-        HAS_OBSERVATION: 2.15,
-        RELATED_TO: 1.65
-    };
-
-    return distances[predicate] || 1.9;
+/* Current pipeline dependencies, not a reconstructed runtime of the archives. */
+const STAGE_FLOW={
+  gate:['Table and caption','Recorded role decision','Extract or skip'],
+  table:['Archived semantic IR','Execution and verification','Emitted or rejected table facts'],
+  process:['Source text','Recorded Process discovery','Processes, descriptions, Settings'],
+  entity:['Text chunk','Archived entity extraction','Entities with aliases'],
+  relation:['Source sentence and available context','Archived candidate','Endpoints and measurement, or unresolved request'],
+  revision:['Unresolved requests','Recorded operation and status','Committed output or unresolved state'],
+  scope:['Merged entities, relations and paper evidence','Post-merge sample / model / method annotation','Scope records for final export and fusion'],
+  final:['Postprocessed relations','Final serialization','Final relations used for fusion'],
+};
+function stageFlow(id){
+  const f=STAGE_FLOW[id];if(!f)return '';
+  return `<div class="stage-flow" aria-label="What this stage records"><span><small>Input</small>${esc(f[0])}</span><i>→</i><span><small>Recorded action</small>${esc(f[1])}</span><i>→</i><span><small>Output</small>${esc(f[2])}</span></div><p class="stage-flow-note">Describes the stage type. Where the archive does not record why a decision was made, records show “Not recorded”.</p>`;
 }
-
-function clamp(value, min, max) {
-    return Math.max(min, Math.min(max, value));
+function processMap(item){
+  if(item.source_only)return '<button data-stage="final" class="pm-node pm-final active"><b>Final relations</b><small>Source-only archive · no intermediate stages</small></button>';
+  const by=Object.fromEntries(item.stages.map(s=>[s.id,s]));
+  const node=id=>{const s=by[id];if(!s)return '<span class="pm-missing">—</span>';
+    return `<button data-stage="${s.id}" class="pm-node pm-${s.id} ${s.id===state.stage?'active':''}"><b>${esc(s.label)}</b><small>${s.records.length} archived record${s.records.length===1?'':'s'}</small></button>`;};
+  return `<div class="pm">
+    <div class="pm-lane"><span class="pm-lane-label">1 · Parallel planning</span>${node('gate')}${node('process')}${node('entity')}<span class="pm-hint">Gate / IR planning, Process and Entity run in parallel.</span></div>
+    <div class="pm-lane"><span class="pm-lane-label">2 · Grounded extraction</span>${node('table')}${node('relation')}<span class="pm-hint">Table execution and Relation extraction use the available entity / Process context.</span></div>
+    <div class="pm-merge"><span class="pm-lane-label">3 · Document completion</span><div class="pm-completion-chain"><span class="pm-node pm-static"><b>Document merge</b><small>Stable entity IDs</small></span><i class="pm-arrow pm-optional" title="Revision may be skipped"></i>${node('revision')}<i class="pm-arrow"></i>${node('scope')}<i class="pm-arrow"></i>${node('final')}</div></div>
+  </div>
+  <div class="pm-legend"><span><i class="pm-l-concept"></i>Current pipeline dependencies</span><span><i class="pm-l-optional"></i>Revision may be skipped</span><span><i class="pm-l-confirmed"></i>Record links require archived IDs or anchors</span><span class="pm-l-note">Guides inspect selected stages in dependency order, not a verified continuous historical run. Stage files may date from different updates.</span></div>`;
 }
-
-function getCurrentPaperTitle() {
-    const query = fullQueries.find(item => item.id === currentQuery);
-    return query ? (query.source_title || query.title) : '';
-}
-
-function updateSourcePaperTooltip() {
-    const sourcePaperItem = document.getElementById('stat-papers-item');
-    const sourcePaperTooltip = document.getElementById('stat-papers-tooltip');
-    if (!sourcePaperItem || !sourcePaperTooltip) return;
-
-    const title = getCurrentPaperTitle();
-    sourcePaperTooltip.textContent = title ? `Source paper: ${title}` : 'Select a paper to view its source title';
-    sourcePaperItem.setAttribute('aria-label', sourcePaperTooltip.textContent);
-}
-
-// 更新统计信息
-function updateStats(stats) {
-    animateNumber('stat-nodes', stats.nodes);
-    animateNumber('stat-edges', stats.edges);
-    animateNumber('stat-papers', stats.papers);
-    updateSourcePaperTooltip();
-}
-
-// 渲染图例
-function renderLegend(graphData) {
-    const nodeTypeOrder = ['Product', 'Component', 'Process', 'Material'];
-    const nodeTypes = [...new Set(graphData.nodes.map(n => n.type))].sort((a, b) => {
-        const aIndex = nodeTypeOrder.indexOf(a);
-        const bIndex = nodeTypeOrder.indexOf(b);
-        const aKnown = aIndex !== -1;
-        const bKnown = bIndex !== -1;
-
-        if (aKnown && bKnown) return aIndex - bIndex;
-        if (aKnown) return -1;
-        if (bKnown) return 1;
-        return a.localeCompare(b, undefined, { sensitivity: 'base' });
-    });
-    const edgeTypeOrder = [
-        'CONTAINS',
-        'PROCESSED_BY',
-        'HAS_OUTPUT',
-        'HAS_OBSERVATION',
-        'HAS_INPUT',
-        'HAS_CONTEXT',
-        'RELATED_TO',
-        'TRANSFORMED_TO'
-    ];
-    const edgeTypes = [...new Set(graphData.edges.map(e => e.label.split(' | ')[0]))].sort((a, b) => {
-        const aIndex = edgeTypeOrder.indexOf(a);
-        const bIndex = edgeTypeOrder.indexOf(b);
-        const aKnown = aIndex !== -1;
-        const bKnown = bIndex !== -1;
-
-        if (aKnown && bKnown) return aIndex - bIndex;
-        if (aKnown) return -1;
-        if (bKnown) return 1;
-        return a.localeCompare(b, undefined, { sensitivity: 'base' });
-    });
-
-    const nodeLegend = document.getElementById('legend-nodes');
-    const edgeLegend = document.getElementById('legend-edges');
-
-    // 节点类型图例
-    nodeLegend.innerHTML = nodeTypes.map(type => {
-        const color = nodeColors[type] || '#667eea';
-        return `
-            <div class="legend-item">
-                <div class="legend-color" style="background: ${color}"></div>
-                <span>${type}</span>
-            </div>
-        `;
-    }).join('');
-
-    // 边类型图例
-    const edgeColors = {
-        'CONTAINS': '#667eea',
-        'HAS_OUTPUT': '#ed64a6',
-        'HAS_OBSERVATION': '#f6ad55',
-        'HAS_INPUT': '#f6ad55',
-        'HAS_CONTEXT': '#48bb78',
-        'PROCESSED_BY': '#764ba2',
-        'RELATED_TO': '#48bb78',
-        'TRANSFORMED_TO': '#f6ad55'
-    };
-
-    edgeLegend.innerHTML = edgeTypes.map(type => {
-        const color = edgeColors[type] || '#764ba2';
-        return `
-            <div class="legend-item">
-                <div class="legend-line" style="background: ${color}"></div>
-                <span>${type}</span>
-            </div>
-        `;
-    }).join('');
-}
-
-// 数字动画
-function animateNumber(elementId, target) {
-    const element = document.getElementById(elementId);
-    let current = 0;
-    const increment = Math.ceil(target / 20);
-    
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target;
-            clearInterval(timer);
-        } else {
-            element.textContent = current;
-        }
-    }, 30);
-}
-
-// 设置事件监听
-function setupEventListeners() {
-    // 搜索框实时过滤
-    const searchInput = document.getElementById('search-input');
-    if (searchInput) {
-        searchInput.addEventListener('input', () => {
-            renderQueryList(searchInput.value);
-            renderTitleSuggestions(searchInput.value);
-            showTitleSuggestions();
-        });
-
-        searchInput.addEventListener('focus', () => {
-            renderTitleSuggestions('');
-            document.getElementById('title-suggestions')?.classList.add('open');
-        });
-        searchInput.addEventListener('click', () => {
-            renderTitleSuggestions('');
-            document.getElementById('title-suggestions')?.classList.add('open');
-        });
-
-        searchInput.addEventListener('keydown', event => {
-            if (event.key === 'Escape') {
-                hideTitleSuggestions();
-                searchInput.blur();
-            }
-        });
-    }
-
-    const nodeInput = document.getElementById('node-search-input');
-    if (nodeInput) {
-        nodeInput.addEventListener('input', () => {
-            renderNodeSuggestions(nodeInput.value);
-            showNodeSuggestions(false);
-
-            if (!nodeInput.value.trim() && currentQuery && currentFullGraphData && currentRootNodeId) {
-                currentRootNodeId = null;
-                currentViewGraphData = currentFullGraphData;
-                renderCurrentGraph();
-            }
-        });
-
-        nodeInput.addEventListener('focus', () => showNodeSuggestions(true));
-        nodeInput.addEventListener('click', () => showNodeSuggestions(true));
-
-        nodeInput.addEventListener('keydown', event => {
-            if (event.key === 'Escape') {
-                hideNodeSuggestions();
-                nodeInput.blur();
-            }
-        });
-    }
-
-    const processInput = document.getElementById('process-search-input');
-    if (processInput) {
-        processInput.addEventListener('input', () => {
-            renderProcessSuggestions(processInput.value);
-            showProcessSuggestions(false);
-        });
-
-        processInput.addEventListener('focus', () => showProcessSuggestionsWithAllData(true));
-        processInput.addEventListener('click', () => showProcessSuggestionsWithAllData(true));
-
-        processInput.addEventListener('keydown', event => {
-            if (event.key === 'Escape') {
-                hideProcessSuggestions();
-                processInput.blur();
-            }
-            if (event.key === 'Enter') {
-                event.preventDefault();
-                const value = processInput.value.trim();
-                if (!value) return;
-                const firstMatch = getProcessSuggestionMatches(value)[0];
-                selectProcessFacts(firstMatch ? firstMatch.label : value);
-            }
-        });
-    }
-
-    const materialInput = document.getElementById('material-search-input');
-    if (materialInput) {
-        materialInput.addEventListener('input', () => {
-            renderMaterialSuggestions(materialInput.value);
-            showMaterialSuggestions(false);
-        });
-
-        materialInput.addEventListener('focus', () => showMaterialSuggestionsWithAllData(true));
-        materialInput.addEventListener('mousedown', () => showMaterialSuggestions(true));
-        materialInput.addEventListener('click', () => showMaterialSuggestionsWithAllData(true));
-
-        materialInput.addEventListener('keydown', event => {
-            if (event.key === 'Escape') {
-                hideMaterialSuggestions();
-                materialInput.blur();
-            }
-            if (event.key === 'Enter') {
-                event.preventDefault();
-                const value = materialInput.value.trim();
-                if (!value) return;
-                const firstMatch = getMaterialSuggestionMatches(value)[0];
-                selectMaterialChains(firstMatch ? firstMatch.label : value);
-            }
-        });
-    }
-
-    document.addEventListener('click', event => {
-        const titleSearchBox = document.getElementById('search-input')?.closest('.search-box');
-        if (titleSearchBox && !titleSearchBox.contains(event.target)) {
-            hideTitleSuggestions();
-        }
-
-        const nodeSearchBox = document.getElementById('node-search-input')?.closest('.search-box');
-        if (nodeSearchBox && !nodeSearchBox.contains(event.target)) {
-            hideNodeSuggestions();
-        }
-
-        const processSearchBox = document.getElementById('process-search-input')?.closest('.search-box');
-        if (processSearchBox && !processSearchBox.contains(event.target)) {
-            hideProcessSuggestions();
-        }
-
-        const materialSearchBox = document.getElementById('material-search-input')?.closest('.search-box');
-        if (materialSearchBox && !materialSearchBox.contains(event.target)) {
-            hideMaterialSuggestions();
-        }
-    });
-
-    const suggestions = document.getElementById('title-suggestions');
-    if (suggestions) {
-        suggestions.addEventListener('mousedown', event => {
-            event.preventDefault();
-        });
-    }
-
-    const nodeSuggestions = document.getElementById('node-suggestions');
-    if (nodeSuggestions) {
-        nodeSuggestions.addEventListener('mousedown', event => {
-            event.preventDefault();
-        });
-    }
-
-    const processSuggestions = document.getElementById('process-suggestions');
-    if (processSuggestions) {
-        processSuggestions.addEventListener('mousedown', event => {
-            event.preventDefault();
-        });
-    }
-
-    const materialSuggestions = document.getElementById('material-suggestions');
-    if (materialSuggestions) {
-        materialSuggestions.addEventListener('mousedown', event => {
-            event.preventDefault();
-        });
-    }
-
-    const materialValueFilter = document.getElementById('hide-material-no-value');
-    if (materialValueFilter) {
-        hideMaterialNoValueEdges = materialValueFilter.checked;
-        materialValueFilter.addEventListener('change', () => {
-            hideMaterialNoValueEdges = materialValueFilter.checked;
-            renderCurrentGraph();
-        });
-    }
-
-    // 窗口大小变化时重绘
-    window.addEventListener('resize', () => {
-        if (currentQuery && currentRenderedGraphData) {
-            renderGraph(currentQuery, currentRenderedGraphData);
-        }
-    });
-}
-
-// 页面加载完成后初始化
-document.addEventListener('DOMContentLoaded', init);

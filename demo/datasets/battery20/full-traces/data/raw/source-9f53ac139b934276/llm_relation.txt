@@ -1,0 +1,1073 @@
+[
+  {
+    "chunk_id": "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_ABSTRACT_258fef42",
+    "section_name": "ABSTRACT",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_1. Introduction_b6c3f054",
+    "section_name": "1. Introduction",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_2. Experimental_a3f8e23a",
+    "section_name": "2. Experimental",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 10,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Component_cathode",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Component_cathode",
+          "target_name": "cathode",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "these were discharge first and then dismantled to separate the cathode and anode film",
+          "properties": {
+            "property": "composition",
+            "source_sample": "waste LIBs of mobile phones",
+            "sample_state": "waste/end-of-life lithium ion batteries from mobile phones",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "cathode",
+            "evidence_span": "these were discharge first and then dismantled to separate the cathode and anode film",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Component_anode",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Component_anode",
+          "target_name": "anode",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "these were discharge first and then dismantled to separate the cathode and anode film",
+          "properties": {
+            "property": "composition",
+            "source_sample": "waste LIBs of mobile phones",
+            "sample_state": "waste/end-of-life lithium ion batteries from mobile phones",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "anode",
+            "evidence_span": "these were discharge first and then dismantled to separate the cathode and anode film",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_PROCESSED_BY_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "target_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "For the metal recovery from waste LIBs of mobile phones (collected from the local scrap market) these were discharge first and then dismantled to separate the cathode and anode film",
+          "properties": {
+            "source_sample": "cathode",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "evidence_span": "For the metal recovery from waste LIBs of mobile phones (collected from the local scrap market) these were discharge first and then dismantled to separate the cathode and anode film",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_anode_PROCESSED_BY_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_id": "text_Component_anode",
+          "source_name": "anode",
+          "target_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "target_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "For the metal recovery from waste LIBs of mobile phones (collected from the local scrap market) these were discharge first and then dismantled to separate the cathode and anode film",
+          "properties": {
+            "source_sample": "anode film",
+            "sample_state": "anode material as a film before treatment",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "anode",
+            "target_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "evidence_span": "For the metal recovery from waste LIBs of mobile phones (collected from the local scrap market) these were discharge first and then dismantled to separate the cathode and anode film",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_text_Material_quercetin",
+          "source_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "target_id": "text_Material_quercetin",
+          "target_name": "quercetin",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Commonly present flavonoids in CJ were quercetin, myricitin, rutin, tangeritin, naringin and hesperidin (Okwu, 2008).",
+          "properties": {
+            "output_role": "contained_flavonoid",
+            "study_scope": "background",
+            "graph_status": "evidence_only",
+            "process_role": "background",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "target_name": "quercetin",
+            "evidence_span": "Commonly present flavonoids in CJ were quercetin, myricitin, rutin, tangeritin, naringin and hesperidin (Okwu, 2008).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_text_Material_myricitin",
+          "source_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "target_id": "text_Material_myricitin",
+          "target_name": "myricitin",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Commonly present flavonoids in CJ were quercetin, myricitin, rutin, tangeritin, naringin and hesperidin (Okwu, 2008).",
+          "properties": {
+            "output_role": "contained_flavonoid",
+            "study_scope": "background",
+            "graph_status": "evidence_only",
+            "process_role": "background",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "target_name": "myricitin",
+            "evidence_span": "Commonly present flavonoids in CJ were quercetin, myricitin, rutin, tangeritin, naringin and hesperidin (Okwu, 2008).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_text_Material_rutin",
+          "source_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "target_id": "text_Material_rutin",
+          "target_name": "rutin",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Commonly present flavonoids in CJ were quercetin, myricitin, rutin, tangeritin, naringin and hesperidin (Okwu, 2008).",
+          "properties": {
+            "output_role": "contained_flavonoid",
+            "study_scope": "background",
+            "graph_status": "evidence_only",
+            "process_role": "background",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "target_name": "rutin",
+            "evidence_span": "Commonly present flavonoids in CJ were quercetin, myricitin, rutin, tangeritin, naringin and hesperidin (Okwu, 2008).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_text_Material_tangeritin",
+          "source_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "target_id": "text_Material_tangeritin",
+          "target_name": "tangeritin",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Commonly present flavonoids in CJ were quercetin, myricitin, rutin, tangeritin, naringin and hesperidin (Okwu, 2008).",
+          "properties": {
+            "output_role": "contained_flavonoid",
+            "study_scope": "background",
+            "graph_status": "evidence_only",
+            "process_role": "background",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "target_name": "tangeritin",
+            "evidence_span": "Commonly present flavonoids in CJ were quercetin, myricitin, rutin, tangeritin, naringin and hesperidin (Okwu, 2008).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_text_Material_naringin",
+          "source_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "target_id": "text_Material_naringin",
+          "target_name": "naringin",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Commonly present flavonoids in CJ were quercetin, myricitin, rutin, tangeritin, naringin and hesperidin (Okwu, 2008).",
+          "properties": {
+            "output_role": "contained_flavonoid",
+            "study_scope": "background",
+            "graph_status": "evidence_only",
+            "process_role": "background",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "target_name": "naringin",
+            "evidence_span": "Commonly present flavonoids in CJ were quercetin, myricitin, rutin, tangeritin, naringin and hesperidin (Okwu, 2008).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_text_Material_hesperidin",
+          "source_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "target_id": "text_Material_hesperidin",
+          "target_name": "hesperidin",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Commonly present flavonoids in CJ were quercetin, myricitin, rutin, tangeritin, naringin and hesperidin (Okwu, 2008).",
+          "properties": {
+            "output_role": "contained_flavonoid",
+            "study_scope": "background",
+            "graph_status": "evidence_only",
+            "process_role": "background",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "target_name": "hesperidin",
+            "evidence_span": "Commonly present flavonoids in CJ were quercetin, myricitin, rutin, tangeritin, naringin and hesperidin (Okwu, 2008).",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_2.1. Binder removal and leaching_5d47ed76",
+    "section_name": "2.1. Binder removal and leaching",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 2,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_temperature_90_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 90.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries",
+            "title": "Green and facile method for the recovery of spent Lithium Nickel Manganese Cobalt Oxide (NMC) based Lithium ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_2.1. Binder removal and leaching_5d47ed76",
+            "text": "## 2.1. Binder removal and leaching\nBinder removal experiments were carried out in batch mode using the 250 mL round-bottom flask with a temperature controlling facility. The flask was equipped with a magnetic stirrer for homogenization. Experiments were performed by using CJ with cathode and anode film. Optimum w/v ratio of film to CJ was found to be 50,000 mg/L at 90 ^∘C and 20 min for binder removal. Cu (anode) and Al (cathode) film were separate, washed with water and check its purity using XRD and XRF techniques. After the removal of Cu and Al the remaining solution was refluxed for 30 min and then filter to remove carbon and other impurities. The filtrate was used to check the leaching rate, using Eq. (2.1). Leaching rate is the percentage ratio of the amount of metal species in the leachate to the total amount, as measured by tri-acid digestion process (Uppsala, 2015) using ICP-MS.\nAmount of metal in the leachate Leaching rate 100 Total amount of metal found in tri acid digestion\nð2:1Þ",
+            "parent_chunk_id": null,
+            "section_name": "2.1. Binder removal and leaching",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 7047,
+            "position_end": 8057,
+            "metadata": {
+              "chunk_id": "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_2.1. Binder removal and leaching_5d47ed76",
+              "doc_id": "Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries",
+              "title": "Green and facile method for the recovery of spent Lithium Nickel Manganese Cobalt Oxide (NMC) based Lithium ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries/text.md",
+              "section_name": "2.1. Binder removal and leaching",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 7047,
+              "position_end": 8057,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Component_cathode_PROCESSED_BY_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "target_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Experiments were performed by using CJ with cathode and anode film.",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "citrus pseudolimon juice",
+            "conditions": "batch mode, 250 mL round-bottom flask, magnetic stirrer, 90 °C, 20 min, film to CJ ratio 50,000 mg/L",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 90.0,
+                "unit": "°C",
+                "raw_text": "batch mode, 250 mL round-bottom flask, magnetic stirrer, 90 °C, 20 min, film to CJ ratio 50,000 mg/L"
+              }
+            ],
+            "condition_labels": [
+              "batch mode, 250 mL round-bottom flask, magnetic stirrer, 90 °C, 20 min, film to CJ ratio 50,000 mg/L"
+            ],
+            "condition": "batch mode, 250 mL round-bottom flask, magnetic stirrer, 90 °C, 20 min, film to CJ ratio 50,000 mg/L",
+            "condition_ids": [
+              "CHUNK_Green_and_Facile_Method_for_the_Recovery_of_Spent_Lithium_Nickel_Manganese_Cobalt_Oxide_NMC_Based_Lithium_Ion_Batteries_2_1_Binder_removal_and_leaching_5d47ed76__cond_temperature_90_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "evidence_span": "Experiments were performed by using CJ with cathode and anode film.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_anode_PROCESSED_BY_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_id": "text_Component_anode",
+          "source_name": "anode",
+          "target_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "target_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Experiments were performed by using CJ with cathode and anode film.",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "citrus pseudolimon juice",
+            "conditions": "batch mode, 250 mL round-bottom flask, magnetic stirrer, 90 °C, 20 min, film to CJ ratio 50,000 mg/L",
+            "source_sample": "anode film",
+            "sample_state": "anode material as a film before treatment",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 90.0,
+                "unit": "°C",
+                "raw_text": "batch mode, 250 mL round-bottom flask, magnetic stirrer, 90 °C, 20 min, film to CJ ratio 50,000 mg/L"
+              }
+            ],
+            "condition_labels": [
+              "batch mode, 250 mL round-bottom flask, magnetic stirrer, 90 °C, 20 min, film to CJ ratio 50,000 mg/L"
+            ],
+            "condition": "batch mode, 250 mL round-bottom flask, magnetic stirrer, 90 °C, 20 min, film to CJ ratio 50,000 mg/L",
+            "condition_ids": [
+              "CHUNK_Green_and_Facile_Method_for_the_Recovery_of_Spent_Lithium_Nickel_Manganese_Cobalt_Oxide_NMC_Based_Lithium_Ion_Batteries_2_1_Binder_removal_and_leaching_5d47ed76__cond_temperature_90_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "anode",
+            "target_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "evidence_span": "Experiments were performed by using CJ with cathode and anode film.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_2.2. Analytical methods_0c93f0ec",
+    "section_name": "2.2. Analytical methods",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_3.1. Binder removal and recovery of Al and Cu_93c37ebe",
+    "section_name": "3.1. Binder removal and recovery of Al and Cu",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 10,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_temperature_90_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 90.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries",
+            "title": "Green and facile method for the recovery of spent Lithium Nickel Manganese Cobalt Oxide (NMC) based Lithium ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_3.1. Binder removal and recovery of Al and Cu_93c37ebe",
+            "text": "## 3. Results and discussion\n## 3.1. Binder removal and recovery of Al and Cu\nA typical X-ray diffractogram of cathodes of spent Li-ion batteries before and after treatment was shown in Fig. 1. LiCoO2, Co3O4, Al and carbon were found in the cathode samples as compared with previous reports and JCPDS standards (Freitas et al., 2010).\nThe presence of Co3O4 and LiCoO2 resultant from the reaction was due to the charging–discharging cycles. The role of carbon in both cathode and anode was to increase electric conductivity of the electrode (Contestabile et al., 2001; Lain, 2001). 2h scattering of Al at 37.791 with intensity 14.005 counts was shifted to 38.372 and 27.544 counts after the binder removal. Some other 2h patterns and intensity 78.681, 11.091 were also got shifted to 78.277, 14.787. It may be due to the resultant defects (Cuesta et al., 1998) after the binder removal.\nIn the XRD and XRF pattern of the anode (Figs. 2a and 2b) showed the presence of carbon as an active material and Cu as a current collector. Cu shows 2h diffraction pattern at 43.142, 54.5 and 73.986. XRF pattern clearly shows the Cu recovery after binder removal as initial Cu Ka at 72,000 was crossed to 100,000 counts. FESEM images (Fig. 3) presents the microstructural changes on the cathode and anode film during treatment. It was found that the removal was initiated through the cracks. In FTIR PVDF gives characteristic strong absorption due to the fluorocarbon group at (Fig. 4) 1194 and 866 c̅ ̅m̅ ^-1, these bonds were shifted to 1174 and 860 in the cathode film due to the possible involvement of fluoro group in the coating. The absorption due to fluoro group was found to be completely removed after the treatment of film for 20 min at 90 ^∘𝖢. The same pattern was also reflected in FTIR of the anode. The binder removal rate was quantitatively measured by using Eq. (3.1) and was found 8% and 9.6% in case of anode and cathode. For this purpose average weight loss of 10 films from cathode and anode were noted before and after treatment.\n% Removal Rate = ((A - B) / n) / (A) x100. (Eq. 3.1) where A is the average weight of film before treatment, B is average weight of film after treatment, and n is total number of films.",
+            "parent_chunk_id": null,
+            "section_name": "3.1. Binder removal and recovery of Al and Cu",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 8644,
+            "position_end": 11016,
+            "metadata": {
+              "chunk_id": "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_3.1. Binder removal and recovery of Al and Cu_93c37ebe",
+              "doc_id": "Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries",
+              "title": "Green and facile method for the recovery of spent Lithium Nickel Manganese Cobalt Oxide (NMC) based Lithium ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries/text.md",
+              "section_name": "3.1. Binder removal and recovery of Al and Cu",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 8644,
+              "position_end": 11016,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "merged_from": [
+                "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_3. Results and discussion_c2b94575"
+              ]
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Material_LiCoO2",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Material_LiCoO2",
+          "target_name": "LiCoO2",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "LiCoO2, Co3O4, Al and carbon were found in the cathode samples as compared with previous reports and JCPDS standards (Freitas et al., 2010).",
+          "properties": {
+            "property": "composition",
+            "source_sample": "cathode samples",
+            "sample_state": "cathode material in sample form before treatment",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "LiCoO2",
+            "evidence_span": "LiCoO2, Co3O4, Al and carbon were found in the cathode samples as compared with previous reports and JCPDS standards (Freitas et al., 2010).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Material_Co3O4",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Material_Co3O4",
+          "target_name": "Co3O4",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "LiCoO2, Co3O4, Al and carbon were found in the cathode samples as compared with previous reports and JCPDS standards (Freitas et al., 2010).",
+          "properties": {
+            "property": "composition",
+            "source_sample": "cathode samples",
+            "sample_state": "cathode material in sample form before treatment",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "Co3O4",
+            "evidence_span": "LiCoO2, Co3O4, Al and carbon were found in the cathode samples as compared with previous reports and JCPDS standards (Freitas et al., 2010).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Material_Al",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "LiCoO2, Co3O4, Al and carbon were found in the cathode samples as compared with previous reports and JCPDS standards (Freitas et al., 2010).",
+          "properties": {
+            "property": "composition",
+            "source_sample": "cathode samples",
+            "sample_state": "cathode material in sample form before treatment",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "Al",
+            "evidence_span": "LiCoO2, Co3O4, Al and carbon were found in the cathode samples as compared with previous reports and JCPDS standards (Freitas et al., 2010).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Material_carbon",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Material_carbon",
+          "target_name": "C",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "LiCoO2, Co3O4, Al and carbon were found in the cathode samples as compared with previous reports and JCPDS standards (Freitas et al., 2010).",
+          "properties": {
+            "property": "composition",
+            "source_sample": "cathode samples",
+            "sample_state": "cathode material in sample form before treatment",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "C",
+            "evidence_span": "LiCoO2, Co3O4, Al and carbon were found in the cathode samples as compared with previous reports and JCPDS standards (Freitas et al., 2010).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_anode_CONTAINS_text_Material_carbon",
+          "source_id": "text_Component_anode",
+          "source_name": "anode",
+          "target_id": "text_Material_carbon",
+          "target_name": "C",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In the XRD and XRF pattern of the anode (Figs. 2a and 2b) showed the presence of carbon as an active material and Cu as a current collector.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "anode film",
+            "sample_state": "anode material as a film before treatment",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "anode",
+            "target_name": "C",
+            "evidence_span": "In the XRD and XRF pattern of the anode (Figs. 2a and 2b) showed the presence of carbon as an active material and Cu as a current collector.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_anode_CONTAINS_text_Material_Cu",
+          "source_id": "text_Component_anode",
+          "source_name": "anode",
+          "target_id": "text_Material_Cu",
+          "target_name": "Cu",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In the XRD and XRF pattern of the anode (Figs. 2a and 2b) showed the presence of carbon as an active material and Cu as a current collector.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "anode film",
+            "sample_state": "anode material as a film before treatment",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "anode",
+            "target_name": "Cu",
+            "evidence_span": "In the XRD and XRF pattern of the anode (Figs. 2a and 2b) showed the presence of carbon as an active material and Cu as a current collector.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_PROCESSED_BY_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "target_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The absorption due to fluoro group was found to be completely removed after the treatment of film for 20 min at 90 ^∘𝖢.",
+          "properties": {
+            "source_sample": "cathode film",
+            "sample_state": "cathode material as a film before treatment",
+            "conditions": "20 min at 90 °C",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 90.0,
+                "unit": "°C",
+                "raw_text": "20 min at 90 °C"
+              }
+            ],
+            "condition_labels": [
+              "20 min at 90 °C"
+            ],
+            "condition": "20 min at 90 °C",
+            "condition_ids": [
+              "CHUNK_Green_and_Facile_Method_for_the_Recovery_of_Spent_Lithium_Nickel_Manganese_Cobalt_Oxide_NMC_Based_Lithium_Ion_Batteries_3_1_Binder_removal_and_recovery_of_Al_and_Cu_93c37ebe__cond_temperature_90_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "evidence_span": "The absorption due to fluoro group was found to be completely removed after the treatment of film for 20 min at 90 ^∘𝖢.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_anode_PROCESSED_BY_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_id": "text_Component_anode",
+          "source_name": "anode",
+          "target_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "target_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The same pattern was also reflected in FTIR of the anode.",
+          "properties": {
+            "source_sample": "anode film",
+            "sample_state": "anode material as a film before treatment",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "anode",
+            "target_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "evidence_span": "The same pattern was also reflected in FTIR of the anode.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_text_Material_PVDF",
+          "source_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "target_id": "text_Material_PVDF",
+          "target_name": "PVDF",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The binder removal rate was quantitatively measured by using Eq. (3.1) and was found 8% and 9.6% in case of anode and cathode.",
+          "properties": {
+            "output_role": "removed_material",
+            "property": "removal_rate",
+            "value": 9.6,
+            "unit": "%",
+            "source_sample": "cathode film",
+            "measurement_method": "Eq. (3.1)",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "target_name": "PVDF",
+            "evidence_span": "The binder removal rate was quantitatively measured by using Eq. (3.1) and was found 8% and 9.6% in case of anode and cathode.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_text_Material_PVDF",
+          "source_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "target_id": "text_Material_PVDF",
+          "target_name": "PVDF",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The binder removal rate was quantitatively measured by using Eq. (3.1) and was found 8% and 9.6% in case of anode and cathode.",
+          "properties": {
+            "output_role": "removed_material",
+            "property": "removal_rate",
+            "value": 8,
+            "unit": "%",
+            "source_sample": "anode film",
+            "measurement_method": "Eq. (3.1)",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "target_name": "PVDF",
+            "evidence_span": "The binder removal rate was quantitatively measured by using Eq. (3.1) and was found 8% and 9.6% in case of anode and cathode.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_3.2. Leaching of Li, Co, Mn and Ni_99b79745",
+    "section_name": "3.2. Leaching of Li, Co, Mn and Ni",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 5,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_temperature_90_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 90.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries",
+            "title": "Green and facile method for the recovery of spent Lithium Nickel Manganese Cobalt Oxide (NMC) based Lithium ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_3.2. Leaching of Li, Co, Mn and Ni_99b79745",
+            "text": "## 3.2. Leaching of Li, Co, Mn and Ni\nAfter the removal of Cu and Al the remaining solution contains Li, Co, Mn and Ni as the main elements (From XRD and XRF investigation). The solution was further refluxed for 30 min at 90 ^∘C to ensure the maximum leaching. The leachate was then separated by filtration and filtrate was analyzed through ICP-MS. Li, Co, Mn and Ni concentration varies in different brands of LIBs waste and broadly in the range of 4224 to 3065 for Li, 8756 to 4822 for Γ0, 28,368 to 19,470 for Mn, 3843 to 2514 ppm for Ni as found in 05 popular brands Nokia, Samsung, Lava, Sony and Max. The leaching efficiency of the various metals was found as 100 for lithium, 99% for Mn, 98% Ni and 94% for Co. Minimum leaching efficiency of Co showed its minimum reduction under reaction condition.\nIn the mixed oxides leaching, reducing agent always play an important role in improving leaching efficiency (Dorella and Mansur, 2007; Ferreira et al., 2009; Nayl et al., 2014). It was reported that reducing agent significantly improve the leaching efficiency of citric, malic, oxalic and aspartic acid (Li et al., 2014; Sun and Qiu, 2012) in the LIB recycling by reducing different metals in their lower oxidation stage. CJ consists of the mixture ofa various complexing agent like citric and malic acid with ascorbic acid and flavonoids were used as reducing agents (Rekha et al., 2012; Sierra et al., 2016). The presence of various counterions for citrate and malate anions like Ca^2+, Na+, K+ were found to improve the complexation. Mechanistically the role of counterions can be explained\nD. Pant, T. Dolker/Waste Management xxx (2016) xxx–xxx by the pH metric and its correlation with electrochemical behaviour. The pH of the leachate was found 5.9 in the case ofjuice, whereas 2.4 and 1.9 in the case of individual citric and malic acid. It indicates more existence of citric and malic complex as compared to hydroxide for improved leaching (Table 2). This finding was well evidenced with some of the previous studies as the addition of sodium citrate in citric acid improved the leaching pattern and it results the 2–3 points increment in pH. Hydroxides were formed at lower (acidic) pH responsible for incomplete leacing and more precipitation, where metal acid complexes are responsible for improved leaching (Mehrizi et al., 2013).\nAcid flavonoids can be reasonably used as an environmentally benign weak reducing agent, similar to some metal oxide dissolution studies (Manjanna et al., 2001). Fig. 6 shows the initial and final (after 60 min, 90 \u0003C with LIB) IR spectra of juice. Compared with the spectra of pure citric and malic acid it shows the complexation pattern ofjuice during the course of the reaction. The absorption due to C CO\u0003 asymmetric peak in the range of 1527 cm\u00031 was more intense in the final complex. Absorption at 1694 cm ^-1 in the final product was due to the appearance of COO\u0003 vibrational bond indicating complexation and pi interaction within the metals-metal and metal-ligand (Tsimbler et al., 1969).\nThe overall leaching reaction involving the following parallel steps (Fig. 5): (i) reduction of Co(III), Mn (IV) and Ni (III) to Co(II), Mn (II) and Ni (II) in the presence of ascorbic acid and citrus flavonoids, resultant the dissolution of spent LiXO2; (ii) more formation of metal acid complexes in the presence of counter ions for less precipitation and more dissolution, and finally (iii) recovery of\nPlease cite this article in press as: Pant, D., Dolker, T. Green and facile method for the recovery of spent Lithium Nickel Manganese Cobalt Oxide (NMC) based Lithium ion batteries. Waste Management (2016), http://dx.doi.org/10.1016/j.wasman.2016.09.039 metals from leachant solution using Ν4 ⊂O3 and Oxalic acid (Meshram et al., 2015b).",
+            "parent_chunk_id": null,
+            "section_name": "3.2. Leaching of Li, Co, Mn and Ni",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 11016,
+            "position_end": 15005,
+            "metadata": {
+              "chunk_id": "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_3.2. Leaching of Li, Co, Mn and Ni_99b79745",
+              "doc_id": "Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries",
+              "title": "Green and facile method for the recovery of spent Lithium Nickel Manganese Cobalt Oxide (NMC) based Lithium ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries/text.md",
+              "section_name": "3.2. Leaching of Li, Co, Mn and Ni",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 11016,
+              "position_end": 15005,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_PROCESSED_BY_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "target_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The solution was further refluxed for 30 min at 90 ^∘C to ensure the maximum leaching.",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "refluxed for 30 min at 90 °C",
+            "source_sample": "remaining solution after removal of Cu and Al",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 90.0,
+                "unit": "°C",
+                "raw_text": "refluxed for 30 min at 90 °C"
+              }
+            ],
+            "condition_labels": [
+              "refluxed for 30 min at 90 °C"
+            ],
+            "condition": "refluxed for 30 min at 90 °C",
+            "condition_ids": [
+              "CHUNK_Green_and_Facile_Method_for_the_Recovery_of_Spent_Lithium_Nickel_Manganese_Cobalt_Oxide_NMC_Based_Lithium_Ion_Batteries_3_2_Leaching_of_Li_Co_Mn_and_Ni_99b79745__cond_temperature_90_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "evidence_span": "The solution was further refluxed for 30 min at 90 ^∘C to ensure the maximum leaching.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching efficiency of the various metals was found as 100 for lithium, 99% for Mn, 98% Ni and 94% for Co.",
+          "properties": {
+            "property": "leaching",
+            "value": 100,
+            "unit": "%",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "source_sample": "remaining solution after removal of Cu and Al",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "target_name": "Li",
+            "evidence_span": "The leaching efficiency of the various metals was found as 100 for lithium, 99% for Mn, 98% Ni and 94% for Co.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_text_Material_Mn",
+          "source_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching efficiency of the various metals was found as 100 for lithium, 99% for Mn, 98% Ni and 94% for Co.",
+          "properties": {
+            "property": "leaching",
+            "value": 99,
+            "unit": "%",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "source_sample": "remaining solution after removal of Cu and Al",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "target_name": "Mn",
+            "evidence_span": "The leaching efficiency of the various metals was found as 100 for lithium, 99% for Mn, 98% Ni and 94% for Co.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching efficiency of the various metals was found as 100 for lithium, 99% for Mn, 98% Ni and 94% for Co.",
+          "properties": {
+            "property": "leaching",
+            "value": 98,
+            "unit": "%",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "source_sample": "remaining solution after removal of Cu and Al",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "target_name": "Ni",
+            "evidence_span": "The leaching efficiency of the various metals was found as 100 for lithium, 99% for Mn, 98% Ni and 94% for Co.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching efficiency of the various metals was found as 100 for lithium, 99% for Mn, 98% Ni and 94% for Co.",
+          "properties": {
+            "property": "leaching",
+            "value": 94,
+            "unit": "%",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "source_sample": "remaining solution after removal of Cu and Al",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+            "target_name": "Co",
+            "evidence_span": "The leaching efficiency of the various metals was found as 100 for lithium, 99% for Mn, 98% Ni and 94% for Co.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries_4. Conclusion_f260cba3",
+    "section_name": "4. Conclusion",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  }
+]

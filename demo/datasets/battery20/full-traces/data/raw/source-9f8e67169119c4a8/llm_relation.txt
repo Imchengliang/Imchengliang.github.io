@@ -1,0 +1,3325 @@
+[
+  {
+    "chunk_id": "CHUNK_text_ABSTRACT_6dd7f364",
+    "section_name": "ABSTRACT",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_1. Introduction_d8ecd8e0",
+    "section_name": "1. Introduction",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_2. Experimental_23962219",
+    "section_name": "2. Experimental",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 4,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_battery_CONTAINS_text_Material_felt",
+          "source_id": "text_Product_battery",
+          "source_name": "battery",
+          "target_id": "text_Material_felt",
+          "target_name": "felt",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "a coarse fraction >3 mm (including the plastic of external shell, residual plastic pieces and felt and cardboard from internal battery protection)",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "battery",
+            "target_name": "felt",
+            "evidence_span": "a coarse fraction >3 mm (including the plastic of external shell, residual plastic pieces and felt and cardboard from internal battery protection)",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_battery_CONTAINS_text_Material_cardboard",
+          "source_id": "text_Product_battery",
+          "source_name": "battery",
+          "target_id": "text_Material_cardboard",
+          "target_name": "cardboard",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "a coarse fraction >3 mm (including the plastic of external shell, residual plastic pieces and felt and cardboard from internal battery protection)",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "battery",
+            "target_name": "cardboard",
+            "evidence_span": "a coarse fraction >3 mm (including the plastic of external shell, residual plastic pieces and felt and cardboard from internal battery protection)",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_battery_CONTAINS_text_Material_metallic_powder",
+          "source_id": "text_Product_battery",
+          "source_name": "battery",
+          "target_id": "text_Material_metallic_powder",
+          "target_name": "metallic powder",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "a fine fraction <3 mm (mainly made up of metallic powder deriving from electrodes)",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "battery",
+            "target_name": "metallic powder",
+            "evidence_span": "a fine fraction <3 mm (mainly made up of metallic powder deriving from electrodes)",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_battery_CONTAINS_text_Component_electrode",
+          "source_id": "text_Product_battery",
+          "source_name": "battery",
+          "target_id": "text_Component_electrode",
+          "target_name": "electrode",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "a fine fraction <3 mm (mainly made up of metallic powder deriving from electrodes)",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "battery",
+            "target_name": "electrode",
+            "evidence_span": "a fine fraction <3 mm (mainly made up of metallic powder deriving from electrodes)",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [
+        {
+          "reason": "incompatible source/target entity types for relation type",
+          "relation": {
+            "source_name": "rechargeable battery",
+            "target_name": "Ni–Cd battery",
+            "relation_type": "CONTAINS",
+            "evidence_span": "The following manual separation sorted three most important kinds of batteries: Ni–Cd (40.1% in weight), Ni-MH (34.5%) and Li–ion (7.5%).",
+            "attributes": {
+              "property": "composition",
+              "value": 40.1,
+              "unit": "%",
+              "study_scope": "current_study"
+            }
+          },
+          "source_type": "Product",
+          "target_type": "Product",
+          "normalized_relation_type": "CONTAINS"
+        },
+        {
+          "reason": "incompatible source/target entity types for relation type",
+          "relation": {
+            "source_name": "rechargeable battery",
+            "target_name": "Ni-MH battery",
+            "relation_type": "CONTAINS",
+            "evidence_span": "The following manual separation sorted three most important kinds of batteries: Ni–Cd (40.1% in weight), Ni-MH (34.5%) and Li–ion (7.5%).",
+            "attributes": {
+              "property": "composition",
+              "value": 34.5,
+              "unit": "%",
+              "study_scope": "current_study"
+            }
+          },
+          "source_type": "Product",
+          "target_type": "Product",
+          "normalized_relation_type": "CONTAINS"
+        },
+        {
+          "reason": "incompatible source/target entity types for relation type",
+          "relation": {
+            "source_name": "rechargeable battery",
+            "target_name": "Li–ion battery",
+            "relation_type": "CONTAINS",
+            "evidence_span": "The following manual separation sorted three most important kinds of batteries: Ni–Cd (40.1% in weight), Ni-MH (34.5%) and Li–ion (7.5%).",
+            "attributes": {
+              "property": "composition",
+              "value": 7.5,
+              "unit": "%",
+              "study_scope": "current_study"
+            }
+          },
+          "source_type": "Product",
+          "target_type": "Product",
+          "normalized_relation_type": "CONTAINS"
+        },
+        {
+          "reason": "incompatible source/target entity types for relation type",
+          "relation": {
+            "source_name": "rechargeable battery",
+            "target_name": "Li-polymer battery",
+            "relation_type": "CONTAINS",
+            "evidence_span": "The remaining 18% were batteries with abraded and illegible labels, uncommon ones (e.g., Lipolymers/Li-hydrogen) or incorrectly disposed ones (e.g. single use batteries), which were not included in the study.",
+            "attributes": {
+              "property": "composition",
+              "study_scope": "current_study"
+            }
+          },
+          "source_type": "Product",
+          "target_type": "Product",
+          "normalized_relation_type": "CONTAINS"
+        },
+        {
+          "reason": "incompatible source/target entity types for relation type",
+          "relation": {
+            "source_name": "rechargeable battery",
+            "target_name": "Li-hydrogen battery",
+            "relation_type": "CONTAINS",
+            "evidence_span": "The remaining 18% were batteries with abraded and illegible labels, uncommon ones (e.g., Lipolymers/Li-hydrogen) or incorrectly disposed ones (e.g. single use batteries), which were not included in the study.",
+            "attributes": {
+              "property": "composition",
+              "study_scope": "current_study"
+            }
+          },
+          "source_type": "Product",
+          "target_type": "Product",
+          "normalized_relation_type": "CONTAINS"
+        },
+        {
+          "reason": "incompatible source/target entity types for relation type",
+          "relation": {
+            "source_name": "rechargeable battery",
+            "target_name": "single use battery",
+            "relation_type": "CONTAINS",
+            "evidence_span": "The remaining 18% were batteries with abraded and illegible labels, uncommon ones (e.g., Lipolymers/Li-hydrogen) or incorrectly disposed ones (e.g. single use batteries), which were not included in the study.",
+            "attributes": {
+              "property": "composition",
+              "study_scope": "current_study"
+            }
+          },
+          "source_type": "Product",
+          "target_type": "Product",
+          "normalized_relation_type": "CONTAINS"
+        }
+      ],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_2.1. Sample preparation_63d6a7d9",
+    "section_name": "2.1. Sample preparation",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 1,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_Ni_Cd_battery_CONTAINS_text_Material_ferrous_residue",
+          "source_id": "text_Product_Ni_Cd_battery",
+          "source_name": "Ni–Cd battery",
+          "target_id": "text_Material_ferrous_residue",
+          "target_name": "ferrous residue",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "extra_qualifiers": "coarse ferrous residues",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni–Cd battery",
+            "target_name": "ferrous residue",
+            "evidence_span": "after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_2.2. Weight loss determination (105 \u0003C)_dd519cd5",
+    "section_name": "2.2. Weight loss determination (105 \u0003C)",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_2.3. Chemical characterisation_a2556684",
+    "section_name": "2.3. Chemical characterisation",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 5,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Hg",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Hg",
+          "target_name": "Hg",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "mercury was analysed by cold vapour atomic absorption spectrometry (CVAAS)",
+          "properties": {
+            "property": "measurement_method",
+            "measurement_method": "cold vapour atomic absorption spectrometry (CVAAS)",
+            "study_scope": "current_study",
+            "process_role": "measurement",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Hg",
+            "evidence_span": "mercury was analysed by cold vapour atomic absorption spectrometry (CVAAS)",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Al",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "All metals except mercury were measured by ICP/AES",
+          "properties": {
+            "property": "measurement_method",
+            "measurement_method": "ICP/AES",
+            "study_scope": "current_study",
+            "process_role": "measurement",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Al",
+            "evidence_span": "All metals except mercury were measured by ICP/AES",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "All metals except mercury were measured by ICP/AES",
+          "properties": {
+            "property": "measurement_method",
+            "measurement_method": "ICP/AES",
+            "study_scope": "current_study",
+            "process_role": "measurement",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Ni",
+            "evidence_span": "All metals except mercury were measured by ICP/AES",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "All metals except mercury were measured by ICP/AES",
+          "properties": {
+            "property": "measurement_method",
+            "measurement_method": "ICP/AES",
+            "study_scope": "current_study",
+            "process_role": "measurement",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Co",
+            "evidence_span": "All metals except mercury were measured by ICP/AES",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Cu",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Cu",
+          "target_name": "Cu",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "All metals except mercury were measured by ICP/AES",
+          "properties": {
+            "property": "measurement_method",
+            "measurement_method": "ICP/AES",
+            "study_scope": "current_study",
+            "process_role": "measurement",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Cu",
+            "evidence_span": "All metals except mercury were measured by ICP/AES",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_2.4. Leaching test_f0d338ec",
+    "section_name": "2.4. Leaching test",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 6,
+      "condition_count": 2,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_temperature_5_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 5.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "text",
+            "title": "Chemical characterisation of spent rechargeable batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_2.4. Leaching test_f0d338ec",
+            "text": "## 2.4. Leaching test\nLeaching tests were performed according to European Standard Procedures (EN – 12457 – 2). All the seven sub-samples (reported in Fig. 1) were put in contact with distilled water in capped bottles. Liquid to solid ratio was 10/1 and the suspension was agitated by an overhead shaker (5 rpm) for 24 h at room temperature (20 ± 5 ^).. Solid residue was separated by filtration. In eluates, pH, F-, Cl-, SO2-, NO- were analysed by ionic chromatography (IC). After acidification (pH = 2 using HNO ) metals were measured using the same methods followed for digested samples.",
+            "parent_chunk_id": null,
+            "section_name": "2.4. Leaching test",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 6345,
+            "position_end": 6936,
+            "metadata": {
+              "chunk_id": "CHUNK_text_2.4. Leaching test_f0d338ec",
+              "doc_id": "text",
+              "title": "Chemical characterisation of spent rechargeable batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Chemical Characterisation of Spent Rechargeable Batteries/text.md",
+              "section_name": "2.4. Leaching test",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 6345,
+              "position_end": 6936,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_ph_2_0",
+          "name": "ph",
+          "type": "pH",
+          "value": 2.0,
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Chemical characterisation of spent rechargeable batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_2.4. Leaching test_f0d338ec",
+            "text": "## 2.4. Leaching test\nLeaching tests were performed according to European Standard Procedures (EN – 12457 – 2). All the seven sub-samples (reported in Fig. 1) were put in contact with distilled water in capped bottles. Liquid to solid ratio was 10/1 and the suspension was agitated by an overhead shaker (5 rpm) for 24 h at room temperature (20 ± 5 ^).. Solid residue was separated by filtration. In eluates, pH, F-, Cl-, SO2-, NO- were analysed by ionic chromatography (IC). After acidification (pH = 2 using HNO ) metals were measured using the same methods followed for digested samples.",
+            "parent_chunk_id": null,
+            "section_name": "2.4. Leaching test",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 6345,
+            "position_end": 6936,
+            "metadata": {
+              "chunk_id": "CHUNK_text_2.4. Leaching test_f0d338ec",
+              "doc_id": "text",
+              "title": "Chemical characterisation of spent rechargeable batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Chemical Characterisation of Spent Rechargeable Batteries/text.md",
+              "section_name": "2.4. Leaching test",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 6345,
+              "position_end": 6936,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "pH",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Al",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "After acidification (pH = 2 using HNO ) metals were measured using the same methods followed for digested samples.",
+          "properties": {
+            "property": "leaching",
+            "source_sample": "seven sub-samples",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C; acidification pH 2 with HNO3",
+            "measurement_method": "same methods followed for digested samples",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 5.0,
+                "unit": "°C",
+                "raw_text": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C"
+              },
+              {
+                "key": "ph",
+                "value": 2.0,
+                "unit": null,
+                "raw_text": "acidification pH 2 with HNO3"
+              }
+            ],
+            "condition_labels": [
+              "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C",
+              "acidification pH 2 with HNO3"
+            ],
+            "condition": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C; acidification pH 2 with HNO3",
+            "condition_ids": [
+              "CHUNK_text_2_4_Leaching_test_f0d338ec__cond_temperature_5_0_c",
+              "CHUNK_text_2_4_Leaching_test_f0d338ec__cond_ph_2_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Al",
+            "evidence_span": "After acidification (pH = 2 using HNO ) metals were measured using the same methods followed for digested samples.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "After acidification (pH = 2 using HNO ) metals were measured using the same methods followed for digested samples.",
+          "properties": {
+            "property": "leaching",
+            "source_sample": "seven sub-samples",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C; acidification pH 2 with HNO3",
+            "measurement_method": "same methods followed for digested samples",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 5.0,
+                "unit": "°C",
+                "raw_text": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C"
+              },
+              {
+                "key": "ph",
+                "value": 2.0,
+                "unit": null,
+                "raw_text": "acidification pH 2 with HNO3"
+              }
+            ],
+            "condition_labels": [
+              "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C",
+              "acidification pH 2 with HNO3"
+            ],
+            "condition": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C; acidification pH 2 with HNO3",
+            "condition_ids": [
+              "CHUNK_text_2_4_Leaching_test_f0d338ec__cond_temperature_5_0_c",
+              "CHUNK_text_2_4_Leaching_test_f0d338ec__cond_ph_2_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Ni",
+            "evidence_span": "After acidification (pH = 2 using HNO ) metals were measured using the same methods followed for digested samples.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_potassium",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_potassium",
+          "target_name": "K",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "After acidification (pH = 2 using HNO ) metals were measured using the same methods followed for digested samples.",
+          "properties": {
+            "property": "leaching",
+            "source_sample": "seven sub-samples",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C; acidification pH 2 with HNO3",
+            "measurement_method": "same methods followed for digested samples",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 5.0,
+                "unit": "°C",
+                "raw_text": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C"
+              },
+              {
+                "key": "ph",
+                "value": 2.0,
+                "unit": null,
+                "raw_text": "acidification pH 2 with HNO3"
+              }
+            ],
+            "condition_labels": [
+              "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C",
+              "acidification pH 2 with HNO3"
+            ],
+            "condition": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C; acidification pH 2 with HNO3",
+            "condition_ids": [
+              "CHUNK_text_2_4_Leaching_test_f0d338ec__cond_temperature_5_0_c",
+              "CHUNK_text_2_4_Leaching_test_f0d338ec__cond_ph_2_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "K",
+            "evidence_span": "After acidification (pH = 2 using HNO ) metals were measured using the same methods followed for digested samples.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "After acidification (pH = 2 using HNO ) metals were measured using the same methods followed for digested samples.",
+          "properties": {
+            "property": "leaching",
+            "source_sample": "seven sub-samples",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C; acidification pH 2 with HNO3",
+            "measurement_method": "same methods followed for digested samples",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 5.0,
+                "unit": "°C",
+                "raw_text": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C"
+              },
+              {
+                "key": "ph",
+                "value": 2.0,
+                "unit": null,
+                "raw_text": "acidification pH 2 with HNO3"
+              }
+            ],
+            "condition_labels": [
+              "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C",
+              "acidification pH 2 with HNO3"
+            ],
+            "condition": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C; acidification pH 2 with HNO3",
+            "condition_ids": [
+              "CHUNK_text_2_4_Leaching_test_f0d338ec__cond_temperature_5_0_c",
+              "CHUNK_text_2_4_Leaching_test_f0d338ec__cond_ph_2_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Co",
+            "evidence_span": "After acidification (pH = 2 using HNO ) metals were measured using the same methods followed for digested samples.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Tl",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Tl",
+          "target_name": "Tl",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "After acidification (pH = 2 using HNO ) metals were measured using the same methods followed for digested samples.",
+          "properties": {
+            "property": "leaching",
+            "source_sample": "seven sub-samples",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C; acidification pH 2 with HNO3",
+            "measurement_method": "same methods followed for digested samples",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 5.0,
+                "unit": "°C",
+                "raw_text": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C"
+              },
+              {
+                "key": "ph",
+                "value": 2.0,
+                "unit": null,
+                "raw_text": "acidification pH 2 with HNO3"
+              }
+            ],
+            "condition_labels": [
+              "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C",
+              "acidification pH 2 with HNO3"
+            ],
+            "condition": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C; acidification pH 2 with HNO3",
+            "condition_ids": [
+              "CHUNK_text_2_4_Leaching_test_f0d338ec__cond_temperature_5_0_c",
+              "CHUNK_text_2_4_Leaching_test_f0d338ec__cond_ph_2_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Tl",
+            "evidence_span": "After acidification (pH = 2 using HNO ) metals were measured using the same methods followed for digested samples.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "After acidification (pH = 2 using HNO ) metals were measured using the same methods followed for digested samples.",
+          "properties": {
+            "property": "leaching",
+            "source_sample": "seven sub-samples",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C; acidification pH 2 with HNO3",
+            "measurement_method": "same methods followed for digested samples",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 5.0,
+                "unit": "°C",
+                "raw_text": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C"
+              },
+              {
+                "key": "ph",
+                "value": 2.0,
+                "unit": null,
+                "raw_text": "acidification pH 2 with HNO3"
+              }
+            ],
+            "condition_labels": [
+              "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C",
+              "acidification pH 2 with HNO3"
+            ],
+            "condition": "distilled water, L/S 10/1, 5 rpm, 24 h, 20 ± 5 °C; acidification pH 2 with HNO3",
+            "condition_ids": [
+              "CHUNK_text_2_4_Leaching_test_f0d338ec__cond_temperature_5_0_c",
+              "CHUNK_text_2_4_Leaching_test_f0d338ec__cond_ph_2_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Li",
+            "evidence_span": "After acidification (pH = 2 using HNO ) metals were measured using the same methods followed for digested samples.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3. Results and discussion_80d08661",
+    "section_name": "3. Results and discussion",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.1.1. Weight loss_884c988c",
+    "section_name": "3.1.1. Weight loss",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 3,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_Ni_Cd_battery_CONTAINS_text_Material_electrolyte",
+          "source_id": "text_Product_Ni_Cd_battery",
+          "source_name": "Ni–Cd battery",
+          "target_id": "text_Material_electrolyte",
+          "target_name": "electrolyte",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The weight loss of Ni–Cd battery samples was 6.55% for the finer fraction (size <1 mm), 6.19% for the fraction 1 mm < U < 3 mm and 2.68% for the ferrous fraction, which could be ascribed to a partial loss of electrolyte solution (water from potassium hydroxide solution).",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "extra_qualifiers": "electrolyte solution described as water from potassium hydroxide solution",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni–Cd battery",
+            "target_name": "electrolyte",
+            "evidence_span": "The weight loss of Ni–Cd battery samples was 6.55% for the finer fraction (size <1 mm), 6.19% for the fraction 1 mm < U < 3 mm and 2.68% for the ferrous fraction, which could be ascribed to a partial loss of electrolyte solution (water from potassium hydroxide solution).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_electrolyte_CONTAINS_text_Material_water",
+          "source_id": "text_Material_electrolyte",
+          "source_name": "electrolyte",
+          "target_id": "text_Material_water",
+          "target_name": "water",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "a partial loss of electrolyte solution (water from potassium hydroxide solution)",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "electrolyte",
+            "target_name": "water",
+            "evidence_span": "a partial loss of electrolyte solution (water from potassium hydroxide solution)",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_electrolyte_CONTAINS_text_Material_potassium_hydroxide",
+          "source_id": "text_Material_electrolyte",
+          "source_name": "electrolyte",
+          "target_id": "text_Material_potassium_hydroxide",
+          "target_name": "potassium hydroxide",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "a partial loss of electrolyte solution (water from potassium hydroxide solution)",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "electrolyte",
+            "target_name": "potassium hydroxide",
+            "evidence_span": "a partial loss of electrolyte solution (water from potassium hydroxide solution)",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.1.2. Metal content_3d580709",
+    "section_name": "3.1.2. Metal content",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 19,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_Ni_Cd_battery_CONTAINS_text_Material_Cd",
+          "source_id": "text_Product_Ni_Cd_battery",
+          "source_name": "Ni–Cd battery",
+          "target_id": "text_Material_Cd",
+          "target_name": "Cd",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The finer fraction (size <1 mm) consists of 41% in weight both of Cd and Ni and about 3.4% of K.",
+          "properties": {
+            "property": "composition",
+            "value": 41,
+            "unit": "%",
+            "source_sample": "finer fraction (size <1 mm)",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni–Cd battery",
+            "target_name": "Cd",
+            "evidence_span": "The finer fraction (size <1 mm) consists of 41% in weight both of Cd and Ni and about 3.4% of K.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_Cd_battery_CONTAINS_text_Material_Ni",
+          "source_id": "text_Product_Ni_Cd_battery",
+          "source_name": "Ni–Cd battery",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The finer fraction (size <1 mm) consists of 41% in weight both of Cd and Ni and about 3.4% of K.",
+          "properties": {
+            "property": "composition",
+            "value": 41,
+            "unit": "%",
+            "source_sample": "finer fraction (size <1 mm)",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni–Cd battery",
+            "target_name": "Ni",
+            "evidence_span": "The finer fraction (size <1 mm) consists of 41% in weight both of Cd and Ni and about 3.4% of K.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_Cd_battery_CONTAINS_text_Material_potassium",
+          "source_id": "text_Product_Ni_Cd_battery",
+          "source_name": "Ni–Cd battery",
+          "target_id": "text_Material_potassium",
+          "target_name": "K",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The finer fraction (size <1 mm) consists of 41% in weight both of Cd and Ni and about 3.4% of K.",
+          "properties": {
+            "property": "composition",
+            "value": 3.4,
+            "unit": "%",
+            "source_sample": "finer fraction (size <1 mm)",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni–Cd battery",
+            "target_name": "K",
+            "evidence_span": "The finer fraction (size <1 mm) consists of 41% in weight both of Cd and Ni and about 3.4% of K.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_Cd_battery_CONTAINS_text_Material_Ni",
+          "source_id": "text_Product_Ni_Cd_battery",
+          "source_name": "Ni–Cd battery",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The fraction 1–3 mm contains 48% and 19% of Ni and Cd, respectively.",
+          "properties": {
+            "property": "composition",
+            "value": 48,
+            "unit": "%",
+            "source_sample": "fraction 1–3 mm",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni–Cd battery",
+            "target_name": "Ni",
+            "evidence_span": "The fraction 1–3 mm contains 48% and 19% of Ni and Cd, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_Cd_battery_CONTAINS_text_Material_Cd",
+          "source_id": "text_Product_Ni_Cd_battery",
+          "source_name": "Ni–Cd battery",
+          "target_id": "text_Material_Cd",
+          "target_name": "Cd",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The fraction 1–3 mm contains 48% and 19% of Ni and Cd, respectively.",
+          "properties": {
+            "property": "composition",
+            "value": 19,
+            "unit": "%",
+            "source_sample": "fraction 1–3 mm",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni–Cd battery",
+            "target_name": "Cd",
+            "evidence_span": "The fraction 1–3 mm contains 48% and 19% of Ni and Cd, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_Cd_battery_CONTAINS_text_Material_Sn",
+          "source_id": "text_Product_Ni_Cd_battery",
+          "source_name": "Ni–Cd battery",
+          "target_id": "text_Material_Sn",
+          "target_name": "Sn",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Furthermore, not negligible concentrations of Sn and Co (4.8% both), as well as of K and Tl (4.1% both), were found.",
+          "properties": {
+            "property": "composition",
+            "value": 4.8,
+            "unit": "%",
+            "source_sample": "fraction 1–3 mm",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni–Cd battery",
+            "target_name": "Sn",
+            "evidence_span": "Furthermore, not negligible concentrations of Sn and Co (4.8% both), as well as of K and Tl (4.1% both), were found.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_Cd_battery_CONTAINS_text_Material_Co",
+          "source_id": "text_Product_Ni_Cd_battery",
+          "source_name": "Ni–Cd battery",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Furthermore, not negligible concentrations of Sn and Co (4.8% both), as well as of K and Tl (4.1% both), were found.",
+          "properties": {
+            "property": "composition",
+            "value": 4.8,
+            "unit": "%",
+            "source_sample": "fraction 1–3 mm",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni–Cd battery",
+            "target_name": "Co",
+            "evidence_span": "Furthermore, not negligible concentrations of Sn and Co (4.8% both), as well as of K and Tl (4.1% both), were found.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_Cd_battery_CONTAINS_text_Material_potassium",
+          "source_id": "text_Product_Ni_Cd_battery",
+          "source_name": "Ni–Cd battery",
+          "target_id": "text_Material_potassium",
+          "target_name": "K",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Furthermore, not negligible concentrations of Sn and Co (4.8% both), as well as of K and Tl (4.1% both), were found.",
+          "properties": {
+            "property": "composition",
+            "value": 4.1,
+            "unit": "%",
+            "source_sample": "fraction 1–3 mm",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni–Cd battery",
+            "target_name": "K",
+            "evidence_span": "Furthermore, not negligible concentrations of Sn and Co (4.8% both), as well as of K and Tl (4.1% both), were found.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_Cd_battery_CONTAINS_text_Material_Tl",
+          "source_id": "text_Product_Ni_Cd_battery",
+          "source_name": "Ni–Cd battery",
+          "target_id": "text_Material_Tl",
+          "target_name": "Tl",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Furthermore, not negligible concentrations of Sn and Co (4.8% both), as well as of K and Tl (4.1% both), were found.",
+          "properties": {
+            "property": "composition",
+            "value": 4.1,
+            "unit": "%",
+            "source_sample": "fraction 1–3 mm",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni–Cd battery",
+            "target_name": "Tl",
+            "evidence_span": "Furthermore, not negligible concentrations of Sn and Co (4.8% both), as well as of K and Tl (4.1% both), were found.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_positive_electrode_CONTAINS_text_Material_nickel_cobalt_hydroxide",
+          "source_id": "text_Component_positive_electrode",
+          "source_name": "positive electrode",
+          "target_id": "text_Material_nickel_cobalt_hydroxide",
+          "target_name": "nickel cobalt hydroxide",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "the positive electrode (formed by nickel and cobalt hydroxides)",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "positive electrode",
+            "target_name": "nickel cobalt hydroxide",
+            "evidence_span": "the positive electrode (formed by nickel and cobalt hydroxides)",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_negative_electrode_CONTAINS_text_Material_cadmium_hydroxide",
+          "source_id": "text_Component_negative_electrode",
+          "source_name": "negative electrode",
+          "target_id": "text_Material_cadmium_hydroxide",
+          "target_name": "cadmium hydroxide",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "the negative one (constituted by cadmium hydroxide and substrate of nickel)",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "negative electrode",
+            "target_name": "cadmium hydroxide",
+            "evidence_span": "the negative one (constituted by cadmium hydroxide and substrate of nickel)",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_negative_electrode_CONTAINS_text_Material_Ni",
+          "source_id": "text_Component_negative_electrode",
+          "source_name": "negative electrode",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "the negative one (constituted by cadmium hydroxide and substrate of nickel)",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "negative electrode",
+            "target_name": "Ni",
+            "evidence_span": "the negative one (constituted by cadmium hydroxide and substrate of nickel)",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_ferrous_fraction_CONTAINS_text_Material_Fe",
+          "source_id": "text_Component_ferrous_fraction",
+          "source_name": "ferrous fraction",
+          "target_id": "text_Material_Fe",
+          "target_name": "Fe",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The composition of ferrous fraction, apart from Fe (75%), mainly consists of a not negligible fraction of Ni and Cd",
+          "properties": {
+            "property": "composition",
+            "value": 75,
+            "unit": "%",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "ferrous fraction",
+            "target_name": "Fe",
+            "evidence_span": "The composition of ferrous fraction, apart from Fe (75%), mainly consists of a not negligible fraction of Ni and Cd",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_ferrous_fraction_CONTAINS_text_Material_Ni",
+          "source_id": "text_Component_ferrous_fraction",
+          "source_name": "ferrous fraction",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The composition of ferrous fraction, apart from Fe (75%), mainly consists of a not negligible fraction of Ni and Cd",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "ferrous fraction",
+            "target_name": "Ni",
+            "evidence_span": "The composition of ferrous fraction, apart from Fe (75%), mainly consists of a not negligible fraction of Ni and Cd",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_ferrous_fraction_CONTAINS_text_Material_Cd",
+          "source_id": "text_Component_ferrous_fraction",
+          "source_name": "ferrous fraction",
+          "target_id": "text_Material_Cd",
+          "target_name": "Cd",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The composition of ferrous fraction, apart from Fe (75%), mainly consists of a not negligible fraction of Ni and Cd",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "ferrous fraction",
+            "target_name": "Cd",
+            "evidence_span": "The composition of ferrous fraction, apart from Fe (75%), mainly consists of a not negligible fraction of Ni and Cd",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "about 390 g Ni, 330 g Cd, and 20 g Co could be recovered from each kg of powdered material from mixed Ni–Cd spent batteries",
+          "properties": {
+            "property": "recovery",
+            "value": 390,
+            "unit": "g",
+            "source_sample": "powdered material from mixed Ni–Cd spent batteries",
+            "study_scope": "current_study",
+            "output_role": "recovered_material",
+            "recovered_invalid_source_name": "Ni–Cd battery",
+            "binding_basis": "unique_supported",
+            "binding_score": 0.35,
+            "binding_factors": {
+              "cooccurrence": 0.0,
+              "identity_match": 0.0,
+              "measure_match": 1.0,
+              "scope_compatible": 1.0
+            },
+            "recovery_reason": "quantitative HAS_OUTPUT used its explicit source_sample as the relation source; reanchored to a process by evidence scoring (unique_supported)",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Ni",
+            "evidence_span": "about 390 g Ni, 330 g Cd, and 20 g Co could be recovered from each kg of powdered material from mixed Ni–Cd spent batteries",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Cd",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Cd",
+          "target_name": "Cd",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "about 390 g Ni, 330 g Cd, and 20 g Co could be recovered from each kg of powdered material from mixed Ni–Cd spent batteries",
+          "properties": {
+            "property": "recovery",
+            "value": 330,
+            "unit": "g",
+            "source_sample": "powdered material from mixed Ni–Cd spent batteries",
+            "study_scope": "current_study",
+            "output_role": "recovered_material",
+            "recovered_invalid_source_name": "Ni–Cd battery",
+            "binding_basis": "unique_supported",
+            "binding_score": 0.35,
+            "binding_factors": {
+              "cooccurrence": 0.0,
+              "identity_match": 0.0,
+              "measure_match": 1.0,
+              "scope_compatible": 1.0
+            },
+            "recovery_reason": "quantitative HAS_OUTPUT used its explicit source_sample as the relation source; reanchored to a process by evidence scoring (unique_supported)",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Cd",
+            "evidence_span": "about 390 g Ni, 330 g Cd, and 20 g Co could be recovered from each kg of powdered material from mixed Ni–Cd spent batteries",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "about 390 g Ni, 330 g Cd, and 20 g Co could be recovered from each kg of powdered material from mixed Ni–Cd spent batteries",
+          "properties": {
+            "property": "recovery",
+            "value": 20,
+            "unit": "g",
+            "source_sample": "powdered material from mixed Ni–Cd spent batteries",
+            "study_scope": "current_study",
+            "output_role": "recovered_material",
+            "recovered_invalid_source_name": "Ni–Cd battery",
+            "binding_basis": "unique_supported",
+            "binding_score": 0.35,
+            "binding_factors": {
+              "cooccurrence": 0.0,
+              "identity_match": 0.0,
+              "measure_match": 1.0,
+              "scope_compatible": 1.0
+            },
+            "recovery_reason": "quantitative HAS_OUTPUT used its explicit source_sample as the relation source; reanchored to a process by evidence scoring (unique_supported)",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Co",
+            "evidence_span": "about 390 g Ni, 330 g Cd, and 20 g Co could be recovered from each kg of powdered material from mixed Ni–Cd spent batteries",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Fe",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Fe",
+          "target_name": "Fe",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "besides 110 g of Fe (which was present mainly in the ferrous fraction: 92%)",
+          "properties": {
+            "property": "recovery",
+            "value": 110,
+            "unit": "g",
+            "source_sample": "powdered material from mixed Ni–Cd spent batteries",
+            "study_scope": "current_study",
+            "output_role": "recovered_material",
+            "recovered_invalid_source_name": "Ni–Cd battery",
+            "binding_basis": "unique_supported",
+            "binding_score": 0.35,
+            "binding_factors": {
+              "cooccurrence": 0.0,
+              "identity_match": 0.0,
+              "measure_match": 1.0,
+              "scope_compatible": 1.0
+            },
+            "recovery_reason": "quantitative HAS_OUTPUT used its explicit source_sample as the relation source; reanchored to a process by evidence scoring (unique_supported)",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Fe",
+            "evidence_span": "besides 110 g of Fe (which was present mainly in the ferrous fraction: 92%)",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.2.1. Weight loss_654d038f",
+    "section_name": "3.2.1. Weight loss",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 2,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_Ni_MH_battery_CONTAINS_text_Material_water",
+          "source_id": "text_Product_Ni_MH_battery",
+          "source_name": "Ni-MH battery",
+          "target_id": "text_Material_water",
+          "target_name": "water",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Volatile component can be, as well as in Ni–Cd batteries, ascribed to the water content present in the electrolyte aqueous solution, mainly constituted of diluted potassium hydroxide.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "extra_qualifiers": "volatile component ascribed to water content in electrolyte aqueous solution",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni-MH battery",
+            "target_name": "water",
+            "evidence_span": "Volatile component can be, as well as in Ni–Cd batteries, ascribed to the water content present in the electrolyte aqueous solution, mainly constituted of diluted potassium hydroxide.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_MH_battery_CONTAINS_text_Material_potassium_hydroxide",
+          "source_id": "text_Product_Ni_MH_battery",
+          "source_name": "Ni-MH battery",
+          "target_id": "text_Material_potassium_hydroxide",
+          "target_name": "potassium hydroxide",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Volatile component can be, as well as in Ni–Cd batteries, ascribed to the water content present in the electrolyte aqueous solution, mainly constituted of diluted potassium hydroxide.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "extra_qualifiers": "electrolyte aqueous solution mainly constituted of diluted potassium hydroxide",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni-MH battery",
+            "target_name": "potassium hydroxide",
+            "evidence_span": "Volatile component can be, as well as in Ni–Cd batteries, ascribed to the water content present in the electrolyte aqueous solution, mainly constituted of diluted potassium hydroxide.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.2.2. Metal content_ae77803a",
+    "section_name": "3.2.2. Metal content",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 16,
+      "condition_count": 3,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_concentration_80_0",
+          "name": "concentration",
+          "type": "Concentration",
+          "value": 80.0,
+          "unit": "%",
+          "source": {
+            "doc_id": "text",
+            "title": "Chemical characterisation of spent rechargeable batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.2.2. Metal content_ae77803a",
+            "text": "## 3.2.2. Metal content\nFor the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K. Also the 1–3 mm fraction appeared mainly enriched in these same metals, as well as in Zn.\nThese data reflect clearly the composition of the electrodes of this type of battery. The cathode, the same used for the Ni–Cd batteries, is constituted of nickel and cobalt hydroxide. Comparing the concentration of these two metals in the fraction 1 mm < U < 3 mm of the first two kinds of batteries examined, it is possible to note a consistency: Ni / CoNi-Cd = 10 and Ni / CoNi-MH = 10.3. This means that for both kinds of batteries, in this fraction a higher concentration of cathode elements results.\nOn the other hand, negative electrode is made up mainly of nickel (high quantities in the fine fraction <1 mm) and rare earth (Pietrelli et al., 2005). This result confirms what was inferred for\nNi–Cd batteries – that the cathode tends to be reduced into finer particles, compared to the anode, during the milling process.\nPotassium derives from electrolyte, whereas iron could derive from the metallic alloys, used for the anode.\nThe values obtained agree well with other literature data (Rabah et al., 2008: Ni: 87%, Cd: 9–10%). Considering these results, it can be observed that about 630 g Ni, 78 g Co and 40 g Fe (respectively, 80%, 84% and 67% of which is in the finest fraction) could be recovered from 1 kg of mixed Ni-MH spent batteries. It should be noted that this study did not analyse a number of rare earth elements that might have been in these batteries at low concentrations.",
+            "parent_chunk_id": null,
+            "section_name": "3.2.2. Metal content",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 10718,
+            "position_end": 12385,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.2.2. Metal content_ae77803a",
+              "doc_id": "text",
+              "title": "Chemical characterisation of spent rechargeable batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Chemical Characterisation of Spent Rechargeable Batteries/text.md",
+              "section_name": "3.2.2. Metal content",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 10718,
+              "position_end": 12385,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Concentration",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_concentration_84_0",
+          "name": "concentration",
+          "type": "Concentration",
+          "value": 84.0,
+          "unit": "%",
+          "source": {
+            "doc_id": "text",
+            "title": "Chemical characterisation of spent rechargeable batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.2.2. Metal content_ae77803a",
+            "text": "## 3.2.2. Metal content\nFor the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K. Also the 1–3 mm fraction appeared mainly enriched in these same metals, as well as in Zn.\nThese data reflect clearly the composition of the electrodes of this type of battery. The cathode, the same used for the Ni–Cd batteries, is constituted of nickel and cobalt hydroxide. Comparing the concentration of these two metals in the fraction 1 mm < U < 3 mm of the first two kinds of batteries examined, it is possible to note a consistency: Ni / CoNi-Cd = 10 and Ni / CoNi-MH = 10.3. This means that for both kinds of batteries, in this fraction a higher concentration of cathode elements results.\nOn the other hand, negative electrode is made up mainly of nickel (high quantities in the fine fraction <1 mm) and rare earth (Pietrelli et al., 2005). This result confirms what was inferred for\nNi–Cd batteries – that the cathode tends to be reduced into finer particles, compared to the anode, during the milling process.\nPotassium derives from electrolyte, whereas iron could derive from the metallic alloys, used for the anode.\nThe values obtained agree well with other literature data (Rabah et al., 2008: Ni: 87%, Cd: 9–10%). Considering these results, it can be observed that about 630 g Ni, 78 g Co and 40 g Fe (respectively, 80%, 84% and 67% of which is in the finest fraction) could be recovered from 1 kg of mixed Ni-MH spent batteries. It should be noted that this study did not analyse a number of rare earth elements that might have been in these batteries at low concentrations.",
+            "parent_chunk_id": null,
+            "section_name": "3.2.2. Metal content",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 10718,
+            "position_end": 12385,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.2.2. Metal content_ae77803a",
+              "doc_id": "text",
+              "title": "Chemical characterisation of spent rechargeable batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Chemical Characterisation of Spent Rechargeable Batteries/text.md",
+              "section_name": "3.2.2. Metal content",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 10718,
+              "position_end": 12385,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Concentration",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_concentration_67_0",
+          "name": "concentration",
+          "type": "Concentration",
+          "value": 67.0,
+          "unit": "%",
+          "source": {
+            "doc_id": "text",
+            "title": "Chemical characterisation of spent rechargeable batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.2.2. Metal content_ae77803a",
+            "text": "## 3.2.2. Metal content\nFor the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K. Also the 1–3 mm fraction appeared mainly enriched in these same metals, as well as in Zn.\nThese data reflect clearly the composition of the electrodes of this type of battery. The cathode, the same used for the Ni–Cd batteries, is constituted of nickel and cobalt hydroxide. Comparing the concentration of these two metals in the fraction 1 mm < U < 3 mm of the first two kinds of batteries examined, it is possible to note a consistency: Ni / CoNi-Cd = 10 and Ni / CoNi-MH = 10.3. This means that for both kinds of batteries, in this fraction a higher concentration of cathode elements results.\nOn the other hand, negative electrode is made up mainly of nickel (high quantities in the fine fraction <1 mm) and rare earth (Pietrelli et al., 2005). This result confirms what was inferred for\nNi–Cd batteries – that the cathode tends to be reduced into finer particles, compared to the anode, during the milling process.\nPotassium derives from electrolyte, whereas iron could derive from the metallic alloys, used for the anode.\nThe values obtained agree well with other literature data (Rabah et al., 2008: Ni: 87%, Cd: 9–10%). Considering these results, it can be observed that about 630 g Ni, 78 g Co and 40 g Fe (respectively, 80%, 84% and 67% of which is in the finest fraction) could be recovered from 1 kg of mixed Ni-MH spent batteries. It should be noted that this study did not analyse a number of rare earth elements that might have been in these batteries at low concentrations.",
+            "parent_chunk_id": null,
+            "section_name": "3.2.2. Metal content",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 10718,
+            "position_end": 12385,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.2.2. Metal content_ae77803a",
+              "doc_id": "text",
+              "title": "Chemical characterisation of spent rechargeable batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Chemical Characterisation of Spent Rechargeable Batteries/text.md",
+              "section_name": "3.2.2. Metal content",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 10718,
+              "position_end": 12385,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Concentration",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_Ni_MH_battery_CONTAINS_text_Material_Ni",
+          "source_id": "text_Product_Ni_MH_battery",
+          "source_name": "Ni-MH battery",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "For the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K.",
+          "properties": {
+            "property": "composition",
+            "value": 64,
+            "unit": "%",
+            "source_sample": "finest fraction",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni-MH battery",
+            "target_name": "Ni",
+            "evidence_span": "For the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_MH_battery_CONTAINS_text_Material_Co",
+          "source_id": "text_Product_Ni_MH_battery",
+          "source_name": "Ni-MH battery",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "For the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "finest fraction",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni-MH battery",
+            "target_name": "Co",
+            "evidence_span": "For the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_MH_battery_CONTAINS_text_Material_Tl",
+          "source_id": "text_Product_Ni_MH_battery",
+          "source_name": "Ni-MH battery",
+          "target_id": "text_Material_Tl",
+          "target_name": "Tl",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "For the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "finest fraction",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni-MH battery",
+            "target_name": "Tl",
+            "evidence_span": "For the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_MH_battery_CONTAINS_text_Material_Sn",
+          "source_id": "text_Product_Ni_MH_battery",
+          "source_name": "Ni-MH battery",
+          "target_id": "text_Material_Sn",
+          "target_name": "Sn",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "For the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "finest fraction",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni-MH battery",
+            "target_name": "Sn",
+            "evidence_span": "For the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_MH_battery_CONTAINS_text_Material_Mn",
+          "source_id": "text_Product_Ni_MH_battery",
+          "source_name": "Ni-MH battery",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "For the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "finest fraction",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni-MH battery",
+            "target_name": "Mn",
+            "evidence_span": "For the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_MH_battery_CONTAINS_text_Material_Fe",
+          "source_id": "text_Product_Ni_MH_battery",
+          "source_name": "Ni-MH battery",
+          "target_id": "text_Material_Fe",
+          "target_name": "Fe",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "For the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "finest fraction",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni-MH battery",
+            "target_name": "Fe",
+            "evidence_span": "For the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_MH_battery_CONTAINS_text_Material_potassium",
+          "source_id": "text_Product_Ni_MH_battery",
+          "source_name": "Ni-MH battery",
+          "target_id": "text_Material_potassium",
+          "target_name": "K",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "For the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "finest fraction",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni-MH battery",
+            "target_name": "K",
+            "evidence_span": "For the finest fraction, data show a predominance of Ni (that constitutes about 64% in weight), and significant amounts of Co, Tl, Sn, Mn, Fe and K.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_MH_battery_CONTAINS_text_Material_Zn",
+          "source_id": "text_Product_Ni_MH_battery",
+          "source_name": "Ni-MH battery",
+          "target_id": "text_Material_Zn",
+          "target_name": "Zn",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Also the 1–3 mm fraction appeared mainly enriched in these same metals, as well as in Zn.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "1–3 mm fraction",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni-MH battery",
+            "target_name": "Zn",
+            "evidence_span": "Also the 1–3 mm fraction appeared mainly enriched in these same metals, as well as in Zn.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Material_nickel_cobalt_hydroxide",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Material_nickel_cobalt_hydroxide",
+          "target_name": "nickel cobalt hydroxide",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The cathode, the same used for the Ni–Cd batteries, is constituted of nickel and cobalt hydroxide.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "nickel cobalt hydroxide",
+            "evidence_span": "The cathode, the same used for the Ni–Cd batteries, is constituted of nickel and cobalt hydroxide.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_negative_electrode_CONTAINS_text_Material_Ni",
+          "source_id": "text_Component_negative_electrode",
+          "source_name": "negative electrode",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "negative electrode is made up mainly of nickel (high quantities in the fine fraction <1 mm) and rare earth (Pietrelli et al., 2005).",
+          "properties": {
+            "property": "composition",
+            "source_sample": "fine fraction <1 mm",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "negative electrode",
+            "target_name": "Ni",
+            "evidence_span": "negative electrode is made up mainly of nickel (high quantities in the fine fraction <1 mm) and rare earth (Pietrelli et al., 2005).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_negative_electrode_CONTAINS_text_Material_rare_earth",
+          "source_id": "text_Component_negative_electrode",
+          "source_name": "negative electrode",
+          "target_id": "text_Material_rare_earth",
+          "target_name": "rare earth",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "negative electrode is made up mainly of nickel (high quantities in the fine fraction <1 mm) and rare earth (Pietrelli et al., 2005).",
+          "properties": {
+            "property": "composition",
+            "source_sample": "fine fraction <1 mm",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "negative electrode",
+            "target_name": "rare earth",
+            "evidence_span": "negative electrode is made up mainly of nickel (high quantities in the fine fraction <1 mm) and rare earth (Pietrelli et al., 2005).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_electrolyte_CONTAINS_text_Material_potassium",
+          "source_id": "text_Material_electrolyte",
+          "source_name": "electrolyte",
+          "target_id": "text_Material_potassium",
+          "target_name": "K",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Potassium derives from electrolyte, whereas iron could derive from the metallic alloys, used for the anode.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "electrolyte",
+            "target_name": "K",
+            "evidence_span": "Potassium derives from electrolyte, whereas iron could derive from the metallic alloys, used for the anode.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_metallic_alloy_CONTAINS_text_Material_Fe",
+          "source_id": "text_Material_metallic_alloy",
+          "source_name": "metallic alloy",
+          "target_id": "text_Material_Fe",
+          "target_name": "Fe",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Potassium derives from electrolyte, whereas iron could derive from the metallic alloys, used for the anode.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "metallic alloy",
+            "target_name": "Fe",
+            "evidence_span": "Potassium derives from electrolyte, whereas iron could derive from the metallic alloys, used for the anode.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "about 630 g Ni, 78 g Co and 40 g Fe (respectively, 80%, 84% and 67% of which is in the finest fraction) could be recovered from 1 kg of mixed Ni-MH spent batteries.",
+          "properties": {
+            "property": "recovery",
+            "value": 630,
+            "unit": "g",
+            "source_sample": "1 kg of mixed Ni-MH spent batteries",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "80% of which is in the finest fraction",
+            "recovered_invalid_source_name": "Ni-MH battery",
+            "binding_basis": "unique_supported",
+            "binding_score": 0.35,
+            "binding_factors": {
+              "cooccurrence": 0.0,
+              "identity_match": 0.0,
+              "measure_match": 1.0,
+              "scope_compatible": 1.0
+            },
+            "recovery_reason": "quantitative HAS_OUTPUT used its explicit source_sample as the relation source; reanchored to a process by evidence scoring (unique_supported)",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": 80.0,
+                "unit": "%",
+                "raw_text": "80% of which is in the finest fraction"
+              }
+            ],
+            "condition_labels": [
+              "80% of which is in the finest fraction"
+            ],
+            "condition": "80% of which is in the finest fraction",
+            "condition_ids": [
+              "CHUNK_text_3_2_2_Metal_content_ae77803a__cond_concentration_80_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Ni",
+            "evidence_span": "about 630 g Ni, 78 g Co and 40 g Fe (respectively, 80%, 84% and 67% of which is in the finest fraction) could be recovered from 1 kg of mixed Ni-MH spent batteries.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "about 630 g Ni, 78 g Co and 40 g Fe (respectively, 80%, 84% and 67% of which is in the finest fraction) could be recovered from 1 kg of mixed Ni-MH spent batteries.",
+          "properties": {
+            "property": "recovery",
+            "value": 78,
+            "unit": "g",
+            "source_sample": "1 kg of mixed Ni-MH spent batteries",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "84% of which is in the finest fraction",
+            "recovered_invalid_source_name": "Ni-MH battery",
+            "binding_basis": "unique_supported",
+            "binding_score": 0.35,
+            "binding_factors": {
+              "cooccurrence": 0.0,
+              "identity_match": 0.0,
+              "measure_match": 1.0,
+              "scope_compatible": 1.0
+            },
+            "recovery_reason": "quantitative HAS_OUTPUT used its explicit source_sample as the relation source; reanchored to a process by evidence scoring (unique_supported)",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": 84.0,
+                "unit": "%",
+                "raw_text": "84% of which is in the finest fraction"
+              }
+            ],
+            "condition_labels": [
+              "84% of which is in the finest fraction"
+            ],
+            "condition": "84% of which is in the finest fraction",
+            "condition_ids": [
+              "CHUNK_text_3_2_2_Metal_content_ae77803a__cond_concentration_84_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Co",
+            "evidence_span": "about 630 g Ni, 78 g Co and 40 g Fe (respectively, 80%, 84% and 67% of which is in the finest fraction) could be recovered from 1 kg of mixed Ni-MH spent batteries.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Fe",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Fe",
+          "target_name": "Fe",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "about 630 g Ni, 78 g Co and 40 g Fe (respectively, 80%, 84% and 67% of which is in the finest fraction) could be recovered from 1 kg of mixed Ni-MH spent batteries.",
+          "properties": {
+            "property": "recovery",
+            "value": 40,
+            "unit": "g",
+            "source_sample": "1 kg of mixed Ni-MH spent batteries",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "67% of which is in the finest fraction",
+            "recovered_invalid_source_name": "Ni-MH battery",
+            "binding_basis": "unique_supported",
+            "binding_score": 0.35,
+            "binding_factors": {
+              "cooccurrence": 0.0,
+              "identity_match": 0.0,
+              "measure_match": 1.0,
+              "scope_compatible": 1.0
+            },
+            "recovery_reason": "quantitative HAS_OUTPUT used its explicit source_sample as the relation source; reanchored to a process by evidence scoring (unique_supported)",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": 67.0,
+                "unit": "%",
+                "raw_text": "67% of which is in the finest fraction"
+              }
+            ],
+            "condition_labels": [
+              "67% of which is in the finest fraction"
+            ],
+            "condition": "67% of which is in the finest fraction",
+            "condition_ids": [
+              "CHUNK_text_3_2_2_Metal_content_ae77803a__cond_concentration_67_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Fe",
+            "evidence_span": "about 630 g Ni, 78 g Co and 40 g Fe (respectively, 80%, 84% and 67% of which is in the finest fraction) could be recovered from 1 kg of mixed Ni-MH spent batteries.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.3.1. Weight loss_b73004df",
+    "section_name": "3.3.1. Weight loss",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 3,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_electrolyte",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Material_electrolyte",
+          "target_name": "electrolyte",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "These losses can be ascribed to volatile compounds in the electrolyte (as tetrahydrofuran and 1,2-dimethoxyethane)",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "electrolyte",
+            "evidence_span": "These losses can be ascribed to volatile compounds in the electrolyte (as tetrahydrofuran and 1,2-dimethoxyethane)",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_electrolyte_CONTAINS_text_Material_tetrahydrofuran",
+          "source_id": "text_Material_electrolyte",
+          "source_name": "electrolyte",
+          "target_id": "text_Material_tetrahydrofuran",
+          "target_name": "tetrahydrofuran",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "These losses can be ascribed to volatile compounds in the electrolyte (as tetrahydrofuran and 1,2-dimethoxyethane)",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "electrolyte",
+            "target_name": "tetrahydrofuran",
+            "evidence_span": "These losses can be ascribed to volatile compounds in the electrolyte (as tetrahydrofuran and 1,2-dimethoxyethane)",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_electrolyte_CONTAINS_text_Material_1_2_dimethoxyethane",
+          "source_id": "text_Material_electrolyte",
+          "source_name": "electrolyte",
+          "target_id": "text_Material_1_2_dimethoxyethane",
+          "target_name": "1,2-dimethoxyethane",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "These losses can be ascribed to volatile compounds in the electrolyte (as tetrahydrofuran and 1,2-dimethoxyethane)",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "electrolyte",
+            "target_name": "1,2-dimethoxyethane",
+            "evidence_span": "These losses can be ascribed to volatile compounds in the electrolyte (as tetrahydrofuran and 1,2-dimethoxyethane)",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.3.2. Metal content_9e0c739c",
+    "section_name": "3.3.2. Metal content",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 10,
+      "condition_count": 3,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_concentration_86_0",
+          "name": "concentration",
+          "type": "Concentration",
+          "value": 86.0,
+          "unit": "%",
+          "source": {
+            "doc_id": "text",
+            "title": "Chemical characterisation of spent rechargeable batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.3.2. Metal content_9e0c739c",
+            "text": "## 3.3.2. Metal content\nFor this type of battery, the two fractions seem to be quite similar: they contain high quantities of Co, Ni and, to a lesser extent, Li.\nThe 12% copper in the 1–3 mm fraction can be ascribed to wires and connectors.\nAssuming the composition of the positive electrode in Li-ion batteries is LiCoO, the concentrations recorded are typical of the active material. In addition, the ratios between molecular weight and concentrations in the two fractions are similar: M WCo / MWLi = 8.5; Co / Li< 1 m _ f r a c t = 8; Co / Li1 - 3 m _ f r a c t = 8.\nThe values obtained agree well with other literature data (Shin et al., 2005: Co: 22–28%, Li: 2–3%, Ni: about 1%).\nConsidering these results, it can be observed that about 250 g Co, 110 g Ni, 31 g Li and 120 g Cu (respectively, 86%, 84%, 45% and 86% of which referring to the finest fraction) could be recovered from 1 kg of material from mixed Li-ion spent batteries.\nThe significant percentage of non metallic (not determined) compounds can be mainly ascribed to the presence of graphite anode and other materials, as carbonates and polymers used in this kind of batteries.\nAs for the previous types of batteries, also in this case, Pb and Hg concentrations resulted below LQ (limit of quantification), which can be considered evidence of effective separation of other batteries.",
+            "parent_chunk_id": null,
+            "section_name": "3.3.2. Metal content",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 12737,
+            "position_end": 14095,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.3.2. Metal content_9e0c739c",
+              "doc_id": "text",
+              "title": "Chemical characterisation of spent rechargeable batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Chemical Characterisation of Spent Rechargeable Batteries/text.md",
+              "section_name": "3.3.2. Metal content",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 12737,
+              "position_end": 14095,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Concentration",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_concentration_84_0",
+          "name": "concentration",
+          "type": "Concentration",
+          "value": 84.0,
+          "unit": "%",
+          "source": {
+            "doc_id": "text",
+            "title": "Chemical characterisation of spent rechargeable batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.3.2. Metal content_9e0c739c",
+            "text": "## 3.3.2. Metal content\nFor this type of battery, the two fractions seem to be quite similar: they contain high quantities of Co, Ni and, to a lesser extent, Li.\nThe 12% copper in the 1–3 mm fraction can be ascribed to wires and connectors.\nAssuming the composition of the positive electrode in Li-ion batteries is LiCoO, the concentrations recorded are typical of the active material. In addition, the ratios between molecular weight and concentrations in the two fractions are similar: M WCo / MWLi = 8.5; Co / Li< 1 m _ f r a c t = 8; Co / Li1 - 3 m _ f r a c t = 8.\nThe values obtained agree well with other literature data (Shin et al., 2005: Co: 22–28%, Li: 2–3%, Ni: about 1%).\nConsidering these results, it can be observed that about 250 g Co, 110 g Ni, 31 g Li and 120 g Cu (respectively, 86%, 84%, 45% and 86% of which referring to the finest fraction) could be recovered from 1 kg of material from mixed Li-ion spent batteries.\nThe significant percentage of non metallic (not determined) compounds can be mainly ascribed to the presence of graphite anode and other materials, as carbonates and polymers used in this kind of batteries.\nAs for the previous types of batteries, also in this case, Pb and Hg concentrations resulted below LQ (limit of quantification), which can be considered evidence of effective separation of other batteries.",
+            "parent_chunk_id": null,
+            "section_name": "3.3.2. Metal content",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 12737,
+            "position_end": 14095,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.3.2. Metal content_9e0c739c",
+              "doc_id": "text",
+              "title": "Chemical characterisation of spent rechargeable batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Chemical Characterisation of Spent Rechargeable Batteries/text.md",
+              "section_name": "3.3.2. Metal content",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 12737,
+              "position_end": 14095,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Concentration",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_concentration_45_0",
+          "name": "concentration",
+          "type": "Concentration",
+          "value": 45.0,
+          "unit": "%",
+          "source": {
+            "doc_id": "text",
+            "title": "Chemical characterisation of spent rechargeable batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.3.2. Metal content_9e0c739c",
+            "text": "## 3.3.2. Metal content\nFor this type of battery, the two fractions seem to be quite similar: they contain high quantities of Co, Ni and, to a lesser extent, Li.\nThe 12% copper in the 1–3 mm fraction can be ascribed to wires and connectors.\nAssuming the composition of the positive electrode in Li-ion batteries is LiCoO, the concentrations recorded are typical of the active material. In addition, the ratios between molecular weight and concentrations in the two fractions are similar: M WCo / MWLi = 8.5; Co / Li< 1 m _ f r a c t = 8; Co / Li1 - 3 m _ f r a c t = 8.\nThe values obtained agree well with other literature data (Shin et al., 2005: Co: 22–28%, Li: 2–3%, Ni: about 1%).\nConsidering these results, it can be observed that about 250 g Co, 110 g Ni, 31 g Li and 120 g Cu (respectively, 86%, 84%, 45% and 86% of which referring to the finest fraction) could be recovered from 1 kg of material from mixed Li-ion spent batteries.\nThe significant percentage of non metallic (not determined) compounds can be mainly ascribed to the presence of graphite anode and other materials, as carbonates and polymers used in this kind of batteries.\nAs for the previous types of batteries, also in this case, Pb and Hg concentrations resulted below LQ (limit of quantification), which can be considered evidence of effective separation of other batteries.",
+            "parent_chunk_id": null,
+            "section_name": "3.3.2. Metal content",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 12737,
+            "position_end": 14095,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.3.2. Metal content_9e0c739c",
+              "doc_id": "text",
+              "title": "Chemical characterisation of spent rechargeable batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Chemical Characterisation of Spent Rechargeable Batteries/text.md",
+              "section_name": "3.3.2. Metal content",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 12737,
+              "position_end": 14095,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Concentration",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Co",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "they contain high quantities of Co, Ni and, to a lesser extent, Li.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "Co",
+            "evidence_span": "they contain high quantities of Co, Ni and, to a lesser extent, Li.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Ni",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "they contain high quantities of Co, Ni and, to a lesser extent, Li.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "Ni",
+            "evidence_span": "they contain high quantities of Co, Ni and, to a lesser extent, Li.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Li",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "they contain high quantities of Co, Ni and, to a lesser extent, Li.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "Li",
+            "evidence_span": "they contain high quantities of Co, Ni and, to a lesser extent, Li.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Cu",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Material_Cu",
+          "target_name": "Cu",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The 12% copper in the 1–3 mm fraction can be ascribed to wires and connectors.",
+          "properties": {
+            "property": "composition",
+            "value": 12,
+            "unit": "%",
+            "source_sample": "1–3 mm fraction",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "Cu",
+            "evidence_span": "The 12% copper in the 1–3 mm fraction can be ascribed to wires and connectors.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_positive_electrode_CONTAINS_text_Material_LiCoO2",
+          "source_id": "text_Component_positive_electrode",
+          "source_name": "positive electrode",
+          "target_id": "text_Material_LiCoO2",
+          "target_name": "LiCoO2",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Assuming the composition of the positive electrode in Li-ion batteries is LiCoO, the concentrations recorded are typical of the active material.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "positive electrode",
+            "target_name": "LiCoO2",
+            "evidence_span": "Assuming the composition of the positive electrode in Li-ion batteries is LiCoO, the concentrations recorded are typical of the active material.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Component_graphite_anode",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Component_graphite_anode",
+          "target_name": "graphite anode",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The significant percentage of non metallic (not determined) compounds can be mainly ascribed to the presence of graphite anode and other materials, as carbonates and polymers used in this kind of batteries.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "graphite anode",
+            "evidence_span": "The significant percentage of non metallic (not determined) compounds can be mainly ascribed to the presence of graphite anode and other materials, as carbonates and polymers used in this kind of batteries.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "about 250 g Co, 110 g Ni, 31 g Li and 120 g Cu (respectively, 86%, 84%, 45% and 86% of which referring to the finest fraction) could be recovered from 1 kg of material from mixed Li-ion spent batteries.",
+          "properties": {
+            "property": "recovery",
+            "value": 250,
+            "unit": "g",
+            "source_sample": "1 kg of material from mixed Li-ion spent batteries",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "86% of which referring to the finest fraction",
+            "recovered_invalid_source_name": "lithium ion battery",
+            "binding_basis": "unique_supported",
+            "binding_score": 0.35,
+            "binding_factors": {
+              "cooccurrence": 0.0,
+              "identity_match": 0.0,
+              "measure_match": 1.0,
+              "scope_compatible": 1.0
+            },
+            "recovery_reason": "quantitative HAS_OUTPUT used its explicit source_sample as the relation source; reanchored to a process by evidence scoring (unique_supported)",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": 86.0,
+                "unit": "%",
+                "raw_text": "86% of which referring to the finest fraction"
+              }
+            ],
+            "condition_labels": [
+              "86% of which referring to the finest fraction"
+            ],
+            "condition": "86% of which referring to the finest fraction",
+            "condition_ids": [
+              "CHUNK_text_3_3_2_Metal_content_9e0c739c__cond_concentration_86_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Co",
+            "evidence_span": "about 250 g Co, 110 g Ni, 31 g Li and 120 g Cu (respectively, 86%, 84%, 45% and 86% of which referring to the finest fraction) could be recovered from 1 kg of material from mixed Li-ion spent batteries.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "about 250 g Co, 110 g Ni, 31 g Li and 120 g Cu (respectively, 86%, 84%, 45% and 86% of which referring to the finest fraction) could be recovered from 1 kg of material from mixed Li-ion spent batteries.",
+          "properties": {
+            "property": "recovery",
+            "value": 110,
+            "unit": "g",
+            "source_sample": "1 kg of material from mixed Li-ion spent batteries",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "84% of which referring to the finest fraction",
+            "recovered_invalid_source_name": "lithium ion battery",
+            "binding_basis": "unique_supported",
+            "binding_score": 0.35,
+            "binding_factors": {
+              "cooccurrence": 0.0,
+              "identity_match": 0.0,
+              "measure_match": 1.0,
+              "scope_compatible": 1.0
+            },
+            "recovery_reason": "quantitative HAS_OUTPUT used its explicit source_sample as the relation source; reanchored to a process by evidence scoring (unique_supported)",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": 84.0,
+                "unit": "%",
+                "raw_text": "84% of which referring to the finest fraction"
+              }
+            ],
+            "condition_labels": [
+              "84% of which referring to the finest fraction"
+            ],
+            "condition": "84% of which referring to the finest fraction",
+            "condition_ids": [
+              "CHUNK_text_3_3_2_Metal_content_9e0c739c__cond_concentration_84_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Ni",
+            "evidence_span": "about 250 g Co, 110 g Ni, 31 g Li and 120 g Cu (respectively, 86%, 84%, 45% and 86% of which referring to the finest fraction) could be recovered from 1 kg of material from mixed Li-ion spent batteries.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "about 250 g Co, 110 g Ni, 31 g Li and 120 g Cu (respectively, 86%, 84%, 45% and 86% of which referring to the finest fraction) could be recovered from 1 kg of material from mixed Li-ion spent batteries.",
+          "properties": {
+            "property": "recovery",
+            "value": 31,
+            "unit": "g",
+            "source_sample": "1 kg of material from mixed Li-ion spent batteries",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "45% of which referring to the finest fraction",
+            "recovered_invalid_source_name": "lithium ion battery",
+            "binding_basis": "unique_supported",
+            "binding_score": 0.35,
+            "binding_factors": {
+              "cooccurrence": 0.0,
+              "identity_match": 0.0,
+              "measure_match": 1.0,
+              "scope_compatible": 1.0
+            },
+            "recovery_reason": "quantitative HAS_OUTPUT used its explicit source_sample as the relation source; reanchored to a process by evidence scoring (unique_supported)",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": 45.0,
+                "unit": "%",
+                "raw_text": "45% of which referring to the finest fraction"
+              }
+            ],
+            "condition_labels": [
+              "45% of which referring to the finest fraction"
+            ],
+            "condition": "45% of which referring to the finest fraction",
+            "condition_ids": [
+              "CHUNK_text_3_3_2_Metal_content_9e0c739c__cond_concentration_45_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Li",
+            "evidence_span": "about 250 g Co, 110 g Ni, 31 g Li and 120 g Cu (respectively, 86%, 84%, 45% and 86% of which referring to the finest fraction) could be recovered from 1 kg of material from mixed Li-ion spent batteries.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Cu",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Cu",
+          "target_name": "Cu",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "about 250 g Co, 110 g Ni, 31 g Li and 120 g Cu (respectively, 86%, 84%, 45% and 86% of which referring to the finest fraction) could be recovered from 1 kg of material from mixed Li-ion spent batteries.",
+          "properties": {
+            "property": "recovery",
+            "value": 120,
+            "unit": "g",
+            "source_sample": "1 kg of material from mixed Li-ion spent batteries",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "86% of which referring to the finest fraction",
+            "recovered_invalid_source_name": "lithium ion battery",
+            "binding_basis": "unique_supported",
+            "binding_score": 0.35,
+            "binding_factors": {
+              "cooccurrence": 0.0,
+              "identity_match": 0.0,
+              "measure_match": 1.0,
+              "scope_compatible": 1.0
+            },
+            "recovery_reason": "quantitative HAS_OUTPUT used its explicit source_sample as the relation source; reanchored to a process by evidence scoring (unique_supported)",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": 86.0,
+                "unit": "%",
+                "raw_text": "86% of which referring to the finest fraction"
+              }
+            ],
+            "condition_labels": [
+              "86% of which referring to the finest fraction"
+            ],
+            "condition": "86% of which referring to the finest fraction",
+            "condition_ids": [
+              "CHUNK_text_3_3_2_Metal_content_9e0c739c__cond_concentration_86_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Cu",
+            "evidence_span": "about 250 g Co, 110 g Ni, 31 g Li and 120 g Cu (respectively, 86%, 84%, 45% and 86% of which referring to the finest fraction) could be recovered from 1 kg of material from mixed Li-ion spent batteries.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.4. Leaching test_733bbba2",
+    "section_name": "3.4. Leaching test",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 13,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_other_low_leached_concentrations_of_all_metals_with_the_exception_of_lithium_and_potassium",
+          "name": "other",
+          "type": "other",
+          "value": "low leached concentrations of all metals with the exception of lithium and potassium",
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Chemical characterisation of spent rechargeable batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.4. Leaching test_733bbba2",
+            "text": "## 3.4. Leaching test\nFig. 2 shows pH and conductivity results for the leaching tests. Values of pH found for leachate solutions are always basic and, in the case of Ni–Cd and Ni-MH batteries, highly basic, due to the presence of hydroxides in the electrolytes.\nThe resulting electrical conductivity (4–11 mS/cm) can be mainly ascribed to the electrolyte dissolution. Indeed, the amount of metals (as reported in Table 3, together with the other ions investigated) is rather limited, and therefore, in all samples, the size reduction and the absence of a barrier as the plastic shell, do not determine a particular increase of heavy metal mobility.\nAll anions and elements dissolved in the eluates could be related to the electrolyte contents in the battery’s electrodes. In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred. The tests resulted in low leached concentrations of all metals with the exception of lithium and potassium.\nThe leaching tests did not consider other anions that could be present, including phosphates, arsenates, and borates. In addition, it should be noted that the high pH values found resulted from a specific leaching test and other pH values and other metal concentrations could be found with different leaching conditions. Still, the high pH values suggest great care in handling this material, which would be highly caustic and corrosive coming into contact with water or humidity. Thus, particular attention must be paid in the critical steps of storage and transportation of the material.",
+            "parent_chunk_id": null,
+            "section_name": "3.4. Leaching test",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 14095,
+            "position_end": 15832,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.4. Leaching test_733bbba2",
+              "doc_id": "text",
+              "title": "Chemical characterisation of spent rechargeable batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Chemical Characterisation of Spent Rechargeable Batteries/text.md",
+              "section_name": "3.4. Leaching test",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 14095,
+              "position_end": 15832,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_Ni_Cd_battery_CONTAINS_text_Material_hydroxide",
+          "source_id": "text_Product_Ni_Cd_battery",
+          "source_name": "Ni–Cd battery",
+          "target_id": "text_Material_hydroxide",
+          "target_name": "hydroxide",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Values of pH found for leachate solutions are always basic and, in the case of Ni–Cd and Ni-MH batteries, highly basic, due to the presence of hydroxides in the electrolytes.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni–Cd battery",
+            "target_name": "hydroxide",
+            "evidence_span": "Values of pH found for leachate solutions are always basic and, in the case of Ni–Cd and Ni-MH batteries, highly basic, due to the presence of hydroxides in the electrolytes.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_MH_battery_CONTAINS_text_Material_hydroxide",
+          "source_id": "text_Product_Ni_MH_battery",
+          "source_name": "Ni-MH battery",
+          "target_id": "text_Material_hydroxide",
+          "target_name": "hydroxide",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Values of pH found for leachate solutions are always basic and, in the case of Ni–Cd and Ni-MH batteries, highly basic, due to the presence of hydroxides in the electrolytes.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni-MH battery",
+            "target_name": "hydroxide",
+            "evidence_span": "Values of pH found for leachate solutions are always basic and, in the case of Ni–Cd and Ni-MH batteries, highly basic, due to the presence of hydroxides in the electrolytes.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_Cd_battery_CONTAINS_text_Material_potassium_hydroxide",
+          "source_id": "text_Product_Ni_Cd_battery",
+          "source_name": "Ni–Cd battery",
+          "target_id": "text_Material_potassium_hydroxide",
+          "target_name": "potassium hydroxide",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni–Cd battery",
+            "target_name": "potassium hydroxide",
+            "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Ni_MH_battery_CONTAINS_text_Material_potassium_hydroxide",
+          "source_id": "text_Product_Ni_MH_battery",
+          "source_name": "Ni-MH battery",
+          "target_id": "text_Material_potassium_hydroxide",
+          "target_name": "potassium hydroxide",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Ni-MH battery",
+            "target_name": "potassium hydroxide",
+            "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_lithium_salt",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Material_lithium_salt",
+          "target_name": "lithium salt",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "lithium salt",
+            "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_LiPF",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Material_LiPF",
+          "target_name": "LiPF",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "LiPF",
+            "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_LiBF",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Material_LiBF",
+          "target_name": "LiBF",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "LiBF",
+            "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_LiAsF",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium ion battery",
+          "target_id": "text_Material_LiAsF",
+          "target_name": "LiAsF",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion battery",
+            "target_name": "LiAsF",
+            "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_battery_CONTAINS_text_Material_sulphate",
+          "source_id": "text_Product_battery",
+          "source_name": "battery",
+          "target_id": "text_Material_sulphate",
+          "target_name": "sulphate",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "battery",
+            "target_name": "sulphate",
+            "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_battery_CONTAINS_text_Material_chloride",
+          "source_id": "text_Product_battery",
+          "source_name": "battery",
+          "target_id": "text_Material_chloride",
+          "target_name": "chloride",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "battery",
+            "target_name": "chloride",
+            "evidence_span": "In particular, the presence of potassium hydroxide (Ni–Cd and Ni-MH batteries), lithium salts as LiPF LiBF LiAsF (Li-ion batteries) and some sulphate and chloride salts can be inferred.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_battery_PROCESSED_BY_text_Process_EN_12457_2_leaching_test",
+          "source_id": "text_Product_battery",
+          "source_name": "battery",
+          "target_id": "text_Process_EN_12457_2_leaching_test",
+          "target_name": "EN 12457-2 leaching test",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Fig. 2 shows pH and conductivity results for the leaching tests.",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "battery",
+            "target_name": "EN 12457-2 leaching test",
+            "evidence_span": "Fig. 2 shows pH and conductivity results for the leaching tests.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The tests resulted in low leached concentrations of all metals with the exception of lithium and potassium.",
+          "properties": {
+            "output_role": "leached_material",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "low leached concentrations of all metals with the exception of lithium and potassium",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "low leached concentrations of all metals with the exception of lithium and potassium",
+                "unit": null,
+                "raw_text": "low leached concentrations of all metals with the exception of lithium and potassium"
+              }
+            ],
+            "condition_labels": [
+              "low leached concentrations of all metals with the exception of lithium and potassium"
+            ],
+            "condition": "low leached concentrations of all metals with the exception of lithium and potassium",
+            "condition_ids": [
+              "CHUNK_text_3_4_Leaching_test_733bbba2__cond_other_low_leached_concentrations_of_all_metals_with_the_exception_of_lithium_and_potassium"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "Li",
+            "evidence_span": "The tests resulted in low leached concentrations of all metals with the exception of lithium and potassium.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_EN_12457_2_leaching_test_HAS_OUTPUT_text_Material_potassium",
+          "source_id": "text_Process_EN_12457_2_leaching_test",
+          "source_name": "EN 12457-2 leaching test",
+          "target_id": "text_Material_potassium",
+          "target_name": "K",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The tests resulted in low leached concentrations of all metals with the exception of lithium and potassium.",
+          "properties": {
+            "output_role": "leached_material",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "low leached concentrations of all metals with the exception of lithium and potassium",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "low leached concentrations of all metals with the exception of lithium and potassium",
+                "unit": null,
+                "raw_text": "low leached concentrations of all metals with the exception of lithium and potassium"
+              }
+            ],
+            "condition_labels": [
+              "low leached concentrations of all metals with the exception of lithium and potassium"
+            ],
+            "condition": "low leached concentrations of all metals with the exception of lithium and potassium",
+            "condition_ids": [
+              "CHUNK_text_3_4_Leaching_test_733bbba2__cond_other_low_leached_concentrations_of_all_metals_with_the_exception_of_lithium_and_potassium"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "EN 12457-2 leaching test",
+            "target_name": "K",
+            "evidence_span": "The tests resulted in low leached concentrations of all metals with the exception of lithium and potassium.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_4. Conclusion_3891d03a",
+    "section_name": "4. Conclusion",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  }
+]

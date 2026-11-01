@@ -1,0 +1,1889 @@
+[
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_ABSTRACT_f6aad0ce",
+    "section_name": "ABSTRACT",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_1. Introduction_3a0e8d82_sub0",
+    "section_name": "1. Introduction",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 6,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "binding_group_conflict_count": 0,
+      "binding_group_conflicts": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_battery",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_battery",
+          "target_name": "battery",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Tan et al. (2017) established that from manual dismantling it is possible to obtain plastic (25.75 wt%), batteries (21.12 wt%), printed circuit boards (PCBs) (17.67 wt%), metals (17.30 wt%), and displays (8.37 wt%).",
+          "properties": {
+            "property": "composition",
+            "value": 21.12,
+            "unit": "wt%",
+            "study_scope": "background",
+            "measurement_method": "manual dismantling",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "battery",
+            "evidence_span": "Tan et al. (2017) established that from manual dismantling it is possible to obtain plastic (25.75 wt%), batteries (21.12 wt%), printed circuit boards (PCBs) (17.67 wt%), metals (17.30 wt%), and displays (8.37 wt%)."
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_printed_circuit_board",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_printed_circuit_board",
+          "target_name": "printed circuit board",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Tan et al. (2017) established that from manual dismantling it is possible to obtain plastic (25.75 wt%), batteries (21.12 wt%), printed circuit boards (PCBs) (17.67 wt%), metals (17.30 wt%), and displays (8.37 wt%).",
+          "properties": {
+            "property": "composition",
+            "value": 17.67,
+            "unit": "wt%",
+            "study_scope": "background",
+            "measurement_method": "manual dismantling",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "printed circuit board",
+            "evidence_span": "Tan et al. (2017) established that from manual dismantling it is possible to obtain plastic (25.75 wt%), batteries (21.12 wt%), printed circuit boards (PCBs) (17.67 wt%), metals (17.30 wt%), and displays (8.37 wt%)."
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_display",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_display",
+          "target_name": "display",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Tan et al. (2017) established that from manual dismantling it is possible to obtain plastic (25.75 wt%), batteries (21.12 wt%), printed circuit boards (PCBs) (17.67 wt%), metals (17.30 wt%), and displays (8.37 wt%).",
+          "properties": {
+            "property": "composition",
+            "value": 8.37,
+            "unit": "wt%",
+            "study_scope": "background",
+            "measurement_method": "manual dismantling",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "display",
+            "evidence_span": "Tan et al. (2017) established that from manual dismantling it is possible to obtain plastic (25.75 wt%), batteries (21.12 wt%), printed circuit boards (PCBs) (17.67 wt%), metals (17.30 wt%), and displays (8.37 wt%)."
+          }
+        },
+        {
+          "id": "REL_text_Component_housing_components_CONTAINS_text_Material_acrylonitrile_butadiene_styrene",
+          "source_id": "text_Component_housing_components",
+          "source_name": "housing components",
+          "target_id": "text_Material_acrylonitrile_butadiene_styrene",
+          "target_name": "acrylonitrile butadiene styrene",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA).",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "housing components",
+            "target_name": "acrylonitrile butadiene styrene",
+            "evidence_span": "The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA)."
+          }
+        },
+        {
+          "id": "REL_text_Component_housing_components_CONTAINS_text_Material_polycarbonate",
+          "source_id": "text_Component_housing_components",
+          "source_name": "housing components",
+          "target_id": "text_Material_polycarbonate",
+          "target_name": "polycarbonate",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA).",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "housing components",
+            "target_name": "polycarbonate",
+            "evidence_span": "The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA)."
+          }
+        },
+        {
+          "id": "REL_text_Component_housing_components_CONTAINS_text_Material_Pa",
+          "source_id": "text_Component_housing_components",
+          "source_name": "housing components",
+          "target_id": "text_Material_Pa",
+          "target_name": "Pa",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA).",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "housing components",
+            "target_name": "Pa",
+            "evidence_span": "The Authors found out that the majority of the mobile phone frames and polymeric components were made of one of three types of polymers, acrylonitrile–butadienestyrene (ABS), polycarbonate (PC) and polyamide (PA)."
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_1. Introduction_3a0e8d82_sub1",
+    "section_name": "1. Introduction",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_1. Introduction_3a0e8d82_sub2",
+    "section_name": "1. Introduction",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2. Material and methods_aa28a19e",
+    "section_name": "2. Material and methods",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 7,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "binding_group_conflict_count": 0,
+      "binding_group_conflicts": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_battery",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_battery",
+          "target_name": "battery",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "extra_qualifiers": "separated by manual dismantling",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "battery",
+            "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays."
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_electronic_parts",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_electronic_parts",
+          "target_name": "electronic parts",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "extra_qualifiers": "separated by manual dismantling",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "electronic parts",
+            "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays."
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_metal_parts",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_metal_parts",
+          "target_name": "metal parts",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "extra_qualifiers": "separated by manual dismantling",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "metal parts",
+            "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays."
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_plastic_material",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_plastic_material",
+          "target_name": "plastic material",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "extra_qualifiers": "separated by manual dismantling",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "plastic material",
+            "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays."
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_display",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_display",
+          "target_name": "display",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "extra_qualifiers": "separated by manual dismantling",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "display",
+            "evidence_span": "MPs were manually dismantled, separating batteries, electronic parts, metal parts, plastic materials and displays."
+          }
+        },
+        {
+          "id": "REL_text_Component_printed_circuit_board_PROCESSED_BY_text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+          "source_id": "text_Component_printed_circuit_board",
+          "source_name": "printed circuit board",
+          "target_id": "text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+          "target_name": "aqua regia leaching of intact PCB and electronic components",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The leaching stage involved the characterization of printed circuit boards and connected components present in the waste materials.",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "printed circuit board",
+            "target_name": "aqua regia leaching of intact PCB and electronic components",
+            "evidence_span": "The leaching stage involved the characterization of printed circuit boards and connected components present in the waste materials."
+          }
+        },
+        {
+          "id": "REL_text_Component_electronic_parts_PROCESSED_BY_text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+          "source_id": "text_Component_electronic_parts",
+          "source_name": "electronic parts",
+          "target_id": "text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+          "target_name": "aqua regia leaching of intact PCB and electronic components",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The leaching stage involved the characterization of printed circuit boards and connected components present in the waste materials.",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "electronic parts",
+            "target_name": "aqua regia leaching of intact PCB and electronic components",
+            "evidence_span": "The leaching stage involved the characterization of printed circuit boards and connected components present in the waste materials."
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2.1. Manual disassembly_4c0ce955",
+    "section_name": "2.1. Manual disassembly",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 8,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "binding_group_conflict_count": 0,
+      "binding_group_conflicts": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_polymeric_frame",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_polymeric_frame",
+          "target_name": "polymeric frame",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "polymeric frame",
+            "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers."
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_printed_circuit_board",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_printed_circuit_board",
+          "target_name": "printed circuit board",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "printed circuit board",
+            "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers."
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_battery",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_battery",
+          "target_name": "battery",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "battery",
+            "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers."
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_keypad",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_keypad",
+          "target_name": "keypad",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "keypad",
+            "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers."
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_LCD_screen",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_LCD_screen",
+          "target_name": "LCD screen",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "LCD screen",
+            "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers."
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_antenna",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_antenna",
+          "target_name": "antenna",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "antenna",
+            "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers."
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_video_camera",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_video_camera",
+          "target_name": "video camera",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "video camera",
+            "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers."
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_speaker",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_speaker",
+          "target_name": "speaker",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "speaker",
+            "evidence_span": "Basically a mobile phone is composed of a polymeric frame (sometimes containing a metal coating or lining), a printed circuit board, a battery, a keyboard, a LCD screen that in smartphones also has the function of the keyboard, an antenna (which may be an integrated circuit) and other accessories, such as video cameras and speakers."
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2.2.1. Plastic materials analysis_abf480bf",
+    "section_name": "2.2.1. Plastic materials analysis",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "binding_group_conflict_count": 0,
+      "binding_group_conflicts": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2.2.2. Electronic parts analysis_4194a212",
+    "section_name": "2.2.2. Electronic parts analysis",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 8,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "binding_group_conflict_count": 2,
+      "binding_group_conflicts": [
+        {
+          "reason": "observations share a sample and conditions but bind to different processes",
+          "group_key": "intact pcb and electronic components::temperature=25.0,unit=°c",
+          "process_names": [
+            "Ericsson R380S (2000)",
+            "Nokia 5110 (1998)",
+            "Nokia 6210 (2000)",
+            "Sony Ericsson T230 (2003)"
+          ],
+          "relation_ids": [
+            "REL_text_Product_Nokia_5110__1998__PROCESSED_BY_text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+            "REL_text_Product_Ericsson_R380S__2000__PROCESSED_BY_text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+            "REL_text_Product_Nokia_6210__2000__PROCESSED_BY_text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+            "REL_text_Product_Sony_Ericsson_T230__2003__PROCESSED_BY_text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components"
+          ],
+          "source_ids": [
+            "text_Product_Ericsson_R380S__2000_",
+            "text_Product_Nokia_5110__1998_",
+            "text_Product_Nokia_6210__2000_",
+            "text_Product_Sony_Ericsson_T230__2003_"
+          ]
+        },
+        {
+          "reason": "observations share a sample and conditions but bind to different processes",
+          "group_key": "comminuted solid residues::temperature=25.0,unit=°c",
+          "process_names": [
+            "Ericsson R380S (2000)",
+            "Nokia 5110 (1998)",
+            "Nokia 6210 (2000)",
+            "Sony Ericsson T230 (2003)"
+          ],
+          "relation_ids": [
+            "REL_text_Product_Nokia_5110__1998__PROCESSED_BY_text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+            "REL_text_Product_Ericsson_R380S__2000__PROCESSED_BY_text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+            "REL_text_Product_Nokia_6210__2000__PROCESSED_BY_text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+            "REL_text_Product_Sony_Ericsson_T230__2003__PROCESSED_BY_text_Process_aqua_regia_leaching_of_comminuted_solid_residues"
+          ],
+          "source_ids": [
+            "text_Product_Ericsson_R380S__2000_",
+            "text_Product_Nokia_5110__1998_",
+            "text_Product_Nokia_6210__2000_",
+            "text_Product_Sony_Ericsson_T230__2003_"
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "id": "cond_temperature_25_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 25.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "unknown",
+            "title": "Unknown",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "unknown",
+            "text": "",
+            "parent_chunk_id": null,
+            "section_name": null,
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 0,
+            "position_end": 0,
+            "metadata": {}
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_Nokia_5110__1998__PROCESSED_BY_text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+          "source_id": "text_Product_Nokia_5110__1998_",
+          "source_name": "Nokia 5110 (1998)",
+          "target_id": "text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+          "target_name": "aqua regia leaching of intact PCB and electronic components",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "a first leaching of the intact PCB and electronic components was performed at 25 C using aqua regia (a solution of concentrated HNO and concentrated HCl 1/3 v/v).",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "25 C",
+            "process_agent": "aqua regia (concentrated HNO3 and concentrated HCl 1/3 v/v)",
+            "source_sample": "intact PCB and electronic components",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 25.0,
+                "unit": "°C",
+                "raw_text": "25 C"
+              }
+            ],
+            "condition_labels": [
+              "25 C"
+            ],
+            "condition": "25 C",
+            "condition_ids": [
+              "CHUNK_A_Comprehensive_Characterization_of_End_of_Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2_2_2_Electronic_parts_analysis_4194a212__cond_temperature_25_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "binding_group_conflict": true,
+            "source_name": "Nokia 5110 (1998)",
+            "target_name": "aqua regia leaching of intact PCB and electronic components",
+            "evidence_span": "a first leaching of the intact PCB and electronic components was performed at 25 C using aqua regia (a solution of concentrated HNO and concentrated HCl 1/3 v/v)."
+          }
+        },
+        {
+          "id": "REL_text_Product_Ericsson_R380S__2000__PROCESSED_BY_text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+          "source_id": "text_Product_Ericsson_R380S__2000_",
+          "source_name": "Ericsson R380S (2000)",
+          "target_id": "text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+          "target_name": "aqua regia leaching of intact PCB and electronic components",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "a first leaching of the intact PCB and electronic components was performed at 25 C using aqua regia (a solution of concentrated HNO and concentrated HCl 1/3 v/v).",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "25 C",
+            "process_agent": "aqua regia (concentrated HNO3 and concentrated HCl 1/3 v/v)",
+            "source_sample": "intact PCB and electronic components",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 25.0,
+                "unit": "°C",
+                "raw_text": "25 C"
+              }
+            ],
+            "condition_labels": [
+              "25 C"
+            ],
+            "condition": "25 C",
+            "condition_ids": [
+              "CHUNK_A_Comprehensive_Characterization_of_End_of_Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2_2_2_Electronic_parts_analysis_4194a212__cond_temperature_25_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "binding_group_conflict": true,
+            "source_name": "Ericsson R380S (2000)",
+            "target_name": "aqua regia leaching of intact PCB and electronic components",
+            "evidence_span": "a first leaching of the intact PCB and electronic components was performed at 25 C using aqua regia (a solution of concentrated HNO and concentrated HCl 1/3 v/v)."
+          }
+        },
+        {
+          "id": "REL_text_Product_Nokia_6210__2000__PROCESSED_BY_text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+          "source_id": "text_Product_Nokia_6210__2000_",
+          "source_name": "Nokia 6210 (2000)",
+          "target_id": "text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+          "target_name": "aqua regia leaching of intact PCB and electronic components",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "a first leaching of the intact PCB and electronic components was performed at 25 C using aqua regia (a solution of concentrated HNO and concentrated HCl 1/3 v/v).",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "25 C",
+            "process_agent": "aqua regia (concentrated HNO3 and concentrated HCl 1/3 v/v)",
+            "source_sample": "intact PCB and electronic components",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 25.0,
+                "unit": "°C",
+                "raw_text": "25 C"
+              }
+            ],
+            "condition_labels": [
+              "25 C"
+            ],
+            "condition": "25 C",
+            "condition_ids": [
+              "CHUNK_A_Comprehensive_Characterization_of_End_of_Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2_2_2_Electronic_parts_analysis_4194a212__cond_temperature_25_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "binding_group_conflict": true,
+            "source_name": "Nokia 6210 (2000)",
+            "target_name": "aqua regia leaching of intact PCB and electronic components",
+            "evidence_span": "a first leaching of the intact PCB and electronic components was performed at 25 C using aqua regia (a solution of concentrated HNO and concentrated HCl 1/3 v/v)."
+          }
+        },
+        {
+          "id": "REL_text_Product_Sony_Ericsson_T230__2003__PROCESSED_BY_text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+          "source_id": "text_Product_Sony_Ericsson_T230__2003_",
+          "source_name": "Sony Ericsson T230 (2003)",
+          "target_id": "text_Process_aqua_regia_leaching_of_intact_PCB_and_electronic_components",
+          "target_name": "aqua regia leaching of intact PCB and electronic components",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "a first leaching of the intact PCB and electronic components was performed at 25 C using aqua regia (a solution of concentrated HNO and concentrated HCl 1/3 v/v).",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "25 C",
+            "process_agent": "aqua regia (concentrated HNO3 and concentrated HCl 1/3 v/v)",
+            "source_sample": "intact PCB and electronic components",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 25.0,
+                "unit": "°C",
+                "raw_text": "25 C"
+              }
+            ],
+            "condition_labels": [
+              "25 C"
+            ],
+            "condition": "25 C",
+            "condition_ids": [
+              "CHUNK_A_Comprehensive_Characterization_of_End_of_Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2_2_2_Electronic_parts_analysis_4194a212__cond_temperature_25_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "binding_group_conflict": true,
+            "source_name": "Sony Ericsson T230 (2003)",
+            "target_name": "aqua regia leaching of intact PCB and electronic components",
+            "evidence_span": "a first leaching of the intact PCB and electronic components was performed at 25 C using aqua regia (a solution of concentrated HNO and concentrated HCl 1/3 v/v)."
+          }
+        },
+        {
+          "id": "REL_text_Product_Nokia_5110__1998__PROCESSED_BY_text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+          "source_id": "text_Product_Nokia_5110__1998_",
+          "source_name": "Nokia 5110 (1998)",
+          "target_id": "text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+          "target_name": "aqua regia leaching of comminuted solid residues",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Samples were then leached again at 25 C by a new aqua regia solution.",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "25 C",
+            "process_agent": "new aqua regia solution",
+            "source_sample": "comminuted solid residues",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 25.0,
+                "unit": "°C",
+                "raw_text": "25 C"
+              }
+            ],
+            "condition_labels": [
+              "25 C"
+            ],
+            "condition": "25 C",
+            "condition_ids": [
+              "CHUNK_A_Comprehensive_Characterization_of_End_of_Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2_2_2_Electronic_parts_analysis_4194a212__cond_temperature_25_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "binding_group_conflict": true,
+            "source_name": "Nokia 5110 (1998)",
+            "target_name": "aqua regia leaching of comminuted solid residues",
+            "evidence_span": "Samples were then leached again at 25 C by a new aqua regia solution."
+          }
+        },
+        {
+          "id": "REL_text_Product_Ericsson_R380S__2000__PROCESSED_BY_text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+          "source_id": "text_Product_Ericsson_R380S__2000_",
+          "source_name": "Ericsson R380S (2000)",
+          "target_id": "text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+          "target_name": "aqua regia leaching of comminuted solid residues",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Samples were then leached again at 25 C by a new aqua regia solution.",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "25 C",
+            "process_agent": "new aqua regia solution",
+            "source_sample": "comminuted solid residues",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 25.0,
+                "unit": "°C",
+                "raw_text": "25 C"
+              }
+            ],
+            "condition_labels": [
+              "25 C"
+            ],
+            "condition": "25 C",
+            "condition_ids": [
+              "CHUNK_A_Comprehensive_Characterization_of_End_of_Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2_2_2_Electronic_parts_analysis_4194a212__cond_temperature_25_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "binding_group_conflict": true,
+            "source_name": "Ericsson R380S (2000)",
+            "target_name": "aqua regia leaching of comminuted solid residues",
+            "evidence_span": "Samples were then leached again at 25 C by a new aqua regia solution."
+          }
+        },
+        {
+          "id": "REL_text_Product_Nokia_6210__2000__PROCESSED_BY_text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+          "source_id": "text_Product_Nokia_6210__2000_",
+          "source_name": "Nokia 6210 (2000)",
+          "target_id": "text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+          "target_name": "aqua regia leaching of comminuted solid residues",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Samples were then leached again at 25 C by a new aqua regia solution.",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "25 C",
+            "process_agent": "new aqua regia solution",
+            "source_sample": "comminuted solid residues",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 25.0,
+                "unit": "°C",
+                "raw_text": "25 C"
+              }
+            ],
+            "condition_labels": [
+              "25 C"
+            ],
+            "condition": "25 C",
+            "condition_ids": [
+              "CHUNK_A_Comprehensive_Characterization_of_End_of_Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2_2_2_Electronic_parts_analysis_4194a212__cond_temperature_25_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "binding_group_conflict": true,
+            "source_name": "Nokia 6210 (2000)",
+            "target_name": "aqua regia leaching of comminuted solid residues",
+            "evidence_span": "Samples were then leached again at 25 C by a new aqua regia solution."
+          }
+        },
+        {
+          "id": "REL_text_Product_Sony_Ericsson_T230__2003__PROCESSED_BY_text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+          "source_id": "text_Product_Sony_Ericsson_T230__2003_",
+          "source_name": "Sony Ericsson T230 (2003)",
+          "target_id": "text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+          "target_name": "aqua regia leaching of comminuted solid residues",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Samples were then leached again at 25 C by a new aqua regia solution.",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "25 C",
+            "process_agent": "new aqua regia solution",
+            "source_sample": "comminuted solid residues",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 25.0,
+                "unit": "°C",
+                "raw_text": "25 C"
+              }
+            ],
+            "condition_labels": [
+              "25 C"
+            ],
+            "condition": "25 C",
+            "condition_ids": [
+              "CHUNK_A_Comprehensive_Characterization_of_End_of_Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_2_2_2_Electronic_parts_analysis_4194a212__cond_temperature_25_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "binding_group_conflict": true,
+            "source_name": "Sony Ericsson T230 (2003)",
+            "target_name": "aqua regia leaching of comminuted solid residues",
+            "evidence_span": "Samples were then leached again at 25 C by a new aqua regia solution."
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_3.1. Manual disassembly_db5ab5d3",
+    "section_name": "3.1. Manual disassembly",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 9,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "binding_group_conflict_count": 0,
+      "binding_group_conflicts": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_battery",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_battery",
+          "target_name": "battery",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "as a general rule it is shredded as a whole after the removal of the battery",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "battery",
+            "evidence_span": "as a general rule it is shredded as a whole after the removal of the battery"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_printed_circuit_board",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_printed_circuit_board",
+          "target_name": "printed circuit board",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "issues such as screw type, screw position, cable attachment, position of PCBs etc. were subjected to variations",
+          "properties": {
+            "property": "structure",
+            "study_scope": "current_study",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "printed circuit board",
+            "evidence_span": "issues such as screw type, screw position, cable attachment, position of PCBs etc. were subjected to variations"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Material_glass",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Material_glass",
+          "target_name": "glass",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "it is not energy intensive to unlock the associated materials such as glasses and metals with different mechanical properties",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "glass",
+            "evidence_span": "it is not energy intensive to unlock the associated materials such as glasses and metals with different mechanical properties"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_electronic_parts",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_electronic_parts",
+          "target_name": "electronic parts",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "From dismantling operations, plastics, metals, electronic parts, batteries and displays were collected",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "electronic parts",
+            "evidence_span": "From dismantling operations, plastics, metals, electronic parts, batteries and displays were collected"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_display",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_display",
+          "target_name": "display",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "From dismantling operations, plastics, metals, electronic parts, batteries and displays were collected",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "display",
+            "evidence_span": "From dismantling operations, plastics, metals, electronic parts, batteries and displays were collected"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_lithium_ion_battery",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_lithium_ion_battery",
+          "target_name": "lithium-ion battery",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "All the batteries were Li-ion, with the exception of the sample n. 20 which was a Ni-MH.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "lithium-ion battery",
+            "evidence_span": "All the batteries were Li-ion, with the exception of the sample n. 20 which was a Ni-MH."
+          }
+        },
+        {
+          "id": "REL_text_Product_Brondi_Amico_Flip___2016__CONTAINS_text_Component_nickel_metal_hydride_battery",
+          "source_id": "text_Product_Brondi_Amico_Flip___2016_",
+          "source_name": "Brondi Amico Flip+ (2016)",
+          "target_id": "text_Component_nickel_metal_hydride_battery",
+          "target_name": "nickel-metal hydride battery",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "All the batteries were Li-ion, with the exception of the sample n. 20 which was a Ni-MH.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "source_sample": "sample n. 20",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Brondi Amico Flip+ (2016)",
+            "target_name": "nickel-metal hydride battery",
+            "evidence_span": "All the batteries were Li-ion, with the exception of the sample n. 20 which was a Ni-MH."
+          }
+        },
+        {
+          "id": "REL_text_Product_Wiko_Lenny__2014__CONTAINS_text_Material_glass",
+          "source_id": "text_Product_Wiko_Lenny__2014_",
+          "source_name": "Wiko Lenny (2014)",
+          "target_id": "text_Material_glass",
+          "target_name": "glass",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In samples n. 18 and 19 (so-called smartphones) it has been observed that producers used glass (8.5% and 12.0% respectively) in addition to other materials.",
+          "properties": {
+            "property": "composition",
+            "value": 12.0,
+            "unit": "%",
+            "study_scope": "current_study",
+            "source_sample": "sample n. 19",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Wiko Lenny (2014)",
+            "target_name": "glass",
+            "evidence_span": "In samples n. 18 and 19 (so-called smartphones) it has been observed that producers used glass (8.5% and 12.0% respectively) in addition to other materials."
+          }
+        },
+        {
+          "id": "REL_text_Product_Nokia_Lumia_620__2013__CONTAINS_text_Material_glass",
+          "source_id": "text_Product_Nokia_Lumia_620__2013_",
+          "source_name": "Nokia Lumia 620 (2013)",
+          "target_id": "text_Material_glass",
+          "target_name": "glass",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In samples n. 18 and 19 (so-called smartphones) it has been observed that producers used glass (8.5% and 12.0% respectively) in addition to other materials.",
+          "properties": {
+            "property": "composition",
+            "value": 8.5,
+            "unit": "%",
+            "study_scope": "current_study",
+            "source_sample": "sample n. 18",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Nokia Lumia 620 (2013)",
+            "target_name": "glass",
+            "evidence_span": "In samples n. 18 and 19 (so-called smartphones) it has been observed that producers used glass (8.5% and 12.0% respectively) in addition to other materials."
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_3.2.1. Plastic materials analysis_dd3887b6",
+    "section_name": "3.2.1. Plastic materials analysis",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 10,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "binding_group_conflict_count": 0,
+      "binding_group_conflicts": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_housing_components",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_housing_components",
+          "target_name": "housing components",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "plastic materials are used for structural components such as the case and cover",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "housing components",
+            "evidence_span": "plastic materials are used for structural components such as the case and cover"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_mounting_bracket",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_mounting_bracket",
+          "target_name": "mounting bracket",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "mounting bracket",
+            "evidence_span": "plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_guide",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_guide",
+          "target_name": "guide",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "guide",
+            "evidence_span": "plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_insulator_sheet",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_insulator_sheet",
+          "target_name": "insulator sheet",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "insulator sheet",
+            "evidence_span": "plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Component_vibration_cushion",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Component_vibration_cushion",
+          "target_name": "vibration cushion",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "vibration cushion",
+            "evidence_span": "plastics are used in a wide range of cell phone applications such as mounting brackets, guides, insulator sheets and vibration cushions"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Material_polycarbonate",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Material_polycarbonate",
+          "target_name": "polycarbonate",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "polycarbonate",
+            "evidence_span": "polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Material_acrylonitrile_butadiene_styrene",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Material_acrylonitrile_butadiene_styrene",
+          "target_name": "acrylonitrile butadiene styrene",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "acrylonitrile butadiene styrene",
+            "evidence_span": "polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Material_polymethyl_methacrylate",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Material_polymethyl_methacrylate",
+          "target_name": "polymethyl methacrylate",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "polymethyl methacrylate",
+            "evidence_span": "polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Material_Pu",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Material_Pu",
+          "target_name": "Pu",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "Pu",
+            "evidence_span": "polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Material_silicone",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Material_silicone",
+          "target_name": "silicone",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "silicone",
+            "evidence_span": "polymeric components of these MPs were made of five distinct and separate polymers: polycarbonate (PC), acrylonitrile–butadienestyrene (ABS), polymethylmethacrylate (PMMA), polyurethane (PU) and silicone"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_3.2.2. Electronic parts analysis_ad4a55c2",
+    "section_name": "3.2.2. Electronic parts analysis",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 7,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "binding_group_conflict_count": 0,
+      "binding_group_conflicts": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Component_connector_CONTAINS_text_Material_Pd",
+          "source_id": "text_Component_connector",
+          "source_name": "connector",
+          "target_id": "text_Material_Pd",
+          "target_name": "Pd",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "palladium, generally used in connectors to improve conductivity (Reuter et al., 2013) as well as in ceramic capacitors (Chancerel and Rotter, 2009; Delfini et al., 2011; Fontana et al., 2018), should be present",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "extra_qualifiers": "palladium generally used in connectors to improve conductivity",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "connector",
+            "target_name": "Pd",
+            "evidence_span": "palladium, generally used in connectors to improve conductivity (Reuter et al., 2013) as well as in ceramic capacitors (Chancerel and Rotter, 2009; Delfini et al., 2011; Fontana et al., 2018), should be present"
+          }
+        },
+        {
+          "id": "REL_text_Component_ceramic_capacitor_CONTAINS_text_Material_Pd",
+          "source_id": "text_Component_ceramic_capacitor",
+          "source_name": "ceramic capacitor",
+          "target_id": "text_Material_Pd",
+          "target_name": "Pd",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "palladium, generally used in connectors to improve conductivity (Reuter et al., 2013) as well as in ceramic capacitors (Chancerel and Rotter, 2009; Delfini et al., 2011; Fontana et al., 2018), should be present",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "extra_qualifiers": "palladium generally used in ceramic capacitors",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "ceramic capacitor",
+            "target_name": "Pd",
+            "evidence_span": "palladium, generally used in connectors to improve conductivity (Reuter et al., 2013) as well as in ceramic capacitors (Chancerel and Rotter, 2009; Delfini et al., 2011; Fontana et al., 2018), should be present"
+          }
+        },
+        {
+          "id": "REL_text_Process_aqua_regia_leaching_of_comminuted_solid_residues_HAS_OUTPUT_text_Material_C",
+          "source_id": "text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+          "source_name": "aqua regia leaching of comminuted solid residues",
+          "target_id": "text_Material_C",
+          "target_name": "C",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%.",
+          "properties": {
+            "property": "composition",
+            "value": 29,
+            "unit": "%",
+            "source_sample": "solid residue",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "measurement_method": "as explained in experimental paragraph",
+            "treatment_members": [],
+            "property_raw": "content",
+            "measure_key": "composition",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "aqua regia leaching of comminuted solid residues",
+            "target_name": "C",
+            "evidence_span": "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%."
+          }
+        },
+        {
+          "id": "REL_text_Process_aqua_regia_leaching_of_comminuted_solid_residues_HAS_OUTPUT_text_Material_H",
+          "source_id": "text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+          "source_name": "aqua regia leaching of comminuted solid residues",
+          "target_id": "text_Material_H",
+          "target_name": "H",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%.",
+          "properties": {
+            "property": "composition",
+            "value": 2.4,
+            "unit": "%",
+            "source_sample": "solid residue",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "measurement_method": "as explained in experimental paragraph",
+            "treatment_members": [],
+            "property_raw": "content",
+            "measure_key": "composition",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "aqua regia leaching of comminuted solid residues",
+            "target_name": "H",
+            "evidence_span": "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%."
+          }
+        },
+        {
+          "id": "REL_text_Process_aqua_regia_leaching_of_comminuted_solid_residues_HAS_OUTPUT_text_Material_N",
+          "source_id": "text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+          "source_name": "aqua regia leaching of comminuted solid residues",
+          "target_id": "text_Material_N",
+          "target_name": "N",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%.",
+          "properties": {
+            "property": "composition",
+            "value": 1.2,
+            "unit": "%",
+            "source_sample": "solid residue",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "measurement_method": "as explained in experimental paragraph",
+            "treatment_members": [],
+            "property_raw": "content",
+            "measure_key": "composition",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "aqua regia leaching of comminuted solid residues",
+            "target_name": "N",
+            "evidence_span": "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%."
+          }
+        },
+        {
+          "id": "REL_text_Process_aqua_regia_leaching_of_comminuted_solid_residues_HAS_OUTPUT_text_Material_S",
+          "source_id": "text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+          "source_name": "aqua regia leaching of comminuted solid residues",
+          "target_id": "text_Material_S",
+          "target_name": "S",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%.",
+          "properties": {
+            "property": "composition",
+            "value": 0.6,
+            "unit": "%",
+            "source_sample": "solid residue",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "measurement_method": "as explained in experimental paragraph",
+            "treatment_members": [],
+            "property_raw": "content",
+            "measure_key": "composition",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "aqua regia leaching of comminuted solid residues",
+            "target_name": "S",
+            "evidence_span": "The content of carbon, hydrogen, nitrogen and sulfur in the solid residue was measured as explained in experimental paragraph and occurred being respectively 29%, 2.4%, 1.2% and 0.6%."
+          }
+        },
+        {
+          "id": "REL_text_Process_aqua_regia_leaching_of_comminuted_solid_residues_HAS_OUTPUT_text_Material_O",
+          "source_id": "text_Process_aqua_regia_leaching_of_comminuted_solid_residues",
+          "source_name": "aqua regia leaching of comminuted solid residues",
+          "target_id": "text_Material_O",
+          "target_name": "O",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The oxygen was calculated as 20.8%.",
+          "properties": {
+            "property": "composition",
+            "value": 20.8,
+            "unit": "%",
+            "source_sample": "solid residue",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "measurement_method": "calculated",
+            "treatment_members": [],
+            "property_raw": "content",
+            "measure_key": "composition",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "aqua regia leaching of comminuted solid residues",
+            "target_name": "O",
+            "evidence_span": "The oxygen was calculated as 20.8%."
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_3.3. Recycling potentials of end-of-life MPs_cbd31eb8",
+    "section_name": "3.3. Recycling potentials of end-of-life MPs",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 3,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "binding_group_conflict_count": 0,
+      "binding_group_conflicts": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Material_Au",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Material_Au",
+          "target_name": "Au",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "gold constitutes the vast majority of the total value, although present in the electronic parts as a weighted average of only 0.12% (Table 4)",
+          "properties": {
+            "property": "composition",
+            "value": 0.12,
+            "unit": "%",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "Au",
+            "evidence_span": "gold constitutes the vast majority of the total value, although present in the electronic parts as a weighted average of only 0.12% (Table 4)"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Material_Cu",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Material_Cu",
+          "target_name": "Cu",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Copper is present in this fraction in a higher amount (132 kg/t)",
+          "properties": {
+            "property": "composition",
+            "value": 132,
+            "unit": "kg/t",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "Cu",
+            "evidence_span": "Copper is present in this fraction in a higher amount (132 kg/t)"
+          }
+        },
+        {
+          "id": "REL_text_Product_mobile_phone_CONTAINS_text_Material_Al",
+          "source_id": "text_Product_mobile_phone",
+          "source_name": "mobile phone",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Metal parts have been mainly identified as non-ferrous (with the exception of screws) and in particular as aluminum (Al)",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "mobile phone",
+            "target_name": "Al",
+            "evidence_span": "Metal parts have been mainly identified as non-ferrous (with the exception of screws) and in particular as aluminum (Al)"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_4. Conclusions_7ff2bd61",
+    "section_name": "4. Conclusions",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_abstract_result_evidence",
+    "section_name": "Abstract Result Evidence",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "binding_group_conflict_count": 0,
+      "binding_group_conflicts": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  }
+]

@@ -1,0 +1,1826 @@
+[
+  {
+    "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_ABSTRACT_e4cb2b9e",
+    "section_name": "ABSTRACT",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_1. Introduction_6fc69e89",
+    "section_name": "1. Introduction",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_2. Experimental procedures_b13cdf64",
+    "section_name": "2. Experimental procedures",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 16,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_secondary_battery_CONTAINS_text_Component_cell_unit",
+          "source_id": "text_Product_lithium_ion_secondary_battery",
+          "source_name": "lithium ion secondary battery",
+          "target_id": "text_Component_cell_unit",
+          "target_name": "cell unit",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "A LIB consists of a plastic casing and several cell units.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion secondary battery",
+            "target_name": "cell unit",
+            "evidence_span": "A LIB consists of a plastic casing and several cell units.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cell_unit_CONTAINS_text_Component_cathode",
+          "source_id": "text_Component_cell_unit",
+          "source_name": "cell unit",
+          "target_id": "text_Component_cathode",
+          "target_name": "cathode",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Each cell unit has a cathode, an anode, an organic separator, an organic electrolyte, and a Nicoated steel casing.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cell unit",
+            "target_name": "cathode",
+            "evidence_span": "Each cell unit has a cathode, an anode, an organic separator, an organic electrolyte, and a Nicoated steel casing.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cell_unit_CONTAINS_text_Component_anode",
+          "source_id": "text_Component_cell_unit",
+          "source_name": "cell unit",
+          "target_id": "text_Component_anode",
+          "target_name": "anode",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Each cell unit has a cathode, an anode, an organic separator, an organic electrolyte, and a Nicoated steel casing.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cell unit",
+            "target_name": "anode",
+            "evidence_span": "Each cell unit has a cathode, an anode, an organic separator, an organic electrolyte, and a Nicoated steel casing.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cell_unit_CONTAINS_text_Component_organic_separator",
+          "source_id": "text_Component_cell_unit",
+          "source_name": "cell unit",
+          "target_id": "text_Component_organic_separator",
+          "target_name": "organic separator",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Each cell unit has a cathode, an anode, an organic separator, an organic electrolyte, and a Nicoated steel casing.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cell unit",
+            "target_name": "organic separator",
+            "evidence_span": "Each cell unit has a cathode, an anode, an organic separator, an organic electrolyte, and a Nicoated steel casing.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cell_unit_CONTAINS_text_Component_organic_electrolyte",
+          "source_id": "text_Component_cell_unit",
+          "source_name": "cell unit",
+          "target_id": "text_Component_organic_electrolyte",
+          "target_name": "organic electrolyte",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Each cell unit has a cathode, an anode, an organic separator, an organic electrolyte, and a Nicoated steel casing.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cell unit",
+            "target_name": "organic electrolyte",
+            "evidence_span": "Each cell unit has a cathode, an anode, an organic separator, an organic electrolyte, and a Nicoated steel casing.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cell_unit_CONTAINS_text_Component_Nicoated_steel_casing",
+          "source_id": "text_Component_cell_unit",
+          "source_name": "cell unit",
+          "target_id": "text_Component_Nicoated_steel_casing",
+          "target_name": "Nicoated steel casing",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Each cell unit has a cathode, an anode, an organic separator, an organic electrolyte, and a Nicoated steel casing.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cell unit",
+            "target_name": "Nicoated steel casing",
+            "evidence_span": "Each cell unit has a cathode, an anode, an organic separator, an organic electrolyte, and a Nicoated steel casing.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Material_LiCoO2",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Material_LiCoO2",
+          "target_name": "LiCoO2",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In the cathode, LiCoO2 active materials, carbon-conducting additives, and a binder are pasted on aluminum foil.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "LiCoO2",
+            "evidence_span": "In the cathode, LiCoO2 active materials, carbon-conducting additives, and a binder are pasted on aluminum foil.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Material_carbon_conducting_additive",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Material_carbon_conducting_additive",
+          "target_name": "carbon-conducting additive",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In the cathode, LiCoO2 active materials, carbon-conducting additives, and a binder are pasted on aluminum foil.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "carbon-conducting additive",
+            "evidence_span": "In the cathode, LiCoO2 active materials, carbon-conducting additives, and a binder are pasted on aluminum foil.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Material_binder",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Material_binder",
+          "target_name": "binder",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In the cathode, LiCoO2 active materials, carbon-conducting additives, and a binder are pasted on aluminum foil.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "binder",
+            "evidence_span": "In the cathode, LiCoO2 active materials, carbon-conducting additives, and a binder are pasted on aluminum foil.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Material_aluminum_foil",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Material_aluminum_foil",
+          "target_name": "aluminum foil",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In the cathode, LiCoO2 active materials, carbon-conducting additives, and a binder are pasted on aluminum foil.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "aluminum foil",
+            "evidence_span": "In the cathode, LiCoO2 active materials, carbon-conducting additives, and a binder are pasted on aluminum foil.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_anode_CONTAINS_text_Material_graphite",
+          "source_id": "text_Component_anode",
+          "source_name": "anode",
+          "target_id": "text_Material_graphite",
+          "target_name": "graphite",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The anode is fabricated by the same process with graphite active materials, carbon-conducting additives, and a binder pasted on copper foil.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "anode",
+            "target_name": "graphite",
+            "evidence_span": "The anode is fabricated by the same process with graphite active materials, carbon-conducting additives, and a binder pasted on copper foil.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_anode_CONTAINS_text_Material_carbon_conducting_additive",
+          "source_id": "text_Component_anode",
+          "source_name": "anode",
+          "target_id": "text_Material_carbon_conducting_additive",
+          "target_name": "carbon-conducting additive",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The anode is fabricated by the same process with graphite active materials, carbon-conducting additives, and a binder pasted on copper foil.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "anode",
+            "target_name": "carbon-conducting additive",
+            "evidence_span": "The anode is fabricated by the same process with graphite active materials, carbon-conducting additives, and a binder pasted on copper foil.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_anode_CONTAINS_text_Material_binder",
+          "source_id": "text_Component_anode",
+          "source_name": "anode",
+          "target_id": "text_Material_binder",
+          "target_name": "binder",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The anode is fabricated by the same process with graphite active materials, carbon-conducting additives, and a binder pasted on copper foil.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "anode",
+            "target_name": "binder",
+            "evidence_span": "The anode is fabricated by the same process with graphite active materials, carbon-conducting additives, and a binder pasted on copper foil.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_anode_CONTAINS_text_Material_copper_foil",
+          "source_id": "text_Component_anode",
+          "source_name": "anode",
+          "target_id": "text_Material_copper_foil",
+          "target_name": "copper foil",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The anode is fabricated by the same process with graphite active materials, carbon-conducting additives, and a binder pasted on copper foil.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "anode",
+            "target_name": "copper foil",
+            "evidence_span": "The anode is fabricated by the same process with graphite active materials, carbon-conducting additives, and a binder pasted on copper foil.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_secondary_battery_PROCESSED_BY_text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_id": "text_Product_lithium_ion_secondary_battery",
+          "source_name": "lithium ion secondary battery",
+          "target_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "target_name": "LiCoO2 leaching in nitric acid solution",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Leaching of LiCoO2 in nitric acid solution was tested in a reactor (Fig. 4), which was placed in a water bath to control the reaction temperature within ± 0.5 ^∘C.",
+          "properties": {
+            "source_sample": "LIB samples",
+            "sample_state": "samples of lithium ion battery subjected to thermal treatment and disassembly",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "lithium ion secondary battery",
+            "target_name": "LiCoO2 leaching in nitric acid solution",
+            "evidence_span": "Leaching of LiCoO2 in nitric acid solution was tested in a reactor (Fig. 4), which was placed in a water bath to control the reaction temperature within ± 0.5 ^∘C.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_LiCoO2_PROCESSED_BY_text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_id": "text_Material_LiCoO2",
+          "source_name": "LiCoO2",
+          "target_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "target_name": "LiCoO2 leaching in nitric acid solution",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Leaching of LiCoO2 in nitric acid solution was tested in a reactor (Fig. 4), which was placed in a water bath to control the reaction temperature within ± 0.5 ^∘C.",
+          "properties": {
+            "source_sample": "cathodic active material",
+            "sample_state": "active material separated from cathode, obtained after calcination",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2",
+            "target_name": "LiCoO2 leaching in nitric acid solution",
+            "evidence_span": "Leaching of LiCoO2 in nitric acid solution was tested in a reactor (Fig. 4), which was placed in a water bath to control the reaction temperature within ± 0.5 ^∘C.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3.1. Reductive leaching_507dd3a8",
+    "section_name": "3.1. Reductive leaching",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 22,
+      "condition_count": 4,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_temperature_75_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 75.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+            "title": "Reductive leaching of cathodic active materials from lithium ion battery wastes",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3.1. Reductive leaching_507dd3a8",
+            "text": "## 3. Results and discussion\n## 3.1. Reductive leaching\nFig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\nTo obtain the optimum conditions for the reductive leaching of LiCoO2, several sets of leaching experiments were made under different conditions, i.e. various HNO3 concentrations, S/L ratio, temperature, and H2O2 amount added. Fig. 6 shows the effect of HNO3 concentration on the leaching of LiCoO2 at 20 g/L S/L ratio, 75 ^∘ ^,, 0.8 vol.% H2O2,, and 30 min. The leaching efficiency of Co and Li increased with increasing HNO3 concentration. More than 80% of Co and Li was extracted within 30 min above 1 M HNO3\nThe leaching behavior with different S/L ratios is presented in Fig. 7 at a fixed condition of 1 M HNO3, 75 ^∘C, 0.8 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li decreased with increasing S/L ratio. Extractions of 90% of Co and Li were achieved within 30 min when S/L ratio was lower than 20 g/L for H2O2 addition of 0.8 vol.%.\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.\nFig. 9 shows the effect of H2O2 concentration on the leaching at 20 g/L S/L ratio, 1 M HNO3, 75 ^, and 30 min. The leaching efficiency of Co and Li increased with increasing H2O2 addition. The amount of 1.7 vol.% H2O2 was sufficient for the complete dissolution of Co and Li.",
+            "parent_chunk_id": null,
+            "section_name": "3.1. Reductive leaching",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 5796,
+            "position_end": 7953,
+            "metadata": {
+              "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3.1. Reductive leaching_507dd3a8",
+              "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+              "title": "Reductive leaching of cathodic active materials from lithium ion battery wastes",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes/text.md",
+              "section_name": "3.1. Reductive leaching",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 5796,
+              "position_end": 7953,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "merged_from": [
+                "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3. Results and discussion_d7b237a4"
+              ]
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_concentration_10_0_g_l",
+          "name": "concentration",
+          "type": "Concentration",
+          "value": 10.0,
+          "unit": "g/L",
+          "source": {
+            "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+            "title": "Reductive leaching of cathodic active materials from lithium ion battery wastes",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3.1. Reductive leaching_507dd3a8",
+            "text": "## 3. Results and discussion\n## 3.1. Reductive leaching\nFig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\nTo obtain the optimum conditions for the reductive leaching of LiCoO2, several sets of leaching experiments were made under different conditions, i.e. various HNO3 concentrations, S/L ratio, temperature, and H2O2 amount added. Fig. 6 shows the effect of HNO3 concentration on the leaching of LiCoO2 at 20 g/L S/L ratio, 75 ^∘ ^,, 0.8 vol.% H2O2,, and 30 min. The leaching efficiency of Co and Li increased with increasing HNO3 concentration. More than 80% of Co and Li was extracted within 30 min above 1 M HNO3\nThe leaching behavior with different S/L ratios is presented in Fig. 7 at a fixed condition of 1 M HNO3, 75 ^∘C, 0.8 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li decreased with increasing S/L ratio. Extractions of 90% of Co and Li were achieved within 30 min when S/L ratio was lower than 20 g/L for H2O2 addition of 0.8 vol.%.\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.\nFig. 9 shows the effect of H2O2 concentration on the leaching at 20 g/L S/L ratio, 1 M HNO3, 75 ^, and 30 min. The leaching efficiency of Co and Li increased with increasing H2O2 addition. The amount of 1.7 vol.% H2O2 was sufficient for the complete dissolution of Co and Li.",
+            "parent_chunk_id": null,
+            "section_name": "3.1. Reductive leaching",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 5796,
+            "position_end": 7953,
+            "metadata": {
+              "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3.1. Reductive leaching_507dd3a8",
+              "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+              "title": "Reductive leaching of cathodic active materials from lithium ion battery wastes",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes/text.md",
+              "section_name": "3.1. Reductive leaching",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 5796,
+              "position_end": 7953,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "merged_from": [
+                "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3. Results and discussion_d7b237a4"
+              ]
+            }
+          },
+          "condition_type": "Concentration",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_temperature_50_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 50.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+            "title": "Reductive leaching of cathodic active materials from lithium ion battery wastes",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3.1. Reductive leaching_507dd3a8",
+            "text": "## 3. Results and discussion\n## 3.1. Reductive leaching\nFig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\nTo obtain the optimum conditions for the reductive leaching of LiCoO2, several sets of leaching experiments were made under different conditions, i.e. various HNO3 concentrations, S/L ratio, temperature, and H2O2 amount added. Fig. 6 shows the effect of HNO3 concentration on the leaching of LiCoO2 at 20 g/L S/L ratio, 75 ^∘ ^,, 0.8 vol.% H2O2,, and 30 min. The leaching efficiency of Co and Li increased with increasing HNO3 concentration. More than 80% of Co and Li was extracted within 30 min above 1 M HNO3\nThe leaching behavior with different S/L ratios is presented in Fig. 7 at a fixed condition of 1 M HNO3, 75 ^∘C, 0.8 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li decreased with increasing S/L ratio. Extractions of 90% of Co and Li were achieved within 30 min when S/L ratio was lower than 20 g/L for H2O2 addition of 0.8 vol.%.\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.\nFig. 9 shows the effect of H2O2 concentration on the leaching at 20 g/L S/L ratio, 1 M HNO3, 75 ^, and 30 min. The leaching efficiency of Co and Li increased with increasing H2O2 addition. The amount of 1.7 vol.% H2O2 was sufficient for the complete dissolution of Co and Li.",
+            "parent_chunk_id": null,
+            "section_name": "3.1. Reductive leaching",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 5796,
+            "position_end": 7953,
+            "metadata": {
+              "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3.1. Reductive leaching_507dd3a8",
+              "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+              "title": "Reductive leaching of cathodic active materials from lithium ion battery wastes",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes/text.md",
+              "section_name": "3.1. Reductive leaching",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 5796,
+              "position_end": 7953,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "merged_from": [
+                "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3. Results and discussion_d7b237a4"
+              ]
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_temperature_25_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 25.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+            "title": "Reductive leaching of cathodic active materials from lithium ion battery wastes",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3.1. Reductive leaching_507dd3a8",
+            "text": "## 3. Results and discussion\n## 3.1. Reductive leaching\nFig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\nTo obtain the optimum conditions for the reductive leaching of LiCoO2, several sets of leaching experiments were made under different conditions, i.e. various HNO3 concentrations, S/L ratio, temperature, and H2O2 amount added. Fig. 6 shows the effect of HNO3 concentration on the leaching of LiCoO2 at 20 g/L S/L ratio, 75 ^∘ ^,, 0.8 vol.% H2O2,, and 30 min. The leaching efficiency of Co and Li increased with increasing HNO3 concentration. More than 80% of Co and Li was extracted within 30 min above 1 M HNO3\nThe leaching behavior with different S/L ratios is presented in Fig. 7 at a fixed condition of 1 M HNO3, 75 ^∘C, 0.8 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li decreased with increasing S/L ratio. Extractions of 90% of Co and Li were achieved within 30 min when S/L ratio was lower than 20 g/L for H2O2 addition of 0.8 vol.%.\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.\nFig. 9 shows the effect of H2O2 concentration on the leaching at 20 g/L S/L ratio, 1 M HNO3, 75 ^, and 30 min. The leaching efficiency of Co and Li increased with increasing H2O2 addition. The amount of 1.7 vol.% H2O2 was sufficient for the complete dissolution of Co and Li.",
+            "parent_chunk_id": null,
+            "section_name": "3.1. Reductive leaching",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 5796,
+            "position_end": 7953,
+            "metadata": {
+              "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3.1. Reductive leaching_507dd3a8",
+              "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+              "title": "Reductive leaching of cathodic active materials from lithium ion battery wastes",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes/text.md",
+              "section_name": "3.1. Reductive leaching",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 5796,
+              "position_end": 7953,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "merged_from": [
+                "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3. Results and discussion_d7b237a4"
+              ]
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Material_LiCoO2_PROCESSED_BY_text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_id": "text_Material_LiCoO2",
+          "source_name": "LiCoO2",
+          "target_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "target_name": "LiCoO2 leaching in nitric acid solution",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C.",
+          "properties": {
+            "source_sample": "cathodic active materials",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C",
+            "process_agent": "nitric acid solution",
+            "treatment_members": [],
+            "extra_qualifiers": "absence of reducing agent",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C"
+              }
+            ],
+            "condition_labels": [
+              "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C"
+            ],
+            "condition": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2",
+            "target_name": "LiCoO2 leaching in nitric acid solution",
+            "evidence_span": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li.",
+          "properties": {
+            "property": "leaching",
+            "value": 40,
+            "unit": "%",
+            "source_sample": "cathodic active materials",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 30 min, absence of reducing agent",
+            "process_agent": "nitric acid solution",
+            "treatment_members": [],
+            "extra_qualifiers": "absence of reducing agent",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 30 min, absence of reducing agent"
+              }
+            ],
+            "condition_labels": [
+              "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 30 min, absence of reducing agent"
+            ],
+            "condition": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 30 min, absence of reducing agent",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Co",
+            "evidence_span": "In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li.",
+          "properties": {
+            "property": "leaching",
+            "value": 75,
+            "unit": "%",
+            "source_sample": "cathodic active materials",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 30 min, absence of reducing agent",
+            "process_agent": "nitric acid solution",
+            "treatment_members": [],
+            "extra_qualifiers": "absence of reducing agent",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 30 min, absence of reducing agent"
+              }
+            ],
+            "condition_labels": [
+              "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 30 min, absence of reducing agent"
+            ],
+            "condition": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 30 min, absence of reducing agent",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Li",
+            "evidence_span": "In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_LiCoO2_PROCESSED_BY_text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_id": "text_Material_LiCoO2",
+          "source_name": "LiCoO2",
+          "target_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "target_name": "LiCoO2 leaching in nitric acid solution",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998).",
+          "properties": {
+            "source_sample": "cathodic active materials",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2",
+            "process_agent": "hydrogen peroxide",
+            "treatment_members": [
+              "hydrogen peroxide"
+            ],
+            "extra_qualifiers": "reductive leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2"
+              }
+            ],
+            "condition_labels": [
+              "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2"
+            ],
+            "condition": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2",
+            "target_name": "LiCoO2 leaching in nitric acid solution",
+            "evidence_span": "To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure.",
+          "properties": {
+            "property": "leaching",
+            "value": 85,
+            "unit": "%",
+            "source_sample": "cathodic active materials",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2",
+            "process_agent": "hydrogen peroxide",
+            "treatment_members": [
+              "hydrogen peroxide"
+            ],
+            "extra_qualifiers": "reductive leaching",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2"
+              }
+            ],
+            "condition_labels": [
+              "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2"
+            ],
+            "condition": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Co",
+            "evidence_span": "The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure.",
+          "properties": {
+            "property": "leaching",
+            "value": 85,
+            "unit": "%",
+            "source_sample": "cathodic active materials",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2",
+            "process_agent": "hydrogen peroxide",
+            "treatment_members": [
+              "hydrogen peroxide"
+            ],
+            "extra_qualifiers": "reductive leaching",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2"
+              }
+            ],
+            "condition_labels": [
+              "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2"
+            ],
+            "condition": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Li",
+            "evidence_span": "The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_LiCoO2_PROCESSED_BY_text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_id": "text_Material_LiCoO2",
+          "source_name": "LiCoO2",
+          "target_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "target_name": "LiCoO2 leaching in nitric acid solution",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Fig. 6 shows the effect of HNO3 concentration on the leaching of LiCoO2 at 20 g/L S/L ratio, 75 ^∘ ^,, 0.8 vol.% H2O2,, and 30 min.",
+          "properties": {
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2, 30 min, varying HNO3 concentration",
+            "process_agent": "HNO3",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "effect of HNO3 concentration",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2, 30 min, varying HNO3 concentration"
+              }
+            ],
+            "condition_labels": [
+              "20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2, 30 min, varying HNO3 concentration"
+            ],
+            "condition": "20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2, 30 min, varying HNO3 concentration",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2",
+            "target_name": "LiCoO2 leaching in nitric acid solution",
+            "evidence_span": "Fig. 6 shows the effect of HNO3 concentration on the leaching of LiCoO2 at 20 g/L S/L ratio, 75 ^∘ ^,, 0.8 vol.% H2O2,, and 30 min.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "More than 80% of Co and Li was extracted within 30 min above 1 M HNO3",
+          "properties": {
+            "property": "leaching",
+            "value": 80,
+            "unit": "%",
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "above 1 M HNO3, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2, 30 min",
+            "process_agent": "HNO3",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "more than 80%",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "above 1 M HNO3, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "above 1 M HNO3, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2, 30 min"
+            ],
+            "condition": "above 1 M HNO3, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2, 30 min",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Co",
+            "evidence_span": "More than 80% of Co and Li was extracted within 30 min above 1 M HNO3",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "More than 80% of Co and Li was extracted within 30 min above 1 M HNO3",
+          "properties": {
+            "property": "leaching",
+            "value": 80,
+            "unit": "%",
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "above 1 M HNO3, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2, 30 min",
+            "process_agent": "HNO3",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "more than 80%",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "above 1 M HNO3, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "above 1 M HNO3, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2, 30 min"
+            ],
+            "condition": "above 1 M HNO3, 20 g/L S/L ratio, 75 °C, 0.8 vol.% H2O2, 30 min",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Li",
+            "evidence_span": "More than 80% of Co and Li was extracted within 30 min above 1 M HNO3",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_LiCoO2_PROCESSED_BY_text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_id": "text_Material_LiCoO2",
+          "source_name": "LiCoO2",
+          "target_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "target_name": "LiCoO2 leaching in nitric acid solution",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The leaching behavior with different S/L ratios is presented in Fig. 7 at a fixed condition of 1 M HNO3, 75 ^∘C, 0.8 vol.% H2O2, and 30 min.",
+          "properties": {
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "1 M HNO3, 75 °C, 0.8 vol.% H2O2, 30 min, varying S/L ratio",
+            "process_agent": "HNO3",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "effect of S/L ratio",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "1 M HNO3, 75 °C, 0.8 vol.% H2O2, 30 min, varying S/L ratio"
+              }
+            ],
+            "condition_labels": [
+              "1 M HNO3, 75 °C, 0.8 vol.% H2O2, 30 min, varying S/L ratio"
+            ],
+            "condition": "1 M HNO3, 75 °C, 0.8 vol.% H2O2, 30 min, varying S/L ratio",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2",
+            "target_name": "LiCoO2 leaching in nitric acid solution",
+            "evidence_span": "The leaching behavior with different S/L ratios is presented in Fig. 7 at a fixed condition of 1 M HNO3, 75 ^∘C, 0.8 vol.% H2O2, and 30 min.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Extractions of 90% of Co and Li were achieved within 30 min when S/L ratio was lower than 20 g/L for H2O2 addition of 0.8 vol.%.",
+          "properties": {
+            "property": "leaching",
+            "value": 90,
+            "unit": "%",
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "S/L ratio lower than 20 g/L, 1 M HNO3, 75 °C, 0.8 vol.% H2O2, 30 min",
+            "process_agent": "HNO3",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "S/L ratio lower than 20 g/L",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "S/L ratio lower than 20 g/L, 1 M HNO3, 75 °C, 0.8 vol.% H2O2, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "S/L ratio lower than 20 g/L, 1 M HNO3, 75 °C, 0.8 vol.% H2O2, 30 min"
+            ],
+            "condition": "S/L ratio lower than 20 g/L, 1 M HNO3, 75 °C, 0.8 vol.% H2O2, 30 min",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Co",
+            "evidence_span": "Extractions of 90% of Co and Li were achieved within 30 min when S/L ratio was lower than 20 g/L for H2O2 addition of 0.8 vol.%.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Extractions of 90% of Co and Li were achieved within 30 min when S/L ratio was lower than 20 g/L for H2O2 addition of 0.8 vol.%.",
+          "properties": {
+            "property": "leaching",
+            "value": 90,
+            "unit": "%",
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "S/L ratio lower than 20 g/L, 1 M HNO3, 75 °C, 0.8 vol.% H2O2, 30 min",
+            "process_agent": "HNO3",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "S/L ratio lower than 20 g/L",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "S/L ratio lower than 20 g/L, 1 M HNO3, 75 °C, 0.8 vol.% H2O2, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "S/L ratio lower than 20 g/L, 1 M HNO3, 75 °C, 0.8 vol.% H2O2, 30 min"
+            ],
+            "condition": "S/L ratio lower than 20 g/L, 1 M HNO3, 75 °C, 0.8 vol.% H2O2, 30 min",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Li",
+            "evidence_span": "Extractions of 90% of Co and Li were achieved within 30 min when S/L ratio was lower than 20 g/L for H2O2 addition of 0.8 vol.%.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_LiCoO2_PROCESSED_BY_text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_id": "text_Material_LiCoO2",
+          "source_name": "LiCoO2",
+          "target_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "target_name": "LiCoO2 leaching in nitric acid solution",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Fig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min.",
+          "properties": {
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, varying temperature",
+            "process_agent": "HNO3",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "effect of temperature",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": 10.0,
+                "unit": "g/L",
+                "raw_text": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, varying temperature"
+              }
+            ],
+            "condition_labels": [
+              "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, varying temperature"
+            ],
+            "condition": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, varying temperature",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_concentration_10_0_g_l"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2",
+            "target_name": "LiCoO2 leaching in nitric acid solution",
+            "evidence_span": "Fig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+          "properties": {
+            "property": "leaching",
+            "value": 99,
+            "unit": "%",
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "75 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min",
+            "process_agent": "HNO3",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "temperature 75 °C",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "75 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "75 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min"
+            ],
+            "condition": "75 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Co",
+            "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+          "properties": {
+            "property": "leaching",
+            "value": 75,
+            "unit": "%",
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "50 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min",
+            "process_agent": "HNO3",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "temperature 50 °C",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 50.0,
+                "unit": "°C",
+                "raw_text": "50 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "50 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min"
+            ],
+            "condition": "50 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_50_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Co",
+            "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+          "properties": {
+            "property": "leaching",
+            "value": 30,
+            "unit": "%",
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "25 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min",
+            "process_agent": "HNO3",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "temperature 25 °C",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 25.0,
+                "unit": "°C",
+                "raw_text": "25 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "25 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min"
+            ],
+            "condition": "25 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_25_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Co",
+            "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+          "properties": {
+            "property": "leaching",
+            "value": 99,
+            "unit": "%",
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "75 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min",
+            "process_agent": "HNO3",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "temperature 75 °C; Li similar to Co",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "75 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "75 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min"
+            ],
+            "condition": "75 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Li",
+            "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+          "properties": {
+            "property": "leaching",
+            "value": 75,
+            "unit": "%",
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "50 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min",
+            "process_agent": "HNO3",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "temperature 50 °C; Li similar to Co",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 50.0,
+                "unit": "°C",
+                "raw_text": "50 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "50 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min"
+            ],
+            "condition": "50 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_50_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Li",
+            "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+          "properties": {
+            "property": "leaching",
+            "value": 30,
+            "unit": "%",
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "25 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min",
+            "process_agent": "HNO3",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "temperature 25 °C; Li similar to Co",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 25.0,
+                "unit": "°C",
+                "raw_text": "25 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "25 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min"
+            ],
+            "condition": "25 °C, 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_25_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Li",
+            "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_LiCoO2_PROCESSED_BY_text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_id": "text_Material_LiCoO2",
+          "source_name": "LiCoO2",
+          "target_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "target_name": "LiCoO2 leaching in nitric acid solution",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Fig. 9 shows the effect of H2O2 concentration on the leaching at 20 g/L S/L ratio, 1 M HNO3, 75 ^, and 30 min.",
+          "properties": {
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "20 g/L S/L ratio, 1 M HNO3, 75 °C, 30 min, varying H2O2 concentration",
+            "process_agent": "HNO3",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "effect of H2O2 concentration",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "20 g/L S/L ratio, 1 M HNO3, 75 °C, 30 min, varying H2O2 concentration"
+              }
+            ],
+            "condition_labels": [
+              "20 g/L S/L ratio, 1 M HNO3, 75 °C, 30 min, varying H2O2 concentration"
+            ],
+            "condition": "20 g/L S/L ratio, 1 M HNO3, 75 °C, 30 min, varying H2O2 concentration",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2",
+            "target_name": "LiCoO2 leaching in nitric acid solution",
+            "evidence_span": "Fig. 9 shows the effect of H2O2 concentration on the leaching at 20 g/L S/L ratio, 1 M HNO3, 75 ^, and 30 min.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The amount of 1.7 vol.% H2O2 was sufficient for the complete dissolution of Co and Li.",
+          "properties": {
+            "property": "leaching",
+            "value": 100,
+            "unit": "%",
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "1.7 vol.% H2O2, 20 g/L S/L ratio, 1 M HNO3, 75 °C, 30 min",
+            "process_agent": "H2O2",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "complete dissolution",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "1.7 vol.% H2O2, 20 g/L S/L ratio, 1 M HNO3, 75 °C, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "1.7 vol.% H2O2, 20 g/L S/L ratio, 1 M HNO3, 75 °C, 30 min"
+            ],
+            "condition": "1.7 vol.% H2O2, 20 g/L S/L ratio, 1 M HNO3, 75 °C, 30 min",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Co",
+            "evidence_span": "The amount of 1.7 vol.% H2O2 was sufficient for the complete dissolution of Co and Li.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_name": "LiCoO2 leaching in nitric acid solution",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The amount of 1.7 vol.% H2O2 was sufficient for the complete dissolution of Co and Li.",
+          "properties": {
+            "property": "leaching",
+            "value": 100,
+            "unit": "%",
+            "source_sample": "LiCoO2",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "1.7 vol.% H2O2, 20 g/L S/L ratio, 1 M HNO3, 75 °C, 30 min",
+            "process_agent": "H2O2",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "extra_qualifiers": "complete dissolution",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 75.0,
+                "unit": "°C",
+                "raw_text": "1.7 vol.% H2O2, 20 g/L S/L ratio, 1 M HNO3, 75 °C, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "1.7 vol.% H2O2, 20 g/L S/L ratio, 1 M HNO3, 75 °C, 30 min"
+            ],
+            "condition": "1.7 vol.% H2O2, 20 g/L S/L ratio, 1 M HNO3, 75 °C, 30 min",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_1_Reductive_leaching_507dd3a8__cond_temperature_75_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2 leaching in nitric acid solution",
+            "target_name": "Li",
+            "evidence_span": "The amount of 1.7 vol.% H2O2 was sufficient for the complete dissolution of Co and Li.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3.2. Kinetic considerations_2776d4fd",
+    "section_name": "3.2. Kinetic considerations",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 1,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_other_dissolution_controlled_by_surface_chemical_reaction",
+          "name": "other",
+          "type": "other",
+          "value": "dissolution controlled by surface chemical reaction",
+          "unit": null,
+          "source": {
+            "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+            "title": "Reductive leaching of cathodic active materials from lithium ion battery wastes",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3.2. Kinetic considerations_2776d4fd",
+            "text": "## 3.2. Kinetic considerations\nAssuming that leaching of Co and Li has no interdependence and the dissolution rate is inversely proportional to their respective ionic concentrations (CCo and CLi), the square of Ci has a linear relationship with respect to reaction time as described by the following equation, where Ci represents the concentration of species i in the leaching solution(mol cm ^-3), k is the apparent rate constant (mol ^2 cm ^-6 s ^-1), and t is time (s). Fig. 10 is the plot of square of C vs. time, which is drawn from the effect of temperature (Fig. 8). From the linearity observed as shown in the case of Co (Fig. 10 (a)) and Li (Fig. 10(b)), the assumptions could be confirmed. Therefore, the dissolution rate of Co and Li was inversely proportional to their respective ionic concentrations. The apparent activation energy of Co and Li was calculated from the Arrhenius plot (Fig. 11) to be 12.5 and 11.4 kcal/mol, respectively. Therefore, the dissolution of LiCoO2 seems to be controlled by surface chemical reaction (Han and Lawson, 1980).",
+            "parent_chunk_id": null,
+            "section_name": "3.2. Kinetic considerations",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 7953,
+            "position_end": 9039,
+            "metadata": {
+              "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_3.2. Kinetic considerations_2776d4fd",
+              "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+              "title": "Reductive leaching of cathodic active materials from lithium ion battery wastes",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes/text.md",
+              "section_name": "3.2. Kinetic considerations",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 7953,
+              "position_end": 9039,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Material_LiCoO2_PROCESSED_BY_text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "source_id": "text_Material_LiCoO2",
+          "source_name": "LiCoO2",
+          "target_id": "text_Process_LiCoO2_leaching_in_nitric_acid_solution",
+          "target_name": "LiCoO2 leaching in nitric acid solution",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Therefore, the dissolution of LiCoO2 seems to be controlled by surface chemical reaction (Han and Lawson, 1980).",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "dissolution controlled by surface chemical reaction",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "dissolution controlled by surface chemical reaction",
+                "unit": null,
+                "raw_text": "dissolution controlled by surface chemical reaction"
+              }
+            ],
+            "condition_labels": [
+              "dissolution controlled by surface chemical reaction"
+            ],
+            "condition": "dissolution controlled by surface chemical reaction",
+            "condition_ids": [
+              "CHUNK_Reductive_Leaching_of_Cathodic_Active_Materials_from_Lithium_Ion_Battery_Wastes_3_2_Kinetic_considerations_2776d4fd__cond_other_dissolution_controlled_by_surface_chemical_reaction"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2",
+            "target_name": "LiCoO2 leaching in nitric acid solution",
+            "evidence_span": "Therefore, the dissolution of LiCoO2 seems to be controlled by surface chemical reaction (Han and Lawson, 1980).",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_4. Conclusions_8bb1cdbe",
+    "section_name": "4. Conclusions",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  }
+]

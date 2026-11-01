@@ -1,0 +1,1375 @@
+[
+  {
+    "chunk_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System__table__TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+    "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+    "result": {
+      "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+      "entity_count": 9,
+      "relation_count": 8,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "entities": [
+        {
+          "id": "table_ir_ent_001",
+          "name": "lithium-ion battery",
+          "mention_text": "lithium-ion battery",
+          "type": "Product",
+          "source": "table:TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "synonyms": [
+            "spent LIBs",
+            "ternary lithium-ion battery",
+            "lithium ion battery",
+            "LIBs",
+            "spent lithium-ion batteries",
+            "spent LIB",
+            "LIB",
+            "lithium-ion batteries"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "literal",
+            "column_idx": 0
+          }
+        },
+        {
+          "id": "table_ir_ent_002",
+          "name": "Lithium",
+          "mention_text": "Li",
+          "type": "Material",
+          "source": "table:TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "synonyms": [
+            "Li"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 0
+          }
+        },
+        {
+          "id": "table_ir_ent_003",
+          "name": "Nickel",
+          "mention_text": "Ni",
+          "type": "Material",
+          "source": "table:TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "synonyms": [
+            "Ni"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_004",
+          "name": "Cobalt",
+          "mention_text": "Co",
+          "type": "Material",
+          "source": "table:TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "synonyms": [
+            "Co"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 2
+          }
+        },
+        {
+          "id": "table_ir_ent_005",
+          "name": "Manganese",
+          "mention_text": "Mn",
+          "type": "Material",
+          "source": "table:TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "synonyms": [
+            "Mn"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 3
+          }
+        },
+        {
+          "id": "table_ir_ent_006",
+          "name": "Aluminum",
+          "mention_text": "Al",
+          "type": "Material",
+          "source": "table:TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "synonyms": [
+            "Al"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 4
+          }
+        },
+        {
+          "id": "table_ir_ent_007",
+          "name": "Fe",
+          "mention_text": "Fe",
+          "type": "Material",
+          "source": "table:TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "synonyms": [
+            "Iron"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 5
+          }
+        },
+        {
+          "id": "table_ir_ent_008",
+          "name": "Copper",
+          "mention_text": "Cu",
+          "type": "Material",
+          "source": "table:TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "synonyms": [
+            "Cu"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 6
+          }
+        },
+        {
+          "id": "table_ir_ent_009",
+          "name": "Ca",
+          "mention_text": "Ca",
+          "type": "Material",
+          "source": "table:TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "synonyms": [
+            "Calcium"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 7
+          }
+        }
+      ],
+      "relations": [
+        {
+          "id": "table_ir_rel_001",
+          "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "table_title": "Table 1 Composition analysis of retired lithium battery materials wt.%",
+          "source_id": "table_ir_ent_001",
+          "source_name": "lithium-ion battery",
+          "target_id": "table_ir_ent_002",
+          "target_name": "Lithium",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 0 (Li): 2.56",
+          "attributes": {
+            "property": "mass_fraction",
+            "template_id": "step_1",
+            "unit": "weight_percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+            "row_idx": 1,
+            "col_idx": 0,
+            "row_label": "2.56",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Li",
+            "column_descriptor": {
+              "id": "c0",
+              "index": 0,
+              "flat_label": "Li",
+              "header_path": [
+                "Li"
+              ],
+              "header_leaf": "Li",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Li",
+                  "header_row": 0,
+                  "column": 0
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Li",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 0 (Li): 2.56",
+            "value": "2.56",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "2.56",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                0,
+                0
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "source_sample": "retired lithium battery powder",
+            "sample_state": "retired lithium battery powder",
+            "endpoint_rebinding": "verified_table_container"
+          }
+        },
+        {
+          "id": "table_ir_rel_002",
+          "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "table_title": "Table 1 Composition analysis of retired lithium battery materials wt.%",
+          "source_id": "table_ir_ent_001",
+          "source_name": "lithium-ion battery",
+          "target_id": "table_ir_ent_003",
+          "target_name": "Nickel",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 1 (Ni): 4.63",
+          "attributes": {
+            "property": "mass_fraction",
+            "template_id": "step_1",
+            "unit": "weight_percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+            "row_idx": 1,
+            "col_idx": 1,
+            "row_label": "2.56",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Ni",
+            "column_descriptor": {
+              "id": "c1",
+              "index": 1,
+              "flat_label": "Ni",
+              "header_path": [
+                "Ni"
+              ],
+              "header_leaf": "Ni",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Ni",
+                  "header_row": 0,
+                  "column": 1
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Ni",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 1 (Ni): 4.63",
+            "value": "4.63",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "4.63",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                1,
+                1
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "source_sample": "retired lithium battery powder",
+            "sample_state": "retired lithium battery powder",
+            "endpoint_rebinding": "verified_table_container"
+          }
+        },
+        {
+          "id": "table_ir_rel_003",
+          "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "table_title": "Table 1 Composition analysis of retired lithium battery materials wt.%",
+          "source_id": "table_ir_ent_001",
+          "source_name": "lithium-ion battery",
+          "target_id": "table_ir_ent_004",
+          "target_name": "Cobalt",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 2 (Co): 6.45",
+          "attributes": {
+            "property": "mass_fraction",
+            "template_id": "step_1",
+            "unit": "weight_percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+            "row_idx": 1,
+            "col_idx": 2,
+            "row_label": "2.56",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Co",
+            "column_descriptor": {
+              "id": "c2",
+              "index": 2,
+              "flat_label": "Co",
+              "header_path": [
+                "Co"
+              ],
+              "header_leaf": "Co",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Co",
+                  "header_row": 0,
+                  "column": 2
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Co",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 2 (Co): 6.45",
+            "value": "6.45",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "6.45",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                2,
+                2
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "source_sample": "retired lithium battery powder",
+            "sample_state": "retired lithium battery powder",
+            "endpoint_rebinding": "verified_table_container"
+          }
+        },
+        {
+          "id": "table_ir_rel_004",
+          "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "table_title": "Table 1 Composition analysis of retired lithium battery materials wt.%",
+          "source_id": "table_ir_ent_001",
+          "source_name": "lithium-ion battery",
+          "target_id": "table_ir_ent_005",
+          "target_name": "Manganese",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 3 (Mn): 11.58",
+          "attributes": {
+            "property": "mass_fraction",
+            "template_id": "step_1",
+            "unit": "weight_percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+            "row_idx": 1,
+            "col_idx": 3,
+            "row_label": "2.56",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Mn",
+            "column_descriptor": {
+              "id": "c3",
+              "index": 3,
+              "flat_label": "Mn",
+              "header_path": [
+                "Mn"
+              ],
+              "header_leaf": "Mn",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Mn",
+                  "header_row": 0,
+                  "column": 3
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Mn",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 3 (Mn): 11.58",
+            "value": "11.58",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "11.58",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                3,
+                3
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "source_sample": "retired lithium battery powder",
+            "sample_state": "retired lithium battery powder",
+            "endpoint_rebinding": "verified_table_container"
+          }
+        },
+        {
+          "id": "table_ir_rel_005",
+          "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "table_title": "Table 1 Composition analysis of retired lithium battery materials wt.%",
+          "source_id": "table_ir_ent_001",
+          "source_name": "lithium-ion battery",
+          "target_id": "table_ir_ent_006",
+          "target_name": "Aluminum",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 4 (Al): 2.93",
+          "attributes": {
+            "property": "mass_fraction",
+            "template_id": "step_1",
+            "unit": "weight_percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+            "row_idx": 1,
+            "col_idx": 4,
+            "row_label": "2.56",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Al",
+            "column_descriptor": {
+              "id": "c4",
+              "index": 4,
+              "flat_label": "Al",
+              "header_path": [
+                "Al"
+              ],
+              "header_leaf": "Al",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Al",
+                  "header_row": 0,
+                  "column": 4
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Al",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 4 (Al): 2.93",
+            "value": "2.93",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "2.93",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                4,
+                4
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "source_sample": "retired lithium battery powder",
+            "sample_state": "retired lithium battery powder",
+            "endpoint_rebinding": "verified_table_container"
+          }
+        },
+        {
+          "id": "table_ir_rel_006",
+          "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "table_title": "Table 1 Composition analysis of retired lithium battery materials wt.%",
+          "source_id": "table_ir_ent_001",
+          "source_name": "lithium-ion battery",
+          "target_id": "table_ir_ent_007",
+          "target_name": "Fe",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 5 (Fe): 2.19",
+          "attributes": {
+            "property": "mass_fraction",
+            "template_id": "step_1",
+            "unit": "weight_percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+            "row_idx": 1,
+            "col_idx": 5,
+            "row_label": "2.56",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Fe",
+            "column_descriptor": {
+              "id": "c5",
+              "index": 5,
+              "flat_label": "Fe",
+              "header_path": [
+                "Fe"
+              ],
+              "header_leaf": "Fe",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Fe",
+                  "header_row": 0,
+                  "column": 5
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Fe",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 5 (Fe): 2.19",
+            "value": "2.19",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "2.19",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                5,
+                5
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "source_sample": "retired lithium battery powder",
+            "sample_state": "retired lithium battery powder",
+            "endpoint_rebinding": "verified_table_container"
+          }
+        },
+        {
+          "id": "table_ir_rel_007",
+          "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "table_title": "Table 1 Composition analysis of retired lithium battery materials wt.%",
+          "source_id": "table_ir_ent_001",
+          "source_name": "lithium-ion battery",
+          "target_id": "table_ir_ent_008",
+          "target_name": "Copper",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 6 (Cu): 1.64",
+          "attributes": {
+            "property": "mass_fraction",
+            "template_id": "step_1",
+            "unit": "weight_percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+            "row_idx": 1,
+            "col_idx": 6,
+            "row_label": "2.56",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Cu",
+            "column_descriptor": {
+              "id": "c6",
+              "index": 6,
+              "flat_label": "Cu",
+              "header_path": [
+                "Cu"
+              ],
+              "header_leaf": "Cu",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Cu",
+                  "header_row": 0,
+                  "column": 6
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Cu",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 6 (Cu): 1.64",
+            "value": "1.64",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "1.64",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                6,
+                6
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "source_sample": "retired lithium battery powder",
+            "sample_state": "retired lithium battery powder",
+            "endpoint_rebinding": "verified_table_container"
+          }
+        },
+        {
+          "id": "table_ir_rel_008",
+          "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+          "table_title": "Table 1 Composition analysis of retired lithium battery materials wt.%",
+          "source_id": "table_ir_ent_001",
+          "source_name": "lithium-ion battery",
+          "target_id": "table_ir_ent_009",
+          "target_name": "Ca",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 7 (Ca): 0.028",
+          "attributes": {
+            "property": "mass_fraction",
+            "template_id": "step_1",
+            "unit": "weight_percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+            "row_idx": 1,
+            "col_idx": 7,
+            "row_label": "2.56",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Ca",
+            "column_descriptor": {
+              "id": "c7",
+              "index": 7,
+              "flat_label": "Ca",
+              "header_path": [
+                "Ca"
+              ],
+              "header_leaf": "Ca",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Ca",
+                  "header_row": 0,
+                  "column": 7
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Ca",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001 row 1, column 7 (Ca): 0.028",
+            "value": "0.028",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "0.028",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                7,
+                7
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "source_sample": "retired lithium battery powder",
+            "sample_state": "retired lithium battery powder",
+            "endpoint_rebinding": "verified_table_container"
+          }
+        }
+      ],
+      "conditions": [],
+      "context_records": [],
+      "table_structure": {
+        "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+        "extraction_mode": "semantic_ir",
+        "table_role": "target_composition",
+        "extractability": {
+          "decision": "extract",
+          "table_role": "target_composition",
+          "reason": "The table reports metal mass fractions (wt.%) for Li, Ni, Co, Mn, Al, Fe, Cu, and Ca in retired lithium battery powder, matching the allowed target_element_composition and metal_mass_fraction fact types.",
+          "confidence": 0.95,
+          "gate_decision": "extract",
+          "gate_table_role": "target_composition"
+        },
+        "layout": null
+      },
+      "source_table": {
+        "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001",
+        "page_number": 3,
+        "caption": "Table 1 Composition analysis of retired lithium battery materials wt.%",
+        "section": "2.1 Materials",
+        "explicit_references": [
+          "The metal contents of the powders are shown in Table 1."
+        ],
+        "headers": [
+          "Li",
+          "Ni",
+          "Co",
+          "Mn",
+          "Al",
+          "Fe",
+          "Cu",
+          "Ca"
+        ],
+        "header_rows": [
+          [
+            "Li",
+            "Ni",
+            "Co",
+            "Mn",
+            "Al",
+            "Fe",
+            "Cu",
+            "Ca"
+          ]
+        ],
+        "column_descriptors": [
+          {
+            "id": "c0",
+            "index": 0,
+            "flat_label": "Li",
+            "header_path": [
+              "Li"
+            ],
+            "header_leaf": "Li",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Li",
+                "header_row": 0,
+                "column": 0
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c1",
+            "index": 1,
+            "flat_label": "Ni",
+            "header_path": [
+              "Ni"
+            ],
+            "header_leaf": "Ni",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Ni",
+                "header_row": 0,
+                "column": 1
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c2",
+            "index": 2,
+            "flat_label": "Co",
+            "header_path": [
+              "Co"
+            ],
+            "header_leaf": "Co",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Co",
+                "header_row": 0,
+                "column": 2
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c3",
+            "index": 3,
+            "flat_label": "Mn",
+            "header_path": [
+              "Mn"
+            ],
+            "header_leaf": "Mn",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Mn",
+                "header_row": 0,
+                "column": 3
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c4",
+            "index": 4,
+            "flat_label": "Al",
+            "header_path": [
+              "Al"
+            ],
+            "header_leaf": "Al",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Al",
+                "header_row": 0,
+                "column": 4
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c5",
+            "index": 5,
+            "flat_label": "Fe",
+            "header_path": [
+              "Fe"
+            ],
+            "header_leaf": "Fe",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Fe",
+                "header_row": 0,
+                "column": 5
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c6",
+            "index": 6,
+            "flat_label": "Cu",
+            "header_path": [
+              "Cu"
+            ],
+            "header_leaf": "Cu",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Cu",
+                "header_row": 0,
+                "column": 6
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c7",
+            "index": 7,
+            "flat_label": "Ca",
+            "header_path": [
+              "Ca"
+            ],
+            "header_leaf": "Ca",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Ca",
+                "header_row": 0,
+                "column": 7
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          }
+        ],
+        "unit_scope_candidates": [],
+        "rows": [
+          [
+            "2.56",
+            "4.63",
+            "6.45",
+            "11.58",
+            "2.93",
+            "2.19",
+            "1.64",
+            "0.028"
+          ]
+        ],
+        "row_contexts": [],
+        "notes": [],
+        "raw_markdown": "| Li | Ni | Co | Mn | Al | Fe | Cu | Ca |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| 2.56 | 4.63 | 6.45 | 11.58 | 2.93 | 2.19 | 1.64 | 0.028 |",
+        "position_start": 6608,
+        "position_end": 6729,
+        "source": "mineru_content_list",
+        "source_kind": "standalone_table",
+        "layout_context": {
+          "previous_block_type": "text",
+          "next_block_type": "text",
+          "between_image_blocks": false
+        },
+        "raw_html": "<table><tr><td>Li</td><td>Ni</td><td>Co</td><td>Mn</td><td>Al</td><td>Fe</td><td>Cu</td><td>Ca</td></tr><tr><td>2.56</td><td>4.63</td><td>6.45</td><td>11.58</td><td>2.93</td><td>2.19</td><td>1.64</td><td>0.028</td></tr></table>",
+        "image_path": "images/a628f15ebaf37b0ed7aa0fb06575388a62668b6ce72abcafea59a0af2e775681.jpg",
+        "bbox": [
+          96,
+          822,
+          482,
+          862
+        ],
+        "metadata": {
+          "table_reference_sentences": [
+            "The metal contents of the powders are shown in Table 1."
+          ]
+        },
+        "table_reference_sentences": [
+          "The metal contents of the powders are shown in Table 1."
+        ]
+      }
+    }
+  },
+  {
+    "chunk_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System__table__TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0002",
+    "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0002",
+    "result": {
+      "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0002",
+      "entity_count": 0,
+      "relation_count": 0,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "entities": [],
+      "relations": [],
+      "conditions": [],
+      "context_records": [],
+      "table_structure": {
+        "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0002",
+        "extraction_mode": "semantic_ir",
+        "table_role": "analytical_method",
+        "extractability": {
+          "decision": "skip",
+          "table_role": "analytical_method",
+          "reason": "Do not extract facts; this table reports kinetic fitting parameters, not target composition or treatment outcome.",
+          "confidence": 0.9
+        }
+      },
+      "source_table": {
+        "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0002",
+        "page_number": 10,
+        "caption": "Table 2 Kinetic parameters of leaching Li, Co, Ni, and Mn",
+        "section": "3.2 Leaching kinetics",
+        "explicit_references": [],
+        "headers": [
+          "T/K",
+          "lnk (Li)",
+          "R^2 (Li)",
+          "lnk (Co)",
+          "R^2 (Co)",
+          "lnk (Ni)",
+          "R^2 (Ni)",
+          "lnk (Mn)",
+          "R^2 (Mn)"
+        ],
+        "header_rows": [
+          [
+            "T/K",
+            "Li",
+            "Li",
+            "Co",
+            "Co",
+            "Ni",
+            "Ni",
+            "Mn",
+            "Mn"
+          ],
+          [
+            "T/K",
+            "lnk",
+            "R^2",
+            "lnk",
+            "R^2",
+            "lnk",
+            "R^2",
+            "lnk",
+            "R^2"
+          ]
+        ],
+        "column_descriptors": [
+          {
+            "id": "c0",
+            "index": 0,
+            "flat_label": "T/K",
+            "header_path": [
+              "T/K"
+            ],
+            "header_leaf": "T/K",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "T/K",
+                "header_row": 0,
+                "column": 0
+              },
+              {
+                "text": "T/K",
+                "header_row": 1,
+                "column": 0
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c1",
+            "index": 1,
+            "flat_label": "lnk (Li)",
+            "header_path": [
+              "Li",
+              "lnk"
+            ],
+            "header_leaf": "lnk",
+            "header_group": "Li",
+            "raw_header_cells": [
+              {
+                "text": "Li",
+                "header_row": 0,
+                "column": 1
+              },
+              {
+                "text": "lnk",
+                "header_row": 1,
+                "column": 1
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c2",
+            "index": 2,
+            "flat_label": "R^2 (Li)",
+            "header_path": [
+              "Li",
+              "R^2"
+            ],
+            "header_leaf": "R^2",
+            "header_group": "Li",
+            "raw_header_cells": [
+              {
+                "text": "Li",
+                "header_row": 0,
+                "column": 2
+              },
+              {
+                "text": "R^2",
+                "header_row": 1,
+                "column": 2
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c3",
+            "index": 3,
+            "flat_label": "lnk (Co)",
+            "header_path": [
+              "Co",
+              "lnk"
+            ],
+            "header_leaf": "lnk",
+            "header_group": "Co",
+            "raw_header_cells": [
+              {
+                "text": "Co",
+                "header_row": 0,
+                "column": 3
+              },
+              {
+                "text": "lnk",
+                "header_row": 1,
+                "column": 3
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c4",
+            "index": 4,
+            "flat_label": "R^2 (Co)",
+            "header_path": [
+              "Co",
+              "R^2"
+            ],
+            "header_leaf": "R^2",
+            "header_group": "Co",
+            "raw_header_cells": [
+              {
+                "text": "Co",
+                "header_row": 0,
+                "column": 4
+              },
+              {
+                "text": "R^2",
+                "header_row": 1,
+                "column": 4
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c5",
+            "index": 5,
+            "flat_label": "lnk (Ni)",
+            "header_path": [
+              "Ni",
+              "lnk"
+            ],
+            "header_leaf": "lnk",
+            "header_group": "Ni",
+            "raw_header_cells": [
+              {
+                "text": "Ni",
+                "header_row": 0,
+                "column": 5
+              },
+              {
+                "text": "lnk",
+                "header_row": 1,
+                "column": 5
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c6",
+            "index": 6,
+            "flat_label": "R^2 (Ni)",
+            "header_path": [
+              "Ni",
+              "R^2"
+            ],
+            "header_leaf": "R^2",
+            "header_group": "Ni",
+            "raw_header_cells": [
+              {
+                "text": "Ni",
+                "header_row": 0,
+                "column": 6
+              },
+              {
+                "text": "R^2",
+                "header_row": 1,
+                "column": 6
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c7",
+            "index": 7,
+            "flat_label": "lnk (Mn)",
+            "header_path": [
+              "Mn",
+              "lnk"
+            ],
+            "header_leaf": "lnk",
+            "header_group": "Mn",
+            "raw_header_cells": [
+              {
+                "text": "Mn",
+                "header_row": 0,
+                "column": 7
+              },
+              {
+                "text": "lnk",
+                "header_row": 1,
+                "column": 7
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c8",
+            "index": 8,
+            "flat_label": "R^2 (Mn)",
+            "header_path": [
+              "Mn",
+              "R^2"
+            ],
+            "header_leaf": "R^2",
+            "header_group": "Mn",
+            "raw_header_cells": [
+              {
+                "text": "Mn",
+                "header_row": 0,
+                "column": 8
+              },
+              {
+                "text": "R^2",
+                "header_row": 1,
+                "column": 8
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          }
+        ],
+        "unit_scope_candidates": [],
+        "rows": [
+          [
+            "298",
+            "-7.405",
+            "0.95",
+            "-9.660",
+            "0.93",
+            "-9.113",
+            "0.99",
+            "-10.361",
+            "0.93"
+          ],
+          [
+            "308",
+            "-6.383",
+            "0.97",
+            "-9.088",
+            "0.92",
+            "-8.118",
+            "0.98",
+            "-9.302",
+            "0.93"
+          ],
+          [
+            "318",
+            "-5.597",
+            "0.96",
+            "-8.383",
+            "0.95",
+            "-7.409",
+            "0.97",
+            "-8.482",
+            "0.93"
+          ],
+          [
+            "328",
+            "-5.437",
+            "0.97",
+            "-7.833",
+            "0.94",
+            "-6.990",
+            "0.96",
+            "-7.922",
+            "0.92"
+          ],
+          [
+            "338",
+            "-5.190",
+            "0.98",
+            "-7.112",
+            "0.96",
+            "-6.377",
+            "0.96",
+            "-7.470",
+            "0.93"
+          ]
+        ],
+        "row_contexts": [],
+        "notes": [],
+        "raw_markdown": "| T/K | Li | Li | Co | Co | Ni | Ni | Mn | Mn |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| T/K | lnk | R^2 | lnk | R^2 | lnk | R^2 | lnk | R^2 |\n| 298 | -7.405 | 0.95 | -9.660 | 0.93 | -9.113 | 0.99 | -10.361 | 0.93 |\n| 308 | -6.383 | 0.97 | -9.088 | 0.92 | -8.118 | 0.98 | -9.302 | 0.93 |\n| 318 | -5.597 | 0.96 | -8.383 | 0.95 | -7.409 | 0.97 | -8.482 | 0.93 |\n| 328 | -5.437 | 0.97 | -7.833 | 0.94 | -6.990 | 0.96 | -7.922 | 0.92 |\n| 338 | -5.190 | 0.98 | -7.112 | 0.96 | -6.377 | 0.96 | -7.470 | 0.93 |",
+        "position_start": 23199,
+        "position_end": 23320,
+        "source": "mineru_content_list",
+        "source_kind": "standalone_table",
+        "layout_context": {
+          "previous_block_type": "chart",
+          "next_block_type": "equation",
+          "between_image_blocks": false
+        },
+        "raw_html": "<table><tr><td rowspan=\"2\">T/K</td><td colspan=\"2\">Li</td><td colspan=\"2\">Co</td><td colspan=\"2\">Ni</td><td colspan=\"2\">Mn</td></tr><tr><td>lnk</td><td> $R^2$ </td><td>lnk</td><td> $R^2$ </td><td>lnk</td><td> $R^2$ </td><td>lnk</td><td> $R^2$ </td></tr><tr><td>298</td><td>-7.405</td><td>0.95</td><td>-9.660</td><td>0.93</td><td>-9.113</td><td>0.99</td><td>-10.361</td><td>0.93</td></tr><tr><td>308</td><td>-6.383</td><td>0.97</td><td>-9.088</td><td>0.92</td><td>-8.118</td><td>0.98</td><td>-9.302</td><td>0.93</td></tr><tr><td>318</td><td>-5.597</td><td>0.96</td><td>-8.383</td><td>0.95</td><td>-7.409</td><td>0.97</td><td>-8.482</td><td>0.93</td></tr><tr><td>328</td><td>-5.437</td><td>0.97</td><td>-7.833</td><td>0.94</td><td>-6.990</td><td>0.96</td><td>-7.922</td><td>0.92</td></tr><tr><td>338</td><td>-5.190</td><td>0.98</td><td>-7.112</td><td>0.96</td><td>-6.377</td><td>0.96</td><td>-7.470</td><td>0.93</td></tr></table>",
+        "image_path": "images/a9d8274e773dae75d14909299f07a44707540aa83e5c3a304b345f43118b3435.jpg",
+        "bbox": [
+          96,
+          579,
+          898,
+          701
+        ],
+        "metadata": {
+          "table_reference_sentences": [
+            "Considering that in addition to the increase in the leaching efficiency of the valuable metals, the dissolution of the impurity metals will also be enhanced to some extent, as shown in Table S2.",
+            "The experimental data in Figure 8 were fitted, and the results obtained from the fitting are shown in Figure 9 and Table 2."
+          ]
+        },
+        "table_reference_sentences": [
+          "Considering that in addition to the increase in the leaching efficiency of the valuable metals, the dissolution of the impurity metals will also be enhanced to some extent, as shown in Table S2.",
+          "The experimental data in Figure 8 were fitted, and the results obtained from the fitting are shown in Figure 9 and Table 2."
+        ]
+      }
+    }
+  }
+]

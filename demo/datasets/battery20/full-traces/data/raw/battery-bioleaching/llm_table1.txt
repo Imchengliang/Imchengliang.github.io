@@ -1,0 +1,675 @@
+[
+  {
+    "chunk_id": "Bioleaching_of_Valuable_Metals_from_Spent_Lithium-Ion_Mobile_Phone_Batteries_Using_Aspergillus_Niger__table__TABLE_Bioleaching_of_Valuable_Metals_from_Spent_Lithium-Ion_Mobile_Phone_Batteries_Using_Aspergillus_Niger_0001",
+    "table_id": "TABLE_Bioleaching_of_Valuable_Metals_from_Spent_Lithium-Ion_Mobile_Phone_Batteries_Using_Aspergillus_Niger_0001",
+    "llm_raw_response": "## TABLE_ROLE_GATE_RESPONSE\n{\n  \"table_role_decision\": {\n    \"decision\": \"extract\",\n    \"table_role\": \"target_composition\",\n    \"confidence\": 0.95,\n    \"causal_role\": {\n      \"source_object\": \"LIBs (lithium-ion batteries)\",\n      \"transformation\": \"acid digestion / XRF analysis\",\n      \"measured_object\": \"metals in LIBs\",\n      \"measured_quantity\": \"component concentration (% w w-1)\",\n      \"evidence_role\": \"target_composition\"\n    },\n    \"region_roles\": [\n      {\n        \"row_range\": [1, 14],\n        \"role\": \"target_measurement\",\n        \"reason\": \"Rows list metal components and their measured concentrations from XRF and chemical digestion.\"\n      }\n    ],\n    \"extract_row_ranges\": [[1, 14]],\n    \"caption_sufficient\": true,\n    \"evidence_steps\": [\n      {\n        \"step\": \"caption\",\n        \"evidence\": \"Metal composition of LIBs.\",\n        \"judgment\": \"supports_extract\",\n        \"reason\": \"Caption explicitly states the table reports metal composition of LIBs, a target material.\"\n      },\n      {\n        \"step\": \"table_reference_sentences\",\n        \"evidence\": \"The results are shown in Table 1. The results of acid digestion are shown in Table 1.\",\n        \"judgment\": \"supports_extract\",\n        \"reason\": \"Reference sentences indicate the table presents results of acid digestion, a treatment outcome.\"\n      },\n      {\n        \"step\": \"headers\",\n        \"evidence\": \"Component (% (w w-1)), XRF analyze, Chemical digestion\",\n        \"judgment\": \"supports_extract\",\n        \"reason\": \"Headers show component concentrations measured by two methods, confirming target composition.\"\n      }\n    ],\n    \"allowed_fact_types\": [\n      \"target_composition\",\n      \"measurement_value\"\n    ],\n    \"excluded_fact_types\": [\n      \"economic_value\",\n      \"literature_summary\",\n      \"process_parameter\"\n    ],\n    \"allowed_relation_types\": [],\n    \"ir_instruction\": \"Extract metal component concentrations from LIBs as target composition facts, using the component name and measured value from either XRF or chemical digestion.\",\n    \"uncertainty\": \"\"\n  }\n}\n\n## SEMANTIC_IR_RESPONSE\n{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"target_composition\",\n      \"reason\": \"The table reports metal component concentrations in LIBs measured by XRF and chemical digestion, matching target_composition and measurement_value facts.\",\n      \"confidence\": 0.9\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 0,\n        \"raw_header\": \"Component (% (w w-1))\",\n        \"entity_text\": \"Component\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"% (w w-1)\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 1,\n        \"raw_header\": \"XRF analyze\",\n        \"entity_text\": \"XRF analyze\",\n        \"entity_type\": \"Process\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"Chemical digestion\",\n        \"entity_text\": \"Chemical digestion\",\n        \"entity_type\": \"Process\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 14]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [1]\n          }\n        },\n        \"bind\": {\n          \"container\": {\n            \"from\": \"literal\",\n            \"literal\": \"LIBs\",\n            \"type\": \"Product\"\n          },\n          \"constituent\": {\n            \"from\": \"row[0]\",\n            \"type\": \"Material\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column[0].semantic.unit_text\"\n          },\n          \"measurement_method\": {\n            \"name\": \"measurement_method\",\n            \"from\": \"column.semantic.entity_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"container\",\n          \"predicate\": \"CONTAINS\",\n          \"target\": \"constituent\",\n          \"property\": \"component concentration\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"measurement_method\"]\n        }\n      },\n      {\n        \"step_id\": \"step_2\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 14]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [2]\n          }\n        },\n        \"bind\": {\n          \"container\": {\n            \"from\": \"literal\",\n            \"literal\": \"LIBs\",\n            \"type\": \"Product\"\n          },\n          \"constituent\": {\n            \"from\": \"row[0]\",\n            \"type\": \"Material\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column[0].semantic.unit_text\"\n          },\n          \"measurement_method\": {\n            \"name\": \"measurement_method\",\n            \"from\": \"column.semantic.entity_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"container\",\n          \"predicate\": \"CONTAINS\",\n          \"target\": \"constituent\",\n          \"property\": \"component concentration\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"measurement_method\"]\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"The table reports metal component concentrations in LIBs. The container is the literal 'LIBs' (Product). Each row's first cell gives the metal constituent (Material). Columns 1 and 2 give numeric concentrations measured by XRF and chemical digestion, respectively. The unit '% (w w-1)' is declared on column 0 and applied to both value columns. Each numeric value is emitted as a CONTAINS fact from LIBs to the metal, with the measurement method as a condition.\",\n      \"uncertainties\": [\n        \"The header 'Component (% (w w-1))' is treated as the constituent column with a shared unit; the word 'Component' is not used as an entity label because row values are metal names.\",\n        \"Non-numeric cells such as 'nd' and 'nt' are skipped by the number parser.\"\n      ]\n    }\n  }\n}",
+    "llm_gate_response": "{\n  \"table_role_decision\": {\n    \"decision\": \"extract\",\n    \"table_role\": \"target_composition\",\n    \"confidence\": 0.95,\n    \"causal_role\": {\n      \"source_object\": \"LIBs (lithium-ion batteries)\",\n      \"transformation\": \"acid digestion / XRF analysis\",\n      \"measured_object\": \"metals in LIBs\",\n      \"measured_quantity\": \"component concentration (% w w-1)\",\n      \"evidence_role\": \"target_composition\"\n    },\n    \"region_roles\": [\n      {\n        \"row_range\": [1, 14],\n        \"role\": \"target_measurement\",\n        \"reason\": \"Rows list metal components and their measured concentrations from XRF and chemical digestion.\"\n      }\n    ],\n    \"extract_row_ranges\": [[1, 14]],\n    \"caption_sufficient\": true,\n    \"evidence_steps\": [\n      {\n        \"step\": \"caption\",\n        \"evidence\": \"Metal composition of LIBs.\",\n        \"judgment\": \"supports_extract\",\n        \"reason\": \"Caption explicitly states the table reports metal composition of LIBs, a target material.\"\n      },\n      {\n        \"step\": \"table_reference_sentences\",\n        \"evidence\": \"The results are shown in Table 1. The results of acid digestion are shown in Table 1.\",\n        \"judgment\": \"supports_extract\",\n        \"reason\": \"Reference sentences indicate the table presents results of acid digestion, a treatment outcome.\"\n      },\n      {\n        \"step\": \"headers\",\n        \"evidence\": \"Component (% (w w-1)), XRF analyze, Chemical digestion\",\n        \"judgment\": \"supports_extract\",\n        \"reason\": \"Headers show component concentrations measured by two methods, confirming target composition.\"\n      }\n    ],\n    \"allowed_fact_types\": [\n      \"target_composition\",\n      \"measurement_value\"\n    ],\n    \"excluded_fact_types\": [\n      \"economic_value\",\n      \"literature_summary\",\n      \"process_parameter\"\n    ],\n    \"allowed_relation_types\": [],\n    \"ir_instruction\": \"Extract metal component concentrations from LIBs as target composition facts, using the component name and measured value from either XRF or chemical digestion.\",\n    \"uncertainty\": \"\"\n  }\n}",
+    "llm_ir_response": "{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"target_composition\",\n      \"reason\": \"The table reports metal component concentrations in LIBs measured by XRF and chemical digestion, matching target_composition and measurement_value facts.\",\n      \"confidence\": 0.9\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 0,\n        \"raw_header\": \"Component (% (w w-1))\",\n        \"entity_text\": \"Component\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"% (w w-1)\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 1,\n        \"raw_header\": \"XRF analyze\",\n        \"entity_text\": \"XRF analyze\",\n        \"entity_type\": \"Process\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"Chemical digestion\",\n        \"entity_text\": \"Chemical digestion\",\n        \"entity_type\": \"Process\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 14]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [1]\n          }\n        },\n        \"bind\": {\n          \"container\": {\n            \"from\": \"literal\",\n            \"literal\": \"LIBs\",\n            \"type\": \"Product\"\n          },\n          \"constituent\": {\n            \"from\": \"row[0]\",\n            \"type\": \"Material\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column[0].semantic.unit_text\"\n          },\n          \"measurement_method\": {\n            \"name\": \"measurement_method\",\n            \"from\": \"column.semantic.entity_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"container\",\n          \"predicate\": \"CONTAINS\",\n          \"target\": \"constituent\",\n          \"property\": \"component concentration\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"measurement_method\"]\n        }\n      },\n      {\n        \"step_id\": \"step_2\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 14]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [2]\n          }\n        },\n        \"bind\": {\n          \"container\": {\n            \"from\": \"literal\",\n            \"literal\": \"LIBs\",\n            \"type\": \"Product\"\n          },\n          \"constituent\": {\n            \"from\": \"row[0]\",\n            \"type\": \"Material\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column[0].semantic.unit_text\"\n          },\n          \"measurement_method\": {\n            \"name\": \"measurement_method\",\n            \"from\": \"column.semantic.entity_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"container\",\n          \"predicate\": \"CONTAINS\",\n          \"target\": \"constituent\",\n          \"property\": \"component concentration\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"measurement_method\"]\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"The table reports metal component concentrations in LIBs. The container is the literal 'LIBs' (Product). Each row's first cell gives the metal constituent (Material). Columns 1 and 2 give numeric concentrations measured by XRF and chemical digestion, respectively. The unit '% (w w-1)' is declared on column 0 and applied to both value columns. Each numeric value is emitted as a CONTAINS fact from LIBs to the metal, with the measurement method as a condition.\",\n      \"uncertainties\": [\n        \"The header 'Component (% (w w-1))' is treated as the constituent column with a shared unit; the word 'Component' is not used as an entity label because row values are metal names.\",\n        \"Non-numeric cells such as 'nd' and 'nt' are skipped by the number parser.\"\n      ]\n    }\n  }\n}",
+    "table_role_decision": {
+      "decision": "extract",
+      "table_role": "target_composition",
+      "confidence": 0.95,
+      "causal_role": {
+        "source_object": "LIBs (lithium-ion batteries)",
+        "transformation": "acid digestion / XRF analysis",
+        "measured_object": "metals in LIBs",
+        "measured_quantity": "component concentration (% w w-1)",
+        "evidence_role": "target_composition"
+      },
+      "region_roles": [
+        {
+          "row_range": [
+            1,
+            14
+          ],
+          "role": "target_measurement",
+          "reason": "Rows list metal components and their measured concentrations from XRF and chemical digestion."
+        }
+      ],
+      "extract_row_ranges": [
+        [
+          1,
+          14
+        ]
+      ],
+      "caption_sufficient": true,
+      "evidence_steps": [
+        {
+          "step": "caption",
+          "evidence": "Metal composition of LIBs.",
+          "judgment": "supports_extract",
+          "reason": "Caption explicitly states the table reports metal composition of LIBs, a target material."
+        },
+        {
+          "step": "table_reference_sentences",
+          "evidence": "The results are shown in Table 1. The results of acid digestion are shown in Table 1.",
+          "judgment": "supports_extract",
+          "reason": "Reference sentences indicate the table presents results of acid digestion, a treatment outcome."
+        },
+        {
+          "step": "headers",
+          "evidence": "Component (% (w w-1)), XRF analyze, Chemical digestion",
+          "judgment": "supports_extract",
+          "reason": "Headers show component concentrations measured by two methods, confirming target composition."
+        }
+      ],
+      "allowed_fact_types": [
+        "target_composition",
+        "measurement_value"
+      ],
+      "excluded_fact_types": [
+        "economic_value",
+        "literature_summary",
+        "process_parameter"
+      ],
+      "allowed_relation_types": [],
+      "ir_instruction": "Extract metal component concentrations from LIBs as target composition facts, using the component name and measured value from either XRF or chemical digestion.",
+      "uncertainty": ""
+    },
+    "llm_interpretation": {
+      "semantic_ir": {
+        "extractability": {
+          "decision": "extract",
+          "table_role": "target_composition",
+          "reason": "The table reports metal component concentrations in LIBs measured by XRF and chemical digestion, matching target_composition and measurement_value facts.",
+          "confidence": 0.9
+        },
+        "column_semantics": [
+          {
+            "column": 0,
+            "raw_header": "Component (% (w w-1))",
+            "entity_text": "Component",
+            "entity_type": "Material",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "% (w w-1)",
+            "measure_text": "",
+            "confidence": 0.95
+          },
+          {
+            "column": 1,
+            "raw_header": "XRF analyze",
+            "entity_text": "XRF analyze",
+            "entity_type": "Process",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "",
+            "measure_text": "",
+            "confidence": 0.9
+          },
+          {
+            "column": 2,
+            "raw_header": "Chemical digestion",
+            "entity_text": "Chemical digestion",
+            "entity_type": "Process",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "",
+            "measure_text": "",
+            "confidence": 0.9
+          }
+        ],
+        "program": [
+          {
+            "step_id": "step_1",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  1,
+                  14
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  1
+                ]
+              }
+            },
+            "bind": {
+              "container": {
+                "from": "literal",
+                "literal": "LIBs",
+                "type": "Product"
+              },
+              "constituent": {
+                "from": "row[0]",
+                "type": "Material"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column[0].semantic.unit_text"
+              },
+              "measurement_method": {
+                "name": "measurement_method",
+                "from": "column.semantic.entity_text"
+              }
+            },
+            "emit": {
+              "source": "container",
+              "predicate": "CONTAINS",
+              "target": "constituent",
+              "property": "component concentration",
+              "value": "value",
+              "unit": "unit",
+              "conditions": [
+                "measurement_method"
+              ]
+            }
+          },
+          {
+            "step_id": "step_2",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  1,
+                  14
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  2
+                ]
+              }
+            },
+            "bind": {
+              "container": {
+                "from": "literal",
+                "literal": "LIBs",
+                "type": "Product"
+              },
+              "constituent": {
+                "from": "row[0]",
+                "type": "Material"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column[0].semantic.unit_text"
+              },
+              "measurement_method": {
+                "name": "measurement_method",
+                "from": "column.semantic.entity_text"
+              }
+            },
+            "emit": {
+              "source": "container",
+              "predicate": "CONTAINS",
+              "target": "constituent",
+              "property": "component concentration",
+              "value": "value",
+              "unit": "unit",
+              "conditions": [
+                "measurement_method"
+              ]
+            }
+          }
+        ],
+        "context_program": [],
+        "rationale": {
+          "binding_summary": "The table reports metal component concentrations in LIBs. The container is the literal 'LIBs' (Product). Each row's first cell gives the metal constituent (Material). Columns 1 and 2 give numeric concentrations measured by XRF and chemical digestion, respectively. The unit '% (w w-1)' is declared on column 0 and applied to both value columns. Each numeric value is emitted as a CONTAINS fact from LIBs to the metal, with the measurement method as a condition.",
+          "uncertainties": [
+            "The header 'Component (% (w w-1))' is treated as the constituent column with a shared unit; the word 'Component' is not used as an entity label because row values are metal names.",
+            "Non-numeric cells such as 'nd' and 'nt' are skipped by the number parser."
+          ]
+        }
+      }
+    },
+    "semantic_ir": {
+      "extractability": {
+        "decision": "extract",
+        "table_role": "target_composition",
+        "reason": "The table reports metal component concentrations in LIBs measured by XRF and chemical digestion, matching target_composition and measurement_value facts.",
+        "confidence": 0.95,
+        "gate_decision": "extract",
+        "gate_table_role": "target_composition"
+      },
+      "column_semantics": [
+        {
+          "column": 0,
+          "raw_header": "Component (% (w w-1))",
+          "entity_text": "Component",
+          "entity_type": "Material",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "% (w w-1)",
+          "measure_text": "",
+          "confidence": 0.95
+        },
+        {
+          "column": 1,
+          "raw_header": "XRF analyze",
+          "entity_text": "XRF analyze",
+          "entity_type": "Process",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "",
+          "measure_text": "",
+          "confidence": 0.9
+        },
+        {
+          "column": 2,
+          "raw_header": "Chemical digestion",
+          "entity_text": "Chemical digestion",
+          "entity_type": "Process",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "",
+          "measure_text": "",
+          "confidence": 0.9
+        }
+      ],
+      "program": [
+        {
+          "step_id": "step_1",
+          "op": "foreach_cell",
+          "select": {
+            "rows": {
+              "selector": "row_ranges",
+              "row_ranges": [
+                [
+                  1,
+                  14
+                ]
+              ]
+            },
+            "cols": {
+              "selector": "columns",
+              "columns": [
+                1
+              ]
+            }
+          },
+          "bind": {
+            "container": {
+              "from": "literal",
+              "literal": "LIBs",
+              "type": "Product"
+            },
+            "constituent": {
+              "from": "row[0]",
+              "type": "Material"
+            },
+            "value": {
+              "from": "cell",
+              "parser": "number"
+            },
+            "unit": {
+              "from": "column[0].semantic.unit_text"
+            },
+            "measurement_method": {
+              "name": "measurement_method",
+              "from": "column.semantic.entity_text"
+            }
+          },
+          "emit": {
+            "source": "container",
+            "predicate": "CONTAINS",
+            "target": "constituent",
+            "property": "component concentration",
+            "value": "value",
+            "unit": "unit",
+            "conditions": [
+              "measurement_method"
+            ]
+          }
+        },
+        {
+          "step_id": "step_2",
+          "op": "foreach_cell",
+          "select": {
+            "rows": {
+              "selector": "row_ranges",
+              "row_ranges": [
+                [
+                  1,
+                  14
+                ]
+              ]
+            },
+            "cols": {
+              "selector": "columns",
+              "columns": [
+                2
+              ]
+            }
+          },
+          "bind": {
+            "container": {
+              "from": "literal",
+              "literal": "LIBs",
+              "type": "Product"
+            },
+            "constituent": {
+              "from": "row[0]",
+              "type": "Material"
+            },
+            "value": {
+              "from": "cell",
+              "parser": "number"
+            },
+            "unit": {
+              "from": "column[0].semantic.unit_text"
+            },
+            "measurement_method": {
+              "name": "measurement_method",
+              "from": "column.semantic.entity_text"
+            }
+          },
+          "emit": {
+            "source": "container",
+            "predicate": "CONTAINS",
+            "target": "constituent",
+            "property": "component concentration",
+            "value": "value",
+            "unit": "unit",
+            "conditions": [
+              "measurement_method"
+            ]
+          }
+        }
+      ],
+      "context_program": [],
+      "rationale": {
+        "binding_summary": "The table reports metal component concentrations in LIBs. The container is the literal 'LIBs' (Product). Each row's first cell gives the metal constituent (Material). Columns 1 and 2 give numeric concentrations measured by XRF and chemical digestion, respectively. The unit '% (w w-1)' is declared on column 0 and applied to both value columns. Each numeric value is emitted as a CONTAINS fact from LIBs to the metal, with the measurement method as a condition.",
+        "uncertainties": [
+          "The header 'Component (% (w w-1))' is treated as the constituent column with a shared unit; the word 'Component' is not used as an entity label because row values are metal names.",
+          "Non-numeric cells such as 'nd' and 'nt' are skipped by the number parser."
+        ]
+      },
+      "table_id": "TABLE_Bioleaching_of_Valuable_Metals_from_Spent_Lithium-Ion_Mobile_Phone_Batteries_Using_Aspergillus_Niger_0001"
+    },
+    "table_structure": {
+      "table_id": "TABLE_Bioleaching_of_Valuable_Metals_from_Spent_Lithium-Ion_Mobile_Phone_Batteries_Using_Aspergillus_Niger_0001",
+      "extraction_mode": "semantic_ir",
+      "table_role": "target_composition",
+      "extractability": {
+        "decision": "extract",
+        "table_role": "target_composition",
+        "reason": "The table reports metal component concentrations in LIBs measured by XRF and chemical digestion, matching target_composition and measurement_value facts.",
+        "confidence": 0.95,
+        "gate_decision": "extract",
+        "gate_table_role": "target_composition"
+      },
+      "layout": null
+    },
+    "verification_report": {
+      "status": "passed",
+      "skip_reason": null,
+      "cell_grounded_relations": 21,
+      "entity_count": 15,
+      "condition_count": 2,
+      "context_record_count": 0,
+      "unsupported_templates": [],
+      "scope_rejections": [],
+      "domain_range_rejections": [],
+      "aggregate_row_diagnostics": [],
+      "unresolved_endpoint_types": [],
+      "unresolved_type_facts": [],
+      "semantic_gate": [],
+      "slot_binding_conflicts": [],
+      "layout_program_mismatches": [],
+      "checked_templates": 2
+    },
+    "execution_trace": [
+      {
+        "template_id": "step_1",
+        "op": "foreach_cell",
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "columns": [
+          1
+        ],
+        "emitted": 12,
+        "skipped": 2
+      },
+      {
+        "template_id": "step_2",
+        "op": "foreach_cell",
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "columns": [
+          2
+        ],
+        "emitted": 9,
+        "skipped": 5
+      }
+    ],
+    "failed_rewrite_verification_report": null,
+    "failed_rewrite_execution_trace": null,
+    "table_cache_key": "b411059018142a57096a3bb65ed5e8bf30000188fe319bf3cca7d159be9dc6f2",
+    "table_cache_version": {
+      "format_version": 1,
+      "table_code_sha256": "f0dd5f4553ba60fa1f8dc3a9e2facb37220e0d8b94248c9976aea3179fbc8514",
+      "table_file_sha256": {
+        "__init__.py": "859afd37280303ac79ea652fcd1c347db6f6e9a7427d1bf201341ff92fdbb9f3",
+        "artifact_cache.py": "dae107568c3be648794486b4140f41386af8bd9d77b261dcf82505cef6e977aa",
+        "contract.py": "d537d95059e8a540b82872ffebe956d5e8fd43081e1ca630aa34b5a16359092a",
+        "cross_table_reference_resolver.py": "834fd5639f5b7dd79de0cd4b92943e3584283c02479a03e12c5b128f625bbf11",
+        "extraction_agent.py": "bd64ffbda3e1832704c44c090412041e0af71280c17c50aa2d189228fcaa31fa",
+        "ir/__init__.py": "388534b9fb9c0b6eae80334aef2e8eae376c73fca9ab48e74ddf4299bf50e425",
+        "ir/common.py": "53ca6b464bda54f2b4f95741c281e567c792a5206816f9164c8dc483dc347e8e",
+        "ir/context.py": "885b13c1bc0b1e48ad2e1eee5f466979adc657d6fc13abacf7b2330948999eea",
+        "ir/core.py": "cff62003caca13eaaf0abdd93828b601a5201f512fabfb630e07ac64bbf2758c",
+        "ir/executor.py": "aeea4593e5966a9de88854f303a1e1ccb522acc46fe70acbd20a0ace9f8bb072",
+        "ir/parsing.py": "d39fcd8d9ee08da4db6498ba63c1d6608615fa266d4d15de23d526aed0733c09",
+        "ir/policy.py": "c2ef18469dc2d402825a1559a860901927666dcc1fd1e80e3ec82669bb40d307",
+        "ir/runtime.py": "51aa3777823884bdabe06497e64d6cd04a5ce7d47e4674ddb0d7c378a4270059",
+        "ir/schema.py": "ba515d5e60c1c0ea8ae0d15b7265eb5926518452e796dc6973f7372ddf25f993",
+        "ir/selectors.py": "81b5606cc71f3ca6f4eaf848083e8d4b194b1c5a53f1cdf2832e439df6a456f1",
+        "ir/value_resolver.py": "feebb6a908f79b9c5975cc6cf7c657847522208a38d003f3b9cba9d8577864d8",
+        "ir/verifier.py": "44e33d3ca7e5c2305b845640d42e50777e591dedc47f07576446889101bfe1fa",
+        "reference_info.py": "eee0cd93396e9da1ba9682f94493de245543a8699d41fb4da2100c89e80d3782",
+        "repair/__init__.py": "05a749a9dd4f2c77ca79cd7b0cc2e00a8eae16d11cdf8f43ff26cd26e05639b9",
+        "repair/applier.py": "b380f43ab7a0e2451a981244b2ea5f43f9dd411081ed8dd10bdc43d9fe91e256",
+        "repair/local.py": "f5d94287673530f100c594b123765b99178a12a62dbc9f0e8f1fbcc58fb059bb",
+        "repair/prompt.py": "5e0f55f3e0da9e6d1093498562f699b41a5d3293fa1c4fd72c4bb4c81cfb6fc1",
+        "repair/schema.py": "2ed0bf5480b2a632aaa8b67c2cfee85fd2f8a5b21ebcfe22984ec5840d649d56",
+        "role_gate.py": "5211dc375d419d512eebc08da3126a42b7bcc188952128ce1a8f6c72536178d6"
+      }
+    }
+  },
+  {
+    "chunk_id": "Bioleaching_of_Valuable_Metals_from_Spent_Lithium-Ion_Mobile_Phone_Batteries_Using_Aspergillus_Niger__table__TABLE_Bioleaching_of_Valuable_Metals_from_Spent_Lithium-Ion_Mobile_Phone_Batteries_Using_Aspergillus_Niger_0002",
+    "table_id": "TABLE_Bioleaching_of_Valuable_Metals_from_Spent_Lithium-Ion_Mobile_Phone_Batteries_Using_Aspergillus_Niger_0002",
+    "llm_raw_response": "## TABLE_ROLE_GATE_RESPONSE\n{\n  \"table_role_decision\": {\n    \"decision\": \"skip\",\n    \"table_role\": \"non_target_context\",\n    \"confidence\": 0.85,\n    \"causal_role\": {\n      \"source_object\": \"battery powder / WEEE\",\n      \"transformation\": \"bioleaching (one-step, two-step, spent medium)\",\n      \"measured_object\": \"organic acids (citric, oxalic, gluconic)\",\n      \"measured_quantity\": \"concentration (mg L-1)\",\n      \"evidence_role\": \"out_of_scope\"\n    },\n    \"region_roles\": [\n      {\n        \"row_range\": [1, 4],\n        \"role\": \"out_of_scope\",\n        \"reason\": \"Rows report concentrations of process-internal organic acids (metabolic products of bioleaching microorganisms), not the composition or recovery of a WEEE constituent.\"\n      }\n    ],\n    \"extract_row_ranges\": [],\n    \"caption_sufficient\": true,\n    \"evidence_steps\": [\n      {\n        \"step\": \"caption\",\n        \"evidence\": \"Organic acids concentration at the end of the three methods of bioleaching.\",\n        \"judgment\": \"supports_skip\",\n        \"reason\": \"Measured object is organic acids, which are process-internal agents, not the target WEEE material.\"\n      },\n      {\n        \"step\": \"table_reference_sentences\",\n        \"evidence\": \"Higher recovery in the spent medium bioleaching and the results of organic acid production (Table 2) indicate that citric acid had a more significant role in the bioleaching of battery powder than other specified organic acids.\",\n        \"judgment\": \"supports_skip\",\n        \"reason\": \"Organic acids are discussed as mechanism variables influencing recovery, not as the recovered target material.\"\n      }\n    ],\n    \"allowed_fact_types\": [],\n    \"excluded_fact_types\": [\n      \"organic acid concentration\",\n      \"metabolite concentration\"\n    ],\n    \"allowed_relation_types\": [],\n    \"ir_instruction\": \"Do not extract facts from this table; it reports process-internal organic acid concentrations, not WEEE target composition or recovery.\",\n    \"uncertainty\": \"None; the table clearly measures organic acids as bioleaching metabolites, which are out of scope per the boundary notes.\"\n  }\n}",
+    "llm_gate_response": "{\n  \"table_role_decision\": {\n    \"decision\": \"skip\",\n    \"table_role\": \"non_target_context\",\n    \"confidence\": 0.85,\n    \"causal_role\": {\n      \"source_object\": \"battery powder / WEEE\",\n      \"transformation\": \"bioleaching (one-step, two-step, spent medium)\",\n      \"measured_object\": \"organic acids (citric, oxalic, gluconic)\",\n      \"measured_quantity\": \"concentration (mg L-1)\",\n      \"evidence_role\": \"out_of_scope\"\n    },\n    \"region_roles\": [\n      {\n        \"row_range\": [1, 4],\n        \"role\": \"out_of_scope\",\n        \"reason\": \"Rows report concentrations of process-internal organic acids (metabolic products of bioleaching microorganisms), not the composition or recovery of a WEEE constituent.\"\n      }\n    ],\n    \"extract_row_ranges\": [],\n    \"caption_sufficient\": true,\n    \"evidence_steps\": [\n      {\n        \"step\": \"caption\",\n        \"evidence\": \"Organic acids concentration at the end of the three methods of bioleaching.\",\n        \"judgment\": \"supports_skip\",\n        \"reason\": \"Measured object is organic acids, which are process-internal agents, not the target WEEE material.\"\n      },\n      {\n        \"step\": \"table_reference_sentences\",\n        \"evidence\": \"Higher recovery in the spent medium bioleaching and the results of organic acid production (Table 2) indicate that citric acid had a more significant role in the bioleaching of battery powder than other specified organic acids.\",\n        \"judgment\": \"supports_skip\",\n        \"reason\": \"Organic acids are discussed as mechanism variables influencing recovery, not as the recovered target material.\"\n      }\n    ],\n    \"allowed_fact_types\": [],\n    \"excluded_fact_types\": [\n      \"organic acid concentration\",\n      \"metabolite concentration\"\n    ],\n    \"allowed_relation_types\": [],\n    \"ir_instruction\": \"Do not extract facts from this table; it reports process-internal organic acid concentrations, not WEEE target composition or recovery.\",\n    \"uncertainty\": \"None; the table clearly measures organic acids as bioleaching metabolites, which are out of scope per the boundary notes.\"\n  }\n}",
+    "llm_ir_response": null,
+    "table_role_decision": {
+      "decision": "skip",
+      "table_role": "non_target_context",
+      "confidence": 0.85,
+      "causal_role": {
+        "source_object": "battery powder / WEEE",
+        "transformation": "bioleaching (one-step, two-step, spent medium)",
+        "measured_object": "organic acids (citric, oxalic, gluconic)",
+        "measured_quantity": "concentration (mg L-1)",
+        "evidence_role": "out_of_scope"
+      },
+      "region_roles": [
+        {
+          "row_range": [
+            1,
+            4
+          ],
+          "role": "out_of_scope",
+          "reason": "Rows report concentrations of process-internal organic acids (metabolic products of bioleaching microorganisms), not the composition or recovery of a WEEE constituent."
+        }
+      ],
+      "extract_row_ranges": [],
+      "caption_sufficient": true,
+      "evidence_steps": [
+        {
+          "step": "caption",
+          "evidence": "Organic acids concentration at the end of the three methods of bioleaching.",
+          "judgment": "supports_skip",
+          "reason": "Measured object is organic acids, which are process-internal agents, not the target WEEE material."
+        },
+        {
+          "step": "table_reference_sentences",
+          "evidence": "Higher recovery in the spent medium bioleaching and the results of organic acid production (Table 2) indicate that citric acid had a more significant role in the bioleaching of battery powder than other specified organic acids.",
+          "judgment": "supports_skip",
+          "reason": "Organic acids are discussed as mechanism variables influencing recovery, not as the recovered target material."
+        }
+      ],
+      "allowed_fact_types": [],
+      "excluded_fact_types": [
+        "organic acid concentration",
+        "metabolite concentration"
+      ],
+      "allowed_relation_types": [],
+      "ir_instruction": "Do not extract facts from this table; it reports process-internal organic acid concentrations, not WEEE target composition or recovery.",
+      "uncertainty": "None; the table clearly measures organic acids as bioleaching metabolites, which are out of scope per the boundary notes."
+    },
+    "llm_interpretation": {
+      "table_role_decision": {
+        "decision": "skip",
+        "table_role": "non_target_context",
+        "confidence": 0.85,
+        "causal_role": {
+          "source_object": "battery powder / WEEE",
+          "transformation": "bioleaching (one-step, two-step, spent medium)",
+          "measured_object": "organic acids (citric, oxalic, gluconic)",
+          "measured_quantity": "concentration (mg L-1)",
+          "evidence_role": "out_of_scope"
+        },
+        "region_roles": [
+          {
+            "row_range": [
+              1,
+              4
+            ],
+            "role": "out_of_scope",
+            "reason": "Rows report concentrations of process-internal organic acids (metabolic products of bioleaching microorganisms), not the composition or recovery of a WEEE constituent."
+          }
+        ],
+        "extract_row_ranges": [],
+        "caption_sufficient": true,
+        "evidence_steps": [
+          {
+            "step": "caption",
+            "evidence": "Organic acids concentration at the end of the three methods of bioleaching.",
+            "judgment": "supports_skip",
+            "reason": "Measured object is organic acids, which are process-internal agents, not the target WEEE material."
+          },
+          {
+            "step": "table_reference_sentences",
+            "evidence": "Higher recovery in the spent medium bioleaching and the results of organic acid production (Table 2) indicate that citric acid had a more significant role in the bioleaching of battery powder than other specified organic acids.",
+            "judgment": "supports_skip",
+            "reason": "Organic acids are discussed as mechanism variables influencing recovery, not as the recovered target material."
+          }
+        ],
+        "allowed_fact_types": [],
+        "excluded_fact_types": [
+          "organic acid concentration",
+          "metabolite concentration"
+        ],
+        "allowed_relation_types": [],
+        "ir_instruction": "Do not extract facts from this table; it reports process-internal organic acid concentrations, not WEEE target composition or recovery.",
+        "uncertainty": "None; the table clearly measures organic acids as bioleaching metabolites, which are out of scope per the boundary notes."
+      }
+    },
+    "semantic_ir": {
+      "table_id": "TABLE_Bioleaching_of_Valuable_Metals_from_Spent_Lithium-Ion_Mobile_Phone_Batteries_Using_Aspergillus_Niger_0002",
+      "extractability": {
+        "decision": "skip",
+        "table_role": "non_target_context",
+        "reason": "Do not extract facts from this table; it reports process-internal organic acid concentrations, not WEEE target composition or recovery.",
+        "confidence": 0.85
+      },
+      "program": []
+    },
+    "table_structure": {
+      "table_id": "TABLE_Bioleaching_of_Valuable_Metals_from_Spent_Lithium-Ion_Mobile_Phone_Batteries_Using_Aspergillus_Niger_0002",
+      "extraction_mode": "semantic_ir",
+      "table_role": "non_target_context",
+      "extractability": {
+        "decision": "skip",
+        "table_role": "non_target_context",
+        "reason": "Do not extract facts from this table; it reports process-internal organic acid concentrations, not WEEE target composition or recovery.",
+        "confidence": 0.85
+      }
+    },
+    "verification_report": {
+      "status": "skipped",
+      "skip_reason": "Do not extract facts from this table; it reports process-internal organic acid concentrations, not WEEE target composition or recovery.",
+      "cell_grounded_relations": 0,
+      "entity_count": 0,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "unsupported_templates": []
+    },
+    "execution_trace": [],
+    "failed_rewrite_verification_report": null,
+    "failed_rewrite_execution_trace": null,
+    "table_cache_key": "9031c2572d8cb6cdc2bdfa965716e7fa70d353b6e7d2f25b40a6d0ad15ca0c6e",
+    "table_cache_version": {
+      "format_version": 1,
+      "table_code_sha256": "f0dd5f4553ba60fa1f8dc3a9e2facb37220e0d8b94248c9976aea3179fbc8514",
+      "table_file_sha256": {
+        "__init__.py": "859afd37280303ac79ea652fcd1c347db6f6e9a7427d1bf201341ff92fdbb9f3",
+        "artifact_cache.py": "dae107568c3be648794486b4140f41386af8bd9d77b261dcf82505cef6e977aa",
+        "contract.py": "d537d95059e8a540b82872ffebe956d5e8fd43081e1ca630aa34b5a16359092a",
+        "cross_table_reference_resolver.py": "834fd5639f5b7dd79de0cd4b92943e3584283c02479a03e12c5b128f625bbf11",
+        "extraction_agent.py": "bd64ffbda3e1832704c44c090412041e0af71280c17c50aa2d189228fcaa31fa",
+        "ir/__init__.py": "388534b9fb9c0b6eae80334aef2e8eae376c73fca9ab48e74ddf4299bf50e425",
+        "ir/common.py": "53ca6b464bda54f2b4f95741c281e567c792a5206816f9164c8dc483dc347e8e",
+        "ir/context.py": "885b13c1bc0b1e48ad2e1eee5f466979adc657d6fc13abacf7b2330948999eea",
+        "ir/core.py": "cff62003caca13eaaf0abdd93828b601a5201f512fabfb630e07ac64bbf2758c",
+        "ir/executor.py": "aeea4593e5966a9de88854f303a1e1ccb522acc46fe70acbd20a0ace9f8bb072",
+        "ir/parsing.py": "d39fcd8d9ee08da4db6498ba63c1d6608615fa266d4d15de23d526aed0733c09",
+        "ir/policy.py": "c2ef18469dc2d402825a1559a860901927666dcc1fd1e80e3ec82669bb40d307",
+        "ir/runtime.py": "51aa3777823884bdabe06497e64d6cd04a5ce7d47e4674ddb0d7c378a4270059",
+        "ir/schema.py": "ba515d5e60c1c0ea8ae0d15b7265eb5926518452e796dc6973f7372ddf25f993",
+        "ir/selectors.py": "81b5606cc71f3ca6f4eaf848083e8d4b194b1c5a53f1cdf2832e439df6a456f1",
+        "ir/value_resolver.py": "feebb6a908f79b9c5975cc6cf7c657847522208a38d003f3b9cba9d8577864d8",
+        "ir/verifier.py": "44e33d3ca7e5c2305b845640d42e50777e591dedc47f07576446889101bfe1fa",
+        "reference_info.py": "eee0cd93396e9da1ba9682f94493de245543a8699d41fb4da2100c89e80d3782",
+        "repair/__init__.py": "05a749a9dd4f2c77ca79cd7b0cc2e00a8eae16d11cdf8f43ff26cd26e05639b9",
+        "repair/applier.py": "b380f43ab7a0e2451a981244b2ea5f43f9dd411081ed8dd10bdc43d9fe91e256",
+        "repair/local.py": "f5d94287673530f100c594b123765b99178a12a62dbc9f0e8f1fbcc58fb059bb",
+        "repair/prompt.py": "5e0f55f3e0da9e6d1093498562f699b41a5d3293fa1c4fd72c4bb4c81cfb6fc1",
+        "repair/schema.py": "2ed0bf5480b2a632aaa8b67c2cfee85fd2f8a5b21ebcfe22984ec5840d649d56",
+        "role_gate.py": "5211dc375d419d512eebc08da3126a42b7bcc188952128ce1a8f6c72536178d6"
+      }
+    }
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-01",
+  "paper": "Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries",
+  "source_file": "inputs/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/triples_final.txt",
+  "source_sha256": "b0285c70db4a0450e9be64f6319e10926552650e7205e1ed4cc7bc4e9f14d4ea",
+  "changed_fields": [
+    "condition_ids",
+    "condition_labels",
+    "condition_keys",
+    "condition",
+    "condition_sources",
+    "condition_evidence"
+  ],
+  "corrected_observations": 90,
+  "view_counts": {
+    "triples": 90,
+    "filtered_triples": 90,
+    "relations": 90,
+    "evidence_relations": 90,
+    "evidence_only_relations": 0
+  },
+  "groups": [
+    {
+      "table_id": "TABLE_Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries_0001",
+      "relations": 30,
+      "example_conditions": [
+        "temperature 80 °C",
+        "parameters from Table S2",
+        "pH 0.12"
+      ]
+    },
+    {
+      "table_id": "TABLE_Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries_0003",
+      "relations": 27,
+      "example_conditions": [
+        "temperature 80 °C",
+        "acid concentration 1 mol/L",
+        "solid/liquid ratio 20 g/L",
+        "without added reductant",
+        "pH 0.29"
+      ]
+    },
+    {
+      "table_id": "TABLE_Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries_0005",
+      "relations": 33,
+      "example_conditions": [
+        "temperature 80 °C",
+        "acid concentration 1 mol/L",
+        "solid/liquid ratio 20 g/L",
+        "H2O2 concentration 4 vol%",
+        "pH 0.30"
+      ]
+    }
+  ],
+  "missing_parameters": "No acid-specific parameters from unavailable Table S2 were invented.",
+  "basis": "Evidence-reviewed IR bindings, executed offline; original LLM outputs remain historical.",
+  "extraction_api_calls": 0,
+  "derived_sha256": "9a611dd79cc07eb92491a38fff6fe340c597d1a2e74b05fcff0fc2fffb5237a4",
+  "derived_table_archives": [
+    {
+      "name": "llm_table1.txt",
+      "sha256": "f4d021de07182ae6d3498ce31d871c2e7d0f8337f15e799da2e1039ca7fb73cf"
+    },
+    {
+      "name": "llm_table2.txt",
+      "sha256": "2e855a60e66ab3a35970d427418f7d5ac82623a13c7e8f29d36f52fe7bbeade8"
+    }
+  ],
+  "archive_note": "Original LLM response strings are retained; Semantic IR and execution surfaces are the offline corrected replay."
+}

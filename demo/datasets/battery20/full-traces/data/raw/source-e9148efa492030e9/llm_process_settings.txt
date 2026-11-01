@@ -1,0 +1,59 @@
+[
+  {
+    "id": "setting:text:acidic-leaching-conditions",
+    "name": "acidic leaching conditions",
+    "stage_name": "acidic leaching of cathode scrap",
+    "stage_id": "stage:text:acidic-leaching-of-cathode-scrap",
+    "sample": "cathode scrap pieces (10 mm, dried at 60 °C for 24 h)",
+    "sample_aliases": [
+      "cathode scrap"
+    ],
+    "treatment": "organic/inorganic acidic solution with optional reductant",
+    "treatment_members": [],
+    "treatment_aliases": [],
+    "aliases": [],
+    "condition_summary": "25 mL acidic solution; 50 mL sealed reactor; temperature-controlled shaking bath; acid species, acid concentration, reductant content, and pH examined; leaching time ≤5 min for local parameters; residues and Al foil vacuum filtered after leaching",
+    "condition_keys": [
+      {
+        "key": "volume",
+        "value": 25.0,
+        "unit": "mL",
+        "raw_text": "25 mL acidic solution"
+      },
+      {
+        "key": "volume",
+        "value": 50.0,
+        "unit": "mL",
+        "raw_text": "50 mL sealed reactor"
+      },
+      {
+        "key": "other",
+        "value": "temperature-controlled shaking bath",
+        "unit": null,
+        "raw_text": "temperature-controlled shaking bath"
+      },
+      {
+        "key": "medium",
+        "value": "acid species, acid concentration, reductant content, and pH examined",
+        "unit": null,
+        "raw_text": "acid species, acid concentration, reductant content, and pH examined"
+      },
+      {
+        "key": "time",
+        "value": 5.0,
+        "unit": "min",
+        "raw_text": "leaching time ≤5 min for local parameters"
+      },
+      {
+        "key": "other",
+        "value": "residues and Al foil vacuum filtered after leaching",
+        "unit": null,
+        "raw_text": "residues and Al foil vacuum filtered after leaching"
+      }
+    ],
+    "source": "process_pass",
+    "source_table_id": null,
+    "evidence_hint": "The cathode scrap was leached in a 50 mL sealed reactor with 25 mL acidic solution; conditions including acid species, concentration, reductant content, and pH were examined.",
+    "evidence": {}
+  }
+]

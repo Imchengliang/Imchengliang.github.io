@@ -1,0 +1,96 @@
+{
+  "process_stages": [
+    {
+      "name": "aqua regia acidic digestion",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Digestions were performed with analytical grade aqua regia (3:1 chloride acid and nitric acid). The liquors analyzed by ICP-OES."
+    },
+    {
+      "name": "nitric acid acidic digestion",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "In parallel, another set of digestions (in the same conditions) were performed using nitric acid due to possible precipitation of chlorides in aqua regia."
+    },
+    {
+      "name": "thermal treatment (loss on ignition)",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Three samples of each of the eight groups were submitted to thermal treatment. The samples were initially dried on a stove at 100 ºC, for 2 h, to eliminate moisture. After mass measuring, the samples were placed in alumina crucibles and arrayed in a mufle furnace at 550 °C for 80 min."
+    }
+  ],
+  "experiment_settings": [
+    {
+      "name": "aqua regia digestion conditions",
+      "stage_name": "aqua regia acidic digestion",
+      "sample": "homogenized component samples",
+      "sample_aliases": [],
+      "treatment": "aqua regia digestion",
+      "treatment_members": [
+        "aqua regia (3:1 HCl:HNO3)"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "20 mL solution per gram solids; 80 °C; 300 rpm; 2 h; schlenk flasks with allihn condensers; filtration and dilution; ICP-OES analysis",
+      "evidence_hint": "Digestions were performed with analytical grade aqua regia (3:1 chloride acid and nitric acid). Parameters: 20 mL of solution per gram of solids, at 80 °C, under agitation speed of 300 rpm, for 2 h."
+    },
+    {
+      "name": "nitric acid digestion conditions",
+      "stage_name": "nitric acid acidic digestion",
+      "sample": "homogenized component samples",
+      "sample_aliases": [],
+      "treatment": "nitric acid digestion",
+      "treatment_members": [
+        "nitric acid"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "same conditions as aqua regia digestion: 20 mL solution per gram solids; 80 °C; 300 rpm; 2 h; schlenk flasks with allihn condensers; filtration and dilution; ICP-OES analysis",
+      "evidence_hint": "In parallel, another set of digestions (in the same conditions) were performed using nitric acid due to possible precipitation of chlorides in aqua regia."
+    },
+    {
+      "name": "thermal treatment conditions",
+      "stage_name": "thermal treatment (loss on ignition)",
+      "sample": "homogenized component samples",
+      "sample_aliases": [],
+      "treatment": "thermal treatment",
+      "treatment_members": [],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "initial drying at 100 °C for 2 h; then 550 °C for 80 min in mufle furnace; cooling to room temperature; drying again at 100 °C for 2 h; mass measured",
+      "evidence_hint": "The samples were initially dried on a stove at 100 ºC, for 2 h, to eliminate moisture. After mass measuring, the samples were placed in alumina crucibles and arrayed in a mufle furnace at 550 °C for 80 min."
+    }
+  ],
+  "process_targets": [
+    {
+      "name": "aqua regia acidic digestion",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Digestions were performed with analytical grade aqua regia (3:1 chloride acid and nitric acid). The liquors analyzed by ICP-OES."
+    },
+    {
+      "name": "nitric acid acidic digestion",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "In parallel, another set of digestions (in the same conditions) were performed using nitric acid due to possible precipitation of chlorides in aqua regia."
+    },
+    {
+      "name": "thermal treatment (loss on ignition)",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Three samples of each of the eight groups were submitted to thermal treatment. The samples were initially dried on a stove at 100 ºC, for 2 h, to eliminate moisture. After mass measuring, the samples were placed in alumina crucibles and arrayed in a mufle furnace at 550 °C for 80 min."
+    }
+  ]
+}

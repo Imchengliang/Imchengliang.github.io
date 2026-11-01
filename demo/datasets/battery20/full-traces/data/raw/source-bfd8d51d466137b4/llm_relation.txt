@@ -1,0 +1,2983 @@
+[
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_1 Introduction_835ccbec",
+    "section_name": "1 Introduction",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_2.1 Materials_4c20a302",
+    "section_name": "2.1 Materials",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 2,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_carbon",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_carbon",
+          "target_name": "C",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Its diffraction peaks were indexed to carbon and LNCM (LiNi _ x Co _ y Mn _ z O _ 2) as the major phase (Figure 1).",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "measurement_method": "X-ray diffraction (XRD, D/MAX-C)",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "C",
+            "evidence_span": "Its diffraction peaks were indexed to carbon and LNCM (LiNi _ x Co _ y Mn _ z O _ 2) as the major phase (Figure 1).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_LNCM__LiNi___x_Co___y_Mn___z_O___2_",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_LNCM__LiNi___x_Co___y_Mn___z_O___2_",
+          "target_name": "LNCM (LiNi _ x Co _ y Mn _ z O _ 2)",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Its diffraction peaks were indexed to carbon and LNCM (LiNi _ x Co _ y Mn _ z O _ 2) as the major phase (Figure 1).",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "measurement_method": "X-ray diffraction (XRD, D/MAX-C)",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "LNCM (LiNi _ x Co _ y Mn _ z O _ 2)",
+            "evidence_span": "Its diffraction peaks were indexed to carbon and LNCM (LiNi _ x Co _ y Mn _ z O _ 2) as the major phase (Figure 1).",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_2.2 Experimental method_48b724f7",
+    "section_name": "2.2 Experimental method",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 1,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_mass_20_0_g",
+          "name": "mass",
+          "type": "mass",
+          "value": 20.0,
+          "unit": "g",
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_2.2 Experimental method_48b724f7",
+            "text": "## 2.2 Experimental method\nGlycine solutions of different concentrations were used as leaching agents, in which Gly− is the ligand. Hydrogen peroxide (30%) was used as a reducing agent. All the chemical reagents used in this study were analytically pure, and the solutions were prepared using distilled water at the prescribed concentrations.\nAs required by the experiment, a glycine solution at a specific concentration was made. The solution was warmed up in a water bath with a constant temperature while being stirred with a magnetic stirrer. Once the desired temperature was reached, solid NaOH pellets were added to the solution until the experimentally set pH value was achieved, which was monitored using a pH meter. After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed. After the reaction time, the beaker was removed and left to cool to room temperature. Then, the leachate and leach residue were separated by vacuum filtration, and the metal content of the leach solution was measured. It was worth mentioning that experiments with reaction temperatures exceeding 100 °C needed to be carried out in a highpressure reactor. Due to the mixing of leaching and washing solutions, all concentrations of impurity metals in this paper were converted to concentrations in 100 mL of solution.",
+            "parent_chunk_id": null,
+            "section_name": "2.2 Experimental method",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 5624,
+            "position_end": 7023,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_2.2 Experimental method_48b724f7",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "2.2 Experimental method",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 5624,
+              "position_end": 7023,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_PROCESSED_BY_text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "target_name": "glycine leaching of spent LIBs powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed.",
+          "properties": {
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "20 g spent LIBs powder added after solution reached required values and stabilized at specified temperature",
+            "condition_keys": [
+              {
+                "key": "mass",
+                "value": 20.0,
+                "unit": "g",
+                "raw_text": "20 g spent LIBs powder added after solution reached required values and stabilized at specified temperature"
+              }
+            ],
+            "condition_labels": [
+              "20 g spent LIBs powder added after solution reached required values and stabilized at specified temperature"
+            ],
+            "condition": "20 g spent LIBs powder added after solution reached required values and stabilized at specified temperature",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_2_2_Experimental_method_48b724f7__cond_mass_20_0_g"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "glycine leaching of spent LIBs powder",
+            "evidence_span": "After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_2.3 Analysis methods_049e9baa",
+    "section_name": "2.3 Analysis methods",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1 Reduction leaching_44159cd3",
+    "section_name": "3.1 Reduction leaching",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 7,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Co",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Under the reduction of hydrogen peroxide, Co, Ni, and Mn ions enter the solution as divalent metal ions and then complex with glycine.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "Co",
+            "evidence_span": "Under the reduction of hydrogen peroxide, Co, Ni, and Mn ions enter the solution as divalent metal ions and then complex with glycine.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Ni",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Under the reduction of hydrogen peroxide, Co, Ni, and Mn ions enter the solution as divalent metal ions and then complex with glycine.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "Ni",
+            "evidence_span": "Under the reduction of hydrogen peroxide, Co, Ni, and Mn ions enter the solution as divalent metal ions and then complex with glycine.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Mn",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Under the reduction of hydrogen peroxide, Co, Ni, and Mn ions enter the solution as divalent metal ions and then complex with glycine.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "Mn",
+            "evidence_span": "Under the reduction of hydrogen peroxide, Co, Ni, and Mn ions enter the solution as divalent metal ions and then complex with glycine.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Li",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Li+ can dissolve directly in the system, while copper and aluminum exist in elemental form and cannot dissolve in the system.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "Li",
+            "evidence_span": "Li+ can dissolve directly in the system, while copper and aluminum exist in elemental form and cannot dissolve in the system.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Cu",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_Cu",
+          "target_name": "Cu",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Li+ can dissolve directly in the system, while copper and aluminum exist in elemental form and cannot dissolve in the system.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "Cu",
+            "evidence_span": "Li+ can dissolve directly in the system, while copper and aluminum exist in elemental form and cannot dissolve in the system.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Al",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Li+ can dissolve directly in the system, while copper and aluminum exist in elemental form and cannot dissolve in the system.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "Al",
+            "evidence_span": "Li+ can dissolve directly in the system, while copper and aluminum exist in elemental form and cannot dissolve in the system.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_PROCESSED_BY_text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "target_name": "glycine leaching of spent LIBs powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The leaching mechanism of the spent LIBs in the alkaline glycinate system is a process of reduction and complexation.",
+          "properties": {
+            "source_sample": "spent LIBs",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "glycine leaching of spent LIBs powder",
+            "evidence_span": "The leaching mechanism of the spent LIBs in the alkaline glycinate system is a process of reduction and complexation.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.1 Effect of retention time_631e94af",
+    "section_name": "3.1.1 Effect of retention time",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 7,
+      "condition_count": 2,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_ph_8_0",
+          "name": "ph",
+          "type": "pH",
+          "value": 8.0,
+          "unit": null,
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.1 Effect of retention time_631e94af",
+            "text": "## 3.1.1 Effect of retention time\nThe aim was to investigate the recoveries of Li, Co, Ni, and Mn from spent LIBs powder over time and the dissolution of impurities in the leaching solution. The experiments were conducted under the following conditions: leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL: 1 g, pH 8, and stirring speed 400 r/min.\nIt can be observed from Figure 4(a) that the leaching efficiencies of valuable metals (Li, Co, Ni, and Mn) increase significantly with the prolonging of retention time from 1 h to 3 h. Afterward, leaching efficiencies remain stable or slightly decrease between 3 h and 4 h. The reason is that the long reaction time at higher temperatures makes part of the water in the solution evaporate, which decreases the liquid-solid ratio in the system and weakens the liquid-solid interaction ability, thus reached equilibrium at around 3 h. Meanwhile, Table S1 demonstrates that varying the leaching time had little impact on the dissolution of impurities in the leach solution. Therefore, 3 h was the optimal leaching time in the subsequent leaching process.\nCu and Al in spent LIBs are present as metal monomers and hydrogen peroxide was predominantly reducing under alkaline conditions. So, these two are almost insoluble in this system.",
+            "parent_chunk_id": null,
+            "section_name": "3.1.1 Effect of retention time",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 8453,
+            "position_end": 9739,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.1 Effect of retention time_631e94af",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "3.1.1 Effect of retention time",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 8453,
+              "position_end": 9739,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "pH",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_time_1_0_h",
+          "name": "time",
+          "type": "Time",
+          "value": 1.0,
+          "unit": "h",
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.1 Effect of retention time_631e94af",
+            "text": "## 3.1.1 Effect of retention time\nThe aim was to investigate the recoveries of Li, Co, Ni, and Mn from spent LIBs powder over time and the dissolution of impurities in the leaching solution. The experiments were conducted under the following conditions: leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL: 1 g, pH 8, and stirring speed 400 r/min.\nIt can be observed from Figure 4(a) that the leaching efficiencies of valuable metals (Li, Co, Ni, and Mn) increase significantly with the prolonging of retention time from 1 h to 3 h. Afterward, leaching efficiencies remain stable or slightly decrease between 3 h and 4 h. The reason is that the long reaction time at higher temperatures makes part of the water in the solution evaporate, which decreases the liquid-solid ratio in the system and weakens the liquid-solid interaction ability, thus reached equilibrium at around 3 h. Meanwhile, Table S1 demonstrates that varying the leaching time had little impact on the dissolution of impurities in the leach solution. Therefore, 3 h was the optimal leaching time in the subsequent leaching process.\nCu and Al in spent LIBs are present as metal monomers and hydrogen peroxide was predominantly reducing under alkaline conditions. So, these two are almost insoluble in this system.",
+            "parent_chunk_id": null,
+            "section_name": "3.1.1 Effect of retention time",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 8453,
+            "position_end": 9739,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.1 Effect of retention time_631e94af",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "3.1.1 Effect of retention time",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 8453,
+              "position_end": 9739,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Time",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_PROCESSED_BY_text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "target_name": "glycine leaching of spent LIBs powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The aim was to investigate the recoveries of Li, Co, Ni, and Mn from spent LIBs powder over time and the dissolution of impurities in the leaching solution.",
+          "properties": {
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL: 1 g, pH 8, stirring speed 400 r/min",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL: 1 g, pH 8, stirring speed 400 r/min"
+              }
+            ],
+            "condition_labels": [
+              "leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL: 1 g, pH 8, stirring speed 400 r/min"
+            ],
+            "condition": "leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL: 1 g, pH 8, stirring speed 400 r/min",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_1_Effect_of_retention_time_631e94af__cond_ph_8_0"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "glycine leaching of spent LIBs powder",
+            "evidence_span": "The aim was to investigate the recoveries of Li, Co, Ni, and Mn from spent LIBs powder over time and the dissolution of impurities in the leaching solution.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "the leaching efficiencies of valuable metals (Li, Co, Ni, and Mn) increase significantly with the prolonging of retention time from 1 h to 3 h",
+          "properties": {
+            "property": "leaching",
+            "value": "increase",
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "evidence_only",
+            "process_role": "main_process",
+            "conditions": "retention time from 1 h to 3 h",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 1.0,
+                "unit": "h",
+                "raw_text": "retention time from 1 h to 3 h"
+              }
+            ],
+            "condition_labels": [
+              "retention time from 1 h to 3 h"
+            ],
+            "condition": "retention time from 1 h to 3 h",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_1_Effect_of_retention_time_631e94af__cond_time_1_0_h"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Li",
+            "evidence_span": "the leaching efficiencies of valuable metals (Li, Co, Ni, and Mn) increase significantly with the prolonging of retention time from 1 h to 3 h",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "the leaching efficiencies of valuable metals (Li, Co, Ni, and Mn) increase significantly with the prolonging of retention time from 1 h to 3 h",
+          "properties": {
+            "property": "leaching",
+            "value": "increase",
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "evidence_only",
+            "process_role": "main_process",
+            "conditions": "retention time from 1 h to 3 h",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 1.0,
+                "unit": "h",
+                "raw_text": "retention time from 1 h to 3 h"
+              }
+            ],
+            "condition_labels": [
+              "retention time from 1 h to 3 h"
+            ],
+            "condition": "retention time from 1 h to 3 h",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_1_Effect_of_retention_time_631e94af__cond_time_1_0_h"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Co",
+            "evidence_span": "the leaching efficiencies of valuable metals (Li, Co, Ni, and Mn) increase significantly with the prolonging of retention time from 1 h to 3 h",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "the leaching efficiencies of valuable metals (Li, Co, Ni, and Mn) increase significantly with the prolonging of retention time from 1 h to 3 h",
+          "properties": {
+            "property": "leaching",
+            "value": "increase",
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "evidence_only",
+            "process_role": "main_process",
+            "conditions": "retention time from 1 h to 3 h",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 1.0,
+                "unit": "h",
+                "raw_text": "retention time from 1 h to 3 h"
+              }
+            ],
+            "condition_labels": [
+              "retention time from 1 h to 3 h"
+            ],
+            "condition": "retention time from 1 h to 3 h",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_1_Effect_of_retention_time_631e94af__cond_time_1_0_h"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Ni",
+            "evidence_span": "the leaching efficiencies of valuable metals (Li, Co, Ni, and Mn) increase significantly with the prolonging of retention time from 1 h to 3 h",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Mn",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "the leaching efficiencies of valuable metals (Li, Co, Ni, and Mn) increase significantly with the prolonging of retention time from 1 h to 3 h",
+          "properties": {
+            "property": "leaching",
+            "value": "increase",
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "evidence_only",
+            "process_role": "main_process",
+            "conditions": "retention time from 1 h to 3 h",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 1.0,
+                "unit": "h",
+                "raw_text": "retention time from 1 h to 3 h"
+              }
+            ],
+            "condition_labels": [
+              "retention time from 1 h to 3 h"
+            ],
+            "condition": "retention time from 1 h to 3 h",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_1_Effect_of_retention_time_631e94af__cond_time_1_0_h"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Mn",
+            "evidence_span": "the leaching efficiencies of valuable metals (Li, Co, Ni, and Mn) increase significantly with the prolonging of retention time from 1 h to 3 h",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Cu",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_Cu",
+          "target_name": "Cu",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Cu and Al in spent LIBs are present as metal monomers",
+          "properties": {
+            "property": "composition",
+            "value": "metal monomers",
+            "source_sample": "spent LIBs",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "Cu",
+            "evidence_span": "Cu and Al in spent LIBs are present as metal monomers",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Al",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Cu and Al in spent LIBs are present as metal monomers",
+          "properties": {
+            "property": "composition",
+            "value": "metal monomers",
+            "source_sample": "spent LIBs",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "Al",
+            "evidence_span": "Cu and Al in spent LIBs are present as metal monomers",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.2 Effect of reaction temperature_d16f2583",
+    "section_name": "3.1.2 Effect of reaction temperature",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 2,
+      "condition_count": 2,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_ph_8_0",
+          "name": "ph",
+          "type": "pH",
+          "value": 8.0,
+          "unit": null,
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.2 Effect of reaction temperature_d16f2583",
+            "text": "## 3.1.2 Effect of reaction temperature\nThe aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIB powders over temperature and the dissolution of impurities in the leach solution. The experiments were conducted under the following conditions: leaching time 3 h, 3.0 mol/L [Gly−]T, L/S 5 mL: 1 g, pH 8, and stirring speed 400 r/min.\nIt can be concluded from Figure 4(b) that the enhancement of reaction temperature can effectively improve the leaching efficiencies of different metals. For instance, the extraction ratio of Li increases from 26.51% to 94.13% as the temperature is increased from 50 to 90 ℃.\nWith the increase in temperature, the reaction rate is accelerated by the rise of molecular diffusion ability, and the complexation of Gly− is improved. Thus, the efficiency of leaching for each metal is significantly enhanced. Subsequently, the leaching efficiency of each metal gradually leveled off by continuing to raise the temperature. The temperature can affect the complexation ability between Gly− and M2+ (M=Co, Ni, Mn), as well as the difficult degree of metal ions and OH− forming hydroxide or oxide precipitates. As a result, the leaching efficiency exhibits the zig-zag phenomenon. Considering that in addition to the increase in the leaching efficiency of the valuable metals, the dissolution of the impurity metals will also be enhanced to some extent, as shown in Table S2. Therefore, the leaching temperature is determined to be 90 ℃, considering the leaching efficiency, the purity of the leach solution, the energy consumption, and the safety of operation.",
+            "parent_chunk_id": null,
+            "section_name": "3.1.2 Effect of reaction temperature",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 9739,
+            "position_end": 11344,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.2 Effect of reaction temperature_d16f2583",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "3.1.2 Effect of reaction temperature",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 9739,
+              "position_end": 11344,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "pH",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_other_temperature_increased_from_50_to_90",
+          "name": "other",
+          "type": "other",
+          "value": "temperature increased from 50 to 90 ℃",
+          "unit": null,
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.2 Effect of reaction temperature_d16f2583",
+            "text": "## 3.1.2 Effect of reaction temperature\nThe aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIB powders over temperature and the dissolution of impurities in the leach solution. The experiments were conducted under the following conditions: leaching time 3 h, 3.0 mol/L [Gly−]T, L/S 5 mL: 1 g, pH 8, and stirring speed 400 r/min.\nIt can be concluded from Figure 4(b) that the enhancement of reaction temperature can effectively improve the leaching efficiencies of different metals. For instance, the extraction ratio of Li increases from 26.51% to 94.13% as the temperature is increased from 50 to 90 ℃.\nWith the increase in temperature, the reaction rate is accelerated by the rise of molecular diffusion ability, and the complexation of Gly− is improved. Thus, the efficiency of leaching for each metal is significantly enhanced. Subsequently, the leaching efficiency of each metal gradually leveled off by continuing to raise the temperature. The temperature can affect the complexation ability between Gly− and M2+ (M=Co, Ni, Mn), as well as the difficult degree of metal ions and OH− forming hydroxide or oxide precipitates. As a result, the leaching efficiency exhibits the zig-zag phenomenon. Considering that in addition to the increase in the leaching efficiency of the valuable metals, the dissolution of the impurity metals will also be enhanced to some extent, as shown in Table S2. Therefore, the leaching temperature is determined to be 90 ℃, considering the leaching efficiency, the purity of the leach solution, the energy consumption, and the safety of operation.",
+            "parent_chunk_id": null,
+            "section_name": "3.1.2 Effect of reaction temperature",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 9739,
+            "position_end": 11344,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.2 Effect of reaction temperature_d16f2583",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "3.1.2 Effect of reaction temperature",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 9739,
+              "position_end": 11344,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_PROCESSED_BY_text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "target_name": "glycine leaching of spent LIBs powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIB powders over temperature and the dissolution of impurities in the leach solution.",
+          "properties": {
+            "source_sample": "spent LIB powders",
+            "sample_state": "powdered form of spent lithium-ion batteries used as leaching feed",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "leaching time 3 h, 3.0 mol/L [Gly−]T, L/S 5 mL: 1 g, pH 8, stirring speed 400 r/min",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "leaching time 3 h, 3.0 mol/L [Gly−]T, L/S 5 mL: 1 g, pH 8, stirring speed 400 r/min"
+              }
+            ],
+            "condition_labels": [
+              "leaching time 3 h, 3.0 mol/L [Gly−]T, L/S 5 mL: 1 g, pH 8, stirring speed 400 r/min"
+            ],
+            "condition": "leaching time 3 h, 3.0 mol/L [Gly−]T, L/S 5 mL: 1 g, pH 8, stirring speed 400 r/min",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_2_Effect_of_reaction_temperature_d16f2583__cond_ph_8_0"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "glycine leaching of spent LIBs powder",
+            "evidence_span": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIB powders over temperature and the dissolution of impurities in the leach solution.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "the extraction ratio of Li increases from 26.51% to 94.13% as the temperature is increased from 50 to 90 ℃",
+          "properties": {
+            "property": "leaching",
+            "value": 94.13,
+            "unit": "%",
+            "secondary_value": 26.51,
+            "secondary_unit": "%",
+            "source_sample": "spent LIB powders",
+            "sample_state": "powdered form of spent lithium-ion batteries used as leaching feed",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "temperature increased from 50 to 90 ℃",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "temperature increased from 50 to 90 ℃",
+                "unit": null,
+                "raw_text": "temperature increased from 50 to 90 ℃"
+              }
+            ],
+            "condition_labels": [
+              "temperature increased from 50 to 90 ℃"
+            ],
+            "condition": "temperature increased from 50 to 90 ℃",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_2_Effect_of_reaction_temperature_d16f2583__cond_other_temperature_increased_from_50_to_90"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Li",
+            "evidence_span": "the extraction ratio of Li increases from 26.51% to 94.13% as the temperature is increased from 50 to 90 ℃",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.3 Effect of leaching agent concentration_ac1a409e",
+    "section_name": "3.1.3 Effect of leaching agent concentration",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 5,
+      "condition_count": 2,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_ph_8_0",
+          "name": "ph",
+          "type": "pH",
+          "value": 8.0,
+          "unit": null,
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.3 Effect of leaching agent concentration_ac1a409e",
+            "text": "## 3.1.3 Effect of leaching agent concentration\nThe aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder over leaching agent concentration and the dissolution of impurities in the leach solution. The experiments were conducted under the following conditions: leaching time 3 h, leaching temperature 90 ℃, L/S 5 mL:1 g, pH 8, and stirring speed 400 r/min.\nIt can be found from Figure 4(c) that properly enhancing the [Gly−]T concentration plays a favorable role in improving the leaching efficiency of valuable metals from spent LIBs powder. The overall leaching efficiency of the reaction system tends to increase as the [Gly−]T concentration increases from 0.5 mol/L to 3.0 mol/L. With the increases of the ligand concentration, the free Gly in the system increases and forms more complexes with the metal ions. Moreover, the leaching efficiency of Co decreases to some extent while the concentration of Gly− increases from 1 to 2.5 mol/L. In this concentration range, the coordination reaction of Ni with Gly− has a higher priority relative to Co, resulting in the preferential coordination of Gly− with Ni.\nAs the ligand concentration gradually increases to 3.0 mol/L, the ligand reactivity increases, and many stable metal complexes are formed in the solution. When the ligand concentration is more significant than 3.0 mol/L, the coordination effect between Gly− and the metals in the spent LIBs powder gradually is saturated, the overall viscosity in the solution is increased, and the motility of each metal ion is decreased, resulting in the leaching efficiency starting to decline.\nAt the same time, too high a concentration of ligands will cause the reaction products to adhere to the surface of the leaching material, affecting the leaching reaction positively. When the leaching solution gradually becomes supersaturated, the overall coordination ability of the glycinate is reduced. In general, as [Gly−]T increases, coordination ions with different coordination numbers are formed, and between these complex ion conversions, leaching efficiency will experience fluctuations. The leaching efficiency curves obtain the best leaching results for Li, Ni, Co, and Mn at a leaching agent concentration of 3.0 mol/L, with 45.31%, 57.35%, 28.63%, and 15.31%, respectively. As seen from Table S3, the dissolution of impurity metal remained shallow as the concentration of glycinate increased.",
+            "parent_chunk_id": null,
+            "section_name": "3.1.3 Effect of leaching agent concentration",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 11344,
+            "position_end": 13773,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.3 Effect of leaching agent concentration_ac1a409e",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "3.1.3 Effect of leaching agent concentration",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 11344,
+              "position_end": 13773,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "pH",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_concentration_3_0_mol_l",
+          "name": "concentration",
+          "type": "Concentration",
+          "value": "3.0 mol/L",
+          "unit": null,
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.3 Effect of leaching agent concentration_ac1a409e",
+            "text": "## 3.1.3 Effect of leaching agent concentration\nThe aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder over leaching agent concentration and the dissolution of impurities in the leach solution. The experiments were conducted under the following conditions: leaching time 3 h, leaching temperature 90 ℃, L/S 5 mL:1 g, pH 8, and stirring speed 400 r/min.\nIt can be found from Figure 4(c) that properly enhancing the [Gly−]T concentration plays a favorable role in improving the leaching efficiency of valuable metals from spent LIBs powder. The overall leaching efficiency of the reaction system tends to increase as the [Gly−]T concentration increases from 0.5 mol/L to 3.0 mol/L. With the increases of the ligand concentration, the free Gly in the system increases and forms more complexes with the metal ions. Moreover, the leaching efficiency of Co decreases to some extent while the concentration of Gly− increases from 1 to 2.5 mol/L. In this concentration range, the coordination reaction of Ni with Gly− has a higher priority relative to Co, resulting in the preferential coordination of Gly− with Ni.\nAs the ligand concentration gradually increases to 3.0 mol/L, the ligand reactivity increases, and many stable metal complexes are formed in the solution. When the ligand concentration is more significant than 3.0 mol/L, the coordination effect between Gly− and the metals in the spent LIBs powder gradually is saturated, the overall viscosity in the solution is increased, and the motility of each metal ion is decreased, resulting in the leaching efficiency starting to decline.\nAt the same time, too high a concentration of ligands will cause the reaction products to adhere to the surface of the leaching material, affecting the leaching reaction positively. When the leaching solution gradually becomes supersaturated, the overall coordination ability of the glycinate is reduced. In general, as [Gly−]T increases, coordination ions with different coordination numbers are formed, and between these complex ion conversions, leaching efficiency will experience fluctuations. The leaching efficiency curves obtain the best leaching results for Li, Ni, Co, and Mn at a leaching agent concentration of 3.0 mol/L, with 45.31%, 57.35%, 28.63%, and 15.31%, respectively. As seen from Table S3, the dissolution of impurity metal remained shallow as the concentration of glycinate increased.",
+            "parent_chunk_id": null,
+            "section_name": "3.1.3 Effect of leaching agent concentration",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 11344,
+            "position_end": 13773,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.3 Effect of leaching agent concentration_ac1a409e",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "3.1.3 Effect of leaching agent concentration",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 11344,
+              "position_end": 13773,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Concentration",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_PROCESSED_BY_text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "target_name": "glycine leaching of spent LIBs powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder over leaching agent concentration and the dissolution of impurities in the leach solution.",
+          "properties": {
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "leaching time 3 h, leaching temperature 90 ℃, L/S 5 mL:1 g, pH 8, stirring speed 400 r/min",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "leaching time 3 h, leaching temperature 90 ℃, L/S 5 mL:1 g, pH 8, stirring speed 400 r/min"
+              }
+            ],
+            "condition_labels": [
+              "leaching time 3 h, leaching temperature 90 ℃, L/S 5 mL:1 g, pH 8, stirring speed 400 r/min"
+            ],
+            "condition": "leaching time 3 h, leaching temperature 90 ℃, L/S 5 mL:1 g, pH 8, stirring speed 400 r/min",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_3_Effect_of_leaching_agent_concentration_ac1a409e__cond_ph_8_0"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "glycine leaching of spent LIBs powder",
+            "evidence_span": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder over leaching agent concentration and the dissolution of impurities in the leach solution.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching efficiency curves obtain the best leaching results for Li, Ni, Co, and Mn at a leaching agent concentration of 3.0 mol/L, with 45.31%, 57.35%, 28.63%, and 15.31%, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 45.31,
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "glycinate",
+            "conditions": "leaching agent concentration 3.0 mol/L",
+            "treatment_members": [
+              "glycinate"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": "3.0 mol/L",
+                "unit": null,
+                "raw_text": "leaching agent concentration 3.0 mol/L"
+              }
+            ],
+            "condition_labels": [
+              "leaching agent concentration 3.0 mol/L"
+            ],
+            "condition": "leaching agent concentration 3.0 mol/L",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_3_Effect_of_leaching_agent_concentration_ac1a409e__cond_concentration_3_0_mol_l"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Li",
+            "evidence_span": "The leaching efficiency curves obtain the best leaching results for Li, Ni, Co, and Mn at a leaching agent concentration of 3.0 mol/L, with 45.31%, 57.35%, 28.63%, and 15.31%, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching efficiency curves obtain the best leaching results for Li, Ni, Co, and Mn at a leaching agent concentration of 3.0 mol/L, with 45.31%, 57.35%, 28.63%, and 15.31%, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 57.35,
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "glycinate",
+            "conditions": "leaching agent concentration 3.0 mol/L",
+            "treatment_members": [
+              "glycinate"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": "3.0 mol/L",
+                "unit": null,
+                "raw_text": "leaching agent concentration 3.0 mol/L"
+              }
+            ],
+            "condition_labels": [
+              "leaching agent concentration 3.0 mol/L"
+            ],
+            "condition": "leaching agent concentration 3.0 mol/L",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_3_Effect_of_leaching_agent_concentration_ac1a409e__cond_concentration_3_0_mol_l"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Ni",
+            "evidence_span": "The leaching efficiency curves obtain the best leaching results for Li, Ni, Co, and Mn at a leaching agent concentration of 3.0 mol/L, with 45.31%, 57.35%, 28.63%, and 15.31%, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching efficiency curves obtain the best leaching results for Li, Ni, Co, and Mn at a leaching agent concentration of 3.0 mol/L, with 45.31%, 57.35%, 28.63%, and 15.31%, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 28.63,
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "glycinate",
+            "conditions": "leaching agent concentration 3.0 mol/L",
+            "treatment_members": [
+              "glycinate"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": "3.0 mol/L",
+                "unit": null,
+                "raw_text": "leaching agent concentration 3.0 mol/L"
+              }
+            ],
+            "condition_labels": [
+              "leaching agent concentration 3.0 mol/L"
+            ],
+            "condition": "leaching agent concentration 3.0 mol/L",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_3_Effect_of_leaching_agent_concentration_ac1a409e__cond_concentration_3_0_mol_l"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Co",
+            "evidence_span": "The leaching efficiency curves obtain the best leaching results for Li, Ni, Co, and Mn at a leaching agent concentration of 3.0 mol/L, with 45.31%, 57.35%, 28.63%, and 15.31%, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Mn",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching efficiency curves obtain the best leaching results for Li, Ni, Co, and Mn at a leaching agent concentration of 3.0 mol/L, with 45.31%, 57.35%, 28.63%, and 15.31%, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 15.31,
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "glycinate",
+            "conditions": "leaching agent concentration 3.0 mol/L",
+            "treatment_members": [
+              "glycinate"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": "3.0 mol/L",
+                "unit": null,
+                "raw_text": "leaching agent concentration 3.0 mol/L"
+              }
+            ],
+            "condition_labels": [
+              "leaching agent concentration 3.0 mol/L"
+            ],
+            "condition": "leaching agent concentration 3.0 mol/L",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_3_Effect_of_leaching_agent_concentration_ac1a409e__cond_concentration_3_0_mol_l"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Mn",
+            "evidence_span": "The leaching efficiency curves obtain the best leaching results for Li, Ni, Co, and Mn at a leaching agent concentration of 3.0 mol/L, with 45.31%, 57.35%, 28.63%, and 15.31%, respectively.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.4 Effect of liquid-solid ratio_b0e46746",
+    "section_name": "3.1.4 Effect of liquid-solid ratio",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 1,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_ph_8_0",
+          "name": "ph",
+          "type": "pH",
+          "value": 8.0,
+          "unit": null,
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.4 Effect of liquid-solid ratio_b0e46746",
+            "text": "## 3.1.4 Effect of liquid-solid ratio\nThe aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder and the dissolution of impurities in the leach solution as the liquid-solid ratio varied. The liquid-solid ratio can affect dispersion, but if it is too large, the dispersion performance may deteriorate at the same rotational speed. When the liquid/solid ratio continues to increase, it is equivalent to raising the absolute amount of reactant and may also improve the leaching efficiency. The experiments were conducted under the following conditions: leaching temperature 90 ℃, leaching time 3 h, 3.0 mol/L [Gly−], pH 8, and stirring speed 400 r/min.",
+            "parent_chunk_id": null,
+            "section_name": "3.1.4 Effect of liquid-solid ratio",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 13773,
+            "position_end": 14449,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.4 Effect of liquid-solid ratio_b0e46746",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "3.1.4 Effect of liquid-solid ratio",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 13773,
+              "position_end": 14449,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "pH",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_PROCESSED_BY_text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "target_name": "glycine leaching of spent LIBs powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder and the dissolution of impurities in the leach solution as the liquid-solid ratio varied.",
+          "properties": {
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "leaching temperature 90 ℃, leaching time 3 h, 3.0 mol/L [Gly−], pH 8, stirring speed 400 r/min",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "leaching temperature 90 ℃, leaching time 3 h, 3.0 mol/L [Gly−], pH 8, stirring speed 400 r/min"
+              }
+            ],
+            "condition_labels": [
+              "leaching temperature 90 ℃, leaching time 3 h, 3.0 mol/L [Gly−], pH 8, stirring speed 400 r/min"
+            ],
+            "condition": "leaching temperature 90 ℃, leaching time 3 h, 3.0 mol/L [Gly−], pH 8, stirring speed 400 r/min",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_4_Effect_of_liquid_solid_ratio_b0e46746__cond_ph_8_0"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "glycine leaching of spent LIBs powder",
+            "evidence_span": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder and the dissolution of impurities in the leach solution as the liquid-solid ratio varied.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.5 Effect of pH_362e551f",
+    "section_name": "3.1.5 Effect of pH",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 6,
+      "condition_count": 3,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_temperature_90_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 90.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.5 Effect of pH_362e551f",
+            "text": "## 3.1.5 Effect of pH\nThe aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder and the dissolution of impurities in the leach solution as the pH varied. The experiments were conducted under the following conditions: leaching time 3 h, leaching temperature 90 °C, 3.0 mol/L [Gly−], L/S 5 mL:1 g, and stirring speed 400 r/min.\nFrom Figure 4(e), it can be found that the leaching efficiency fluctuates more significantly with the change in reaction pH. When the pH of the solution is between 6 and 7, the whole reaction system is in a weakly acidic environment, and Gly will react with H+ as follows:\nThis makes Gly− less cooperative with the metal ions in the spent LIBs powder. As the pH increases, the free H+ in the solution decreases, and more free Gly− can participate in the coordination reaction. The leaching efficiency reaches its highest when the pH reaches 8 and then begins to decrease significantly. This is due to the elevated OH− concentration in the solution, which forms insoluble or slightly soluble precipitates with major metal ions, such as Co(OH). As a result, the number of metal ions in the system decreases, leading to a lower leaching efficiency. On the other hand, Table S5 demonstrates the dissolution of impurity metals decreased significantly with increasing pH. After comprehensive consideration, the pH of 8 is the superior reaction condition.",
+            "parent_chunk_id": null,
+            "section_name": "3.1.5 Effect of pH",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 14449,
+            "position_end": 15891,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.5 Effect of pH_362e551f",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "3.1.5 Effect of pH",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 14449,
+              "position_end": 15891,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_ph_8_0",
+          "name": "ph",
+          "type": "pH",
+          "value": 8.0,
+          "unit": null,
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.5 Effect of pH_362e551f",
+            "text": "## 3.1.5 Effect of pH\nThe aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder and the dissolution of impurities in the leach solution as the pH varied. The experiments were conducted under the following conditions: leaching time 3 h, leaching temperature 90 °C, 3.0 mol/L [Gly−], L/S 5 mL:1 g, and stirring speed 400 r/min.\nFrom Figure 4(e), it can be found that the leaching efficiency fluctuates more significantly with the change in reaction pH. When the pH of the solution is between 6 and 7, the whole reaction system is in a weakly acidic environment, and Gly will react with H+ as follows:\nThis makes Gly− less cooperative with the metal ions in the spent LIBs powder. As the pH increases, the free H+ in the solution decreases, and more free Gly− can participate in the coordination reaction. The leaching efficiency reaches its highest when the pH reaches 8 and then begins to decrease significantly. This is due to the elevated OH− concentration in the solution, which forms insoluble or slightly soluble precipitates with major metal ions, such as Co(OH). As a result, the number of metal ions in the system decreases, leading to a lower leaching efficiency. On the other hand, Table S5 demonstrates the dissolution of impurity metals decreased significantly with increasing pH. After comprehensive consideration, the pH of 8 is the superior reaction condition.",
+            "parent_chunk_id": null,
+            "section_name": "3.1.5 Effect of pH",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 14449,
+            "position_end": 15891,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.5 Effect of pH_362e551f",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "3.1.5 Effect of pH",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 14449,
+              "position_end": 15891,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "pH",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_other_elevated_oh_concentration",
+          "name": "other",
+          "type": "other",
+          "value": "elevated OH− concentration",
+          "unit": null,
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.5 Effect of pH_362e551f",
+            "text": "## 3.1.5 Effect of pH\nThe aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder and the dissolution of impurities in the leach solution as the pH varied. The experiments were conducted under the following conditions: leaching time 3 h, leaching temperature 90 °C, 3.0 mol/L [Gly−], L/S 5 mL:1 g, and stirring speed 400 r/min.\nFrom Figure 4(e), it can be found that the leaching efficiency fluctuates more significantly with the change in reaction pH. When the pH of the solution is between 6 and 7, the whole reaction system is in a weakly acidic environment, and Gly will react with H+ as follows:\nThis makes Gly− less cooperative with the metal ions in the spent LIBs powder. As the pH increases, the free H+ in the solution decreases, and more free Gly− can participate in the coordination reaction. The leaching efficiency reaches its highest when the pH reaches 8 and then begins to decrease significantly. This is due to the elevated OH− concentration in the solution, which forms insoluble or slightly soluble precipitates with major metal ions, such as Co(OH). As a result, the number of metal ions in the system decreases, leading to a lower leaching efficiency. On the other hand, Table S5 demonstrates the dissolution of impurity metals decreased significantly with increasing pH. After comprehensive consideration, the pH of 8 is the superior reaction condition.",
+            "parent_chunk_id": null,
+            "section_name": "3.1.5 Effect of pH",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 14449,
+            "position_end": 15891,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.5 Effect of pH_362e551f",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "3.1.5 Effect of pH",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 14449,
+              "position_end": 15891,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_PROCESSED_BY_text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "target_name": "glycine leaching of spent LIBs powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder and the dissolution of impurities in the leach solution as the pH varied.",
+          "properties": {
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "leaching time 3 h, leaching temperature 90 °C, 3.0 mol/L [Gly−], L/S 5 mL:1 g, stirring speed 400 r/min",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 90.0,
+                "unit": "°C",
+                "raw_text": "leaching time 3 h, leaching temperature 90 °C, 3.0 mol/L [Gly−], L/S 5 mL:1 g, stirring speed 400 r/min"
+              }
+            ],
+            "condition_labels": [
+              "leaching time 3 h, leaching temperature 90 °C, 3.0 mol/L [Gly−], L/S 5 mL:1 g, stirring speed 400 r/min"
+            ],
+            "condition": "leaching time 3 h, leaching temperature 90 °C, 3.0 mol/L [Gly−], L/S 5 mL:1 g, stirring speed 400 r/min",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_5_Effect_of_pH_362e551f__cond_temperature_90_0_c"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "glycine leaching of spent LIBs powder",
+            "evidence_span": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder and the dissolution of impurities in the leach solution as the pH varied.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching efficiency reaches its highest when the pH reaches 8 and then begins to decrease significantly.",
+          "properties": {
+            "property": "leaching",
+            "value": "highest",
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "evidence_only",
+            "process_role": "main_process",
+            "conditions": "pH 8",
+            "process_agent": "[Gly−]",
+            "treatment_members": [
+              "[Gly−]"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "pH 8"
+              }
+            ],
+            "condition_labels": [
+              "pH 8"
+            ],
+            "condition": "pH 8",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_5_Effect_of_pH_362e551f__cond_ph_8_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Li",
+            "evidence_span": "The leaching efficiency reaches its highest when the pH reaches 8 and then begins to decrease significantly.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching efficiency reaches its highest when the pH reaches 8 and then begins to decrease significantly.",
+          "properties": {
+            "property": "leaching",
+            "value": "highest",
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "evidence_only",
+            "process_role": "main_process",
+            "conditions": "pH 8",
+            "process_agent": "[Gly−]",
+            "treatment_members": [
+              "[Gly−]"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "pH 8"
+              }
+            ],
+            "condition_labels": [
+              "pH 8"
+            ],
+            "condition": "pH 8",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_5_Effect_of_pH_362e551f__cond_ph_8_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Co",
+            "evidence_span": "The leaching efficiency reaches its highest when the pH reaches 8 and then begins to decrease significantly.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching efficiency reaches its highest when the pH reaches 8 and then begins to decrease significantly.",
+          "properties": {
+            "property": "leaching",
+            "value": "highest",
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "evidence_only",
+            "process_role": "main_process",
+            "conditions": "pH 8",
+            "process_agent": "[Gly−]",
+            "treatment_members": [
+              "[Gly−]"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "pH 8"
+              }
+            ],
+            "condition_labels": [
+              "pH 8"
+            ],
+            "condition": "pH 8",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_5_Effect_of_pH_362e551f__cond_ph_8_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Ni",
+            "evidence_span": "The leaching efficiency reaches its highest when the pH reaches 8 and then begins to decrease significantly.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Mn",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching efficiency reaches its highest when the pH reaches 8 and then begins to decrease significantly.",
+          "properties": {
+            "property": "leaching",
+            "value": "highest",
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "evidence_only",
+            "process_role": "main_process",
+            "conditions": "pH 8",
+            "process_agent": "[Gly−]",
+            "treatment_members": [
+              "[Gly−]"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "pH 8"
+              }
+            ],
+            "condition_labels": [
+              "pH 8"
+            ],
+            "condition": "pH 8",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_5_Effect_of_pH_362e551f__cond_ph_8_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Mn",
+            "evidence_span": "The leaching efficiency reaches its highest when the pH reaches 8 and then begins to decrease significantly.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Co_OH_",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Co_OH_",
+          "target_name": "Co(OH)",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "This is due to the elevated OH− concentration in the solution, which forms insoluble or slightly soluble precipitates with major metal ions, such as Co(OH).",
+          "properties": {
+            "property": "precipitate_formation",
+            "value": "insoluble or slightly soluble",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "evidence_only",
+            "process_role": "main_process",
+            "conditions": "elevated OH− concentration",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "elevated OH− concentration",
+                "unit": null,
+                "raw_text": "elevated OH− concentration"
+              }
+            ],
+            "condition_labels": [
+              "elevated OH− concentration"
+            ],
+            "condition": "elevated OH− concentration",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_5_Effect_of_pH_362e551f__cond_other_elevated_oh_concentration"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Co(OH)",
+            "evidence_span": "This is due to the elevated OH− concentration in the solution, which forms insoluble or slightly soluble precipitates with major metal ions, such as Co(OH).",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.6 Effect of stirring speed_118a651d",
+    "section_name": "3.1.6 Effect of stirring speed",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 1,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_ph_8_0",
+          "name": "ph",
+          "type": "pH",
+          "value": 8.0,
+          "unit": null,
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.6 Effect of stirring speed_118a651d",
+            "text": "## 3.1.6 Effect of stirring speed\nThe aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder over stirring speed and the dissolution of impurities in the leach solution. The experiments were conducted under the following conditions: leaching time 3 h, leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL:1 g, and pH 8.\nFigure 4(f) shows the effect of stirring speed on the leaching efficiency. With the increased stirring speed, the leaching efficiency increases to some extent, mainly due to the increased coordination effect between metal ions and ligands in the system, the faster diffusion movement of the reaction, and the faster decomposition of insoluble materials in the raw material. The dissolution of the impurity metal remained almost constant as the stirring speed changed. This result can be seen in Table S6. Considering the leaching efficiency and energy consumption, 400 r/min is the optimal stirring speed.",
+            "parent_chunk_id": null,
+            "section_name": "3.1.6 Effect of stirring speed",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 15891,
+            "position_end": 16845,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.6 Effect of stirring speed_118a651d",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "3.1.6 Effect of stirring speed",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 15891,
+              "position_end": 16845,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "pH",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_PROCESSED_BY_text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "target_name": "glycine leaching of spent LIBs powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder over stirring speed and the dissolution of impurities in the leach solution.",
+          "properties": {
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "leaching time 3 h, leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL:1 g, pH 8, stirring speed varied",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "leaching time 3 h, leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL:1 g, pH 8, stirring speed varied"
+              }
+            ],
+            "condition_labels": [
+              "leaching time 3 h, leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL:1 g, pH 8, stirring speed varied"
+            ],
+            "condition": "leaching time 3 h, leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL:1 g, pH 8, stirring speed varied",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_6_Effect_of_stirring_speed_118a651d__cond_ph_8_0"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "glycine leaching of spent LIBs powder",
+            "evidence_span": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder over stirring speed and the dissolution of impurities in the leach solution.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.7 Effect of hydrogen peroxide addition_0905e821",
+    "section_name": "3.1.7 Effect of hydrogen peroxide addition",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 10,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_ph_8_0",
+          "name": "ph",
+          "type": "pH",
+          "value": 8.0,
+          "unit": null,
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.7 Effect of hydrogen peroxide addition_0905e821",
+            "text": "## 3.1.7 Effect of hydrogen peroxide addition\nThe aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder and the dissolution of impurities in the leach solution as the amount of hydrogen peroxide. The concentration of hydrogen peroxide was 30%. The experiments were conducted under the following conditions: leaching time 3 h, leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL: 1 g, pH 8, and stirring speed 400 r/min.\nHydrogen peroxide acts as a reducing agent in the system, and its addition destroys the solid crystal structure built by the high-valent metal, allowing the liquid-phase reaction process to proceed more completely [5]. Figure 4 (g) shows the effect of hydrogen peroxide addition on the leaching efficiencies of valuable metals. The leaching efficiencies of Co and Ni are significantly improved. As shown in Table S7, the dissolution of the impurity metals remained almost constant as the amount of hydrogen peroxide changed. The dosage of 5 vol.% of hydrogen peroxide is the optimum condition.\nIn summary, the optimal conditions for the leaching of retired ternary lithium batteries by the alkaline glycinate system are reaction time of 3 h, temperature of 90 ^∘C, [Gly−] concentration of 3 mol/L, liquid-solid ratio of 5: 1, pH of 8, stirring speed of 400 r/min and H2O2 dosage of 5 vol.%. Under these optimal leaching conditions, the optimal leaching efficiencies of Li, Co, Ni, and Mn were 96.31%, 83.18%, 91.56%, and 31.16%, respectively. Compared with other metals, Li was the easiest to leach. And the concentrations of Ca, Al, Fe, and Cu are 13.52, 46.13, 53.56, and 40.04 mg/L. Figure 5 compares X-ray diffraction patterns of spent LIBs powder before and after leaching. Some of the unleashed Mn is present in the form of MnCO. As shown in Figures 6 and 7, the valuable metals almost disappeared after leaching, and the impurity metals Ca, Al, Fe, and Cu remained almost unchanged.\nreactions at the liquid-solid interface. The modeling of the reaction and the elucidation of the control steps of the reaction process plays an essential role in controlling the reaction rate of the whole system and understanding the reaction mechanism [43].\nThe investigation of leaching kinetics allows for a better understanding of the mechanisms of the leaching process to define and regulate the production steps. The shrinkage kernel model is the classical method used for the analysis of liquid-solid reaction kinetics. It consists of three control steps, namely chemical reaction control, internal diffusion control, and mixing control [44, 45]. The specific expressions are as follows.\nChemical reaction control:\n1 - (1 - x) ^1 / 3 = k1 t (Eq. 2)\nInternal diffusion control:",
+            "parent_chunk_id": null,
+            "section_name": "3.1.7 Effect of hydrogen peroxide addition",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 16845,
+            "position_end": 19575,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.1.7 Effect of hydrogen peroxide addition_0905e821",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "3.1.7 Effect of hydrogen peroxide addition",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 16845,
+              "position_end": 19575,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "pH",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_PROCESSED_BY_text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "target_name": "glycine leaching of spent LIBs powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder and the dissolution of impurities in the leach solution as the amount of hydrogen peroxide.",
+          "properties": {
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "glycine leaching of spent LIBs powder",
+            "evidence_span": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder and the dissolution of impurities in the leach solution as the amount of hydrogen peroxide.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Under these optimal leaching conditions, the optimal leaching efficiencies of Li, Co, Ni, and Mn were 96.31%, 83.18%, 91.56%, and 31.16%, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 96.31,
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "process_agent": "H2O2",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+              }
+            ],
+            "condition_labels": [
+              "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+            ],
+            "condition": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_7_Effect_of_hydrogen_peroxide_addition_0905e821__cond_ph_8_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Li",
+            "evidence_span": "Under these optimal leaching conditions, the optimal leaching efficiencies of Li, Co, Ni, and Mn were 96.31%, 83.18%, 91.56%, and 31.16%, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Under these optimal leaching conditions, the optimal leaching efficiencies of Li, Co, Ni, and Mn were 96.31%, 83.18%, 91.56%, and 31.16%, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 83.18,
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "process_agent": "H2O2",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+              }
+            ],
+            "condition_labels": [
+              "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+            ],
+            "condition": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_7_Effect_of_hydrogen_peroxide_addition_0905e821__cond_ph_8_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Co",
+            "evidence_span": "Under these optimal leaching conditions, the optimal leaching efficiencies of Li, Co, Ni, and Mn were 96.31%, 83.18%, 91.56%, and 31.16%, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Under these optimal leaching conditions, the optimal leaching efficiencies of Li, Co, Ni, and Mn were 96.31%, 83.18%, 91.56%, and 31.16%, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 91.56,
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "process_agent": "H2O2",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+              }
+            ],
+            "condition_labels": [
+              "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+            ],
+            "condition": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_7_Effect_of_hydrogen_peroxide_addition_0905e821__cond_ph_8_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Ni",
+            "evidence_span": "Under these optimal leaching conditions, the optimal leaching efficiencies of Li, Co, Ni, and Mn were 96.31%, 83.18%, 91.56%, and 31.16%, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Mn",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Under these optimal leaching conditions, the optimal leaching efficiencies of Li, Co, Ni, and Mn were 96.31%, 83.18%, 91.56%, and 31.16%, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 31.16,
+            "unit": "%",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "process_agent": "H2O2",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+              }
+            ],
+            "condition_labels": [
+              "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+            ],
+            "condition": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_7_Effect_of_hydrogen_peroxide_addition_0905e821__cond_ph_8_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Mn",
+            "evidence_span": "Under these optimal leaching conditions, the optimal leaching efficiencies of Li, Co, Ni, and Mn were 96.31%, 83.18%, 91.56%, and 31.16%, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Ca",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Ca",
+          "target_name": "Ca",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "And the concentrations of Ca, Al, Fe, and Cu are 13.52, 46.13, 53.56, and 40.04 mg/L.",
+          "properties": {
+            "property": "concentration",
+            "value": 13.52,
+            "unit": "mg/L",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "process_agent": "H2O2",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "property_raw": "concentration",
+            "measure_key": "concentration",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+              }
+            ],
+            "condition_labels": [
+              "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+            ],
+            "condition": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_7_Effect_of_hydrogen_peroxide_addition_0905e821__cond_ph_8_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Ca",
+            "evidence_span": "And the concentrations of Ca, Al, Fe, and Cu are 13.52, 46.13, 53.56, and 40.04 mg/L.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Al",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "And the concentrations of Ca, Al, Fe, and Cu are 13.52, 46.13, 53.56, and 40.04 mg/L.",
+          "properties": {
+            "property": "concentration",
+            "value": 46.13,
+            "unit": "mg/L",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "process_agent": "H2O2",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "property_raw": "concentration",
+            "measure_key": "concentration",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+              }
+            ],
+            "condition_labels": [
+              "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+            ],
+            "condition": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_7_Effect_of_hydrogen_peroxide_addition_0905e821__cond_ph_8_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Al",
+            "evidence_span": "And the concentrations of Ca, Al, Fe, and Cu are 13.52, 46.13, 53.56, and 40.04 mg/L.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Fe",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Fe",
+          "target_name": "Fe",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "And the concentrations of Ca, Al, Fe, and Cu are 13.52, 46.13, 53.56, and 40.04 mg/L.",
+          "properties": {
+            "property": "concentration",
+            "value": 53.56,
+            "unit": "mg/L",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "process_agent": "H2O2",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "property_raw": "concentration",
+            "measure_key": "concentration",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+              }
+            ],
+            "condition_labels": [
+              "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+            ],
+            "condition": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_7_Effect_of_hydrogen_peroxide_addition_0905e821__cond_ph_8_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Fe",
+            "evidence_span": "And the concentrations of Ca, Al, Fe, and Cu are 13.52, 46.13, 53.56, and 40.04 mg/L.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Cu",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Cu",
+          "target_name": "Cu",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "And the concentrations of Ca, Al, Fe, and Cu are 13.52, 46.13, 53.56, and 40.04 mg/L.",
+          "properties": {
+            "property": "concentration",
+            "value": 40.04,
+            "unit": "mg/L",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "process_agent": "H2O2",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "property_raw": "concentration",
+            "measure_key": "concentration",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+              }
+            ],
+            "condition_labels": [
+              "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%"
+            ],
+            "condition": "optimal conditions: reaction time 3 h, temperature 90 °C, [Gly−] 3 mol/L, L/S 5:1, pH 8, stirring speed 400 r/min, H2O2 dosage 5 vol.%",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_1_7_Effect_of_hydrogen_peroxide_addition_0905e821__cond_ph_8_0"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Cu",
+            "evidence_span": "And the concentrations of Ca, Al, Fe, and Cu are 13.52, 46.13, 53.56, and 40.04 mg/L.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_MnCO",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_MnCO",
+          "target_name": "MnCO",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Some of the unleashed Mn is present in the form of MnCO.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "MnCO",
+            "evidence_span": "Some of the unleashed Mn is present in the form of MnCO.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_2 x / 3 - (1 - x) ^2 / 3 = k2 t (Eq. 3)_e5497b64",
+    "section_name": "2 x / 3 - (1 - x) ^2 / 3 = k2 t (Eq. 3)",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.2 Leaching kinetics_216310b5",
+    "section_name": "3.2 Leaching kinetics",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 5,
+      "condition_count": 2,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_ph_8_0",
+          "name": "ph",
+          "type": "pH",
+          "value": 8.0,
+          "unit": null,
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.2 Leaching kinetics_216310b5",
+            "text": "## 3.2 Leaching kinetics\nMixing control:\nln(1 - x) / 3 + (1 - x) ^(- 1 / 3) - 1 = k3 t (Eq. 4)\nIn the above equation, x represents the leaching efficiencies of Li, Co, Ni, and Mn; k1-3 ^ (min ^-1) represents the integrated rate constants; t (min) represents the leaching time.\nThe experiments were performed in a 1.5 L beaker. The beaker was filled with 1 L of 3 mol/Lsolution of [ Gly ^- ]T, and the pH was adjusted to 8 with NaOH solid particles at 25, 35, 45, 55, and 65 ^∘C. 200 g of spent LIBs powder was added. The leaching efficiency of the target metals was then analyzed by sampling every 10 min. It was found that the early leaching rate of lithium was too fast, so the sampling interval for lithium was every minute in the first 10 min of the reaction start and every five minutes after 10 min. The results of the Li, Co, Ni, and Mn leaching efficiencies are shown in Figure 8.\nThe experimental data in Figure 8 were fitted, and the results obtained from the fitting are shown in Figure 9 and Table 2. In addition, the Arrhenius equation [46] is applied to plot lnk against 1000/T, thus calculating the activation energy of the target metal and determining the type of reaction.\nlnk = lnA - Ea / R T (Eq. 5) where Ea is the apparent activation energy; A is the frequency factor; T (K) is the leaching temperature; and R is the gas constant 8.3145 J/(K·mol).\nThe correlation results of the activation energy fit are shown in Figure 10. The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively. They indicated that the leaching process is controlled by chemical reactions. The leaching temperature has a significant influence on the leaching efficiencies of metals. Based on the magnitude of activation energy, Li is more easily leached, and Mn is the most difficult to be leached. This is also verified in the condition experiment.\nThe Arrhenius equations for Li, Co, Ni, and Mn in the temperature range of 25 to 65 ^∘C can be derived from the fitting results of Figure 10.",
+            "parent_chunk_id": null,
+            "section_name": "3.2 Leaching kinetics",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 19664,
+            "position_end": 22021,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.2 Leaching kinetics_216310b5",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "3.2 Leaching kinetics",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 19664,
+              "position_end": 22021,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "pH",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_temperature_65_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 65.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+            "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.2 Leaching kinetics_216310b5",
+            "text": "## 3.2 Leaching kinetics\nMixing control:\nln(1 - x) / 3 + (1 - x) ^(- 1 / 3) - 1 = k3 t (Eq. 4)\nIn the above equation, x represents the leaching efficiencies of Li, Co, Ni, and Mn; k1-3 ^ (min ^-1) represents the integrated rate constants; t (min) represents the leaching time.\nThe experiments were performed in a 1.5 L beaker. The beaker was filled with 1 L of 3 mol/Lsolution of [ Gly ^- ]T, and the pH was adjusted to 8 with NaOH solid particles at 25, 35, 45, 55, and 65 ^∘C. 200 g of spent LIBs powder was added. The leaching efficiency of the target metals was then analyzed by sampling every 10 min. It was found that the early leaching rate of lithium was too fast, so the sampling interval for lithium was every minute in the first 10 min of the reaction start and every five minutes after 10 min. The results of the Li, Co, Ni, and Mn leaching efficiencies are shown in Figure 8.\nThe experimental data in Figure 8 were fitted, and the results obtained from the fitting are shown in Figure 9 and Table 2. In addition, the Arrhenius equation [46] is applied to plot lnk against 1000/T, thus calculating the activation energy of the target metal and determining the type of reaction.\nlnk = lnA - Ea / R T (Eq. 5) where Ea is the apparent activation energy; A is the frequency factor; T (K) is the leaching temperature; and R is the gas constant 8.3145 J/(K·mol).\nThe correlation results of the activation energy fit are shown in Figure 10. The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively. They indicated that the leaching process is controlled by chemical reactions. The leaching temperature has a significant influence on the leaching efficiencies of metals. Based on the magnitude of activation energy, Li is more easily leached, and Mn is the most difficult to be leached. This is also verified in the condition experiment.\nThe Arrhenius equations for Li, Co, Ni, and Mn in the temperature range of 25 to 65 ^∘C can be derived from the fitting results of Figure 10.",
+            "parent_chunk_id": null,
+            "section_name": "3.2 Leaching kinetics",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 19664,
+            "position_end": 22021,
+            "metadata": {
+              "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_3.2 Leaching kinetics_216310b5",
+              "doc_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+              "title": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System/text.md",
+              "section_name": "3.2 Leaching kinetics",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 19664,
+              "position_end": 22021,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_PROCESSED_BY_text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "target_name": "glycine leaching of spent LIBs powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "200 g of spent LIBs powder was added.",
+          "properties": {
+            "source_sample": "spent LIBs powder",
+            "sample_state": "black powder obtained after discharge-disassembly-crushing-screening processing",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "1 L of 3 mol/L [Gly-]T, pH 8 adjusted with NaOH, 25-65 °C",
+            "condition_keys": [
+              {
+                "key": "ph",
+                "value": 8.0,
+                "unit": null,
+                "raw_text": "1 L of 3 mol/L [Gly-]T, pH 8 adjusted with NaOH, 25-65 °C"
+              }
+            ],
+            "condition_labels": [
+              "1 L of 3 mol/L [Gly-]T, pH 8 adjusted with NaOH, 25-65 °C"
+            ],
+            "condition": "1 L of 3 mol/L [Gly-]T, pH 8 adjusted with NaOH, 25-65 °C",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_2_Leaching_kinetics_216310b5__cond_ph_8_0"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "glycine leaching of spent LIBs powder",
+            "evidence_span": "200 g of spent LIBs powder was added.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+          "properties": {
+            "property": "activation_energy",
+            "value": 45.73,
+            "unit": "kJ/mol",
+            "source_sample": "spent LIBs powder",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "temperature range 25 to 65 °C",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 65.0,
+                "unit": "°C",
+                "raw_text": "temperature range 25 to 65 °C"
+              }
+            ],
+            "condition_labels": [
+              "temperature range 25 to 65 °C"
+            ],
+            "condition": "temperature range 25 to 65 °C",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_2_Leaching_kinetics_216310b5__cond_temperature_65_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Li",
+            "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+          "properties": {
+            "property": "activation_energy",
+            "value": 53.13,
+            "unit": "kJ/mol",
+            "source_sample": "spent LIBs powder",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "temperature range 25 to 65 °C",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 65.0,
+                "unit": "°C",
+                "raw_text": "temperature range 25 to 65 °C"
+              }
+            ],
+            "condition_labels": [
+              "temperature range 25 to 65 °C"
+            ],
+            "condition": "temperature range 25 to 65 °C",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_2_Leaching_kinetics_216310b5__cond_temperature_65_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Ni",
+            "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+          "properties": {
+            "property": "activation_energy",
+            "value": 50.64,
+            "unit": "kJ/mol",
+            "source_sample": "spent LIBs powder",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "temperature range 25 to 65 °C",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 65.0,
+                "unit": "°C",
+                "raw_text": "temperature range 25 to 65 °C"
+              }
+            ],
+            "condition_labels": [
+              "temperature range 25 to 65 °C"
+            ],
+            "condition": "temperature range 25 to 65 °C",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_2_Leaching_kinetics_216310b5__cond_temperature_65_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Co",
+            "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_text_Material_Mn",
+          "source_id": "text_Process_glycine_leaching_of_spent_LIBs_powder",
+          "source_name": "glycine leaching of spent LIBs powder",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+          "properties": {
+            "property": "activation_energy",
+            "value": 60.36,
+            "unit": "kJ/mol",
+            "source_sample": "spent LIBs powder",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "temperature range 25 to 65 °C",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 65.0,
+                "unit": "°C",
+                "raw_text": "temperature range 25 to 65 °C"
+              }
+            ],
+            "condition_labels": [
+              "temperature range 25 to 65 °C"
+            ],
+            "condition": "temperature range 25 to 65 °C",
+            "condition_ids": [
+              "CHUNK_Selective_Leaching_of_Valuable_Metal_from_Spent_Lithium_Ion_Batteries_in_the_Alkaline_Glycinate_System_3_2_Leaching_kinetics_216310b5__cond_temperature_65_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "glycine leaching of spent LIBs powder",
+            "target_name": "Mn",
+            "evidence_span": "The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_4 Conclusions_90c69a10",
+    "section_name": "4 Conclusions",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_abstract_result_evidence",
+    "section_name": "Abstract Result Evidence",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  }
+]

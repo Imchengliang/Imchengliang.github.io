@@ -1,0 +1,740 @@
+{
+  "relations": [
+    {
+      "id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
+      "source_id": "Material_LiCoO2",
+      "source_name": "LiCoO2",
+      "target_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+      "target_name": "LiCoO2 leaching in nitric acid solution",
+      "relation_type": "PROCESSED_BY",
+      "confidence": 0.8,
+      "evidence_span": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C.",
+      "source": {
+        "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "title": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "year": 2026,
+        "authors": [],
+        "doi": null,
+        "journal": null,
+        "impact_factor": 1.0,
+        "citation_count": 0,
+        "page_number": null,
+        "url": null
+      },
+      "text_chunk": {
+        "chunk_id": "numeric-attribution-local",
+        "text": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\n\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+        "parent_chunk_id": null,
+        "section_name": null,
+        "subsection_name": null,
+        "page_number": 1,
+        "position_start": 0,
+        "position_end": 0,
+        "metadata": {}
+      },
+      "properties": {
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, no reducing agent",
+        "source_sample": "cathodic active materials",
+        "condition_keys": [
+          {
+            "key": "temperature",
+            "value": 75.0,
+            "unit": "°C",
+            "raw_text": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, no reducing agent"
+          }
+        ],
+        "condition_labels": [
+          "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, no reducing agent"
+        ],
+        "condition": "1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, no reducing agent",
+        "condition_ids": [
+          "cond_temperature_75_0_c"
+        ],
+        "raw_relation_type": "PROCESSED_BY",
+        "normalized_relation_type": "PROCESSED_BY",
+        "normalized_from_raw": false
+      },
+      "validation_status": "pending"
+    },
+    {
+      "id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
+      "source_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+      "source_name": "LiCoO2 leaching in nitric acid solution",
+      "target_id": "Material_Co",
+      "target_name": "Co",
+      "relation_type": "HAS_OUTPUT",
+      "confidence": 0.8,
+      "evidence_span": "In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li.",
+      "source": {
+        "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "title": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "year": 2026,
+        "authors": [],
+        "doi": null,
+        "journal": null,
+        "impact_factor": 1.0,
+        "citation_count": 0,
+        "page_number": null,
+        "url": null
+      },
+      "text_chunk": {
+        "chunk_id": "numeric-attribution-local",
+        "text": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\n\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+        "parent_chunk_id": null,
+        "section_name": null,
+        "subsection_name": null,
+        "page_number": 1,
+        "position_start": 0,
+        "position_end": 0,
+        "metadata": {}
+      },
+      "properties": {
+        "property": "leaching",
+        "value": 40,
+        "unit": "%",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "no reducing agent, 1 M HNO3, 20 g/L S/L ratio, 75 °C, 30 min",
+        "treatment_members": [],
+        "property_raw": "leaching_efficiency",
+        "measure_key": "leaching",
+        "condition_keys": [
+          {
+            "key": "temperature",
+            "value": 75.0,
+            "unit": "°C",
+            "raw_text": "no reducing agent, 1 M HNO3, 20 g/L S/L ratio, 75 °C, 30 min",
+            "negated": true
+          }
+        ],
+        "condition_labels": [
+          "no reducing agent, 1 M HNO3, 20 g/L S/L ratio, 75 °C, 30 min"
+        ],
+        "condition": "no reducing agent, 1 M HNO3, 20 g/L S/L ratio, 75 °C, 30 min",
+        "condition_ids": [
+          "cond_temperature_75_0_c"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false
+      },
+      "validation_status": "pending"
+    },
+    {
+      "id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
+      "source_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+      "source_name": "LiCoO2 leaching in nitric acid solution",
+      "target_id": "Material_Li",
+      "target_name": "Li",
+      "relation_type": "HAS_OUTPUT",
+      "confidence": 0.8,
+      "evidence_span": "In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li.",
+      "source": {
+        "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "title": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "year": 2026,
+        "authors": [],
+        "doi": null,
+        "journal": null,
+        "impact_factor": 1.0,
+        "citation_count": 0,
+        "page_number": null,
+        "url": null
+      },
+      "text_chunk": {
+        "chunk_id": "numeric-attribution-local",
+        "text": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\n\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+        "parent_chunk_id": null,
+        "section_name": null,
+        "subsection_name": null,
+        "page_number": 1,
+        "position_start": 0,
+        "position_end": 0,
+        "metadata": {}
+      },
+      "properties": {
+        "property": "leaching",
+        "value": 75,
+        "unit": "%",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "no reducing agent, 1 M HNO3, 20 g/L S/L ratio, 75 °C, 30 min",
+        "treatment_members": [],
+        "property_raw": "leaching_efficiency",
+        "measure_key": "leaching",
+        "condition_keys": [
+          {
+            "key": "temperature",
+            "value": 75.0,
+            "unit": "°C",
+            "raw_text": "no reducing agent, 1 M HNO3, 20 g/L S/L ratio, 75 °C, 30 min",
+            "negated": true
+          }
+        ],
+        "condition_labels": [
+          "no reducing agent, 1 M HNO3, 20 g/L S/L ratio, 75 °C, 30 min"
+        ],
+        "condition": "no reducing agent, 1 M HNO3, 20 g/L S/L ratio, 75 °C, 30 min",
+        "condition_ids": [
+          "cond_temperature_75_0_c"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false
+      },
+      "validation_status": "pending"
+    },
+    {
+      "id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
+      "source_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+      "source_name": "LiCoO2 leaching in nitric acid solution",
+      "target_id": "Material_Co",
+      "target_name": "Co",
+      "relation_type": "HAS_OUTPUT",
+      "confidence": 0.8,
+      "evidence_span": "To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure.",
+      "source": {
+        "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "title": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "year": 2026,
+        "authors": [],
+        "doi": null,
+        "journal": null,
+        "impact_factor": 1.0,
+        "citation_count": 0,
+        "page_number": null,
+        "url": null
+      },
+      "text_chunk": {
+        "chunk_id": "numeric-attribution-local",
+        "text": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\n\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+        "parent_chunk_id": null,
+        "section_name": null,
+        "subsection_name": null,
+        "page_number": 1,
+        "position_start": 0,
+        "position_end": 0,
+        "metadata": {}
+      },
+      "properties": {
+        "property": "leaching",
+        "value": 85,
+        "unit": "%",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "reductive leaching, 1 M HNO3, 20 g/L S/L ratio, 75 °C",
+        "process_agent": "0.8 vol.% hydrogen peroxide",
+        "treatment_members": [
+          "hydrogen peroxide"
+        ],
+        "extra_qualifiers": "about 85%",
+        "property_raw": "leaching_efficiency",
+        "measure_key": "leaching",
+        "condition_keys": [
+          {
+            "key": "temperature",
+            "value": 75.0,
+            "unit": "°C",
+            "raw_text": "reductive leaching, 1 M HNO3, 20 g/L S/L ratio, 75 °C"
+          }
+        ],
+        "condition_labels": [
+          "reductive leaching, 1 M HNO3, 20 g/L S/L ratio, 75 °C"
+        ],
+        "condition": "reductive leaching, 1 M HNO3, 20 g/L S/L ratio, 75 °C",
+        "condition_ids": [
+          "cond_temperature_75_0_c"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false
+      },
+      "validation_status": "pending"
+    },
+    {
+      "id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
+      "source_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+      "source_name": "LiCoO2 leaching in nitric acid solution",
+      "target_id": "Material_Li",
+      "target_name": "Li",
+      "relation_type": "HAS_OUTPUT",
+      "confidence": 0.8,
+      "evidence_span": "To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure.",
+      "source": {
+        "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "title": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "year": 2026,
+        "authors": [],
+        "doi": null,
+        "journal": null,
+        "impact_factor": 1.0,
+        "citation_count": 0,
+        "page_number": null,
+        "url": null
+      },
+      "text_chunk": {
+        "chunk_id": "numeric-attribution-local",
+        "text": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\n\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+        "parent_chunk_id": null,
+        "section_name": null,
+        "subsection_name": null,
+        "page_number": 1,
+        "position_start": 0,
+        "position_end": 0,
+        "metadata": {}
+      },
+      "properties": {
+        "property": "leaching",
+        "value": 85,
+        "unit": "%",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "reductive leaching, 1 M HNO3, 20 g/L S/L ratio, 75 °C",
+        "process_agent": "0.8 vol.% hydrogen peroxide",
+        "treatment_members": [
+          "hydrogen peroxide"
+        ],
+        "extra_qualifiers": "about 85%",
+        "property_raw": "leaching_efficiency",
+        "measure_key": "leaching",
+        "condition_keys": [
+          {
+            "key": "temperature",
+            "value": 75.0,
+            "unit": "°C",
+            "raw_text": "reductive leaching, 1 M HNO3, 20 g/L S/L ratio, 75 °C"
+          }
+        ],
+        "condition_labels": [
+          "reductive leaching, 1 M HNO3, 20 g/L S/L ratio, 75 °C"
+        ],
+        "condition": "reductive leaching, 1 M HNO3, 20 g/L S/L ratio, 75 °C",
+        "condition_ids": [
+          "cond_temperature_75_0_c"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false
+      },
+      "validation_status": "pending"
+    },
+    {
+      "id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
+      "source_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+      "source_name": "LiCoO2 leaching in nitric acid solution",
+      "target_id": "Material_Co",
+      "target_name": "Co",
+      "relation_type": "HAS_OUTPUT",
+      "confidence": 0.8,
+      "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively",
+      "source": {
+        "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "title": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "year": 2026,
+        "authors": [],
+        "doi": null,
+        "journal": null,
+        "impact_factor": 1.0,
+        "citation_count": 0,
+        "page_number": null,
+        "url": null
+      },
+      "text_chunk": {
+        "chunk_id": "numeric-attribution-local",
+        "text": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\n\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+        "parent_chunk_id": null,
+        "section_name": null,
+        "subsection_name": null,
+        "page_number": 1,
+        "position_start": 0,
+        "position_end": 0,
+        "metadata": {}
+      },
+      "properties": {
+        "property": "leaching",
+        "value": 99,
+        "unit": "%",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 75 °C",
+        "process_agent": "1.7 vol.% H2O2",
+        "treatment_members": [
+          "H2O2"
+        ],
+        "extra_qualifiers": "close to 99%",
+        "property_raw": "leaching_efficiency",
+        "measure_key": "leaching",
+        "condition_keys": [
+          {
+            "key": "temperature",
+            "value": 75.0,
+            "unit": "°C",
+            "raw_text": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 75 °C"
+          }
+        ],
+        "condition_labels": [
+          "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 75 °C"
+        ],
+        "condition": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 75 °C",
+        "condition_ids": [
+          "cond_temperature_75_0_c"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false
+      },
+      "validation_status": "pending"
+    },
+    {
+      "id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
+      "source_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+      "source_name": "LiCoO2 leaching in nitric acid solution",
+      "target_id": "Material_Co",
+      "target_name": "Co",
+      "relation_type": "HAS_OUTPUT",
+      "confidence": 0.8,
+      "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively",
+      "source": {
+        "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "title": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "year": 2026,
+        "authors": [],
+        "doi": null,
+        "journal": null,
+        "impact_factor": 1.0,
+        "citation_count": 0,
+        "page_number": null,
+        "url": null
+      },
+      "text_chunk": {
+        "chunk_id": "numeric-attribution-local",
+        "text": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\n\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+        "parent_chunk_id": null,
+        "section_name": null,
+        "subsection_name": null,
+        "page_number": 1,
+        "position_start": 0,
+        "position_end": 0,
+        "metadata": {}
+      },
+      "properties": {
+        "property": "leaching",
+        "value": 75,
+        "unit": "%",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 50 °C",
+        "process_agent": "1.7 vol.% H2O2",
+        "treatment_members": [
+          "H2O2"
+        ],
+        "property_raw": "leaching_efficiency",
+        "measure_key": "leaching",
+        "condition_keys": [
+          {
+            "key": "temperature",
+            "value": 50.0,
+            "unit": "°C",
+            "raw_text": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 50 °C"
+          }
+        ],
+        "condition_labels": [
+          "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 50 °C"
+        ],
+        "condition": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 50 °C",
+        "condition_ids": [
+          "cond_temperature_50_0_c"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false
+      },
+      "validation_status": "pending"
+    },
+    {
+      "id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
+      "source_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+      "source_name": "LiCoO2 leaching in nitric acid solution",
+      "target_id": "Material_Co",
+      "target_name": "Co",
+      "relation_type": "HAS_OUTPUT",
+      "confidence": 0.8,
+      "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively",
+      "source": {
+        "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "title": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "year": 2026,
+        "authors": [],
+        "doi": null,
+        "journal": null,
+        "impact_factor": 1.0,
+        "citation_count": 0,
+        "page_number": null,
+        "url": null
+      },
+      "text_chunk": {
+        "chunk_id": "numeric-attribution-local",
+        "text": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\n\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+        "parent_chunk_id": null,
+        "section_name": null,
+        "subsection_name": null,
+        "page_number": 1,
+        "position_start": 0,
+        "position_end": 0,
+        "metadata": {}
+      },
+      "properties": {
+        "property": "leaching",
+        "value": 30,
+        "unit": "%",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "conditions": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 25 °C",
+        "process_agent": "1.7 vol.% H2O2",
+        "treatment_members": [
+          "H2O2"
+        ],
+        "property_raw": "leaching_efficiency",
+        "measure_key": "leaching",
+        "condition_keys": [
+          {
+            "key": "temperature",
+            "value": 25.0,
+            "unit": "°C",
+            "raw_text": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 25 °C"
+          }
+        ],
+        "condition_labels": [
+          "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 25 °C"
+        ],
+        "condition": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 25 °C",
+        "condition_ids": [
+          "cond_temperature_25_0_c"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false
+      },
+      "validation_status": "pending"
+    },
+    {
+      "id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
+      "source_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+      "source_name": "LiCoO2 leaching in nitric acid solution",
+      "target_id": "Material_Li",
+      "target_name": "Li",
+      "relation_type": "HAS_OUTPUT",
+      "confidence": 0.8,
+      "evidence_span": "The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+      "source": {
+        "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "title": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "year": 2026,
+        "authors": [],
+        "doi": null,
+        "journal": null,
+        "impact_factor": 1.0,
+        "citation_count": 0,
+        "page_number": null,
+        "url": null
+      },
+      "text_chunk": {
+        "chunk_id": "numeric-attribution-local",
+        "text": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\n\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+        "parent_chunk_id": null,
+        "section_name": null,
+        "subsection_name": null,
+        "page_number": 1,
+        "position_start": 0,
+        "position_end": 0,
+        "metadata": {}
+      },
+      "properties": {
+        "study_scope": "current_study",
+        "graph_status": "evidence_only",
+        "process_role": "main_process",
+        "conditions": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min",
+        "process_agent": "1.7 vol.% H2O2",
+        "treatment_members": [
+          "H2O2"
+        ],
+        "extra_qualifiers": "Li extraction similar to Co; no Li numerical values stated",
+        "condition_keys": [
+          {
+            "key": "concentration",
+            "value": 10.0,
+            "unit": "g/L",
+            "raw_text": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min"
+          }
+        ],
+        "condition_labels": [
+          "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min"
+        ],
+        "condition": "10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min",
+        "condition_ids": [
+          "cond_concentration_10_0_g_l"
+        ],
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false
+      },
+      "validation_status": "pending"
+    }
+  ],
+  "binding_mode": "joint",
+  "conditions": [
+    {
+      "id": "cond_temperature_75_0_c",
+      "name": "temperature",
+      "type": "Temperature",
+      "value": 75.0,
+      "unit": "°C",
+      "source": {
+        "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "title": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "year": 2026,
+        "authors": [],
+        "doi": null,
+        "journal": null,
+        "impact_factor": 1.0,
+        "citation_count": 0,
+        "page_number": null,
+        "url": null
+      },
+      "text_chunk": {
+        "chunk_id": "numeric-attribution-local",
+        "text": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\n\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+        "parent_chunk_id": null,
+        "section_name": null,
+        "subsection_name": null,
+        "page_number": 1,
+        "position_start": 0,
+        "position_end": 0,
+        "metadata": {}
+      },
+      "condition_type": "Temperature",
+      "is_from_table_caption": false
+    },
+    {
+      "id": "cond_temperature_50_0_c",
+      "name": "temperature",
+      "type": "Temperature",
+      "value": 50.0,
+      "unit": "°C",
+      "source": {
+        "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "title": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "year": 2026,
+        "authors": [],
+        "doi": null,
+        "journal": null,
+        "impact_factor": 1.0,
+        "citation_count": 0,
+        "page_number": null,
+        "url": null
+      },
+      "text_chunk": {
+        "chunk_id": "numeric-attribution-local",
+        "text": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\n\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+        "parent_chunk_id": null,
+        "section_name": null,
+        "subsection_name": null,
+        "page_number": 1,
+        "position_start": 0,
+        "position_end": 0,
+        "metadata": {}
+      },
+      "condition_type": "Temperature",
+      "is_from_table_caption": false
+    },
+    {
+      "id": "cond_temperature_25_0_c",
+      "name": "temperature",
+      "type": "Temperature",
+      "value": 25.0,
+      "unit": "°C",
+      "source": {
+        "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "title": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "year": 2026,
+        "authors": [],
+        "doi": null,
+        "journal": null,
+        "impact_factor": 1.0,
+        "citation_count": 0,
+        "page_number": null,
+        "url": null
+      },
+      "text_chunk": {
+        "chunk_id": "numeric-attribution-local",
+        "text": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\n\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+        "parent_chunk_id": null,
+        "section_name": null,
+        "subsection_name": null,
+        "page_number": 1,
+        "position_start": 0,
+        "position_end": 0,
+        "metadata": {}
+      },
+      "condition_type": "Temperature",
+      "is_from_table_caption": false
+    },
+    {
+      "id": "cond_concentration_10_0_g_l",
+      "name": "concentration",
+      "type": "Concentration",
+      "value": 10.0,
+      "unit": "g/L",
+      "source": {
+        "doc_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "title": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "year": 2026,
+        "authors": [],
+        "doi": null,
+        "journal": null,
+        "impact_factor": 1.0,
+        "citation_count": 0,
+        "page_number": null,
+        "url": null
+      },
+      "text_chunk": {
+        "chunk_id": "numeric-attribution-local",
+        "text": "Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C. In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li. To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure. It seems that Co ^2 ^+ (cobaltous) is more readily dissolved than Co ^3+ (cobaltic).\n\nFig. 8 shows the effect of temperature on the leaching at 10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li increased with increasing temperature. The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.",
+        "parent_chunk_id": null,
+        "section_name": null,
+        "subsection_name": null,
+        "page_number": 1,
+        "position_start": 0,
+        "position_end": 0,
+        "metadata": {}
+      },
+      "condition_type": "Concentration",
+      "is_from_table_caption": false
+    }
+  ],
+  "condition_count": 4,
+  "unresolved_binding_requests": [],
+  "unresolved_binding_count": 0,
+  "unresolved_process_result_requests": [],
+  "unresolved_process_result_count": 0,
+  "discarded_pairs": [],
+  "deleted_relations": [],
+  "relation_count": 9,
+  "llm_raw_response": "{\"relations\":[{\"source_name\":\"LiCoO2\",\"target_name\":\"LiCoO2 leaching in nitric acid solution\",\"relation_type\":\"PROCESSED_BY\",\"evidence_span\":\"Fig. 5 shows the leaching behavior of cathodic active materials in 1 M nitric acid solution when other conditions were fixed at 20 g/L S/L ratio and 75 ^∘C.\",\"attributes\":{\"study_scope\":\"current_study\",\"graph_status\":\"active\",\"process_role\":\"main_process\",\"conditions\":\"1 M nitric acid solution, 20 g/L S/L ratio, 75 °C, no reducing agent\",\"source_sample\":\"cathodic active materials\"}},{\"source_name\":\"LiCoO2 leaching in nitric acid solution\",\"target_name\":\"Co\",\"relation_type\":\"HAS_OUTPUT\",\"evidence_span\":\"In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li.\",\"attributes\":{\"property\":\"leaching_efficiency\",\"value\":40,\"unit\":\"%\",\"study_scope\":\"current_study\",\"graph_status\":\"active\",\"process_role\":\"main_process\",\"conditions\":\"no reducing agent, 1 M HNO3, 20 g/L S/L ratio, 75 °C, 30 min\",\"treatment_members\":[]}},{\"source_name\":\"LiCoO2 leaching in nitric acid solution\",\"target_name\":\"Li\",\"relation_type\":\"HAS_OUTPUT\",\"evidence_span\":\"In the absence of a reducing agent, the leaching efficiencies of the cobalt and lithium levelled off within 30 min with low extractions of 40% Co and 75% Li.\",\"attributes\":{\"property\":\"leaching_efficiency\",\"value\":75,\"unit\":\"%\",\"study_scope\":\"current_study\",\"graph_status\":\"active\",\"process_role\":\"main_process\",\"conditions\":\"no reducing agent, 1 M HNO3, 20 g/L S/L ratio, 75 °C, 30 min\",\"treatment_members\":[]}},{\"source_name\":\"LiCoO2 leaching in nitric acid solution\",\"target_name\":\"Co\",\"relation_type\":\"HAS_OUTPUT\",\"evidence_span\":\"To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure.\",\"attributes\":{\"property\":\"leaching_efficiency\",\"value\":85,\"unit\":\"%\",\"study_scope\":\"current_study\",\"graph_status\":\"active\",\"process_role\":\"main_process\",\"conditions\":\"reductive leaching, 1 M HNO3, 20 g/L S/L ratio, 75 °C\",\"process_agent\":\"0.8 vol.% hydrogen peroxide\",\"treatment_members\":[\"hydrogen peroxide\"],\"extra_qualifiers\":\"about 85%\"}},{\"source_name\":\"LiCoO2 leaching in nitric acid solution\",\"target_name\":\"Li\",\"relation_type\":\"HAS_OUTPUT\",\"evidence_span\":\"To increase the leaching efficiency, 0.8 vol.% hydrogen peroxide was added as a reducing agent (Zhang et al., 1998). The extractions of both metals were improved to about 85% by the reductive leaching as shown in the figure.\",\"attributes\":{\"property\":\"leaching_efficiency\",\"value\":85,\"unit\":\"%\",\"study_scope\":\"current_study\",\"graph_status\":\"active\",\"process_role\":\"main_process\",\"conditions\":\"reductive leaching, 1 M HNO3, 20 g/L S/L ratio, 75 °C\",\"process_agent\":\"0.8 vol.% hydrogen peroxide\",\"treatment_members\":[\"hydrogen peroxide\"],\"extra_qualifiers\":\"about 85%\"}},{\"source_name\":\"LiCoO2 leaching in nitric acid solution\",\"target_name\":\"Co\",\"relation_type\":\"HAS_OUTPUT\",\"evidence_span\":\"The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively\",\"attributes\":{\"property\":\"leaching_efficiency\",\"value\":99,\"unit\":\"%\",\"study_scope\":\"current_study\",\"graph_status\":\"active\",\"process_role\":\"main_process\",\"conditions\":\"10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 75 °C\",\"process_agent\":\"1.7 vol.% H2O2\",\"treatment_members\":[\"H2O2\"],\"extra_qualifiers\":\"close to 99%\"}},{\"source_name\":\"LiCoO2 leaching in nitric acid solution\",\"target_name\":\"Co\",\"relation_type\":\"HAS_OUTPUT\",\"evidence_span\":\"The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively\",\"attributes\":{\"property\":\"leaching_efficiency\",\"value\":75,\"unit\":\"%\",\"study_scope\":\"current_study\",\"graph_status\":\"active\",\"process_role\":\"main_process\",\"conditions\":\"10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 50 °C\",\"process_agent\":\"1.7 vol.% H2O2\",\"treatment_members\":[\"H2O2\"]}},{\"source_name\":\"LiCoO2 leaching in nitric acid solution\",\"target_name\":\"Co\",\"relation_type\":\"HAS_OUTPUT\",\"evidence_span\":\"The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively\",\"attributes\":{\"property\":\"leaching_efficiency\",\"value\":30,\"unit\":\"%\",\"study_scope\":\"current_study\",\"graph_status\":\"active\",\"process_role\":\"main_process\",\"conditions\":\"10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min, 25 °C\",\"process_agent\":\"1.7 vol.% H2O2\",\"treatment_members\":[\"H2O2\"]}},{\"source_name\":\"LiCoO2 leaching in nitric acid solution\",\"target_name\":\"Li\",\"relation_type\":\"HAS_OUTPUT\",\"evidence_span\":\"The extent of Co extraction was close to 99% at 75 ^∘C,, 75% at 50 ^∘C and 30% at 25 ^∘C, respectively, and that of Li was similar to Co extraction.\",\"attributes\":{\"study_scope\":\"current_study\",\"graph_status\":\"evidence_only\",\"process_role\":\"main_process\",\"conditions\":\"10 g/L S/L ratio, 1 M HNO3, 1.7 vol.% H2O2, 30 min\",\"process_agent\":\"1.7 vol.% H2O2\",\"treatment_members\":[\"H2O2\"],\"extra_qualifiers\":\"Li extraction similar to Co; no Li numerical values stated\"}}]}",
+  "metadata": {
+    "extracted_at": "2026-11-01T22:18:19.430012",
+    "model": "deepseek-v4-flash",
+    "ontology_loaded": false,
+    "extraction_step": "relation_extraction"
+  }
+}

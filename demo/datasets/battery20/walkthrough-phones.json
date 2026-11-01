@@ -1,0 +1,88 @@
+{
+  "case": "phones",
+  "title": "From a phone model to its battery fraction",
+  "steps": [
+    {
+      "title": "Accept the composition table",
+      "question": "Why does Gate allow Table 1?",
+      "look": "Table 1 reports dismantled phone fractions. Gate accepts it as target composition based on the caption, reference and headers.",
+      "boundary": "Gate classifies the table; it does not extract values or verify every resulting fact.",
+      "stage": "gate",
+      "where": {
+        "table_id": "TABLE_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_0001"
+      }
+    },
+    {
+      "title": "Skip economic value, not composition",
+      "question": "Why is Table 4 excluded?",
+      "look": "Table 4 reports prices and potential revenue. Gate skips it as economic value, unlike Table 1's measured composition.",
+      "boundary": "This successful trace is not a complete accuracy evaluation. Other guides show revision and failure cases.",
+      "stage": "gate",
+      "where": {
+        "table_id": "TABLE_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_0004"
+      }
+    },
+    {
+      "title": "Trace the 45.4 cell",
+      "question": "Where does the battery fraction come from?",
+      "look": "The highlighted 45.4 cell belongs to Nokia 5110 (1998), Batteries (wt%). The table-extracted relation retains its coordinates and raw value.",
+      "boundary": "This is battery mass fraction, not metal recovery. The raw unit label is weight_percent.",
+      "stage": "table",
+      "where": {
+        "table_id": "TABLE_A_Comprehensive_Characterization_of_End-of-Life_Mobile_Phones_for_Secondary_Material_Resources_Identification_0001",
+        "attributes.row_idx": 1,
+        "attributes.col_idx": 2
+      }
+    },
+    {
+      "title": "Attach scope: identify the phone sample",
+      "question": "A general phone category or a specific model?",
+      "look": "After document merge and revision, Scope adds source context. Scope identifies Nokia 5110 (1998). The paragraph describes 20 collected phone types; Table 1 supplies the model name.",
+      "boundary": "Read paragraph and table together. Model-level evidence does not identify an individual device by serial number. Scope is post-merge provenance, not an upstream extraction input.",
+      "stage": "scope",
+      "where": {
+        "scope_subject_text": "Nokia 5110 (1998)"
+      }
+    },
+    {
+      "title": "Check the final relation",
+      "question": "Did the value and source survive?",
+      "look": "Nokia 5110 (1998) → CONTAINS → battery keeps 45.4 wt.% and the same source cell.",
+      "boundary": "Matching anchors connect separate archives; they do not prove a continuous historical run.",
+      "stage": "final",
+      "where": {
+        "id": "REL_Product_Nokia_5110__1998__CONTAINS_Component_battery"
+      }
+    },
+    {
+      "title": "Compare a second phone without pooling measurements",
+      "question": "Does every Nokia model have the same battery fraction?",
+      "look": "The Nokia 6210 (2000) observation reports a battery fraction of 39.7 wt.%, distinct from the Nokia 5110 sample’s 45.4 wt.%.",
+      "boundary": "Both are battery mass fractions, not chemical compositions or recovery efficiencies. Keep their model and source-cell identities.",
+      "stage": "final",
+      "where": {
+        "id": "REL_Product_Nokia_6210__2000__CONTAINS_Component_battery"
+      }
+    },
+    {
+      "title": "Keep measurements with the study sample",
+      "question": "Who owns the reported 45.4 wt.%?",
+      "look": "With fusion links hidden, the 45.4 wt.% battery fraction stays on the paper's Nokia 5110 (1998) → battery relation. Inspect its source observation before revealing catalog alignment.",
+      "boundary": "This is the study sample's measurement, not a catalog specification. Hiding links is a display toggle, not an ablation or rerun.",
+      "entity": "Product_Nokia_5110__1998_",
+      "fusion": false
+    },
+    {
+      "title": "Align the model, not the measurements",
+      "question": "What is connected, and what stays separate?",
+      "look": "Observed for product model connects two distinct nodes: the paper sample and catalog Nokia 5110. Recorded evidence is a shared model designation and Scope label match. Both nodes also list 1998.",
+      "boundary": "The same model does not mean the same physical phone. The paper's 45.4 wt.% is not copied to the catalog or averaged with other observations.",
+      "entity": "Product_Nokia_5110__1998_",
+      "fusion": true,
+      "alignment": {
+        "predicate": "observedForProductModel",
+        "catalog": "catalog:Nokia 5110"
+      }
+    }
+  ]
+}

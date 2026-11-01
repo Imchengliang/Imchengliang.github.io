@@ -1,0 +1,95 @@
+{
+  "case": "anode-leaching",
+  "title": "Anode-specific lithium recovery: composition to treatment",
+  "steps": [
+    {
+      "title": "Accept a feed-composition table",
+      "question": "What is being measured in Table 1?",
+      "look": "Gate accepts chemical analysis of the anode active material, reported in mg/g.",
+      "boundary": "Feed composition is not recovery efficiency.",
+      "stage": "gate",
+      "where": {
+        "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001"
+      }
+    },
+    {
+      "title": "Identify the anode leaching treatment",
+      "question": "Does this experiment study the cathode?",
+      "look": "Process discovery records hydrochloric-acid leaching of calcined powder. The paper identifies that feed as anode material.",
+      "boundary": "Keep the prepared anode feed distinct from the whole battery and from cathode-focused studies.",
+      "stage": "process",
+      "where": {
+        "phase": "Process discovery",
+        "name": "reductive hydrochloric acid leaching of calcined powder"
+      }
+    },
+    {
+      "title": "Locate lithium in the anode feed",
+      "question": "Where does 30.07 mg/g come from?",
+      "look": "The Li column in the chemical-analysis table reports 30.07 mg/g. The emitted relation retains the raw cell and coordinates.",
+      "boundary": "This is concentration in the input material, not the amount recovered by the process.",
+      "stage": "table",
+      "where": {
+        "attributes.raw_cell": "30.07",
+        "attributes.row_idx": 1,
+        "attributes.col_idx": 1
+      }
+    },
+    {
+      "title": "Keep the adjacent copper measurement separate",
+      "question": "Can nearby table values be assigned to the wrong metal?",
+      "look": "The next column reports Cu at 2.87 mg/g. Its column and material anchor differ from the Li cell.",
+      "boundary": "Cell coordinates and headers establish the assignment; numerical similarity is not a matching rule.",
+      "stage": "table",
+      "where": {
+        "attributes.raw_cell": "2.87",
+        "attributes.row_idx": 1,
+        "attributes.col_idx": 2
+      }
+    },
+    {
+      "title": "Attach the existing Process method scope",
+      "question": "What does scope add here?",
+      "look": "The archived method family annotates the leaching Process after document extraction and merge.",
+      "boundary": "This archive has a Process scope; it does not justify inventing a missing battery-population scope.",
+      "stage": "scope",
+      "where": {
+        "scope_subject_text": "reductive hydrochloric acid leaching of calcined powder"
+      }
+    },
+    {
+      "title": "Inspect the result without peroxide",
+      "question": "What does the control report?",
+      "look": "The reviewed observation reports 97.1% Li leaching on the HCl route without H2O2, distinct from both pure-water and reductive leaching.",
+      "boundary": "This is an observation for the prepared anode feed, not a general battery recovery guarantee.",
+      "stage": "final",
+      "where": {
+        "id": "REL_reviewed_283200192ce04a28",
+        "properties.value": 97.1,
+        "properties.unit": "%",
+        "evidence_span": "the leaching efficiency of Li was 97.1% without H2O2"
+      }
+    },
+    {
+      "title": "Inspect the peroxide-containing result",
+      "question": "How is 99.4% distinguished from the control?",
+      "look": "The archive records 99.4% Li leaching for the HCl:H2O2 10:1 condition. The source quotation and conditions identify this observation.",
+      "boundary": "The archive also has a wt% summary version. Do not silently pool different unit labels or duplicate summaries.",
+      "stage": "final",
+      "where": {
+        "id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+        "properties.value": 99.4,
+        "properties.unit": "%",
+        "evidence_span": "it reached to 99.4% with HCl - H2O2 ration being 10:1"
+      }
+    },
+    {
+      "title": "Trace lithium recovery back to the anode study",
+      "question": "Can composition and treatment evidence be inspected together?",
+      "look": "Open the Process neighborhood, inspect Li observations, and navigate back to the source text or the feed-composition table.",
+      "boundary": "A broad battery input link does not erase the more specific anode context.",
+      "entity": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+      "fusion": true
+    }
+  ]
+}

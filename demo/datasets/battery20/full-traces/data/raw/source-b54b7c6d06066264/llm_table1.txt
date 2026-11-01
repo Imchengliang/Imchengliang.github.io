@@ -1,0 +1,1011 @@
+[
+  {
+    "chunk_id": "Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries__table__TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0001",
+    "table_id": "TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0001",
+    "llm_raw_response": "## TABLE_ROLE_GATE_RESPONSE\n{\n  \"table_role_decision\": {\n    \"decision\": \"context_extract\",\n    \"table_role\": \"sample_metadata\",\n    \"confidence\": 0.9,\n    \"causal_role\": {\n      \"source_object\": \"crushed fragments of WEEE components\",\n      \"transformation\": \"none (physical property characterization)\",\n      \"measured_object\": \"crushed fragments\",\n      \"measured_quantity\": \"thickness, density\",\n      \"evidence_role\": \"setup_context\"\n    },\n    \"region_roles\": [\n      {\n        \"row_range\": [1, 5],\n        \"role\": \"process_context\",\n        \"reason\": \"Lists physical properties (thickness, density) of crushed fragments, which are input material characteristics, not target composition or treatment outcomes.\"\n      }\n    ],\n    \"extract_row_ranges\": [],\n    \"caption_sufficient\": true,\n    \"evidence_steps\": [\n      {\n        \"step\": \"caption\",\n        \"evidence\": \"Table 1. The properties of various crushed fragments.\",\n        \"judgment\": \"supports_context\",\n        \"reason\": \"Caption indicates physical properties of crushed fragments, which are sample metadata/input characteristics.\"\n      },\n      {\n        \"step\": \"headers\",\n        \"evidence\": \"Type, Thickness (mm), Density (kg·m-3)\",\n        \"judgment\": \"supports_context\",\n        \"reason\": \"Headers show physical properties, not target composition or treatment outcomes.\"\n      },\n      {\n        \"step\": \"row_preview\",\n        \"evidence\": \"Copper, Aluminum, Separator with thickness and density values\",\n        \"judgment\": \"supports_context\",\n        \"reason\": \"Rows list material types with physical properties, serving as input characterization.\"\n      }\n    ],\n    \"allowed_fact_types\": [],\n    \"excluded_fact_types\": [\n      \"target_composition\",\n      \"recovery_result\",\n      \"process_output\"\n    ],\n    \"ir_instruction\": \"Treat this table as context only; do not extract target composition or treatment outcome facts.\",\n    \"uncertainty\": \"\"\n  }\n}\n\n## SEMANTIC_IR_RESPONSE\n{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"context_extract\",\n      \"table_role\": \"sample_metadata\",\n      \"reason\": \"Table lists physical properties (thickness, density) of crushed fragments, which are input material characteristics, not target composition or treatment outcomes.\",\n      \"confidence\": 0.8\n    },\n    \"column_semantics\": [],\n    \"program\": [],\n    \"context_program\": [\n      {\n        \"step_id\": \"ctx_1\",\n        \"op\": \"foreach_row\",\n        \"role\": \"sample_metadata\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"all_rows\",\n            \"exclude_indices\": []\n          }\n        },\n        \"context_id\": {\n          \"from\": \"row[0]\",\n          \"name\": \"context_id\"\n        },\n        \"label\": {\n          \"from\": \"row[0]\"\n        },\n        \"conditions\": [\n          {\n            \"name\": \"Type\",\n            \"from\": \"row[0]\"\n          },\n          {\n            \"name\": \"Thickness (mm)\",\n            \"from\": \"row[1]\"\n          },\n          {\n            \"name\": \"Density (kg·m-3)\",\n            \"from\": \"row[2]\"\n          }\n        ]\n      }\n    ],\n    \"rationale\": {\n      \"binding_summary\": \"Each row represents a crushed fragment type with its thickness and density. The context record uses the Type column as the stable identifier and label, and captures Thickness (mm) and Density (kg·m-3) as grounded conditions.\",\n      \"uncertainties\": []\n    }\n  }\n}",
+    "llm_gate_response": "{\n  \"table_role_decision\": {\n    \"decision\": \"context_extract\",\n    \"table_role\": \"sample_metadata\",\n    \"confidence\": 0.9,\n    \"causal_role\": {\n      \"source_object\": \"crushed fragments of WEEE components\",\n      \"transformation\": \"none (physical property characterization)\",\n      \"measured_object\": \"crushed fragments\",\n      \"measured_quantity\": \"thickness, density\",\n      \"evidence_role\": \"setup_context\"\n    },\n    \"region_roles\": [\n      {\n        \"row_range\": [1, 5],\n        \"role\": \"process_context\",\n        \"reason\": \"Lists physical properties (thickness, density) of crushed fragments, which are input material characteristics, not target composition or treatment outcomes.\"\n      }\n    ],\n    \"extract_row_ranges\": [],\n    \"caption_sufficient\": true,\n    \"evidence_steps\": [\n      {\n        \"step\": \"caption\",\n        \"evidence\": \"Table 1. The properties of various crushed fragments.\",\n        \"judgment\": \"supports_context\",\n        \"reason\": \"Caption indicates physical properties of crushed fragments, which are sample metadata/input characteristics.\"\n      },\n      {\n        \"step\": \"headers\",\n        \"evidence\": \"Type, Thickness (mm), Density (kg·m-3)\",\n        \"judgment\": \"supports_context\",\n        \"reason\": \"Headers show physical properties, not target composition or treatment outcomes.\"\n      },\n      {\n        \"step\": \"row_preview\",\n        \"evidence\": \"Copper, Aluminum, Separator with thickness and density values\",\n        \"judgment\": \"supports_context\",\n        \"reason\": \"Rows list material types with physical properties, serving as input characterization.\"\n      }\n    ],\n    \"allowed_fact_types\": [],\n    \"excluded_fact_types\": [\n      \"target_composition\",\n      \"recovery_result\",\n      \"process_output\"\n    ],\n    \"ir_instruction\": \"Treat this table as context only; do not extract target composition or treatment outcome facts.\",\n    \"uncertainty\": \"\"\n  }\n}",
+    "llm_ir_response": "{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"context_extract\",\n      \"table_role\": \"sample_metadata\",\n      \"reason\": \"Table lists physical properties (thickness, density) of crushed fragments, which are input material characteristics, not target composition or treatment outcomes.\",\n      \"confidence\": 0.8\n    },\n    \"column_semantics\": [],\n    \"program\": [],\n    \"context_program\": [\n      {\n        \"step_id\": \"ctx_1\",\n        \"op\": \"foreach_row\",\n        \"role\": \"sample_metadata\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"all_rows\",\n            \"exclude_indices\": []\n          }\n        },\n        \"context_id\": {\n          \"from\": \"row[0]\",\n          \"name\": \"context_id\"\n        },\n        \"label\": {\n          \"from\": \"row[0]\"\n        },\n        \"conditions\": [\n          {\n            \"name\": \"Type\",\n            \"from\": \"row[0]\"\n          },\n          {\n            \"name\": \"Thickness (mm)\",\n            \"from\": \"row[1]\"\n          },\n          {\n            \"name\": \"Density (kg·m-3)\",\n            \"from\": \"row[2]\"\n          }\n        ]\n      }\n    ],\n    \"rationale\": {\n      \"binding_summary\": \"Each row represents a crushed fragment type with its thickness and density. The context record uses the Type column as the stable identifier and label, and captures Thickness (mm) and Density (kg·m-3) as grounded conditions.\",\n      \"uncertainties\": []\n    }\n  }\n}",
+    "table_role_decision": {
+      "decision": "context_extract",
+      "table_role": "sample_metadata",
+      "confidence": 0.9,
+      "causal_role": {
+        "source_object": "crushed fragments of WEEE components",
+        "transformation": "none (physical property characterization)",
+        "measured_object": "crushed fragments",
+        "measured_quantity": "thickness, density",
+        "evidence_role": "setup_context"
+      },
+      "region_roles": [
+        {
+          "row_range": [
+            1,
+            5
+          ],
+          "role": "process_context",
+          "reason": "Lists physical properties (thickness, density) of crushed fragments, which are input material characteristics, not target composition or treatment outcomes."
+        }
+      ],
+      "extract_row_ranges": [],
+      "caption_sufficient": true,
+      "evidence_steps": [
+        {
+          "step": "caption",
+          "evidence": "Table 1. The properties of various crushed fragments.",
+          "judgment": "supports_context",
+          "reason": "Caption indicates physical properties of crushed fragments, which are sample metadata/input characteristics."
+        },
+        {
+          "step": "headers",
+          "evidence": "Type, Thickness (mm), Density (kg·m-3)",
+          "judgment": "supports_context",
+          "reason": "Headers show physical properties, not target composition or treatment outcomes."
+        },
+        {
+          "step": "row_preview",
+          "evidence": "Copper, Aluminum, Separator with thickness and density values",
+          "judgment": "supports_context",
+          "reason": "Rows list material types with physical properties, serving as input characterization."
+        }
+      ],
+      "allowed_fact_types": [],
+      "excluded_fact_types": [
+        "target_composition",
+        "recovery_result",
+        "process_output"
+      ],
+      "ir_instruction": "Treat this table as context only; do not extract target composition or treatment outcome facts.",
+      "uncertainty": ""
+    },
+    "llm_interpretation": {
+      "semantic_ir": {
+        "extractability": {
+          "decision": "context_extract",
+          "table_role": "sample_metadata",
+          "reason": "Table lists physical properties (thickness, density) of crushed fragments, which are input material characteristics, not target composition or treatment outcomes.",
+          "confidence": 0.8
+        },
+        "column_semantics": [],
+        "program": [],
+        "context_program": [
+          {
+            "step_id": "ctx_1",
+            "op": "foreach_row",
+            "role": "sample_metadata",
+            "select": {
+              "rows": {
+                "selector": "all_rows",
+                "exclude_indices": []
+              }
+            },
+            "context_id": {
+              "from": "row[0]",
+              "name": "context_id"
+            },
+            "label": {
+              "from": "row[0]"
+            },
+            "conditions": [
+              {
+                "name": "Type",
+                "from": "row[0]"
+              },
+              {
+                "name": "Thickness (mm)",
+                "from": "row[1]"
+              },
+              {
+                "name": "Density (kg·m-3)",
+                "from": "row[2]"
+              }
+            ]
+          }
+        ],
+        "rationale": {
+          "binding_summary": "Each row represents a crushed fragment type with its thickness and density. The context record uses the Type column as the stable identifier and label, and captures Thickness (mm) and Density (kg·m-3) as grounded conditions.",
+          "uncertainties": []
+        }
+      }
+    },
+    "semantic_ir": {
+      "extractability": {
+        "decision": "context_extract",
+        "table_role": "sample_metadata",
+        "reason": "Table lists physical properties (thickness, density) of crushed fragments, which are input material characteristics, not target composition or treatment outcomes.",
+        "confidence": 0.9,
+        "gate_decision": "context_extract",
+        "gate_table_role": "sample_metadata"
+      },
+      "column_semantics": [],
+      "program": [],
+      "context_program": [
+        {
+          "step_id": "ctx_1",
+          "op": "foreach_row",
+          "role": "sample_metadata",
+          "select": {
+            "rows": {
+              "selector": "all_rows",
+              "exclude_indices": []
+            }
+          },
+          "context_id": {
+            "from": "row[0]",
+            "name": "context_id"
+          },
+          "label": {
+            "from": "row[0]"
+          },
+          "conditions": [
+            {
+              "name": "Type",
+              "from": "row[0]"
+            },
+            {
+              "name": "Thickness (mm)",
+              "from": "row[1]"
+            },
+            {
+              "name": "Density (kg·m-3)",
+              "from": "row[2]"
+            }
+          ]
+        }
+      ],
+      "rationale": {
+        "binding_summary": "Each row represents a crushed fragment type with its thickness and density. The context record uses the Type column as the stable identifier and label, and captures Thickness (mm) and Density (kg·m-3) as grounded conditions.",
+        "uncertainties": []
+      },
+      "table_id": "TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0001"
+    },
+    "table_structure": {
+      "table_id": "TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0001",
+      "extraction_mode": "semantic_ir",
+      "table_role": "sample_metadata",
+      "extractability": {
+        "decision": "context_extract",
+        "table_role": "sample_metadata",
+        "reason": "Table lists physical properties (thickness, density) of crushed fragments, which are input material characteristics, not target composition or treatment outcomes.",
+        "confidence": 0.9,
+        "gate_decision": "context_extract",
+        "gate_table_role": "sample_metadata"
+      },
+      "layout": null
+    },
+    "verification_report": {
+      "status": "context_extracted",
+      "skip_reason": "Table lists physical properties (thickness, density) of crushed fragments, which are input material characteristics, not target composition or treatment outcomes.",
+      "cell_grounded_relations": 0,
+      "entity_count": 0,
+      "condition_count": 15,
+      "context_record_count": 5,
+      "unsupported_templates": [],
+      "domain_range_rejections": [],
+      "aggregate_row_diagnostics": [],
+      "unresolved_endpoint_types": [],
+      "unresolved_type_facts": [],
+      "semantic_gate": [
+        {
+          "status": "semantic_gate_rejected",
+          "check_type": "program_structure",
+          "severity": "error",
+          "template_id": "ctx_1",
+          "reason": "template has no executable emit block"
+        }
+      ],
+      "slot_binding_conflicts": [],
+      "layout_program_mismatches": [],
+      "checked_templates": 1,
+      "schema_audit": {
+        "valid": true,
+        "would_reject": false,
+        "error_count": 0,
+        "errors": []
+      },
+      "process_identity_bindings": {
+        "bound": [],
+        "unresolved": []
+      }
+    },
+    "execution_trace": [
+      {
+        "template_id": "ctx_1",
+        "op": "context_foreach_row",
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "emitted": 5,
+        "skipped": 0,
+        "ambiguous_conditions": []
+      }
+    ],
+    "failed_rewrite_verification_report": null,
+    "failed_rewrite_execution_trace": null,
+    "table_cache_key": "90832e22c0ac36b1229c149dc171475a460720a59fb2f4d7bd326fb4550b0ff2",
+    "table_cache_version": {
+      "format_version": 1,
+      "table_code_sha256": "4a22f4dde5201514bf22f7719494eab1968ac45306c22a597fb96b6e5153ba10",
+      "table_file_sha256": {
+        "__init__.py": "859afd37280303ac79ea652fcd1c347db6f6e9a7427d1bf201341ff92fdbb9f3",
+        "artifact_cache.py": "dae107568c3be648794486b4140f41386af8bd9d77b261dcf82505cef6e977aa",
+        "contract.py": "d537d95059e8a540b82872ffebe956d5e8fd43081e1ca630aa34b5a16359092a",
+        "cross_table_reference_resolver.py": "c8662723efd6e0597158b5afca516f88149abcf4a39feaf38ddd7488b2b389d7",
+        "extraction_agent.py": "3591d71d4074f2d4431a79d3b9eb2a039f5c43cf152a34df1316be746f14c450",
+        "ir/__init__.py": "388534b9fb9c0b6eae80334aef2e8eae376c73fca9ab48e74ddf4299bf50e425",
+        "ir/common.py": "562218bc179c5b27cc043f264b440886103fae4c45964fd7c171e9d1983deb23",
+        "ir/context.py": "885b13c1bc0b1e48ad2e1eee5f466979adc657d6fc13abacf7b2330948999eea",
+        "ir/core.py": "cff62003caca13eaaf0abdd93828b601a5201f512fabfb630e07ac64bbf2758c",
+        "ir/executor.py": "03e3cb0f7d24ba0eec5e576c04c4a3701280af27809b9f1d92e8a5afaf9f42d1",
+        "ir/parsing.py": "3e5727a88792518d25f4772fa526f0eb0361cbd05b4aaf03b4076178dd950159",
+        "ir/policy.py": "c2ef18469dc2d402825a1559a860901927666dcc1fd1e80e3ec82669bb40d307",
+        "ir/runtime.py": "67a3294a052d291532c51b06595f799ee7dd191ba6f923f3235296815eeb5d9d",
+        "ir/schema.py": "0d9c6415cc080f7f1ee4ea0b0260ba8211b5caa1f7d4c0aaf99fd426f25142f2",
+        "ir/selectors.py": "81b5606cc71f3ca6f4eaf848083e8d4b194b1c5a53f1cdf2832e439df6a456f1",
+        "ir/value_resolver.py": "feebb6a908f79b9c5975cc6cf7c657847522208a38d003f3b9cba9d8577864d8",
+        "ir/verifier.py": "9375cb15633663e724752b433288e99bb5d6d04956db9e59607a65c1181fbccb",
+        "reference_info.py": "301f9975a4ad539253ec368f68cabc4039e6d0d4ce7187abbeaf8ca1a306a531",
+        "repair/__init__.py": "05a749a9dd4f2c77ca79cd7b0cc2e00a8eae16d11cdf8f43ff26cd26e05639b9",
+        "repair/applier.py": "cf3af090627b411cbfdb354d3a89f5206a1fa14d04fbbe1f95d8ddd138e78842",
+        "repair/local.py": "f5d94287673530f100c594b123765b99178a12a62dbc9f0e8f1fbcc58fb059bb",
+        "repair/prompt.py": "4ff5b44701be422848a76a934171d48600a46921af1cadce22070143e06a13ce",
+        "repair/schema.py": "bc5069df92508097d6fad6435fec7be2079075e46a80ee8c92145bd26511df26",
+        "role_gate.py": "fc71db600c1d820e1c1f4898cb2341cbce76b5eb9984d07c600b0c63f226d769"
+      }
+    }
+  },
+  {
+    "chunk_id": "Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries__table__TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0002",
+    "table_id": "TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0002",
+    "llm_raw_response": "## TABLE_ROLE_GATE_RESPONSE\n{\"table_role_decision\":{\"decision\":\"context_extract\",\"table_role\":\"process_parameter\",\"confidence\":0.85,\"causal_role\":{\"source_object\":\"copper and aluminum fragments from WEEE\",\"transformation\":\"pneumatic separation\",\"measured_object\":\"fragments (copper/aluminum)\",\"measured_quantity\":\"vertical displacement as a function of airflow velocity and folding state\",\"evidence_role\":\"process_input\"},\"region_roles\":[{\"row_range\":[1,5],\"role\":\"process_context\",\"reason\":\"Reports airflow velocity thresholds and vertical displacement needed to separate folded/unfolded copper and aluminum fragments; these are operating parameters/setup conditions, not measured target composition or recovery outcome.\"}],\"extract_row_ranges\":[],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Vertical displacement of the fragments for various folding states (d = 9 mm, t = 1 s).\",\"judgment\":\"supports_context\",\"reason\":\"Describes displacement behavior under folding states, an operating parameter for separation.\"},{\"step\":\"reference\",\"evidence\":\"airflow velocities for pneumatic separation of the unfolded copper fragment and folded aluminum fragment are 1.93–2.00 m/s...\",\"judgment\":\"supports_context\",\"reason\":\"Reports required airflow velocities for separation, i.e., process parameters, not target composition or recovery yield.\"},{\"step\":\"headers\",\"evidence\":\"Vertical displacement (m), Folding time, Airflow velocity (m·s-1)\",\"judgment\":\"supports_context\",\"reason\":\"Columns are displacement and airflow velocity, which are operating conditions.\"}],\"allowed_fact_types\":[\"process_parameter: airflow velocity thresholds for pneumatic separation\",\"process_parameter: vertical displacement of fragments under given airflow\"],\"excluded_fact_types\":[\"target composition of copper or aluminum in WEEE\",\"recovery yield or mass fraction of separated metals\",\"economic value of recovered metals\"],\"ir_instruction\":\"Treat this table as process parameter context; extract airflow velocity and displacement conditions, not target composition or recovery results.\",\"uncertainty\":\"No explicit recovery or composition measurement is reported; table only provides separation operating parameters.\"}}\n\n## SEMANTIC_IR_RESPONSE\n{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"context_extract\",\n      \"table_role\": \"process_parameter\",\n      \"reason\": \"Table reports airflow velocity thresholds and vertical displacement for pneumatic separation of folded/unfolded copper and aluminum fragments; these are operating parameters/setup conditions, not measured target composition or recovery outcome.\",\n      \"confidence\": 0.8\n    },\n    \"column_semantics\": [],\n    \"program\": [],\n    \"context_program\": [\n      {\n        \"step_id\": \"ctx_1\",\n        \"op\": \"foreach_row\",\n        \"role\": \"process_parameter\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"all_rows\",\n            \"exclude_indices\": []\n          }\n        },\n        \"context_id\": {\n          \"from\": \"row[0]\"\n        },\n        \"label\": {\n          \"from\": \"row[0]\"\n        },\n        \"conditions\": [\n          {\n            \"name\": \"Vertical displacement (m)\",\n            \"from\": \"row[0]\"\n          },\n          {\n            \"name\": \"Folding time\",\n            \"from\": \"row[1]\"\n          },\n          {\n            \"name\": \"Airflow velocity (m·s-1)\",\n            \"from\": \"row[2]\"\n          },\n          {\n            \"name\": \"Airflow velocity (m·s-1)\",\n            \"from\": \"row[3]\"\n          },\n          {\n            \"name\": \"Airflow velocity (m·s-1)\",\n            \"from\": \"row[4]\"\n          },\n          {\n            \"name\": \"Airflow velocity (m·s-1)\",\n            \"from\": \"row[5]\"\n          },\n          {\n            \"name\": \"Airflow velocity (m·s-1)\",\n            \"from\": \"row[6]\"\n          }\n        ]\n      }\n    ],\n    \"rationale\": {\n      \"binding_summary\": \"The table is treated as process parameter context. Each row is a reusable context record keyed by the fragment label in row[0], with conditions capturing the vertical displacement, folding time, and the six airflow velocity values from columns 2-6. The context_id and label both use row[0] to preserve the original fragment wording.\",\n      \"uncertainties\": [\n        \"The first row is a header-like row containing column labels; it is included as a context record because the instruction says to apply to every row, but it may be filtered upstream.\",\n        \"Columns 2-6 share the same header 'Airflow velocity (m·s-1)' and are not individually distinguishable by header text; they are represented as separate conditions with identical names.\"\n      ]\n    }\n  }\n}",
+    "llm_gate_response": "{\"table_role_decision\":{\"decision\":\"context_extract\",\"table_role\":\"process_parameter\",\"confidence\":0.85,\"causal_role\":{\"source_object\":\"copper and aluminum fragments from WEEE\",\"transformation\":\"pneumatic separation\",\"measured_object\":\"fragments (copper/aluminum)\",\"measured_quantity\":\"vertical displacement as a function of airflow velocity and folding state\",\"evidence_role\":\"process_input\"},\"region_roles\":[{\"row_range\":[1,5],\"role\":\"process_context\",\"reason\":\"Reports airflow velocity thresholds and vertical displacement needed to separate folded/unfolded copper and aluminum fragments; these are operating parameters/setup conditions, not measured target composition or recovery outcome.\"}],\"extract_row_ranges\":[],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Vertical displacement of the fragments for various folding states (d = 9 mm, t = 1 s).\",\"judgment\":\"supports_context\",\"reason\":\"Describes displacement behavior under folding states, an operating parameter for separation.\"},{\"step\":\"reference\",\"evidence\":\"airflow velocities for pneumatic separation of the unfolded copper fragment and folded aluminum fragment are 1.93–2.00 m/s...\",\"judgment\":\"supports_context\",\"reason\":\"Reports required airflow velocities for separation, i.e., process parameters, not target composition or recovery yield.\"},{\"step\":\"headers\",\"evidence\":\"Vertical displacement (m), Folding time, Airflow velocity (m·s-1)\",\"judgment\":\"supports_context\",\"reason\":\"Columns are displacement and airflow velocity, which are operating conditions.\"}],\"allowed_fact_types\":[\"process_parameter: airflow velocity thresholds for pneumatic separation\",\"process_parameter: vertical displacement of fragments under given airflow\"],\"excluded_fact_types\":[\"target composition of copper or aluminum in WEEE\",\"recovery yield or mass fraction of separated metals\",\"economic value of recovered metals\"],\"ir_instruction\":\"Treat this table as process parameter context; extract airflow velocity and displacement conditions, not target composition or recovery results.\",\"uncertainty\":\"No explicit recovery or composition measurement is reported; table only provides separation operating parameters.\"}}",
+    "llm_ir_response": "{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"context_extract\",\n      \"table_role\": \"process_parameter\",\n      \"reason\": \"Table reports airflow velocity thresholds and vertical displacement for pneumatic separation of folded/unfolded copper and aluminum fragments; these are operating parameters/setup conditions, not measured target composition or recovery outcome.\",\n      \"confidence\": 0.8\n    },\n    \"column_semantics\": [],\n    \"program\": [],\n    \"context_program\": [\n      {\n        \"step_id\": \"ctx_1\",\n        \"op\": \"foreach_row\",\n        \"role\": \"process_parameter\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"all_rows\",\n            \"exclude_indices\": []\n          }\n        },\n        \"context_id\": {\n          \"from\": \"row[0]\"\n        },\n        \"label\": {\n          \"from\": \"row[0]\"\n        },\n        \"conditions\": [\n          {\n            \"name\": \"Vertical displacement (m)\",\n            \"from\": \"row[0]\"\n          },\n          {\n            \"name\": \"Folding time\",\n            \"from\": \"row[1]\"\n          },\n          {\n            \"name\": \"Airflow velocity (m·s-1)\",\n            \"from\": \"row[2]\"\n          },\n          {\n            \"name\": \"Airflow velocity (m·s-1)\",\n            \"from\": \"row[3]\"\n          },\n          {\n            \"name\": \"Airflow velocity (m·s-1)\",\n            \"from\": \"row[4]\"\n          },\n          {\n            \"name\": \"Airflow velocity (m·s-1)\",\n            \"from\": \"row[5]\"\n          },\n          {\n            \"name\": \"Airflow velocity (m·s-1)\",\n            \"from\": \"row[6]\"\n          }\n        ]\n      }\n    ],\n    \"rationale\": {\n      \"binding_summary\": \"The table is treated as process parameter context. Each row is a reusable context record keyed by the fragment label in row[0], with conditions capturing the vertical displacement, folding time, and the six airflow velocity values from columns 2-6. The context_id and label both use row[0] to preserve the original fragment wording.\",\n      \"uncertainties\": [\n        \"The first row is a header-like row containing column labels; it is included as a context record because the instruction says to apply to every row, but it may be filtered upstream.\",\n        \"Columns 2-6 share the same header 'Airflow velocity (m·s-1)' and are not individually distinguishable by header text; they are represented as separate conditions with identical names.\"\n      ]\n    }\n  }\n}",
+    "table_role_decision": {
+      "decision": "context_extract",
+      "table_role": "process_parameter",
+      "confidence": 0.85,
+      "causal_role": {
+        "source_object": "copper and aluminum fragments from WEEE",
+        "transformation": "pneumatic separation",
+        "measured_object": "fragments (copper/aluminum)",
+        "measured_quantity": "vertical displacement as a function of airflow velocity and folding state",
+        "evidence_role": "process_input"
+      },
+      "region_roles": [
+        {
+          "row_range": [
+            1,
+            5
+          ],
+          "role": "process_context",
+          "reason": "Reports airflow velocity thresholds and vertical displacement needed to separate folded/unfolded copper and aluminum fragments; these are operating parameters/setup conditions, not measured target composition or recovery outcome."
+        }
+      ],
+      "extract_row_ranges": [],
+      "caption_sufficient": true,
+      "evidence_steps": [
+        {
+          "step": "caption",
+          "evidence": "Vertical displacement of the fragments for various folding states (d = 9 mm, t = 1 s).",
+          "judgment": "supports_context",
+          "reason": "Describes displacement behavior under folding states, an operating parameter for separation."
+        },
+        {
+          "step": "reference",
+          "evidence": "airflow velocities for pneumatic separation of the unfolded copper fragment and folded aluminum fragment are 1.93–2.00 m/s...",
+          "judgment": "supports_context",
+          "reason": "Reports required airflow velocities for separation, i.e., process parameters, not target composition or recovery yield."
+        },
+        {
+          "step": "headers",
+          "evidence": "Vertical displacement (m), Folding time, Airflow velocity (m·s-1)",
+          "judgment": "supports_context",
+          "reason": "Columns are displacement and airflow velocity, which are operating conditions."
+        }
+      ],
+      "allowed_fact_types": [
+        "process_parameter: airflow velocity thresholds for pneumatic separation",
+        "process_parameter: vertical displacement of fragments under given airflow"
+      ],
+      "excluded_fact_types": [
+        "target composition of copper or aluminum in WEEE",
+        "recovery yield or mass fraction of separated metals",
+        "economic value of recovered metals"
+      ],
+      "ir_instruction": "Treat this table as process parameter context; extract airflow velocity and displacement conditions, not target composition or recovery results.",
+      "uncertainty": "No explicit recovery or composition measurement is reported; table only provides separation operating parameters."
+    },
+    "llm_interpretation": {
+      "semantic_ir": {
+        "extractability": {
+          "decision": "context_extract",
+          "table_role": "process_parameter",
+          "reason": "Table reports airflow velocity thresholds and vertical displacement for pneumatic separation of folded/unfolded copper and aluminum fragments; these are operating parameters/setup conditions, not measured target composition or recovery outcome.",
+          "confidence": 0.8
+        },
+        "column_semantics": [],
+        "program": [],
+        "context_program": [
+          {
+            "step_id": "ctx_1",
+            "op": "foreach_row",
+            "role": "process_parameter",
+            "select": {
+              "rows": {
+                "selector": "all_rows",
+                "exclude_indices": []
+              }
+            },
+            "context_id": {
+              "from": "row[0]"
+            },
+            "label": {
+              "from": "row[0]"
+            },
+            "conditions": [
+              {
+                "name": "Vertical displacement (m)",
+                "from": "row[0]"
+              },
+              {
+                "name": "Folding time",
+                "from": "row[1]"
+              },
+              {
+                "name": "Airflow velocity (m·s-1)",
+                "from": "row[2]"
+              },
+              {
+                "name": "Airflow velocity (m·s-1)",
+                "from": "row[3]"
+              },
+              {
+                "name": "Airflow velocity (m·s-1)",
+                "from": "row[4]"
+              },
+              {
+                "name": "Airflow velocity (m·s-1)",
+                "from": "row[5]"
+              },
+              {
+                "name": "Airflow velocity (m·s-1)",
+                "from": "row[6]"
+              }
+            ]
+          }
+        ],
+        "rationale": {
+          "binding_summary": "The table is treated as process parameter context. Each row is a reusable context record keyed by the fragment label in row[0], with conditions capturing the vertical displacement, folding time, and the six airflow velocity values from columns 2-6. The context_id and label both use row[0] to preserve the original fragment wording.",
+          "uncertainties": [
+            "The first row is a header-like row containing column labels; it is included as a context record because the instruction says to apply to every row, but it may be filtered upstream.",
+            "Columns 2-6 share the same header 'Airflow velocity (m·s-1)' and are not individually distinguishable by header text; they are represented as separate conditions with identical names."
+          ]
+        }
+      }
+    },
+    "semantic_ir": {
+      "extractability": {
+        "decision": "context_extract",
+        "table_role": "process_parameter",
+        "reason": "Table reports airflow velocity thresholds and vertical displacement for pneumatic separation of folded/unfolded copper and aluminum fragments; these are operating parameters/setup conditions, not measured target composition or recovery outcome.",
+        "confidence": 0.85,
+        "gate_decision": "context_extract",
+        "gate_table_role": "process_parameter"
+      },
+      "column_semantics": [],
+      "program": [],
+      "context_program": [
+        {
+          "step_id": "ctx_1",
+          "op": "foreach_row",
+          "role": "process_parameter",
+          "select": {
+            "rows": {
+              "selector": "all_rows",
+              "exclude_indices": []
+            }
+          },
+          "context_id": {
+            "from": "row[0]"
+          },
+          "label": {
+            "from": "row[0]"
+          },
+          "conditions": [
+            {
+              "name": "Vertical displacement (m)",
+              "from": "row[0]"
+            },
+            {
+              "name": "Folding time",
+              "from": "row[1]"
+            },
+            {
+              "name": "Airflow velocity (m·s-1)",
+              "from": "row[2]"
+            },
+            {
+              "name": "Airflow velocity (m·s-1)",
+              "from": "row[3]"
+            },
+            {
+              "name": "Airflow velocity (m·s-1)",
+              "from": "row[4]"
+            },
+            {
+              "name": "Airflow velocity (m·s-1)",
+              "from": "row[5]"
+            },
+            {
+              "name": "Airflow velocity (m·s-1)",
+              "from": "row[6]"
+            }
+          ]
+        }
+      ],
+      "rationale": {
+        "binding_summary": "The table is treated as process parameter context. Each row is a reusable context record keyed by the fragment label in row[0], with conditions capturing the vertical displacement, folding time, and the six airflow velocity values from columns 2-6. The context_id and label both use row[0] to preserve the original fragment wording.",
+        "uncertainties": [
+          "The first row is a header-like row containing column labels; it is included as a context record because the instruction says to apply to every row, but it may be filtered upstream.",
+          "Columns 2-6 share the same header 'Airflow velocity (m·s-1)' and are not individually distinguishable by header text; they are represented as separate conditions with identical names."
+        ]
+      },
+      "table_id": "TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0002"
+    },
+    "table_structure": {
+      "table_id": "TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0002",
+      "extraction_mode": "semantic_ir",
+      "table_role": "process_parameter",
+      "extractability": {
+        "decision": "context_extract",
+        "table_role": "process_parameter",
+        "reason": "Table reports airflow velocity thresholds and vertical displacement for pneumatic separation of folded/unfolded copper and aluminum fragments; these are operating parameters/setup conditions, not measured target composition or recovery outcome.",
+        "confidence": 0.85,
+        "gate_decision": "context_extract",
+        "gate_table_role": "process_parameter"
+      },
+      "layout": null
+    },
+    "verification_report": {
+      "status": "context_extracted",
+      "skip_reason": "Table reports airflow velocity thresholds and vertical displacement for pneumatic separation of folded/unfolded copper and aluminum fragments; these are operating parameters/setup conditions, not measured target composition or recovery outcome.",
+      "cell_grounded_relations": 0,
+      "entity_count": 0,
+      "condition_count": 30,
+      "context_record_count": 5,
+      "unsupported_templates": [],
+      "domain_range_rejections": [],
+      "aggregate_row_diagnostics": [],
+      "unresolved_endpoint_types": [],
+      "unresolved_type_facts": [],
+      "semantic_gate": [
+        {
+          "status": "semantic_gate_rejected",
+          "check_type": "program_structure",
+          "severity": "error",
+          "template_id": "ctx_1",
+          "reason": "template has no executable emit block"
+        }
+      ],
+      "slot_binding_conflicts": [],
+      "layout_program_mismatches": [],
+      "checked_templates": 1,
+      "schema_audit": {
+        "valid": true,
+        "would_reject": false,
+        "error_count": 0,
+        "errors": []
+      },
+      "process_identity_bindings": {
+        "bound": [],
+        "unresolved": []
+      }
+    },
+    "execution_trace": [
+      {
+        "template_id": "ctx_1",
+        "op": "context_foreach_row",
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "emitted": 5,
+        "skipped": 0,
+        "ambiguous_conditions": []
+      }
+    ],
+    "failed_rewrite_verification_report": null,
+    "failed_rewrite_execution_trace": null,
+    "table_cache_key": "8f03d90085f22f76797bb96a42a4551d3b57d2cb5714bf5e22401aee9fa9257a",
+    "table_cache_version": {
+      "format_version": 1,
+      "table_code_sha256": "4a22f4dde5201514bf22f7719494eab1968ac45306c22a597fb96b6e5153ba10",
+      "table_file_sha256": {
+        "__init__.py": "859afd37280303ac79ea652fcd1c347db6f6e9a7427d1bf201341ff92fdbb9f3",
+        "artifact_cache.py": "dae107568c3be648794486b4140f41386af8bd9d77b261dcf82505cef6e977aa",
+        "contract.py": "d537d95059e8a540b82872ffebe956d5e8fd43081e1ca630aa34b5a16359092a",
+        "cross_table_reference_resolver.py": "c8662723efd6e0597158b5afca516f88149abcf4a39feaf38ddd7488b2b389d7",
+        "extraction_agent.py": "3591d71d4074f2d4431a79d3b9eb2a039f5c43cf152a34df1316be746f14c450",
+        "ir/__init__.py": "388534b9fb9c0b6eae80334aef2e8eae376c73fca9ab48e74ddf4299bf50e425",
+        "ir/common.py": "562218bc179c5b27cc043f264b440886103fae4c45964fd7c171e9d1983deb23",
+        "ir/context.py": "885b13c1bc0b1e48ad2e1eee5f466979adc657d6fc13abacf7b2330948999eea",
+        "ir/core.py": "cff62003caca13eaaf0abdd93828b601a5201f512fabfb630e07ac64bbf2758c",
+        "ir/executor.py": "03e3cb0f7d24ba0eec5e576c04c4a3701280af27809b9f1d92e8a5afaf9f42d1",
+        "ir/parsing.py": "3e5727a88792518d25f4772fa526f0eb0361cbd05b4aaf03b4076178dd950159",
+        "ir/policy.py": "c2ef18469dc2d402825a1559a860901927666dcc1fd1e80e3ec82669bb40d307",
+        "ir/runtime.py": "67a3294a052d291532c51b06595f799ee7dd191ba6f923f3235296815eeb5d9d",
+        "ir/schema.py": "0d9c6415cc080f7f1ee4ea0b0260ba8211b5caa1f7d4c0aaf99fd426f25142f2",
+        "ir/selectors.py": "81b5606cc71f3ca6f4eaf848083e8d4b194b1c5a53f1cdf2832e439df6a456f1",
+        "ir/value_resolver.py": "feebb6a908f79b9c5975cc6cf7c657847522208a38d003f3b9cba9d8577864d8",
+        "ir/verifier.py": "9375cb15633663e724752b433288e99bb5d6d04956db9e59607a65c1181fbccb",
+        "reference_info.py": "301f9975a4ad539253ec368f68cabc4039e6d0d4ce7187abbeaf8ca1a306a531",
+        "repair/__init__.py": "05a749a9dd4f2c77ca79cd7b0cc2e00a8eae16d11cdf8f43ff26cd26e05639b9",
+        "repair/applier.py": "cf3af090627b411cbfdb354d3a89f5206a1fa14d04fbbe1f95d8ddd138e78842",
+        "repair/local.py": "f5d94287673530f100c594b123765b99178a12a62dbc9f0e8f1fbcc58fb059bb",
+        "repair/prompt.py": "4ff5b44701be422848a76a934171d48600a46921af1cadce22070143e06a13ce",
+        "repair/schema.py": "bc5069df92508097d6fad6435fec7be2079075e46a80ee8c92145bd26511df26",
+        "role_gate.py": "fc71db600c1d820e1c1f4898cb2341cbce76b5eb9984d07c600b0c63f226d769"
+      }
+    }
+  },
+  {
+    "chunk_id": "Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries__table__TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0003",
+    "table_id": "TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0003",
+    "llm_raw_response": "## TABLE_ROLE_GATE_RESPONSE\n{\"table_role_decision\":{\"decision\":\"context_extract\",\"table_role\":\"process_parameter\",\"confidence\":0.72,\"causal_role\":{\"source_object\":\"lithium iron phosphate battery\",\"transformation\":\"component weight breakdown and energy consumption accounting\",\"measured_object\":\"battery components and total energy consumption\",\"measured_quantity\":\"weights (kg) and electric power (kWh)\",\"evidence_role\":\"process_input\"},\"region_roles\":[{\"row_range\":[1,6],\"role\":\"process_context\",\"reason\":\"Component weights of the battery are input/material composition metadata, not a treatment outcome.\"},{\"row_range\":[7,7],\"role\":\"process_context\",\"reason\":\"Total energy consumption is an operating parameter, not a target-bearing treatment result.\"}],\"extract_row_ranges\":[],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Weights of a lithium iron phosphate battery components and the total energy consumption.\",\"judgment\":\"supports_context\",\"reason\":\"Reports component weights and energy input, not target composition or treatment outcome.\"},{\"step\":\"table_reference_sentences\",\"evidence\":\"Table 3 shows the weights of the components of a lithium iron phosphate battery and the total energy consumption.\",\"judgment\":\"supports_context\",\"reason\":\"Confirms table is a material/energy input inventory.\"},{\"step\":\"headers\",\"evidence\":\"Category, Name/Ni/Co, Weight\",\"judgment\":\"ambiguous\",\"reason\":\"Metal names appear but quantities are component weights, not measured recovery or composition after treatment.\"}],\"allowed_fact_types\":[],\"excluded_fact_types\":[\"target metal recovery\",\"leaching efficiency\",\"treatment outcome concentration\",\"economic value share\"],\"ir_instruction\":\"Treat as context only: record battery component weights and energy consumption as process inputs; do not emit target composition or recovery facts.\",\"uncertainty\":\"Header parsing is noisy; no post-treatment measurement is present, so no extractable target-bearing outcome.\"}}\n\n## SEMANTIC_IR_RESPONSE\n{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"context_extract\",\n      \"table_role\": \"process_parameter\",\n      \"reason\": \"Table 3 records battery component weights and total energy consumption as process inputs; the upstream table_role_gate_decision is context_extract, so this table is treated as reusable context only and no KG triples are emitted.\",\n      \"confidence\": 0.8\n    },\n    \"column_semantics\": [],\n    \"program\": [],\n    \"context_program\": [\n      {\n        \"step_id\": \"ctx_1\",\n        \"op\": \"foreach_row\",\n        \"role\": \"process_context\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"all_rows\",\n            \"exclude_indices\": []\n          }\n        },\n        \"context_id\": {\n          \"from\": \"row[0]\",\n          \"name\": \"context_id\"\n        },\n        \"label\": {\n          \"from\": \"row[0]\"\n        },\n        \"conditions\": [\n          {\n            \"name\": \"Category\",\n            \"from\": \"row[0]\"\n          },\n          {\n            \"name\": \"Co (Name | Ni)\",\n            \"from\": \"row[1]\"\n          },\n          {\n            \"name\": \"/ (Weight)\",\n            \"from\": \"row[2]\"\n          }\n        ]\n      }\n    ],\n    \"rationale\": {\n      \"binding_summary\": \"Each row is preserved as a reusable process-context record. The first column supplies the context_id and label, while the three visible columns are retained as grounded conditions using the original table wording: Category, Co (Name | Ni), and / (Weight).\",\n      \"uncertainties\": [\n        \"The header 'Co (Name | Ni)' is structurally ambiguous because its header path is ['Name','Ni','Co'], but the visible header text is preserved as required.\",\n        \"The header '/ (Weight)' is structurally ambiguous because its header path is ['Weight','/'], but the visible header text is preserved as required.\",\n        \"Row 1 has an empty first cell, so its context_id and label will be empty; this is retained because the table wording is preserved and no row is excluded.\"\n      ]\n    }\n  }\n}",
+    "llm_gate_response": "{\"table_role_decision\":{\"decision\":\"context_extract\",\"table_role\":\"process_parameter\",\"confidence\":0.72,\"causal_role\":{\"source_object\":\"lithium iron phosphate battery\",\"transformation\":\"component weight breakdown and energy consumption accounting\",\"measured_object\":\"battery components and total energy consumption\",\"measured_quantity\":\"weights (kg) and electric power (kWh)\",\"evidence_role\":\"process_input\"},\"region_roles\":[{\"row_range\":[1,6],\"role\":\"process_context\",\"reason\":\"Component weights of the battery are input/material composition metadata, not a treatment outcome.\"},{\"row_range\":[7,7],\"role\":\"process_context\",\"reason\":\"Total energy consumption is an operating parameter, not a target-bearing treatment result.\"}],\"extract_row_ranges\":[],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Weights of a lithium iron phosphate battery components and the total energy consumption.\",\"judgment\":\"supports_context\",\"reason\":\"Reports component weights and energy input, not target composition or treatment outcome.\"},{\"step\":\"table_reference_sentences\",\"evidence\":\"Table 3 shows the weights of the components of a lithium iron phosphate battery and the total energy consumption.\",\"judgment\":\"supports_context\",\"reason\":\"Confirms table is a material/energy input inventory.\"},{\"step\":\"headers\",\"evidence\":\"Category, Name/Ni/Co, Weight\",\"judgment\":\"ambiguous\",\"reason\":\"Metal names appear but quantities are component weights, not measured recovery or composition after treatment.\"}],\"allowed_fact_types\":[],\"excluded_fact_types\":[\"target metal recovery\",\"leaching efficiency\",\"treatment outcome concentration\",\"economic value share\"],\"ir_instruction\":\"Treat as context only: record battery component weights and energy consumption as process inputs; do not emit target composition or recovery facts.\",\"uncertainty\":\"Header parsing is noisy; no post-treatment measurement is present, so no extractable target-bearing outcome.\"}}",
+    "llm_ir_response": "{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"context_extract\",\n      \"table_role\": \"process_parameter\",\n      \"reason\": \"Table 3 records battery component weights and total energy consumption as process inputs; the upstream table_role_gate_decision is context_extract, so this table is treated as reusable context only and no KG triples are emitted.\",\n      \"confidence\": 0.8\n    },\n    \"column_semantics\": [],\n    \"program\": [],\n    \"context_program\": [\n      {\n        \"step_id\": \"ctx_1\",\n        \"op\": \"foreach_row\",\n        \"role\": \"process_context\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"all_rows\",\n            \"exclude_indices\": []\n          }\n        },\n        \"context_id\": {\n          \"from\": \"row[0]\",\n          \"name\": \"context_id\"\n        },\n        \"label\": {\n          \"from\": \"row[0]\"\n        },\n        \"conditions\": [\n          {\n            \"name\": \"Category\",\n            \"from\": \"row[0]\"\n          },\n          {\n            \"name\": \"Co (Name | Ni)\",\n            \"from\": \"row[1]\"\n          },\n          {\n            \"name\": \"/ (Weight)\",\n            \"from\": \"row[2]\"\n          }\n        ]\n      }\n    ],\n    \"rationale\": {\n      \"binding_summary\": \"Each row is preserved as a reusable process-context record. The first column supplies the context_id and label, while the three visible columns are retained as grounded conditions using the original table wording: Category, Co (Name | Ni), and / (Weight).\",\n      \"uncertainties\": [\n        \"The header 'Co (Name | Ni)' is structurally ambiguous because its header path is ['Name','Ni','Co'], but the visible header text is preserved as required.\",\n        \"The header '/ (Weight)' is structurally ambiguous because its header path is ['Weight','/'], but the visible header text is preserved as required.\",\n        \"Row 1 has an empty first cell, so its context_id and label will be empty; this is retained because the table wording is preserved and no row is excluded.\"\n      ]\n    }\n  }\n}",
+    "table_role_decision": {
+      "decision": "context_extract",
+      "table_role": "process_parameter",
+      "confidence": 0.72,
+      "causal_role": {
+        "source_object": "lithium iron phosphate battery",
+        "transformation": "component weight breakdown and energy consumption accounting",
+        "measured_object": "battery components and total energy consumption",
+        "measured_quantity": "weights (kg) and electric power (kWh)",
+        "evidence_role": "process_input"
+      },
+      "region_roles": [
+        {
+          "row_range": [
+            1,
+            6
+          ],
+          "role": "process_context",
+          "reason": "Component weights of the battery are input/material composition metadata, not a treatment outcome."
+        },
+        {
+          "row_range": [
+            7,
+            7
+          ],
+          "role": "process_context",
+          "reason": "Total energy consumption is an operating parameter, not a target-bearing treatment result."
+        }
+      ],
+      "extract_row_ranges": [],
+      "caption_sufficient": true,
+      "evidence_steps": [
+        {
+          "step": "caption",
+          "evidence": "Weights of a lithium iron phosphate battery components and the total energy consumption.",
+          "judgment": "supports_context",
+          "reason": "Reports component weights and energy input, not target composition or treatment outcome."
+        },
+        {
+          "step": "table_reference_sentences",
+          "evidence": "Table 3 shows the weights of the components of a lithium iron phosphate battery and the total energy consumption.",
+          "judgment": "supports_context",
+          "reason": "Confirms table is a material/energy input inventory."
+        },
+        {
+          "step": "headers",
+          "evidence": "Category, Name/Ni/Co, Weight",
+          "judgment": "ambiguous",
+          "reason": "Metal names appear but quantities are component weights, not measured recovery or composition after treatment."
+        }
+      ],
+      "allowed_fact_types": [],
+      "excluded_fact_types": [
+        "target metal recovery",
+        "leaching efficiency",
+        "treatment outcome concentration",
+        "economic value share"
+      ],
+      "ir_instruction": "Treat as context only: record battery component weights and energy consumption as process inputs; do not emit target composition or recovery facts.",
+      "uncertainty": "Header parsing is noisy; no post-treatment measurement is present, so no extractable target-bearing outcome."
+    },
+    "llm_interpretation": {
+      "semantic_ir": {
+        "extractability": {
+          "decision": "context_extract",
+          "table_role": "process_parameter",
+          "reason": "Table 3 records battery component weights and total energy consumption as process inputs; the upstream table_role_gate_decision is context_extract, so this table is treated as reusable context only and no KG triples are emitted.",
+          "confidence": 0.8
+        },
+        "column_semantics": [],
+        "program": [],
+        "context_program": [
+          {
+            "step_id": "ctx_1",
+            "op": "foreach_row",
+            "role": "process_context",
+            "select": {
+              "rows": {
+                "selector": "all_rows",
+                "exclude_indices": []
+              }
+            },
+            "context_id": {
+              "from": "row[0]",
+              "name": "context_id"
+            },
+            "label": {
+              "from": "row[0]"
+            },
+            "conditions": [
+              {
+                "name": "Category",
+                "from": "row[0]"
+              },
+              {
+                "name": "Co (Name | Ni)",
+                "from": "row[1]"
+              },
+              {
+                "name": "/ (Weight)",
+                "from": "row[2]"
+              }
+            ]
+          }
+        ],
+        "rationale": {
+          "binding_summary": "Each row is preserved as a reusable process-context record. The first column supplies the context_id and label, while the three visible columns are retained as grounded conditions using the original table wording: Category, Co (Name | Ni), and / (Weight).",
+          "uncertainties": [
+            "The header 'Co (Name | Ni)' is structurally ambiguous because its header path is ['Name','Ni','Co'], but the visible header text is preserved as required.",
+            "The header '/ (Weight)' is structurally ambiguous because its header path is ['Weight','/'], but the visible header text is preserved as required.",
+            "Row 1 has an empty first cell, so its context_id and label will be empty; this is retained because the table wording is preserved and no row is excluded."
+          ]
+        }
+      }
+    },
+    "semantic_ir": {
+      "extractability": {
+        "decision": "context_extract",
+        "table_role": "process_parameter",
+        "reason": "Table 3 records battery component weights and total energy consumption as process inputs; the upstream table_role_gate_decision is context_extract, so this table is treated as reusable context only and no KG triples are emitted.",
+        "confidence": 0.72,
+        "gate_decision": "context_extract",
+        "gate_table_role": "process_parameter"
+      },
+      "column_semantics": [],
+      "program": [],
+      "context_program": [
+        {
+          "step_id": "ctx_1",
+          "op": "foreach_row",
+          "role": "process_context",
+          "select": {
+            "rows": {
+              "selector": "all_rows",
+              "exclude_indices": []
+            }
+          },
+          "context_id": {
+            "from": "row[0]",
+            "name": "context_id"
+          },
+          "label": {
+            "from": "row[0]"
+          },
+          "conditions": [
+            {
+              "name": "Category",
+              "from": "row[0]"
+            },
+            {
+              "name": "Co (Name | Ni)",
+              "from": "row[1]"
+            },
+            {
+              "name": "/ (Weight)",
+              "from": "row[2]"
+            }
+          ]
+        }
+      ],
+      "rationale": {
+        "binding_summary": "Each row is preserved as a reusable process-context record. The first column supplies the context_id and label, while the three visible columns are retained as grounded conditions using the original table wording: Category, Co (Name | Ni), and / (Weight).",
+        "uncertainties": [
+          "The header 'Co (Name | Ni)' is structurally ambiguous because its header path is ['Name','Ni','Co'], but the visible header text is preserved as required.",
+          "The header '/ (Weight)' is structurally ambiguous because its header path is ['Weight','/'], but the visible header text is preserved as required.",
+          "Row 1 has an empty first cell, so its context_id and label will be empty; this is retained because the table wording is preserved and no row is excluded."
+        ]
+      },
+      "table_id": "TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0003"
+    },
+    "table_structure": {
+      "table_id": "TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0003",
+      "extraction_mode": "semantic_ir",
+      "table_role": "process_parameter",
+      "extractability": {
+        "decision": "context_extract",
+        "table_role": "process_parameter",
+        "reason": "Table 3 records battery component weights and total energy consumption as process inputs; the upstream table_role_gate_decision is context_extract, so this table is treated as reusable context only and no KG triples are emitted.",
+        "confidence": 0.72,
+        "gate_decision": "context_extract",
+        "gate_table_role": "process_parameter"
+      },
+      "layout": null
+    },
+    "verification_report": {
+      "status": "context_extracted",
+      "skip_reason": "Table 3 records battery component weights and total energy consumption as process inputs; the upstream table_role_gate_decision is context_extract, so this table is treated as reusable context only and no KG triples are emitted.",
+      "cell_grounded_relations": 0,
+      "entity_count": 0,
+      "condition_count": 17,
+      "context_record_count": 7,
+      "unsupported_templates": [],
+      "domain_range_rejections": [],
+      "aggregate_row_diagnostics": [],
+      "unresolved_endpoint_types": [],
+      "unresolved_type_facts": [],
+      "semantic_gate": [
+        {
+          "status": "semantic_gate_rejected",
+          "check_type": "program_structure",
+          "severity": "error",
+          "template_id": "ctx_1",
+          "reason": "template has no executable emit block"
+        }
+      ],
+      "slot_binding_conflicts": [],
+      "layout_program_mismatches": [],
+      "checked_templates": 1,
+      "schema_audit": {
+        "valid": true,
+        "would_reject": false,
+        "error_count": 0,
+        "errors": []
+      },
+      "process_identity_bindings": {
+        "bound": [],
+        "unresolved": []
+      }
+    },
+    "execution_trace": [
+      {
+        "template_id": "ctx_1",
+        "op": "context_foreach_row",
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "emitted": 7,
+        "skipped": 0,
+        "ambiguous_conditions": []
+      }
+    ],
+    "failed_rewrite_verification_report": null,
+    "failed_rewrite_execution_trace": null,
+    "table_cache_key": "1e3311ac548788dd603625e95c7982d668f6d5817bb30ffa46152b1b59bf3c08",
+    "table_cache_version": {
+      "format_version": 1,
+      "table_code_sha256": "4a22f4dde5201514bf22f7719494eab1968ac45306c22a597fb96b6e5153ba10",
+      "table_file_sha256": {
+        "__init__.py": "859afd37280303ac79ea652fcd1c347db6f6e9a7427d1bf201341ff92fdbb9f3",
+        "artifact_cache.py": "dae107568c3be648794486b4140f41386af8bd9d77b261dcf82505cef6e977aa",
+        "contract.py": "d537d95059e8a540b82872ffebe956d5e8fd43081e1ca630aa34b5a16359092a",
+        "cross_table_reference_resolver.py": "c8662723efd6e0597158b5afca516f88149abcf4a39feaf38ddd7488b2b389d7",
+        "extraction_agent.py": "3591d71d4074f2d4431a79d3b9eb2a039f5c43cf152a34df1316be746f14c450",
+        "ir/__init__.py": "388534b9fb9c0b6eae80334aef2e8eae376c73fca9ab48e74ddf4299bf50e425",
+        "ir/common.py": "562218bc179c5b27cc043f264b440886103fae4c45964fd7c171e9d1983deb23",
+        "ir/context.py": "885b13c1bc0b1e48ad2e1eee5f466979adc657d6fc13abacf7b2330948999eea",
+        "ir/core.py": "cff62003caca13eaaf0abdd93828b601a5201f512fabfb630e07ac64bbf2758c",
+        "ir/executor.py": "03e3cb0f7d24ba0eec5e576c04c4a3701280af27809b9f1d92e8a5afaf9f42d1",
+        "ir/parsing.py": "3e5727a88792518d25f4772fa526f0eb0361cbd05b4aaf03b4076178dd950159",
+        "ir/policy.py": "c2ef18469dc2d402825a1559a860901927666dcc1fd1e80e3ec82669bb40d307",
+        "ir/runtime.py": "67a3294a052d291532c51b06595f799ee7dd191ba6f923f3235296815eeb5d9d",
+        "ir/schema.py": "0d9c6415cc080f7f1ee4ea0b0260ba8211b5caa1f7d4c0aaf99fd426f25142f2",
+        "ir/selectors.py": "81b5606cc71f3ca6f4eaf848083e8d4b194b1c5a53f1cdf2832e439df6a456f1",
+        "ir/value_resolver.py": "feebb6a908f79b9c5975cc6cf7c657847522208a38d003f3b9cba9d8577864d8",
+        "ir/verifier.py": "9375cb15633663e724752b433288e99bb5d6d04956db9e59607a65c1181fbccb",
+        "reference_info.py": "301f9975a4ad539253ec368f68cabc4039e6d0d4ce7187abbeaf8ca1a306a531",
+        "repair/__init__.py": "05a749a9dd4f2c77ca79cd7b0cc2e00a8eae16d11cdf8f43ff26cd26e05639b9",
+        "repair/applier.py": "cf3af090627b411cbfdb354d3a89f5206a1fa14d04fbbe1f95d8ddd138e78842",
+        "repair/local.py": "f5d94287673530f100c594b123765b99178a12a62dbc9f0e8f1fbcc58fb059bb",
+        "repair/prompt.py": "4ff5b44701be422848a76a934171d48600a46921af1cadce22070143e06a13ce",
+        "repair/schema.py": "bc5069df92508097d6fad6435fec7be2079075e46a80ee8c92145bd26511df26",
+        "role_gate.py": "fc71db600c1d820e1c1f4898cb2341cbce76b5eb9984d07c600b0c63f226d769"
+      }
+    }
+  },
+  {
+    "chunk_id": "Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries__table__TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0004",
+    "table_id": "TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0004",
+    "llm_raw_response": "## TABLE_ROLE_GATE_RESPONSE\n{\"table_role_decision\":{\"decision\":\"skip\",\"table_role\":\"non_target_context\",\"confidence\":0.95,\"causal_role\":{\"source_object\":\"lithium iron phosphate battery\",\"transformation\":\"pneumatic separation and individual process steps\",\"measured_object\":\"process devices\",\"measured_quantity\":\"energy consumption (kWh) and power (kW)\",\"evidence_role\":\"out_of_scope\"},\"region_roles\":[{\"row_range\":[1,4],\"role\":\"out_of_scope\",\"reason\":\"Rows report energy consumption and power for process devices, not target composition or target-bearing treatment outcome.\"}],\"extract_row_ranges\":[],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Table 4. Energy consumption for every individual process for pneumatic separation.\",\"judgment\":\"supports_skip\",\"reason\":\"Caption explicitly reports energy consumption, an economic/process parameter, not target composition or recovery.\"},{\"step\":\"table_reference\",\"evidence\":\"Table 4 shows the energy consumption for every individual process for pneumatic separation.\",\"judgment\":\"supports_skip\",\"reason\":\"Reference confirms the table is an energy breakdown, not a target-bearing outcome.\"},{\"step\":\"headers\",\"evidence\":\"Process, Device, Number, Power (kW), Energy consumption (kWh)\",\"judgment\":\"supports_skip\",\"reason\":\"Headers contain only process/device identifiers and energy metrics; no target constituent or recovery measurement.\"}],\"allowed_fact_types\":[],\"excluded_fact_types\":[\"energy consumption\",\"power consumption\",\"process device metadata\"],\"ir_instruction\":\"Skip this table; it reports process energy consumption, not WEEE target composition or treatment outcome.\",\"uncertainty\":\"\"}}",
+    "llm_gate_response": "{\"table_role_decision\":{\"decision\":\"skip\",\"table_role\":\"non_target_context\",\"confidence\":0.95,\"causal_role\":{\"source_object\":\"lithium iron phosphate battery\",\"transformation\":\"pneumatic separation and individual process steps\",\"measured_object\":\"process devices\",\"measured_quantity\":\"energy consumption (kWh) and power (kW)\",\"evidence_role\":\"out_of_scope\"},\"region_roles\":[{\"row_range\":[1,4],\"role\":\"out_of_scope\",\"reason\":\"Rows report energy consumption and power for process devices, not target composition or target-bearing treatment outcome.\"}],\"extract_row_ranges\":[],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Table 4. Energy consumption for every individual process for pneumatic separation.\",\"judgment\":\"supports_skip\",\"reason\":\"Caption explicitly reports energy consumption, an economic/process parameter, not target composition or recovery.\"},{\"step\":\"table_reference\",\"evidence\":\"Table 4 shows the energy consumption for every individual process for pneumatic separation.\",\"judgment\":\"supports_skip\",\"reason\":\"Reference confirms the table is an energy breakdown, not a target-bearing outcome.\"},{\"step\":\"headers\",\"evidence\":\"Process, Device, Number, Power (kW), Energy consumption (kWh)\",\"judgment\":\"supports_skip\",\"reason\":\"Headers contain only process/device identifiers and energy metrics; no target constituent or recovery measurement.\"}],\"allowed_fact_types\":[],\"excluded_fact_types\":[\"energy consumption\",\"power consumption\",\"process device metadata\"],\"ir_instruction\":\"Skip this table; it reports process energy consumption, not WEEE target composition or treatment outcome.\",\"uncertainty\":\"\"}}",
+    "llm_ir_response": null,
+    "table_role_decision": {
+      "decision": "skip",
+      "table_role": "non_target_context",
+      "confidence": 0.95,
+      "causal_role": {
+        "source_object": "lithium iron phosphate battery",
+        "transformation": "pneumatic separation and individual process steps",
+        "measured_object": "process devices",
+        "measured_quantity": "energy consumption (kWh) and power (kW)",
+        "evidence_role": "out_of_scope"
+      },
+      "region_roles": [
+        {
+          "row_range": [
+            1,
+            4
+          ],
+          "role": "out_of_scope",
+          "reason": "Rows report energy consumption and power for process devices, not target composition or target-bearing treatment outcome."
+        }
+      ],
+      "extract_row_ranges": [],
+      "caption_sufficient": true,
+      "evidence_steps": [
+        {
+          "step": "caption",
+          "evidence": "Table 4. Energy consumption for every individual process for pneumatic separation.",
+          "judgment": "supports_skip",
+          "reason": "Caption explicitly reports energy consumption, an economic/process parameter, not target composition or recovery."
+        },
+        {
+          "step": "table_reference",
+          "evidence": "Table 4 shows the energy consumption for every individual process for pneumatic separation.",
+          "judgment": "supports_skip",
+          "reason": "Reference confirms the table is an energy breakdown, not a target-bearing outcome."
+        },
+        {
+          "step": "headers",
+          "evidence": "Process, Device, Number, Power (kW), Energy consumption (kWh)",
+          "judgment": "supports_skip",
+          "reason": "Headers contain only process/device identifiers and energy metrics; no target constituent or recovery measurement."
+        }
+      ],
+      "allowed_fact_types": [],
+      "excluded_fact_types": [
+        "energy consumption",
+        "power consumption",
+        "process device metadata"
+      ],
+      "ir_instruction": "Skip this table; it reports process energy consumption, not WEEE target composition or treatment outcome.",
+      "uncertainty": ""
+    },
+    "llm_interpretation": {
+      "table_role_decision": {
+        "decision": "skip",
+        "table_role": "non_target_context",
+        "confidence": 0.95,
+        "causal_role": {
+          "source_object": "lithium iron phosphate battery",
+          "transformation": "pneumatic separation and individual process steps",
+          "measured_object": "process devices",
+          "measured_quantity": "energy consumption (kWh) and power (kW)",
+          "evidence_role": "out_of_scope"
+        },
+        "region_roles": [
+          {
+            "row_range": [
+              1,
+              4
+            ],
+            "role": "out_of_scope",
+            "reason": "Rows report energy consumption and power for process devices, not target composition or target-bearing treatment outcome."
+          }
+        ],
+        "extract_row_ranges": [],
+        "caption_sufficient": true,
+        "evidence_steps": [
+          {
+            "step": "caption",
+            "evidence": "Table 4. Energy consumption for every individual process for pneumatic separation.",
+            "judgment": "supports_skip",
+            "reason": "Caption explicitly reports energy consumption, an economic/process parameter, not target composition or recovery."
+          },
+          {
+            "step": "table_reference",
+            "evidence": "Table 4 shows the energy consumption for every individual process for pneumatic separation.",
+            "judgment": "supports_skip",
+            "reason": "Reference confirms the table is an energy breakdown, not a target-bearing outcome."
+          },
+          {
+            "step": "headers",
+            "evidence": "Process, Device, Number, Power (kW), Energy consumption (kWh)",
+            "judgment": "supports_skip",
+            "reason": "Headers contain only process/device identifiers and energy metrics; no target constituent or recovery measurement."
+          }
+        ],
+        "allowed_fact_types": [],
+        "excluded_fact_types": [
+          "energy consumption",
+          "power consumption",
+          "process device metadata"
+        ],
+        "ir_instruction": "Skip this table; it reports process energy consumption, not WEEE target composition or treatment outcome.",
+        "uncertainty": ""
+      }
+    },
+    "semantic_ir": {
+      "table_id": "TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0004",
+      "extractability": {
+        "decision": "skip",
+        "table_role": "non_target_context",
+        "reason": "Skip this table; it reports process energy consumption, not WEEE target composition or treatment outcome.",
+        "confidence": 0.95
+      },
+      "program": []
+    },
+    "table_structure": {
+      "table_id": "TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0004",
+      "extraction_mode": "semantic_ir",
+      "table_role": "non_target_context",
+      "extractability": {
+        "decision": "skip",
+        "table_role": "non_target_context",
+        "reason": "Skip this table; it reports process energy consumption, not WEEE target composition or treatment outcome.",
+        "confidence": 0.95
+      }
+    },
+    "verification_report": {
+      "status": "skipped",
+      "skip_reason": "Skip this table; it reports process energy consumption, not WEEE target composition or treatment outcome.",
+      "cell_grounded_relations": 0,
+      "entity_count": 0,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "unsupported_templates": []
+    },
+    "execution_trace": [],
+    "failed_rewrite_verification_report": null,
+    "failed_rewrite_execution_trace": null,
+    "table_cache_key": "358c0bfad58040408e78992a6c12750ccea2de2b8442742b048ae720dcb16da2",
+    "table_cache_version": {
+      "format_version": 1,
+      "table_code_sha256": "4a22f4dde5201514bf22f7719494eab1968ac45306c22a597fb96b6e5153ba10",
+      "table_file_sha256": {
+        "__init__.py": "859afd37280303ac79ea652fcd1c347db6f6e9a7427d1bf201341ff92fdbb9f3",
+        "artifact_cache.py": "dae107568c3be648794486b4140f41386af8bd9d77b261dcf82505cef6e977aa",
+        "contract.py": "d537d95059e8a540b82872ffebe956d5e8fd43081e1ca630aa34b5a16359092a",
+        "cross_table_reference_resolver.py": "c8662723efd6e0597158b5afca516f88149abcf4a39feaf38ddd7488b2b389d7",
+        "extraction_agent.py": "3591d71d4074f2d4431a79d3b9eb2a039f5c43cf152a34df1316be746f14c450",
+        "ir/__init__.py": "388534b9fb9c0b6eae80334aef2e8eae376c73fca9ab48e74ddf4299bf50e425",
+        "ir/common.py": "562218bc179c5b27cc043f264b440886103fae4c45964fd7c171e9d1983deb23",
+        "ir/context.py": "885b13c1bc0b1e48ad2e1eee5f466979adc657d6fc13abacf7b2330948999eea",
+        "ir/core.py": "cff62003caca13eaaf0abdd93828b601a5201f512fabfb630e07ac64bbf2758c",
+        "ir/executor.py": "03e3cb0f7d24ba0eec5e576c04c4a3701280af27809b9f1d92e8a5afaf9f42d1",
+        "ir/parsing.py": "3e5727a88792518d25f4772fa526f0eb0361cbd05b4aaf03b4076178dd950159",
+        "ir/policy.py": "c2ef18469dc2d402825a1559a860901927666dcc1fd1e80e3ec82669bb40d307",
+        "ir/runtime.py": "67a3294a052d291532c51b06595f799ee7dd191ba6f923f3235296815eeb5d9d",
+        "ir/schema.py": "0d9c6415cc080f7f1ee4ea0b0260ba8211b5caa1f7d4c0aaf99fd426f25142f2",
+        "ir/selectors.py": "81b5606cc71f3ca6f4eaf848083e8d4b194b1c5a53f1cdf2832e439df6a456f1",
+        "ir/value_resolver.py": "feebb6a908f79b9c5975cc6cf7c657847522208a38d003f3b9cba9d8577864d8",
+        "ir/verifier.py": "9375cb15633663e724752b433288e99bb5d6d04956db9e59607a65c1181fbccb",
+        "reference_info.py": "301f9975a4ad539253ec368f68cabc4039e6d0d4ce7187abbeaf8ca1a306a531",
+        "repair/__init__.py": "05a749a9dd4f2c77ca79cd7b0cc2e00a8eae16d11cdf8f43ff26cd26e05639b9",
+        "repair/applier.py": "cf3af090627b411cbfdb354d3a89f5206a1fa14d04fbbe1f95d8ddd138e78842",
+        "repair/local.py": "f5d94287673530f100c594b123765b99178a12a62dbc9f0e8f1fbcc58fb059bb",
+        "repair/prompt.py": "4ff5b44701be422848a76a934171d48600a46921af1cadce22070143e06a13ce",
+        "repair/schema.py": "bc5069df92508097d6fad6435fec7be2079075e46a80ee8c92145bd26511df26",
+        "role_gate.py": "fc71db600c1d820e1c1f4898cb2341cbce76b5eb9984d07c600b0c63f226d769"
+      }
+    }
+  }
+]

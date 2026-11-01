@@ -1,0 +1,66 @@
+{
+  "paper": "Assessment of Smartphones’ Components and Materials for a Recycling Perspective- Tendencies of Composition and Target Elements",
+  "source_sha256": "98b1e4be03dcb53386da3e8918088e62bac9d8d2d91f49449a0328582a1efc71",
+  "actions": [
+    {
+      "action": "retract_relation",
+      "position": 10,
+      "relation": {
+        "id": "REL_Component_casing_CONTAINS_Material_KBr",
+        "subject": "Component_casing",
+        "subject_name": "casing",
+        "subject_type": "Component",
+        "predicate": "CONTAINS",
+        "object": "Material_KBr",
+        "object_name": "KBr",
+        "object_type": "Material",
+        "properties": {
+          "property": "composition",
+          "study_scope": "current_study",
+          "source_sample": "milled material",
+          "conditions": "two samples of each group (manufacturing year before and after 2015)",
+          "extra_qualifiers": "samples inserted in KBr tablets for FTIR analysis",
+          "property_raw": "composition",
+          "measure_key": "composition",
+          "condition_keys": [
+            {
+              "key": "other",
+              "value": "two samples of each group (manufacturing year before and after 2015)",
+              "unit": null,
+              "raw_text": "two samples of each group (manufacturing year before and after 2015)"
+            }
+          ],
+          "condition_labels": [
+            "two samples of each group (manufacturing year before and after 2015)"
+          ],
+          "condition": "two samples of each group (manufacturing year before and after 2015)",
+          "condition_ids": [
+            "COND_5f72395857ac"
+          ],
+          "raw_relation_type": "CONTAINS",
+          "normalized_relation_type": "CONTAINS",
+          "normalized_from_raw": false,
+          "source_name": "casing",
+          "target_name": "KBr",
+          "evidence_span": "Two samples of each group (manufacturing year before and after 2015) were collected from the milled material and inserted in tablets of KBr."
+        },
+        "conditions": [
+          {
+            "id": "COND_5f72395857ac",
+            "name": "other",
+            "type": "other",
+            "value": "two samples of each group (manufacturing year before and after 2015)",
+            "unit": null
+          }
+        ]
+      },
+      "reason": "FTIR preparation medium is not a sample constituent"
+    }
+  ],
+  "before_triples": 458,
+  "after_triples": 457,
+  "before_entities": 46,
+  "after_entities": 45,
+  "basis": "Frozen evidence review and offline table execution; historical LLM stage files unchanged",
+  "extraction_api_calls": 0
+}

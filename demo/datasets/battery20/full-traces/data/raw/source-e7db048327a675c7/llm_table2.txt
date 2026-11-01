@@ -1,0 +1,1144 @@
+[
+  {
+    "chunk_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes__table__TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+    "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+    "result": {
+      "entities": [
+        {
+          "id": "table_ir_ent_001",
+          "name": "lithium ion battery",
+          "mention_text": "lithium ion battery",
+          "type": "Product",
+          "source": "table:TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "literal",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_002",
+          "name": "LiCoO2",
+          "mention_text": "LiCoO2",
+          "type": "Material",
+          "source": "table:TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_003",
+          "name": "Steel/Ni",
+          "mention_text": "Steel/Ni",
+          "type": "Material",
+          "source": "table:TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 2
+          }
+        },
+        {
+          "id": "table_ir_ent_004",
+          "name": "Cu/Al",
+          "mention_text": "Cu/Al",
+          "type": "Material",
+          "source": "table:TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 3
+          }
+        },
+        {
+          "id": "table_ir_ent_005",
+          "name": "Carbon",
+          "mention_text": "carbon",
+          "type": "Material",
+          "source": "table:TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "synonyms": [
+            "carbon",
+            "Carbon"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 4
+          }
+        },
+        {
+          "id": "table_ir_ent_006",
+          "name": "electrolyte",
+          "mention_text": "electrolyte",
+          "type": "Material",
+          "source": "table:TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 5
+          }
+        },
+        {
+          "id": "table_ir_ent_007",
+          "name": "polymer",
+          "mention_text": "polymer",
+          "type": "Material",
+          "source": "table:TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 6
+          }
+        }
+      ],
+      "relations": [
+        {
+          "id": "table_ir_rel_001",
+          "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "table_title": "Chemical composition of lithium ion battery",
+          "source_id": "table_ir_ent_001",
+          "source_name": "lithium ion battery",
+          "target_id": "table_ir_ent_002",
+          "target_name": "LiCoO2",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 1 (LiCoO2): 27.5",
+          "attributes": {
+            "property": "mass fraction",
+            "template_id": "step_1",
+            "unit": "weight_percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+            "row_idx": 1,
+            "col_idx": 1,
+            "row_label": "Wt.%",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "LiCoO2",
+            "column_descriptor": {
+              "id": "c1",
+              "index": 1,
+              "flat_label": "LiCoO2",
+              "header_path": [
+                "LiCoO2"
+              ],
+              "header_leaf": "LiCoO2",
+              "header_group": "",
+              "raw_header_cells": [],
+              "recoverability": "flat_only",
+              "semantic": {
+                "entity_text": "LiCoO2",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 1 (LiCoO2): 27.5",
+            "value": "27.5",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "27.5",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                1,
+                1
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_002",
+          "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "table_title": "Chemical composition of lithium ion battery",
+          "source_id": "table_ir_ent_001",
+          "source_name": "lithium ion battery",
+          "target_id": "table_ir_ent_003",
+          "target_name": "Steel/Ni",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 2 (Steel/Ni): 24.5",
+          "attributes": {
+            "property": "mass fraction",
+            "template_id": "step_1",
+            "unit": "weight_percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+            "row_idx": 1,
+            "col_idx": 2,
+            "row_label": "Wt.%",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Steel/Ni",
+            "column_descriptor": {
+              "id": "c2",
+              "index": 2,
+              "flat_label": "Steel/Ni",
+              "header_path": [
+                "Steel/Ni"
+              ],
+              "header_leaf": "Steel/Ni",
+              "header_group": "",
+              "raw_header_cells": [],
+              "recoverability": "flat_only",
+              "semantic": {
+                "entity_text": "Steel/Ni",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 2 (Steel/Ni): 24.5",
+            "value": "24.5",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "24.5",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                2,
+                2
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_003",
+          "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "table_title": "Chemical composition of lithium ion battery",
+          "source_id": "table_ir_ent_001",
+          "source_name": "lithium ion battery",
+          "target_id": "table_ir_ent_004",
+          "target_name": "Cu/Al",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 3 (Cu/Al): 14.5",
+          "attributes": {
+            "property": "mass fraction",
+            "template_id": "step_1",
+            "unit": "weight_percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+            "row_idx": 1,
+            "col_idx": 3,
+            "row_label": "Wt.%",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Cu/Al",
+            "column_descriptor": {
+              "id": "c3",
+              "index": 3,
+              "flat_label": "Cu/Al",
+              "header_path": [
+                "Cu/Al"
+              ],
+              "header_leaf": "Cu/Al",
+              "header_group": "",
+              "raw_header_cells": [],
+              "recoverability": "flat_only",
+              "semantic": {
+                "entity_text": "Cu/Al",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 3 (Cu/Al): 14.5",
+            "value": "14.5",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "14.5",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                3,
+                3
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_004",
+          "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "table_title": "Chemical composition of lithium ion battery",
+          "source_id": "table_ir_ent_001",
+          "source_name": "lithium ion battery",
+          "target_id": "table_ir_ent_005",
+          "target_name": "Carbon",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 4 (carbon): 16",
+          "attributes": {
+            "property": "mass fraction",
+            "template_id": "step_1",
+            "unit": "weight_percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+            "row_idx": 1,
+            "col_idx": 4,
+            "row_label": "Wt.%",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "carbon",
+            "column_descriptor": {
+              "id": "c4",
+              "index": 4,
+              "flat_label": "carbon",
+              "header_path": [
+                "carbon"
+              ],
+              "header_leaf": "carbon",
+              "header_group": "",
+              "raw_header_cells": [],
+              "recoverability": "flat_only",
+              "semantic": {
+                "entity_text": "carbon",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 4 (carbon): 16",
+            "value": "16",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "16",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                4,
+                4
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_005",
+          "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "table_title": "Chemical composition of lithium ion battery",
+          "source_id": "table_ir_ent_001",
+          "source_name": "lithium ion battery",
+          "target_id": "table_ir_ent_006",
+          "target_name": "electrolyte",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 5 (electrolyte): 3.5",
+          "attributes": {
+            "property": "mass fraction",
+            "template_id": "step_1",
+            "unit": "weight_percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+            "row_idx": 1,
+            "col_idx": 5,
+            "row_label": "Wt.%",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "electrolyte",
+            "column_descriptor": {
+              "id": "c5",
+              "index": 5,
+              "flat_label": "electrolyte",
+              "header_path": [
+                "electrolyte"
+              ],
+              "header_leaf": "electrolyte",
+              "header_group": "",
+              "raw_header_cells": [],
+              "recoverability": "flat_only",
+              "semantic": {
+                "entity_text": "electrolyte",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 5 (electrolyte): 3.5",
+            "value": "3.5",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "3.5",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                5,
+                5
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_006",
+          "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "table_title": "Chemical composition of lithium ion battery",
+          "source_id": "table_ir_ent_001",
+          "source_name": "lithium ion battery",
+          "target_id": "table_ir_ent_007",
+          "target_name": "polymer",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 6 (polymer): 14",
+          "attributes": {
+            "property": "mass fraction",
+            "template_id": "step_1",
+            "unit": "weight_percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+            "row_idx": 1,
+            "col_idx": 6,
+            "row_label": "Wt.%",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "polymer",
+            "column_descriptor": {
+              "id": "c6",
+              "index": 6,
+              "flat_label": "polymer",
+              "header_path": [
+                "polymer"
+              ],
+              "header_leaf": "polymer",
+              "header_group": "",
+              "raw_header_cells": [],
+              "recoverability": "flat_only",
+              "semantic": {
+                "entity_text": "polymer",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 6 (polymer): 14",
+            "value": "14",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "14",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                6,
+                6
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        }
+      ],
+      "conditions": [],
+      "context_records": [],
+      "semantic_ir": {
+        "extractability": {
+          "decision": "extract",
+          "table_role": "target_composition",
+          "reason": "Single data row reports weight-percent composition of lithium ion battery constituents, matching allowed fact type component mass fraction of LIB constituents.",
+          "confidence": 0.95,
+          "gate_decision": "extract",
+          "gate_table_role": "target_composition"
+        },
+        "column_semantics": [
+          {
+            "column": 1,
+            "raw_header": "LiCoO2",
+            "entity_text": "LiCoO2",
+            "entity_type": "Material",
+            "confidence": 0.95
+          },
+          {
+            "column": 2,
+            "raw_header": "Steel/Ni",
+            "entity_text": "Steel/Ni",
+            "entity_type": "Material",
+            "confidence": 0.9
+          },
+          {
+            "column": 3,
+            "raw_header": "Cu/Al",
+            "entity_text": "Cu/Al",
+            "entity_type": "Material",
+            "confidence": 0.9
+          },
+          {
+            "column": 4,
+            "raw_header": "carbon",
+            "entity_text": "carbon",
+            "entity_type": "Material",
+            "confidence": 0.95
+          },
+          {
+            "column": 5,
+            "raw_header": "electrolyte",
+            "entity_text": "electrolyte",
+            "entity_type": "Material",
+            "confidence": 0.95
+          },
+          {
+            "column": 6,
+            "raw_header": "polymer",
+            "entity_text": "polymer",
+            "entity_type": "Material",
+            "confidence": 0.95
+          }
+        ],
+        "program": [
+          {
+            "step_id": "step_1",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_ranges",
+                "row_ranges": [
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ]
+              }
+            },
+            "bind": {
+              "container": {
+                "from": "literal",
+                "literal": "lithium ion battery",
+                "type": "Product"
+              },
+              "constituent": {
+                "from": "column.semantic.entity_text",
+                "type_from": "column.semantic.entity_type"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "row[0]"
+              }
+            },
+            "emit": {
+              "source": "container",
+              "predicate": "CONTAINS",
+              "target": "constituent",
+              "property": "mass fraction",
+              "value": "value",
+              "unit": "unit",
+              "conditions": []
+            }
+          }
+        ],
+        "context_program": [],
+        "rationale": {
+          "binding_summary": "Each component column header is a Material constituent of the lithium ion battery Product; the single data row gives its wt.% value, with unit Wt.% from row[0]. Emitted as CONTAINS composition facts.",
+          "uncertainties": [
+            "Steel/Ni and Cu/Al are grouped material labels rather than single substances; preserved as visible."
+          ]
+        },
+        "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001"
+      },
+      "execution_trace": [
+        {
+          "template_id": "step_1",
+          "op": "foreach_cell",
+          "rows": [
+            1
+          ],
+          "columns": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "emitted": 6,
+          "skipped": 0
+        }
+      ],
+      "verification_report": {
+        "status": "passed",
+        "skip_reason": null,
+        "cell_grounded_relations": 6,
+        "entity_count": 7,
+        "condition_count": 0,
+        "context_record_count": 0,
+        "unsupported_templates": [],
+        "domain_range_rejections": [],
+        "aggregate_row_diagnostics": [],
+        "unresolved_endpoint_types": [],
+        "unresolved_type_facts": [],
+        "entity_grounding": [
+          {
+            "mention": "lithium ion battery",
+            "declared_type": "Product",
+            "status": "table_only",
+            "candidates": []
+          },
+          {
+            "mention": "LiCoO2",
+            "declared_type": "Material",
+            "status": "table_only",
+            "candidates": []
+          },
+          {
+            "mention": "Steel/Ni",
+            "declared_type": "Material",
+            "status": "table_only",
+            "candidates": []
+          },
+          {
+            "mention": "Cu/Al",
+            "declared_type": "Material",
+            "status": "table_only",
+            "candidates": []
+          },
+          {
+            "mention": "carbon",
+            "declared_type": "Material",
+            "status": "table_only",
+            "candidates": []
+          },
+          {
+            "mention": "electrolyte",
+            "declared_type": "Material",
+            "status": "table_only",
+            "candidates": []
+          },
+          {
+            "mention": "polymer",
+            "declared_type": "Material",
+            "status": "table_only",
+            "candidates": []
+          }
+        ],
+        "semantic_gate": [],
+        "slot_binding_conflicts": [],
+        "layout_program_mismatches": [],
+        "checked_templates": 1,
+        "schema_audit": {
+          "valid": true,
+          "would_reject": false,
+          "error_count": 0,
+          "errors": []
+        },
+        "process_identity_bindings": {
+          "bound": [],
+          "unresolved": []
+        }
+      },
+      "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+      "entity_count": 7,
+      "relation_count": 6,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "table_structure": {
+        "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+        "extraction_mode": "semantic_ir",
+        "table_role": "target_composition",
+        "extractability": {
+          "decision": "extract",
+          "table_role": "target_composition",
+          "reason": "Single data row reports weight-percent composition of lithium ion battery constituents, matching allowed fact type component mass fraction of LIB constituents.",
+          "confidence": 0.95,
+          "gate_decision": "extract",
+          "gate_table_role": "target_composition"
+        },
+        "layout": null
+      },
+      "llm_raw_response": "## TABLE_ROLE_GATE_RESPONSE\n{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"target_composition\",\"confidence\":0.95,\"causal_role\":{\"source_object\":\"lithium ion battery (LIB)\",\"transformation\":\"none (compositional characterization)\",\"measured_object\":\"LIB components (LiCoO2, Steel/Ni, Cu/Al, carbon, electrolyte, polymer)\",\"measured_quantity\":\"weight percent composition\",\"evidence_role\":\"target_composition\"},\"region_roles\":[{\"row_range\":[1,1],\"role\":\"target_measurement\",\"reason\":\"Single data row reports wt.% of each LIB component, i.e., target composition of a WEEE-relevant product.\"}],\"extract_row_ranges\":[[1,1]],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Chemical composition of lithium ion battery\",\"judgment\":\"supports_extract\",\"reason\":\"Caption explicitly states the table reports composition of a target product.\"},{\"step\":\"reference\",\"evidence\":\"Table 1 shows a typical chemical composition of the LIB.\",\"judgment\":\"supports_extract\",\"reason\":\"Reference confirms composition reporting.\"},{\"step\":\"headers\",\"evidence\":\"Component | LiCoO2 | Steel/Ni | Cu/Al | carbon | electrolyte | polymer\",\"judgment\":\"supports_extract\",\"reason\":\"Component names are target constituents; row gives Wt.% values.\"}],\"allowed_fact_types\":[\"component mass fraction (wt.%) of LIB constituents\"],\"excluded_fact_types\":[\"economic value\",\"prices\",\"process parameters\"],\"ir_instruction\":\"Extract each component's wt.% as target composition of the LIB.\",\"uncertainty\":\"\"}}\n\n## SEMANTIC_IR_RESPONSE\n{\"semantic_ir\":{\"extractability\":{\"decision\":\"extract\",\"table_role\":\"target_composition\",\"reason\":\"Single data row reports weight-percent composition of lithium ion battery constituents, matching allowed fact type component mass fraction of LIB constituents.\",\"confidence\":0.95},\"column_semantics\":[{\"column\":1,\"raw_header\":\"LiCoO2\",\"entity_text\":\"LiCoO2\",\"entity_type\":\"Material\",\"confidence\":0.95},{\"column\":2,\"raw_header\":\"Steel/Ni\",\"entity_text\":\"Steel/Ni\",\"entity_type\":\"Material\",\"confidence\":0.9},{\"column\":3,\"raw_header\":\"Cu/Al\",\"entity_text\":\"Cu/Al\",\"entity_type\":\"Material\",\"confidence\":0.9},{\"column\":4,\"raw_header\":\"carbon\",\"entity_text\":\"carbon\",\"entity_type\":\"Material\",\"confidence\":0.95},{\"column\":5,\"raw_header\":\"electrolyte\",\"entity_text\":\"electrolyte\",\"entity_type\":\"Material\",\"confidence\":0.95},{\"column\":6,\"raw_header\":\"polymer\",\"entity_text\":\"polymer\",\"entity_type\":\"Material\",\"confidence\":0.95}],\"program\":[{\"step_id\":\"step_1\",\"op\":\"foreach_cell\",\"select\":{\"rows\":{\"selector\":\"row_range\",\"row_range\":[1,1]},\"cols\":{\"selector\":\"columns\",\"columns\":[1,2,3,4,5,6]}},\"bind\":{\"container\":{\"from\":\"literal\",\"literal\":\"lithium ion battery\",\"type\":\"Product\"},\"constituent\":{\"from\":\"column.semantic.entity_text\",\"type_from\":\"column.semantic.entity_type\"},\"value\":{\"from\":\"cell\",\"parser\":\"number\"},\"unit\":{\"from\":\"row[0]\"}},\"emit\":{\"source\":\"container\",\"predicate\":\"CONTAINS\",\"target\":\"constituent\",\"property\":\"mass fraction\",\"value\":\"value\",\"unit\":\"unit\",\"conditions\":[]}}],\"context_program\":[],\"rationale\":{\"binding_summary\":\"Each component column header is a Material constituent of the lithium ion battery Product; the single data row gives its wt.% value, with unit Wt.% from row[0]. Emitted as CONTAINS composition facts.\",\"uncertainties\":[\"Steel/Ni and Cu/Al are grouped material labels rather than single substances; preserved as visible.\"]}}}",
+      "llm_interpretation": {
+        "semantic_ir": {
+          "extractability": {
+            "decision": "extract",
+            "table_role": "target_composition",
+            "reason": "Single data row reports weight-percent composition of lithium ion battery constituents, matching allowed fact type component mass fraction of LIB constituents.",
+            "confidence": 0.95
+          },
+          "column_semantics": [
+            {
+              "column": 1,
+              "raw_header": "LiCoO2",
+              "entity_text": "LiCoO2",
+              "entity_type": "Material",
+              "confidence": 0.95
+            },
+            {
+              "column": 2,
+              "raw_header": "Steel/Ni",
+              "entity_text": "Steel/Ni",
+              "entity_type": "Material",
+              "confidence": 0.9
+            },
+            {
+              "column": 3,
+              "raw_header": "Cu/Al",
+              "entity_text": "Cu/Al",
+              "entity_type": "Material",
+              "confidence": 0.9
+            },
+            {
+              "column": 4,
+              "raw_header": "carbon",
+              "entity_text": "carbon",
+              "entity_type": "Material",
+              "confidence": 0.95
+            },
+            {
+              "column": 5,
+              "raw_header": "electrolyte",
+              "entity_text": "electrolyte",
+              "entity_type": "Material",
+              "confidence": 0.95
+            },
+            {
+              "column": 6,
+              "raw_header": "polymer",
+              "entity_text": "polymer",
+              "entity_type": "Material",
+              "confidence": 0.95
+            }
+          ],
+          "program": [
+            {
+              "step_id": "step_1",
+              "op": "foreach_cell",
+              "select": {
+                "rows": {
+                  "selector": "row_range",
+                  "row_range": [
+                    1,
+                    1
+                  ]
+                },
+                "cols": {
+                  "selector": "columns",
+                  "columns": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ]
+                }
+              },
+              "bind": {
+                "container": {
+                  "from": "literal",
+                  "literal": "lithium ion battery",
+                  "type": "Product"
+                },
+                "constituent": {
+                  "from": "column.semantic.entity_text",
+                  "type_from": "column.semantic.entity_type"
+                },
+                "value": {
+                  "from": "cell",
+                  "parser": "number"
+                },
+                "unit": {
+                  "from": "row[0]"
+                }
+              },
+              "emit": {
+                "source": "container",
+                "predicate": "CONTAINS",
+                "target": "constituent",
+                "property": "mass fraction",
+                "value": "value",
+                "unit": "unit",
+                "conditions": []
+              }
+            }
+          ],
+          "context_program": [],
+          "rationale": {
+            "binding_summary": "Each component column header is a Material constituent of the lithium ion battery Product; the single data row gives its wt.% value, with unit Wt.% from row[0]. Emitted as CONTAINS composition facts.",
+            "uncertainties": [
+              "Steel/Ni and Cu/Al are grouped material labels rather than single substances; preserved as visible."
+            ]
+          }
+        }
+      },
+      "source_table": {
+        "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+        "page_number": 2,
+        "caption": "Chemical composition of lithium ion battery",
+        "section": "2. Experimental procedures",
+        "explicit_references": [
+          "Table 1 shows a typical chemical composition of the LIB."
+        ],
+        "headers": [
+          "Component",
+          "LiCoO2",
+          "Steel/Ni",
+          "Cu/Al",
+          "carbon",
+          "electrolyte",
+          "polymer"
+        ],
+        "header_rows": [
+          [
+            "Component",
+            "LiCoO2",
+            "Steel/Ni",
+            "Cu/Al",
+            "carbon",
+            "electrolyte",
+            "polymer"
+          ]
+        ],
+        "unit_scope_candidates": [
+          {
+            "scope": "row",
+            "source": "row[0]",
+            "coverage": 1.0,
+            "evidence_cells": [
+              {
+                "row_index": 1,
+                "column_index": 0,
+                "source": "row[0]",
+                "text": "Wt.%"
+              }
+            ],
+            "interpretation": "Unit marker applies to the numeric values in this row."
+          }
+        ],
+        "rows": [
+          [
+            "Wt.%",
+            "27.5",
+            "24.5",
+            "14.5",
+            "16",
+            "3.5",
+            "14"
+          ]
+        ],
+        "row_contexts": [],
+        "notes": [],
+        "raw_markdown": "| Component | LiCoO2 | Steel/Ni | Cu/Al | carbon | electrolyte | polymer |\n| --- | --- | --- | --- | --- | --- | --- |\n| Wt.% | 27.5 | 24.5 | 14.5 | 16 | 3.5 | 14 |",
+        "position_start": 5128,
+        "position_end": 5226,
+        "source": "mineru_content_list",
+        "source_kind": "standalone_table",
+        "layout_context": {
+          "previous_block_type": "text",
+          "next_block_type": "chart",
+          "between_image_blocks": false
+        },
+        "raw_html": "<table><tr><td>Component</td><td>LiCoO2</td><td>Steel/Ni</td><td>Cu/Al</td><td>carbon</td><td>electrolyte</td><td>polymer</td></tr><tr><td>Wt.%</td><td>27.5</td><td>24.5</td><td>14.5</td><td>16</td><td>3.5</td><td>14</td></tr></table>",
+        "image_path": "images/3540b31997dbac5c2cd8dce2a2a9eddf8dc54b6165927e3e3473f34b3164b9e7.jpg",
+        "bbox": [
+          520,
+          829,
+          922,
+          890
+        ],
+        "column_descriptors": [
+          {
+            "id": "c0",
+            "index": 0,
+            "flat_label": "Component",
+            "header_path": [
+              "Component"
+            ],
+            "header_leaf": "Component",
+            "header_group": "",
+            "raw_header_cells": [],
+            "recoverability": "flat_only"
+          },
+          {
+            "id": "c1",
+            "index": 1,
+            "flat_label": "LiCoO2",
+            "header_path": [
+              "LiCoO2"
+            ],
+            "header_leaf": "LiCoO2",
+            "header_group": "",
+            "raw_header_cells": [],
+            "recoverability": "flat_only"
+          },
+          {
+            "id": "c2",
+            "index": 2,
+            "flat_label": "Steel/Ni",
+            "header_path": [
+              "Steel/Ni"
+            ],
+            "header_leaf": "Steel/Ni",
+            "header_group": "",
+            "raw_header_cells": [],
+            "recoverability": "flat_only"
+          },
+          {
+            "id": "c3",
+            "index": 3,
+            "flat_label": "Cu/Al",
+            "header_path": [
+              "Cu/Al"
+            ],
+            "header_leaf": "Cu/Al",
+            "header_group": "",
+            "raw_header_cells": [],
+            "recoverability": "flat_only"
+          },
+          {
+            "id": "c4",
+            "index": 4,
+            "flat_label": "carbon",
+            "header_path": [
+              "carbon"
+            ],
+            "header_leaf": "carbon",
+            "header_group": "",
+            "raw_header_cells": [],
+            "recoverability": "flat_only"
+          },
+          {
+            "id": "c5",
+            "index": 5,
+            "flat_label": "electrolyte",
+            "header_path": [
+              "electrolyte"
+            ],
+            "header_leaf": "electrolyte",
+            "header_group": "",
+            "raw_header_cells": [],
+            "recoverability": "flat_only"
+          },
+          {
+            "id": "c6",
+            "index": 6,
+            "flat_label": "polymer",
+            "header_path": [
+              "polymer"
+            ],
+            "header_leaf": "polymer",
+            "header_group": "",
+            "raw_header_cells": [],
+            "recoverability": "flat_only"
+          }
+        ]
+      },
+      "prompt": "## TABLE_ROLE_GATE_PROMPT\nYou are a table role gate for WEEE knowledge graph extraction.\n\nGoal: decide the table-level extraction boundary before Semantic IR generation.\n\nAllowed decisions:\n- extract: the table reports target composition, a target-bearing treatment outcome, or current-study quantitative physical characterization of a WEEE/product/sample (for example total mass, component count, component mass, or component mass fraction). The outcome may be in a solid, liquid, or gas phase and does not require an isolated final product.\n- context_extract: the table reports only inputs, setup, parameters, identifier mappings, reagents, media, or operating conditions, without target composition, treatment outcome, or quantitative product/component characterization.\n- skip: the table reports neither current-study target composition nor a target-bearing treatment outcome, for example economics, literature summaries, unrelated background, or method validation alone.\n\nBoundary notes:\n- Follow the causal chain from source object through transformation to measured object. A post-treatment concentration, fraction, yield, or recovery measurement is an extractable result when it quantifies movement or presence of the target material caused by the treatment.\n- Physical phase alone never determines the decision. A process medium used only as an input is context; the same medium measured after treatment as evidence of target transfer or recovery is a result.\n- A table that measures process-internal agents or biological/chemical mechanism variables (for example culture metabolites, biomass, catalyst activity, or their concentrations) is out of scope unless it reports the movement, recovery, or transformation of a WEEE constituent. Use `skip`, not `extract`, for such a table.\n- A table that reports economic value shares, prices, costs, or price-weighted distributions of target constituents is `skip`, even if the constituent names are target metals. Economic value share is not target composition; it is a monetary quantity derived from price and mass fraction.\n- Words such as \"obtained by\", \"dismantled\", or \"treated\" do not make target composition context-only.\n- Brand/model/sample identifiers are contextual fields, but their presence does not make measured mass, count, or component-weight columns context-only. Preserve the identifiers as the measured product identity and extract those quantitative observations.\n\nStructured decision steps:\n1. Identify `source_object`, `transformation`, `measured_object`, and `measured_quantity` from caption and reference text.\n2. Classify `evidence_role` as target_composition, treatment_outcome, process_input, setup_context, or out_of_scope.\n3. Use section, headers, and row preview only when caption and references leave a slot unresolved.\n4. If evidence remains insufficient, lower confidence and state the unresolved slot; do not choose skip merely because the measured object is an intermediate phase.\n5. If `structural_row_runs` is present, assign each run a semantic role and return the complete ranges that may emit final facts in `extract_row_ranges`. The ranges are 1-based and inclusive.\n\nReturn only valid JSON:\n{\n  \"table_role_decision\": {\n    \"decision\": \"extract | context_extract | skip\",\n    \"table_role\": \"target_composition | recovery_result | process_output | process_parameter | sample_metadata | economic_value | literature_summary | analytical_method | non_target_context | ambiguous\",\n    \"confidence\": 0.0,\n    \"causal_role\": {\n      \"source_object\": \"...\",\n      \"transformation\": \"...\",\n      \"measured_object\": \"...\",\n      \"measured_quantity\": \"...\",\n      \"evidence_role\": \"target_composition | treatment_outcome | process_input | setup_context | out_of_scope | unresolved\"\n    },\n    \"region_roles\": [{\"row_range\": [1, 10], \"role\": \"target_measurement | summary | identifier_mapping | process_context | out_of_scope | ambiguous\", \"reason\": \"...\"}],\n    \"extract_row_ranges\": [[1, 10]],\n    \"caption_sufficient\": true,\n    \"evidence_steps\": [\n      {\n        \"step\": \"caption\",\n        \"evidence\": \"...\",\n        \"judgment\": \"supports_extract | supports_context | supports_skip | ambiguous | not_used\",\n        \"reason\": \"short reason\"\n      }\n    ],\n    \"allowed_fact_types\": [],\n    \"excluded_fact_types\": [],\n    \"ir_instruction\": \"one short instruction for the downstream IR generator\",\n    \"uncertainty\": \"\"\n  }\n}\n\n`allowed_fact_types` / `excluded_fact_types` stay free-form descriptions for the\ndownstream planner; code cannot act on them.\n\n\n## Table Role Evidence\n{\"caption\":\"Chemical composition of lithium ion battery\",\"section\":\"2. Experimental procedures\",\"table_reference_sentences\":[\"Table 1 shows a typical chemical composition of the LIB.\"],\"nearby_text\":null,\"headers\":[\"Component\",\"LiCoO2\",\"Steel/Ni\",\"Cu/Al\",\"carbon\",\"electrolyte\",\"polymer\"],\"column_descriptors\":[{\"index\":0,\"flat_label\":\"Component\",\"header_path\":[\"Component\"],\"header_leaf\":\"Component\"},{\"index\":1,\"flat_label\":\"LiCoO2\",\"header_path\":[\"LiCoO2\"],\"header_leaf\":\"LiCoO2\"},{\"index\":2,\"flat_label\":\"Steel/Ni\",\"header_path\":[\"Steel/Ni\"],\"header_leaf\":\"Steel/Ni\"},{\"index\":3,\"flat_label\":\"Cu/Al\",\"header_path\":[\"Cu/Al\"],\"header_leaf\":\"Cu/Al\"},{\"index\":4,\"flat_label\":\"carbon\",\"header_path\":[\"carbon\"],\"header_leaf\":\"carbon\"},{\"index\":5,\"flat_label\":\"electrolyte\",\"header_path\":[\"electrolyte\"],\"header_leaf\":\"electrolyte\"},{\"index\":6,\"flat_label\":\"polymer\",\"header_path\":[\"polymer\"],\"header_leaf\":\"polymer\"}],\"row_preview\":{\"first_rows\":[[\"Wt.%\",\"27.5\",\"24.5\",\"14.5\",\"16\",\"3.5\",\"14\"]],\"last_rows\":[]},\"notes\":[],\"table_stats\":{\"row_count\":1,\"column_count\":7}}\n\n## SEMANTIC_IR_PROMPT\nReturn only valid JSON with top-level key `semantic_ir`.\n\nTask: produce executable Semantic IR for final KG triples from a WEEE result table.\nKeep all explanation in a short `rationale`.\n\nEntity meanings:\n- Product: complete WEEE item or product family, e.g. mobile phone, smartphone, laptop.\n- Component: physical part/subassembly of a product, e.g. PCB, WPCB, waste printed circuit board, casing, battery.\n- Material: a WEEE constituent, recovery target, recovered product, or WEEE-relevant transformation product, e.g. Cu, Ag, Au, LiCoO2. Do not create Material endpoints for experimental inputs or process-internal measurements (reagents, solvents, lixiviants, culture media, microbes, metabolites, catalysts, or their concentrations) unless the article explicitly frames that item itself as a recovered WEEE material.\n- Process: treatment/recycling/separation/analysis step, e.g. leaching, pyrolysis, dismantling.\n- Observation: a measured physical property of the source entity itself, e.g. total weight, particle size, moisture content.\n\nRelation signatures and binding roles:\n- CONTAINS: container (Product/Component/Material) -> constituent (Component/Material), including composition, content, and part proportions measured after a process. Preserve the measured stream and before/after state; a residue or generated product is not automatically the original component or a retained solid constituent.\n- HAS_OUTPUT: transformation (Process) -> actual produced, recovered, transferred or separated output (Product/Component/Material). A reported value must quantify that material output (including recovery, yield or output grade), not a kinetic parameter, characterization signal or whole-sample change attributed to one constituent. Bind any grounded number to `value` and its visible unit separately to `unit`; mere detection or consumption does not establish production.\n- PROCESSED_BY: input (Product/Component/Material) -> transformation (Process).\n- HAS_OBSERVATION: measured entity (Product/Component/Material/Process) -> measured property (Observation). Preserve the measured sample/state, analyte, method and denominator in the property name or conditions. Actual constituent proportions use CONTAINS with their measurement basis; do not turn every post-treatment measurement into HAS_OUTPUT.\nUse these semantic roles as binding names and point `emit.source`/`emit.target` to them. A role may bind any grounded row, column, header, or literal source.\n\nDo not attach a reported outcome number to `PROCESSED_BY`. When a cell reports a material-specific treatment efficiency or recovery, emit the Process as source and that material as target with `HAS_OUTPUT`; only emit a separate `PROCESSED_BY` fact when its input is explicitly visible and it carries no outcome value.\n\nAllowed program ops: foreach_cell, foreach_row, foreach_pair.\nAllowed row selectors: `all_rows`; `row_range` with `row_range: [start, end]`; `row_ranges` with `row_ranges: [[start, end], ...]`; `indices` with `indices: [...]`.\nAllowed column selectors: `all_data_columns`; `all_except_row_axis`; `columns` with `columns: [...]`.\nAllowed sources: cell, literal, template, pair.subject, row[i], row[0], row[col-1], row[pair.label_col], row[pair.subject_col], row[pair.value_col], header[col], header[col-1], column.flat_label, column.header_path, column.header_leaf, column.header_group, column.semantic.entity_text, column.semantic.entity_type, column.semantic.condition_text, column.semantic.unit_text, column.semantic.measure_text, and absolute semantic slots such as column[n].semantic.entity_text, column[n].semantic.unit_text, or column[n].semantic.condition_text.\n\nIR requirements:\n- Treat `table_role_gate_decision` as authoritative: generate executable steps only for its `allowed_fact_types`, never its excluded fact types.\n- Treat `table_role_gate_decision.causal_role` and `ir_instruction` as grounded semantic evidence, not executable bindings. When the gate identifies a measured object for target composition, test that object as the CONTAINS container and visible material/component labels as constituents before using HAS_OBSERVATION.\n- Rows and columns are coordinates, not predetermined semantic roles. Do not assume that rows are entities or that columns are conditions; infer each axis independently as an entity endpoint, condition, measure, value carrier, or context label from the caption, header hierarchy, references, and visible cells.\n- Use `foreach_cell` whenever a binding depends on `cell`, `header[col]`, `header[col-1]`, or `column.*`. Use `foreach_row` only when every binding is row-, literal-, or template-scoped and no current column is required.\n- Split program steps when selected columns need different endpoint types, endpoint sources, units, properties, or condition interpretation.\n- Fill `column_semantics` only when a selected column's header/path needs decomposition. Account for every visible phrase as endpoint (`entity_text`/`entity_type`), unit (`unit_text`), modifier (`condition_text` plus `condition_raw_text`), numeric basis (`measure_text`), or measured quantity (`emit.property`); omit pure group labels, and explain any other ignored phrase briefly in `rationale`. `column.semantic.*` always means the current selected value column. A quantity name such as recovery rate is not an experimental condition or denominator.\n- Bind every non-empty `condition_text` or `measure_text` into the program and list its binding in `emit.conditions`; use a named condition such as `measurement_basis` for a numeric basis.\n- Bind shared experimental conditions from caption, notes, table references and applicable section context as literal conditions in `bind` and `emit.conditions`; bind row-specific conditions from their cells. Scope them to the rows/steps they actually govern and preserve their source and quote in the binding's `evidence` object. Do not infer conditions from a missing referenced table, or transfer conditions between control/treatment groups.\n- Every endpoint must resolve to Product, Component, Material, Process, or Observation. Give literal endpoints `{\"from\":\"literal\",\"literal\":\"...\",\"type\":\"...\"}`; when a column endpoint's type varies, set its `entity_type` and bind with `type_from: \"column.semantic.entity_type\"`. An untyped endpoint is invalid.\n- You may expand only the visible abbreviation itself when licensed by the table/reference text, e.g. `bef` -> `before` and `aft` -> `after`. Do not add inferred scope nouns/events such as manufacturing, dismantling, process stage, or years unless those words are visible in the same header/path.\n- Ground units only in declared `unit_text` semantic slots or exact visible literals. Use `column.semantic.unit_text` for a unit declared on the current value column and `column[n].semantic.unit_text` for a shared unit declared on another column. Never bind `emit.unit` from the whole current header (`header[col]`, `column.header_path`, `column.flat_label`, or `column.header_leaf`); those sources may contain entity or condition text. Unknown unit strings are allowed when preserved in a grounded `unit_text` slot. Do not use regex or `{\"from\":\"unit\"}`.\n- `row[0]` means the first physical cell in the row, not \"the row label\" in general. If the entity label is in another column, use the exact row source such as `row[1]` or `row[2]`.\n- `structural_row_runs` are format-only boundary candidates, not semantic labels. Inspect their representative rows and select supporting runs with `row_range` or `row_ranges`; do not translate run boundaries into a long `exclude_indices` list.\n- When a row identifier needs visible context to become an entity label, use `{\"from\":\"template\",\"template\":\"visible context {row[0]}\"}`. Every placeholder must be an allowed grounded source.\n- Keep `program` self-contained: every endpoint, value, unit, and condition source must be grounded and resolve to non-empty text. Do not rely on `rationale` to supply or excuse a broken binding.\n- Every declared binding must be consumed by `emit`; remove unused bindings or emit them through the appropriate endpoint, unit, or condition role.\n\nOutput shape (`<...>` marks a choice that must be replaced with an allowed grounded source, selector, type, or name):\n{\n    \"semantic_ir\": {\n    \"extractability\": {\"decision\": \"extract\", \"table_role\": \"...\", \"reason\": \"...\", \"confidence\": 0.8},\n    \"column_semantics\": [{\"column\": 1, \"raw_header\": \"...\", \"entity_text\": \"...\", \"entity_type\": \"Product\", \"condition_text\": \"...\", \"condition_raw_text\": \"...\", \"unit_text\": \"...\", \"measure_text\": \"...\", \"confidence\": 0.9}],\n    \"program\": [\n      {\"step_id\": \"step_1\", \"op\": \"foreach_cell\", \"select\": {\"rows\": {\"selector\": \"all_rows\"}, \"cols\": {\"selector\": \"columns\", \"columns\": []}}, \"bind\": {\"<source role>\": {\"from\": \"<grounded source>\", \"type\": \"<entity type>\"}, \"<target role>\": {\"from\": \"<grounded source>\", \"type\": \"<entity type>\"}, \"value\": {\"from\": \"<grounded value source>\", \"parser\": \"number\"}, \"unit\": {\"from\": \"<grounded unit source>\"}, \"<condition name>\": {\"name\": \"<condition name>\", \"from\": \"<grounded source>\"}}, \"emit\": {\"source\": \"<source role>\", \"predicate\": \"<allowed relation>\", \"target\": \"<target role>\", \"property\": \"...\", \"value\": \"value\", \"unit\": \"unit\", \"conditions\": [\"<condition name>\"]}}\n    ],\n    \"context_program\": [],\n    \"rationale\": {\"binding_summary\": \"...\", \"uncertainties\": []}\n  }\n}\n\n## Table Input\n{\"caption\":\"Chemical composition of lithium ion battery\",\"section\":\"2. Experimental procedures\",\"notes\":[],\"section_context\":[],\"table_reference_sentences\":[\"Table 1 shows a typical chemical composition of the LIB.\"],\"headers\":[\"Component\",\"LiCoO2\",\"Steel/Ni\",\"Cu/Al\",\"carbon\",\"electrolyte\",\"polymer\"],\"column_descriptors\":[{\"index\":0,\"flat_label\":\"Component\",\"header_path\":[\"Component\"],\"header_leaf\":\"Component\"},{\"index\":1,\"flat_label\":\"LiCoO2\",\"header_path\":[\"LiCoO2\"],\"header_leaf\":\"LiCoO2\"},{\"index\":2,\"flat_label\":\"Steel/Ni\",\"header_path\":[\"Steel/Ni\"],\"header_leaf\":\"Steel/Ni\"},{\"index\":3,\"flat_label\":\"Cu/Al\",\"header_path\":[\"Cu/Al\"],\"header_leaf\":\"Cu/Al\"},{\"index\":4,\"flat_label\":\"carbon\",\"header_path\":[\"carbon\"],\"header_leaf\":\"carbon\"},{\"index\":5,\"flat_label\":\"electrolyte\",\"header_path\":[\"electrolyte\"],\"header_leaf\":\"electrolyte\"},{\"index\":6,\"flat_label\":\"polymer\",\"header_path\":[\"polymer\"],\"header_leaf\":\"polymer\"}],\"unit_scope_candidates\":[{\"scope\":\"row\",\"source\":\"row[0]\",\"coverage\":1.0,\"examples\":[\"Wt.%\"]}],\"unit_mentions_in_observed_fields\":[\"Wt.%\"],\"row_samples\":{\"row_indices\":[1],\"rows\":[[\"Wt.%\",\"27.5\",\"24.5\",\"14.5\",\"16\",\"3.5\",\"14\"]],\"total_rows\":1,\"note\":\"All data rows are included; this is the complete table, not a sample.\"},\"row_contexts\":[],\"table_stats\":{\"row_count\":1,\"column_count\":7},\"table_role_gate_decision\":{\"decision\":\"extract\",\"table_role\":\"target_composition\",\"causal_role\":{\"source_object\":\"lithium ion battery (LIB)\",\"transformation\":\"none (compositional characterization)\",\"measured_object\":\"LIB components (LiCoO2, Steel/Ni, Cu/Al, carbon, electrolyte, polymer)\",\"measured_quantity\":\"weight percent composition\",\"evidence_role\":\"target_composition\"},\"ir_instruction\":\"Extract each component's wt.% as target composition of the LIB.\",\"region_roles\":[{\"row_range\":[1,1],\"role\":\"target_measurement\",\"reason\":\"Single data row reports wt.% of each LIB component, i.e., target composition of a WEEE-relevant product.\"}],\"extract_row_ranges\":[[1,1]],\"allowed_fact_types\":[\"component mass fraction (wt.%) of LIB constituents\"]}}",
+      "table_role_decision": {
+        "decision": "extract",
+        "table_role": "target_composition",
+        "confidence": 0.95,
+        "causal_role": {
+          "source_object": "lithium ion battery (LIB)",
+          "transformation": "none (compositional characterization)",
+          "measured_object": "LIB components (LiCoO2, Steel/Ni, Cu/Al, carbon, electrolyte, polymer)",
+          "measured_quantity": "weight percent composition",
+          "evidence_role": "target_composition"
+        },
+        "region_roles": [
+          {
+            "row_range": [
+              1,
+              1
+            ],
+            "role": "target_measurement",
+            "reason": "Single data row reports wt.% of each LIB component, i.e., target composition of a WEEE-relevant product."
+          }
+        ],
+        "extract_row_ranges": [
+          [
+            1,
+            1
+          ]
+        ],
+        "caption_sufficient": true,
+        "evidence_steps": [
+          {
+            "step": "caption",
+            "evidence": "Chemical composition of lithium ion battery",
+            "judgment": "supports_extract",
+            "reason": "Caption explicitly states the table reports composition of a target product."
+          },
+          {
+            "step": "reference",
+            "evidence": "Table 1 shows a typical chemical composition of the LIB.",
+            "judgment": "supports_extract",
+            "reason": "Reference confirms composition reporting."
+          },
+          {
+            "step": "headers",
+            "evidence": "Component | LiCoO2 | Steel/Ni | Cu/Al | carbon | electrolyte | polymer",
+            "judgment": "supports_extract",
+            "reason": "Component names are target constituents; row gives Wt.% values."
+          }
+        ],
+        "allowed_fact_types": [
+          "component mass fraction (wt.%) of LIB constituents"
+        ],
+        "excluded_fact_types": [
+          "economic value",
+          "prices",
+          "process parameters"
+        ],
+        "ir_instruction": "Extract each component's wt.% as target composition of the LIB.",
+        "uncertainty": ""
+      },
+      "llm_gate_response": "{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"target_composition\",\"confidence\":0.95,\"causal_role\":{\"source_object\":\"lithium ion battery (LIB)\",\"transformation\":\"none (compositional characterization)\",\"measured_object\":\"LIB components (LiCoO2, Steel/Ni, Cu/Al, carbon, electrolyte, polymer)\",\"measured_quantity\":\"weight percent composition\",\"evidence_role\":\"target_composition\"},\"region_roles\":[{\"row_range\":[1,1],\"role\":\"target_measurement\",\"reason\":\"Single data row reports wt.% of each LIB component, i.e., target composition of a WEEE-relevant product.\"}],\"extract_row_ranges\":[[1,1]],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Chemical composition of lithium ion battery\",\"judgment\":\"supports_extract\",\"reason\":\"Caption explicitly states the table reports composition of a target product.\"},{\"step\":\"reference\",\"evidence\":\"Table 1 shows a typical chemical composition of the LIB.\",\"judgment\":\"supports_extract\",\"reason\":\"Reference confirms composition reporting.\"},{\"step\":\"headers\",\"evidence\":\"Component | LiCoO2 | Steel/Ni | Cu/Al | carbon | electrolyte | polymer\",\"judgment\":\"supports_extract\",\"reason\":\"Component names are target constituents; row gives Wt.% values.\"}],\"allowed_fact_types\":[\"component mass fraction (wt.%) of LIB constituents\"],\"excluded_fact_types\":[\"economic value\",\"prices\",\"process parameters\"],\"ir_instruction\":\"Extract each component's wt.% as target composition of the LIB.\",\"uncertainty\":\"\"}}",
+      "llm_gate_interpretation": {
+        "table_role_decision": {
+          "decision": "extract",
+          "table_role": "target_composition",
+          "confidence": 0.95,
+          "causal_role": {
+            "source_object": "lithium ion battery (LIB)",
+            "transformation": "none (compositional characterization)",
+            "measured_object": "LIB components (LiCoO2, Steel/Ni, Cu/Al, carbon, electrolyte, polymer)",
+            "measured_quantity": "weight percent composition",
+            "evidence_role": "target_composition"
+          },
+          "region_roles": [
+            {
+              "row_range": [
+                1,
+                1
+              ],
+              "role": "target_measurement",
+              "reason": "Single data row reports wt.% of each LIB component, i.e., target composition of a WEEE-relevant product."
+            }
+          ],
+          "extract_row_ranges": [
+            [
+              1,
+              1
+            ]
+          ],
+          "caption_sufficient": true,
+          "evidence_steps": [
+            {
+              "step": "caption",
+              "evidence": "Chemical composition of lithium ion battery",
+              "judgment": "supports_extract",
+              "reason": "Caption explicitly states the table reports composition of a target product."
+            },
+            {
+              "step": "reference",
+              "evidence": "Table 1 shows a typical chemical composition of the LIB.",
+              "judgment": "supports_extract",
+              "reason": "Reference confirms composition reporting."
+            },
+            {
+              "step": "headers",
+              "evidence": "Component | LiCoO2 | Steel/Ni | Cu/Al | carbon | electrolyte | polymer",
+              "judgment": "supports_extract",
+              "reason": "Component names are target constituents; row gives Wt.% values."
+            }
+          ],
+          "allowed_fact_types": [
+            "component mass fraction (wt.%) of LIB constituents"
+          ],
+          "excluded_fact_types": [
+            "economic value",
+            "prices",
+            "process parameters"
+          ],
+          "ir_instruction": "Extract each component's wt.% as target composition of the LIB.",
+          "uncertainty": ""
+        }
+      },
+      "llm_ir_response": "{\"semantic_ir\":{\"extractability\":{\"decision\":\"extract\",\"table_role\":\"target_composition\",\"reason\":\"Single data row reports weight-percent composition of lithium ion battery constituents, matching allowed fact type component mass fraction of LIB constituents.\",\"confidence\":0.95},\"column_semantics\":[{\"column\":1,\"raw_header\":\"LiCoO2\",\"entity_text\":\"LiCoO2\",\"entity_type\":\"Material\",\"confidence\":0.95},{\"column\":2,\"raw_header\":\"Steel/Ni\",\"entity_text\":\"Steel/Ni\",\"entity_type\":\"Material\",\"confidence\":0.9},{\"column\":3,\"raw_header\":\"Cu/Al\",\"entity_text\":\"Cu/Al\",\"entity_type\":\"Material\",\"confidence\":0.9},{\"column\":4,\"raw_header\":\"carbon\",\"entity_text\":\"carbon\",\"entity_type\":\"Material\",\"confidence\":0.95},{\"column\":5,\"raw_header\":\"electrolyte\",\"entity_text\":\"electrolyte\",\"entity_type\":\"Material\",\"confidence\":0.95},{\"column\":6,\"raw_header\":\"polymer\",\"entity_text\":\"polymer\",\"entity_type\":\"Material\",\"confidence\":0.95}],\"program\":[{\"step_id\":\"step_1\",\"op\":\"foreach_cell\",\"select\":{\"rows\":{\"selector\":\"row_range\",\"row_range\":[1,1]},\"cols\":{\"selector\":\"columns\",\"columns\":[1,2,3,4,5,6]}},\"bind\":{\"container\":{\"from\":\"literal\",\"literal\":\"lithium ion battery\",\"type\":\"Product\"},\"constituent\":{\"from\":\"column.semantic.entity_text\",\"type_from\":\"column.semantic.entity_type\"},\"value\":{\"from\":\"cell\",\"parser\":\"number\"},\"unit\":{\"from\":\"row[0]\"}},\"emit\":{\"source\":\"container\",\"predicate\":\"CONTAINS\",\"target\":\"constituent\",\"property\":\"mass fraction\",\"value\":\"value\",\"unit\":\"unit\",\"conditions\":[]}}],\"context_program\":[],\"rationale\":{\"binding_summary\":\"Each component column header is a Material constituent of the lithium ion battery Product; the single data row gives its wt.% value, with unit Wt.% from row[0]. Emitted as CONTAINS composition facts.\",\"uncertainties\":[\"Steel/Ni and Cu/Al are grouped material labels rather than single substances; preserved as visible.\"]}}}",
+      "metadata": {
+        "extracted_at": "2026-11-01T22:08:41.463717",
+        "model": "deepseek-v4-flash",
+        "ontology_loaded": false,
+        "extraction_step": "table_semantic_ir_extraction",
+        "table_cache": "disabled"
+      }
+    }
+  }
+]

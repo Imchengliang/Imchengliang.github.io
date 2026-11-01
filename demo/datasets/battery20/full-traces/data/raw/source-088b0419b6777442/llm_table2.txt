@@ -1,0 +1,1119 @@
+[
+  {
+    "chunk_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method__table__TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0001",
+    "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0001",
+    "result": {
+      "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0001",
+      "entity_count": 0,
+      "relation_count": 0,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "entities": [],
+      "relations": [],
+      "conditions": [],
+      "context_records": [],
+      "table_structure": {
+        "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0001",
+        "extraction_mode": "semantic_ir",
+        "table_role": "image_derived",
+        "extractability": {
+          "decision": "skip",
+          "table_role": "image_derived",
+          "reason": "Skipped because MinerU recognized a table-like region from a figure/image caption, not a standalone article table.",
+          "confidence": 1.0
+        }
+      },
+      "source_table": {
+        "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0001",
+        "page_number": 4,
+        "caption": "Fig. 7. Size distribution curves of the scrap materials heat treated at different temperatures.",
+        "section": "3.2. Electrochemical properties of scrap materials",
+        "explicit_references": [
+          "Table 1 lists the tap densities of the scrap materials heat treated at different temperatures."
+        ],
+        "headers": [
+          "",
+          "D10(μ m)",
+          "D50(μ m)",
+          "D90(μ m)"
+        ],
+        "rows": [
+          [
+            "Pristine",
+            "5.73",
+            "11.65",
+            "28.08"
+          ],
+          [
+            "unheat-treated",
+            "5.30",
+            "11.34",
+            "24.80"
+          ],
+          [
+            "200 °C",
+            "5.07",
+            "11.13",
+            "24.59"
+          ],
+          [
+            "250 °C",
+            "5.04",
+            "10.96",
+            "24.59"
+          ],
+          [
+            "300 °C",
+            "4.98",
+            "10.84",
+            "22.85"
+          ],
+          [
+            "350 °C",
+            "4.96",
+            "10.66",
+            "22.25"
+          ]
+        ],
+        "row_contexts": [],
+        "notes": [],
+        "raw_markdown": "|  | D10(μ m) | D50(μ m) | D90(μ m) |\n| --- | --- | --- | --- |\n| Pristine | 5.73 | 11.65 | 28.08 |\n| unheat-treated | 5.30 | 11.34 | 24.80 |\n| 200 °C | 5.07 | 11.13 | 24.59 |\n| 250 °C | 5.04 | 10.96 | 24.59 |\n| 300 °C | 4.98 | 10.84 | 22.85 |\n| 350 °C | 4.96 | 10.66 | 22.25 |",
+        "position_start": 10937,
+        "position_end": 11030,
+        "source": "mineru_content_list",
+        "source_kind": "standalone_table",
+        "layout_context": {
+          "previous_block_type": "chart",
+          "next_block_type": "text",
+          "between_image_blocks": false
+        },
+        "raw_html": "<table><tr><td></td><td> $D_{10}(\\mu m)$ </td><td> $D_{50}(\\mu m)$ </td><td> $D_{90}(\\mu m)$ </td></tr><tr><td>Pristine</td><td>5.73</td><td>11.65</td><td>28.08</td></tr><tr><td>unheat-treated</td><td>5.30</td><td>11.34</td><td>24.80</td></tr><tr><td>200 °C</td><td>5.07</td><td>11.13</td><td>24.59</td></tr><tr><td>250 °C</td><td>5.04</td><td>10.96</td><td>24.59</td></tr><tr><td>300 °C</td><td>4.98</td><td>10.84</td><td>22.85</td></tr><tr><td>350 °C</td><td>4.96</td><td>10.66</td><td>22.25</td></tr></table>",
+        "image_path": "images/9c616f392d8baed82e88650fcbb7c406598149de9bbdce49bf81951072f08d4f.jpg",
+        "bbox": [
+          524,
+          317,
+          909,
+          431
+        ],
+        "metadata": {
+          "table_reference_sentences": [
+            "Table 1 lists the tap densities of the scrap materials heat treated at different temperatures."
+          ]
+        },
+        "table_reference_sentences": [
+          "Table 1 lists the tap densities of the scrap materials heat treated at different temperatures."
+        ]
+      }
+    }
+  },
+  {
+    "chunk_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method__table__TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+    "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+    "result": {
+      "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+      "entity_count": 7,
+      "relation_count": 6,
+      "condition_count": 6,
+      "context_record_count": 0,
+      "entities": [
+        {
+          "id": "table_ir_ent_001",
+          "name": "Scrap materials Pristine",
+          "mention_text": "Scrap materials Pristine",
+          "type": "Material",
+          "source": "table:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "template",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_002",
+          "name": "Tap densities",
+          "mention_text": "Tap densities",
+          "type": "Observation",
+          "source": "table:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_003",
+          "name": "Scrap materials Unheat-treated",
+          "mention_text": "Scrap materials Unheat-treated",
+          "type": "Material",
+          "source": "table:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "template",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_004",
+          "name": "Scrap materials 200 °C",
+          "mention_text": "Scrap materials 200 °C",
+          "type": "Material",
+          "source": "table:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "template",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_005",
+          "name": "Scrap materials 250 °C",
+          "mention_text": "Scrap materials 250 °C",
+          "type": "Material",
+          "source": "table:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "template",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_006",
+          "name": "Scrap materials 300 °C",
+          "mention_text": "Scrap materials 300 °C",
+          "type": "Material",
+          "source": "table:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "template",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_007",
+          "name": "Scrap materials 350 °C",
+          "mention_text": "Scrap materials 350 °C",
+          "type": "Material",
+          "source": "table:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "template",
+            "column_idx": 1
+          }
+        }
+      ],
+      "relations": [
+        {
+          "id": "table_ir_rel_001",
+          "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+          "table_title": "Table 1 The tap densities of the scrap materials heat treated at different temperatures.",
+          "source_id": "table_ir_ent_001",
+          "source_name": "Scrap materials Pristine",
+          "target_id": "table_ir_ent_002",
+          "target_name": "Tap densities",
+          "relation_type": "HAS_OBSERVATION",
+          "evidence_span": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002 row 1, column 1 (Tap densities (g cm-3)): 1.797",
+          "attributes": {
+            "property": "tap_density",
+            "unit": "g cm-3",
+            "condition_ids": [
+              "table_ir_cond_treatment_temperature_pristine"
+            ],
+            "condition_labels": [
+              "Pristine"
+            ],
+            "condition_sources": [
+              {
+                "from": "treatment_temperature"
+              }
+            ],
+            "condition_evidence": [
+              {
+                "condition_id": "table_ir_cond_treatment_temperature_pristine",
+                "name": "treatment_temperature",
+                "value": "Pristine",
+                "from": "treatment_temperature",
+                "source": "row[0]",
+                "column_idx": 1,
+                "raw_header": "Tap densities (g cm-3)",
+                "column_descriptor_id": "c1",
+                "raw_value": "Pristine",
+                "scope": {
+                  "kind": "row_group",
+                  "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+                  "row_span": [
+                    1,
+                    1
+                  ],
+                  "source": "row_cell",
+                  "evidence": {}
+                }
+              }
+            ],
+            "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "row_idx": 1,
+            "col_idx": 1,
+            "row_label": "Pristine",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Tap densities (g cm-3)",
+            "column_descriptor": {
+              "id": "c1",
+              "index": 1,
+              "flat_label": "Tap densities (g cm-3)",
+              "header_path": [
+                "Tap densities (g cm-3)"
+              ],
+              "header_leaf": "Tap densities (g cm-3)",
+              "header_group": "",
+              "raw_header_cells": [],
+              "recoverability": "flat_only",
+              "semantic": {
+                "entity_text": "Tap densities",
+                "entity_type": "Observation",
+                "unit_text": "g cm-3"
+              }
+            },
+            "evidence_span": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002 row 1, column 1 (Tap densities (g cm-3)): 1.797",
+            "value": "1.797",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "1.797",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                1,
+                1
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Pristine",
+                "unit": null,
+                "raw_text": "Pristine"
+              }
+            ],
+            "condition": "Pristine"
+          }
+        },
+        {
+          "id": "table_ir_rel_002",
+          "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+          "table_title": "Table 1 The tap densities of the scrap materials heat treated at different temperatures.",
+          "source_id": "table_ir_ent_003",
+          "source_name": "Scrap materials Unheat-treated",
+          "target_id": "table_ir_ent_002",
+          "target_name": "Tap densities",
+          "relation_type": "HAS_OBSERVATION",
+          "evidence_span": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002 row 2, column 1 (Tap densities (g cm-3)): 2.067",
+          "attributes": {
+            "property": "tap_density",
+            "unit": "g cm-3",
+            "condition_ids": [
+              "table_ir_cond_treatment_temperature_unheat_treated"
+            ],
+            "condition_labels": [
+              "Unheat-treated"
+            ],
+            "condition_sources": [
+              {
+                "from": "treatment_temperature"
+              }
+            ],
+            "condition_evidence": [
+              {
+                "condition_id": "table_ir_cond_treatment_temperature_unheat_treated",
+                "name": "treatment_temperature",
+                "value": "Unheat-treated",
+                "from": "treatment_temperature",
+                "source": "row[0]",
+                "column_idx": 1,
+                "raw_header": "Tap densities (g cm-3)",
+                "column_descriptor_id": "c1",
+                "raw_value": "Unheat-treated",
+                "scope": {
+                  "kind": "row_group",
+                  "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+                  "row_span": [
+                    2,
+                    2
+                  ],
+                  "source": "row_cell",
+                  "evidence": {}
+                }
+              }
+            ],
+            "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "row_idx": 2,
+            "col_idx": 1,
+            "row_label": "Unheat-treated",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Tap densities (g cm-3)",
+            "column_descriptor": {
+              "id": "c1",
+              "index": 1,
+              "flat_label": "Tap densities (g cm-3)",
+              "header_path": [
+                "Tap densities (g cm-3)"
+              ],
+              "header_leaf": "Tap densities (g cm-3)",
+              "header_group": "",
+              "raw_header_cells": [],
+              "recoverability": "flat_only",
+              "semantic": {
+                "entity_text": "Tap densities",
+                "entity_type": "Observation",
+                "unit_text": "g cm-3"
+              }
+            },
+            "evidence_span": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002 row 2, column 1 (Tap densities (g cm-3)): 2.067",
+            "value": "2.067",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "2.067",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+              "row_span": [
+                2,
+                2
+              ],
+              "col_span": [
+                1,
+                1
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Unheat-treated",
+                "unit": null,
+                "raw_text": "Unheat-treated"
+              }
+            ],
+            "condition": "Unheat-treated"
+          }
+        },
+        {
+          "id": "table_ir_rel_003",
+          "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+          "table_title": "Table 1 The tap densities of the scrap materials heat treated at different temperatures.",
+          "source_id": "table_ir_ent_004",
+          "source_name": "Scrap materials 200 °C",
+          "target_id": "table_ir_ent_002",
+          "target_name": "Tap densities",
+          "relation_type": "HAS_OBSERVATION",
+          "evidence_span": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002 row 3, column 1 (Tap densities (g cm-3)): 2.099",
+          "attributes": {
+            "property": "tap_density",
+            "unit": "g cm-3",
+            "condition_ids": [
+              "table_ir_cond_treatment_temperature_200_c"
+            ],
+            "condition_labels": [
+              "200 °C"
+            ],
+            "condition_sources": [
+              {
+                "from": "treatment_temperature"
+              }
+            ],
+            "condition_evidence": [
+              {
+                "condition_id": "table_ir_cond_treatment_temperature_200_c",
+                "name": "treatment_temperature",
+                "value": "200 °C",
+                "from": "treatment_temperature",
+                "source": "row[0]",
+                "column_idx": 1,
+                "raw_header": "Tap densities (g cm-3)",
+                "column_descriptor_id": "c1",
+                "raw_value": "200 °C",
+                "scope": {
+                  "kind": "row_group",
+                  "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+                  "row_span": [
+                    3,
+                    3
+                  ],
+                  "source": "row_cell",
+                  "evidence": {}
+                }
+              }
+            ],
+            "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "row_idx": 3,
+            "col_idx": 1,
+            "row_label": "200 °C",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Tap densities (g cm-3)",
+            "column_descriptor": {
+              "id": "c1",
+              "index": 1,
+              "flat_label": "Tap densities (g cm-3)",
+              "header_path": [
+                "Tap densities (g cm-3)"
+              ],
+              "header_leaf": "Tap densities (g cm-3)",
+              "header_group": "",
+              "raw_header_cells": [],
+              "recoverability": "flat_only",
+              "semantic": {
+                "entity_text": "Tap densities",
+                "entity_type": "Observation",
+                "unit_text": "g cm-3"
+              }
+            },
+            "evidence_span": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002 row 3, column 1 (Tap densities (g cm-3)): 2.099",
+            "value": "2.099",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "2.099",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+              "row_span": [
+                3,
+                3
+              ],
+              "col_span": [
+                1,
+                1
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 200.0,
+                "unit": "°C",
+                "raw_text": "200 °C"
+              }
+            ],
+            "condition": "200 °C"
+          }
+        },
+        {
+          "id": "table_ir_rel_004",
+          "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+          "table_title": "Table 1 The tap densities of the scrap materials heat treated at different temperatures.",
+          "source_id": "table_ir_ent_005",
+          "source_name": "Scrap materials 250 °C",
+          "target_id": "table_ir_ent_002",
+          "target_name": "Tap densities",
+          "relation_type": "HAS_OBSERVATION",
+          "evidence_span": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002 row 4, column 1 (Tap densities (g cm-3)): 2.117",
+          "attributes": {
+            "property": "tap_density",
+            "unit": "g cm-3",
+            "condition_ids": [
+              "table_ir_cond_treatment_temperature_250_c"
+            ],
+            "condition_labels": [
+              "250 °C"
+            ],
+            "condition_sources": [
+              {
+                "from": "treatment_temperature"
+              }
+            ],
+            "condition_evidence": [
+              {
+                "condition_id": "table_ir_cond_treatment_temperature_250_c",
+                "name": "treatment_temperature",
+                "value": "250 °C",
+                "from": "treatment_temperature",
+                "source": "row[0]",
+                "column_idx": 1,
+                "raw_header": "Tap densities (g cm-3)",
+                "column_descriptor_id": "c1",
+                "raw_value": "250 °C",
+                "scope": {
+                  "kind": "row_group",
+                  "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+                  "row_span": [
+                    4,
+                    4
+                  ],
+                  "source": "row_cell",
+                  "evidence": {}
+                }
+              }
+            ],
+            "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "row_idx": 4,
+            "col_idx": 1,
+            "row_label": "250 °C",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Tap densities (g cm-3)",
+            "column_descriptor": {
+              "id": "c1",
+              "index": 1,
+              "flat_label": "Tap densities (g cm-3)",
+              "header_path": [
+                "Tap densities (g cm-3)"
+              ],
+              "header_leaf": "Tap densities (g cm-3)",
+              "header_group": "",
+              "raw_header_cells": [],
+              "recoverability": "flat_only",
+              "semantic": {
+                "entity_text": "Tap densities",
+                "entity_type": "Observation",
+                "unit_text": "g cm-3"
+              }
+            },
+            "evidence_span": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002 row 4, column 1 (Tap densities (g cm-3)): 2.117",
+            "value": "2.117",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "2.117",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+              "row_span": [
+                4,
+                4
+              ],
+              "col_span": [
+                1,
+                1
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 250.0,
+                "unit": "°C",
+                "raw_text": "250 °C"
+              }
+            ],
+            "condition": "250 °C"
+          }
+        },
+        {
+          "id": "table_ir_rel_005",
+          "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+          "table_title": "Table 1 The tap densities of the scrap materials heat treated at different temperatures.",
+          "source_id": "table_ir_ent_006",
+          "source_name": "Scrap materials 300 °C",
+          "target_id": "table_ir_ent_002",
+          "target_name": "Tap densities",
+          "relation_type": "HAS_OBSERVATION",
+          "evidence_span": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002 row 5, column 1 (Tap densities (g cm-3)): 2.121",
+          "attributes": {
+            "property": "tap_density",
+            "unit": "g cm-3",
+            "condition_ids": [
+              "table_ir_cond_treatment_temperature_300_c"
+            ],
+            "condition_labels": [
+              "300 °C"
+            ],
+            "condition_sources": [
+              {
+                "from": "treatment_temperature"
+              }
+            ],
+            "condition_evidence": [
+              {
+                "condition_id": "table_ir_cond_treatment_temperature_300_c",
+                "name": "treatment_temperature",
+                "value": "300 °C",
+                "from": "treatment_temperature",
+                "source": "row[0]",
+                "column_idx": 1,
+                "raw_header": "Tap densities (g cm-3)",
+                "column_descriptor_id": "c1",
+                "raw_value": "300 °C",
+                "scope": {
+                  "kind": "row_group",
+                  "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+                  "row_span": [
+                    5,
+                    5
+                  ],
+                  "source": "row_cell",
+                  "evidence": {}
+                }
+              }
+            ],
+            "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "row_idx": 5,
+            "col_idx": 1,
+            "row_label": "300 °C",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Tap densities (g cm-3)",
+            "column_descriptor": {
+              "id": "c1",
+              "index": 1,
+              "flat_label": "Tap densities (g cm-3)",
+              "header_path": [
+                "Tap densities (g cm-3)"
+              ],
+              "header_leaf": "Tap densities (g cm-3)",
+              "header_group": "",
+              "raw_header_cells": [],
+              "recoverability": "flat_only",
+              "semantic": {
+                "entity_text": "Tap densities",
+                "entity_type": "Observation",
+                "unit_text": "g cm-3"
+              }
+            },
+            "evidence_span": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002 row 5, column 1 (Tap densities (g cm-3)): 2.121",
+            "value": "2.121",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "2.121",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+              "row_span": [
+                5,
+                5
+              ],
+              "col_span": [
+                1,
+                1
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 300.0,
+                "unit": "°C",
+                "raw_text": "300 °C"
+              }
+            ],
+            "condition": "300 °C"
+          }
+        },
+        {
+          "id": "table_ir_rel_006",
+          "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+          "table_title": "Table 1 The tap densities of the scrap materials heat treated at different temperatures.",
+          "source_id": "table_ir_ent_007",
+          "source_name": "Scrap materials 350 °C",
+          "target_id": "table_ir_ent_002",
+          "target_name": "Tap densities",
+          "relation_type": "HAS_OBSERVATION",
+          "evidence_span": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002 row 6, column 1 (Tap densities (g cm-3)): 2.168",
+          "attributes": {
+            "property": "tap_density",
+            "unit": "g cm-3",
+            "condition_ids": [
+              "table_ir_cond_treatment_temperature_350_c"
+            ],
+            "condition_labels": [
+              "350 °C"
+            ],
+            "condition_sources": [
+              {
+                "from": "treatment_temperature"
+              }
+            ],
+            "condition_evidence": [
+              {
+                "condition_id": "table_ir_cond_treatment_temperature_350_c",
+                "name": "treatment_temperature",
+                "value": "350 °C",
+                "from": "treatment_temperature",
+                "source": "row[0]",
+                "column_idx": 1,
+                "raw_header": "Tap densities (g cm-3)",
+                "column_descriptor_id": "c1",
+                "raw_value": "350 °C",
+                "scope": {
+                  "kind": "row_group",
+                  "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+                  "row_span": [
+                    6,
+                    6
+                  ],
+                  "source": "row_cell",
+                  "evidence": {}
+                }
+              }
+            ],
+            "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "row_idx": 6,
+            "col_idx": 1,
+            "row_label": "350 °C",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Tap densities (g cm-3)",
+            "column_descriptor": {
+              "id": "c1",
+              "index": 1,
+              "flat_label": "Tap densities (g cm-3)",
+              "header_path": [
+                "Tap densities (g cm-3)"
+              ],
+              "header_leaf": "Tap densities (g cm-3)",
+              "header_group": "",
+              "raw_header_cells": [],
+              "recoverability": "flat_only",
+              "semantic": {
+                "entity_text": "Tap densities",
+                "entity_type": "Observation",
+                "unit_text": "g cm-3"
+              }
+            },
+            "evidence_span": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002 row 6, column 1 (Tap densities (g cm-3)): 2.168",
+            "value": "2.168",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "2.168",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+              "row_span": [
+                6,
+                6
+              ],
+              "col_span": [
+                1,
+                1
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 350.0,
+                "unit": "°C",
+                "raw_text": "350 °C"
+              }
+            ],
+            "condition": "350 °C"
+          }
+        }
+      ],
+      "conditions": [
+        {
+          "id": "table_ir_cond_treatment_temperature_pristine",
+          "name": "treatment_temperature",
+          "type": "other",
+          "value": "Pristine",
+          "unit": null,
+          "source": {
+            "doc_id": "table:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "title": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "table_chunk:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "text": "{\"table_id\": \"TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002\", \"page_number\": 4, \"caption\": \"Table 1 The tap densities of the scrap materials heat treated at different temperatures.\", \"section\": \"3.2. Electrochemical properties of scrap materials\", \"explicit_references\": [], \"headers\": [\"Scrap materials\", \"Tap densities (g cm-3)\"], \"rows\": [[\"Pristine\", \"1.797\"], [\"Unheat-treated\", \"2.067\"], [\"200 °C\", \"2.099\"], [\"250 °C\", \"2.117\"], [\"300 °C\", \"2.121\"], [\"350 °C\", \"2.168\"]], \"row_contexts\": [], \"notes\": [], \"raw_markdown\": \"| Scrap materials | Tap densities (g cm-3) |\\n| --- | --- |\\n| Pristine | 1.797 |\\n| Unheat-treated | 2.067 |\\n| 200 °C | 2.099 |\\n| 250 °C | 2.117 |\\n| 300 °C | 2.121 |\\n| 350 °C | 2.168 |\", \"position_start\": 12704, \"position_end\": 12797, \"source\": \"mineru_content_list\", \"source_kind\": \"standalone_table\", \"layout_context\": {\"previous_block_type\": \"text\", \"next_block_type\": \"chart\", \"between_image_blocks\": false}, \"raw_html\": \"",
+            "parent_chunk_id": null,
+            "section_name": null,
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 0,
+            "position_end": 0,
+            "metadata": {}
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "table_ir_cond_treatment_temperature_unheat_treated",
+          "name": "treatment_temperature",
+          "type": "other",
+          "value": "Unheat-treated",
+          "unit": null,
+          "source": {
+            "doc_id": "table:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "title": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "table_chunk:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "text": "{\"table_id\": \"TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002\", \"page_number\": 4, \"caption\": \"Table 1 The tap densities of the scrap materials heat treated at different temperatures.\", \"section\": \"3.2. Electrochemical properties of scrap materials\", \"explicit_references\": [], \"headers\": [\"Scrap materials\", \"Tap densities (g cm-3)\"], \"rows\": [[\"Pristine\", \"1.797\"], [\"Unheat-treated\", \"2.067\"], [\"200 °C\", \"2.099\"], [\"250 °C\", \"2.117\"], [\"300 °C\", \"2.121\"], [\"350 °C\", \"2.168\"]], \"row_contexts\": [], \"notes\": [], \"raw_markdown\": \"| Scrap materials | Tap densities (g cm-3) |\\n| --- | --- |\\n| Pristine | 1.797 |\\n| Unheat-treated | 2.067 |\\n| 200 °C | 2.099 |\\n| 250 °C | 2.117 |\\n| 300 °C | 2.121 |\\n| 350 °C | 2.168 |\", \"position_start\": 12704, \"position_end\": 12797, \"source\": \"mineru_content_list\", \"source_kind\": \"standalone_table\", \"layout_context\": {\"previous_block_type\": \"text\", \"next_block_type\": \"chart\", \"between_image_blocks\": false}, \"raw_html\": \"",
+            "parent_chunk_id": null,
+            "section_name": null,
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 0,
+            "position_end": 0,
+            "metadata": {}
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "table_ir_cond_treatment_temperature_200_c",
+          "name": "treatment_temperature",
+          "type": "other",
+          "value": "200 °C",
+          "unit": null,
+          "source": {
+            "doc_id": "table:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "title": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "table_chunk:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "text": "{\"table_id\": \"TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002\", \"page_number\": 4, \"caption\": \"Table 1 The tap densities of the scrap materials heat treated at different temperatures.\", \"section\": \"3.2. Electrochemical properties of scrap materials\", \"explicit_references\": [], \"headers\": [\"Scrap materials\", \"Tap densities (g cm-3)\"], \"rows\": [[\"Pristine\", \"1.797\"], [\"Unheat-treated\", \"2.067\"], [\"200 °C\", \"2.099\"], [\"250 °C\", \"2.117\"], [\"300 °C\", \"2.121\"], [\"350 °C\", \"2.168\"]], \"row_contexts\": [], \"notes\": [], \"raw_markdown\": \"| Scrap materials | Tap densities (g cm-3) |\\n| --- | --- |\\n| Pristine | 1.797 |\\n| Unheat-treated | 2.067 |\\n| 200 °C | 2.099 |\\n| 250 °C | 2.117 |\\n| 300 °C | 2.121 |\\n| 350 °C | 2.168 |\", \"position_start\": 12704, \"position_end\": 12797, \"source\": \"mineru_content_list\", \"source_kind\": \"standalone_table\", \"layout_context\": {\"previous_block_type\": \"text\", \"next_block_type\": \"chart\", \"between_image_blocks\": false}, \"raw_html\": \"",
+            "parent_chunk_id": null,
+            "section_name": null,
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 0,
+            "position_end": 0,
+            "metadata": {}
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "table_ir_cond_treatment_temperature_250_c",
+          "name": "treatment_temperature",
+          "type": "other",
+          "value": "250 °C",
+          "unit": null,
+          "source": {
+            "doc_id": "table:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "title": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "table_chunk:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "text": "{\"table_id\": \"TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002\", \"page_number\": 4, \"caption\": \"Table 1 The tap densities of the scrap materials heat treated at different temperatures.\", \"section\": \"3.2. Electrochemical properties of scrap materials\", \"explicit_references\": [], \"headers\": [\"Scrap materials\", \"Tap densities (g cm-3)\"], \"rows\": [[\"Pristine\", \"1.797\"], [\"Unheat-treated\", \"2.067\"], [\"200 °C\", \"2.099\"], [\"250 °C\", \"2.117\"], [\"300 °C\", \"2.121\"], [\"350 °C\", \"2.168\"]], \"row_contexts\": [], \"notes\": [], \"raw_markdown\": \"| Scrap materials | Tap densities (g cm-3) |\\n| --- | --- |\\n| Pristine | 1.797 |\\n| Unheat-treated | 2.067 |\\n| 200 °C | 2.099 |\\n| 250 °C | 2.117 |\\n| 300 °C | 2.121 |\\n| 350 °C | 2.168 |\", \"position_start\": 12704, \"position_end\": 12797, \"source\": \"mineru_content_list\", \"source_kind\": \"standalone_table\", \"layout_context\": {\"previous_block_type\": \"text\", \"next_block_type\": \"chart\", \"between_image_blocks\": false}, \"raw_html\": \"",
+            "parent_chunk_id": null,
+            "section_name": null,
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 0,
+            "position_end": 0,
+            "metadata": {}
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "table_ir_cond_treatment_temperature_300_c",
+          "name": "treatment_temperature",
+          "type": "other",
+          "value": "300 °C",
+          "unit": null,
+          "source": {
+            "doc_id": "table:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "title": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "table_chunk:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "text": "{\"table_id\": \"TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002\", \"page_number\": 4, \"caption\": \"Table 1 The tap densities of the scrap materials heat treated at different temperatures.\", \"section\": \"3.2. Electrochemical properties of scrap materials\", \"explicit_references\": [], \"headers\": [\"Scrap materials\", \"Tap densities (g cm-3)\"], \"rows\": [[\"Pristine\", \"1.797\"], [\"Unheat-treated\", \"2.067\"], [\"200 °C\", \"2.099\"], [\"250 °C\", \"2.117\"], [\"300 °C\", \"2.121\"], [\"350 °C\", \"2.168\"]], \"row_contexts\": [], \"notes\": [], \"raw_markdown\": \"| Scrap materials | Tap densities (g cm-3) |\\n| --- | --- |\\n| Pristine | 1.797 |\\n| Unheat-treated | 2.067 |\\n| 200 °C | 2.099 |\\n| 250 °C | 2.117 |\\n| 300 °C | 2.121 |\\n| 350 °C | 2.168 |\", \"position_start\": 12704, \"position_end\": 12797, \"source\": \"mineru_content_list\", \"source_kind\": \"standalone_table\", \"layout_context\": {\"previous_block_type\": \"text\", \"next_block_type\": \"chart\", \"between_image_blocks\": false}, \"raw_html\": \"",
+            "parent_chunk_id": null,
+            "section_name": null,
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 0,
+            "position_end": 0,
+            "metadata": {}
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "table_ir_cond_treatment_temperature_350_c",
+          "name": "treatment_temperature",
+          "type": "other",
+          "value": "350 °C",
+          "unit": null,
+          "source": {
+            "doc_id": "table:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "title": "Table TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "table_chunk:TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+            "text": "{\"table_id\": \"TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002\", \"page_number\": 4, \"caption\": \"Table 1 The tap densities of the scrap materials heat treated at different temperatures.\", \"section\": \"3.2. Electrochemical properties of scrap materials\", \"explicit_references\": [], \"headers\": [\"Scrap materials\", \"Tap densities (g cm-3)\"], \"rows\": [[\"Pristine\", \"1.797\"], [\"Unheat-treated\", \"2.067\"], [\"200 °C\", \"2.099\"], [\"250 °C\", \"2.117\"], [\"300 °C\", \"2.121\"], [\"350 °C\", \"2.168\"]], \"row_contexts\": [], \"notes\": [], \"raw_markdown\": \"| Scrap materials | Tap densities (g cm-3) |\\n| --- | --- |\\n| Pristine | 1.797 |\\n| Unheat-treated | 2.067 |\\n| 200 °C | 2.099 |\\n| 250 °C | 2.117 |\\n| 300 °C | 2.121 |\\n| 350 °C | 2.168 |\", \"position_start\": 12704, \"position_end\": 12797, \"source\": \"mineru_content_list\", \"source_kind\": \"standalone_table\", \"layout_context\": {\"previous_block_type\": \"text\", \"next_block_type\": \"chart\", \"between_image_blocks\": false}, \"raw_html\": \"",
+            "parent_chunk_id": null,
+            "section_name": null,
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 0,
+            "position_end": 0,
+            "metadata": {}
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "context_records": [],
+      "table_structure": {
+        "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+        "extraction_mode": "semantic_ir",
+        "table_role": "process_output",
+        "extractability": {
+          "decision": "extract",
+          "table_role": "process_output",
+          "reason": "The table reports tap density of WEEE-derived scrap materials after heat treatment at different temperatures, which is a measured treatment outcome.",
+          "confidence": 0.72,
+          "gate_decision": "extract",
+          "gate_table_role": "process_output"
+        },
+        "layout": null
+      },
+      "source_table": {
+        "table_id": "TABLE_Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method_0002",
+        "page_number": 4,
+        "caption": "Table 1 The tap densities of the scrap materials heat treated at different temperatures.",
+        "section": "3.2. Electrochemical properties of scrap materials",
+        "explicit_references": [],
+        "headers": [
+          "Scrap materials",
+          "Tap densities (g cm-3)"
+        ],
+        "rows": [
+          [
+            "Pristine",
+            "1.797"
+          ],
+          [
+            "Unheat-treated",
+            "2.067"
+          ],
+          [
+            "200 °C",
+            "2.099"
+          ],
+          [
+            "250 °C",
+            "2.117"
+          ],
+          [
+            "300 °C",
+            "2.121"
+          ],
+          [
+            "350 °C",
+            "2.168"
+          ]
+        ],
+        "row_contexts": [],
+        "notes": [],
+        "raw_markdown": "| Scrap materials | Tap densities (g cm-3) |\n| --- | --- |\n| Pristine | 1.797 |\n| Unheat-treated | 2.067 |\n| 200 °C | 2.099 |\n| 250 °C | 2.117 |\n| 300 °C | 2.121 |\n| 350 °C | 2.168 |",
+        "position_start": 12704,
+        "position_end": 12797,
+        "source": "mineru_content_list",
+        "source_kind": "standalone_table",
+        "layout_context": {
+          "previous_block_type": "text",
+          "next_block_type": "chart",
+          "between_image_blocks": false
+        },
+        "raw_html": "<table><tr><td>Scrap materials</td><td>Tap densities (g cm-3)</td></tr><tr><td>Pristine</td><td>1.797</td></tr><tr><td>Unheat-treated</td><td>2.067</td></tr><tr><td>200 °C</td><td>2.099</td></tr><tr><td>250 °C</td><td>2.117</td></tr><tr><td>300 °C</td><td>2.121</td></tr><tr><td>350 °C</td><td>2.168</td></tr></table>",
+        "image_path": "images/52ed673261dd490c41b85ff68d6641c0f0c9d34163e6dbf5dcb1260d22563390.jpg",
+        "bbox": [
+          537,
+          844,
+          895,
+          933
+        ],
+        "metadata": {}
+      }
+    }
+  }
+]

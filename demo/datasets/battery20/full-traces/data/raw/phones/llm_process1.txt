@@ -1,0 +1,70 @@
+{
+  "process_stages": [
+    {
+      "name": "aqua regia leaching of intact PCB and electronic components",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "A first leaching of the intact PCB and electronic components was performed at 25 C using aqua regia."
+    },
+    {
+      "name": "aqua regia leaching of comminuted solid residues",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Solid residues were comminuted and then leached again at 25 C by a new aqua regia solution."
+    }
+  ],
+  "experiment_settings": [
+    {
+      "name": "aqua regia leaching of intact PCB and electronic components conditions",
+      "stage_name": "aqua regia leaching of intact PCB and electronic components",
+      "sample": "intact PCB and electronic components",
+      "sample_aliases": [],
+      "treatment": "aqua regia",
+      "treatment_members": [
+        "concentrated HNO3",
+        "concentrated HCl"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "25 C; aqua regia (concentrated HNO3 and concentrated HCl 1/3 v/v)",
+      "evidence_hint": "First leaching of intact PCB and electronic components at 25 C using aqua regia (concentrated HNO3 and concentrated HCl 1/3 v/v)."
+    },
+    {
+      "name": "aqua regia leaching of comminuted solid residues conditions",
+      "stage_name": "aqua regia leaching of comminuted solid residues",
+      "sample": "comminuted solid residues",
+      "sample_aliases": [],
+      "treatment": "aqua regia",
+      "treatment_members": [
+        "concentrated HNO3",
+        "concentrated HCl"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "25 C; aqua regia (concentrated HNO3 and concentrated HCl 1/3 v/v); particle size <1 mm",
+      "evidence_hint": "Solid residues were comminuted to <1 mm and leached again at 25 C by a new aqua regia solution."
+    }
+  ],
+  "process_targets": [
+    {
+      "name": "aqua regia leaching of intact PCB and electronic components",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "A first leaching of the intact PCB and electronic components was performed at 25 C using aqua regia."
+    },
+    {
+      "name": "aqua regia leaching of comminuted solid residues",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Solid residues were comminuted and then leached again at 25 C by a new aqua regia solution."
+    }
+  ]
+}

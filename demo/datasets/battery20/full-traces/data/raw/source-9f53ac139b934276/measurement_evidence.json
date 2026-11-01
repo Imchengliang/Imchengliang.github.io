@@ -1,0 +1,144 @@
+[
+  {
+    "reason": "measurement_semantics_revision",
+    "measurement": {
+      "property": "film_mass_loss",
+      "value": 9.6,
+      "unit": "%",
+      "evidence_span": "The binder removal rate was quantitatively measured by using Eq. (3.1) and was found 8% and 9.6% in case of anode and cathode.",
+      "source_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_PVDF",
+      "source_sample": "cathode film",
+      "conditions": [
+        "90 °C",
+        "20 min"
+      ],
+      "measured_entity": "Component_cathode",
+      "measurement_method": "film weighing before and after treatment, Eq. (3.1)",
+      "measurement_basis": "film mass before/after treatment, not initial PVDF mass"
+    },
+    "original_relation": {
+      "id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_PVDF",
+      "subject": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+      "predicate": "HAS_OUTPUT",
+      "object": "Material_PVDF",
+      "subject_type": "Process",
+      "object_type": "Material",
+      "confidence": 0.8,
+      "evidence_span": "The binder removal rate was quantitatively measured by using Eq. (3.1) and was found 8% and 9.6% in case of anode and cathode.",
+      "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+      "target_name": "PVDF",
+      "properties": {
+        "output_role": "removed_material",
+        "property": "removal_rate",
+        "value": 9.6,
+        "unit": "%",
+        "source_sample": "cathode film",
+        "measurement_method": "Eq. (3.1)",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false,
+        "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+        "target_name": "PVDF",
+        "evidence_span": "The binder removal rate was quantitatively measured by using Eq. (3.1) and was found 8% and 9.6% in case of anode and cathode.",
+        "source": "text",
+        "condition_ids": [],
+        "setting_id": "setting:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:leaching-conditions",
+        "setting_binding_basis": "unique_process_setting",
+        "setting_stage_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+        "setting_condition_keys": [
+          {
+            "key": "other",
+            "value": "leaching rate measured using Eq. (2.1)",
+            "unit": null,
+            "raw_text": "leaching rate measured using Eq. (2.1)"
+          },
+          {
+            "key": "medium",
+            "value": "total metal by tri-acid digestion and ICP-MS",
+            "unit": null,
+            "raw_text": "total metal by tri-acid digestion and ICP-MS"
+          }
+        ],
+        "setting_condition": "leaching rate measured using Eq. (2.1); total metal by tri-acid digestion and ICP-MS",
+        "condition": "leaching rate measured using Eq. (2.1); total metal by tri-acid digestion and ICP-MS",
+        "evidence_spans": [
+          "The binder removal rate was quantitatively measured by using Eq. (3.1) and was found 8% and 9.6% in case of anode and cathode."
+        ]
+      }
+    }
+  },
+  {
+    "reason": "measurement_semantics_revision",
+    "measurement": {
+      "property": "film_mass_loss",
+      "value": 8,
+      "unit": "%",
+      "evidence_span": "The binder removal rate was quantitatively measured by using Eq. (3.1) and was found 8% and 9.6% in case of anode and cathode.",
+      "source_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_PVDF",
+      "source_sample": "anode film",
+      "conditions": [
+        "90 °C",
+        "20 min"
+      ],
+      "measured_entity": "Component_anode",
+      "measurement_method": "film weighing before and after treatment, Eq. (3.1)",
+      "measurement_basis": "film mass before/after treatment, not initial PVDF mass"
+    },
+    "original_relation": {
+      "id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_PVDF",
+      "subject": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+      "predicate": "HAS_OUTPUT",
+      "object": "Material_PVDF",
+      "subject_type": "Process",
+      "object_type": "Material",
+      "confidence": 0.8,
+      "evidence_span": "The binder removal rate was quantitatively measured by using Eq. (3.1) and was found 8% and 9.6% in case of anode and cathode.",
+      "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+      "target_name": "PVDF",
+      "properties": {
+        "output_role": "removed_material",
+        "property": "removal_rate",
+        "value": 8,
+        "unit": "%",
+        "source_sample": "anode film",
+        "measurement_method": "Eq. (3.1)",
+        "study_scope": "current_study",
+        "graph_status": "active",
+        "process_role": "main_process",
+        "raw_relation_type": "HAS_OUTPUT",
+        "normalized_relation_type": "HAS_OUTPUT",
+        "normalized_from_raw": false,
+        "source_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+        "target_name": "PVDF",
+        "evidence_span": "The binder removal rate was quantitatively measured by using Eq. (3.1) and was found 8% and 9.6% in case of anode and cathode.",
+        "source": "text",
+        "condition_ids": [],
+        "setting_id": "setting:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:leaching-conditions",
+        "setting_binding_basis": "unique_process_setting",
+        "setting_stage_name": "metal leaching from cathode and anode film using citrus pseudolimon juice",
+        "setting_condition_keys": [
+          {
+            "key": "other",
+            "value": "leaching rate measured using Eq. (2.1)",
+            "unit": null,
+            "raw_text": "leaching rate measured using Eq. (2.1)"
+          },
+          {
+            "key": "medium",
+            "value": "total metal by tri-acid digestion and ICP-MS",
+            "unit": null,
+            "raw_text": "total metal by tri-acid digestion and ICP-MS"
+          }
+        ],
+        "setting_condition": "leaching rate measured using Eq. (2.1); total metal by tri-acid digestion and ICP-MS",
+        "condition": "leaching rate measured using Eq. (2.1); total metal by tri-acid digestion and ICP-MS",
+        "evidence_spans": [
+          "The binder removal rate was quantitatively measured by using Eq. (3.1) and was found 8% and 9.6% in case of anode and cathode."
+        ]
+      }
+    }
+  }
+]

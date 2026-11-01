@@ -1,0 +1,592 @@
+{
+  "paper": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
+  "source_file": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/demo/ontoweee/datasets/battery20/updates/measurement-semantics-20261101/inputs/Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)/triples_final.txt",
+  "source_sha256": "1e44c8a315500665ff6477e514cdb26860f831a4f2a3744b4e5b9b0eb15d6110",
+  "transactions": [
+    {
+      "index": 13,
+      "original": {
+        "id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+        "subject": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+        "predicate": "HAS_OUTPUT",
+        "object": "Material_Li",
+        "subject_type": "Process",
+        "object_type": "Material",
+        "confidence": 0.8,
+        "evidence_span": "in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water",
+        "source_name": "reductive hydrochloric acid leaching of calcined powder",
+        "target_name": "Li",
+        "properties": {
+          "property": "leaching",
+          "value": 84,
+          "unit": "%",
+          "process_agent": "deionized water",
+          "treatment_members": [
+            "deionized water"
+          ],
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "property_raw": "leaching_efficiency",
+          "measure_key": "leaching",
+          "raw_relation_type": "HAS_OUTPUT",
+          "normalized_relation_type": "HAS_OUTPUT",
+          "normalized_from_raw": false,
+          "source_name": "reductive hydrochloric acid leaching of calcined powder",
+          "target_name": "Li",
+          "evidence_span": "in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water",
+          "source": "text",
+          "condition_ids": [],
+          "setting_id": "setting:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):reductive-hydrochloric-acid-leaching-conditions",
+          "setting_binding_basis": "unique_process_setting",
+          "setting_stage_name": "reductive hydrochloric acid leaching of calcined powder",
+          "setting_condition_keys": [
+            {
+              "key": "medium",
+              "value": "thermostatic water bath",
+              "unit": null,
+              "raw_text": "thermostatic water bath"
+            },
+            {
+              "key": "other",
+              "value": "manual constant agitation",
+              "unit": null,
+              "raw_text": "manual constant agitation"
+            },
+            {
+              "key": "other",
+              "value": "effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated",
+              "unit": null,
+              "raw_text": "effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated"
+            }
+          ],
+          "setting_condition": "thermostatic water bath; manual constant agitation; effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated",
+          "condition": "thermostatic water bath; manual constant agitation; effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated",
+          "evidence_spans": [
+            "in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water"
+          ]
+        }
+      },
+      "corrected": {
+        "id": "REL_reviewed_a9a09b1adf9bea5e",
+        "subject": "Process_reviewed_c2ca1a770bfa07",
+        "predicate": "HAS_OUTPUT",
+        "object": "Material_Li",
+        "subject_type": "Process",
+        "object_type": "Material",
+        "confidence": 0.8,
+        "evidence_span": "in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water",
+        "source_name": "deionized water leaching of calcined anode powder",
+        "target_name": "Li",
+        "properties": {
+          "property": "leaching",
+          "value": 84,
+          "unit": "%",
+          "process_agent": "deionized water",
+          "treatment_members": [
+            "deionized water"
+          ],
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "property_raw": "leaching_efficiency",
+          "measure_key": "leaching",
+          "raw_relation_type": "HAS_OUTPUT",
+          "normalized_relation_type": "HAS_OUTPUT",
+          "normalized_from_raw": false,
+          "source_name": "deionized water leaching of calcined anode powder",
+          "target_name": "Li",
+          "evidence_span": "in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water",
+          "source": "text",
+          "condition_ids": [],
+          "setting_id": "setting:reviewed:683fbd90c18558",
+          "setting_binding_basis": "evidence_reviewed_revision",
+          "setting_stage_name": "deionized water leaching of calcined anode powder",
+          "setting_condition_keys": [
+            {
+              "key": "medium",
+              "value": "deionized water only",
+              "unit": null,
+              "raw_text": "deionized water only"
+            },
+            {
+              "key": "other",
+              "value": "without HCl",
+              "unit": null,
+              "raw_text": "without HCl",
+              "negated": true
+            }
+          ],
+          "setting_condition": "deionized water only; without HCl",
+          "condition": "deionized water only; without HCl",
+          "evidence_spans": [
+            "in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water"
+          ],
+          "conditions": "deionized water only; without HCl",
+          "condition_labels": [
+            "deionized water only; without HCl"
+          ],
+          "condition_keys": [
+            {
+              "key": "medium",
+              "value": "deionized water only",
+              "unit": null,
+              "raw_text": "deionized water only"
+            },
+            {
+              "key": "other",
+              "value": "without HCl",
+              "unit": null,
+              "raw_text": "without HCl",
+              "negated": true
+            }
+          ]
+        },
+        "subject_name": "deionized water leaching of calcined anode powder"
+      },
+      "source_evidence": [
+        {
+          "file": "source/text.md",
+          "line": 75,
+          "quote": "As described above, the main forms of Li in the anode active material are Li2CO3,, Li O, LiF, ROCO Li, CH OLi. Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water. While others are almost insoluble in water and inlaid in the anode active materials, such as ROCO Li, LiF, and they will occur decomposition reaction in HCl solution. Therefore, the leaching reaction between anode materials and HCl solution is a multiple process (Aurbach et al., 2002; Jiangfeng et al., 2004): (1) the hydrolysis of lithium salt (2) double decomposition reaction between lithium salt and HCl solution."
+        },
+        {
+          "file": "source/text.md",
+          "line": 103,
+          "quote": "As shown in Fig. 5, leaching efficiency was firstly increasing and then decreasing with the continuous increasing of acid concentration. At the first stage, the hydrolysis of lithium salt was dominated that caused leaching efficiency can reach 83.6% when only using deionized water as the leachate merely (see Eqs. (1)–(3)). After adding HCl, it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M. This is because that the increasing acid concentration brings incremental amount of proton which can replace more Li+. On the other hand, when HCl was consumed at the solid liquid interphase, the concentration gradient of H+ between solid–liquid interface and solution was gradually increased. It leaded to a quicker diffusion velocity. Both of them can promote the leaching process and bring higher leaching efficiency. Henceforth, the leaching reaction reached equilibrium, and the leaching efficiency of lithium reached its maximum. This is because that the diffusion velocity would not change with further increase of HCl concentration, and the Li+ had been replaced sufficiently. From the figure, 3 M was employed as the optimum acid concentration."
+        }
+      ],
+      "action": "correct_binding"
+    },
+    {
+      "index": 14,
+      "original": {
+        "id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+        "subject": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+        "predicate": "HAS_OUTPUT",
+        "object": "Material_Li",
+        "subject_type": "Process",
+        "object_type": "Material",
+        "confidence": 0.8,
+        "evidence_span": "it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M",
+        "source_name": "reductive hydrochloric acid leaching of calcined powder",
+        "target_name": "Li",
+        "properties": {
+          "property": "leaching",
+          "value": 98,
+          "unit": "%",
+          "secondary_value": 84,
+          "secondary_unit": "%",
+          "source_sample": "calcined powder",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "conditions": "HCl concentration increasing from 2.5 to 3 M; leaching temperature 80 C; S/L ratio 1:50 g/mL; HCl-H2O volume ratio 10:1; leaching time 90 min",
+          "process_agent": "HCl",
+          "treatment_members": [
+            "HCl"
+          ],
+          "extra_qualifiers": "optimum acid concentration 3 M",
+          "property_raw": "leaching_efficiency",
+          "measure_key": "leaching",
+          "condition_keys": [
+            {
+              "key": "concentration",
+              "value": 3.0,
+              "unit": "M",
+              "raw_text": "HCl concentration increasing from 2.5 to 3 M"
+            },
+            {
+              "key": "temperature",
+              "value": 80.0,
+              "unit": "°C",
+              "raw_text": "leaching temperature 80 C"
+            },
+            {
+              "key": "solid_liquid_ratio",
+              "value": "1:50",
+              "unit": null,
+              "raw_text": "S/L ratio 1:50 g/mL"
+            },
+            {
+              "key": "other",
+              "value": "HCl-H2O volume ratio 10:1",
+              "unit": null,
+              "raw_text": "HCl-H2O volume ratio 10:1"
+            },
+            {
+              "key": "time",
+              "value": 90.0,
+              "unit": "min",
+              "raw_text": "leaching time 90 min"
+            }
+          ],
+          "condition_labels": [
+            "HCl concentration increasing from 2.5 to 3 M",
+            "leaching temperature 80 C",
+            "S/L ratio 1:50 g/mL",
+            "HCl-H2O volume ratio 10:1",
+            "leaching time 90 min"
+          ],
+          "condition": "HCl concentration increasing from 2.5 to 3 M; leaching temperature 80 C; S/L ratio 1:50 g/mL; HCl-H2O volume ratio 10:1; leaching time 90 min",
+          "condition_ids": [
+            "COND_6257e27fbf09",
+            "COND_db51691a6b8c",
+            "COND_60305e98ab7e",
+            "COND_0069c5de012a",
+            "COND_b7d72e3adb05"
+          ],
+          "raw_relation_type": "HAS_OUTPUT",
+          "normalized_relation_type": "HAS_OUTPUT",
+          "normalized_from_raw": false,
+          "source_name": "reductive hydrochloric acid leaching of calcined powder",
+          "target_name": "Li",
+          "evidence_span": "it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M",
+          "source": "text",
+          "evidence_spans": [
+            "it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M"
+          ]
+        }
+      },
+      "corrected": {
+        "id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+        "subject": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+        "predicate": "HAS_OUTPUT",
+        "object": "Material_Li",
+        "subject_type": "Process",
+        "object_type": "Material",
+        "confidence": 0.8,
+        "evidence_span": "it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M",
+        "source_name": "reductive hydrochloric acid leaching of calcined powder",
+        "target_name": "Li",
+        "properties": {
+          "property": "leaching",
+          "value": 98,
+          "unit": "%",
+          "source_sample": "calcined powder",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "conditions": "HCl concentration increasing from 2.5 to 3 M; leaching temperature 80 C; S/L ratio 1:50 g/mL; HCl-H2O volume ratio 10:1; leaching time 90 min",
+          "process_agent": "HCl",
+          "treatment_members": [
+            "HCl"
+          ],
+          "extra_qualifiers": "optimum acid concentration 3 M",
+          "property_raw": "leaching_efficiency",
+          "measure_key": "leaching",
+          "condition_keys": [
+            {
+              "key": "concentration",
+              "value": 3.0,
+              "unit": "M",
+              "raw_text": "HCl concentration increasing from 2.5 to 3 M"
+            },
+            {
+              "key": "temperature",
+              "value": 80.0,
+              "unit": "°C",
+              "raw_text": "leaching temperature 80 C"
+            },
+            {
+              "key": "solid_liquid_ratio",
+              "value": "1:50",
+              "unit": null,
+              "raw_text": "S/L ratio 1:50 g/mL"
+            },
+            {
+              "key": "other",
+              "value": "HCl-H2O volume ratio 10:1",
+              "unit": null,
+              "raw_text": "HCl-H2O volume ratio 10:1"
+            },
+            {
+              "key": "time",
+              "value": 90.0,
+              "unit": "min",
+              "raw_text": "leaching time 90 min"
+            }
+          ],
+          "condition_labels": [
+            "HCl concentration increasing from 2.5 to 3 M",
+            "leaching temperature 80 C",
+            "S/L ratio 1:50 g/mL",
+            "HCl-H2O volume ratio 10:1",
+            "leaching time 90 min"
+          ],
+          "condition": "HCl concentration increasing from 2.5 to 3 M; leaching temperature 80 C; S/L ratio 1:50 g/mL; HCl-H2O volume ratio 10:1; leaching time 90 min",
+          "condition_ids": [
+            "COND_6257e27fbf09",
+            "COND_db51691a6b8c",
+            "COND_60305e98ab7e",
+            "COND_0069c5de012a",
+            "COND_b7d72e3adb05"
+          ],
+          "raw_relation_type": "HAS_OUTPUT",
+          "normalized_relation_type": "HAS_OUTPUT",
+          "normalized_from_raw": false,
+          "source_name": "reductive hydrochloric acid leaching of calcined powder",
+          "target_name": "Li",
+          "evidence_span": "it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M",
+          "source": "text",
+          "evidence_spans": [
+            "it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M"
+          ],
+          "comparison_evidence": {
+            "value": 84,
+            "unit": "%",
+            "treatment": "deionized water only",
+            "evidence_span": "As shown in Fig. 5, leaching efficiency was firstly increasing and then decreasing with the continuous increasing of acid concentration. At the first stage, the hydrolysis of lithium salt was dominated that caused leaching efficiency can reach 83.6% when only using deionized water as the leachate merely (see Eqs. (1)–(3)). After adding HCl, it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M. This is because that the increasing acid concentration brings incremental amount of proton which can replace more Li+. On the other hand, when HCl was consumed at the solid liquid interphase, the concentration gradient of H+ between solid–liquid interface and solution was gradually increased. It leaded to a quicker diffusion velocity. Both of them can promote the leaching process and bring higher leaching efficiency. Henceforth, the leaching reaction reached equilibrium, and the leaching efficiency of lithium reached its maximum. This is because that the diffusion velocity would not change with further increase of HCl concentration, and the Li+ had been replaced sufficiently. From the figure, 3 M was employed as the optimum acid concentration."
+          }
+        }
+      },
+      "source_evidence": [
+        {
+          "file": "source/text.md",
+          "line": 103,
+          "quote": "As shown in Fig. 5, leaching efficiency was firstly increasing and then decreasing with the continuous increasing of acid concentration. At the first stage, the hydrolysis of lithium salt was dominated that caused leaching efficiency can reach 83.6% when only using deionized water as the leachate merely (see Eqs. (1)–(3)). After adding HCl, it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M. This is because that the increasing acid concentration brings incremental amount of proton which can replace more Li+. On the other hand, when HCl was consumed at the solid liquid interphase, the concentration gradient of H+ between solid–liquid interface and solution was gradually increased. It leaded to a quicker diffusion velocity. Both of them can promote the leaching process and bring higher leaching efficiency. Henceforth, the leaching reaction reached equilibrium, and the leaching efficiency of lithium reached its maximum. This is because that the diffusion velocity would not change with further increase of HCl concentration, and the Li+ had been replaced sufficiently. From the figure, 3 M was employed as the optimum acid concentration."
+        }
+      ],
+      "action": "separate_cross_group_baseline"
+    },
+    {
+      "index": 20,
+      "original": {
+        "id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+        "subject": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+        "predicate": "HAS_OUTPUT",
+        "object": "Material_Li",
+        "subject_type": "Process",
+        "object_type": "Material",
+        "confidence": 0.8,
+        "evidence_span": "the leaching efficiency of Li was 97.1% without H2O2",
+        "source_name": "reductive hydrochloric acid leaching of calcined powder",
+        "target_name": "Li",
+        "properties": {
+          "property": "leaching",
+          "value": 97.1,
+          "unit": "%",
+          "source_sample": "calcined powder",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "conditions": "HCl concentration 3 M, S/L 1:50, leaching time 90 min, leaching temperature 80 °C, without H2O2",
+          "process_agent": "HCl",
+          "treatment_members": [],
+          "experiment_group": "without H2O2",
+          "property_raw": "leaching_efficiency",
+          "measure_key": "leaching",
+          "condition_keys": [
+            {
+              "key": "temperature",
+              "value": 80.0,
+              "unit": "°C",
+              "raw_text": "HCl concentration 3 M, S/L 1:50, leaching time 90 min, leaching temperature 80 °C, without H2O2"
+            }
+          ],
+          "condition_labels": [
+            "HCl concentration 3 M, S/L 1:50, leaching time 90 min, leaching temperature 80 °C, without H2O2"
+          ],
+          "condition": "HCl concentration 3 M, S/L 1:50, leaching time 90 min, leaching temperature 80 °C, without H2O2; thermostatic water bath; manual constant agitation; effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated",
+          "condition_ids": [
+            "COND_db51691a6b8c"
+          ],
+          "raw_relation_type": "HAS_OUTPUT",
+          "normalized_relation_type": "HAS_OUTPUT",
+          "normalized_from_raw": false,
+          "source_name": "reductive hydrochloric acid leaching of calcined powder",
+          "target_name": "Li",
+          "evidence_span": "the leaching efficiency of Li was 97.1% without H2O2",
+          "source": "text",
+          "setting_id": "setting:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):reductive-hydrochloric-acid-leaching-conditions",
+          "setting_binding_basis": "unique_process_setting",
+          "setting_stage_name": "reductive hydrochloric acid leaching of calcined powder",
+          "setting_condition_keys": [
+            {
+              "key": "medium",
+              "value": "thermostatic water bath",
+              "unit": null,
+              "raw_text": "thermostatic water bath"
+            },
+            {
+              "key": "other",
+              "value": "manual constant agitation",
+              "unit": null,
+              "raw_text": "manual constant agitation"
+            },
+            {
+              "key": "other",
+              "value": "effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated",
+              "unit": null,
+              "raw_text": "effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated"
+            }
+          ],
+          "setting_condition": "thermostatic water bath; manual constant agitation; effects of HCl concentration, HCl-H2O2 volume ratio, solid-liquid ratio, time, and temperature investigated",
+          "evidence_spans": [
+            "the leaching efficiency of Li was 97.1% without H2O2"
+          ]
+        }
+      },
+      "corrected": {
+        "id": "REL_reviewed_283200192ce04a28",
+        "subject": "Process_reviewed_8daa8098cc6a94",
+        "predicate": "HAS_OUTPUT",
+        "object": "Material_Li",
+        "subject_type": "Process",
+        "object_type": "Material",
+        "confidence": 0.8,
+        "evidence_span": "the leaching efficiency of Li was 97.1% without H2O2",
+        "source_name": "hydrochloric acid leaching of calcined anode powder without H2O2",
+        "target_name": "Li",
+        "properties": {
+          "property": "leaching",
+          "value": 97.1,
+          "unit": "%",
+          "source_sample": "calcined powder",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "conditions": "HCl 3 M; S/L 1:50; 90 min; 80 °C; without H2O2",
+          "process_agent": "HCl",
+          "treatment_members": [],
+          "experiment_group": "without H2O2",
+          "property_raw": "leaching_efficiency",
+          "measure_key": "leaching",
+          "condition_keys": [
+            {
+              "key": "concentration",
+              "value": 3.0,
+              "unit": "M",
+              "raw_text": "HCl 3 M"
+            },
+            {
+              "key": "solid_liquid_ratio",
+              "value": "1:50",
+              "unit": null,
+              "raw_text": "S/L 1:50"
+            },
+            {
+              "key": "time",
+              "value": 90.0,
+              "unit": "min",
+              "raw_text": "90 min"
+            },
+            {
+              "key": "temperature",
+              "value": 80.0,
+              "unit": "°C",
+              "raw_text": "80 °C"
+            },
+            {
+              "key": "other",
+              "value": "without H2O2",
+              "unit": null,
+              "raw_text": "without H2O2",
+              "negated": true
+            }
+          ],
+          "condition_labels": [
+            "HCl 3 M; S/L 1:50; 90 min; 80 °C; without H2O2"
+          ],
+          "condition": "HCl 3 M; S/L 1:50; 90 min; 80 °C; without H2O2",
+          "condition_ids": [],
+          "raw_relation_type": "HAS_OUTPUT",
+          "normalized_relation_type": "HAS_OUTPUT",
+          "normalized_from_raw": false,
+          "source_name": "hydrochloric acid leaching of calcined anode powder without H2O2",
+          "target_name": "Li",
+          "evidence_span": "the leaching efficiency of Li was 97.1% without H2O2",
+          "source": "text",
+          "setting_id": "setting:reviewed:31120b62ecfde6",
+          "setting_binding_basis": "evidence_reviewed_revision",
+          "setting_stage_name": "hydrochloric acid leaching of calcined anode powder without H2O2",
+          "setting_condition_keys": [
+            {
+              "key": "concentration",
+              "value": 3.0,
+              "unit": "M",
+              "raw_text": "HCl 3 M"
+            },
+            {
+              "key": "solid_liquid_ratio",
+              "value": "1:50",
+              "unit": null,
+              "raw_text": "S/L 1:50"
+            },
+            {
+              "key": "time",
+              "value": 90.0,
+              "unit": "min",
+              "raw_text": "90 min"
+            },
+            {
+              "key": "temperature",
+              "value": 80.0,
+              "unit": "°C",
+              "raw_text": "80 °C"
+            },
+            {
+              "key": "other",
+              "value": "without H2O2",
+              "unit": null,
+              "raw_text": "without H2O2",
+              "negated": true
+            }
+          ],
+          "setting_condition": "HCl 3 M; S/L 1:50; 90 min; 80 °C; without H2O2",
+          "evidence_spans": [
+            "the leaching efficiency of Li was 97.1% without H2O2"
+          ]
+        },
+        "subject_name": "hydrochloric acid leaching of calcined anode powder without H2O2"
+      },
+      "source_evidence": [
+        {
+          "file": "source/text.md",
+          "line": 125,
+          "quote": "Fig. 9 shows the alteration of the leaching efficiency of Li as a function of HCl - H2O2 ratio in the range of 1:0–25:1 by using HCl concentration of 3 M, S/L of 1:50, leaching time of 90 min and leaching temperature of 80 ^∘C. It can be observed from Fig. 7 that the leaching efficiency of Li was 97.1% without H2O2. And it reached to 99.4% with HCl - H2O2 ration being 10:1. A conclusion can be drawn from the experiment that H2O2 had a slight role in the leaching process of Li. In the leaching process for Hydrometallurgy, H2O2 was added as reductant to convert undissolved high valence ions to soluble low ones to promote the reaction process. Because of the absence of intermediate valence of Li, H2O2 can reduce Co(III) to Co (II) and thus facilitate the forward reaction. The result shows that the amount of H2O2 was sufficient for the complete dissolution of lithium, as further increasing the concentration of H2O2 did not show a significant effect in the recovery efficiency compared to consumption of expensive of lithium. Considering lower energy consumption and relatively better leaching efficiency, the suitable leaching agent was HCl without H2O2."
+        }
+      ],
+      "action": "correct_binding"
+    }
+  ],
+  "added_processes": [
+    {
+      "id": "Process_reviewed_c2ca1a770bfa07",
+      "name": "deionized water leaching of calcined anode powder",
+      "mention_text": "deionized water leaching of calcined anode powder",
+      "type": "Process",
+      "synonyms": [
+        "deionized water leaching of calcined anode powder"
+      ],
+      "description": "As described above, the main forms of Li in the anode active material are Li2CO3,, Li O, LiF, ROCO Li, CH OLi. Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water. While others are almost insoluble in water and inlaid in the anode active materials, such as ROCO Li, LiF, and they will occur decomposition reaction in HCl solution. Therefore, the leaching reaction between anode materials and HCl solution is a multiple process (Aurbach et al., 2002; Jiangfeng et al., 2004): (1) the hydrolysis of lithium salt (2) double decomposition reaction between lithium salt and HCl solution.",
+      "process_content": "As described above, the main forms of Li in the anode active material are Li2CO3,, Li O, LiF, ROCO Li, CH OLi. Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water. While others are almost insoluble in water and inlaid in the anode active materials, such as ROCO Li, LiF, and they will occur decomposition reaction in HCl solution. Therefore, the leaching reaction between anode materials and HCl solution is a multiple process (Aurbach et al., 2002; Jiangfeng et al., 2004): (1) the hydrolysis of lithium salt (2) double decomposition reaction between lithium salt and HCl solution.",
+      "evidence_span": "As described above, the main forms of Li in the anode active material are Li2CO3,, Li O, LiF, ROCO Li, CH OLi. Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water. While others are almost insoluble in water and inlaid in the anode active materials, such as ROCO Li, LiF, and they will occur decomposition reaction in HCl solution. Therefore, the leaching reaction between anode materials and HCl solution is a multiple process (Aurbach et al., 2002; Jiangfeng et al., 2004): (1) the hydrolysis of lithium salt (2) double decomposition reaction between lithium salt and HCl solution.",
+      "parent_process": null,
+      "source_mark": "evidence_reviewed_revision"
+    },
+    {
+      "id": "Process_reviewed_8daa8098cc6a94",
+      "name": "hydrochloric acid leaching of calcined anode powder without H2O2",
+      "mention_text": "hydrochloric acid leaching of calcined anode powder without H2O2",
+      "type": "Process",
+      "synonyms": [
+        "hydrochloric acid leaching of calcined anode powder without H2O2"
+      ],
+      "description": "Fig. 9 shows the alteration of the leaching efficiency of Li as a function of HCl - H2O2 ratio in the range of 1:0–25:1 by using HCl concentration of 3 M, S/L of 1:50, leaching time of 90 min and leaching temperature of 80 ^∘C. It can be observed from Fig. 7 that the leaching efficiency of Li was 97.1% without H2O2. And it reached to 99.4% with HCl - H2O2 ration being 10:1. A conclusion can be drawn from the experiment that H2O2 had a slight role in the leaching process of Li. In the leaching process for Hydrometallurgy, H2O2 was added as reductant to convert undissolved high valence ions to soluble low ones to promote the reaction process. Because of the absence of intermediate valence of Li, H2O2 can reduce Co(III) to Co (II) and thus facilitate the forward reaction. The result shows that the amount of H2O2 was sufficient for the complete dissolution of lithium, as further increasing the concentration of H2O2 did not show a significant effect in the recovery efficiency compared to consumption of expensive of lithium. Considering lower energy consumption and relatively better leaching efficiency, the suitable leaching agent was HCl without H2O2.",
+      "process_content": "Fig. 9 shows the alteration of the leaching efficiency of Li as a function of HCl - H2O2 ratio in the range of 1:0–25:1 by using HCl concentration of 3 M, S/L of 1:50, leaching time of 90 min and leaching temperature of 80 ^∘C. It can be observed from Fig. 7 that the leaching efficiency of Li was 97.1% without H2O2. And it reached to 99.4% with HCl - H2O2 ration being 10:1. A conclusion can be drawn from the experiment that H2O2 had a slight role in the leaching process of Li. In the leaching process for Hydrometallurgy, H2O2 was added as reductant to convert undissolved high valence ions to soluble low ones to promote the reaction process. Because of the absence of intermediate valence of Li, H2O2 can reduce Co(III) to Co (II) and thus facilitate the forward reaction. The result shows that the amount of H2O2 was sufficient for the complete dissolution of lithium, as further increasing the concentration of H2O2 did not show a significant effect in the recovery efficiency compared to consumption of expensive of lithium. Considering lower energy consumption and relatively better leaching efficiency, the suitable leaching agent was HCl without H2O2.",
+      "evidence_span": "Fig. 9 shows the alteration of the leaching efficiency of Li as a function of HCl - H2O2 ratio in the range of 1:0–25:1 by using HCl concentration of 3 M, S/L of 1:50, leaching time of 90 min and leaching temperature of 80 ^∘C. It can be observed from Fig. 7 that the leaching efficiency of Li was 97.1% without H2O2. And it reached to 99.4% with HCl - H2O2 ration being 10:1. A conclusion can be drawn from the experiment that H2O2 had a slight role in the leaching process of Li. In the leaching process for Hydrometallurgy, H2O2 was added as reductant to convert undissolved high valence ions to soluble low ones to promote the reaction process. Because of the absence of intermediate valence of Li, H2O2 can reduce Co(III) to Co (II) and thus facilitate the forward reaction. The result shows that the amount of H2O2 was sufficient for the complete dissolution of lithium, as further increasing the concentration of H2O2 did not show a significant effect in the recovery efficiency compared to consumption of expensive of lithium. Considering lower energy consumption and relatively better leaching efficiency, the suitable leaching agent was HCl without H2O2.",
+      "parent_process": null,
+      "source_mark": "evidence_reviewed_revision"
+    }
+  ],
+  "removed_unreferenced_entities": [],
+  "view_counts": {
+    "triples": 3,
+    "filtered_triples": 2,
+    "relations": 3,
+    "evidence_relations": 3
+  },
+  "original_final_count": 27,
+  "corrected_final_count": 29
+}

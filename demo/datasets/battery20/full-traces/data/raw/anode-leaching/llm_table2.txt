@@ -1,0 +1,666 @@
+[
+  {
+    "chunk_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)__table__TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+    "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+    "result": {
+      "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+      "entity_count": 6,
+      "relation_count": 5,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "entities": [
+        {
+          "id": "table_ir_ent_001",
+          "name": "anode active materials from spent LIBs",
+          "mention_text": "anode active materials from spent LIBs",
+          "type": "Material",
+          "source": "table:TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "literal",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_002",
+          "name": "Lithium",
+          "mention_text": "Li",
+          "type": "Material",
+          "source": "table:TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+          "synonyms": [
+            "Li"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_003",
+          "name": "Copper",
+          "mention_text": "Cu",
+          "type": "Material",
+          "source": "table:TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+          "synonyms": [
+            "Cu"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 2
+          }
+        },
+        {
+          "id": "table_ir_ent_004",
+          "name": "Co",
+          "mention_text": "Co",
+          "type": "Material",
+          "source": "table:TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+          "synonyms": [
+            "Co(III)",
+            "Co (II)",
+            "cobalt",
+            "Cobalt"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 3
+          }
+        },
+        {
+          "id": "table_ir_ent_005",
+          "name": "Nickel",
+          "mention_text": "Ni",
+          "type": "Material",
+          "source": "table:TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+          "synonyms": [
+            "Ni"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 4
+          }
+        },
+        {
+          "id": "table_ir_ent_006",
+          "name": "Iron",
+          "mention_text": "Fe",
+          "type": "Material",
+          "source": "table:TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+          "synonyms": [
+            "Fe"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 5
+          }
+        }
+      ],
+      "relations": [
+        {
+          "id": "table_ir_rel_001",
+          "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+          "table_title": "Table 1 Chemical analysis of active materials from spent LIBs.",
+          "source_id": "table_ir_ent_001",
+          "source_name": "anode active materials from spent LIBs",
+          "target_id": "table_ir_ent_002",
+          "target_name": "Lithium",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001 row 1, column 1 (Li^+): 30.07",
+          "attributes": {
+            "property": "metal content",
+            "template_id": "step_1",
+            "unit": "mg_per_g",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+            "row_idx": 1,
+            "col_idx": 1,
+            "row_label": "Content (mg/g)",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Li^+",
+            "column_descriptor": {
+              "id": "c1",
+              "index": 1,
+              "flat_label": "Li^+",
+              "header_path": [
+                "Li^+"
+              ],
+              "header_leaf": "Li^+",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Li^+",
+                  "header_row": 0,
+                  "column": 1
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Li",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001 row 1, column 1 (Li^+): 30.07",
+            "value": "30.07",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "30.07",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                1,
+                1
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_002",
+          "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+          "table_title": "Table 1 Chemical analysis of active materials from spent LIBs.",
+          "source_id": "table_ir_ent_001",
+          "source_name": "anode active materials from spent LIBs",
+          "target_id": "table_ir_ent_003",
+          "target_name": "Copper",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001 row 1, column 2 (Cu^2+): 2.87",
+          "attributes": {
+            "property": "metal content",
+            "template_id": "step_1",
+            "unit": "mg_per_g",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+            "row_idx": 1,
+            "col_idx": 2,
+            "row_label": "Content (mg/g)",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Cu^2+",
+            "column_descriptor": {
+              "id": "c2",
+              "index": 2,
+              "flat_label": "Cu^2+",
+              "header_path": [
+                "Cu^2+"
+              ],
+              "header_leaf": "Cu^2+",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Cu^2+",
+                  "header_row": 0,
+                  "column": 2
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Cu",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001 row 1, column 2 (Cu^2+): 2.87",
+            "value": "2.87",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "2.87",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                2,
+                2
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_003",
+          "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+          "table_title": "Table 1 Chemical analysis of active materials from spent LIBs.",
+          "source_id": "table_ir_ent_001",
+          "source_name": "anode active materials from spent LIBs",
+          "target_id": "table_ir_ent_004",
+          "target_name": "Co",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001 row 1, column 3 (Co^2+): 0.34",
+          "attributes": {
+            "property": "metal content",
+            "template_id": "step_1",
+            "unit": "mg_per_g",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+            "row_idx": 1,
+            "col_idx": 3,
+            "row_label": "Content (mg/g)",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Co^2+",
+            "column_descriptor": {
+              "id": "c3",
+              "index": 3,
+              "flat_label": "Co^2+",
+              "header_path": [
+                "Co^2+"
+              ],
+              "header_leaf": "Co^2+",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Co^2+",
+                  "header_row": 0,
+                  "column": 3
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Co",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001 row 1, column 3 (Co^2+): 0.34",
+            "value": "0.34",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "0.34",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                3,
+                3
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_004",
+          "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+          "table_title": "Table 1 Chemical analysis of active materials from spent LIBs.",
+          "source_id": "table_ir_ent_001",
+          "source_name": "anode active materials from spent LIBs",
+          "target_id": "table_ir_ent_005",
+          "target_name": "Nickel",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001 row 1, column 4 (Ni^+): 0.03",
+          "attributes": {
+            "property": "metal content",
+            "template_id": "step_1",
+            "unit": "mg_per_g",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+            "row_idx": 1,
+            "col_idx": 4,
+            "row_label": "Content (mg/g)",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Ni^+",
+            "column_descriptor": {
+              "id": "c4",
+              "index": 4,
+              "flat_label": "Ni^+",
+              "header_path": [
+                "Ni^+"
+              ],
+              "header_leaf": "Ni^+",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Ni^+",
+                  "header_row": 0,
+                  "column": 4
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Ni",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001 row 1, column 4 (Ni^+): 0.03",
+            "value": "0.03",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "0.03",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                4,
+                4
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_005",
+          "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+          "table_title": "Table 1 Chemical analysis of active materials from spent LIBs.",
+          "source_id": "table_ir_ent_001",
+          "source_name": "anode active materials from spent LIBs",
+          "target_id": "table_ir_ent_006",
+          "target_name": "Iron",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001 row 1, column 5 (Fe^3+): 0.07",
+          "attributes": {
+            "property": "metal content",
+            "template_id": "step_1",
+            "unit": "mg_per_g",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+            "row_idx": 1,
+            "col_idx": 5,
+            "row_label": "Content (mg/g)",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Fe^3+",
+            "column_descriptor": {
+              "id": "c5",
+              "index": 5,
+              "flat_label": "Fe^3+",
+              "header_path": [
+                "Fe^3+"
+              ],
+              "header_leaf": "Fe^3+",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Fe^3+",
+                  "header_row": 0,
+                  "column": 5
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Fe",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001 row 1, column 5 (Fe^3+): 0.07",
+            "value": "0.07",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "0.07",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                5,
+                5
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        }
+      ],
+      "conditions": [],
+      "context_records": [],
+      "table_structure": {
+        "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+        "extraction_mode": "semantic_ir",
+        "table_role": "target_composition",
+        "extractability": {
+          "decision": "extract",
+          "table_role": "target_composition",
+          "reason": "Table 1 reports metal content (mg/g) of Li, Cu, Co, Ni, and Fe in anode active materials from spent LIBs, matching the allowed target_composition fact type.",
+          "confidence": 0.95,
+          "gate_decision": "extract",
+          "gate_table_role": "target_composition"
+        },
+        "layout": null
+      },
+      "source_table": {
+        "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001",
+        "page_number": 4,
+        "caption": "Table 1 Chemical analysis of active materials from spent LIBs.",
+        "section": "3.1. Characterization of the anode active materials in spent LIBs",
+        "explicit_references": [
+          "Table 1 shows the metal compositions of the anode active materials."
+        ],
+        "headers": [
+          "Element",
+          "Li^+",
+          "Cu^2+",
+          "Co^2+",
+          "Ni^+",
+          "Fe^3+"
+        ],
+        "header_rows": [
+          [
+            "Element",
+            "Li^+",
+            "Cu^2+",
+            "Co^2+",
+            "Ni^+",
+            "Fe^3+"
+          ]
+        ],
+        "column_descriptors": [
+          {
+            "id": "c0",
+            "index": 0,
+            "flat_label": "Element",
+            "header_path": [
+              "Element"
+            ],
+            "header_leaf": "Element",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Element",
+                "header_row": 0,
+                "column": 0
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c1",
+            "index": 1,
+            "flat_label": "Li^+",
+            "header_path": [
+              "Li^+"
+            ],
+            "header_leaf": "Li^+",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Li^+",
+                "header_row": 0,
+                "column": 1
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c2",
+            "index": 2,
+            "flat_label": "Cu^2+",
+            "header_path": [
+              "Cu^2+"
+            ],
+            "header_leaf": "Cu^2+",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Cu^2+",
+                "header_row": 0,
+                "column": 2
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c3",
+            "index": 3,
+            "flat_label": "Co^2+",
+            "header_path": [
+              "Co^2+"
+            ],
+            "header_leaf": "Co^2+",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Co^2+",
+                "header_row": 0,
+                "column": 3
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c4",
+            "index": 4,
+            "flat_label": "Ni^+",
+            "header_path": [
+              "Ni^+"
+            ],
+            "header_leaf": "Ni^+",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Ni^+",
+                "header_row": 0,
+                "column": 4
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c5",
+            "index": 5,
+            "flat_label": "Fe^3+",
+            "header_path": [
+              "Fe^3+"
+            ],
+            "header_leaf": "Fe^3+",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Fe^3+",
+                "header_row": 0,
+                "column": 5
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          }
+        ],
+        "unit_scope_candidates": [],
+        "rows": [
+          [
+            "Content (mg/g)",
+            "30.07",
+            "2.87",
+            "0.34",
+            "0.03",
+            "0.07"
+          ]
+        ],
+        "row_contexts": [],
+        "notes": [],
+        "raw_markdown": "| Element | Li^+ | Cu^2+ | Co^2+ | Ni^+ | Fe^3+ |\n| --- | --- | --- | --- | --- | --- |\n| Content (mg/g) | 30.07 | 2.87 | 0.34 | 0.03 | 0.07 |",
+        "position_start": 12942,
+        "position_end": 13070,
+        "source": "mineru_content_list",
+        "source_kind": "standalone_table",
+        "layout_context": {
+          "previous_block_type": "chart",
+          "next_block_type": "text",
+          "between_image_blocks": false
+        },
+        "raw_html": "<table><tr><td>Element</td><td> $Li^{+}$ </td><td> $Cu^{2+}$ </td><td> $Co^{2+}$ </td><td> $Ni^{+}$ </td><td> $Fe^{3+}$ </td></tr><tr><td>Content (mg/g)</td><td>30.07</td><td>2.87</td><td>0.34</td><td>0.03</td><td>0.07</td></tr></table>",
+        "image_path": "images/edf010c5b48b39fec0dd0ef4b8a10b10db4afeae6e48b006dff8f478a400f401.jpg",
+        "bbox": [
+          50,
+          532,
+          477,
+          566
+        ],
+        "metadata": {
+          "table_reference_sentences": [
+            "Table 1 shows the metal compositions of the anode active materials."
+          ]
+        },
+        "table_reference_sentences": [
+          "Table 1 shows the metal compositions of the anode active materials."
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,583 @@
+[
+  {
+    "chunk_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation__table__TABLE_A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation_0001",
+    "table_id": "TABLE_A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation_0001",
+    "llm_raw_response": "## TABLE_ROLE_GATE_RESPONSE\n{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"process_output\",\"confidence\":0.85,\"causal_role\":{\"source_object\":\"LiCoO2 powder (raw material)\",\"transformation\":\"grinding\",\"measured_object\":\"carbon chemical states on LiCoO2 powder surface\",\"measured_quantity\":\"atomic percent (At.%) of carbon species\",\"evidence_role\":\"treatment_outcome\"},\"region_roles\":[{\"row_range\":[1,7],\"role\":\"target_measurement\",\"reason\":\"Rows report carbon species atomic percentages before and after grinding, quantifying surface carbon changes caused by the treatment.\"}],\"extract_row_ranges\":[[1,7]],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Chemical states of carbon in the surface of LiCoO2 powder before and after grinding.\",\"judgment\":\"supports_extract\",\"reason\":\"Caption explicitly reports a treatment (grinding) outcome on target material surface composition.\"},{\"step\":\"headers\",\"evidence\":\"Raw materials At.% vs Grinding products At.%\",\"judgment\":\"supports_extract\",\"reason\":\"Columns compare pre- and post-treatment atomic percentages, confirming treatment outcome measurement.\"},{\"step\":\"row_preview\",\"evidence\":\"Graphite 30.29 -> 54.81 At.%; C-C/C-H 18.74 -> 14.75 At.%\",\"judgment\":\"supports_extract\",\"reason\":\"Numeric changes in carbon species after grinding quantify target-bearing surface composition change.\"}],\"allowed_fact_types\":[\"carbon_species_atomic_percent_before_grinding\",\"carbon_species_atomic_percent_after_grinding\",\"binding_energy_of_carbon_species\"],\"excluded_fact_types\":[\"economic_value\",\"literature_summary\",\"biological_metabolite\"],\"allowed_relation_types\":[],\"ir_instruction\":\"Extract carbon chemical state measurements (binding energy, species name, atomic percent) for raw material and grinding product as treatment outcome facts.\",\"uncertainty\":\"None significant; caption and headers clearly indicate pre/post grinding surface carbon composition.\"}}\n\n## SEMANTIC_IR_RESPONSE\n{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"process_output\",\n      \"reason\": \"Table reports carbon chemical states (binding energy, species name, atomic percent) on LiCoO2 powder surface before and after grinding, a treatment outcome.\",\n      \"confidence\": 0.9\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 0,\n        \"raw_header\": \"Peak BE/eV\",\n        \"entity_text\": \"Peak BE\",\n        \"entity_type\": \"Observation\",\n        \"unit_text\": \"eV\",\n        \"measure_text\": \"Peak BE\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 1,\n        \"raw_header\": \"Name\",\n        \"entity_text\": \"Name\",\n        \"entity_type\": \"Material\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"Raw materials At.%\",\n        \"entity_text\": \"Raw materials\",\n        \"entity_type\": \"Material\",\n        \"unit_text\": \"At.%\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 3,\n        \"raw_header\": \"Grinding products At.%\",\n        \"entity_text\": \"Grinding products\",\n        \"entity_type\": \"Material\",\n        \"unit_text\": \"At.%\",\n        \"confidence\": 0.9\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\"selector\": \"all_rows\"},\n          \"cols\": {\"selector\": \"columns\", \"columns\": [0]}\n        },\n        \"bind\": {\n          \"observed_entity\": {\"from\": \"row[1]\", \"type\": \"Material\"},\n          \"observation\": {\"from\": \"column.semantic.entity_text\", \"type\": \"Observation\"},\n          \"value\": {\"from\": \"cell\", \"parser\": \"number\"},\n          \"unit\": {\"from\": \"column.semantic.unit_text\"}\n        },\n        \"emit\": {\n          \"source\": \"observed_entity\",\n          \"predicate\": \"HAS_OBSERVATION\",\n          \"target\": \"observation\",\n          \"property\": \"Peak BE\",\n          \"value\": \"value\",\n          \"unit\": \"unit\"\n        }\n      },\n      {\n        \"step_id\": \"step_2\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\"selector\": \"all_rows\"},\n          \"cols\": {\"selector\": \"columns\", \"columns\": [2]}\n        },\n        \"bind\": {\n          \"container\": {\"from\": \"column.semantic.entity_text\", \"type\": \"Material\"},\n          \"constituent\": {\"from\": \"row[1]\", \"type\": \"Material\"},\n          \"value\": {\"from\": \"cell\", \"parser\": \"number\"},\n          \"unit\": {\"from\": \"column.semantic.unit_text\"}\n        },\n        \"emit\": {\n          \"source\": \"container\",\n          \"predicate\": \"CONTAINS\",\n          \"target\": \"constituent\",\n          \"value\": \"value\",\n          \"unit\": \"unit\"\n        }\n      },\n      {\n        \"step_id\": \"step_3\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\"selector\": \"all_rows\"},\n          \"cols\": {\"selector\": \"columns\", \"columns\": [3]}\n        },\n        \"bind\": {\n          \"container\": {\"from\": \"column.semantic.entity_text\", \"type\": \"Material\"},\n          \"constituent\": {\"from\": \"row[1]\", \"type\": \"Material\"},\n          \"value\": {\"from\": \"cell\", \"parser\": \"number\"},\n          \"unit\": {\"from\": \"column.semantic.unit_text\"}\n        },\n        \"emit\": {\n          \"source\": \"container\",\n          \"predicate\": \"CONTAINS\",\n          \"target\": \"constituent\",\n          \"value\": \"value\",\n          \"unit\": \"unit\"\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"Step 1 emits HAS_OBSERVATION for Peak BE (eV) of each carbon species. Steps 2 and 3 emit CONTAINS for atomic percent of each carbon species in raw materials and grinding products, respectively.\",\n      \"uncertainties\": [\n        \"Column 1 'Name' is treated as Material (carbon species); no explicit type in header.\",\n        \"Columns 2 and 3 headers are treated as Material containers for composition; 'Raw materials' and 'Grinding products' are not explicitly typed as Material in the table.\"\n      ]\n    }\n  }\n}",
+    "llm_gate_response": "{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"process_output\",\"confidence\":0.85,\"causal_role\":{\"source_object\":\"LiCoO2 powder (raw material)\",\"transformation\":\"grinding\",\"measured_object\":\"carbon chemical states on LiCoO2 powder surface\",\"measured_quantity\":\"atomic percent (At.%) of carbon species\",\"evidence_role\":\"treatment_outcome\"},\"region_roles\":[{\"row_range\":[1,7],\"role\":\"target_measurement\",\"reason\":\"Rows report carbon species atomic percentages before and after grinding, quantifying surface carbon changes caused by the treatment.\"}],\"extract_row_ranges\":[[1,7]],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Chemical states of carbon in the surface of LiCoO2 powder before and after grinding.\",\"judgment\":\"supports_extract\",\"reason\":\"Caption explicitly reports a treatment (grinding) outcome on target material surface composition.\"},{\"step\":\"headers\",\"evidence\":\"Raw materials At.% vs Grinding products At.%\",\"judgment\":\"supports_extract\",\"reason\":\"Columns compare pre- and post-treatment atomic percentages, confirming treatment outcome measurement.\"},{\"step\":\"row_preview\",\"evidence\":\"Graphite 30.29 -> 54.81 At.%; C-C/C-H 18.74 -> 14.75 At.%\",\"judgment\":\"supports_extract\",\"reason\":\"Numeric changes in carbon species after grinding quantify target-bearing surface composition change.\"}],\"allowed_fact_types\":[\"carbon_species_atomic_percent_before_grinding\",\"carbon_species_atomic_percent_after_grinding\",\"binding_energy_of_carbon_species\"],\"excluded_fact_types\":[\"economic_value\",\"literature_summary\",\"biological_metabolite\"],\"allowed_relation_types\":[],\"ir_instruction\":\"Extract carbon chemical state measurements (binding energy, species name, atomic percent) for raw material and grinding product as treatment outcome facts.\",\"uncertainty\":\"None significant; caption and headers clearly indicate pre/post grinding surface carbon composition.\"}}",
+    "llm_ir_response": "{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"process_output\",\n      \"reason\": \"Table reports carbon chemical states (binding energy, species name, atomic percent) on LiCoO2 powder surface before and after grinding, a treatment outcome.\",\n      \"confidence\": 0.9\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 0,\n        \"raw_header\": \"Peak BE/eV\",\n        \"entity_text\": \"Peak BE\",\n        \"entity_type\": \"Observation\",\n        \"unit_text\": \"eV\",\n        \"measure_text\": \"Peak BE\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 1,\n        \"raw_header\": \"Name\",\n        \"entity_text\": \"Name\",\n        \"entity_type\": \"Material\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"Raw materials At.%\",\n        \"entity_text\": \"Raw materials\",\n        \"entity_type\": \"Material\",\n        \"unit_text\": \"At.%\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 3,\n        \"raw_header\": \"Grinding products At.%\",\n        \"entity_text\": \"Grinding products\",\n        \"entity_type\": \"Material\",\n        \"unit_text\": \"At.%\",\n        \"confidence\": 0.9\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\"selector\": \"all_rows\"},\n          \"cols\": {\"selector\": \"columns\", \"columns\": [0]}\n        },\n        \"bind\": {\n          \"observed_entity\": {\"from\": \"row[1]\", \"type\": \"Material\"},\n          \"observation\": {\"from\": \"column.semantic.entity_text\", \"type\": \"Observation\"},\n          \"value\": {\"from\": \"cell\", \"parser\": \"number\"},\n          \"unit\": {\"from\": \"column.semantic.unit_text\"}\n        },\n        \"emit\": {\n          \"source\": \"observed_entity\",\n          \"predicate\": \"HAS_OBSERVATION\",\n          \"target\": \"observation\",\n          \"property\": \"Peak BE\",\n          \"value\": \"value\",\n          \"unit\": \"unit\"\n        }\n      },\n      {\n        \"step_id\": \"step_2\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\"selector\": \"all_rows\"},\n          \"cols\": {\"selector\": \"columns\", \"columns\": [2]}\n        },\n        \"bind\": {\n          \"container\": {\"from\": \"column.semantic.entity_text\", \"type\": \"Material\"},\n          \"constituent\": {\"from\": \"row[1]\", \"type\": \"Material\"},\n          \"value\": {\"from\": \"cell\", \"parser\": \"number\"},\n          \"unit\": {\"from\": \"column.semantic.unit_text\"}\n        },\n        \"emit\": {\n          \"source\": \"container\",\n          \"predicate\": \"CONTAINS\",\n          \"target\": \"constituent\",\n          \"value\": \"value\",\n          \"unit\": \"unit\"\n        }\n      },\n      {\n        \"step_id\": \"step_3\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\"selector\": \"all_rows\"},\n          \"cols\": {\"selector\": \"columns\", \"columns\": [3]}\n        },\n        \"bind\": {\n          \"container\": {\"from\": \"column.semantic.entity_text\", \"type\": \"Material\"},\n          \"constituent\": {\"from\": \"row[1]\", \"type\": \"Material\"},\n          \"value\": {\"from\": \"cell\", \"parser\": \"number\"},\n          \"unit\": {\"from\": \"column.semantic.unit_text\"}\n        },\n        \"emit\": {\n          \"source\": \"container\",\n          \"predicate\": \"CONTAINS\",\n          \"target\": \"constituent\",\n          \"value\": \"value\",\n          \"unit\": \"unit\"\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"Step 1 emits HAS_OBSERVATION for Peak BE (eV) of each carbon species. Steps 2 and 3 emit CONTAINS for atomic percent of each carbon species in raw materials and grinding products, respectively.\",\n      \"uncertainties\": [\n        \"Column 1 'Name' is treated as Material (carbon species); no explicit type in header.\",\n        \"Columns 2 and 3 headers are treated as Material containers for composition; 'Raw materials' and 'Grinding products' are not explicitly typed as Material in the table.\"\n      ]\n    }\n  }\n}",
+    "table_role_decision": {
+      "decision": "extract",
+      "table_role": "process_output",
+      "confidence": 0.85,
+      "causal_role": {
+        "source_object": "LiCoO2 powder (raw material)",
+        "transformation": "grinding",
+        "measured_object": "carbon chemical states on LiCoO2 powder surface",
+        "measured_quantity": "atomic percent (At.%) of carbon species",
+        "evidence_role": "treatment_outcome"
+      },
+      "region_roles": [
+        {
+          "row_range": [
+            1,
+            7
+          ],
+          "role": "target_measurement",
+          "reason": "Rows report carbon species atomic percentages before and after grinding, quantifying surface carbon changes caused by the treatment."
+        }
+      ],
+      "extract_row_ranges": [
+        [
+          1,
+          7
+        ]
+      ],
+      "caption_sufficient": true,
+      "evidence_steps": [
+        {
+          "step": "caption",
+          "evidence": "Chemical states of carbon in the surface of LiCoO2 powder before and after grinding.",
+          "judgment": "supports_extract",
+          "reason": "Caption explicitly reports a treatment (grinding) outcome on target material surface composition."
+        },
+        {
+          "step": "headers",
+          "evidence": "Raw materials At.% vs Grinding products At.%",
+          "judgment": "supports_extract",
+          "reason": "Columns compare pre- and post-treatment atomic percentages, confirming treatment outcome measurement."
+        },
+        {
+          "step": "row_preview",
+          "evidence": "Graphite 30.29 -> 54.81 At.%; C-C/C-H 18.74 -> 14.75 At.%",
+          "judgment": "supports_extract",
+          "reason": "Numeric changes in carbon species after grinding quantify target-bearing surface composition change."
+        }
+      ],
+      "allowed_fact_types": [
+        "carbon_species_atomic_percent_before_grinding",
+        "carbon_species_atomic_percent_after_grinding",
+        "binding_energy_of_carbon_species"
+      ],
+      "excluded_fact_types": [
+        "economic_value",
+        "literature_summary",
+        "biological_metabolite"
+      ],
+      "allowed_relation_types": [],
+      "ir_instruction": "Extract carbon chemical state measurements (binding energy, species name, atomic percent) for raw material and grinding product as treatment outcome facts.",
+      "uncertainty": "None significant; caption and headers clearly indicate pre/post grinding surface carbon composition."
+    },
+    "llm_interpretation": {
+      "semantic_ir": {
+        "extractability": {
+          "decision": "extract",
+          "table_role": "process_output",
+          "reason": "Table reports carbon chemical states (binding energy, species name, atomic percent) on LiCoO2 powder surface before and after grinding, a treatment outcome.",
+          "confidence": 0.9
+        },
+        "column_semantics": [
+          {
+            "column": 0,
+            "raw_header": "Peak BE/eV",
+            "entity_text": "Peak BE",
+            "entity_type": "Observation",
+            "unit_text": "eV",
+            "measure_text": "Peak BE",
+            "confidence": 0.95
+          },
+          {
+            "column": 1,
+            "raw_header": "Name",
+            "entity_text": "Name",
+            "entity_type": "Material",
+            "confidence": 0.9
+          },
+          {
+            "column": 2,
+            "raw_header": "Raw materials At.%",
+            "entity_text": "Raw materials",
+            "entity_type": "Material",
+            "unit_text": "At.%",
+            "confidence": 0.9
+          },
+          {
+            "column": 3,
+            "raw_header": "Grinding products At.%",
+            "entity_text": "Grinding products",
+            "entity_type": "Material",
+            "unit_text": "At.%",
+            "confidence": 0.9
+          }
+        ],
+        "program": [
+          {
+            "step_id": "step_1",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "all_rows"
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  0
+                ]
+              }
+            },
+            "bind": {
+              "observed_entity": {
+                "from": "row[1]",
+                "type": "Material"
+              },
+              "observation": {
+                "from": "column.semantic.entity_text",
+                "type": "Observation"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column.semantic.unit_text"
+              }
+            },
+            "emit": {
+              "source": "observed_entity",
+              "predicate": "HAS_OBSERVATION",
+              "target": "observation",
+              "property": "Peak BE",
+              "value": "value",
+              "unit": "unit"
+            }
+          },
+          {
+            "step_id": "step_2",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "all_rows"
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  2
+                ]
+              }
+            },
+            "bind": {
+              "container": {
+                "from": "column.semantic.entity_text",
+                "type": "Material"
+              },
+              "constituent": {
+                "from": "row[1]",
+                "type": "Material"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column.semantic.unit_text"
+              }
+            },
+            "emit": {
+              "source": "container",
+              "predicate": "CONTAINS",
+              "target": "constituent",
+              "value": "value",
+              "unit": "unit"
+            }
+          },
+          {
+            "step_id": "step_3",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "all_rows"
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  3
+                ]
+              }
+            },
+            "bind": {
+              "container": {
+                "from": "column.semantic.entity_text",
+                "type": "Material"
+              },
+              "constituent": {
+                "from": "row[1]",
+                "type": "Material"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column.semantic.unit_text"
+              }
+            },
+            "emit": {
+              "source": "container",
+              "predicate": "CONTAINS",
+              "target": "constituent",
+              "value": "value",
+              "unit": "unit"
+            }
+          }
+        ],
+        "context_program": [],
+        "rationale": {
+          "binding_summary": "Step 1 emits HAS_OBSERVATION for Peak BE (eV) of each carbon species. Steps 2 and 3 emit CONTAINS for atomic percent of each carbon species in raw materials and grinding products, respectively.",
+          "uncertainties": [
+            "Column 1 'Name' is treated as Material (carbon species); no explicit type in header.",
+            "Columns 2 and 3 headers are treated as Material containers for composition; 'Raw materials' and 'Grinding products' are not explicitly typed as Material in the table."
+          ]
+        }
+      }
+    },
+    "semantic_ir": {
+      "extractability": {
+        "decision": "extract",
+        "table_role": "process_output",
+        "reason": "Table reports carbon chemical states (binding energy, species name, atomic percent) on LiCoO2 powder surface before and after grinding, a treatment outcome.",
+        "confidence": 0.85,
+        "gate_decision": "extract",
+        "gate_table_role": "process_output"
+      },
+      "column_semantics": [
+        {
+          "column": 0,
+          "raw_header": "Peak BE/eV",
+          "entity_text": "Peak BE",
+          "entity_type": "Observation",
+          "unit_text": "eV",
+          "measure_text": "Peak BE",
+          "confidence": 0.95
+        },
+        {
+          "column": 1,
+          "raw_header": "Name",
+          "entity_text": "Name",
+          "entity_type": "Material",
+          "confidence": 0.9
+        },
+        {
+          "column": 2,
+          "raw_header": "Raw materials At.%",
+          "entity_text": "Raw materials",
+          "entity_type": "Material",
+          "unit_text": "At.%",
+          "confidence": 0.9
+        },
+        {
+          "column": 3,
+          "raw_header": "Grinding products At.%",
+          "entity_text": "Grinding products",
+          "entity_type": "Material",
+          "unit_text": "At.%",
+          "confidence": 0.9
+        }
+      ],
+      "program": [
+        {
+          "step_id": "step_1",
+          "op": "foreach_cell",
+          "select": {
+            "rows": {
+              "selector": "row_ranges",
+              "row_ranges": [
+                [
+                  1,
+                  7
+                ]
+              ]
+            },
+            "cols": {
+              "selector": "columns",
+              "columns": [
+                0
+              ]
+            }
+          },
+          "bind": {
+            "observed_entity": {
+              "from": "row[1]",
+              "type": "Material"
+            },
+            "observation": {
+              "from": "column.semantic.entity_text",
+              "type": "Observation"
+            },
+            "value": {
+              "from": "cell",
+              "parser": "number"
+            },
+            "unit": {
+              "from": "column.semantic.unit_text"
+            }
+          },
+          "emit": {
+            "source": "observed_entity",
+            "predicate": "HAS_OBSERVATION",
+            "target": "observation",
+            "property": "Peak BE",
+            "value": "value",
+            "unit": "unit"
+          }
+        },
+        {
+          "step_id": "step_2",
+          "op": "foreach_cell",
+          "select": {
+            "rows": {
+              "selector": "row_ranges",
+              "row_ranges": [
+                [
+                  1,
+                  7
+                ]
+              ]
+            },
+            "cols": {
+              "selector": "columns",
+              "columns": [
+                2
+              ]
+            }
+          },
+          "bind": {
+            "container": {
+              "from": "column.semantic.entity_text",
+              "type": "Material"
+            },
+            "constituent": {
+              "from": "row[1]",
+              "type": "Material"
+            },
+            "value": {
+              "from": "cell",
+              "parser": "number"
+            },
+            "unit": {
+              "from": "column.semantic.unit_text"
+            }
+          },
+          "emit": {
+            "source": "container",
+            "predicate": "CONTAINS",
+            "target": "constituent",
+            "value": "value",
+            "unit": "unit"
+          }
+        },
+        {
+          "step_id": "step_3",
+          "op": "foreach_cell",
+          "select": {
+            "rows": {
+              "selector": "row_ranges",
+              "row_ranges": [
+                [
+                  1,
+                  7
+                ]
+              ]
+            },
+            "cols": {
+              "selector": "columns",
+              "columns": [
+                3
+              ]
+            }
+          },
+          "bind": {
+            "container": {
+              "from": "column.semantic.entity_text",
+              "type": "Material"
+            },
+            "constituent": {
+              "from": "row[1]",
+              "type": "Material"
+            },
+            "value": {
+              "from": "cell",
+              "parser": "number"
+            },
+            "unit": {
+              "from": "column.semantic.unit_text"
+            }
+          },
+          "emit": {
+            "source": "container",
+            "predicate": "CONTAINS",
+            "target": "constituent",
+            "value": "value",
+            "unit": "unit"
+          }
+        }
+      ],
+      "context_program": [],
+      "rationale": {
+        "binding_summary": "Step 1 emits HAS_OBSERVATION for Peak BE (eV) of each carbon species. Steps 2 and 3 emit CONTAINS for atomic percent of each carbon species in raw materials and grinding products, respectively.",
+        "uncertainties": [
+          "Column 1 'Name' is treated as Material (carbon species); no explicit type in header.",
+          "Columns 2 and 3 headers are treated as Material containers for composition; 'Raw materials' and 'Grinding products' are not explicitly typed as Material in the table."
+        ]
+      },
+      "table_id": "TABLE_A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation_0001"
+    },
+    "table_structure": {
+      "table_id": "TABLE_A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation_0001",
+      "extraction_mode": "semantic_ir",
+      "table_role": "process_output",
+      "extractability": {
+        "decision": "extract",
+        "table_role": "process_output",
+        "reason": "Table reports carbon chemical states (binding energy, species name, atomic percent) on LiCoO2 powder surface before and after grinding, a treatment outcome.",
+        "confidence": 0.85,
+        "gate_decision": "extract",
+        "gate_table_role": "process_output"
+      },
+      "layout": null
+    },
+    "verification_report": {
+      "status": "passed",
+      "skip_reason": null,
+      "cell_grounded_relations": 21,
+      "entity_count": 10,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "unsupported_templates": [],
+      "scope_rejections": [],
+      "domain_range_rejections": [],
+      "aggregate_row_diagnostics": [],
+      "unresolved_endpoint_types": [],
+      "unresolved_type_facts": [],
+      "semantic_gate": [],
+      "slot_binding_conflicts": [
+        {
+          "status": "slot_binding_conflict",
+          "check_type": "unbound_measure_basis",
+          "severity": "warning",
+          "template_id": "step_1",
+          "column": 0,
+          "declared_text": "Peak BE",
+          "reason": "column 0 declares measure_text='Peak BE' but emit.conditions never binds column.semantic.measure_text"
+        },
+        {
+          "status": "slot_binding_conflict",
+          "check_type": "unbound_measure_basis",
+          "severity": "warning",
+          "template_id": "step_2",
+          "column": 0,
+          "declared_text": "Peak BE",
+          "reason": "column 0 declares measure_text='Peak BE' but emit.conditions never binds column.semantic.measure_text"
+        },
+        {
+          "status": "slot_binding_conflict",
+          "check_type": "unbound_measure_basis",
+          "severity": "warning",
+          "template_id": "step_3",
+          "column": 0,
+          "declared_text": "Peak BE",
+          "reason": "column 0 declares measure_text='Peak BE' but emit.conditions never binds column.semantic.measure_text"
+        }
+      ],
+      "layout_program_mismatches": [],
+      "checked_templates": 3
+    },
+    "execution_trace": [
+      {
+        "template_id": "step_1",
+        "op": "foreach_cell",
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "columns": [
+          0
+        ],
+        "emitted": 7,
+        "skipped": 0
+      },
+      {
+        "template_id": "step_2",
+        "op": "foreach_cell",
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "columns": [
+          2
+        ],
+        "emitted": 7,
+        "skipped": 0
+      },
+      {
+        "template_id": "step_3",
+        "op": "foreach_cell",
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "columns": [
+          3
+        ],
+        "emitted": 7,
+        "skipped": 0
+      }
+    ],
+    "failed_rewrite_verification_report": null,
+    "failed_rewrite_execution_trace": null,
+    "table_cache_key": "f3b94c9423b23a949bf05615e154126e5896b1b3746e6f49570ee6d95fa8e468",
+    "table_cache_version": {
+      "format_version": 1,
+      "table_code_sha256": "f0dd5f4553ba60fa1f8dc3a9e2facb37220e0d8b94248c9976aea3179fbc8514",
+      "table_file_sha256": {
+        "__init__.py": "859afd37280303ac79ea652fcd1c347db6f6e9a7427d1bf201341ff92fdbb9f3",
+        "artifact_cache.py": "dae107568c3be648794486b4140f41386af8bd9d77b261dcf82505cef6e977aa",
+        "contract.py": "d537d95059e8a540b82872ffebe956d5e8fd43081e1ca630aa34b5a16359092a",
+        "cross_table_reference_resolver.py": "834fd5639f5b7dd79de0cd4b92943e3584283c02479a03e12c5b128f625bbf11",
+        "extraction_agent.py": "bd64ffbda3e1832704c44c090412041e0af71280c17c50aa2d189228fcaa31fa",
+        "ir/__init__.py": "388534b9fb9c0b6eae80334aef2e8eae376c73fca9ab48e74ddf4299bf50e425",
+        "ir/common.py": "53ca6b464bda54f2b4f95741c281e567c792a5206816f9164c8dc483dc347e8e",
+        "ir/context.py": "885b13c1bc0b1e48ad2e1eee5f466979adc657d6fc13abacf7b2330948999eea",
+        "ir/core.py": "cff62003caca13eaaf0abdd93828b601a5201f512fabfb630e07ac64bbf2758c",
+        "ir/executor.py": "aeea4593e5966a9de88854f303a1e1ccb522acc46fe70acbd20a0ace9f8bb072",
+        "ir/parsing.py": "d39fcd8d9ee08da4db6498ba63c1d6608615fa266d4d15de23d526aed0733c09",
+        "ir/policy.py": "c2ef18469dc2d402825a1559a860901927666dcc1fd1e80e3ec82669bb40d307",
+        "ir/runtime.py": "51aa3777823884bdabe06497e64d6cd04a5ce7d47e4674ddb0d7c378a4270059",
+        "ir/schema.py": "ba515d5e60c1c0ea8ae0d15b7265eb5926518452e796dc6973f7372ddf25f993",
+        "ir/selectors.py": "81b5606cc71f3ca6f4eaf848083e8d4b194b1c5a53f1cdf2832e439df6a456f1",
+        "ir/value_resolver.py": "feebb6a908f79b9c5975cc6cf7c657847522208a38d003f3b9cba9d8577864d8",
+        "ir/verifier.py": "44e33d3ca7e5c2305b845640d42e50777e591dedc47f07576446889101bfe1fa",
+        "reference_info.py": "eee0cd93396e9da1ba9682f94493de245543a8699d41fb4da2100c89e80d3782",
+        "repair/__init__.py": "05a749a9dd4f2c77ca79cd7b0cc2e00a8eae16d11cdf8f43ff26cd26e05639b9",
+        "repair/applier.py": "b380f43ab7a0e2451a981244b2ea5f43f9dd411081ed8dd10bdc43d9fe91e256",
+        "repair/local.py": "f5d94287673530f100c594b123765b99178a12a62dbc9f0e8f1fbcc58fb059bb",
+        "repair/prompt.py": "5e0f55f3e0da9e6d1093498562f699b41a5d3293fa1c4fd72c4bb4c81cfb6fc1",
+        "repair/schema.py": "2ed0bf5480b2a632aaa8b67c2cfee85fd2f8a5b21ebcfe22984ec5840d649d56",
+        "role_gate.py": "5211dc375d419d512eebc08da3126a42b7bcc188952128ce1a8f6c72536178d6"
+      }
+    }
+  }
+]

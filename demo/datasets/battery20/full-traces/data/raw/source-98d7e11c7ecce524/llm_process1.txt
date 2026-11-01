@@ -1,0 +1,66 @@
+{
+  "process_stages": [
+    {
+      "name": "hydrochloric acid leaching of recovered electrodes",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Hydrochloric acid was used to dissolve the recovered electrodes, and the influences of duration, temperature, and H+ concentration on leaching efficiency were studied."
+    },
+    {
+      "name": "chemical precipitation for Co and Li recovery",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": false,
+      "evidence_hint": "A chemical precipitation method was used to remove impurities in the solution and to recover Co and Li, in which the influence of pH was tested."
+    }
+  ],
+  "experiment_settings": [
+    {
+      "name": "hydrochloric acid leaching conditions",
+      "stage_name": "hydrochloric acid leaching of recovered electrodes",
+      "sample": "recovered electrodes",
+      "sample_aliases": [],
+      "treatment": "hydrochloric acid leaching",
+      "treatment_members": [
+        "hydrochloric acid"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "duration, temperature, and H+ concentration varied",
+      "evidence_hint": "Hydrochloric acid was used to dissolve recovered electrodes; influences of duration, temperature, and H+ concentration on leaching efficiency were studied."
+    },
+    {
+      "name": "chemical precipitation conditions",
+      "stage_name": "chemical precipitation for Co and Li recovery",
+      "sample": "leach solution",
+      "sample_aliases": [],
+      "treatment": "chemical precipitation",
+      "treatment_members": [],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "pH varied",
+      "evidence_hint": "Chemical precipitation was used to remove impurities and recover Co and Li; influence of pH was tested."
+    }
+  ],
+  "process_targets": [
+    {
+      "name": "hydrochloric acid leaching of recovered electrodes",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Hydrochloric acid was used to dissolve the recovered electrodes, and the influences of duration, temperature, and H+ concentration on leaching efficiency were studied."
+    },
+    {
+      "name": "chemical precipitation for Co and Li recovery",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": false,
+      "evidence_hint": "A chemical precipitation method was used to remove impurities in the solution and to recover Co and Li, in which the influence of pH was tested."
+    }
+  ]
+}

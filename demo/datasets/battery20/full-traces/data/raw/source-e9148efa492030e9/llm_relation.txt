@@ -1,0 +1,2596 @@
+[
+  {
+    "chunk_id": "CHUNK_text_ABSTRACT_9775600c",
+    "section_name": "ABSTRACT",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_1. Introduction_7fa291ae",
+    "section_name": "1. Introduction",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_2.1. Materials and reagents_b077d570",
+    "section_name": "2.1. Materials and reagents",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 2,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_particle_size_10_mm",
+          "name": "particle_size",
+          "type": "particle_size",
+          "value": "10 mm",
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_2.1. Materials and reagents_b077d570",
+            "text": "## 2. Experimental\n## 2.1. Materials and reagents\nThe cathode scrap, which are the cathodes used for manufacturing lithium-ion battery, was supplied by a local recycling company (Huayou Cobalt, China). Before leaching, the cathode scrap was cut into pieces with the size of 10 mm and dried at 60 ^∘𝖢 for 24 h. To determine the composition, the cathode scrap was dissolved with aqua regia solution (HNO3HCl = 1: 3, v / v) and sulfuric acid one after another. All chemical reagents were of analytical grade and all solutions were prepared with ultrapure water (Millipore Milli-Q). The leaching reagents are organic/inorganic acidic solutions (12 kinds of acids in Table S3) under certain concentrations, and the reductant is introduced to the reagents according to the leaching process.",
+            "parent_chunk_id": null,
+            "section_name": "2.1. Materials and reagents",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 9112,
+            "position_end": 9898,
+            "metadata": {
+              "chunk_id": "CHUNK_text_2.1. Materials and reagents_b077d570",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "2.1. Materials and reagents",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 9112,
+              "position_end": 9898,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "merged_from": [
+                "CHUNK_text_2. Experimental_b16d6b05"
+              ]
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Component_cathode",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Component_cathode",
+          "target_name": "cathode",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The cathode scrap, which are the cathodes used for manufacturing lithium-ion battery, was supplied by a local recycling company (Huayou Cobalt, China).",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "extra_qualifiers": "cathodes used for manufacturing lithium-ion battery",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "cathode",
+            "evidence_span": "The cathode scrap, which are the cathodes used for manufacturing lithium-ion battery, was supplied by a local recycling company (Huayou Cobalt, China).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_PROCESSED_BY_text_Process_acidic_leaching_of_cathode_scrap",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "target_name": "acidic leaching of cathode scrap",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Before leaching, the cathode scrap was cut into pieces with the size of 10 mm and dried at 60 ^∘𝖢 for 24 h.",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "cut into pieces with the size of 10 mm and dried at 60 ^∘𝖢 for 24 h",
+            "condition_keys": [
+              {
+                "key": "particle_size",
+                "value": "10 mm",
+                "unit": null,
+                "raw_text": "cut into pieces with the size of 10 mm and dried at 60 ^∘𝖢 for 24 h"
+              }
+            ],
+            "condition_labels": [
+              "cut into pieces with the size of 10 mm and dried at 60 ^∘𝖢 for 24 h"
+            ],
+            "condition": "cut into pieces with the size of 10 mm and dried at 60 ^∘𝖢 for 24 h",
+            "condition_ids": [
+              "CHUNK_text_2_1_Materials_and_reagents_b077d570__cond_particle_size_10_mm"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "acidic leaching of cathode scrap",
+            "evidence_span": "Before leaching, the cathode scrap was cut into pieces with the size of 10 mm and dried at 60 ^∘𝖢 for 24 h.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_2.2. Leaching process of cathode scrap_c47305c1",
+    "section_name": "2.2. Leaching process of cathode scrap",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 4,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_volume_50_0_ml",
+          "name": "volume",
+          "type": "volume",
+          "value": 50.0,
+          "unit": "mL",
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_2.2. Leaching process of cathode scrap_c47305c1",
+            "text": "## 2.2. Leaching process of cathode scrap\nThe cathode scrap was leached in a 50 mL sealed reactor which was placed in a temperature controlled shaking bath. The acidic solution was added to the reactor with a volume of 25 mL. The leaching conditions including acid species, acid concentration, reductant content and pH of the leaching solution were examined. Samples were taken out at leaching time of t (t ≤5 min) and identified by ICP-OES (ICP-OES, iCAP 6300, Radial, Thermo Scientific) to find the local leaching parameters for leaching speeds. After leaching, the residues (undissolved organic binder and conductive reagent) and Al foil were vacuum filtered immediately. The leachate was analyzed by ICP-OES to get the local leaching parameters of metals for recovery rate. The leaching speed and recovery rate are determined according to g = (C1 (M) x V) / (m (M) x t) x100 % (Eq. 1) h = (C2 (M) x V) / (m (M)) x100 % (Eq. 2) where g (wt%/min) is the leaching speed of metal M (M = Co, Li, Al) h (wt%) is the recovery rate of metal M (M = Co, Li, Al), t (min, ≤5) is the leaching time, C1 (M, g / L) is the concentration of metal M in the sample at t min, C (M, g/L) is the concentration of metal M in the leachate, V (L) is the volume of the leachant, m (M, g) is the mass of metal M in the cathode scrap.",
+            "parent_chunk_id": null,
+            "section_name": "2.2. Leaching process of cathode scrap",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 9898,
+            "position_end": 11213,
+            "metadata": {
+              "chunk_id": "CHUNK_text_2.2. Leaching process of cathode scrap_c47305c1",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "2.2. Leaching process of cathode scrap",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 9898,
+              "position_end": 11213,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Component_cathode_PROCESSED_BY_text_Process_acidic_leaching_of_cathode_scrap",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "target_name": "acidic leaching of cathode scrap",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The cathode scrap was leached in a 50 mL sealed reactor which was placed in a temperature controlled shaking bath.",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "50 mL sealed reactor, temperature controlled shaking bath, 25 mL acidic solution",
+            "condition_keys": [
+              {
+                "key": "volume",
+                "value": 50.0,
+                "unit": "mL",
+                "raw_text": "50 mL sealed reactor, temperature controlled shaking bath, 25 mL acidic solution"
+              }
+            ],
+            "condition_labels": [
+              "50 mL sealed reactor, temperature controlled shaking bath, 25 mL acidic solution"
+            ],
+            "condition": "50 mL sealed reactor, temperature controlled shaking bath, 25 mL acidic solution",
+            "condition_ids": [
+              "CHUNK_text_2_2_Leaching_process_of_cathode_scrap_c47305c1__cond_volume_50_0_ml"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "acidic leaching of cathode scrap",
+            "evidence_span": "The cathode scrap was leached in a 50 mL sealed reactor which was placed in a temperature controlled shaking bath.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "h (wt%) is the recovery rate of metal M (M = Co, Li, Al)",
+          "properties": {
+            "property": "recovery",
+            "unit": "wt%",
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "measurement_method": "ICP-OES",
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Co",
+            "evidence_span": "h (wt%) is the recovery rate of metal M (M = Co, Li, Al)",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "h (wt%) is the recovery rate of metal M (M = Co, Li, Al)",
+          "properties": {
+            "property": "recovery",
+            "unit": "wt%",
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "measurement_method": "ICP-OES",
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Li",
+            "evidence_span": "h (wt%) is the recovery rate of metal M (M = Co, Li, Al)",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Al",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "h (wt%) is the recovery rate of metal M (M = Co, Li, Al)",
+          "properties": {
+            "property": "recovery",
+            "unit": "wt%",
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "measurement_method": "ICP-OES",
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Al",
+            "evidence_span": "h (wt%) is the recovery rate of metal M (M = Co, Li, Al)",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_2.3. Characterization_5d4f37e7",
+    "section_name": "2.3. Characterization",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 3,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Material_Al",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The concentrations of Al, Co and Li in leaching solutions were measured by inductively coupled plasma optical emission spectrometer (ICP-OES).",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "measurement_method": "ICP-OES",
+            "extra_qualifiers": "leaching solutions",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "Al",
+            "evidence_span": "The concentrations of Al, Co and Li in leaching solutions were measured by inductively coupled plasma optical emission spectrometer (ICP-OES).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Material_Co",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The concentrations of Al, Co and Li in leaching solutions were measured by inductively coupled plasma optical emission spectrometer (ICP-OES).",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "measurement_method": "ICP-OES",
+            "extra_qualifiers": "leaching solutions",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "Co",
+            "evidence_span": "The concentrations of Al, Co and Li in leaching solutions were measured by inductively coupled plasma optical emission spectrometer (ICP-OES).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Material_Li",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The concentrations of Al, Co and Li in leaching solutions were measured by inductively coupled plasma optical emission spectrometer (ICP-OES).",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "measurement_method": "ICP-OES",
+            "extra_qualifiers": "leaching solutions",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "Li",
+            "evidence_span": "The concentrations of Al, Co and Li in leaching solutions were measured by inductively coupled plasma optical emission spectrometer (ICP-OES).",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3. Results and discussion_412a18dd",
+    "section_name": "3. Results and discussion",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 2,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Material_LiCoO2",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Material_LiCoO2",
+          "target_name": "LiCoO2",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The X-ray diffraction pattern of the cathode scrap (Fig. S1) shows that LiCoO2 is the major phases while TiO only appeared with the amount lower than 5 wt%.",
+          "properties": {
+            "property": "composition",
+            "value": null,
+            "unit": null,
+            "study_scope": "current_study",
+            "extra_qualifiers": "major phase",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "LiCoO2",
+            "evidence_span": "The X-ray diffraction pattern of the cathode scrap (Fig. S1) shows that LiCoO2 is the major phases while TiO only appeared with the amount lower than 5 wt%.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Material_TiO",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Material_TiO",
+          "target_name": "TiO",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The X-ray diffraction pattern of the cathode scrap (Fig. S1) shows that LiCoO2 is the major phases while TiO only appeared with the amount lower than 5 wt%.",
+          "properties": {
+            "property": "composition",
+            "value": 5,
+            "unit": "wt%",
+            "study_scope": "current_study",
+            "extra_qualifiers": "amount lower than 5 wt%",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "TiO",
+            "evidence_span": "The X-ray diffraction pattern of the cathode scrap (Fig. S1) shows that LiCoO2 is the major phases while TiO only appeared with the amount lower than 5 wt%.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.1. Understanding the importance of different leaching parameters_8ebe88b1",
+    "section_name": "3.1. Understanding the importance of different leaching parameters",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 3,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_concentration_50_0_g_l",
+          "name": "concentration",
+          "type": "Concentration",
+          "value": 50.0,
+          "unit": "g/L",
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.1. Understanding the importance of different leaching parameters_8ebe88b1",
+            "text": "## 3.1. Understanding the importance of different leaching parameters\nTo understand the importance of different parameters, the leaching parameters for LiCoO2 leaching processes were summarized in Table S2. The influence level was defined as a variable to evaluate the importance of different leaching parameters. A higher influence level means the parameter is more important for the leaching process and vice versa. The influence levels of the leaching parameters can be found in the supplementary materials, and the order from high to low is as follows: the acid species and concentration, leaching time, reductant species and concentration, S/L ratio, reaction temperature, stirring speed (Fig. S2).\nThe summary of the chemical properties of different acids were concluded in Table S3. To clearly explain the results in the following figures, the acids were numbered by serial number from A to L (Table S3). The existing acids in the leaching processes of LiCoO for spent LIBs are divided into inorganic acids (acid A to C) and organic acids (acid D to L). Among the mineral acids, sulfuric acid (acid B) is frequently used for the recycling of spent LIBs. For organic acids, citric acid (acid E) is the most frequently used organic acid.\nBased on Table S2 where the leaching results are similar (Li > 95% and Co > 90%), the relationship between S/L ratio and the concentration of acid is presented in Fig. 1. The black points represent the concentrations and the corresponding S / L ratios, while the regions of the different colors are the range covered by the black points of the corresponding acid leaching process. It can be confirmed from Fig. 1 that the leaching processes of inorganic acids are mostly concentrated at 3–6 mol/L with S/L ratios higher than 50 g/L (mostly 100 g/L). For organic acid leaching process, acid concentrations are generally only 1–2 mol/L, the treatments of cathode scrap are carried out with S / L ratio lower than 50 g/L, and the cathode material treatment capacity of unit volume of organic acid solution is much less than that of the inorganic acid solution. The distinction of the organic and inorganic acids is mainly because of the different pKa values, the organic acids have higher pKa values which make the ionization of hydrogen ion more difficult than inorganic acids. Therefore, the organic acid can be considered as a kind of buffering solution which can also realize the leaching efficiency but the treatment capacity is lower than inorganic acid because of the ionization balance of H+.\nFrom the perspective of industry, the inorganic acids act as leaching acid with the concentration of 1.5 mol/L–3 mol/L while the S/L ratios are from 100 g/L to 200 g/L (Yu et al., 2016). As shown in Fig. 1, sulfuric acid is the only available acid for industrial application. Although the other inorganic acids are also explored in the industry recycling processes, they are not widely used due to the high treatment cost, severe equipment corrosion, and the emission of waste gas (e.g., Cl ) and waste water. For organic acids, their low S / L ratio is one of the drawbacks for further implementation into industry which will highly increase the emission of waste water and the cost.\nSince Co^3+ in LiCoO2 needs to be converted to C0 ^2+, reductants are necessary for almost all acid leaching processes, except for acids with reducibility, such as HCl and ascorbic acid. Among the most used reductants (e.g., H2O2 (Zou et al., 2013), glucose (Chen et al., 2016), Na2S2O3 (Zhang et al., 2015) and NaHSO3 ( (Pagnanelli et al., 2014)), H2O2 attends 80% of the leaching process as reductant because it will not introduce any anion or cation into the solution. The main concentration of H2O2 is 1–6 vol% in leaching processes.",
+            "parent_chunk_id": null,
+            "section_name": "3.1. Understanding the importance of different leaching parameters",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 12288,
+            "position_end": 16056,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.1. Understanding the importance of different leaching parameters_8ebe88b1",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "3.1. Understanding the importance of different leaching parameters",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 12288,
+              "position_end": 16056,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Concentration",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Material_LiCoO2_PROCESSED_BY_text_Process_acidic_leaching_of_cathode_scrap",
+          "source_id": "text_Material_LiCoO2",
+          "source_name": "LiCoO2",
+          "target_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "target_name": "acidic leaching of cathode scrap",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "the leaching parameters for LiCoO2 leaching processes were summarized in Table S2",
+          "properties": {
+            "study_scope": "background",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2",
+            "target_name": "acidic leaching of cathode scrap",
+            "evidence_span": "the leaching parameters for LiCoO2 leaching processes were summarized in Table S2",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_PROCESSED_BY_text_Process_acidic_leaching_of_cathode_scrap",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "target_name": "acidic leaching of cathode scrap",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "the treatments of cathode scrap are carried out with S / L ratio lower than 50 g/L",
+          "properties": {
+            "study_scope": "background",
+            "process_role": "main_process",
+            "conditions": "S/L ratio lower than 50 g/L",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": 50.0,
+                "unit": "g/L",
+                "raw_text": "S/L ratio lower than 50 g/L"
+              }
+            ],
+            "condition_labels": [
+              "S/L ratio lower than 50 g/L"
+            ],
+            "condition": "S/L ratio lower than 50 g/L",
+            "condition_ids": [
+              "CHUNK_text_3_1_Understanding_the_importance_of_different_leaching_parameters_8ebe88b1__cond_concentration_50_0_g_l"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "acidic leaching of cathode scrap",
+            "evidence_span": "the treatments of cathode scrap are carried out with S / L ratio lower than 50 g/L",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_cathode_material_PROCESSED_BY_text_Process_acidic_leaching_of_cathode_scrap",
+          "source_id": "text_Material_cathode_material",
+          "source_name": "cathode material",
+          "target_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "target_name": "acidic leaching of cathode scrap",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "the cathode material treatment capacity of unit volume of organic acid solution is much less than that of the inorganic acid solution",
+          "properties": {
+            "study_scope": "background",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "cathode material",
+            "target_name": "acidic leaching of cathode scrap",
+            "evidence_span": "the cathode material treatment capacity of unit volume of organic acid solution is much less than that of the inorganic acid solution",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.1. Understanding the importance of different leaching parameters_31b9f57a",
+    "section_name": "3.1. Understanding the importance of different leaching parameters",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 5,
+      "condition_count": 3,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_other_organic_acids",
+          "name": "other",
+          "type": "other",
+          "value": "organic acids",
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.1. Understanding the importance of different leaching parameters_31b9f57a",
+            "text": "3.2. Effect ofacid species on leaching processes (both the efficiency and selectivity)\nConsidering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated. The leaching temperature was the average temperature of 80 ^∘C, the S/L ratio, the leaching time, the concentration of acid and reductant were in strict accordance with the parameters in Table S2. Because of the formation of cobalt oxalate, the leaching with oxalic acid was not considered. Aspartic acid and iminodiacetic acid under the corresponding parameters have a very low solubility which lead to a lot of solid existed in their leachant and leachate, so the reference of these two acids are not apparent although some of their leaching speeds or recovery rates were in the curve trend of figures. The leaching speeds obtained in the experiments are presented in Fig. 2 where the acids are arranged with the increase of proton activity. The pH of leachant and the ultimate recovery rates of metals are given in Table 1.\nAccording to Fig. 2, the leaching speeds of inorganic acids are generally higher than that of organic acids. At the same time, the leaching speeds of Li and Co decrease with increasing of the initial pH of the leachants. For the leaching of Al, hydrochloric acid (acid A) is the only acid which can leach Al faster than Li and Co because it may easily form a complex [ AlCl6 ] ^3- with Al (FOLEY, 1986). Compared with inorganic acid leaching processes, the leaching speeds of Al in organic acids are usually low (<5 wt%/min).\nUnder optimized leaching conditions, the recovery rates of lithium and cobalt can all be improved to be above 90% for both inorganic and organic acids. The main difference is noticed that the pH of the leachants with inorganic acid (Table 1) are lower than 1 while the pH of the leachants with organic acid are higher than 1. However, the recovery rate for aluminum with organic acids can be lower than 15 wt% while Al can dissolve completely in inorganic acids under current leaching conditions. Therefore, the leaching process with organic acids can selectively recover the aluminum foil by leaching cathode material to leachate, while that with inorganic acids leach all metals into the leachate.\nBecause of the ionization equilibrium of organic acids, the recovery rate (h) is not linearly increasing with the acid concentration. Similarly, for the different acid leaching processes (Table S2 and Table 1), the recovery rate (h) is also highly dependent on the physiochemical properties of the acids for leaching.",
+            "parent_chunk_id": null,
+            "section_name": "3.1. Understanding the importance of different leaching parameters",
+            "subsection_name": "Effect ofacid species on leaching processes (both the efficiency and selectivity)",
+            "page_number": 1,
+            "position_start": 16056,
+            "position_end": 18771,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.1. Understanding the importance of different leaching parameters_31b9f57a",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "3.1. Understanding the importance of different leaching parameters",
+              "subsection_name": "Effect ofacid species on leaching processes (both the efficiency and selectivity)",
+              "page_number": 1,
+              "position_start": 16056,
+              "position_end": 18771,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_other_optimized_leaching_conditions_both_inorganic_and_organic_acids",
+          "name": "other",
+          "type": "other",
+          "value": "optimized leaching conditions, both inorganic and organic acids",
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.1. Understanding the importance of different leaching parameters_31b9f57a",
+            "text": "3.2. Effect ofacid species on leaching processes (both the efficiency and selectivity)\nConsidering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated. The leaching temperature was the average temperature of 80 ^∘C, the S/L ratio, the leaching time, the concentration of acid and reductant were in strict accordance with the parameters in Table S2. Because of the formation of cobalt oxalate, the leaching with oxalic acid was not considered. Aspartic acid and iminodiacetic acid under the corresponding parameters have a very low solubility which lead to a lot of solid existed in their leachant and leachate, so the reference of these two acids are not apparent although some of their leaching speeds or recovery rates were in the curve trend of figures. The leaching speeds obtained in the experiments are presented in Fig. 2 where the acids are arranged with the increase of proton activity. The pH of leachant and the ultimate recovery rates of metals are given in Table 1.\nAccording to Fig. 2, the leaching speeds of inorganic acids are generally higher than that of organic acids. At the same time, the leaching speeds of Li and Co decrease with increasing of the initial pH of the leachants. For the leaching of Al, hydrochloric acid (acid A) is the only acid which can leach Al faster than Li and Co because it may easily form a complex [ AlCl6 ] ^3- with Al (FOLEY, 1986). Compared with inorganic acid leaching processes, the leaching speeds of Al in organic acids are usually low (<5 wt%/min).\nUnder optimized leaching conditions, the recovery rates of lithium and cobalt can all be improved to be above 90% for both inorganic and organic acids. The main difference is noticed that the pH of the leachants with inorganic acid (Table 1) are lower than 1 while the pH of the leachants with organic acid are higher than 1. However, the recovery rate for aluminum with organic acids can be lower than 15 wt% while Al can dissolve completely in inorganic acids under current leaching conditions. Therefore, the leaching process with organic acids can selectively recover the aluminum foil by leaching cathode material to leachate, while that with inorganic acids leach all metals into the leachate.\nBecause of the ionization equilibrium of organic acids, the recovery rate (h) is not linearly increasing with the acid concentration. Similarly, for the different acid leaching processes (Table S2 and Table 1), the recovery rate (h) is also highly dependent on the physiochemical properties of the acids for leaching.",
+            "parent_chunk_id": null,
+            "section_name": "3.1. Understanding the importance of different leaching parameters",
+            "subsection_name": "Effect ofacid species on leaching processes (both the efficiency and selectivity)",
+            "page_number": 1,
+            "position_start": 16056,
+            "position_end": 18771,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.1. Understanding the importance of different leaching parameters_31b9f57a",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "3.1. Understanding the importance of different leaching parameters",
+              "subsection_name": "Effect ofacid species on leaching processes (both the efficiency and selectivity)",
+              "page_number": 1,
+              "position_start": 16056,
+              "position_end": 18771,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_other_inorganic_acids",
+          "name": "other",
+          "type": "other",
+          "value": "inorganic acids",
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.1. Understanding the importance of different leaching parameters_31b9f57a",
+            "text": "3.2. Effect ofacid species on leaching processes (both the efficiency and selectivity)\nConsidering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated. The leaching temperature was the average temperature of 80 ^∘C, the S/L ratio, the leaching time, the concentration of acid and reductant were in strict accordance with the parameters in Table S2. Because of the formation of cobalt oxalate, the leaching with oxalic acid was not considered. Aspartic acid and iminodiacetic acid under the corresponding parameters have a very low solubility which lead to a lot of solid existed in their leachant and leachate, so the reference of these two acids are not apparent although some of their leaching speeds or recovery rates were in the curve trend of figures. The leaching speeds obtained in the experiments are presented in Fig. 2 where the acids are arranged with the increase of proton activity. The pH of leachant and the ultimate recovery rates of metals are given in Table 1.\nAccording to Fig. 2, the leaching speeds of inorganic acids are generally higher than that of organic acids. At the same time, the leaching speeds of Li and Co decrease with increasing of the initial pH of the leachants. For the leaching of Al, hydrochloric acid (acid A) is the only acid which can leach Al faster than Li and Co because it may easily form a complex [ AlCl6 ] ^3- with Al (FOLEY, 1986). Compared with inorganic acid leaching processes, the leaching speeds of Al in organic acids are usually low (<5 wt%/min).\nUnder optimized leaching conditions, the recovery rates of lithium and cobalt can all be improved to be above 90% for both inorganic and organic acids. The main difference is noticed that the pH of the leachants with inorganic acid (Table 1) are lower than 1 while the pH of the leachants with organic acid are higher than 1. However, the recovery rate for aluminum with organic acids can be lower than 15 wt% while Al can dissolve completely in inorganic acids under current leaching conditions. Therefore, the leaching process with organic acids can selectively recover the aluminum foil by leaching cathode material to leachate, while that with inorganic acids leach all metals into the leachate.\nBecause of the ionization equilibrium of organic acids, the recovery rate (h) is not linearly increasing with the acid concentration. Similarly, for the different acid leaching processes (Table S2 and Table 1), the recovery rate (h) is also highly dependent on the physiochemical properties of the acids for leaching.",
+            "parent_chunk_id": null,
+            "section_name": "3.1. Understanding the importance of different leaching parameters",
+            "subsection_name": "Effect ofacid species on leaching processes (both the efficiency and selectivity)",
+            "page_number": 1,
+            "position_start": 16056,
+            "position_end": 18771,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.1. Understanding the importance of different leaching parameters_31b9f57a",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "3.1. Understanding the importance of different leaching parameters",
+              "subsection_name": "Effect ofacid species on leaching processes (both the efficiency and selectivity)",
+              "page_number": 1,
+              "position_start": 16056,
+              "position_end": 18771,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Component_cathode_PROCESSED_BY_text_Process_acidic_leaching_of_cathode_scrap",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "target_name": "acidic leaching of cathode scrap",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "the leaching process with organic acids can selectively recover the aluminum foil by leaching cathode material to leachate",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "organic acids",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "organic acids",
+                "unit": null,
+                "raw_text": "organic acids"
+              }
+            ],
+            "condition_labels": [
+              "organic acids"
+            ],
+            "condition": "organic acids",
+            "condition_ids": [
+              "CHUNK_text_3_1_Understanding_the_importance_of_different_leaching_parameters_31b9f57a__cond_other_organic_acids"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "acidic leaching of cathode scrap",
+            "evidence_span": "the leaching process with organic acids can selectively recover the aluminum foil by leaching cathode material to leachate",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Under optimized leaching conditions, the recovery rates of lithium and cobalt can all be improved to be above 90% for both inorganic and organic acids.",
+          "properties": {
+            "property": "recovery",
+            "value": 90,
+            "unit": "%",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "optimized leaching conditions, both inorganic and organic acids",
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "optimized leaching conditions, both inorganic and organic acids",
+                "unit": null,
+                "raw_text": "optimized leaching conditions, both inorganic and organic acids"
+              }
+            ],
+            "condition_labels": [
+              "optimized leaching conditions, both inorganic and organic acids"
+            ],
+            "condition": "optimized leaching conditions, both inorganic and organic acids",
+            "condition_ids": [
+              "CHUNK_text_3_1_Understanding_the_importance_of_different_leaching_parameters_31b9f57a__cond_other_optimized_leaching_conditions_both_inorganic_and_organic_acids"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Li",
+            "evidence_span": "Under optimized leaching conditions, the recovery rates of lithium and cobalt can all be improved to be above 90% for both inorganic and organic acids.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Under optimized leaching conditions, the recovery rates of lithium and cobalt can all be improved to be above 90% for both inorganic and organic acids.",
+          "properties": {
+            "property": "recovery",
+            "value": 90,
+            "unit": "%",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "optimized leaching conditions, both inorganic and organic acids",
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "optimized leaching conditions, both inorganic and organic acids",
+                "unit": null,
+                "raw_text": "optimized leaching conditions, both inorganic and organic acids"
+              }
+            ],
+            "condition_labels": [
+              "optimized leaching conditions, both inorganic and organic acids"
+            ],
+            "condition": "optimized leaching conditions, both inorganic and organic acids",
+            "condition_ids": [
+              "CHUNK_text_3_1_Understanding_the_importance_of_different_leaching_parameters_31b9f57a__cond_other_optimized_leaching_conditions_both_inorganic_and_organic_acids"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Co",
+            "evidence_span": "Under optimized leaching conditions, the recovery rates of lithium and cobalt can all be improved to be above 90% for both inorganic and organic acids.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Al",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "the recovery rate for aluminum with organic acids can be lower than 15 wt% while Al can dissolve completely in inorganic acids under current leaching conditions.",
+          "properties": {
+            "property": "recovery",
+            "value": 15,
+            "unit": "wt%",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "organic acids",
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "organic acids",
+                "unit": null,
+                "raw_text": "organic acids"
+              }
+            ],
+            "condition_labels": [
+              "organic acids"
+            ],
+            "condition": "organic acids",
+            "condition_ids": [
+              "CHUNK_text_3_1_Understanding_the_importance_of_different_leaching_parameters_31b9f57a__cond_other_organic_acids"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Al",
+            "evidence_span": "the recovery rate for aluminum with organic acids can be lower than 15 wt% while Al can dissolve completely in inorganic acids under current leaching conditions.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Al",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "the recovery rate for aluminum with organic acids can be lower than 15 wt% while Al can dissolve completely in inorganic acids under current leaching conditions.",
+          "properties": {
+            "property": "recovery",
+            "value": 100,
+            "unit": "wt%",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "inorganic acids",
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "inorganic acids",
+                "unit": null,
+                "raw_text": "inorganic acids"
+              }
+            ],
+            "condition_labels": [
+              "inorganic acids"
+            ],
+            "condition": "inorganic acids",
+            "condition_ids": [
+              "CHUNK_text_3_1_Understanding_the_importance_of_different_leaching_parameters_31b9f57a__cond_other_inorganic_acids"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Al",
+            "evidence_span": "the recovery rate for aluminum with organic acids can be lower than 15 wt% while Al can dissolve completely in inorganic acids under current leaching conditions.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.3. Effect of reductant on the leaching process with the same acid concentration_77c1f300",
+    "section_name": "3.3. Effect of reductant on the leaching process with the same acid concentration",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.3.1. Leaching without the addition of reductant_b5db1671",
+    "section_name": "3.3.1. Leaching without the addition of reductant",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 5,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_other_absence_of_reductants",
+          "name": "other",
+          "type": "other",
+          "value": "absence of reductants",
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.3.1. Leaching without the addition of reductant_b5db1671",
+            "text": "## 3.3.1. Leaching without the addition of reductant\nIn the absence of reductants, the leaching speeds obtained in the experiments are given in Fig. 3. It can be noticed that the leaching speed decreases obviously with the increase of pH. Due to the self-reducibility, the leaching speed of ascorbic acid (acid G) is higher than other organic acids and it therefore does not follow the trend of other acidic leaching processes.\nThe ultimate recovery rates under the same acid concentration in the absence of reductants were summarized in Table 3. For the leaching of Al, the leachant with inorganic acids can leach Al, Co and Li and the recovery rates of Al reaches nearly 100 wt%. In the cases of organic acids, the Co and Li can be selectively leached with the recovery rate of Al less than 20 wt%. For the leaching of Li and Co, the recovery rate decrease with the increase of pH. The recov- ery rate of Li is higher than Co for the same acid leaching process because the leaching of Co is limited by the absence of the reductant. The molar percentage of Li ^+ in leachate (Li ^+ + Co ^2+ + Al ^3+) was listed in Table 4. Because of the self-reducibility of ascorbic acid, the recovery rates of Li and Co in ascorbic acid leaching process reach 99.98 wt% and 99.12 wt% which is the best leaching efficiency in the 9 acid leaching processes. At the same time, the recovery rate of Al is controlled within 10 wt% so that selective separating Al foil can be achieved.",
+            "parent_chunk_id": null,
+            "section_name": "3.3.1. Leaching without the addition of reductant",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 19540,
+            "position_end": 21367,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.3.1. Leaching without the addition of reductant_b5db1671",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "3.3.1. Leaching without the addition of reductant",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 19540,
+              "position_end": 21367,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Al",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "For the leaching of Al, the leachant with inorganic acids can leach Al, Co and Li and the recovery rates of Al reaches nearly 100 wt%.",
+          "properties": {
+            "property": "recovery",
+            "value": 100,
+            "unit": "wt%",
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "process_agent": "inorganic acids",
+            "treatment_members": [
+              "inorganic acids"
+            ],
+            "conditions": "absence of reductants",
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "absence of reductants",
+                "unit": null,
+                "raw_text": "absence of reductants"
+              }
+            ],
+            "condition_labels": [
+              "absence of reductants"
+            ],
+            "condition": "absence of reductants",
+            "condition_ids": [
+              "CHUNK_text_3_3_1_Leaching_without_the_addition_of_reductant_b5db1671__cond_other_absence_of_reductants"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Al",
+            "evidence_span": "For the leaching of Al, the leachant with inorganic acids can leach Al, Co and Li and the recovery rates of Al reaches nearly 100 wt%.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Al",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "In the cases of organic acids, the Co and Li can be selectively leached with the recovery rate of Al less than 20 wt%.",
+          "properties": {
+            "property": "recovery",
+            "value": "<20",
+            "unit": "wt%",
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "process_agent": "organic acids",
+            "treatment_members": [
+              "organic acids"
+            ],
+            "conditions": "absence of reductants",
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "absence of reductants",
+                "unit": null,
+                "raw_text": "absence of reductants"
+              }
+            ],
+            "condition_labels": [
+              "absence of reductants"
+            ],
+            "condition": "absence of reductants",
+            "condition_ids": [
+              "CHUNK_text_3_3_1_Leaching_without_the_addition_of_reductant_b5db1671__cond_other_absence_of_reductants"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Al",
+            "evidence_span": "In the cases of organic acids, the Co and Li can be selectively leached with the recovery rate of Al less than 20 wt%.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Because of the self-reducibility of ascorbic acid, the recovery rates of Li and Co in ascorbic acid leaching process reach 99.98 wt% and 99.12 wt% which is the best leaching efficiency in the 9 acid leaching processes.",
+          "properties": {
+            "property": "recovery",
+            "value": 99.98,
+            "unit": "wt%",
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "process_agent": "ascorbic acid",
+            "treatment_members": [
+              "ascorbic acid"
+            ],
+            "conditions": "absence of reductants",
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "absence of reductants",
+                "unit": null,
+                "raw_text": "absence of reductants"
+              }
+            ],
+            "condition_labels": [
+              "absence of reductants"
+            ],
+            "condition": "absence of reductants",
+            "condition_ids": [
+              "CHUNK_text_3_3_1_Leaching_without_the_addition_of_reductant_b5db1671__cond_other_absence_of_reductants"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Li",
+            "evidence_span": "Because of the self-reducibility of ascorbic acid, the recovery rates of Li and Co in ascorbic acid leaching process reach 99.98 wt% and 99.12 wt% which is the best leaching efficiency in the 9 acid leaching processes.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Because of the self-reducibility of ascorbic acid, the recovery rates of Li and Co in ascorbic acid leaching process reach 99.98 wt% and 99.12 wt% which is the best leaching efficiency in the 9 acid leaching processes.",
+          "properties": {
+            "property": "recovery",
+            "value": 99.12,
+            "unit": "wt%",
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "process_agent": "ascorbic acid",
+            "treatment_members": [
+              "ascorbic acid"
+            ],
+            "conditions": "absence of reductants",
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "absence of reductants",
+                "unit": null,
+                "raw_text": "absence of reductants"
+              }
+            ],
+            "condition_labels": [
+              "absence of reductants"
+            ],
+            "condition": "absence of reductants",
+            "condition_ids": [
+              "CHUNK_text_3_3_1_Leaching_without_the_addition_of_reductant_b5db1671__cond_other_absence_of_reductants"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Co",
+            "evidence_span": "Because of the self-reducibility of ascorbic acid, the recovery rates of Li and Co in ascorbic acid leaching process reach 99.98 wt% and 99.12 wt% which is the best leaching efficiency in the 9 acid leaching processes.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Al",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "At the same time, the recovery rate of Al is controlled within 10 wt% so that selective separating Al foil can be achieved.",
+          "properties": {
+            "property": "recovery",
+            "value": "<10",
+            "unit": "wt%",
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "process_agent": "ascorbic acid",
+            "treatment_members": [
+              "ascorbic acid"
+            ],
+            "conditions": "absence of reductants",
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "absence of reductants",
+                "unit": null,
+                "raw_text": "absence of reductants"
+              }
+            ],
+            "condition_labels": [
+              "absence of reductants"
+            ],
+            "condition": "absence of reductants",
+            "condition_ids": [
+              "CHUNK_text_3_3_1_Leaching_without_the_addition_of_reductant_b5db1671__cond_other_absence_of_reductants"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Al",
+            "evidence_span": "At the same time, the recovery rate of Al is controlled within 10 wt% so that selective separating Al foil can be achieved.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.3.2. Leaching with the addition of reductant_5013e961",
+    "section_name": "3.3.2. Leaching with the addition of reductant",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 5,
+      "condition_count": 3,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_medium_organic_acid_leaching_with_reductant",
+          "name": "medium",
+          "type": "medium",
+          "value": "organic acid leaching with reductant",
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.3.2. Leaching with the addition of reductant_5013e961",
+            "text": "## 3.3.2. Leaching with the addition of reductant\nWith the addition of reductant, the leaching speed and recovery rate under the same acid concentration were presented in Fig. 4 and Table 5, respectively.\nAs described in Fig. 4, the leaching speeds of the leachant with inorganic acids are significantly higher than those of organic acids. For the inorganic or organic acid leaching processes, there are no obvious change of leaching speeds with the increase of solution pH, indicating that the addition of reductant makes the leaching speed high enough to ensure effective leaching. Compared with the leaching processes without reductants, the leaching speed of ascorbic acid (acid G) decreases in the leaching with H O. Redox reaction between hydrogen peroxide and ascorbic acid is observed that the reducibility of the leachant is subsequently reduced. The oxidative degradation of ascorbic acid by hydrogen peroxide has been deeply studied in the early researches (C.Deutsch, 1998; Udenfriend et al., 1954).\nSimilar to the leaching processes without reductants, the leaching processes with inorganic acids do not have selectivity, as summarized in Table 5. The leachant with organic acids can selectively leach Co and Li while the recovery rate of Al is lower than 12 wt%. Except the recovery rates of cobalt in tartaric acid and ascorbic acid leaching processes, the recovery rates of cobalt and lithium in each acid leaching process are higher than 99 wt%, proving that the addition of reductant can completely leaching cobalt and lithium. Since H2O2 reacts with ascorbic acid, the recovery rate of cobalt in the ascorbic acid leaching process is lower than the recovery rate in other acid leaching processes. In the tartaric acid leaching process, the lower recovery rate of Co was caused by the precipitation of cobalt, which is similar to the formic acid and/or oxalate leaching process (Gao et al., 2017; Zeng et al., 2015b). The morphology of the pink precipitation was observed by a mineral liberation analyzer (Figs. S3 and S4).",
+            "parent_chunk_id": null,
+            "section_name": "3.3.2. Leaching with the addition of reductant",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 21367,
+            "position_end": 23530,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.3.2. Leaching with the addition of reductant_5013e961",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "3.3.2. Leaching with the addition of reductant",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 21367,
+              "position_end": 23530,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_medium_ascorbic_acid_leaching_with_reductant",
+          "name": "medium",
+          "type": "medium",
+          "value": "ascorbic acid leaching with reductant",
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.3.2. Leaching with the addition of reductant_5013e961",
+            "text": "## 3.3.2. Leaching with the addition of reductant\nWith the addition of reductant, the leaching speed and recovery rate under the same acid concentration were presented in Fig. 4 and Table 5, respectively.\nAs described in Fig. 4, the leaching speeds of the leachant with inorganic acids are significantly higher than those of organic acids. For the inorganic or organic acid leaching processes, there are no obvious change of leaching speeds with the increase of solution pH, indicating that the addition of reductant makes the leaching speed high enough to ensure effective leaching. Compared with the leaching processes without reductants, the leaching speed of ascorbic acid (acid G) decreases in the leaching with H O. Redox reaction between hydrogen peroxide and ascorbic acid is observed that the reducibility of the leachant is subsequently reduced. The oxidative degradation of ascorbic acid by hydrogen peroxide has been deeply studied in the early researches (C.Deutsch, 1998; Udenfriend et al., 1954).\nSimilar to the leaching processes without reductants, the leaching processes with inorganic acids do not have selectivity, as summarized in Table 5. The leachant with organic acids can selectively leach Co and Li while the recovery rate of Al is lower than 12 wt%. Except the recovery rates of cobalt in tartaric acid and ascorbic acid leaching processes, the recovery rates of cobalt and lithium in each acid leaching process are higher than 99 wt%, proving that the addition of reductant can completely leaching cobalt and lithium. Since H2O2 reacts with ascorbic acid, the recovery rate of cobalt in the ascorbic acid leaching process is lower than the recovery rate in other acid leaching processes. In the tartaric acid leaching process, the lower recovery rate of Co was caused by the precipitation of cobalt, which is similar to the formic acid and/or oxalate leaching process (Gao et al., 2017; Zeng et al., 2015b). The morphology of the pink precipitation was observed by a mineral liberation analyzer (Figs. S3 and S4).",
+            "parent_chunk_id": null,
+            "section_name": "3.3.2. Leaching with the addition of reductant",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 21367,
+            "position_end": 23530,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.3.2. Leaching with the addition of reductant_5013e961",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "3.3.2. Leaching with the addition of reductant",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 21367,
+              "position_end": 23530,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_medium_tartaric_acid_leaching_with_reductant",
+          "name": "medium",
+          "type": "medium",
+          "value": "tartaric acid leaching with reductant",
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.3.2. Leaching with the addition of reductant_5013e961",
+            "text": "## 3.3.2. Leaching with the addition of reductant\nWith the addition of reductant, the leaching speed and recovery rate under the same acid concentration were presented in Fig. 4 and Table 5, respectively.\nAs described in Fig. 4, the leaching speeds of the leachant with inorganic acids are significantly higher than those of organic acids. For the inorganic or organic acid leaching processes, there are no obvious change of leaching speeds with the increase of solution pH, indicating that the addition of reductant makes the leaching speed high enough to ensure effective leaching. Compared with the leaching processes without reductants, the leaching speed of ascorbic acid (acid G) decreases in the leaching with H O. Redox reaction between hydrogen peroxide and ascorbic acid is observed that the reducibility of the leachant is subsequently reduced. The oxidative degradation of ascorbic acid by hydrogen peroxide has been deeply studied in the early researches (C.Deutsch, 1998; Udenfriend et al., 1954).\nSimilar to the leaching processes without reductants, the leaching processes with inorganic acids do not have selectivity, as summarized in Table 5. The leachant with organic acids can selectively leach Co and Li while the recovery rate of Al is lower than 12 wt%. Except the recovery rates of cobalt in tartaric acid and ascorbic acid leaching processes, the recovery rates of cobalt and lithium in each acid leaching process are higher than 99 wt%, proving that the addition of reductant can completely leaching cobalt and lithium. Since H2O2 reacts with ascorbic acid, the recovery rate of cobalt in the ascorbic acid leaching process is lower than the recovery rate in other acid leaching processes. In the tartaric acid leaching process, the lower recovery rate of Co was caused by the precipitation of cobalt, which is similar to the formic acid and/or oxalate leaching process (Gao et al., 2017; Zeng et al., 2015b). The morphology of the pink precipitation was observed by a mineral liberation analyzer (Figs. S3 and S4).",
+            "parent_chunk_id": null,
+            "section_name": "3.3.2. Leaching with the addition of reductant",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 21367,
+            "position_end": 23530,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.3.2. Leaching with the addition of reductant_5013e961",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "3.3.2. Leaching with the addition of reductant",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 21367,
+              "position_end": 23530,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leachant with organic acids can selectively leach Co and Li while the recovery rate of Al is lower than 12 wt%.",
+          "properties": {
+            "property": "recovery",
+            "value": ">99",
+            "unit": "wt%",
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "organic acid leaching with reductant",
+            "treatment_members": [],
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "medium",
+                "value": "organic acid leaching with reductant",
+                "unit": null,
+                "raw_text": "organic acid leaching with reductant"
+              }
+            ],
+            "condition_labels": [
+              "organic acid leaching with reductant"
+            ],
+            "condition": "organic acid leaching with reductant",
+            "condition_ids": [
+              "CHUNK_text_3_3_2_Leaching_with_the_addition_of_reductant_5013e961__cond_medium_organic_acid_leaching_with_reductant"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Co",
+            "evidence_span": "The leachant with organic acids can selectively leach Co and Li while the recovery rate of Al is lower than 12 wt%.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leachant with organic acids can selectively leach Co and Li while the recovery rate of Al is lower than 12 wt%.",
+          "properties": {
+            "property": "recovery",
+            "value": ">99",
+            "unit": "wt%",
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "organic acid leaching with reductant",
+            "treatment_members": [],
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "medium",
+                "value": "organic acid leaching with reductant",
+                "unit": null,
+                "raw_text": "organic acid leaching with reductant"
+              }
+            ],
+            "condition_labels": [
+              "organic acid leaching with reductant"
+            ],
+            "condition": "organic acid leaching with reductant",
+            "condition_ids": [
+              "CHUNK_text_3_3_2_Leaching_with_the_addition_of_reductant_5013e961__cond_medium_organic_acid_leaching_with_reductant"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Li",
+            "evidence_span": "The leachant with organic acids can selectively leach Co and Li while the recovery rate of Al is lower than 12 wt%.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Al",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leachant with organic acids can selectively leach Co and Li while the recovery rate of Al is lower than 12 wt%.",
+          "properties": {
+            "property": "recovery",
+            "value": "<12",
+            "unit": "wt%",
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "organic acid leaching with reductant",
+            "treatment_members": [],
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "medium",
+                "value": "organic acid leaching with reductant",
+                "unit": null,
+                "raw_text": "organic acid leaching with reductant"
+              }
+            ],
+            "condition_labels": [
+              "organic acid leaching with reductant"
+            ],
+            "condition": "organic acid leaching with reductant",
+            "condition_ids": [
+              "CHUNK_text_3_3_2_Leaching_with_the_addition_of_reductant_5013e961__cond_medium_organic_acid_leaching_with_reductant"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Al",
+            "evidence_span": "The leachant with organic acids can selectively leach Co and Li while the recovery rate of Al is lower than 12 wt%.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Since H2O2 reacts with ascorbic acid, the recovery rate of cobalt in the ascorbic acid leaching process is lower than the recovery rate in other acid leaching processes.",
+          "properties": {
+            "property": "recovery",
+            "value": "<99",
+            "unit": "wt%",
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "ascorbic acid leaching with reductant",
+            "process_agent": "ascorbic acid",
+            "treatment_members": [
+              "ascorbic acid"
+            ],
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "medium",
+                "value": "ascorbic acid leaching with reductant",
+                "unit": null,
+                "raw_text": "ascorbic acid leaching with reductant"
+              }
+            ],
+            "condition_labels": [
+              "ascorbic acid leaching with reductant"
+            ],
+            "condition": "ascorbic acid leaching with reductant",
+            "condition_ids": [
+              "CHUNK_text_3_3_2_Leaching_with_the_addition_of_reductant_5013e961__cond_medium_ascorbic_acid_leaching_with_reductant"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Co",
+            "evidence_span": "Since H2O2 reacts with ascorbic acid, the recovery rate of cobalt in the ascorbic acid leaching process is lower than the recovery rate in other acid leaching processes.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "In the tartaric acid leaching process, the lower recovery rate of Co was caused by the precipitation of cobalt, which is similar to the formic acid and/or oxalate leaching process (Gao et al., 2017; Zeng et al., 2015b).",
+          "properties": {
+            "property": "recovery",
+            "value": "<99",
+            "unit": "wt%",
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "tartaric acid leaching with reductant",
+            "process_agent": "tartaric acid",
+            "treatment_members": [
+              "tartaric acid"
+            ],
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "medium",
+                "value": "tartaric acid leaching with reductant",
+                "unit": null,
+                "raw_text": "tartaric acid leaching with reductant"
+              }
+            ],
+            "condition_labels": [
+              "tartaric acid leaching with reductant"
+            ],
+            "condition": "tartaric acid leaching with reductant",
+            "condition_ids": [
+              "CHUNK_text_3_3_2_Leaching_with_the_addition_of_reductant_5013e961__cond_medium_tartaric_acid_leaching_with_reductant"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Co",
+            "evidence_span": "In the tartaric acid leaching process, the lower recovery rate of Co was caused by the precipitation of cobalt, which is similar to the formic acid and/or oxalate leaching process (Gao et al., 2017; Zeng et al., 2015b).",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.4. Effect of reductant on the leaching process with the same hydrogen ion concentration_16a7b5de",
+    "section_name": "3.4. Effect of reductant on the leaching process with the same hydrogen ion concentration",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.4.1. Leaching without the addition of reductant_f8ab7766",
+    "section_name": "3.4.1. Leaching without the addition of reductant",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 3,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_other_without_reductant",
+          "name": "other",
+          "type": "other",
+          "value": "without reductant",
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.4.1. Leaching without the addition of reductant_f8ab7766",
+            "text": "## 3.4.1. Leaching without the addition of reductant\nThe leaching speeds and the recovery rates of the leaching processes using either inorganic acid or organic acid as leachant without reductant are plotted in Fig. 5 where the acid distribution is in the order of increasing pKa1 under the same pH. The leaching speed and recovery rate of ascorbic acid are higher than other acids because of its reducibility. Though ascorbic acid has almost the highest pKa1, ascorbic acid can completely leach Co and Li and the recovery rate of Al is only 4.75 wt%. In view of the initial pH, the leaching speeds of other acids are similar except ascorbic acid, indicating that the initial leaching speed is determined by the initial hydrogen ion concentration and capability of releasing hydrogen ion. The recovery rates increase clearly with the pKa1 of acids. Since the ability of releasing hydrogen ion for organic acids are lower than inorganic acids, the total hydrogen ion (including the released and unreleased hydrogen ions) in the leachants with organic acids are higher than that with inorganic acids at the same pH, leading to the recovery rates of organic acids higher than inorganic acids.",
+            "parent_chunk_id": null,
+            "section_name": "3.4.1. Leaching without the addition of reductant",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 24505,
+            "position_end": 25695,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.4.1. Leaching without the addition of reductant_f8ab7766",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "3.4.1. Leaching without the addition of reductant",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 24505,
+              "position_end": 25695,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "ascorbic acid can completely leach Co and Li",
+          "properties": {
+            "property": "leaching",
+            "value": "complete",
+            "unit": null,
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "process_agent": "ascorbic acid",
+            "treatment_members": [
+              "ascorbic acid"
+            ],
+            "conditions": "without reductant",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "without reductant",
+                "unit": null,
+                "raw_text": "without reductant",
+                "negated": true
+              }
+            ],
+            "condition_labels": [
+              "without reductant"
+            ],
+            "condition": "without reductant",
+            "condition_ids": [
+              "CHUNK_text_3_4_1_Leaching_without_the_addition_of_reductant_f8ab7766__cond_other_without_reductant"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Co",
+            "evidence_span": "ascorbic acid can completely leach Co and Li",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "ascorbic acid can completely leach Co and Li",
+          "properties": {
+            "property": "leaching",
+            "value": "complete",
+            "unit": null,
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "process_agent": "ascorbic acid",
+            "treatment_members": [
+              "ascorbic acid"
+            ],
+            "conditions": "without reductant",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "without reductant",
+                "unit": null,
+                "raw_text": "without reductant",
+                "negated": true
+              }
+            ],
+            "condition_labels": [
+              "without reductant"
+            ],
+            "condition": "without reductant",
+            "condition_ids": [
+              "CHUNK_text_3_4_1_Leaching_without_the_addition_of_reductant_f8ab7766__cond_other_without_reductant"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Li",
+            "evidence_span": "ascorbic acid can completely leach Co and Li",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Al",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "the recovery rate of Al is only 4.75 wt%",
+          "properties": {
+            "property": "recovery",
+            "value": 4.75,
+            "unit": "wt%",
+            "source_sample": "cathode scrap",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "process_agent": "ascorbic acid",
+            "treatment_members": [
+              "ascorbic acid"
+            ],
+            "conditions": "without reductant",
+            "property_raw": "recovery_rate",
+            "measure_key": "recovery",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "without reductant",
+                "unit": null,
+                "raw_text": "without reductant",
+                "negated": true
+              }
+            ],
+            "condition_labels": [
+              "without reductant"
+            ],
+            "condition": "without reductant",
+            "condition_ids": [
+              "CHUNK_text_3_4_1_Leaching_without_the_addition_of_reductant_f8ab7766__cond_other_without_reductant"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Al",
+            "evidence_span": "the recovery rate of Al is only 4.75 wt%",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.4.2. Leaching with the addition of reductant_3ca24f7c",
+    "section_name": "3.4.2. Leaching with the addition of reductant",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 3,
+      "condition_count": 2,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_medium_ascorbic_acidic_solution_with_reductant_addition",
+          "name": "medium",
+          "type": "medium",
+          "value": "ascorbic acidic solution with reductant addition",
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.4.2. Leaching with the addition of reductant_3ca24f7c",
+            "text": "## 3.4.2. Leaching with the addition of reductant\nFor the leaching processes of LiCoO in appearance of H2O2 under the same pH (Fig. 6), the leaching speeds and recovery rates with inorganic acids are lower than that with organic acids. Based on the higher ability of releasing hydrogen ion for the inorganic acids, the total reactive hydrogen ions in inorganic acidic solutions at the same pH are lower than those in organic acidic solutions, which lead to lower leaching speeds and recovery rates for inorganic acidic solutions. The acidic solutions, with a higher pKa1 usually achieve a higher recovery rate of metal values. Compared with the leaching processes without H2O2, the leaching speed and recovery rate of the same acid increases in a certain range after the addition of H2O2, indicating that the addition of the reductant promotes the leaching of Co and Li. But for ascorbic acid, the addition of the reductant to the ascorbic acidic solution shows a counteracting effect which is detrimental to the ascorbic acid leaching process of LiCoO2 (see Fig. 7.)",
+            "parent_chunk_id": null,
+            "section_name": "3.4.2. Leaching with the addition of reductant",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 25695,
+            "position_end": 26763,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.4.2. Leaching with the addition of reductant_3ca24f7c",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "3.4.2. Leaching with the addition of reductant",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 25695,
+              "position_end": 26763,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_other_with_h2o2_addition",
+          "name": "other",
+          "type": "other",
+          "value": "with H2O2 addition",
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.4.2. Leaching with the addition of reductant_3ca24f7c",
+            "text": "## 3.4.2. Leaching with the addition of reductant\nFor the leaching processes of LiCoO in appearance of H2O2 under the same pH (Fig. 6), the leaching speeds and recovery rates with inorganic acids are lower than that with organic acids. Based on the higher ability of releasing hydrogen ion for the inorganic acids, the total reactive hydrogen ions in inorganic acidic solutions at the same pH are lower than those in organic acidic solutions, which lead to lower leaching speeds and recovery rates for inorganic acidic solutions. The acidic solutions, with a higher pKa1 usually achieve a higher recovery rate of metal values. Compared with the leaching processes without H2O2, the leaching speed and recovery rate of the same acid increases in a certain range after the addition of H2O2, indicating that the addition of the reductant promotes the leaching of Co and Li. But for ascorbic acid, the addition of the reductant to the ascorbic acidic solution shows a counteracting effect which is detrimental to the ascorbic acid leaching process of LiCoO2 (see Fig. 7.)",
+            "parent_chunk_id": null,
+            "section_name": "3.4.2. Leaching with the addition of reductant",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 25695,
+            "position_end": 26763,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.4.2. Leaching with the addition of reductant_3ca24f7c",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "3.4.2. Leaching with the addition of reductant",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 25695,
+              "position_end": 26763,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Material_LiCoO2_PROCESSED_BY_text_Process_acidic_leaching_of_cathode_scrap",
+          "source_id": "text_Material_LiCoO2",
+          "source_name": "LiCoO2",
+          "target_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "target_name": "acidic leaching of cathode scrap",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "the addition of the reductant to the ascorbic acidic solution shows a counteracting effect which is detrimental to the ascorbic acid leaching process of LiCoO2",
+          "properties": {
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "ascorbic acidic solution with reductant addition",
+            "process_agent": "ascorbic acid",
+            "treatment_members": [
+              "ascorbic acid"
+            ],
+            "condition_keys": [
+              {
+                "key": "medium",
+                "value": "ascorbic acidic solution with reductant addition",
+                "unit": null,
+                "raw_text": "ascorbic acidic solution with reductant addition"
+              }
+            ],
+            "condition_labels": [
+              "ascorbic acidic solution with reductant addition"
+            ],
+            "condition": "ascorbic acidic solution with reductant addition",
+            "condition_ids": [
+              "CHUNK_text_3_4_2_Leaching_with_the_addition_of_reductant_3ca24f7c__cond_medium_ascorbic_acidic_solution_with_reductant_addition"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "LiCoO2",
+            "target_name": "acidic leaching of cathode scrap",
+            "evidence_span": "the addition of the reductant to the ascorbic acidic solution shows a counteracting effect which is detrimental to the ascorbic acid leaching process of LiCoO2",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "the addition of the reductant promotes the leaching of Co and Li",
+          "properties": {
+            "property": "leaching",
+            "value": "promoted",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "with H2O2 addition",
+            "process_agent": "H2O2",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "property_raw": "leaching",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "with H2O2 addition",
+                "unit": null,
+                "raw_text": "with H2O2 addition"
+              }
+            ],
+            "condition_labels": [
+              "with H2O2 addition"
+            ],
+            "condition": "with H2O2 addition",
+            "condition_ids": [
+              "CHUNK_text_3_4_2_Leaching_with_the_addition_of_reductant_3ca24f7c__cond_other_with_h2o2_addition"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Co",
+            "evidence_span": "the addition of the reductant promotes the leaching of Co and Li",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_acidic_leaching_of_cathode_scrap_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_acidic_leaching_of_cathode_scrap",
+          "source_name": "acidic leaching of cathode scrap",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "the addition of the reductant promotes the leaching of Co and Li",
+          "properties": {
+            "property": "leaching",
+            "value": "promoted",
+            "study_scope": "current_study",
+            "process_role": "main_process",
+            "conditions": "with H2O2 addition",
+            "process_agent": "H2O2",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "property_raw": "leaching",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "with H2O2 addition",
+                "unit": null,
+                "raw_text": "with H2O2 addition"
+              }
+            ],
+            "condition_labels": [
+              "with H2O2 addition"
+            ],
+            "condition": "with H2O2 addition",
+            "condition_ids": [
+              "CHUNK_text_3_4_2_Leaching_with_the_addition_of_reductant_3ca24f7c__cond_other_with_h2o2_addition"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "acidic leaching of cathode scrap",
+            "target_name": "Li",
+            "evidence_span": "the addition of the reductant promotes the leaching of Co and Li",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.5. Discussion_52162ada",
+    "section_name": "3.5. Discussion",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_3.6. Waste management of spent lithium-ion batteries_b17ee718",
+    "section_name": "3.6. Waste management of spent lithium-ion batteries",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 4,
+      "condition_count": 2,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_other_metal_phase_formed_by_smelting_spent_batteries_with_flux_in_umicore_process",
+          "name": "other",
+          "type": "other",
+          "value": "metal phase formed by smelting spent batteries with flux in Umicore process",
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.6. Waste management of spent lithium-ion batteries_b17ee718",
+            "text": "## 3.6. Waste management of spent lithium-ion batteries\nSpent LIBs are a significant waste stream which requires adequate management (Bahaloo-Horeh and Mousavi, 2017). The management of spent LIBs has been debated around the world, including international organizations, governments, academic, industry and non-governmental organizations.\nSince it is both a local and global issue, several studies has been focused on the management of spent LIBs using the managerial tools such as life cycle assessment (LCA) (Liang et al., 2017), material flow analysis (MFA) (Sommer et al., 2015) and extended producer responsibility (RPR) (Bertuol et al., 2016). Zackrisson et al. (Zackrisson et al., 2010) optimize the design of lithium-ion batteries using LCA methods for plug-in hybrid electric vehicles. Speirs et al. (Speirs et al., 2014) evaluated the future of lithium availability for electric vehicle batteries under the MFA method.\nThe life of LIBs, similar as electronic equipment, contains product life cycle (selling, storage at home, use, reuse, giving, export) and product end-of-life (recycling, landfilling, incineration) (Tanskanen, 2013). Recovery of the valuable metals is the preferred rout for the waste LIBs where landfilling and incineration should be avoided as far as possible for a sustainable environment and society. Strict global regulations have been developed on management of spent LIBs. For example, Japan Portable Rechargeable Battery Recycling Centre (JBRC) requires the relevant producers to collect and recycle rechargeable batteries (Terazono et al., 2015). The US Environmental Protection Agency considers all spent batteries as hazardous waste (Zand and Abduli, 2008). EU legislation (Directive 2006/66/EC) restrict that at least of 50% of the average weight of spent batteries should be recycled into materials for their primary application or for other applications besides energy recovery battery by 2011 (Dewulf et al., 2010). Similar legislation for spent LIBs of e-waste is either in force at different stages in Canada, China, South Africa, Mexico and so on.\nAfter collection of the spent LIBs, the recycling processes should be carried out to recover the valuable metals. The recycling method mainly include hydrometallurgy, pyrometallurgy and biometallurgy which have been used in industrial technologies throughout the world (Lv et al., 2018). In LithoRec process, which combines similar mechanical and hydrometallurgical methods, is very useful and effective for the mixed recovered spent LIBs (Kwade and Diekmann, 2018). In Umicore process, the spent batteries are smelted with flux to form a metal phase containing most of the Co. Ni and partial Fe to be refined and a slag phase containing Li and small amount of other metals to be further recovered (Gao et al., 2017; Marinos, 2014).\nAll in all, the management of spent LIBs need enhancing producer responsibility, increasing publicity, raising of public awareness, developing green public transport, and improving the inspection of the recycling companies (Bahaloo-Horeh and Mousavi, 2017; Sun et al., 2017). The researchers, governments, producers, recyclers and publics should have the responsibility for the management of spent LIBs.",
+            "parent_chunk_id": null,
+            "section_name": "3.6. Waste management of spent lithium-ion batteries",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 30604,
+            "position_end": 33839,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.6. Waste management of spent lithium-ion batteries_b17ee718",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "3.6. Waste management of spent lithium-ion batteries",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 30604,
+              "position_end": 33839,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_other_slag_phase_formed_by_smelting_spent_batteries_with_flux_in_umicore_process",
+          "name": "other",
+          "type": "other",
+          "value": "slag phase formed by smelting spent batteries with flux in Umicore process",
+          "unit": null,
+          "source": {
+            "doc_id": "text",
+            "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_text_3.6. Waste management of spent lithium-ion batteries_b17ee718",
+            "text": "## 3.6. Waste management of spent lithium-ion batteries\nSpent LIBs are a significant waste stream which requires adequate management (Bahaloo-Horeh and Mousavi, 2017). The management of spent LIBs has been debated around the world, including international organizations, governments, academic, industry and non-governmental organizations.\nSince it is both a local and global issue, several studies has been focused on the management of spent LIBs using the managerial tools such as life cycle assessment (LCA) (Liang et al., 2017), material flow analysis (MFA) (Sommer et al., 2015) and extended producer responsibility (RPR) (Bertuol et al., 2016). Zackrisson et al. (Zackrisson et al., 2010) optimize the design of lithium-ion batteries using LCA methods for plug-in hybrid electric vehicles. Speirs et al. (Speirs et al., 2014) evaluated the future of lithium availability for electric vehicle batteries under the MFA method.\nThe life of LIBs, similar as electronic equipment, contains product life cycle (selling, storage at home, use, reuse, giving, export) and product end-of-life (recycling, landfilling, incineration) (Tanskanen, 2013). Recovery of the valuable metals is the preferred rout for the waste LIBs where landfilling and incineration should be avoided as far as possible for a sustainable environment and society. Strict global regulations have been developed on management of spent LIBs. For example, Japan Portable Rechargeable Battery Recycling Centre (JBRC) requires the relevant producers to collect and recycle rechargeable batteries (Terazono et al., 2015). The US Environmental Protection Agency considers all spent batteries as hazardous waste (Zand and Abduli, 2008). EU legislation (Directive 2006/66/EC) restrict that at least of 50% of the average weight of spent batteries should be recycled into materials for their primary application or for other applications besides energy recovery battery by 2011 (Dewulf et al., 2010). Similar legislation for spent LIBs of e-waste is either in force at different stages in Canada, China, South Africa, Mexico and so on.\nAfter collection of the spent LIBs, the recycling processes should be carried out to recover the valuable metals. The recycling method mainly include hydrometallurgy, pyrometallurgy and biometallurgy which have been used in industrial technologies throughout the world (Lv et al., 2018). In LithoRec process, which combines similar mechanical and hydrometallurgical methods, is very useful and effective for the mixed recovered spent LIBs (Kwade and Diekmann, 2018). In Umicore process, the spent batteries are smelted with flux to form a metal phase containing most of the Co. Ni and partial Fe to be refined and a slag phase containing Li and small amount of other metals to be further recovered (Gao et al., 2017; Marinos, 2014).\nAll in all, the management of spent LIBs need enhancing producer responsibility, increasing publicity, raising of public awareness, developing green public transport, and improving the inspection of the recycling companies (Bahaloo-Horeh and Mousavi, 2017; Sun et al., 2017). The researchers, governments, producers, recyclers and publics should have the responsibility for the management of spent LIBs.",
+            "parent_chunk_id": null,
+            "section_name": "3.6. Waste management of spent lithium-ion batteries",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 30604,
+            "position_end": 33839,
+            "metadata": {
+              "chunk_id": "CHUNK_text_3.6. Waste management of spent lithium-ion batteries_b17ee718",
+              "doc_id": "text",
+              "title": "Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/test/01_manual_vs_system_triples/test2/Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries/text.md",
+              "section_name": "3.6. Waste management of spent lithium-ion batteries",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 30604,
+              "position_end": 33839,
+              "parent_chunk_id": null,
+              "chunk_type": "text"
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Co",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In Umicore process, the spent batteries are smelted with flux to form a metal phase containing most of the Co. Ni and partial Fe to be refined and a slag phase containing Li and small amount of other metals to be further recovered",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "conditions": "metal phase formed by smelting spent batteries with flux in Umicore process",
+            "extra_qualifiers": "most of the Co",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "metal phase formed by smelting spent batteries with flux in Umicore process",
+                "unit": null,
+                "raw_text": "metal phase formed by smelting spent batteries with flux in Umicore process"
+              }
+            ],
+            "condition_labels": [
+              "metal phase formed by smelting spent batteries with flux in Umicore process"
+            ],
+            "condition": "metal phase formed by smelting spent batteries with flux in Umicore process",
+            "condition_ids": [
+              "CHUNK_text_3_6_Waste_management_of_spent_lithium_ion_batteries_b17ee718__cond_other_metal_phase_formed_by_smelting_spent_batteries_with_flux_in_umicore_process"
+            ],
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "Co",
+            "evidence_span": "In Umicore process, the spent batteries are smelted with flux to form a metal phase containing most of the Co. Ni and partial Fe to be refined and a slag phase containing Li and small amount of other metals to be further recovered",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Ni",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In Umicore process, the spent batteries are smelted with flux to form a metal phase containing most of the Co. Ni and partial Fe to be refined and a slag phase containing Li and small amount of other metals to be further recovered",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "conditions": "metal phase formed by smelting spent batteries with flux in Umicore process",
+            "extra_qualifiers": "most of the Ni",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "metal phase formed by smelting spent batteries with flux in Umicore process",
+                "unit": null,
+                "raw_text": "metal phase formed by smelting spent batteries with flux in Umicore process"
+              }
+            ],
+            "condition_labels": [
+              "metal phase formed by smelting spent batteries with flux in Umicore process"
+            ],
+            "condition": "metal phase formed by smelting spent batteries with flux in Umicore process",
+            "condition_ids": [
+              "CHUNK_text_3_6_Waste_management_of_spent_lithium_ion_batteries_b17ee718__cond_other_metal_phase_formed_by_smelting_spent_batteries_with_flux_in_umicore_process"
+            ],
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "Ni",
+            "evidence_span": "In Umicore process, the spent batteries are smelted with flux to form a metal phase containing most of the Co. Ni and partial Fe to be refined and a slag phase containing Li and small amount of other metals to be further recovered",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Fe",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_Fe",
+          "target_name": "Fe",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In Umicore process, the spent batteries are smelted with flux to form a metal phase containing most of the Co. Ni and partial Fe to be refined and a slag phase containing Li and small amount of other metals to be further recovered",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "conditions": "metal phase formed by smelting spent batteries with flux in Umicore process",
+            "extra_qualifiers": "partial Fe",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "metal phase formed by smelting spent batteries with flux in Umicore process",
+                "unit": null,
+                "raw_text": "metal phase formed by smelting spent batteries with flux in Umicore process"
+              }
+            ],
+            "condition_labels": [
+              "metal phase formed by smelting spent batteries with flux in Umicore process"
+            ],
+            "condition": "metal phase formed by smelting spent batteries with flux in Umicore process",
+            "condition_ids": [
+              "CHUNK_text_3_6_Waste_management_of_spent_lithium_ion_batteries_b17ee718__cond_other_metal_phase_formed_by_smelting_spent_batteries_with_flux_in_umicore_process"
+            ],
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "Fe",
+            "evidence_span": "In Umicore process, the spent batteries are smelted with flux to form a metal phase containing most of the Co. Ni and partial Fe to be refined and a slag phase containing Li and small amount of other metals to be further recovered",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_lithium_ion_battery_CONTAINS_text_Material_Li",
+          "source_id": "text_Product_lithium_ion_battery",
+          "source_name": "lithium-ion battery",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "In Umicore process, the spent batteries are smelted with flux to form a metal phase containing most of the Co. Ni and partial Fe to be refined and a slag phase containing Li and small amount of other metals to be further recovered",
+          "properties": {
+            "property": "composition",
+            "study_scope": "background",
+            "conditions": "slag phase formed by smelting spent batteries with flux in Umicore process",
+            "extra_qualifiers": "small amount of other metals",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "slag phase formed by smelting spent batteries with flux in Umicore process",
+                "unit": null,
+                "raw_text": "slag phase formed by smelting spent batteries with flux in Umicore process"
+              }
+            ],
+            "condition_labels": [
+              "slag phase formed by smelting spent batteries with flux in Umicore process"
+            ],
+            "condition": "slag phase formed by smelting spent batteries with flux in Umicore process",
+            "condition_ids": [
+              "CHUNK_text_3_6_Waste_management_of_spent_lithium_ion_batteries_b17ee718__cond_other_slag_phase_formed_by_smelting_spent_batteries_with_flux_in_umicore_process"
+            ],
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "lithium-ion battery",
+            "target_name": "Li",
+            "evidence_span": "In Umicore process, the spent batteries are smelted with flux to form a metal phase containing most of the Co. Ni and partial Fe to be refined and a slag phase containing Li and small amount of other metals to be further recovered",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_text_4. Conclusions_545541e1",
+    "section_name": "4. Conclusions",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  }
+]

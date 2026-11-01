@@ -1,0 +1,161 @@
+{
+  "report": {
+    "initial": {
+      "process_aliases_merged": 0,
+      "typed_processes_rebound": 0,
+      "signature_processes_rebound": 0,
+      "ambiguous_result_signature_bindings": 0,
+      "settings_inherited": 14,
+      "settings_evidence_bound": 0,
+      "relations_without_setting": 0,
+      "unresolved_setting_bindings": [],
+      "relations_deduplicated": 0,
+      "process_revision_requests": [],
+      "alias_merges": [],
+      "process_revision_request_count": 0
+    },
+    "revision": {
+      "committed": false,
+      "applied": 0,
+      "errors": [],
+      "skipped": true
+    },
+    "final": {
+      "process_aliases_merged": 0,
+      "typed_processes_rebound": 0,
+      "signature_processes_rebound": 0,
+      "ambiguous_result_signature_bindings": 0,
+      "settings_inherited": 14,
+      "settings_evidence_bound": 0,
+      "relations_without_setting": 0,
+      "unresolved_setting_bindings": [],
+      "relations_deduplicated": 0,
+      "process_revision_requests": [],
+      "alias_merges": [],
+      "process_revision_request_count": 0
+    },
+    "llm_calls": 0,
+    "error": null,
+    "process_design": {
+      "process_stages": [
+        {
+          "name": "flotation of raw electrode material mixture",
+          "parent_process": null,
+          "aliases": [
+            "REM flotation"
+          ],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process; LiCoO2 concentrate and graphite concentrate were obtained by filtration and drying."
+        },
+        {
+          "name": "flotation of pyrolytic electrode material mixture",
+          "parent_process": null,
+          "aliases": [
+            "PEM flotation"
+          ],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process; LiCoO2 concentrate and graphite concentrate were obtained by filtration and drying."
+        },
+        {
+          "name": "flotation of pyrolysis-ultrasonic pretreated electrode material mixture",
+          "parent_process": null,
+          "aliases": [
+            "PUEM flotation"
+          ],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process; LiCoO2 concentrate and graphite concentrate were obtained by filtration and drying."
+        }
+      ],
+      "experiment_settings": [
+        {
+          "name": "flotation of raw electrode material mixture conditions",
+          "stage_name": "flotation of raw electrode material mixture",
+          "sample": "raw electrode material mixture",
+          "sample_aliases": [
+            "REM"
+          ],
+          "treatment": "flotation",
+          "treatment_members": [
+            "n-Dodecane",
+            "methyl isobutyl carbinol (MIBC)"
+          ],
+          "treatment_aliases": [],
+          "aliases": [],
+          "condition_summary": "pulp density 40 g/L; impeller speed 1800 rpm; aeration quantity 2.0 L/min; collector n-Dodecane dosage 300 g/t; frother MIBC dosage 150 g/t",
+          "evidence_hint": "Flotation experiments were conducted using an XFD-63 flotation machine at pulp density of 40 g/L, impeller speed of 1800 rpm, and aeration quantity of 2.0 L/min. n-Dodecane and methyl isobutyl carbinol (MIBC) were used as collector and frother, and their dosages were 300 and 150 g/t, respectively."
+        },
+        {
+          "name": "flotation of pyrolytic electrode material mixture conditions",
+          "stage_name": "flotation of pyrolytic electrode material mixture",
+          "sample": "pyrolytic electrode material mixture",
+          "sample_aliases": [
+            "PEM"
+          ],
+          "treatment": "flotation",
+          "treatment_members": [
+            "n-Dodecane",
+            "methyl isobutyl carbinol (MIBC)"
+          ],
+          "treatment_aliases": [],
+          "aliases": [],
+          "condition_summary": "pulp density 40 g/L; impeller speed 1800 rpm; aeration quantity 2.0 L/min; collector n-Dodecane dosage 300 g/t; frother MIBC dosage 150 g/t",
+          "evidence_hint": "Flotation experiments were conducted using an XFD-63 flotation machine at pulp density of 40 g/L, impeller speed of 1800 rpm, and aeration quantity of 2.0 L/min. n-Dodecane and methyl isobutyl carbinol (MIBC) were used as collector and frother, and their dosages were 300 and 150 g/t, respectively."
+        },
+        {
+          "name": "flotation of pyrolysis-ultrasonic pretreated electrode material mixture conditions",
+          "stage_name": "flotation of pyrolysis-ultrasonic pretreated electrode material mixture",
+          "sample": "pyrolysis-ultrasonic pretreated electrode material mixture",
+          "sample_aliases": [
+            "PUEM"
+          ],
+          "treatment": "flotation",
+          "treatment_members": [
+            "n-Dodecane",
+            "methyl isobutyl carbinol (MIBC)"
+          ],
+          "treatment_aliases": [],
+          "aliases": [],
+          "condition_summary": "pulp density 40 g/L; impeller speed 1800 rpm; aeration quantity 2.0 L/min; collector n-Dodecane dosage 300 g/t; frother MIBC dosage 150 g/t",
+          "evidence_hint": "Flotation experiments were conducted using an XFD-63 flotation machine at pulp density of 40 g/L, impeller speed of 1800 rpm, and aeration quantity of 2.0 L/min. n-Dodecane and methyl isobutyl carbinol (MIBC) were used as collector and frother, and their dosages were 300 and 150 g/t, respectively."
+        }
+      ],
+      "process_targets": [
+        {
+          "name": "flotation of raw electrode material mixture",
+          "parent_process": null,
+          "aliases": [
+            "REM flotation"
+          ],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process; LiCoO2 concentrate and graphite concentrate were obtained by filtration and drying."
+        },
+        {
+          "name": "flotation of pyrolytic electrode material mixture",
+          "parent_process": null,
+          "aliases": [
+            "PEM flotation"
+          ],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process; LiCoO2 concentrate and graphite concentrate were obtained by filtration and drying."
+        },
+        {
+          "name": "flotation of pyrolysis-ultrasonic pretreated electrode material mixture",
+          "parent_process": null,
+          "aliases": [
+            "PUEM flotation"
+          ],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process; LiCoO2 concentrate and graphite concentrate were obtained by filtration and drying."
+        }
+      ]
+    }
+  },
+  "prompt": null,
+  "response": null
+}

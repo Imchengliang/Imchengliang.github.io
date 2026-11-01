@@ -1,0 +1,326 @@
+{
+  "source_fusion": "demo/ontoweee/datasets/battery20/updates/orphan-cleanup-20261101/fusion/fused_graph.ttl",
+  "source_fusion_sha256": "002a07adfeb6cc33d9763680f5aba75d172b9d46b9acf3fd7d4bfd6fc211e0a1",
+  "ontology_file": "weee_kg_system/ontology/entity_canonicalization.json",
+  "ontology_sha256": "b16bb71e9b91edd280e36bfbc64df6e9f89f9f350e7a58bf5f7a4bbe6770c66c",
+  "basis": "Complete labels matched to explicitly registered Component types and aliases. No sample merging, Scope inheritance, substring matching or chemical subtype inference.",
+  "changes": [
+    {
+      "id": "http://weee-kg.org/source:Chemical%20Characterisation%20of%20Spent%20Rechargeable%20Batteries:Product_Ni_Cd_battery",
+      "old_type": "Product",
+      "old_label": "Ni–Cd battery",
+      "type": "Component",
+      "label": "nickel-cadmium battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Chemical%20Characterisation%20of%20Spent%20Rechargeable%20Batteries:Product_Ni_MH_battery",
+      "old_type": "Product",
+      "old_label": "Ni-MH battery",
+      "type": "Component",
+      "label": "nickel-metal hydride battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Chemical%20Characterisation%20of%20Spent%20Rechargeable%20Batteries:Product_battery",
+      "old_type": "Product",
+      "old_label": "battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Chemical%20Characterisation%20of%20Spent%20Rechargeable%20Batteries:Product_lithium_ion_battery",
+      "old_type": "Product",
+      "old_label": "lithium ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Comprehensive%20Evaluation%20on%20Effective%20Leaching%20of%20Critical%20Metals%20from%20Spent%20Lithium-Ion%20Batteries:Product_lithium_ion_battery",
+      "old_type": "Product",
+      "old_label": "lithium-ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Green%20and%20Facile%20Method%20for%20the%20Recovery%20of%20Spent%20Lithium%20Nickel%20Manganese%20Cobalt%20Oxide%20%28NMC%29%20Based%20Lithium%20Ion%20Batteries:Product_lithium_ion_battery",
+      "old_type": "Product",
+      "old_label": "lithium ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Leaching%20Lithium%20from%20the%20Anode%20Electrode%20Materials%20of%20Spent%20Lithium-Ion%20Batteries%20by%20Hydrochloric%20Acid%20%28Hcl%29:Product_lithium_ion_battery",
+      "old_type": "Product",
+      "old_label": "lithium-ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Pneumatic%20Separation%20and%20Recycling%20of%20Anode%20and%20Cathode%20Materials%20from%20Spent%20Lithium%20Iron%20Phosphate%20Batteries:Product_lithium_iron_phosphate_battery",
+      "old_type": "Product",
+      "old_label": "lithium iron phosphate battery",
+      "type": "Component",
+      "label": "lithium iron phosphate battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Pneumatic%20Separation%20and%20Recycling%20of%20Anode%20and%20Cathode%20Materials%20from%20Spent%20Lithium%20Iron%20Phosphate%20Batteries:Product_lithium_iron_power_battery",
+      "old_type": "Product",
+      "old_label": "lithium iron power battery",
+      "type": "Component",
+      "label": "lithium iron power battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Pneumatic%20Separation%20and%20Recycling%20of%20Anode%20and%20Cathode%20Materials%20from%20Spent%20Lithium%20Iron%20Phosphate%20Batteries:Product_power_battery",
+      "old_type": "Product",
+      "old_label": "power battery",
+      "type": "Component",
+      "label": "power battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Process%20Controls%20for%20Improving%20Bioleaching%20Performance%20of%20Both%20Li%20and%20Co%20from%20Spent%20Lithium%20Ion%20Batteries%20at%20High%20Pulp%20Density%20and%20its%20Thermodynamics%20and%20Kineti:Product_lithium_ion_battery",
+      "old_type": "Product",
+      "old_label": "lithium ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Recovery%20of%20Cobalt%20as%20Cobalt%20Oxalate%20from%20Spent%20Lithium%20Ion%20Batteries%20by%20Using%20Glycine%20as%20Leaching%20Agent:Product_lithium_ion_battery",
+      "old_type": "Product",
+      "old_label": "lithium ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Recovery%20of%20Lithium%2C%20Nickel%2C%20Cobalt%2C%20and%20Manganese%20from%20Spent%20Lithium-Ion%20Batteries%20Using%20Scplscp-Tartaric%20Acid%20as%20a%20Leachant:Product_Lithium_ion_battery",
+      "old_type": "Product",
+      "old_label": "Lithium-ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Reductive%20Leaching%20of%20Cathodic%20Active%20Materials%20from%20Lithium%20Ion%20Battery%20Wastes:Product_lithium_ion_secondary_battery",
+      "old_type": "Product",
+      "old_label": "lithium ion secondary battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Selective%20Leaching%20of%20Valuable%20Metal%20from%20Spent%20Lithium-Ion%20Batteries%20in%20the%20Alkaline%20Glycinate%20System:Product_lithium_ion_battery",
+      "old_type": "Product",
+      "old_label": "lithium-ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Synthesis%20and%20Performance%20of%20Li%5B%28ni13co13mn13%291%E2%88%92mg%20%5Do2%20Prepared%20from%20Spent%20Lithium%20Ion%20Batteries:Product_lithium_ion_battery",
+      "old_type": "Product",
+      "old_label": "lithium ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Ultrasound-Assisted%20Leaching%20of%20Cobalt%20and%20Lithium%20from%20Spent%20Lithium-Ion%20Batteries:Product_Lithium_ion_battery",
+      "old_type": "Product",
+      "old_label": "Lithium-ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:A%20Combined%20Recovery%20Process%20of%20Metals%20in%20Spent%20Lithium-Ion%20Batteries:Component_lithium_ion_battery",
+      "old_type": "Component",
+      "old_label": "lithium-ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:A%20Comprehensive%20Characterization%20of%20End-of-Life%20Mobile%20Phones%20for%20Secondary%20Material%20Resources%20Identification:Component_battery",
+      "old_type": "Component",
+      "old_label": "battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:A%20Comprehensive%20Characterization%20of%20End-of-Life%20Mobile%20Phones%20for%20Secondary%20Material%20Resources%20Identification:Component_lithium_ion_battery",
+      "old_type": "Component",
+      "old_label": "lithium-ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:A%20Comprehensive%20Characterization%20of%20End-of-Life%20Mobile%20Phones%20for%20Secondary%20Material%20Resources%20Identification:Component_nickel_metal_hydride_battery",
+      "old_type": "Component",
+      "old_label": "nickel-metal hydride battery",
+      "type": "Component",
+      "label": "nickel-metal hydride battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:A%20Copper-Catalyzed%20Bioleaching%20Process%20for%20Enhancement%20of%20Cobalt%20Dissolution%20from%20Spent%20Lithium-Ion%20Batteries:Component_lithium_ion_battery",
+      "old_type": "Component",
+      "old_label": "lithium-ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:A%20Promising%20Physical%20Method%20for%20Recovery%20of%20Licoo%202%20and%20Graphite%20from%20Spent%20Lithium-Ion%20Batteries%20Grinding%20Flotation:Component_lithium_ion_battery",
+      "old_type": "Component",
+      "old_label": "lithium-ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Assessment%20of%20Smartphones%E2%80%99%20Components%20and%20Materials%20for%20a%20Recycling%20Perspective-%20Tendencies%20of%20Composition%20and%20Target%20Elements:Component_battery",
+      "old_type": "Component",
+      "old_label": "battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Bioleaching%20of%20Valuable%20Metals%20from%20Spent%20Lithium-Ion%20Mobile%20Phone%20Batteries%20Using%20Aspergillus%20Niger:Component_battery_battery_powder",
+      "old_type": "Component",
+      "old_label": "battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Bioleaching%20of%20Valuable%20Metals%20from%20Spent%20Lithium-Ion%20Mobile%20Phone%20Batteries%20Using%20Aspergillus%20Niger:Component_lithium_ion_battery",
+      "old_type": "Component",
+      "old_label": "lithium-ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:Pneumatic%20Separation%20and%20Recycling%20of%20Anode%20and%20Cathode%20Materials%20from%20Spent%20Lithium%20Iron%20Phosphate%20Batteries:Component_battery_module",
+      "old_type": "Component",
+      "old_label": "battery module",
+      "type": "Component",
+      "label": "battery module"
+    },
+    {
+      "id": "http://weee-kg.org/source:Pyrolysis-Ultrasonic-Assisted%20Flotation%20Technology%20for%20Recovering%20Graphite%20and%20Licoosub2sub%20from%20Spent%20Lithium-Ion%20Batteries:Component_lithium_ion_battery",
+      "old_type": "Component",
+      "old_label": "lithium-ion battery",
+      "type": "Component",
+      "label": "lithium-ion battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:Alcatel%20OT-217:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:HTC%20One%20%28E8%29:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:Huawei%20P9:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:LG%20G%20Flex:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:LG%20U8120:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:Micromax%20Canvas%20Turbo%20Mini:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:Nokia%201600:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:Nokia%201616:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:Nokia%205110:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:Nokia%206111:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:Nokia%206210%20Navigator:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:Nokia%206210:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:Nokia%20C2-05:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:Nokia%20E51:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:Nokia%20Lumia%20620:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:Samsung%20Z510:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    },
+    {
+      "id": "http://weee-kg.org/source:product:gsmarena17:ZTE%20Gabb%20Z2:comp3:battery",
+      "old_type": "Component",
+      "old_label": "Battery",
+      "type": "Component",
+      "label": "battery"
+    }
+  ],
+  "extraction_api_calls": 0,
+  "alignment_recomputed": false
+}

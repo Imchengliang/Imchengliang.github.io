@@ -1,0 +1,63 @@
+[
+  {
+    "reason": "experiment_binding_revision",
+    "operation_role": "analytical digestion",
+    "conditions": "heated and agitated at 90 °C for 4 h",
+    "evidence_span": "Then, all of the parts were put into hydrochloric acid, heated and agitated at 90 -C for 4 h, dissolving all of the metals.",
+    "source_evidence": [
+      {
+        "file": "source/text.md",
+        "line": 25,
+        "quote": "The spent LIBs used in this study were provided by TES-AMM Co. Ltd. LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively. The components of LIBs were separated and measured in the laboratory as follows. First, the crust was removed with pincers and saws. Then, all of the parts were put into hydrochloric acid, heated and agitated at 90 -C for 4 h, dissolving all of the metals. The concentrations of different metals were measured with an inductive coupled plasma atomic emission spectrometer (ICP-AES). Finally, the content of each metal in the battery was calculated. The results indicated that Co accounted for 16% and Li, Cu, Al, Fe accounted for 2%, 10%, 3%, and 19% of the mass, respectively."
+      }
+    ],
+    "original_relation": {
+      "id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
+      "subject": "Component_lithium_ion_battery",
+      "subject_name": "lithium-ion battery",
+      "subject_type": "Component",
+      "predicate": "PROCESSED_BY",
+      "object": "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
+      "object_name": "hydrochloric acid leaching of recovered electrodes",
+      "object_type": "Process",
+      "properties": {
+        "study_scope": "current_study",
+        "process_role": "main_process",
+        "conditions": "heated and agitated at 90 °C for 4 h",
+        "condition_keys": [
+          {
+            "key": "temperature",
+            "value": 90.0,
+            "unit": "°C",
+            "raw_text": "heated and agitated at 90 °C for 4 h"
+          }
+        ],
+        "condition_labels": [
+          "heated and agitated at 90 °C for 4 h"
+        ],
+        "condition": "heated and agitated at 90 °C for 4 h",
+        "condition_ids": [
+          "COND_37a0ceed72f1"
+        ],
+        "raw_relation_type": "PROCESSED_BY",
+        "normalized_relation_type": "PROCESSED_BY",
+        "normalized_from_raw": false,
+        "source_name": "lithium-ion battery",
+        "target_name": "hydrochloric acid leaching of recovered electrodes",
+        "evidence_span": "Then, all of the parts were put into hydrochloric acid, heated and agitated at 90 -C for 4 h, dissolving all of the metals.",
+        "evidence_spans": [
+          "Then, all of the parts were put into hydrochloric acid, heated and agitated at 90 -C for 4 h, dissolving all of the metals."
+        ]
+      },
+      "conditions": [
+        {
+          "id": "COND_37a0ceed72f1",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 90.0,
+          "unit": "°C"
+        }
+      ]
+    }
+  }
+]

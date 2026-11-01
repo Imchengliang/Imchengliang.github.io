@@ -1,0 +1,3465 @@
+[
+  {
+    "chunk_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries__table__TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0001",
+    "table_id": "TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0001",
+    "llm_raw_response": "## TABLE_ROLE_GATE_RESPONSE\n{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"target_composition\",\"confidence\":0.85,\"causal_role\":{\"source_object\":\"raw LiCoO2 and pyrolytic LiCoO2 particles\",\"transformation\":\"pyrolysis\",\"measured_object\":\"carbon chemical states on LiCoO2 surface\",\"measured_quantity\":\"binding energy, fwhm, atomic %\",\"evidence_role\":\"target_composition\"},\"region_roles\":[{\"row_range\":[1,9],\"role\":\"target_measurement\",\"reason\":\"Rows report C 1s XPS chemical states and atomic percentages of carbon on raw and pyrolytic LiCoO2 surfaces.\"}],\"extract_row_ranges\":[[1,9]],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Table 1. Chemical States of Carbon in the Surface of Raw LiCoO2 and Pyrolytic LiCoO2\",\"judgment\":\"supports_extract\",\"reason\":\"Caption explicitly reports surface carbon chemical states for raw and pyrolytic LiCoO2.\"},{\"step\":\"reference\",\"evidence\":\"C 1s spectra of raw LiCoO2 and pyrolytic LiCoO2 particles were shown in Figure 7 and Table 1.\",\"judgment\":\"supports_extract\",\"reason\":\"Reference confirms table reports measured carbon composition on LiCoO2 before/after pyrolysis.\"}],\"allowed_fact_types\":[\"target_composition\",\"surface_carbon_speciation\",\"atomic_percentage\"],\"excluded_fact_types\":[\"economic_value\",\"literature_summary\",\"process_parameter\"],\"allowed_relation_types\":[],\"ir_instruction\":\"Extract carbon chemical-state composition measurements for raw and pyrolytic LiCoO2 surface, including component, binding energy, fwhm, and atomic percentage.\",\"uncertainty\":\"Header only shows raw LiCoO2 columns; pyrolytic LiCoO2 columns may be truncated but caption and references confirm both are reported.\"}}\n\n## SEMANTIC_IR_RESPONSE\n{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"target_composition\",\n      \"reason\": \"The table reports C 1s XPS chemical states and atomic percentages of carbon on raw LiCoO2 surfaces, matching the allowed target_composition and atomic_percentage fact types.\",\n      \"confidence\": 0.9\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 0,\n        \"raw_header\": \"components (raw LiCoO2)\",\n        \"entity_text\": \"components\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"raw LiCoO2\",\n        \"condition_raw_text\": \"(raw LiCoO2)\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 1,\n        \"raw_header\": \"BE (eV) (raw LiCoO2)\",\n        \"entity_text\": \"BE\",\n        \"entity_type\": \"Observation\",\n        \"condition_text\": \"raw LiCoO2\",\n        \"condition_raw_text\": \"(raw LiCoO2)\",\n        \"unit_text\": \"eV\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"fwhm (eV) (raw LiCoO2)\",\n        \"entity_text\": \"fwhm\",\n        \"entity_type\": \"Observation\",\n        \"condition_text\": \"raw LiCoO2\",\n        \"condition_raw_text\": \"(raw LiCoO2)\",\n        \"unit_text\": \"eV\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 3,\n        \"raw_header\": \"atomic (%) (raw LiCoO2)\",\n        \"entity_text\": \"atomic\",\n        \"entity_type\": \"Observation\",\n        \"condition_text\": \"raw LiCoO2\",\n        \"condition_raw_text\": \"(raw LiCoO2)\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"atomic\",\n        \"confidence\": 0.9\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 9]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [0]\n          }\n        },\n        \"bind\": {\n          \"container\": {\n            \"from\": \"literal\",\n            \"literal\": \"raw LiCoO2\",\n            \"type\": \"Material\"\n          },\n          \"constituent\": {\n            \"from\": \"cell\",\n            \"type\": \"Material\"\n          },\n          \"condition\": {\n            \"name\": \"raw_LiCoO2\",\n            \"from\": \"literal\",\n            \"literal\": \"raw LiCoO2\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"container\",\n          \"predicate\": \"CONTAINS\",\n          \"target\": \"constituent\",\n          \"conditions\": [\"raw_LiCoO2\"]\n        }\n      },\n      {\n        \"step_id\": \"step_2\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 9]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [1]\n          }\n        },\n        \"bind\": {\n          \"observed_entity\": {\n            \"from\": \"row[0]\",\n            \"type\": \"Material\"\n          },\n          \"observation\": {\n            \"from\": \"literal\",\n            \"literal\": \"BE\",\n            \"type\": \"Observation\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"condition\": {\n            \"name\": \"raw_LiCoO2\",\n            \"from\": \"literal\",\n            \"literal\": \"raw LiCoO2\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"observed_entity\",\n          \"predicate\": \"HAS_OBSERVATION\",\n          \"target\": \"observation\",\n          \"property\": \"BE\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"raw_LiCoO2\"]\n        }\n      },\n      {\n        \"step_id\": \"step_3\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 9]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [2]\n          }\n        },\n        \"bind\": {\n          \"observed_entity\": {\n            \"from\": \"row[0]\",\n            \"type\": \"Material\"\n          },\n          \"observation\": {\n            \"from\": \"literal\",\n            \"literal\": \"fwhm\",\n            \"type\": \"Observation\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"condition\": {\n            \"name\": \"raw_LiCoO2\",\n            \"from\": \"literal\",\n            \"literal\": \"raw LiCoO2\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"observed_entity\",\n          \"predicate\": \"HAS_OBSERVATION\",\n          \"target\": \"observation\",\n          \"property\": \"fwhm\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"raw_LiCoO2\"]\n        }\n      },\n      {\n        \"step_id\": \"step_4\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 9]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [3]\n          }\n        },\n        \"bind\": {\n          \"observed_entity\": {\n            \"from\": \"row[0]\",\n            \"type\": \"Material\"\n          },\n          \"observation\": {\n            \"from\": \"literal\",\n            \"literal\": \"atomic\",\n            \"type\": \"Observation\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"condition\": {\n            \"name\": \"raw_LiCoO2\",\n            \"from\": \"literal\",\n            \"literal\": \"raw LiCoO2\"\n          },\n          \"measurement_basis\": {\n            \"name\": \"measurement_basis\",\n            \"from\": \"column.semantic.measure_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"observed_entity\",\n          \"predicate\": \"HAS_OBSERVATION\",\n          \"target\": \"observation\",\n          \"property\": \"atomic\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"raw_LiCoO2\", \"measurement_basis\"]\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"The table reports carbon chemical states on raw LiCoO2 surfaces. Column 0 lists carbon components as Material constituents contained in raw LiCoO2. Columns 1-3 report BE, fwhm, and atomic % as observations of each carbon component, with units eV and % and condition raw LiCoO2.\",\n      \"uncertainties\": [\n        \"The table caption mentions pyrolytic LiCoO2, but the visible headers and rows only provide raw LiCoO2 data; no pyrolytic columns are present.\",\n        \"The component labels such as carbon black and C-C/C-H are treated as Material constituents of the LiCoO2 surface carbon layer.\"\n      ]\n    }\n  }\n}\n\n## DIRECT_RECORD_REPAIR_RESPONSE\n{\n  \"triples\": [\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"carbon black\",\n      \"object_type\": \"Material\",\n      \"property\": \"binding energy\",\n      \"value\": \"284.22\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"284.22\",\n      \"provenance\": {\"row_idx\": 1, \"column_idx\": 1, \"value_cell\": \"284.22\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"carbon black\",\n      \"object_type\": \"Material\",\n      \"property\": \"fwhm\",\n      \"value\": \"0.85\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"0.85\",\n      \"provenance\": {\"row_idx\": 1, \"column_idx\": 2, \"value_cell\": \"0.85\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"carbon black\",\n      \"object_type\": \"Material\",\n      \"property\": \"atomic percentage\",\n      \"value\": \"36.73\",\n      \"unit\": \"%\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"36.73\",\n      \"provenance\": {\"row_idx\": 1, \"column_idx\": 3, \"value_cell\": \"36.73\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"C-C/C-H\",\n      \"object_type\": \"Material\",\n      \"property\": \"binding energy\",\n      \"value\": \"284.80\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"284.80\",\n      \"provenance\": {\"row_idx\": 2, \"column_idx\": 1, \"value_cell\": \"284.80\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"C-C/C-H\",\n      \"object_type\": \"Material\",\n      \"property\": \"fwhm\",\n      \"value\": \"1.01\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"1.01\",\n      \"provenance\": {\"row_idx\": 2, \"column_idx\": 2, \"value_cell\": \"1.01\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"C-C/C-H\",\n      \"object_type\": \"Material\",\n      \"property\": \"atomic percentage\",\n      \"value\": \"11.90\",\n      \"unit\": \"%\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"11.90\",\n      \"provenance\": {\"row_idx\": 2, \"column_idx\": 3, \"value_cell\": \"11.90\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"C-COOR\",\n      \"object_type\": \"Material\",\n      \"property\": \"binding energy\",\n      \"value\": \"285.40\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"285.40\",\n      \"provenance\": {\"row_idx\": 3, \"column_idx\": 1, \"value_cell\": \"285.40\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"C-COOR\",\n      \"object_type\": \"Material\",\n      \"property\": \"fwhm\",\n      \"value\": \"1.00\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"1.00\",\n      \"provenance\": {\"row_idx\": 3, \"column_idx\": 2, \"value_cell\": \"1.00\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"C-COOR\",\n      \"object_type\": \"Material\",\n      \"property\": \"atomic percentage\",\n      \"value\": \"8.89\",\n      \"unit\": \"%\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"8.89\",\n      \"provenance\": {\"row_idx\": 3, \"column_idx\": 3, \"value_cell\": \"8.89\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"-(CH2CF2)-n\",\n      \"object_type\": \"Material\",\n      \"property\": \"binding energy\",\n      \"value\": \"286.05\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"286.05\",\n      \"provenance\": {\"row_idx\": 4, \"column_idx\": 1, \"value_cell\": \"286.05\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"-(CH2CF2)-n\",\n      \"object_type\": \"Material\",\n      \"property\": \"fwhm\",\n      \"value\": \"1.25\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"1.25\",\n      \"provenance\": {\"row_idx\": 4, \"column_idx\": 2, \"value_cell\": \"1.25\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"-(CH2CF2)-n\",\n      \"object_type\": \"Material\",\n      \"property\": \"atomic percentage\",\n      \"value\": \"19.03\",\n      \"unit\": \"%\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"19.03\",\n      \"provenance\": {\"row_idx\": 4, \"column_idx\": 3, \"value_cell\": \"19.03\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"O-C-O\",\n      \"object_type\": \"Material\",\n      \"property\": \"binding energy\",\n      \"value\": \"287.14\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"287.14\",\n      \"provenance\": {\"row_idx\": 5, \"column_idx\": 1, \"value_cell\": \"287.14\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"O-C-O\",\n      \"object_type\": \"Material\",\n      \"property\": \"fwhm\",\n      \"value\": \"0.96\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"0.96\",\n      \"provenance\": {\"row_idx\": 5, \"column_idx\": 2, \"value_cell\": \"0.96\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"O-C-O\",\n      \"object_type\": \"Material\",\n      \"property\": \"atomic percentage\",\n      \"value\": \"4.43\",\n      \"unit\": \"%\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"4.43\",\n      \"provenance\": {\"row_idx\": 5, \"column_idx\": 3, \"value_cell\": \"4.43\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"C=O\",\n      \"object_type\": \"Material\",\n      \"property\": \"binding energy\",\n      \"value\": \"288.06\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"288.06\",\n      \"provenance\": {\"row_idx\": 6, \"column_idx\": 1, \"value_cell\": \"288.06\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"C=O\",\n      \"object_type\": \"Material\",\n      \"property\": \"fwhm\",\n      \"value\": \"1.00\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"1.00\",\n      \"provenance\": {\"row_idx\": 6, \"column_idx\": 2, \"value_cell\": \"1.00\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"C=O\",\n      \"object_type\": \"Material\",\n      \"property\": \"atomic percentage\",\n      \"value\": \"3.10\",\n      \"unit\": \"%\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"3.10\",\n      \"provenance\": {\"row_idx\": 6, \"column_idx\": 3, \"value_cell\": \"3.10\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"O-C=O\",\n      \"object_type\": \"Material\",\n      \"property\": \"binding energy\",\n      \"value\": \"289.00\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"289.00\",\n      \"provenance\": {\"row_idx\": 7, \"column_idx\": 1, \"value_cell\": \"289.00\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"O-C=O\",\n      \"object_type\": \"Material\",\n      \"property\": \"fwhm\",\n      \"value\": \"1.05\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"1.05\",\n      \"provenance\": {\"row_idx\": 7, \"column_idx\": 2, \"value_cell\": \"1.05\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"O-C=O\",\n      \"object_type\": \"Material\",\n      \"property\": \"atomic percentage\",\n      \"value\": \"4.83\",\n      \"unit\": \"%\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"4.83\",\n      \"provenance\": {\"row_idx\": 7, \"column_idx\": 3, \"value_cell\": \"4.83\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"O-COOR\",\n      \"object_type\": \"Material\",\n      \"property\": \"binding energy\",\n      \"value\": \"289.99\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"289.99\",\n      \"provenance\": {\"row_idx\": 8, \"column_idx\": 1, \"value_cell\": \"289.99\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"O-COOR\",\n      \"object_type\": \"Material\",\n      \"property\": \"fwhm\",\n      \"value\": \"0.75\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"0.75\",\n      \"provenance\": {\"row_idx\": 8, \"column_idx\": 2, \"value_cell\": \"0.75\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"O-COOR\",\n      \"object_type\": \"Material\",\n      \"property\": \"atomic percentage\",\n      \"value\": \"5.92\",\n      \"unit\": \"%\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"5.92\",\n      \"provenance\": {\"row_idx\": 8, \"column_idx\": 3, \"value_cell\": \"5.92\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"-(CH2CF2)-n\",\n      \"object_type\": \"Material\",\n      \"property\": \"binding energy\",\n      \"value\": \"290.30\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"290.30\",\n      \"provenance\": {\"row_idx\": 9, \"column_idx\": 1, \"value_cell\": \"290.30\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"-(CH2CF2)-n\",\n      \"object_type\": \"Material\",\n      \"property\": \"fwhm\",\n      \"value\": \"1.00\",\n      \"unit\": \"eV\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"1.00\",\n      \"provenance\": {\"row_idx\": 9, \"column_idx\": 2, \"value_cell\": \"1.00\"}\n    },\n    {\n      \"subject_name\": \"raw LiCoO2\",\n      \"subject_type\": \"Material\",\n      \"predicate\": \"CONTAINS\",\n      \"object_name\": \"-(CH2CF2)-n\",\n      \"object_type\": \"Material\",\n      \"property\": \"atomic percentage\",\n      \"value\": \"5.18\",\n      \"unit\": \"%\",\n      \"conditions\": [\"raw LiCoO2\"],\n      \"evidence_span\": \"5.18\",\n      \"provenance\": {\"row_idx\": 9, \"column_idx\": 3, \"value_cell\": \"5.18\"}\n    }\n  ]\n}",
+    "llm_gate_response": "{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"target_composition\",\"confidence\":0.85,\"causal_role\":{\"source_object\":\"raw LiCoO2 and pyrolytic LiCoO2 particles\",\"transformation\":\"pyrolysis\",\"measured_object\":\"carbon chemical states on LiCoO2 surface\",\"measured_quantity\":\"binding energy, fwhm, atomic %\",\"evidence_role\":\"target_composition\"},\"region_roles\":[{\"row_range\":[1,9],\"role\":\"target_measurement\",\"reason\":\"Rows report C 1s XPS chemical states and atomic percentages of carbon on raw and pyrolytic LiCoO2 surfaces.\"}],\"extract_row_ranges\":[[1,9]],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Table 1. Chemical States of Carbon in the Surface of Raw LiCoO2 and Pyrolytic LiCoO2\",\"judgment\":\"supports_extract\",\"reason\":\"Caption explicitly reports surface carbon chemical states for raw and pyrolytic LiCoO2.\"},{\"step\":\"reference\",\"evidence\":\"C 1s spectra of raw LiCoO2 and pyrolytic LiCoO2 particles were shown in Figure 7 and Table 1.\",\"judgment\":\"supports_extract\",\"reason\":\"Reference confirms table reports measured carbon composition on LiCoO2 before/after pyrolysis.\"}],\"allowed_fact_types\":[\"target_composition\",\"surface_carbon_speciation\",\"atomic_percentage\"],\"excluded_fact_types\":[\"economic_value\",\"literature_summary\",\"process_parameter\"],\"allowed_relation_types\":[],\"ir_instruction\":\"Extract carbon chemical-state composition measurements for raw and pyrolytic LiCoO2 surface, including component, binding energy, fwhm, and atomic percentage.\",\"uncertainty\":\"Header only shows raw LiCoO2 columns; pyrolytic LiCoO2 columns may be truncated but caption and references confirm both are reported.\"}}",
+    "llm_ir_response": "{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"target_composition\",\n      \"reason\": \"The table reports C 1s XPS chemical states and atomic percentages of carbon on raw LiCoO2 surfaces, matching the allowed target_composition and atomic_percentage fact types.\",\n      \"confidence\": 0.9\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 0,\n        \"raw_header\": \"components (raw LiCoO2)\",\n        \"entity_text\": \"components\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"raw LiCoO2\",\n        \"condition_raw_text\": \"(raw LiCoO2)\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 1,\n        \"raw_header\": \"BE (eV) (raw LiCoO2)\",\n        \"entity_text\": \"BE\",\n        \"entity_type\": \"Observation\",\n        \"condition_text\": \"raw LiCoO2\",\n        \"condition_raw_text\": \"(raw LiCoO2)\",\n        \"unit_text\": \"eV\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"fwhm (eV) (raw LiCoO2)\",\n        \"entity_text\": \"fwhm\",\n        \"entity_type\": \"Observation\",\n        \"condition_text\": \"raw LiCoO2\",\n        \"condition_raw_text\": \"(raw LiCoO2)\",\n        \"unit_text\": \"eV\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 3,\n        \"raw_header\": \"atomic (%) (raw LiCoO2)\",\n        \"entity_text\": \"atomic\",\n        \"entity_type\": \"Observation\",\n        \"condition_text\": \"raw LiCoO2\",\n        \"condition_raw_text\": \"(raw LiCoO2)\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"atomic\",\n        \"confidence\": 0.9\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 9]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [0]\n          }\n        },\n        \"bind\": {\n          \"container\": {\n            \"from\": \"literal\",\n            \"literal\": \"raw LiCoO2\",\n            \"type\": \"Material\"\n          },\n          \"constituent\": {\n            \"from\": \"cell\",\n            \"type\": \"Material\"\n          },\n          \"condition\": {\n            \"name\": \"raw_LiCoO2\",\n            \"from\": \"literal\",\n            \"literal\": \"raw LiCoO2\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"container\",\n          \"predicate\": \"CONTAINS\",\n          \"target\": \"constituent\",\n          \"conditions\": [\"raw_LiCoO2\"]\n        }\n      },\n      {\n        \"step_id\": \"step_2\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 9]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [1]\n          }\n        },\n        \"bind\": {\n          \"observed_entity\": {\n            \"from\": \"row[0]\",\n            \"type\": \"Material\"\n          },\n          \"observation\": {\n            \"from\": \"literal\",\n            \"literal\": \"BE\",\n            \"type\": \"Observation\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"condition\": {\n            \"name\": \"raw_LiCoO2\",\n            \"from\": \"literal\",\n            \"literal\": \"raw LiCoO2\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"observed_entity\",\n          \"predicate\": \"HAS_OBSERVATION\",\n          \"target\": \"observation\",\n          \"property\": \"BE\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"raw_LiCoO2\"]\n        }\n      },\n      {\n        \"step_id\": \"step_3\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 9]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [2]\n          }\n        },\n        \"bind\": {\n          \"observed_entity\": {\n            \"from\": \"row[0]\",\n            \"type\": \"Material\"\n          },\n          \"observation\": {\n            \"from\": \"literal\",\n            \"literal\": \"fwhm\",\n            \"type\": \"Observation\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"condition\": {\n            \"name\": \"raw_LiCoO2\",\n            \"from\": \"literal\",\n            \"literal\": \"raw LiCoO2\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"observed_entity\",\n          \"predicate\": \"HAS_OBSERVATION\",\n          \"target\": \"observation\",\n          \"property\": \"fwhm\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"raw_LiCoO2\"]\n        }\n      },\n      {\n        \"step_id\": \"step_4\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 9]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [3]\n          }\n        },\n        \"bind\": {\n          \"observed_entity\": {\n            \"from\": \"row[0]\",\n            \"type\": \"Material\"\n          },\n          \"observation\": {\n            \"from\": \"literal\",\n            \"literal\": \"atomic\",\n            \"type\": \"Observation\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"condition\": {\n            \"name\": \"raw_LiCoO2\",\n            \"from\": \"literal\",\n            \"literal\": \"raw LiCoO2\"\n          },\n          \"measurement_basis\": {\n            \"name\": \"measurement_basis\",\n            \"from\": \"column.semantic.measure_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"observed_entity\",\n          \"predicate\": \"HAS_OBSERVATION\",\n          \"target\": \"observation\",\n          \"property\": \"atomic\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"raw_LiCoO2\", \"measurement_basis\"]\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"The table reports carbon chemical states on raw LiCoO2 surfaces. Column 0 lists carbon components as Material constituents contained in raw LiCoO2. Columns 1-3 report BE, fwhm, and atomic % as observations of each carbon component, with units eV and % and condition raw LiCoO2.\",\n      \"uncertainties\": [\n        \"The table caption mentions pyrolytic LiCoO2, but the visible headers and rows only provide raw LiCoO2 data; no pyrolytic columns are present.\",\n        \"The component labels such as carbon black and C-C/C-H are treated as Material constituents of the LiCoO2 surface carbon layer.\"\n      ]\n    }\n  }\n}",
+    "table_role_decision": {
+      "decision": "extract",
+      "table_role": "target_composition",
+      "confidence": 0.85,
+      "causal_role": {
+        "source_object": "raw LiCoO2 and pyrolytic LiCoO2 particles",
+        "transformation": "pyrolysis",
+        "measured_object": "carbon chemical states on LiCoO2 surface",
+        "measured_quantity": "binding energy, fwhm, atomic %",
+        "evidence_role": "target_composition"
+      },
+      "region_roles": [
+        {
+          "row_range": [
+            1,
+            9
+          ],
+          "role": "target_measurement",
+          "reason": "Rows report C 1s XPS chemical states and atomic percentages of carbon on raw and pyrolytic LiCoO2 surfaces."
+        }
+      ],
+      "extract_row_ranges": [
+        [
+          1,
+          9
+        ]
+      ],
+      "caption_sufficient": true,
+      "evidence_steps": [
+        {
+          "step": "caption",
+          "evidence": "Table 1. Chemical States of Carbon in the Surface of Raw LiCoO2 and Pyrolytic LiCoO2",
+          "judgment": "supports_extract",
+          "reason": "Caption explicitly reports surface carbon chemical states for raw and pyrolytic LiCoO2."
+        },
+        {
+          "step": "reference",
+          "evidence": "C 1s spectra of raw LiCoO2 and pyrolytic LiCoO2 particles were shown in Figure 7 and Table 1.",
+          "judgment": "supports_extract",
+          "reason": "Reference confirms table reports measured carbon composition on LiCoO2 before/after pyrolysis."
+        }
+      ],
+      "allowed_fact_types": [
+        "target_composition",
+        "surface_carbon_speciation",
+        "atomic_percentage"
+      ],
+      "excluded_fact_types": [
+        "economic_value",
+        "literature_summary",
+        "process_parameter"
+      ],
+      "allowed_relation_types": [],
+      "ir_instruction": "Extract carbon chemical-state composition measurements for raw and pyrolytic LiCoO2 surface, including component, binding energy, fwhm, and atomic percentage.",
+      "uncertainty": "Header only shows raw LiCoO2 columns; pyrolytic LiCoO2 columns may be truncated but caption and references confirm both are reported."
+    },
+    "llm_interpretation": {
+      "semantic_ir": {
+        "extractability": {
+          "decision": "extract",
+          "table_role": "target_composition",
+          "reason": "The table reports C 1s XPS chemical states and atomic percentages of carbon on raw LiCoO2 surfaces, matching the allowed target_composition and atomic_percentage fact types.",
+          "confidence": 0.9
+        },
+        "column_semantics": [
+          {
+            "column": 0,
+            "raw_header": "components (raw LiCoO2)",
+            "entity_text": "components",
+            "entity_type": "Material",
+            "condition_text": "raw LiCoO2",
+            "condition_raw_text": "(raw LiCoO2)",
+            "confidence": 0.9
+          },
+          {
+            "column": 1,
+            "raw_header": "BE (eV) (raw LiCoO2)",
+            "entity_text": "BE",
+            "entity_type": "Observation",
+            "condition_text": "raw LiCoO2",
+            "condition_raw_text": "(raw LiCoO2)",
+            "unit_text": "eV",
+            "confidence": 0.9
+          },
+          {
+            "column": 2,
+            "raw_header": "fwhm (eV) (raw LiCoO2)",
+            "entity_text": "fwhm",
+            "entity_type": "Observation",
+            "condition_text": "raw LiCoO2",
+            "condition_raw_text": "(raw LiCoO2)",
+            "unit_text": "eV",
+            "confidence": 0.9
+          },
+          {
+            "column": 3,
+            "raw_header": "atomic (%) (raw LiCoO2)",
+            "entity_text": "atomic",
+            "entity_type": "Observation",
+            "condition_text": "raw LiCoO2",
+            "condition_raw_text": "(raw LiCoO2)",
+            "unit_text": "%",
+            "measure_text": "atomic",
+            "confidence": 0.9
+          }
+        ],
+        "program": [
+          {
+            "step_id": "step_1",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  1,
+                  9
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  0
+                ]
+              }
+            },
+            "bind": {
+              "container": {
+                "from": "literal",
+                "literal": "raw LiCoO2",
+                "type": "Material"
+              },
+              "constituent": {
+                "from": "cell",
+                "type": "Material"
+              },
+              "condition": {
+                "name": "raw_LiCoO2",
+                "from": "literal",
+                "literal": "raw LiCoO2"
+              }
+            },
+            "emit": {
+              "source": "container",
+              "predicate": "CONTAINS",
+              "target": "constituent",
+              "conditions": [
+                "raw_LiCoO2"
+              ]
+            }
+          },
+          {
+            "step_id": "step_2",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  1,
+                  9
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  1
+                ]
+              }
+            },
+            "bind": {
+              "observed_entity": {
+                "from": "row[0]",
+                "type": "Material"
+              },
+              "observation": {
+                "from": "literal",
+                "literal": "BE",
+                "type": "Observation"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column.semantic.unit_text"
+              },
+              "condition": {
+                "name": "raw_LiCoO2",
+                "from": "literal",
+                "literal": "raw LiCoO2"
+              }
+            },
+            "emit": {
+              "source": "observed_entity",
+              "predicate": "HAS_OBSERVATION",
+              "target": "observation",
+              "property": "BE",
+              "value": "value",
+              "unit": "unit",
+              "conditions": [
+                "raw_LiCoO2"
+              ]
+            }
+          },
+          {
+            "step_id": "step_3",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  1,
+                  9
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  2
+                ]
+              }
+            },
+            "bind": {
+              "observed_entity": {
+                "from": "row[0]",
+                "type": "Material"
+              },
+              "observation": {
+                "from": "literal",
+                "literal": "fwhm",
+                "type": "Observation"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column.semantic.unit_text"
+              },
+              "condition": {
+                "name": "raw_LiCoO2",
+                "from": "literal",
+                "literal": "raw LiCoO2"
+              }
+            },
+            "emit": {
+              "source": "observed_entity",
+              "predicate": "HAS_OBSERVATION",
+              "target": "observation",
+              "property": "fwhm",
+              "value": "value",
+              "unit": "unit",
+              "conditions": [
+                "raw_LiCoO2"
+              ]
+            }
+          },
+          {
+            "step_id": "step_4",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  1,
+                  9
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  3
+                ]
+              }
+            },
+            "bind": {
+              "observed_entity": {
+                "from": "row[0]",
+                "type": "Material"
+              },
+              "observation": {
+                "from": "literal",
+                "literal": "atomic",
+                "type": "Observation"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column.semantic.unit_text"
+              },
+              "condition": {
+                "name": "raw_LiCoO2",
+                "from": "literal",
+                "literal": "raw LiCoO2"
+              },
+              "measurement_basis": {
+                "name": "measurement_basis",
+                "from": "column.semantic.measure_text"
+              }
+            },
+            "emit": {
+              "source": "observed_entity",
+              "predicate": "HAS_OBSERVATION",
+              "target": "observation",
+              "property": "atomic",
+              "value": "value",
+              "unit": "unit",
+              "conditions": [
+                "raw_LiCoO2",
+                "measurement_basis"
+              ]
+            }
+          }
+        ],
+        "context_program": [],
+        "rationale": {
+          "binding_summary": "The table reports carbon chemical states on raw LiCoO2 surfaces. Column 0 lists carbon components as Material constituents contained in raw LiCoO2. Columns 1-3 report BE, fwhm, and atomic % as observations of each carbon component, with units eV and % and condition raw LiCoO2.",
+          "uncertainties": [
+            "The table caption mentions pyrolytic LiCoO2, but the visible headers and rows only provide raw LiCoO2 data; no pyrolytic columns are present.",
+            "The component labels such as carbon black and C-C/C-H are treated as Material constituents of the LiCoO2 surface carbon layer."
+          ]
+        }
+      }
+    },
+    "semantic_ir": {
+      "table_id": "TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0001",
+      "extraction_mode": "direct_repair",
+      "extractability": {
+        "decision": "extract",
+        "table_role": "target_composition",
+        "confidence": 0.85
+      },
+      "triples": [
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "carbon black",
+          "object_type": "Material",
+          "property": "binding energy",
+          "value": "284.22",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "284.22",
+          "provenance": {
+            "row_idx": 1,
+            "column_idx": 1,
+            "value_cell": "284.22"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "carbon black",
+          "object_type": "Material",
+          "property": "fwhm",
+          "value": "0.85",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "0.85",
+          "provenance": {
+            "row_idx": 1,
+            "column_idx": 2,
+            "value_cell": "0.85"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "carbon black",
+          "object_type": "Material",
+          "property": "atomic percentage",
+          "value": "36.73",
+          "unit": "%",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "36.73",
+          "provenance": {
+            "row_idx": 1,
+            "column_idx": 3,
+            "value_cell": "36.73"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "C-C/C-H",
+          "object_type": "Material",
+          "property": "binding energy",
+          "value": "284.80",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "284.80",
+          "provenance": {
+            "row_idx": 2,
+            "column_idx": 1,
+            "value_cell": "284.80"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "C-C/C-H",
+          "object_type": "Material",
+          "property": "fwhm",
+          "value": "1.01",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "1.01",
+          "provenance": {
+            "row_idx": 2,
+            "column_idx": 2,
+            "value_cell": "1.01"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "C-C/C-H",
+          "object_type": "Material",
+          "property": "atomic percentage",
+          "value": "11.90",
+          "unit": "%",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "11.90",
+          "provenance": {
+            "row_idx": 2,
+            "column_idx": 3,
+            "value_cell": "11.90"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "C-COOR",
+          "object_type": "Material",
+          "property": "binding energy",
+          "value": "285.40",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "285.40",
+          "provenance": {
+            "row_idx": 3,
+            "column_idx": 1,
+            "value_cell": "285.40"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "C-COOR",
+          "object_type": "Material",
+          "property": "fwhm",
+          "value": "1.00",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "1.00",
+          "provenance": {
+            "row_idx": 3,
+            "column_idx": 2,
+            "value_cell": "1.00"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "C-COOR",
+          "object_type": "Material",
+          "property": "atomic percentage",
+          "value": "8.89",
+          "unit": "%",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "8.89",
+          "provenance": {
+            "row_idx": 3,
+            "column_idx": 3,
+            "value_cell": "8.89"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "-(CH2CF2)-n",
+          "object_type": "Material",
+          "property": "binding energy",
+          "value": "286.05",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "286.05",
+          "provenance": {
+            "row_idx": 4,
+            "column_idx": 1,
+            "value_cell": "286.05"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "-(CH2CF2)-n",
+          "object_type": "Material",
+          "property": "fwhm",
+          "value": "1.25",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "1.25",
+          "provenance": {
+            "row_idx": 4,
+            "column_idx": 2,
+            "value_cell": "1.25"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "-(CH2CF2)-n",
+          "object_type": "Material",
+          "property": "atomic percentage",
+          "value": "19.03",
+          "unit": "%",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "19.03",
+          "provenance": {
+            "row_idx": 4,
+            "column_idx": 3,
+            "value_cell": "19.03"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "O-C-O",
+          "object_type": "Material",
+          "property": "binding energy",
+          "value": "287.14",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "287.14",
+          "provenance": {
+            "row_idx": 5,
+            "column_idx": 1,
+            "value_cell": "287.14"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "O-C-O",
+          "object_type": "Material",
+          "property": "fwhm",
+          "value": "0.96",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "0.96",
+          "provenance": {
+            "row_idx": 5,
+            "column_idx": 2,
+            "value_cell": "0.96"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "O-C-O",
+          "object_type": "Material",
+          "property": "atomic percentage",
+          "value": "4.43",
+          "unit": "%",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "4.43",
+          "provenance": {
+            "row_idx": 5,
+            "column_idx": 3,
+            "value_cell": "4.43"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "C=O",
+          "object_type": "Material",
+          "property": "binding energy",
+          "value": "288.06",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "288.06",
+          "provenance": {
+            "row_idx": 6,
+            "column_idx": 1,
+            "value_cell": "288.06"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "C=O",
+          "object_type": "Material",
+          "property": "fwhm",
+          "value": "1.00",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "1.00",
+          "provenance": {
+            "row_idx": 6,
+            "column_idx": 2,
+            "value_cell": "1.00"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "C=O",
+          "object_type": "Material",
+          "property": "atomic percentage",
+          "value": "3.10",
+          "unit": "%",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "3.10",
+          "provenance": {
+            "row_idx": 6,
+            "column_idx": 3,
+            "value_cell": "3.10"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "O-C=O",
+          "object_type": "Material",
+          "property": "binding energy",
+          "value": "289.00",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "289.00",
+          "provenance": {
+            "row_idx": 7,
+            "column_idx": 1,
+            "value_cell": "289.00"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "O-C=O",
+          "object_type": "Material",
+          "property": "fwhm",
+          "value": "1.05",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "1.05",
+          "provenance": {
+            "row_idx": 7,
+            "column_idx": 2,
+            "value_cell": "1.05"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "O-C=O",
+          "object_type": "Material",
+          "property": "atomic percentage",
+          "value": "4.83",
+          "unit": "%",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "4.83",
+          "provenance": {
+            "row_idx": 7,
+            "column_idx": 3,
+            "value_cell": "4.83"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "O-COOR",
+          "object_type": "Material",
+          "property": "binding energy",
+          "value": "289.99",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "289.99",
+          "provenance": {
+            "row_idx": 8,
+            "column_idx": 1,
+            "value_cell": "289.99"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "O-COOR",
+          "object_type": "Material",
+          "property": "fwhm",
+          "value": "0.75",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "0.75",
+          "provenance": {
+            "row_idx": 8,
+            "column_idx": 2,
+            "value_cell": "0.75"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "O-COOR",
+          "object_type": "Material",
+          "property": "atomic percentage",
+          "value": "5.92",
+          "unit": "%",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "5.92",
+          "provenance": {
+            "row_idx": 8,
+            "column_idx": 3,
+            "value_cell": "5.92"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "-(CH2CF2)-n",
+          "object_type": "Material",
+          "property": "binding energy",
+          "value": "290.30",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "290.30",
+          "provenance": {
+            "row_idx": 9,
+            "column_idx": 1,
+            "value_cell": "290.30"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "-(CH2CF2)-n",
+          "object_type": "Material",
+          "property": "fwhm",
+          "value": "1.00",
+          "unit": "eV",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "1.00",
+          "provenance": {
+            "row_idx": 9,
+            "column_idx": 2,
+            "value_cell": "1.00"
+          }
+        },
+        {
+          "subject_name": "raw LiCoO2",
+          "subject_type": "Material",
+          "predicate": "CONTAINS",
+          "object_name": "-(CH2CF2)-n",
+          "object_type": "Material",
+          "property": "atomic percentage",
+          "value": "5.18",
+          "unit": "%",
+          "conditions": [
+            "raw LiCoO2"
+          ],
+          "evidence_span": "5.18",
+          "provenance": {
+            "row_idx": 9,
+            "column_idx": 3,
+            "value_cell": "5.18"
+          }
+        }
+      ]
+    },
+    "table_structure": {
+      "table_id": "TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0001",
+      "extraction_mode": "direct_repair",
+      "table_role": "target_composition",
+      "extractability": {
+        "decision": "extract",
+        "table_role": "target_composition",
+        "confidence": 0.85
+      }
+    },
+    "verification_report": {
+      "status": "passed",
+      "skip_reason": null,
+      "cell_grounded_relations": 27,
+      "entity_count": 9,
+      "condition_count": 1,
+      "context_record_count": 0,
+      "unsupported_templates": [],
+      "scope_rejections": [],
+      "domain_range_rejections": [],
+      "aggregate_row_diagnostics": [],
+      "unresolved_endpoint_types": [],
+      "unresolved_type_facts": [],
+      "extraction_path": "direct_repair",
+      "skipped_records": 0,
+      "direct_repair_provenance_errors": []
+    },
+    "execution_trace": [
+      {
+        "op": "direct_records",
+        "emitted": 27,
+        "skipped": 0,
+        "skipped_records": []
+      }
+    ],
+    "failed_rewrite_verification_report": null,
+    "failed_rewrite_execution_trace": null,
+    "table_cache_key": "4666864815ce0ab76c24698f5052d8ff40e368308ddabcfd722685035594c124",
+    "table_cache_version": {
+      "format_version": 1,
+      "table_code_sha256": "f0dd5f4553ba60fa1f8dc3a9e2facb37220e0d8b94248c9976aea3179fbc8514",
+      "table_file_sha256": {
+        "__init__.py": "859afd37280303ac79ea652fcd1c347db6f6e9a7427d1bf201341ff92fdbb9f3",
+        "artifact_cache.py": "dae107568c3be648794486b4140f41386af8bd9d77b261dcf82505cef6e977aa",
+        "contract.py": "d537d95059e8a540b82872ffebe956d5e8fd43081e1ca630aa34b5a16359092a",
+        "cross_table_reference_resolver.py": "834fd5639f5b7dd79de0cd4b92943e3584283c02479a03e12c5b128f625bbf11",
+        "extraction_agent.py": "bd64ffbda3e1832704c44c090412041e0af71280c17c50aa2d189228fcaa31fa",
+        "ir/__init__.py": "388534b9fb9c0b6eae80334aef2e8eae376c73fca9ab48e74ddf4299bf50e425",
+        "ir/common.py": "53ca6b464bda54f2b4f95741c281e567c792a5206816f9164c8dc483dc347e8e",
+        "ir/context.py": "885b13c1bc0b1e48ad2e1eee5f466979adc657d6fc13abacf7b2330948999eea",
+        "ir/core.py": "cff62003caca13eaaf0abdd93828b601a5201f512fabfb630e07ac64bbf2758c",
+        "ir/executor.py": "aeea4593e5966a9de88854f303a1e1ccb522acc46fe70acbd20a0ace9f8bb072",
+        "ir/parsing.py": "d39fcd8d9ee08da4db6498ba63c1d6608615fa266d4d15de23d526aed0733c09",
+        "ir/policy.py": "c2ef18469dc2d402825a1559a860901927666dcc1fd1e80e3ec82669bb40d307",
+        "ir/runtime.py": "51aa3777823884bdabe06497e64d6cd04a5ce7d47e4674ddb0d7c378a4270059",
+        "ir/schema.py": "ba515d5e60c1c0ea8ae0d15b7265eb5926518452e796dc6973f7372ddf25f993",
+        "ir/selectors.py": "81b5606cc71f3ca6f4eaf848083e8d4b194b1c5a53f1cdf2832e439df6a456f1",
+        "ir/value_resolver.py": "feebb6a908f79b9c5975cc6cf7c657847522208a38d003f3b9cba9d8577864d8",
+        "ir/verifier.py": "44e33d3ca7e5c2305b845640d42e50777e591dedc47f07576446889101bfe1fa",
+        "reference_info.py": "eee0cd93396e9da1ba9682f94493de245543a8699d41fb4da2100c89e80d3782",
+        "repair/__init__.py": "05a749a9dd4f2c77ca79cd7b0cc2e00a8eae16d11cdf8f43ff26cd26e05639b9",
+        "repair/applier.py": "b380f43ab7a0e2451a981244b2ea5f43f9dd411081ed8dd10bdc43d9fe91e256",
+        "repair/local.py": "f5d94287673530f100c594b123765b99178a12a62dbc9f0e8f1fbcc58fb059bb",
+        "repair/prompt.py": "5e0f55f3e0da9e6d1093498562f699b41a5d3293fa1c4fd72c4bb4c81cfb6fc1",
+        "repair/schema.py": "2ed0bf5480b2a632aaa8b67c2cfee85fd2f8a5b21ebcfe22984ec5840d649d56",
+        "role_gate.py": "5211dc375d419d512eebc08da3126a42b7bcc188952128ce1a8f6c72536178d6"
+      }
+    }
+  },
+  {
+    "chunk_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries__table__TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0002",
+    "table_id": "TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0002",
+    "llm_raw_response": "## TABLE_ROLE_GATE_RESPONSE\n{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"target_composition\",\"confidence\":0.85,\"causal_role\":{\"source_object\":\"pyrolytic LiCoO2 (WEEE-derived cathode material)\",\"transformation\":\"pyrolysis\",\"measured_object\":\"pyrolytic LiCoO2 surface carbon species\",\"measured_quantity\":\"XPS binding energy, fwhm, atomic %\",\"evidence_role\":\"target_composition\"},\"region_roles\":[{\"row_range\":[1,6],\"role\":\"target_measurement\",\"reason\":\"XPS carbon speciation of pyrolytic LiCoO2 reporting composition of the treated WEEE cathode material\"}],\"extract_row_ranges\":[[1,6]],\"caption_sufficient\":false,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"caption is null\",\"judgment\":\"ambiguous\",\"reason\":\"no caption to resolve measured object\"},{\"step\":\"headers\",\"evidence\":\"components/BE/fwhm/atomic % for pyrolytic LiCoO2\",\"judgment\":\"supports_extract\",\"reason\":\"reports composition of pyrolytic LiCoO2, a WEEE-derived cathode material\"},{\"step\":\"table_reference_sentences\",\"evidence\":\"The flotation results are given in Table 2 and Figure 11.\",\"judgment\":\"not_used\",\"reason\":\"reference sentence appears mismatched to XPS content\"}],\"allowed_fact_types\":[\"target_composition\",\"material_characterization\"],\"excluded_fact_types\":[\"economic_value\",\"literature_summary\"],\"allowed_relation_types\":[],\"ir_instruction\":\"Extract XPS carbon speciation (component, binding energy, fwhm, atomic %) as composition of pyrolytic LiCoO2 derived from WEEE cathode.\",\"uncertainty\":\"Caption absent; reference sentence mentions flotation, which does not match XPS headers, so the exact study linkage is inferred from headers.\"}}\n\n## SEMANTIC_IR_RESPONSE\n{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"target_composition\",\n      \"reason\": \"The table reports XPS carbon speciation (component, binding energy, fwhm, atomic %) for pyrolytic LiCoO2, a WEEE-derived cathode material. The gate allows target_composition and material_characterization facts.\",\n      \"confidence\": 0.9\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 0,\n        \"raw_header\": \"components (pyrolytic LiCoO2)\",\n        \"entity_text\": \"pyrolytic LiCoO2\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 1,\n        \"raw_header\": \"BE (eV) (pyrolytic LiCoO2)\",\n        \"entity_text\": \"pyrolytic LiCoO2\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"BE\",\n        \"condition_raw_text\": \"BE\",\n        \"unit_text\": \"eV\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"fwhm (eV) (pyrolytic LiCoO2)\",\n        \"entity_text\": \"pyrolytic LiCoO2\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"fwhm\",\n        \"condition_raw_text\": \"fwhm\",\n        \"unit_text\": \"eV\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 3,\n        \"raw_header\": \"atomic (%) (pyrolytic LiCoO2)\",\n        \"entity_text\": \"pyrolytic LiCoO2\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"atomic\",\n        \"condition_raw_text\": \"atomic\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 6]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [0]\n          }\n        },\n        \"bind\": {\n          \"container\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type\": \"Material\"\n          },\n          \"constituent\": {\n            \"from\": \"cell\",\n            \"type\": \"Material\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"container\",\n          \"predicate\": \"CONTAINS\",\n          \"target\": \"constituent\"\n        }\n      },\n      {\n        \"step_id\": \"step_2\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 6]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [1]\n          }\n        },\n        \"bind\": {\n          \"observed_entity\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type\": \"Material\"\n          },\n          \"observation\": {\n            \"from\": \"template\",\n            \"template\": \"BE {row[0]}\",\n            \"type\": \"Observation\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"measurement_basis\": {\n            \"name\": \"measurement_basis\",\n            \"from\": \"column.semantic.condition_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"observed_entity\",\n          \"predicate\": \"HAS_OBSERVATION\",\n          \"target\": \"observation\",\n          \"property\": \"BE\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"measurement_basis\"]\n        }\n      },\n      {\n        \"step_id\": \"step_3\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 6]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [2]\n          }\n        },\n        \"bind\": {\n          \"observed_entity\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type\": \"Material\"\n          },\n          \"observation\": {\n            \"from\": \"template\",\n            \"template\": \"fwhm {row[0]}\",\n            \"type\": \"Observation\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"measurement_basis\": {\n            \"name\": \"measurement_basis\",\n            \"from\": \"column.semantic.condition_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"observed_entity\",\n          \"predicate\": \"HAS_OBSERVATION\",\n          \"target\": \"observation\",\n          \"property\": \"fwhm\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"measurement_basis\"]\n        }\n      },\n      {\n        \"step_id\": \"step_4\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 6]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [3]\n          }\n        },\n        \"bind\": {\n          \"observed_entity\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type\": \"Material\"\n          },\n          \"observation\": {\n            \"from\": \"template\",\n            \"template\": \"atomic {row[0]}\",\n            \"type\": \"Observation\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"measurement_basis\": {\n            \"name\": \"measurement_basis\",\n            \"from\": \"column.semantic.condition_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"observed_entity\",\n          \"predicate\": \"HAS_OBSERVATION\",\n          \"target\": \"observation\",\n          \"property\": \"atomic\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"measurement_basis\"]\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"The table reports XPS carbon speciation for pyrolytic LiCoO2. Column 0 lists carbon components (e.g., pyrolytic carbon, C-C/C-H) as constituents of the material. Columns 1-3 report BE, fwhm, and atomic % as observations of the material, with the component name used to label each observation. CONTAINS facts link pyrolytic LiCoO2 to each carbon component. HAS_OBSERVATION facts link pyrolytic LiCoO2 to each measured property, with the component name embedded in the observation label.\",\n      \"uncertainties\": [\n        \"The component labels are treated as Material entities, though they are carbon species rather than bulk materials.\",\n        \"The observation labels are constructed by combining the property name with the component name; this is a reasonable way to distinguish multiple observations of the same property on the same material.\"\n      ]\n    }\n  }\n}",
+    "llm_gate_response": "{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"target_composition\",\"confidence\":0.85,\"causal_role\":{\"source_object\":\"pyrolytic LiCoO2 (WEEE-derived cathode material)\",\"transformation\":\"pyrolysis\",\"measured_object\":\"pyrolytic LiCoO2 surface carbon species\",\"measured_quantity\":\"XPS binding energy, fwhm, atomic %\",\"evidence_role\":\"target_composition\"},\"region_roles\":[{\"row_range\":[1,6],\"role\":\"target_measurement\",\"reason\":\"XPS carbon speciation of pyrolytic LiCoO2 reporting composition of the treated WEEE cathode material\"}],\"extract_row_ranges\":[[1,6]],\"caption_sufficient\":false,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"caption is null\",\"judgment\":\"ambiguous\",\"reason\":\"no caption to resolve measured object\"},{\"step\":\"headers\",\"evidence\":\"components/BE/fwhm/atomic % for pyrolytic LiCoO2\",\"judgment\":\"supports_extract\",\"reason\":\"reports composition of pyrolytic LiCoO2, a WEEE-derived cathode material\"},{\"step\":\"table_reference_sentences\",\"evidence\":\"The flotation results are given in Table 2 and Figure 11.\",\"judgment\":\"not_used\",\"reason\":\"reference sentence appears mismatched to XPS content\"}],\"allowed_fact_types\":[\"target_composition\",\"material_characterization\"],\"excluded_fact_types\":[\"economic_value\",\"literature_summary\"],\"allowed_relation_types\":[],\"ir_instruction\":\"Extract XPS carbon speciation (component, binding energy, fwhm, atomic %) as composition of pyrolytic LiCoO2 derived from WEEE cathode.\",\"uncertainty\":\"Caption absent; reference sentence mentions flotation, which does not match XPS headers, so the exact study linkage is inferred from headers.\"}}",
+    "llm_ir_response": "{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"target_composition\",\n      \"reason\": \"The table reports XPS carbon speciation (component, binding energy, fwhm, atomic %) for pyrolytic LiCoO2, a WEEE-derived cathode material. The gate allows target_composition and material_characterization facts.\",\n      \"confidence\": 0.9\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 0,\n        \"raw_header\": \"components (pyrolytic LiCoO2)\",\n        \"entity_text\": \"pyrolytic LiCoO2\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 1,\n        \"raw_header\": \"BE (eV) (pyrolytic LiCoO2)\",\n        \"entity_text\": \"pyrolytic LiCoO2\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"BE\",\n        \"condition_raw_text\": \"BE\",\n        \"unit_text\": \"eV\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"fwhm (eV) (pyrolytic LiCoO2)\",\n        \"entity_text\": \"pyrolytic LiCoO2\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"fwhm\",\n        \"condition_raw_text\": \"fwhm\",\n        \"unit_text\": \"eV\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 3,\n        \"raw_header\": \"atomic (%) (pyrolytic LiCoO2)\",\n        \"entity_text\": \"pyrolytic LiCoO2\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"atomic\",\n        \"condition_raw_text\": \"atomic\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 6]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [0]\n          }\n        },\n        \"bind\": {\n          \"container\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type\": \"Material\"\n          },\n          \"constituent\": {\n            \"from\": \"cell\",\n            \"type\": \"Material\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"container\",\n          \"predicate\": \"CONTAINS\",\n          \"target\": \"constituent\"\n        }\n      },\n      {\n        \"step_id\": \"step_2\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 6]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [1]\n          }\n        },\n        \"bind\": {\n          \"observed_entity\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type\": \"Material\"\n          },\n          \"observation\": {\n            \"from\": \"template\",\n            \"template\": \"BE {row[0]}\",\n            \"type\": \"Observation\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"measurement_basis\": {\n            \"name\": \"measurement_basis\",\n            \"from\": \"column.semantic.condition_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"observed_entity\",\n          \"predicate\": \"HAS_OBSERVATION\",\n          \"target\": \"observation\",\n          \"property\": \"BE\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"measurement_basis\"]\n        }\n      },\n      {\n        \"step_id\": \"step_3\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 6]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [2]\n          }\n        },\n        \"bind\": {\n          \"observed_entity\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type\": \"Material\"\n          },\n          \"observation\": {\n            \"from\": \"template\",\n            \"template\": \"fwhm {row[0]}\",\n            \"type\": \"Observation\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"measurement_basis\": {\n            \"name\": \"measurement_basis\",\n            \"from\": \"column.semantic.condition_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"observed_entity\",\n          \"predicate\": \"HAS_OBSERVATION\",\n          \"target\": \"observation\",\n          \"property\": \"fwhm\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"measurement_basis\"]\n        }\n      },\n      {\n        \"step_id\": \"step_4\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 6]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [3]\n          }\n        },\n        \"bind\": {\n          \"observed_entity\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type\": \"Material\"\n          },\n          \"observation\": {\n            \"from\": \"template\",\n            \"template\": \"atomic {row[0]}\",\n            \"type\": \"Observation\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"measurement_basis\": {\n            \"name\": \"measurement_basis\",\n            \"from\": \"column.semantic.condition_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"observed_entity\",\n          \"predicate\": \"HAS_OBSERVATION\",\n          \"target\": \"observation\",\n          \"property\": \"atomic\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"measurement_basis\"]\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"The table reports XPS carbon speciation for pyrolytic LiCoO2. Column 0 lists carbon components (e.g., pyrolytic carbon, C-C/C-H) as constituents of the material. Columns 1-3 report BE, fwhm, and atomic % as observations of the material, with the component name used to label each observation. CONTAINS facts link pyrolytic LiCoO2 to each carbon component. HAS_OBSERVATION facts link pyrolytic LiCoO2 to each measured property, with the component name embedded in the observation label.\",\n      \"uncertainties\": [\n        \"The component labels are treated as Material entities, though they are carbon species rather than bulk materials.\",\n        \"The observation labels are constructed by combining the property name with the component name; this is a reasonable way to distinguish multiple observations of the same property on the same material.\"\n      ]\n    }\n  }\n}",
+    "table_role_decision": {
+      "decision": "extract",
+      "table_role": "target_composition",
+      "confidence": 0.85,
+      "causal_role": {
+        "source_object": "pyrolytic LiCoO2 (WEEE-derived cathode material)",
+        "transformation": "pyrolysis",
+        "measured_object": "pyrolytic LiCoO2 surface carbon species",
+        "measured_quantity": "XPS binding energy, fwhm, atomic %",
+        "evidence_role": "target_composition"
+      },
+      "region_roles": [
+        {
+          "row_range": [
+            1,
+            6
+          ],
+          "role": "target_measurement",
+          "reason": "XPS carbon speciation of pyrolytic LiCoO2 reporting composition of the treated WEEE cathode material"
+        }
+      ],
+      "extract_row_ranges": [
+        [
+          1,
+          6
+        ]
+      ],
+      "caption_sufficient": false,
+      "evidence_steps": [
+        {
+          "step": "caption",
+          "evidence": "caption is null",
+          "judgment": "ambiguous",
+          "reason": "no caption to resolve measured object"
+        },
+        {
+          "step": "headers",
+          "evidence": "components/BE/fwhm/atomic % for pyrolytic LiCoO2",
+          "judgment": "supports_extract",
+          "reason": "reports composition of pyrolytic LiCoO2, a WEEE-derived cathode material"
+        },
+        {
+          "step": "table_reference_sentences",
+          "evidence": "The flotation results are given in Table 2 and Figure 11.",
+          "judgment": "not_used",
+          "reason": "reference sentence appears mismatched to XPS content"
+        }
+      ],
+      "allowed_fact_types": [
+        "target_composition",
+        "material_characterization"
+      ],
+      "excluded_fact_types": [
+        "economic_value",
+        "literature_summary"
+      ],
+      "allowed_relation_types": [],
+      "ir_instruction": "Extract XPS carbon speciation (component, binding energy, fwhm, atomic %) as composition of pyrolytic LiCoO2 derived from WEEE cathode.",
+      "uncertainty": "Caption absent; reference sentence mentions flotation, which does not match XPS headers, so the exact study linkage is inferred from headers."
+    },
+    "llm_interpretation": {
+      "semantic_ir": {
+        "extractability": {
+          "decision": "extract",
+          "table_role": "target_composition",
+          "reason": "The table reports XPS carbon speciation (component, binding energy, fwhm, atomic %) for pyrolytic LiCoO2, a WEEE-derived cathode material. The gate allows target_composition and material_characterization facts.",
+          "confidence": 0.9
+        },
+        "column_semantics": [
+          {
+            "column": 0,
+            "raw_header": "components (pyrolytic LiCoO2)",
+            "entity_text": "pyrolytic LiCoO2",
+            "entity_type": "Material",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "",
+            "measure_text": "",
+            "confidence": 0.95
+          },
+          {
+            "column": 1,
+            "raw_header": "BE (eV) (pyrolytic LiCoO2)",
+            "entity_text": "pyrolytic LiCoO2",
+            "entity_type": "Material",
+            "condition_text": "BE",
+            "condition_raw_text": "BE",
+            "unit_text": "eV",
+            "measure_text": "",
+            "confidence": 0.95
+          },
+          {
+            "column": 2,
+            "raw_header": "fwhm (eV) (pyrolytic LiCoO2)",
+            "entity_text": "pyrolytic LiCoO2",
+            "entity_type": "Material",
+            "condition_text": "fwhm",
+            "condition_raw_text": "fwhm",
+            "unit_text": "eV",
+            "measure_text": "",
+            "confidence": 0.95
+          },
+          {
+            "column": 3,
+            "raw_header": "atomic (%) (pyrolytic LiCoO2)",
+            "entity_text": "pyrolytic LiCoO2",
+            "entity_type": "Material",
+            "condition_text": "atomic",
+            "condition_raw_text": "atomic",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.95
+          }
+        ],
+        "program": [
+          {
+            "step_id": "step_1",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  1,
+                  6
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  0
+                ]
+              }
+            },
+            "bind": {
+              "container": {
+                "from": "column.semantic.entity_text",
+                "type": "Material"
+              },
+              "constituent": {
+                "from": "cell",
+                "type": "Material"
+              }
+            },
+            "emit": {
+              "source": "container",
+              "predicate": "CONTAINS",
+              "target": "constituent"
+            }
+          },
+          {
+            "step_id": "step_2",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  1,
+                  6
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  1
+                ]
+              }
+            },
+            "bind": {
+              "observed_entity": {
+                "from": "column.semantic.entity_text",
+                "type": "Material"
+              },
+              "observation": {
+                "from": "template",
+                "template": "BE {row[0]}",
+                "type": "Observation"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column.semantic.unit_text"
+              },
+              "measurement_basis": {
+                "name": "measurement_basis",
+                "from": "column.semantic.condition_text"
+              }
+            },
+            "emit": {
+              "source": "observed_entity",
+              "predicate": "HAS_OBSERVATION",
+              "target": "observation",
+              "property": "BE",
+              "value": "value",
+              "unit": "unit",
+              "conditions": [
+                "measurement_basis"
+              ]
+            }
+          },
+          {
+            "step_id": "step_3",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  1,
+                  6
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  2
+                ]
+              }
+            },
+            "bind": {
+              "observed_entity": {
+                "from": "column.semantic.entity_text",
+                "type": "Material"
+              },
+              "observation": {
+                "from": "template",
+                "template": "fwhm {row[0]}",
+                "type": "Observation"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column.semantic.unit_text"
+              },
+              "measurement_basis": {
+                "name": "measurement_basis",
+                "from": "column.semantic.condition_text"
+              }
+            },
+            "emit": {
+              "source": "observed_entity",
+              "predicate": "HAS_OBSERVATION",
+              "target": "observation",
+              "property": "fwhm",
+              "value": "value",
+              "unit": "unit",
+              "conditions": [
+                "measurement_basis"
+              ]
+            }
+          },
+          {
+            "step_id": "step_4",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  1,
+                  6
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  3
+                ]
+              }
+            },
+            "bind": {
+              "observed_entity": {
+                "from": "column.semantic.entity_text",
+                "type": "Material"
+              },
+              "observation": {
+                "from": "template",
+                "template": "atomic {row[0]}",
+                "type": "Observation"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column.semantic.unit_text"
+              },
+              "measurement_basis": {
+                "name": "measurement_basis",
+                "from": "column.semantic.condition_text"
+              }
+            },
+            "emit": {
+              "source": "observed_entity",
+              "predicate": "HAS_OBSERVATION",
+              "target": "observation",
+              "property": "atomic",
+              "value": "value",
+              "unit": "unit",
+              "conditions": [
+                "measurement_basis"
+              ]
+            }
+          }
+        ],
+        "context_program": [],
+        "rationale": {
+          "binding_summary": "The table reports XPS carbon speciation for pyrolytic LiCoO2. Column 0 lists carbon components (e.g., pyrolytic carbon, C-C/C-H) as constituents of the material. Columns 1-3 report BE, fwhm, and atomic % as observations of the material, with the component name used to label each observation. CONTAINS facts link pyrolytic LiCoO2 to each carbon component. HAS_OBSERVATION facts link pyrolytic LiCoO2 to each measured property, with the component name embedded in the observation label.",
+          "uncertainties": [
+            "The component labels are treated as Material entities, though they are carbon species rather than bulk materials.",
+            "The observation labels are constructed by combining the property name with the component name; this is a reasonable way to distinguish multiple observations of the same property on the same material."
+          ]
+        }
+      }
+    },
+    "semantic_ir": {
+      "extractability": {
+        "decision": "extract",
+        "table_role": "target_composition",
+        "reason": "The table reports XPS carbon speciation (component, binding energy, fwhm, atomic %) for pyrolytic LiCoO2, a WEEE-derived cathode material. The gate allows target_composition and material_characterization facts.",
+        "confidence": 0.85,
+        "gate_decision": "extract",
+        "gate_table_role": "target_composition"
+      },
+      "column_semantics": [
+        {
+          "column": 0,
+          "raw_header": "components (pyrolytic LiCoO2)",
+          "entity_text": "pyrolytic LiCoO2",
+          "entity_type": "Material",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "",
+          "measure_text": "",
+          "confidence": 0.95
+        },
+        {
+          "column": 1,
+          "raw_header": "BE (eV) (pyrolytic LiCoO2)",
+          "entity_text": "pyrolytic LiCoO2",
+          "entity_type": "Material",
+          "condition_text": "BE",
+          "condition_raw_text": "BE",
+          "unit_text": "eV",
+          "measure_text": "",
+          "confidence": 0.95
+        },
+        {
+          "column": 2,
+          "raw_header": "fwhm (eV) (pyrolytic LiCoO2)",
+          "entity_text": "pyrolytic LiCoO2",
+          "entity_type": "Material",
+          "condition_text": "fwhm",
+          "condition_raw_text": "fwhm",
+          "unit_text": "eV",
+          "measure_text": "",
+          "confidence": 0.95
+        },
+        {
+          "column": 3,
+          "raw_header": "atomic (%) (pyrolytic LiCoO2)",
+          "entity_text": "pyrolytic LiCoO2",
+          "entity_type": "Material",
+          "condition_text": "atomic",
+          "condition_raw_text": "atomic",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.95
+        }
+      ],
+      "program": [
+        {
+          "step_id": "step_1",
+          "op": "foreach_cell",
+          "select": {
+            "rows": {
+              "selector": "row_ranges",
+              "row_ranges": [
+                [
+                  1,
+                  6
+                ]
+              ]
+            },
+            "cols": {
+              "selector": "columns",
+              "columns": [
+                0
+              ]
+            }
+          },
+          "bind": {
+            "container": {
+              "from": "column.semantic.entity_text",
+              "type": "Material"
+            },
+            "constituent": {
+              "from": "cell",
+              "type": "Material"
+            }
+          },
+          "emit": {
+            "source": "container",
+            "predicate": "CONTAINS",
+            "target": "constituent"
+          }
+        },
+        {
+          "step_id": "step_2",
+          "op": "foreach_cell",
+          "select": {
+            "rows": {
+              "selector": "row_ranges",
+              "row_ranges": [
+                [
+                  1,
+                  6
+                ]
+              ]
+            },
+            "cols": {
+              "selector": "columns",
+              "columns": [
+                1
+              ]
+            }
+          },
+          "bind": {
+            "observed_entity": {
+              "from": "column.semantic.entity_text",
+              "type": "Material"
+            },
+            "observation": {
+              "from": "template",
+              "template": "BE {row[0]}",
+              "type": "Observation"
+            },
+            "value": {
+              "from": "cell",
+              "parser": "number"
+            },
+            "unit": {
+              "from": "column.semantic.unit_text"
+            },
+            "measurement_basis": {
+              "name": "measurement_basis",
+              "from": "column.semantic.condition_text"
+            }
+          },
+          "emit": {
+            "source": "observed_entity",
+            "predicate": "HAS_OBSERVATION",
+            "target": "observation",
+            "property": "BE",
+            "value": "value",
+            "unit": "unit",
+            "conditions": [
+              "measurement_basis"
+            ]
+          }
+        },
+        {
+          "step_id": "step_3",
+          "op": "foreach_cell",
+          "select": {
+            "rows": {
+              "selector": "row_ranges",
+              "row_ranges": [
+                [
+                  1,
+                  6
+                ]
+              ]
+            },
+            "cols": {
+              "selector": "columns",
+              "columns": [
+                2
+              ]
+            }
+          },
+          "bind": {
+            "observed_entity": {
+              "from": "column.semantic.entity_text",
+              "type": "Material"
+            },
+            "observation": {
+              "from": "template",
+              "template": "fwhm {row[0]}",
+              "type": "Observation"
+            },
+            "value": {
+              "from": "cell",
+              "parser": "number"
+            },
+            "unit": {
+              "from": "column.semantic.unit_text"
+            },
+            "measurement_basis": {
+              "name": "measurement_basis",
+              "from": "column.semantic.condition_text"
+            }
+          },
+          "emit": {
+            "source": "observed_entity",
+            "predicate": "HAS_OBSERVATION",
+            "target": "observation",
+            "property": "fwhm",
+            "value": "value",
+            "unit": "unit",
+            "conditions": [
+              "measurement_basis"
+            ]
+          }
+        },
+        {
+          "step_id": "step_4",
+          "op": "foreach_cell",
+          "select": {
+            "rows": {
+              "selector": "row_ranges",
+              "row_ranges": [
+                [
+                  1,
+                  6
+                ]
+              ]
+            },
+            "cols": {
+              "selector": "columns",
+              "columns": [
+                3
+              ]
+            }
+          },
+          "bind": {
+            "observed_entity": {
+              "from": "column.semantic.entity_text",
+              "type": "Material"
+            },
+            "observation": {
+              "from": "template",
+              "template": "atomic {row[0]}",
+              "type": "Observation"
+            },
+            "value": {
+              "from": "cell",
+              "parser": "number"
+            },
+            "unit": {
+              "from": "column.semantic.unit_text"
+            },
+            "measurement_basis": {
+              "name": "measurement_basis",
+              "from": "column.semantic.condition_text"
+            }
+          },
+          "emit": {
+            "source": "observed_entity",
+            "predicate": "HAS_OBSERVATION",
+            "target": "observation",
+            "property": "atomic",
+            "value": "value",
+            "unit": "unit",
+            "conditions": [
+              "measurement_basis"
+            ]
+          }
+        }
+      ],
+      "context_program": [],
+      "rationale": {
+        "binding_summary": "The table reports XPS carbon speciation for pyrolytic LiCoO2. Column 0 lists carbon components (e.g., pyrolytic carbon, C-C/C-H) as constituents of the material. Columns 1-3 report BE, fwhm, and atomic % as observations of the material, with the component name used to label each observation. CONTAINS facts link pyrolytic LiCoO2 to each carbon component. HAS_OBSERVATION facts link pyrolytic LiCoO2 to each measured property, with the component name embedded in the observation label.",
+        "uncertainties": [
+          "The component labels are treated as Material entities, though they are carbon species rather than bulk materials.",
+          "The observation labels are constructed by combining the property name with the component name; this is a reasonable way to distinguish multiple observations of the same property on the same material."
+        ]
+      },
+      "table_id": "TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0002"
+    },
+    "table_structure": {
+      "table_id": "TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0002",
+      "extraction_mode": "semantic_ir",
+      "table_role": "target_composition",
+      "extractability": {
+        "decision": "extract",
+        "table_role": "target_composition",
+        "reason": "The table reports XPS carbon speciation (component, binding energy, fwhm, atomic %) for pyrolytic LiCoO2, a WEEE-derived cathode material. The gate allows target_composition and material_characterization facts.",
+        "confidence": 0.85,
+        "gate_decision": "extract",
+        "gate_table_role": "target_composition"
+      },
+      "layout": null
+    },
+    "verification_report": {
+      "status": "passed",
+      "skip_reason": null,
+      "cell_grounded_relations": 24,
+      "entity_count": 21,
+      "condition_count": 3,
+      "context_record_count": 0,
+      "unsupported_templates": [],
+      "scope_rejections": [],
+      "domain_range_rejections": [],
+      "aggregate_row_diagnostics": [],
+      "unresolved_endpoint_types": [],
+      "unresolved_type_facts": [],
+      "semantic_gate": [],
+      "slot_binding_conflicts": [
+        {
+          "status": "slot_binding_conflict",
+          "check_type": "unbound_header_condition",
+          "severity": "warning",
+          "template_id": "step_1",
+          "column": 1,
+          "declared_text": "BE",
+          "reason": "column 1 declares condition_text='BE' but emit.conditions never binds column.semantic.condition_text"
+        },
+        {
+          "status": "slot_binding_conflict",
+          "check_type": "unbound_header_condition",
+          "severity": "warning",
+          "template_id": "step_1",
+          "column": 2,
+          "declared_text": "fwhm",
+          "reason": "column 2 declares condition_text='fwhm' but emit.conditions never binds column.semantic.condition_text"
+        },
+        {
+          "status": "slot_binding_conflict",
+          "check_type": "unbound_header_condition",
+          "severity": "warning",
+          "template_id": "step_1",
+          "column": 3,
+          "declared_text": "atomic",
+          "reason": "column 3 declares condition_text='atomic' but emit.conditions never binds column.semantic.condition_text"
+        }
+      ],
+      "layout_program_mismatches": [],
+      "checked_templates": 4
+    },
+    "execution_trace": [
+      {
+        "template_id": "step_1",
+        "op": "foreach_cell",
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "columns": [
+          0
+        ],
+        "emitted": 6,
+        "skipped": 0
+      },
+      {
+        "template_id": "step_2",
+        "op": "foreach_cell",
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "columns": [
+          1
+        ],
+        "emitted": 6,
+        "skipped": 0
+      },
+      {
+        "template_id": "step_3",
+        "op": "foreach_cell",
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "columns": [
+          2
+        ],
+        "emitted": 6,
+        "skipped": 0
+      },
+      {
+        "template_id": "step_4",
+        "op": "foreach_cell",
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "columns": [
+          3
+        ],
+        "emitted": 6,
+        "skipped": 0
+      }
+    ],
+    "failed_rewrite_verification_report": null,
+    "failed_rewrite_execution_trace": null,
+    "table_cache_key": "b61cb31efb6a868f9d0a790daaacbff997b98692c119b9d7eb79a5651111ddea",
+    "table_cache_version": {
+      "format_version": 1,
+      "table_code_sha256": "f0dd5f4553ba60fa1f8dc3a9e2facb37220e0d8b94248c9976aea3179fbc8514",
+      "table_file_sha256": {
+        "__init__.py": "859afd37280303ac79ea652fcd1c347db6f6e9a7427d1bf201341ff92fdbb9f3",
+        "artifact_cache.py": "dae107568c3be648794486b4140f41386af8bd9d77b261dcf82505cef6e977aa",
+        "contract.py": "d537d95059e8a540b82872ffebe956d5e8fd43081e1ca630aa34b5a16359092a",
+        "cross_table_reference_resolver.py": "834fd5639f5b7dd79de0cd4b92943e3584283c02479a03e12c5b128f625bbf11",
+        "extraction_agent.py": "bd64ffbda3e1832704c44c090412041e0af71280c17c50aa2d189228fcaa31fa",
+        "ir/__init__.py": "388534b9fb9c0b6eae80334aef2e8eae376c73fca9ab48e74ddf4299bf50e425",
+        "ir/common.py": "53ca6b464bda54f2b4f95741c281e567c792a5206816f9164c8dc483dc347e8e",
+        "ir/context.py": "885b13c1bc0b1e48ad2e1eee5f466979adc657d6fc13abacf7b2330948999eea",
+        "ir/core.py": "cff62003caca13eaaf0abdd93828b601a5201f512fabfb630e07ac64bbf2758c",
+        "ir/executor.py": "aeea4593e5966a9de88854f303a1e1ccb522acc46fe70acbd20a0ace9f8bb072",
+        "ir/parsing.py": "d39fcd8d9ee08da4db6498ba63c1d6608615fa266d4d15de23d526aed0733c09",
+        "ir/policy.py": "c2ef18469dc2d402825a1559a860901927666dcc1fd1e80e3ec82669bb40d307",
+        "ir/runtime.py": "51aa3777823884bdabe06497e64d6cd04a5ce7d47e4674ddb0d7c378a4270059",
+        "ir/schema.py": "ba515d5e60c1c0ea8ae0d15b7265eb5926518452e796dc6973f7372ddf25f993",
+        "ir/selectors.py": "81b5606cc71f3ca6f4eaf848083e8d4b194b1c5a53f1cdf2832e439df6a456f1",
+        "ir/value_resolver.py": "feebb6a908f79b9c5975cc6cf7c657847522208a38d003f3b9cba9d8577864d8",
+        "ir/verifier.py": "44e33d3ca7e5c2305b845640d42e50777e591dedc47f07576446889101bfe1fa",
+        "reference_info.py": "eee0cd93396e9da1ba9682f94493de245543a8699d41fb4da2100c89e80d3782",
+        "repair/__init__.py": "05a749a9dd4f2c77ca79cd7b0cc2e00a8eae16d11cdf8f43ff26cd26e05639b9",
+        "repair/applier.py": "b380f43ab7a0e2451a981244b2ea5f43f9dd411081ed8dd10bdc43d9fe91e256",
+        "repair/local.py": "f5d94287673530f100c594b123765b99178a12a62dbc9f0e8f1fbcc58fb059bb",
+        "repair/prompt.py": "5e0f55f3e0da9e6d1093498562f699b41a5d3293fa1c4fd72c4bb4c81cfb6fc1",
+        "repair/schema.py": "2ed0bf5480b2a632aaa8b67c2cfee85fd2f8a5b21ebcfe22984ec5840d649d56",
+        "role_gate.py": "5211dc375d419d512eebc08da3126a42b7bcc188952128ce1a8f6c72536178d6"
+      }
+    }
+  },
+  {
+    "chunk_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries__table__TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0003",
+    "table_id": "TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0003",
+    "llm_raw_response": "## TABLE_ROLE_GATE_RESPONSE\n{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"recovery_result\",\"confidence\":0.9,\"causal_role\":{\"source_object\":\"spent lithium-ion battery electrode materials (graphite and LiCoO2)\",\"transformation\":\"flotation with different pretreatments (REM, PEM, PUEM)\",\"measured_object\":\"graphite concentrate and LiCoO2 concentrate\",\"measured_quantity\":\"grade (%) and yield (%)\",\"evidence_role\":\"treatment_outcome\"},\"region_roles\":[{\"row_range\":[1,2],\"role\":\"target_measurement\",\"reason\":\"Rows report grade and yield of graphite and LiCoO2 concentrates after flotation pretreatments, quantifying separation/recovery of electrode materials.\"}],\"extract_row_ranges\":[[1,2]],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Table 2. Flotation Results of Electrode Materials with Different Pretreatments\",\"judgment\":\"supports_extract\",\"reason\":\"Reports flotation outcomes (grade/yield) of electrode materials after pretreatment, a target-bearing treatment outcome.\"},{\"step\":\"headers\",\"evidence\":\"graphite concentrate (REM/PEM/PUEM (%)) and LiCoO2 concentrate (REM/PEM/PUEM (%))\",\"judgment\":\"supports_extract\",\"reason\":\"Concentrate grade/yield columns quantify recovery of target electrode materials.\"},{\"step\":\"row_preview\",\"evidence\":\"LiCoO2 grade and yield values across pretreatments\",\"judgment\":\"supports_extract\",\"reason\":\"Measured quantities are post-treatment composition/recovery of WEEE constituents.\"}],\"allowed_fact_types\":[\"material_composition\",\"recovery_yield\",\"grade_percentage\"],\"excluded_fact_types\":[\"economic_value\",\"literature_summary\",\"process_parameter\"],\"allowed_relation_types\":[],\"ir_instruction\":\"Extract flotation grade and yield outcomes for graphite and LiCoO2 concentrates under each pretreatment as treatment results.\",\"uncertainty\":\"\"}}\n\n## SEMANTIC_IR_RESPONSE\n{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"recovery_result\",\n      \"reason\": \"Table reports flotation grade and yield outcomes for graphite and LiCoO2 concentrates under REM, PEM, and PUEM pretreatments, matching allowed recovery_yield and grade_percentage fact types.\",\n      \"confidence\": 0.9\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 1,\n        \"raw_header\": \"graphite concentrate (REM (%))\",\n        \"entity_text\": \"graphite concentrate\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"REM\",\n        \"condition_raw_text\": \"REM\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"LiCoO2concentrate (REM (%))\",\n        \"entity_text\": \"LiCoO2 concentrate\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"REM\",\n        \"condition_raw_text\": \"REM\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 3,\n        \"raw_header\": \"graphite concentrate (PEM (%))\",\n        \"entity_text\": \"graphite concentrate\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"PEM\",\n        \"condition_raw_text\": \"PEM\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 4,\n        \"raw_header\": \"LiCoO2concentrate (PEM (%))\",\n        \"entity_text\": \"LiCoO2 concentrate\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"PEM\",\n        \"condition_raw_text\": \"PEM\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 5,\n        \"raw_header\": \"graphite concentrate (PUEM (%))\",\n        \"entity_text\": \"graphite concentrate\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"PUEM\",\n        \"condition_raw_text\": \"PUEM\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 6,\n        \"raw_header\": \"LiCoO2concentrate (PUEM (%))\",\n        \"entity_text\": \"LiCoO2 concentrate\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"PUEM\",\n        \"condition_raw_text\": \"PUEM\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 1]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [1, 2, 3, 4, 5, 6]\n          }\n        },\n        \"bind\": {\n          \"source\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type_from\": \"column.semantic.entity_type\"\n          },\n          \"target\": {\n            \"from\": \"literal\",\n            \"literal\": \"flotation\",\n            \"type\": \"Process\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"pretreatment\": {\n            \"name\": \"pretreatment\",\n            \"from\": \"column.semantic.condition_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"source\",\n          \"predicate\": \"HAS_OUTPUT\",\n          \"target\": \"target\",\n          \"property\": \"grade\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"pretreatment\"]\n        }\n      },\n      {\n        \"step_id\": \"step_2\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [2, 2]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [1, 2, 3, 4, 5, 6]\n          }\n        },\n        \"bind\": {\n          \"source\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type_from\": \"column.semantic.entity_type\"\n          },\n          \"target\": {\n            \"from\": \"literal\",\n            \"literal\": \"flotation\",\n            \"type\": \"Process\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"pretreatment\": {\n            \"name\": \"pretreatment\",\n            \"from\": \"column.semantic.condition_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"source\",\n          \"predicate\": \"HAS_OUTPUT\",\n          \"target\": \"target\",\n          \"property\": \"yield\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"pretreatment\"]\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"Rows 1 and 2 report grade and yield of graphite and LiCoO2 concentrates after flotation with REM, PEM, or PUEM pretreatment. Each data column header is decomposed into a material endpoint (graphite concentrate or LiCoO2 concentrate), a pretreatment condition (REM/PEM/PUEM), and a percent unit. The process endpoint is the literal 'flotation' from the caption. HAS_OUTPUT facts bind the concentrate material as source, flotation as target, the numeric cell as value, the declared % as unit, and the pretreatment as a condition.\",\n      \"uncertainties\": [\n        \"REM, PEM, and PUEM are not expanded because no expansion is visible in the table or reference text.\",\n        \"The process endpoint is a literal 'flotation' inferred from the caption; no explicit process column exists in the table.\"\n      ]\n    }\n  }\n}",
+    "llm_gate_response": "{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"recovery_result\",\"confidence\":0.9,\"causal_role\":{\"source_object\":\"spent lithium-ion battery electrode materials (graphite and LiCoO2)\",\"transformation\":\"flotation with different pretreatments (REM, PEM, PUEM)\",\"measured_object\":\"graphite concentrate and LiCoO2 concentrate\",\"measured_quantity\":\"grade (%) and yield (%)\",\"evidence_role\":\"treatment_outcome\"},\"region_roles\":[{\"row_range\":[1,2],\"role\":\"target_measurement\",\"reason\":\"Rows report grade and yield of graphite and LiCoO2 concentrates after flotation pretreatments, quantifying separation/recovery of electrode materials.\"}],\"extract_row_ranges\":[[1,2]],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Table 2. Flotation Results of Electrode Materials with Different Pretreatments\",\"judgment\":\"supports_extract\",\"reason\":\"Reports flotation outcomes (grade/yield) of electrode materials after pretreatment, a target-bearing treatment outcome.\"},{\"step\":\"headers\",\"evidence\":\"graphite concentrate (REM/PEM/PUEM (%)) and LiCoO2 concentrate (REM/PEM/PUEM (%))\",\"judgment\":\"supports_extract\",\"reason\":\"Concentrate grade/yield columns quantify recovery of target electrode materials.\"},{\"step\":\"row_preview\",\"evidence\":\"LiCoO2 grade and yield values across pretreatments\",\"judgment\":\"supports_extract\",\"reason\":\"Measured quantities are post-treatment composition/recovery of WEEE constituents.\"}],\"allowed_fact_types\":[\"material_composition\",\"recovery_yield\",\"grade_percentage\"],\"excluded_fact_types\":[\"economic_value\",\"literature_summary\",\"process_parameter\"],\"allowed_relation_types\":[],\"ir_instruction\":\"Extract flotation grade and yield outcomes for graphite and LiCoO2 concentrates under each pretreatment as treatment results.\",\"uncertainty\":\"\"}}",
+    "llm_ir_response": "{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"recovery_result\",\n      \"reason\": \"Table reports flotation grade and yield outcomes for graphite and LiCoO2 concentrates under REM, PEM, and PUEM pretreatments, matching allowed recovery_yield and grade_percentage fact types.\",\n      \"confidence\": 0.9\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 1,\n        \"raw_header\": \"graphite concentrate (REM (%))\",\n        \"entity_text\": \"graphite concentrate\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"REM\",\n        \"condition_raw_text\": \"REM\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"LiCoO2concentrate (REM (%))\",\n        \"entity_text\": \"LiCoO2 concentrate\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"REM\",\n        \"condition_raw_text\": \"REM\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 3,\n        \"raw_header\": \"graphite concentrate (PEM (%))\",\n        \"entity_text\": \"graphite concentrate\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"PEM\",\n        \"condition_raw_text\": \"PEM\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 4,\n        \"raw_header\": \"LiCoO2concentrate (PEM (%))\",\n        \"entity_text\": \"LiCoO2 concentrate\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"PEM\",\n        \"condition_raw_text\": \"PEM\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 5,\n        \"raw_header\": \"graphite concentrate (PUEM (%))\",\n        \"entity_text\": \"graphite concentrate\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"PUEM\",\n        \"condition_raw_text\": \"PUEM\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 6,\n        \"raw_header\": \"LiCoO2concentrate (PUEM (%))\",\n        \"entity_text\": \"LiCoO2 concentrate\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"PUEM\",\n        \"condition_raw_text\": \"PUEM\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 1]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [1, 2, 3, 4, 5, 6]\n          }\n        },\n        \"bind\": {\n          \"source\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type_from\": \"column.semantic.entity_type\"\n          },\n          \"target\": {\n            \"from\": \"literal\",\n            \"literal\": \"flotation\",\n            \"type\": \"Process\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"pretreatment\": {\n            \"name\": \"pretreatment\",\n            \"from\": \"column.semantic.condition_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"source\",\n          \"predicate\": \"HAS_OUTPUT\",\n          \"target\": \"target\",\n          \"property\": \"grade\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"pretreatment\"]\n        }\n      },\n      {\n        \"step_id\": \"step_2\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [2, 2]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [1, 2, 3, 4, 5, 6]\n          }\n        },\n        \"bind\": {\n          \"source\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type_from\": \"column.semantic.entity_type\"\n          },\n          \"target\": {\n            \"from\": \"literal\",\n            \"literal\": \"flotation\",\n            \"type\": \"Process\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"pretreatment\": {\n            \"name\": \"pretreatment\",\n            \"from\": \"column.semantic.condition_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"source\",\n          \"predicate\": \"HAS_OUTPUT\",\n          \"target\": \"target\",\n          \"property\": \"yield\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"pretreatment\"]\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"Rows 1 and 2 report grade and yield of graphite and LiCoO2 concentrates after flotation with REM, PEM, or PUEM pretreatment. Each data column header is decomposed into a material endpoint (graphite concentrate or LiCoO2 concentrate), a pretreatment condition (REM/PEM/PUEM), and a percent unit. The process endpoint is the literal 'flotation' from the caption. HAS_OUTPUT facts bind the concentrate material as source, flotation as target, the numeric cell as value, the declared % as unit, and the pretreatment as a condition.\",\n      \"uncertainties\": [\n        \"REM, PEM, and PUEM are not expanded because no expansion is visible in the table or reference text.\",\n        \"The process endpoint is a literal 'flotation' inferred from the caption; no explicit process column exists in the table.\"\n      ]\n    }\n  }\n}",
+    "table_role_decision": {
+      "decision": "extract",
+      "table_role": "recovery_result",
+      "confidence": 0.9,
+      "causal_role": {
+        "source_object": "spent lithium-ion battery electrode materials (graphite and LiCoO2)",
+        "transformation": "flotation with different pretreatments (REM, PEM, PUEM)",
+        "measured_object": "graphite concentrate and LiCoO2 concentrate",
+        "measured_quantity": "grade (%) and yield (%)",
+        "evidence_role": "treatment_outcome"
+      },
+      "region_roles": [
+        {
+          "row_range": [
+            1,
+            2
+          ],
+          "role": "target_measurement",
+          "reason": "Rows report grade and yield of graphite and LiCoO2 concentrates after flotation pretreatments, quantifying separation/recovery of electrode materials."
+        }
+      ],
+      "extract_row_ranges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "caption_sufficient": true,
+      "evidence_steps": [
+        {
+          "step": "caption",
+          "evidence": "Table 2. Flotation Results of Electrode Materials with Different Pretreatments",
+          "judgment": "supports_extract",
+          "reason": "Reports flotation outcomes (grade/yield) of electrode materials after pretreatment, a target-bearing treatment outcome."
+        },
+        {
+          "step": "headers",
+          "evidence": "graphite concentrate (REM/PEM/PUEM (%)) and LiCoO2 concentrate (REM/PEM/PUEM (%))",
+          "judgment": "supports_extract",
+          "reason": "Concentrate grade/yield columns quantify recovery of target electrode materials."
+        },
+        {
+          "step": "row_preview",
+          "evidence": "LiCoO2 grade and yield values across pretreatments",
+          "judgment": "supports_extract",
+          "reason": "Measured quantities are post-treatment composition/recovery of WEEE constituents."
+        }
+      ],
+      "allowed_fact_types": [
+        "material_composition",
+        "recovery_yield",
+        "grade_percentage"
+      ],
+      "excluded_fact_types": [
+        "economic_value",
+        "literature_summary",
+        "process_parameter"
+      ],
+      "allowed_relation_types": [],
+      "ir_instruction": "Extract flotation grade and yield outcomes for graphite and LiCoO2 concentrates under each pretreatment as treatment results.",
+      "uncertainty": ""
+    },
+    "llm_interpretation": {
+      "semantic_ir": {
+        "extractability": {
+          "decision": "extract",
+          "table_role": "recovery_result",
+          "reason": "Table reports flotation grade and yield outcomes for graphite and LiCoO2 concentrates under REM, PEM, and PUEM pretreatments, matching allowed recovery_yield and grade_percentage fact types.",
+          "confidence": 0.9
+        },
+        "column_semantics": [
+          {
+            "column": 1,
+            "raw_header": "graphite concentrate (REM (%))",
+            "entity_text": "graphite concentrate",
+            "entity_type": "Material",
+            "condition_text": "REM",
+            "condition_raw_text": "REM",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.9
+          },
+          {
+            "column": 2,
+            "raw_header": "LiCoO2concentrate (REM (%))",
+            "entity_text": "LiCoO2 concentrate",
+            "entity_type": "Material",
+            "condition_text": "REM",
+            "condition_raw_text": "REM",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.9
+          },
+          {
+            "column": 3,
+            "raw_header": "graphite concentrate (PEM (%))",
+            "entity_text": "graphite concentrate",
+            "entity_type": "Material",
+            "condition_text": "PEM",
+            "condition_raw_text": "PEM",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.9
+          },
+          {
+            "column": 4,
+            "raw_header": "LiCoO2concentrate (PEM (%))",
+            "entity_text": "LiCoO2 concentrate",
+            "entity_type": "Material",
+            "condition_text": "PEM",
+            "condition_raw_text": "PEM",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.9
+          },
+          {
+            "column": 5,
+            "raw_header": "graphite concentrate (PUEM (%))",
+            "entity_text": "graphite concentrate",
+            "entity_type": "Material",
+            "condition_text": "PUEM",
+            "condition_raw_text": "PUEM",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.9
+          },
+          {
+            "column": 6,
+            "raw_header": "LiCoO2concentrate (PUEM (%))",
+            "entity_text": "LiCoO2 concentrate",
+            "entity_type": "Material",
+            "condition_text": "PUEM",
+            "condition_raw_text": "PUEM",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.9
+          }
+        ],
+        "program": [
+          {
+            "step_id": "step_1",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  1,
+                  1
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ]
+              }
+            },
+            "bind": {
+              "source": {
+                "from": "column.semantic.entity_text",
+                "type_from": "column.semantic.entity_type"
+              },
+              "target": {
+                "from": "literal",
+                "literal": "flotation",
+                "type": "Process"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column.semantic.unit_text"
+              },
+              "pretreatment": {
+                "name": "pretreatment",
+                "from": "column.semantic.condition_text"
+              }
+            },
+            "emit": {
+              "source": "source",
+              "predicate": "HAS_OUTPUT",
+              "target": "target",
+              "property": "grade",
+              "value": "value",
+              "unit": "unit",
+              "conditions": [
+                "pretreatment"
+              ]
+            }
+          },
+          {
+            "step_id": "step_2",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  2,
+                  2
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ]
+              }
+            },
+            "bind": {
+              "source": {
+                "from": "column.semantic.entity_text",
+                "type_from": "column.semantic.entity_type"
+              },
+              "target": {
+                "from": "literal",
+                "literal": "flotation",
+                "type": "Process"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column.semantic.unit_text"
+              },
+              "pretreatment": {
+                "name": "pretreatment",
+                "from": "column.semantic.condition_text"
+              }
+            },
+            "emit": {
+              "source": "source",
+              "predicate": "HAS_OUTPUT",
+              "target": "target",
+              "property": "yield",
+              "value": "value",
+              "unit": "unit",
+              "conditions": [
+                "pretreatment"
+              ]
+            }
+          }
+        ],
+        "context_program": [],
+        "rationale": {
+          "binding_summary": "Rows 1 and 2 report grade and yield of graphite and LiCoO2 concentrates after flotation with REM, PEM, or PUEM pretreatment. Each data column header is decomposed into a material endpoint (graphite concentrate or LiCoO2 concentrate), a pretreatment condition (REM/PEM/PUEM), and a percent unit. The process endpoint is the literal 'flotation' from the caption. HAS_OUTPUT facts bind the concentrate material as source, flotation as target, the numeric cell as value, the declared % as unit, and the pretreatment as a condition.",
+          "uncertainties": [
+            "REM, PEM, and PUEM are not expanded because no expansion is visible in the table or reference text.",
+            "The process endpoint is a literal 'flotation' inferred from the caption; no explicit process column exists in the table."
+          ]
+        }
+      }
+    },
+    "semantic_ir": {
+      "extractability": {
+        "decision": "extract",
+        "table_role": "recovery_result",
+        "reason": "Table reports flotation grade and yield outcomes for graphite and LiCoO2 concentrates under REM, PEM, and PUEM pretreatments, matching allowed recovery_yield and grade_percentage fact types.",
+        "confidence": 0.9,
+        "gate_decision": "extract",
+        "gate_table_role": "recovery_result"
+      },
+      "column_semantics": [
+        {
+          "column": 1,
+          "raw_header": "graphite concentrate (REM (%))",
+          "entity_text": "graphite concentrate",
+          "entity_type": "Material",
+          "condition_text": "REM",
+          "condition_raw_text": "REM",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.9
+        },
+        {
+          "column": 2,
+          "raw_header": "LiCoO2concentrate (REM (%))",
+          "entity_text": "LiCoO2 concentrate",
+          "entity_type": "Material",
+          "condition_text": "REM",
+          "condition_raw_text": "REM",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.9
+        },
+        {
+          "column": 3,
+          "raw_header": "graphite concentrate (PEM (%))",
+          "entity_text": "graphite concentrate",
+          "entity_type": "Material",
+          "condition_text": "PEM",
+          "condition_raw_text": "PEM",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.9
+        },
+        {
+          "column": 4,
+          "raw_header": "LiCoO2concentrate (PEM (%))",
+          "entity_text": "LiCoO2 concentrate",
+          "entity_type": "Material",
+          "condition_text": "PEM",
+          "condition_raw_text": "PEM",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.9
+        },
+        {
+          "column": 5,
+          "raw_header": "graphite concentrate (PUEM (%))",
+          "entity_text": "graphite concentrate",
+          "entity_type": "Material",
+          "condition_text": "PUEM",
+          "condition_raw_text": "PUEM",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.9
+        },
+        {
+          "column": 6,
+          "raw_header": "LiCoO2concentrate (PUEM (%))",
+          "entity_text": "LiCoO2 concentrate",
+          "entity_type": "Material",
+          "condition_text": "PUEM",
+          "condition_raw_text": "PUEM",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.9
+        }
+      ],
+      "program": [
+        {
+          "step_id": "step_1",
+          "op": "foreach_cell",
+          "select": {
+            "rows": {
+              "selector": "row_ranges",
+              "row_ranges": [
+                [
+                  1,
+                  2
+                ]
+              ]
+            },
+            "cols": {
+              "selector": "columns",
+              "columns": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          },
+          "bind": {
+            "source": {
+              "from": "column.semantic.entity_text",
+              "type_from": "column.semantic.entity_type"
+            },
+            "target": {
+              "from": "literal",
+              "literal": "flotation",
+              "type": "Process"
+            },
+            "value": {
+              "from": "cell",
+              "parser": "number"
+            },
+            "unit": {
+              "from": "column.semantic.unit_text"
+            },
+            "pretreatment": {
+              "name": "pretreatment",
+              "from": "column.semantic.condition_text"
+            }
+          },
+          "emit": {
+            "source": "source",
+            "predicate": "HAS_OUTPUT",
+            "target": "target",
+            "property": "grade",
+            "value": "value",
+            "unit": "unit",
+            "conditions": [
+              "pretreatment"
+            ]
+          }
+        },
+        {
+          "step_id": "step_2",
+          "op": "foreach_cell",
+          "select": {
+            "rows": {
+              "selector": "row_ranges",
+              "row_ranges": [
+                [
+                  1,
+                  2
+                ]
+              ]
+            },
+            "cols": {
+              "selector": "columns",
+              "columns": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          },
+          "bind": {
+            "source": {
+              "from": "column.semantic.entity_text",
+              "type_from": "column.semantic.entity_type"
+            },
+            "target": {
+              "from": "literal",
+              "literal": "flotation",
+              "type": "Process"
+            },
+            "value": {
+              "from": "cell",
+              "parser": "number"
+            },
+            "unit": {
+              "from": "column.semantic.unit_text"
+            },
+            "pretreatment": {
+              "name": "pretreatment",
+              "from": "column.semantic.condition_text"
+            }
+          },
+          "emit": {
+            "source": "source",
+            "predicate": "HAS_OUTPUT",
+            "target": "target",
+            "property": "yield",
+            "value": "value",
+            "unit": "unit",
+            "conditions": [
+              "pretreatment"
+            ]
+          }
+        }
+      ],
+      "context_program": [],
+      "rationale": {
+        "binding_summary": "Rows 1 and 2 report grade and yield of graphite and LiCoO2 concentrates after flotation with REM, PEM, or PUEM pretreatment. Each data column header is decomposed into a material endpoint (graphite concentrate or LiCoO2 concentrate), a pretreatment condition (REM/PEM/PUEM), and a percent unit. The process endpoint is the literal 'flotation' from the caption. HAS_OUTPUT facts bind the concentrate material as source, flotation as target, the numeric cell as value, the declared % as unit, and the pretreatment as a condition.",
+        "uncertainties": [
+          "REM, PEM, and PUEM are not expanded because no expansion is visible in the table or reference text.",
+          "The process endpoint is a literal 'flotation' inferred from the caption; no explicit process column exists in the table."
+        ]
+      },
+      "table_id": "TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0003"
+    },
+    "table_structure": {
+      "table_id": "TABLE_Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries_0003",
+      "extraction_mode": "semantic_ir",
+      "table_role": "recovery_result",
+      "extractability": {
+        "decision": "extract",
+        "table_role": "recovery_result",
+        "reason": "Table reports flotation grade and yield outcomes for graphite and LiCoO2 concentrates under REM, PEM, and PUEM pretreatments, matching allowed recovery_yield and grade_percentage fact types.",
+        "confidence": 0.9,
+        "gate_decision": "extract",
+        "gate_table_role": "recovery_result"
+      },
+      "layout": null
+    },
+    "verification_report": {
+      "status": "repair_failed_no_extraction",
+      "skip_reason": null,
+      "cell_grounded_relations": 0,
+      "entity_count": 0,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "unsupported_templates": [],
+      "scope_rejections": [],
+      "domain_range_rejections": [
+        {
+          "status": "quarantined",
+          "template_id": "step_1",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "graphite concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 1,
+          "column_idx": 1,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "graphite concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "48.89",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "48.89",
+            "row_idx": 1,
+            "column_idx": 1
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_1",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "LiCoO2 concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 1,
+          "column_idx": 2,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "LiCoO2 concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "67.25",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "67.25",
+            "row_idx": 1,
+            "column_idx": 2
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_1",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "graphite concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 1,
+          "column_idx": 3,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "graphite concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "25.07",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "25.07",
+            "row_idx": 1,
+            "column_idx": 3
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_1",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "LiCoO2 concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 1,
+          "column_idx": 4,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "LiCoO2 concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "94.00",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "94.00",
+            "row_idx": 1,
+            "column_idx": 4
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_1",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "graphite concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 1,
+          "column_idx": 5,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "graphite concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "6.44",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "6.44",
+            "row_idx": 1,
+            "column_idx": 5
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_1",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "LiCoO2 concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 1,
+          "column_idx": 6,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "LiCoO2 concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "93.89",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "93.89",
+            "row_idx": 1,
+            "column_idx": 6
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_1",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "graphite concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 2,
+          "column_idx": 1,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "graphite concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "31.87",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "31.87",
+            "row_idx": 2,
+            "column_idx": 1
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_1",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "LiCoO2 concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 2,
+          "column_idx": 2,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "LiCoO2 concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "68.13",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "68.13",
+            "row_idx": 2,
+            "column_idx": 2
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_1",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "graphite concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 2,
+          "column_idx": 3,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "graphite concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "40.56",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "40.56",
+            "row_idx": 2,
+            "column_idx": 3
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_1",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "LiCoO2 concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 2,
+          "column_idx": 4,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "LiCoO2 concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "59.44",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "59.44",
+            "row_idx": 2,
+            "column_idx": 4
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_1",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "graphite concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 2,
+          "column_idx": 5,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "graphite concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "31.96",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "31.96",
+            "row_idx": 2,
+            "column_idx": 5
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_1",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "LiCoO2 concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 2,
+          "column_idx": 6,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "LiCoO2 concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "68.04",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "68.04",
+            "row_idx": 2,
+            "column_idx": 6
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_2",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "graphite concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 1,
+          "column_idx": 1,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "graphite concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "48.89",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "48.89",
+            "row_idx": 1,
+            "column_idx": 1
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_2",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "LiCoO2 concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 1,
+          "column_idx": 2,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "LiCoO2 concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "67.25",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "67.25",
+            "row_idx": 1,
+            "column_idx": 2
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_2",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "graphite concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 1,
+          "column_idx": 3,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "graphite concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "25.07",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "25.07",
+            "row_idx": 1,
+            "column_idx": 3
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_2",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "LiCoO2 concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 1,
+          "column_idx": 4,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "LiCoO2 concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "94.00",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "94.00",
+            "row_idx": 1,
+            "column_idx": 4
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_2",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "graphite concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 1,
+          "column_idx": 5,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "graphite concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "6.44",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "6.44",
+            "row_idx": 1,
+            "column_idx": 5
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_2",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "LiCoO2 concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 1,
+          "column_idx": 6,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "LiCoO2 concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "93.89",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "93.89",
+            "row_idx": 1,
+            "column_idx": 6
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_2",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "graphite concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 2,
+          "column_idx": 1,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "graphite concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "31.87",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "31.87",
+            "row_idx": 2,
+            "column_idx": 1
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_2",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "LiCoO2 concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 2,
+          "column_idx": 2,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "LiCoO2 concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "68.13",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "68.13",
+            "row_idx": 2,
+            "column_idx": 2
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_2",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "graphite concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 2,
+          "column_idx": 3,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "graphite concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "40.56",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "40.56",
+            "row_idx": 2,
+            "column_idx": 3
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_2",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "LiCoO2 concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 2,
+          "column_idx": 4,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "LiCoO2 concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "59.44",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "59.44",
+            "row_idx": 2,
+            "column_idx": 4
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_2",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "graphite concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 2,
+          "column_idx": 5,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "graphite concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "31.96",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "31.96",
+            "row_idx": 2,
+            "column_idx": 5
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        },
+        {
+          "status": "quarantined",
+          "template_id": "step_2",
+          "relation_type": "HAS_OUTPUT",
+          "source_name": "LiCoO2 concentrate",
+          "source_type": "Material",
+          "target_name": "flotation",
+          "target_type": "Process",
+          "source_binding": "source",
+          "target_binding": "target",
+          "source_spec": {
+            "from": "column.semantic.entity_text",
+            "type_from": "column.semantic.entity_type"
+          },
+          "target_spec": {
+            "from": "literal",
+            "literal": "flotation",
+            "type": "Process"
+          },
+          "allowed_pairs": [
+            {
+              "source_type": "Process",
+              "target_type": "Component"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Material"
+            },
+            {
+              "source_type": "Process",
+              "target_type": "Product"
+            }
+          ],
+          "row_idx": 2,
+          "column_idx": 6,
+          "candidate": {
+            "relation_type": "HAS_OUTPUT",
+            "source_name": "LiCoO2 concentrate",
+            "source_type": "Material",
+            "target_name": "flotation",
+            "target_type": "Process",
+            "value": "68.04",
+            "uncertainty": null,
+            "qualifier": null,
+            "raw_cell": "68.04",
+            "row_idx": 2,
+            "column_idx": 6
+          },
+          "reason": "HAS_OUTPUT does not allow Material -> Process"
+        }
+      ],
+      "aggregate_row_diagnostics": [],
+      "unresolved_endpoint_types": [],
+      "unresolved_type_facts": [],
+      "semantic_gate": [],
+      "slot_binding_conflicts": [],
+      "layout_program_mismatches": [],
+      "checked_templates": 2,
+      "direct_repair_provenance_errors": [
+        {
+          "reason": "direct repair response contains no triples"
+        }
+      ],
+      "repair_failure_reason": "Direct record repair failed after Semantic IR validation."
+    },
+    "execution_trace": [
+      {
+        "template_id": "step_1",
+        "op": "foreach_cell",
+        "rows": [
+          1,
+          2
+        ],
+        "columns": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "emitted": 0,
+        "skipped": 12
+      },
+      {
+        "template_id": "step_2",
+        "op": "foreach_cell",
+        "rows": [
+          1,
+          2
+        ],
+        "columns": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "emitted": 0,
+        "skipped": 12
+      }
+    ],
+    "failed_rewrite_verification_report": null,
+    "failed_rewrite_execution_trace": null,
+    "table_cache_key": "0048a8e058aeaa55487feadb3ec489faad6f7db3d07de4a4ffe867b110ed7e1c",
+    "table_cache_version": {
+      "format_version": 1,
+      "table_code_sha256": "f0dd5f4553ba60fa1f8dc3a9e2facb37220e0d8b94248c9976aea3179fbc8514",
+      "table_file_sha256": {
+        "__init__.py": "859afd37280303ac79ea652fcd1c347db6f6e9a7427d1bf201341ff92fdbb9f3",
+        "artifact_cache.py": "dae107568c3be648794486b4140f41386af8bd9d77b261dcf82505cef6e977aa",
+        "contract.py": "d537d95059e8a540b82872ffebe956d5e8fd43081e1ca630aa34b5a16359092a",
+        "cross_table_reference_resolver.py": "834fd5639f5b7dd79de0cd4b92943e3584283c02479a03e12c5b128f625bbf11",
+        "extraction_agent.py": "bd64ffbda3e1832704c44c090412041e0af71280c17c50aa2d189228fcaa31fa",
+        "ir/__init__.py": "388534b9fb9c0b6eae80334aef2e8eae376c73fca9ab48e74ddf4299bf50e425",
+        "ir/common.py": "53ca6b464bda54f2b4f95741c281e567c792a5206816f9164c8dc483dc347e8e",
+        "ir/context.py": "885b13c1bc0b1e48ad2e1eee5f466979adc657d6fc13abacf7b2330948999eea",
+        "ir/core.py": "cff62003caca13eaaf0abdd93828b601a5201f512fabfb630e07ac64bbf2758c",
+        "ir/executor.py": "aeea4593e5966a9de88854f303a1e1ccb522acc46fe70acbd20a0ace9f8bb072",
+        "ir/parsing.py": "d39fcd8d9ee08da4db6498ba63c1d6608615fa266d4d15de23d526aed0733c09",
+        "ir/policy.py": "c2ef18469dc2d402825a1559a860901927666dcc1fd1e80e3ec82669bb40d307",
+        "ir/runtime.py": "51aa3777823884bdabe06497e64d6cd04a5ce7d47e4674ddb0d7c378a4270059",
+        "ir/schema.py": "ba515d5e60c1c0ea8ae0d15b7265eb5926518452e796dc6973f7372ddf25f993",
+        "ir/selectors.py": "81b5606cc71f3ca6f4eaf848083e8d4b194b1c5a53f1cdf2832e439df6a456f1",
+        "ir/value_resolver.py": "feebb6a908f79b9c5975cc6cf7c657847522208a38d003f3b9cba9d8577864d8",
+        "ir/verifier.py": "44e33d3ca7e5c2305b845640d42e50777e591dedc47f07576446889101bfe1fa",
+        "reference_info.py": "eee0cd93396e9da1ba9682f94493de245543a8699d41fb4da2100c89e80d3782",
+        "repair/__init__.py": "05a749a9dd4f2c77ca79cd7b0cc2e00a8eae16d11cdf8f43ff26cd26e05639b9",
+        "repair/applier.py": "b380f43ab7a0e2451a981244b2ea5f43f9dd411081ed8dd10bdc43d9fe91e256",
+        "repair/local.py": "f5d94287673530f100c594b123765b99178a12a62dbc9f0e8f1fbcc58fb059bb",
+        "repair/prompt.py": "5e0f55f3e0da9e6d1093498562f699b41a5d3293fa1c4fd72c4bb4c81cfb6fc1",
+        "repair/schema.py": "2ed0bf5480b2a632aaa8b67c2cfee85fd2f8a5b21ebcfe22984ec5840d649d56",
+        "role_gate.py": "5211dc375d419d512eebc08da3126a42b7bcc188952128ce1a8f6c72536178d6"
+      }
+    }
+  }
+]

@@ -1,0 +1,2420 @@
+[
+  {
+    "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_INTRODUCTION_fa0a4884",
+    "section_name": "■ INTRODUCTION",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_EXPERIMENTAL SECTION_13872607",
+    "section_name": "EXPERIMENTAL SECTION",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 9,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_Lithium_ion_battery_CONTAINS_text_Component_cathode",
+          "source_id": "text_Product_Lithium_ion_battery",
+          "source_name": "Lithium-ion battery",
+          "target_id": "text_Component_cathode",
+          "target_name": "cathode",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Once uncurled and separated, the cathode and anode were dried at 60 ^∘C for 24 h.",
+          "properties": {
+            "property": "structure",
+            "source_sample": "spent LIBs",
+            "sample_state": "spent (end-of-life) state",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Lithium-ion battery",
+            "target_name": "cathode",
+            "evidence_span": "Once uncurled and separated, the cathode and anode were dried at 60 ^∘C for 24 h.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Lithium_ion_battery_CONTAINS_text_Component_anode",
+          "source_id": "text_Product_Lithium_ion_battery",
+          "source_name": "Lithium-ion battery",
+          "target_id": "text_Component_anode",
+          "target_name": "anode",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Once uncurled and separated, the cathode and anode were dried at 60 ^∘C for 24 h.",
+          "properties": {
+            "property": "structure",
+            "source_sample": "spent LIBs",
+            "sample_state": "spent (end-of-life) state",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Lithium-ion battery",
+            "target_name": "anode",
+            "evidence_span": "Once uncurled and separated, the cathode and anode were dried at 60 ^∘C for 24 h.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Component_cathodic_material",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Component_cathodic_material",
+          "target_name": "cathodic material",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The cathodic materials separated from the Al foil after ultrasonic cleaning were filtered, screened, and dried.",
+          "properties": {
+            "property": "structure",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "cathodic material",
+            "evidence_span": "The cathodic materials separated from the Al foil after ultrasonic cleaning were filtered, screened, and dried.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathode_CONTAINS_text_Component_Al_foil",
+          "source_id": "text_Component_cathode",
+          "source_name": "cathode",
+          "target_id": "text_Component_Al_foil",
+          "target_name": "Al foil",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The cathodic materials separated from the Al foil after ultrasonic cleaning were filtered, screened, and dried.",
+          "properties": {
+            "property": "structure",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathode",
+            "target_name": "Al foil",
+            "evidence_span": "The cathodic materials separated from the Al foil after ultrasonic cleaning were filtered, screened, and dried.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathodic_material_PROCESSED_BY_text_Process_L_tartaric_acid_leaching",
+          "source_id": "text_Component_cathodic_material",
+          "source_name": "cathodic material",
+          "target_id": "text_Process_L_tartaric_acid_leaching",
+          "target_name": "L-tartaric acid leaching",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "After the leaching solutions were heated to a preselected temperature, a certain amount of cathodic materials was added to the reactor.",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "cathodic material",
+            "target_name": "L-tartaric acid leaching",
+            "evidence_span": "After the leaching solutions were heated to a preselected temperature, a certain amount of cathodic materials was added to the reactor.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Mn",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leachate was withdrawn to determine the concentrations of Mn, Li, Co, and Ni, and these data were used to calculate the leaching efficiencies.",
+          "properties": {
+            "property": "leaching",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "measurement_method": "ICP-AES",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Mn",
+            "evidence_span": "The leachate was withdrawn to determine the concentrations of Mn, Li, Co, and Ni, and these data were used to calculate the leaching efficiencies.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leachate was withdrawn to determine the concentrations of Mn, Li, Co, and Ni, and these data were used to calculate the leaching efficiencies.",
+          "properties": {
+            "property": "leaching",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "measurement_method": "ICP-AES",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Li",
+            "evidence_span": "The leachate was withdrawn to determine the concentrations of Mn, Li, Co, and Ni, and these data were used to calculate the leaching efficiencies.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leachate was withdrawn to determine the concentrations of Mn, Li, Co, and Ni, and these data were used to calculate the leaching efficiencies.",
+          "properties": {
+            "property": "leaching",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "measurement_method": "ICP-AES",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Co",
+            "evidence_span": "The leachate was withdrawn to determine the concentrations of Mn, Li, Co, and Ni, and these data were used to calculate the leaching efficiencies.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The leachate was withdrawn to determine the concentrations of Mn, Li, Co, and Ni, and these data were used to calculate the leaching efficiencies.",
+          "properties": {
+            "property": "leaching",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "measurement_method": "ICP-AES",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Ni",
+            "evidence_span": "The leachate was withdrawn to determine the concentrations of Mn, Li, Co, and Ni, and these data were used to calculate the leaching efficiencies.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub0",
+    "section_name": "RESULTS AND DISCUSSION",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 11,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Component_cathodic_material_CONTAINS_text_Material_LiCoO2",
+          "source_id": "text_Component_cathodic_material",
+          "source_name": "cathodic material",
+          "target_id": "text_Material_LiCoO2",
+          "target_name": "LiCoO2",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "the cathodic materials contained LiCoO2,, and LiNi0. 5 Co0. 2 Mn0. 3 O2.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "cathodic materials separated via ultrasonic cleaning",
+            "sample_state": "cathodic materials after separation by ultrasonic cleaning",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathodic material",
+            "target_name": "LiCoO2",
+            "evidence_span": "the cathodic materials contained LiCoO2,, and LiNi0. 5 Co0. 2 Mn0. 3 O2.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathodic_material_CONTAINS_text_Material_LiNi0_5Co0_2Mn0_3O2",
+          "source_id": "text_Component_cathodic_material",
+          "source_name": "cathodic material",
+          "target_id": "text_Material_LiNi0_5Co0_2Mn0_3O2",
+          "target_name": "LiNi0.5Co0.2Mn0.3O2",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "the cathodic materials contained LiCoO2,, and LiNi0. 5 Co0. 2 Mn0. 3 O2.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "cathodic materials separated via ultrasonic cleaning",
+            "sample_state": "cathodic materials after separation by ultrasonic cleaning",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathodic material",
+            "target_name": "LiNi0.5Co0.2Mn0.3O2",
+            "evidence_span": "the cathodic materials contained LiCoO2,, and LiNi0. 5 Co0. 2 Mn0. 3 O2.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathodic_material_CONTAINS_text_Material_Li",
+          "source_id": "text_Component_cathodic_material",
+          "source_name": "cathodic material",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The metals in the cathodic materials included Li (6.28 wt%), Ni (11.85 wt%), Co (35.52 wt%), Mn (8.15 wt%), and Al (0.11 wt%).",
+          "properties": {
+            "property": "composition",
+            "value": 6.28,
+            "unit": "wt%",
+            "source_sample": "cathodic materials separated via ultrasonic cleaning",
+            "sample_state": "cathodic materials after separation by ultrasonic cleaning",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathodic material",
+            "target_name": "Li",
+            "evidence_span": "The metals in the cathodic materials included Li (6.28 wt%), Ni (11.85 wt%), Co (35.52 wt%), Mn (8.15 wt%), and Al (0.11 wt%).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathodic_material_CONTAINS_text_Material_Ni",
+          "source_id": "text_Component_cathodic_material",
+          "source_name": "cathodic material",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The metals in the cathodic materials included Li (6.28 wt%), Ni (11.85 wt%), Co (35.52 wt%), Mn (8.15 wt%), and Al (0.11 wt%).",
+          "properties": {
+            "property": "composition",
+            "value": 11.85,
+            "unit": "wt%",
+            "source_sample": "cathodic materials separated via ultrasonic cleaning",
+            "sample_state": "cathodic materials after separation by ultrasonic cleaning",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathodic material",
+            "target_name": "Ni",
+            "evidence_span": "The metals in the cathodic materials included Li (6.28 wt%), Ni (11.85 wt%), Co (35.52 wt%), Mn (8.15 wt%), and Al (0.11 wt%).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathodic_material_CONTAINS_text_Material_Co",
+          "source_id": "text_Component_cathodic_material",
+          "source_name": "cathodic material",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The metals in the cathodic materials included Li (6.28 wt%), Ni (11.85 wt%), Co (35.52 wt%), Mn (8.15 wt%), and Al (0.11 wt%).",
+          "properties": {
+            "property": "composition",
+            "value": 35.52,
+            "unit": "wt%",
+            "source_sample": "cathodic materials separated via ultrasonic cleaning",
+            "sample_state": "cathodic materials after separation by ultrasonic cleaning",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathodic material",
+            "target_name": "Co",
+            "evidence_span": "The metals in the cathodic materials included Li (6.28 wt%), Ni (11.85 wt%), Co (35.52 wt%), Mn (8.15 wt%), and Al (0.11 wt%).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathodic_material_CONTAINS_text_Material_Mn",
+          "source_id": "text_Component_cathodic_material",
+          "source_name": "cathodic material",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The metals in the cathodic materials included Li (6.28 wt%), Ni (11.85 wt%), Co (35.52 wt%), Mn (8.15 wt%), and Al (0.11 wt%).",
+          "properties": {
+            "property": "composition",
+            "value": 8.15,
+            "unit": "wt%",
+            "source_sample": "cathodic materials separated via ultrasonic cleaning",
+            "sample_state": "cathodic materials after separation by ultrasonic cleaning",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathodic material",
+            "target_name": "Mn",
+            "evidence_span": "The metals in the cathodic materials included Li (6.28 wt%), Ni (11.85 wt%), Co (35.52 wt%), Mn (8.15 wt%), and Al (0.11 wt%).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathodic_material_CONTAINS_text_Material_Al",
+          "source_id": "text_Component_cathodic_material",
+          "source_name": "cathodic material",
+          "target_id": "text_Material_Al",
+          "target_name": "Al",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The metals in the cathodic materials included Li (6.28 wt%), Ni (11.85 wt%), Co (35.52 wt%), Mn (8.15 wt%), and Al (0.11 wt%).",
+          "properties": {
+            "property": "composition",
+            "value": 0.11,
+            "unit": "wt%",
+            "source_sample": "cathodic materials separated via ultrasonic cleaning",
+            "sample_state": "cathodic materials after separation by ultrasonic cleaning",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathodic material",
+            "target_name": "Al",
+            "evidence_span": "The metals in the cathodic materials included Li (6.28 wt%), Ni (11.85 wt%), Co (35.52 wt%), Mn (8.15 wt%), and Al (0.11 wt%).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathodic_material_CONTAINS_text_Material_polyvinylidene_fluoride",
+          "source_id": "text_Component_cathodic_material",
+          "source_name": "cathodic material",
+          "target_id": "text_Material_polyvinylidene_fluoride",
+          "target_name": "polyvinylidene fluoride",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Because of the dissolution of polyvinylidene fluoride (PVDF) and the dispersive effect of ultrasound, the cathodic materials displayed a low degree of agglomeration, which is beneficial for the subsequent leaching process.",
+          "properties": {
+            "property": "composition",
+            "source_sample": "cathodic materials separated via ultrasonic cleaning",
+            "sample_state": "cathodic materials after separation by ultrasonic cleaning",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathodic material",
+            "target_name": "polyvinylidene fluoride",
+            "evidence_span": "Because of the dissolution of polyvinylidene fluoride (PVDF) and the dispersive effect of ultrasound, the cathodic materials displayed a low degree of agglomeration, which is beneficial for the subsequent leaching process.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathodic_material_CONTAINS_text_Material_Carbon",
+          "source_id": "text_Component_cathodic_material",
+          "source_name": "cathodic material",
+          "target_id": "text_Material_Carbon",
+          "target_name": "C",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The EDS results for the residues (Figure 4) indicate the presence of C and F, which is attributed to the conductive agent and organic binder (PVDF).",
+          "properties": {
+            "property": "composition",
+            "source_sample": "residues under the optimized leaching conditions",
+            "sample_state": "solid residue remaining after optimized leaching of cathodic materials",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathodic material",
+            "target_name": "C",
+            "evidence_span": "The EDS results for the residues (Figure 4) indicate the presence of C and F, which is attributed to the conductive agent and organic binder (PVDF).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathodic_material_CONTAINS_text_Material_Fluorine",
+          "source_id": "text_Component_cathodic_material",
+          "source_name": "cathodic material",
+          "target_id": "text_Material_Fluorine",
+          "target_name": "F",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "The EDS results for the residues (Figure 4) indicate the presence of C and F, which is attributed to the conductive agent and organic binder (PVDF).",
+          "properties": {
+            "property": "composition",
+            "source_sample": "residues under the optimized leaching conditions",
+            "sample_state": "solid residue remaining after optimized leaching of cathodic materials",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "cathodic material",
+            "target_name": "F",
+            "evidence_span": "The EDS results for the residues (Figure 4) indicate the presence of C and F, which is attributed to the conductive agent and organic binder (PVDF).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Component_cathodic_material_PROCESSED_BY_text_Process_L_tartaric_acid_leaching",
+          "source_id": "text_Component_cathodic_material",
+          "source_name": "cathodic material",
+          "target_id": "text_Process_L_tartaric_acid_leaching",
+          "target_name": "L-tartaric acid leaching",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The leaching of valuable metals from the cathodic materials involves the conversion of highvalence Ni, Co, and Mn in the solid phase to Ni ^2+, Co ^2+ +, and Mn ^2+ in the aqueous phase.",
+          "properties": {
+            "process_role": "main_process",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "cathodic material",
+            "target_name": "L-tartaric acid leaching",
+            "evidence_span": "The leaching of valuable metals from the cathodic materials involves the conversion of highvalence Ni, Co, and Mn in the solid phase to Ni ^2+, Co ^2+ +, and Mn ^2+ in the aqueous phase.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub1",
+    "section_name": "RESULTS AND DISCUSSION",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 8,
+      "condition_count": 6,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_other_absence_of_h2o2",
+          "name": "other",
+          "type": "other",
+          "value": "absence of H2O2",
+          "unit": null,
+          "source": {
+            "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+            "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub1",
+            "text": "However, thermodynamic calculation shows that only the generation of C8H10O12Co, C8H10O12Ni,, and C8H10O1 Mn is thermodynamically favorable during leaching ^35, 37, 44 Therefore, the leaching reaction can be represented as Effect of H2O2 Concentration. The effect of the H2O2 concentration on the leaching efficiencies of Mn, Li, Co, and Ni was investigated by fixing the concentration of the -tartaric acid at 2 M, pulp density at 17 g / L,, temperature at 70 ^∘C, and leaching time at 30 min. Figure 6 shows that the addition of H2O2 significantly improved the leaching efficiencies of all the metals studied. In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni. When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively. The increase in the leaching efficiencies occurred because the H2O2 acts as a reducing agent to increase the rate of the leaching reaction. A further increase in the H2O2 concentration to 5 vol% did not cause significant change in the leaching efficiencies; therefore, 4 vol% 2 O2 was considered the optimal concentration. Effect of L-Tartaric Acid Concentration. Figure 7 shows the effect of the L-tartaric acid concentration on the leaching efficiencies of Mn, Li, Co, and Ni under the conditions: H2O2 concentration of 4 vol%, pulp density of 17 g / L,, temperature of 70 ^∘C, and leaching time of 30 min. The leaching efficiencies of Mn, Li, Co,, and Ni were found to increase with increasing Ltartaric acid concentration. This can be attributed to the fact that an increase in the L-tartaric acid concentration improves the frequency of collisions between reactants, thus speeding up the rate of reaction.45 When the concentration of L-tartaric acid reached 2 M, the leaching efficiencies increased to ∼99% for all the metals. With a further increase in the L-tartaric acid concentration to 2.5 M, the leaching efficiencies showed almost no change. Therefore, 2 M was determined as the optimal concentration of -tartaric acid. Effect of Pulp Density. The effect of the pulp density on the leaching efficiencies of Mn, Li, Co, and Ni was studied by fixing the H _ 2 O2 concentration at 4 vol%, L-tartaric acid concentration at 2 M, temperature at 70 ^∘C,, and leaching time at 30 min. Figure 8 shows that the leaching efficiencies are nearly constant in the pulp density range of 14−17 g/L. When the pulp density was increased to 20 g /, however, the leaching efficiencies of all the metals clearly decreased. This is attributed to a decrease in the available surface area per unit volume of the solution, with increasing pulp density.24 Therefore, 17 g/L was determined as the optimal pulp density. Effects of Temperature and Time.",
+            "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+            "section_name": "RESULTS AND DISCUSSION",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 11342,
+            "position_end": 14210,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub1",
+              "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+              "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant/text.md",
+              "section_name": "RESULTS AND DISCUSSION",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 11342,
+              "position_end": 14210,
+              "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+              "chunk_type": "text",
+              "is_child": true
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_concentration_2_0_m",
+          "name": "concentration",
+          "type": "Concentration",
+          "value": 2.0,
+          "unit": "M",
+          "source": {
+            "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+            "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub1",
+            "text": "However, thermodynamic calculation shows that only the generation of C8H10O12Co, C8H10O12Ni,, and C8H10O1 Mn is thermodynamically favorable during leaching ^35, 37, 44 Therefore, the leaching reaction can be represented as Effect of H2O2 Concentration. The effect of the H2O2 concentration on the leaching efficiencies of Mn, Li, Co, and Ni was investigated by fixing the concentration of the -tartaric acid at 2 M, pulp density at 17 g / L,, temperature at 70 ^∘C, and leaching time at 30 min. Figure 6 shows that the addition of H2O2 significantly improved the leaching efficiencies of all the metals studied. In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni. When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively. The increase in the leaching efficiencies occurred because the H2O2 acts as a reducing agent to increase the rate of the leaching reaction. A further increase in the H2O2 concentration to 5 vol% did not cause significant change in the leaching efficiencies; therefore, 4 vol% 2 O2 was considered the optimal concentration. Effect of L-Tartaric Acid Concentration. Figure 7 shows the effect of the L-tartaric acid concentration on the leaching efficiencies of Mn, Li, Co, and Ni under the conditions: H2O2 concentration of 4 vol%, pulp density of 17 g / L,, temperature of 70 ^∘C, and leaching time of 30 min. The leaching efficiencies of Mn, Li, Co,, and Ni were found to increase with increasing Ltartaric acid concentration. This can be attributed to the fact that an increase in the L-tartaric acid concentration improves the frequency of collisions between reactants, thus speeding up the rate of reaction.45 When the concentration of L-tartaric acid reached 2 M, the leaching efficiencies increased to ∼99% for all the metals. With a further increase in the L-tartaric acid concentration to 2.5 M, the leaching efficiencies showed almost no change. Therefore, 2 M was determined as the optimal concentration of -tartaric acid. Effect of Pulp Density. The effect of the pulp density on the leaching efficiencies of Mn, Li, Co, and Ni was studied by fixing the H _ 2 O2 concentration at 4 vol%, L-tartaric acid concentration at 2 M, temperature at 70 ^∘C,, and leaching time at 30 min. Figure 8 shows that the leaching efficiencies are nearly constant in the pulp density range of 14−17 g/L. When the pulp density was increased to 20 g /, however, the leaching efficiencies of all the metals clearly decreased. This is attributed to a decrease in the available surface area per unit volume of the solution, with increasing pulp density.24 Therefore, 17 g/L was determined as the optimal pulp density. Effects of Temperature and Time.",
+            "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+            "section_name": "RESULTS AND DISCUSSION",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 11342,
+            "position_end": 14210,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub1",
+              "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+              "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant/text.md",
+              "section_name": "RESULTS AND DISCUSSION",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 11342,
+              "position_end": 14210,
+              "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+              "chunk_type": "text",
+              "is_child": true
+            }
+          },
+          "condition_type": "Concentration",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_pulp_density_17_g_l",
+          "name": "pulp_density",
+          "type": "pulp_density",
+          "value": "17 g/L",
+          "unit": null,
+          "source": {
+            "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+            "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub1",
+            "text": "However, thermodynamic calculation shows that only the generation of C8H10O12Co, C8H10O12Ni,, and C8H10O1 Mn is thermodynamically favorable during leaching ^35, 37, 44 Therefore, the leaching reaction can be represented as Effect of H2O2 Concentration. The effect of the H2O2 concentration on the leaching efficiencies of Mn, Li, Co, and Ni was investigated by fixing the concentration of the -tartaric acid at 2 M, pulp density at 17 g / L,, temperature at 70 ^∘C, and leaching time at 30 min. Figure 6 shows that the addition of H2O2 significantly improved the leaching efficiencies of all the metals studied. In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni. When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively. The increase in the leaching efficiencies occurred because the H2O2 acts as a reducing agent to increase the rate of the leaching reaction. A further increase in the H2O2 concentration to 5 vol% did not cause significant change in the leaching efficiencies; therefore, 4 vol% 2 O2 was considered the optimal concentration. Effect of L-Tartaric Acid Concentration. Figure 7 shows the effect of the L-tartaric acid concentration on the leaching efficiencies of Mn, Li, Co, and Ni under the conditions: H2O2 concentration of 4 vol%, pulp density of 17 g / L,, temperature of 70 ^∘C, and leaching time of 30 min. The leaching efficiencies of Mn, Li, Co,, and Ni were found to increase with increasing Ltartaric acid concentration. This can be attributed to the fact that an increase in the L-tartaric acid concentration improves the frequency of collisions between reactants, thus speeding up the rate of reaction.45 When the concentration of L-tartaric acid reached 2 M, the leaching efficiencies increased to ∼99% for all the metals. With a further increase in the L-tartaric acid concentration to 2.5 M, the leaching efficiencies showed almost no change. Therefore, 2 M was determined as the optimal concentration of -tartaric acid. Effect of Pulp Density. The effect of the pulp density on the leaching efficiencies of Mn, Li, Co, and Ni was studied by fixing the H _ 2 O2 concentration at 4 vol%, L-tartaric acid concentration at 2 M, temperature at 70 ^∘C,, and leaching time at 30 min. Figure 8 shows that the leaching efficiencies are nearly constant in the pulp density range of 14−17 g/L. When the pulp density was increased to 20 g /, however, the leaching efficiencies of all the metals clearly decreased. This is attributed to a decrease in the available surface area per unit volume of the solution, with increasing pulp density.24 Therefore, 17 g/L was determined as the optimal pulp density. Effects of Temperature and Time.",
+            "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+            "section_name": "RESULTS AND DISCUSSION",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 11342,
+            "position_end": 14210,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub1",
+              "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+              "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant/text.md",
+              "section_name": "RESULTS AND DISCUSSION",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 11342,
+              "position_end": 14210,
+              "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+              "chunk_type": "text",
+              "is_child": true
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_temperature_70_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 70.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+            "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub1",
+            "text": "However, thermodynamic calculation shows that only the generation of C8H10O12Co, C8H10O12Ni,, and C8H10O1 Mn is thermodynamically favorable during leaching ^35, 37, 44 Therefore, the leaching reaction can be represented as Effect of H2O2 Concentration. The effect of the H2O2 concentration on the leaching efficiencies of Mn, Li, Co, and Ni was investigated by fixing the concentration of the -tartaric acid at 2 M, pulp density at 17 g / L,, temperature at 70 ^∘C, and leaching time at 30 min. Figure 6 shows that the addition of H2O2 significantly improved the leaching efficiencies of all the metals studied. In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni. When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively. The increase in the leaching efficiencies occurred because the H2O2 acts as a reducing agent to increase the rate of the leaching reaction. A further increase in the H2O2 concentration to 5 vol% did not cause significant change in the leaching efficiencies; therefore, 4 vol% 2 O2 was considered the optimal concentration. Effect of L-Tartaric Acid Concentration. Figure 7 shows the effect of the L-tartaric acid concentration on the leaching efficiencies of Mn, Li, Co, and Ni under the conditions: H2O2 concentration of 4 vol%, pulp density of 17 g / L,, temperature of 70 ^∘C, and leaching time of 30 min. The leaching efficiencies of Mn, Li, Co,, and Ni were found to increase with increasing Ltartaric acid concentration. This can be attributed to the fact that an increase in the L-tartaric acid concentration improves the frequency of collisions between reactants, thus speeding up the rate of reaction.45 When the concentration of L-tartaric acid reached 2 M, the leaching efficiencies increased to ∼99% for all the metals. With a further increase in the L-tartaric acid concentration to 2.5 M, the leaching efficiencies showed almost no change. Therefore, 2 M was determined as the optimal concentration of -tartaric acid. Effect of Pulp Density. The effect of the pulp density on the leaching efficiencies of Mn, Li, Co, and Ni was studied by fixing the H _ 2 O2 concentration at 4 vol%, L-tartaric acid concentration at 2 M, temperature at 70 ^∘C,, and leaching time at 30 min. Figure 8 shows that the leaching efficiencies are nearly constant in the pulp density range of 14−17 g/L. When the pulp density was increased to 20 g /, however, the leaching efficiencies of all the metals clearly decreased. This is attributed to a decrease in the available surface area per unit volume of the solution, with increasing pulp density.24 Therefore, 17 g/L was determined as the optimal pulp density. Effects of Temperature and Time.",
+            "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+            "section_name": "RESULTS AND DISCUSSION",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 11342,
+            "position_end": 14210,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub1",
+              "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+              "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant/text.md",
+              "section_name": "RESULTS AND DISCUSSION",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 11342,
+              "position_end": 14210,
+              "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+              "chunk_type": "text",
+              "is_child": true
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_time_30_0_min",
+          "name": "time",
+          "type": "Time",
+          "value": 30.0,
+          "unit": "min",
+          "source": {
+            "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+            "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub1",
+            "text": "However, thermodynamic calculation shows that only the generation of C8H10O12Co, C8H10O12Ni,, and C8H10O1 Mn is thermodynamically favorable during leaching ^35, 37, 44 Therefore, the leaching reaction can be represented as Effect of H2O2 Concentration. The effect of the H2O2 concentration on the leaching efficiencies of Mn, Li, Co, and Ni was investigated by fixing the concentration of the -tartaric acid at 2 M, pulp density at 17 g / L,, temperature at 70 ^∘C, and leaching time at 30 min. Figure 6 shows that the addition of H2O2 significantly improved the leaching efficiencies of all the metals studied. In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni. When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively. The increase in the leaching efficiencies occurred because the H2O2 acts as a reducing agent to increase the rate of the leaching reaction. A further increase in the H2O2 concentration to 5 vol% did not cause significant change in the leaching efficiencies; therefore, 4 vol% 2 O2 was considered the optimal concentration. Effect of L-Tartaric Acid Concentration. Figure 7 shows the effect of the L-tartaric acid concentration on the leaching efficiencies of Mn, Li, Co, and Ni under the conditions: H2O2 concentration of 4 vol%, pulp density of 17 g / L,, temperature of 70 ^∘C, and leaching time of 30 min. The leaching efficiencies of Mn, Li, Co,, and Ni were found to increase with increasing Ltartaric acid concentration. This can be attributed to the fact that an increase in the L-tartaric acid concentration improves the frequency of collisions between reactants, thus speeding up the rate of reaction.45 When the concentration of L-tartaric acid reached 2 M, the leaching efficiencies increased to ∼99% for all the metals. With a further increase in the L-tartaric acid concentration to 2.5 M, the leaching efficiencies showed almost no change. Therefore, 2 M was determined as the optimal concentration of -tartaric acid. Effect of Pulp Density. The effect of the pulp density on the leaching efficiencies of Mn, Li, Co, and Ni was studied by fixing the H _ 2 O2 concentration at 4 vol%, L-tartaric acid concentration at 2 M, temperature at 70 ^∘C,, and leaching time at 30 min. Figure 8 shows that the leaching efficiencies are nearly constant in the pulp density range of 14−17 g/L. When the pulp density was increased to 20 g /, however, the leaching efficiencies of all the metals clearly decreased. This is attributed to a decrease in the available surface area per unit volume of the solution, with increasing pulp density.24 Therefore, 17 g/L was determined as the optimal pulp density. Effects of Temperature and Time.",
+            "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+            "section_name": "RESULTS AND DISCUSSION",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 11342,
+            "position_end": 14210,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub1",
+              "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+              "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant/text.md",
+              "section_name": "RESULTS AND DISCUSSION",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 11342,
+              "position_end": 14210,
+              "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+              "chunk_type": "text",
+              "is_child": true
+            }
+          },
+          "condition_type": "Time",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_concentration_4_0_vol",
+          "name": "concentration",
+          "type": "Concentration",
+          "value": 4.0,
+          "unit": "vol%",
+          "source": {
+            "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+            "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub1",
+            "text": "However, thermodynamic calculation shows that only the generation of C8H10O12Co, C8H10O12Ni,, and C8H10O1 Mn is thermodynamically favorable during leaching ^35, 37, 44 Therefore, the leaching reaction can be represented as Effect of H2O2 Concentration. The effect of the H2O2 concentration on the leaching efficiencies of Mn, Li, Co, and Ni was investigated by fixing the concentration of the -tartaric acid at 2 M, pulp density at 17 g / L,, temperature at 70 ^∘C, and leaching time at 30 min. Figure 6 shows that the addition of H2O2 significantly improved the leaching efficiencies of all the metals studied. In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni. When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively. The increase in the leaching efficiencies occurred because the H2O2 acts as a reducing agent to increase the rate of the leaching reaction. A further increase in the H2O2 concentration to 5 vol% did not cause significant change in the leaching efficiencies; therefore, 4 vol% 2 O2 was considered the optimal concentration. Effect of L-Tartaric Acid Concentration. Figure 7 shows the effect of the L-tartaric acid concentration on the leaching efficiencies of Mn, Li, Co, and Ni under the conditions: H2O2 concentration of 4 vol%, pulp density of 17 g / L,, temperature of 70 ^∘C, and leaching time of 30 min. The leaching efficiencies of Mn, Li, Co,, and Ni were found to increase with increasing Ltartaric acid concentration. This can be attributed to the fact that an increase in the L-tartaric acid concentration improves the frequency of collisions between reactants, thus speeding up the rate of reaction.45 When the concentration of L-tartaric acid reached 2 M, the leaching efficiencies increased to ∼99% for all the metals. With a further increase in the L-tartaric acid concentration to 2.5 M, the leaching efficiencies showed almost no change. Therefore, 2 M was determined as the optimal concentration of -tartaric acid. Effect of Pulp Density. The effect of the pulp density on the leaching efficiencies of Mn, Li, Co, and Ni was studied by fixing the H _ 2 O2 concentration at 4 vol%, L-tartaric acid concentration at 2 M, temperature at 70 ^∘C,, and leaching time at 30 min. Figure 8 shows that the leaching efficiencies are nearly constant in the pulp density range of 14−17 g/L. When the pulp density was increased to 20 g /, however, the leaching efficiencies of all the metals clearly decreased. This is attributed to a decrease in the available surface area per unit volume of the solution, with increasing pulp density.24 Therefore, 17 g/L was determined as the optimal pulp density. Effects of Temperature and Time.",
+            "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+            "section_name": "RESULTS AND DISCUSSION",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 11342,
+            "position_end": 14210,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub1",
+              "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+              "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant/text.md",
+              "section_name": "RESULTS AND DISCUSSION",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 11342,
+              "position_end": 14210,
+              "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+              "chunk_type": "text",
+              "is_child": true
+            }
+          },
+          "condition_type": "Concentration",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Mn",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni.",
+          "properties": {
+            "property": "leaching",
+            "value": 30.44,
+            "unit": "%",
+            "source_sample": "leaching solutions",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "absence of H2O2; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "absence of H2O2",
+                "unit": null,
+                "raw_text": "absence of H2O2"
+              },
+              {
+                "key": "concentration",
+                "value": 2.0,
+                "unit": "M",
+                "raw_text": "L-tartaric acid 2 M"
+              },
+              {
+                "key": "pulp_density",
+                "value": "17 g/L",
+                "unit": null,
+                "raw_text": "pulp density 17 g/L"
+              },
+              {
+                "key": "temperature",
+                "value": 70.0,
+                "unit": "°C",
+                "raw_text": "temperature 70 °C"
+              },
+              {
+                "key": "time",
+                "value": 30.0,
+                "unit": "min",
+                "raw_text": "leaching time 30 min"
+              }
+            ],
+            "condition_labels": [
+              "absence of H2O2",
+              "L-tartaric acid 2 M",
+              "pulp density 17 g/L",
+              "temperature 70 °C",
+              "leaching time 30 min"
+            ],
+            "condition": "absence of H2O2; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_other_absence_of_h2o2",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_concentration_2_0_m",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_pulp_density_17_g_l",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_temperature_70_0_c",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_time_30_0_min"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Mn",
+            "evidence_span": "In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni.",
+          "properties": {
+            "property": "leaching",
+            "value": 31.47,
+            "unit": "%",
+            "source_sample": "leaching solutions",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "absence of H2O2; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "absence of H2O2",
+                "unit": null,
+                "raw_text": "absence of H2O2"
+              },
+              {
+                "key": "concentration",
+                "value": 2.0,
+                "unit": "M",
+                "raw_text": "L-tartaric acid 2 M"
+              },
+              {
+                "key": "pulp_density",
+                "value": "17 g/L",
+                "unit": null,
+                "raw_text": "pulp density 17 g/L"
+              },
+              {
+                "key": "temperature",
+                "value": 70.0,
+                "unit": "°C",
+                "raw_text": "temperature 70 °C"
+              },
+              {
+                "key": "time",
+                "value": 30.0,
+                "unit": "min",
+                "raw_text": "leaching time 30 min"
+              }
+            ],
+            "condition_labels": [
+              "absence of H2O2",
+              "L-tartaric acid 2 M",
+              "pulp density 17 g/L",
+              "temperature 70 °C",
+              "leaching time 30 min"
+            ],
+            "condition": "absence of H2O2; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_other_absence_of_h2o2",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_concentration_2_0_m",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_pulp_density_17_g_l",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_temperature_70_0_c",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_time_30_0_min"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Li",
+            "evidence_span": "In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni.",
+          "properties": {
+            "property": "leaching",
+            "value": 16.69,
+            "unit": "%",
+            "source_sample": "leaching solutions",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "absence of H2O2; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "absence of H2O2",
+                "unit": null,
+                "raw_text": "absence of H2O2"
+              },
+              {
+                "key": "concentration",
+                "value": 2.0,
+                "unit": "M",
+                "raw_text": "L-tartaric acid 2 M"
+              },
+              {
+                "key": "pulp_density",
+                "value": "17 g/L",
+                "unit": null,
+                "raw_text": "pulp density 17 g/L"
+              },
+              {
+                "key": "temperature",
+                "value": 70.0,
+                "unit": "°C",
+                "raw_text": "temperature 70 °C"
+              },
+              {
+                "key": "time",
+                "value": 30.0,
+                "unit": "min",
+                "raw_text": "leaching time 30 min"
+              }
+            ],
+            "condition_labels": [
+              "absence of H2O2",
+              "L-tartaric acid 2 M",
+              "pulp density 17 g/L",
+              "temperature 70 °C",
+              "leaching time 30 min"
+            ],
+            "condition": "absence of H2O2; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_other_absence_of_h2o2",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_concentration_2_0_m",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_pulp_density_17_g_l",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_temperature_70_0_c",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_time_30_0_min"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Co",
+            "evidence_span": "In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni.",
+          "properties": {
+            "property": "leaching",
+            "value": 29.59,
+            "unit": "%",
+            "source_sample": "leaching solutions",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "absence of H2O2; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "treatment_members": [],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "absence of H2O2",
+                "unit": null,
+                "raw_text": "absence of H2O2"
+              },
+              {
+                "key": "concentration",
+                "value": 2.0,
+                "unit": "M",
+                "raw_text": "L-tartaric acid 2 M"
+              },
+              {
+                "key": "pulp_density",
+                "value": "17 g/L",
+                "unit": null,
+                "raw_text": "pulp density 17 g/L"
+              },
+              {
+                "key": "temperature",
+                "value": 70.0,
+                "unit": "°C",
+                "raw_text": "temperature 70 °C"
+              },
+              {
+                "key": "time",
+                "value": 30.0,
+                "unit": "min",
+                "raw_text": "leaching time 30 min"
+              }
+            ],
+            "condition_labels": [
+              "absence of H2O2",
+              "L-tartaric acid 2 M",
+              "pulp density 17 g/L",
+              "temperature 70 °C",
+              "leaching time 30 min"
+            ],
+            "condition": "absence of H2O2; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_other_absence_of_h2o2",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_concentration_2_0_m",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_pulp_density_17_g_l",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_temperature_70_0_c",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_time_30_0_min"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Ni",
+            "evidence_span": "In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Mn",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 99.31,
+            "unit": "%",
+            "source_sample": "leaching solutions",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "H2O2",
+            "conditions": "H2O2 concentration 4 vol%; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": 4.0,
+                "unit": "vol%",
+                "raw_text": "H2O2 concentration 4 vol%"
+              },
+              {
+                "key": "concentration",
+                "value": 2.0,
+                "unit": "M",
+                "raw_text": "L-tartaric acid 2 M"
+              },
+              {
+                "key": "pulp_density",
+                "value": "17 g/L",
+                "unit": null,
+                "raw_text": "pulp density 17 g/L"
+              },
+              {
+                "key": "temperature",
+                "value": 70.0,
+                "unit": "°C",
+                "raw_text": "temperature 70 °C"
+              },
+              {
+                "key": "time",
+                "value": 30.0,
+                "unit": "min",
+                "raw_text": "leaching time 30 min"
+              }
+            ],
+            "condition_labels": [
+              "H2O2 concentration 4 vol%",
+              "L-tartaric acid 2 M",
+              "pulp density 17 g/L",
+              "temperature 70 °C",
+              "leaching time 30 min"
+            ],
+            "condition": "H2O2 concentration 4 vol%; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_concentration_4_0_vol",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_concentration_2_0_m",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_pulp_density_17_g_l",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_temperature_70_0_c",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_time_30_0_min"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Mn",
+            "evidence_span": "When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 99.07,
+            "unit": "%",
+            "source_sample": "leaching solutions",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "H2O2",
+            "conditions": "H2O2 concentration 4 vol%; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": 4.0,
+                "unit": "vol%",
+                "raw_text": "H2O2 concentration 4 vol%"
+              },
+              {
+                "key": "concentration",
+                "value": 2.0,
+                "unit": "M",
+                "raw_text": "L-tartaric acid 2 M"
+              },
+              {
+                "key": "pulp_density",
+                "value": "17 g/L",
+                "unit": null,
+                "raw_text": "pulp density 17 g/L"
+              },
+              {
+                "key": "temperature",
+                "value": 70.0,
+                "unit": "°C",
+                "raw_text": "temperature 70 °C"
+              },
+              {
+                "key": "time",
+                "value": 30.0,
+                "unit": "min",
+                "raw_text": "leaching time 30 min"
+              }
+            ],
+            "condition_labels": [
+              "H2O2 concentration 4 vol%",
+              "L-tartaric acid 2 M",
+              "pulp density 17 g/L",
+              "temperature 70 °C",
+              "leaching time 30 min"
+            ],
+            "condition": "H2O2 concentration 4 vol%; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_concentration_4_0_vol",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_concentration_2_0_m",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_pulp_density_17_g_l",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_temperature_70_0_c",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_time_30_0_min"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Li",
+            "evidence_span": "When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 98.64,
+            "unit": "%",
+            "source_sample": "leaching solutions",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "H2O2",
+            "conditions": "H2O2 concentration 4 vol%; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": 4.0,
+                "unit": "vol%",
+                "raw_text": "H2O2 concentration 4 vol%"
+              },
+              {
+                "key": "concentration",
+                "value": 2.0,
+                "unit": "M",
+                "raw_text": "L-tartaric acid 2 M"
+              },
+              {
+                "key": "pulp_density",
+                "value": "17 g/L",
+                "unit": null,
+                "raw_text": "pulp density 17 g/L"
+              },
+              {
+                "key": "temperature",
+                "value": 70.0,
+                "unit": "°C",
+                "raw_text": "temperature 70 °C"
+              },
+              {
+                "key": "time",
+                "value": 30.0,
+                "unit": "min",
+                "raw_text": "leaching time 30 min"
+              }
+            ],
+            "condition_labels": [
+              "H2O2 concentration 4 vol%",
+              "L-tartaric acid 2 M",
+              "pulp density 17 g/L",
+              "temperature 70 °C",
+              "leaching time 30 min"
+            ],
+            "condition": "H2O2 concentration 4 vol%; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_concentration_4_0_vol",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_concentration_2_0_m",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_pulp_density_17_g_l",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_temperature_70_0_c",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_time_30_0_min"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Co",
+            "evidence_span": "When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 99.31,
+            "unit": "%",
+            "source_sample": "leaching solutions",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "H2O2",
+            "conditions": "H2O2 concentration 4 vol%; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "treatment_members": [
+              "H2O2"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "concentration",
+                "value": 4.0,
+                "unit": "vol%",
+                "raw_text": "H2O2 concentration 4 vol%"
+              },
+              {
+                "key": "concentration",
+                "value": 2.0,
+                "unit": "M",
+                "raw_text": "L-tartaric acid 2 M"
+              },
+              {
+                "key": "pulp_density",
+                "value": "17 g/L",
+                "unit": null,
+                "raw_text": "pulp density 17 g/L"
+              },
+              {
+                "key": "temperature",
+                "value": 70.0,
+                "unit": "°C",
+                "raw_text": "temperature 70 °C"
+              },
+              {
+                "key": "time",
+                "value": 30.0,
+                "unit": "min",
+                "raw_text": "leaching time 30 min"
+              }
+            ],
+            "condition_labels": [
+              "H2O2 concentration 4 vol%",
+              "L-tartaric acid 2 M",
+              "pulp density 17 g/L",
+              "temperature 70 °C",
+              "leaching time 30 min"
+            ],
+            "condition": "H2O2 concentration 4 vol%; L-tartaric acid 2 M; pulp density 17 g/L; temperature 70 °C; leaching time 30 min",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_concentration_4_0_vol",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_concentration_2_0_m",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_pulp_density_17_g_l",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_temperature_70_0_c",
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub1__cond_time_30_0_min"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Ni",
+            "evidence_span": "When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub2",
+    "section_name": "RESULTS AND DISCUSSION",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 5,
+      "condition_count": 2,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_pulp_density_17_g_l",
+          "name": "pulp_density",
+          "type": "pulp_density",
+          "value": "17 g/L",
+          "unit": null,
+          "source": {
+            "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+            "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub2",
+            "text": "Figure 8 shows that the leaching efficiencies are nearly constant in the pulp density range of 14−17 g/L. When the pulp density was increased to 20 g /, however, the leaching efficiencies of all the metals clearly decreased. This is attributed to a decrease in the available surface area per unit volume of the solution, with increasing pulp density.24 Therefore, 17 g/L was determined as the optimal pulp density. Effects of Temperature and Time. The effects of the temperature and time on the leaching efficiencies of Mn, Li, Co, and Ni were investigated at an H2O2 concentration of 4 vol%, an L-tartaric acid concentration of 2 M, and a pulp density of 17 g/L. As shown in Figure 9, the temperature and time affected the leaching efficiencies of Mn, Li, Co, and Ni significantly. The leaching efficiencies were found to increase with an increase in temperature, which was more obvious at the beginning of the leaching process. Increasing the temperature can promote the leaching reaction, because metal leaching is an endothermic process.46 Moreover, the average kinetic energy of the molecules increases with increasing temperature, thereby causing more frequent and more energetic collisions and thereby accelerating the leaching reaction.45 However, the leaching efficiencies decreased slightly when the temperature was further increased to 80 ^∘C. For instance, the leaching efficiencies at 30 min decreased from 99.31% to 96.94% for Mn, from 99.07% to 96.79% for Li, from 98.64% to 97.35% for Co, and from 99.31% to 96.67% for Ni, with an increase in temperature from 70 to 80 ^∘C. This is because the H2O2 is unstable when heated.37 Increasing the temperature to more than 70 ^∘C would accelerate the decomposition of H2O2, according to eq 8. The results presented in Figure 9 also show that the leaching efficiencies of all the metals increase with increasing leaching time. Simultaneously, the leaching rates (slope of the curves) of all the metals decreased. This is in accordance with the previous results.43 To obtain a high leaching efficiency in a short time, 70 °C and 30 min were selected as the optimal temperature and leaching time, respectively. Kinetics of Leaching. For most oxide minerals, the leaching efficiency depends on the rate of the chemical reaction and of the mass transfer (inner and outer difusion). Because reduction in the mass and particle size of the leaching residues occurred during leaching (Figure 3), the shrinking-core model ^47-49 was applied to describe the leaching kinetics. In this model, the leaching reaction occurs at the external surface of the cathodic materials. As the reaction proceeds, the reactive area is shifted progressively to the core of the solid. If the leaching process is controlled by the chemical reaction, the shrinking-core model can be represented as where f is the leaching efficiency of a metal, k is the reaction rate constant (min ^-1), and t is the leaching time (min). If the largest resistance to the leaching process is the difusion through the inert ash layer, the following expression can describe the leaching kinetics of the process where k ^' is the reaction rate constant (min ^-1) The plots of (1 - f) ^1 / 3 vs t at different temperatures (Figure 10) indicate that the experimental data fit well to the shrinkingcore model of chemical control (9). Moreover, the leaching process occurred in a fast stage and a slow stage, and the model parameters (R ^2 > 0.96) for each stage are shown in Table S2.",
+            "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+            "section_name": "RESULTS AND DISCUSSION",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 14210,
+            "position_end": 17699,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub2",
+              "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+              "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant/text.md",
+              "section_name": "RESULTS AND DISCUSSION",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 14210,
+              "position_end": 17699,
+              "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+              "chunk_type": "text",
+              "is_child": true
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_temperature_80_0_c",
+          "name": "temperature",
+          "type": "Temperature",
+          "value": 80.0,
+          "unit": "°C",
+          "source": {
+            "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+            "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub2",
+            "text": "Figure 8 shows that the leaching efficiencies are nearly constant in the pulp density range of 14−17 g/L. When the pulp density was increased to 20 g /, however, the leaching efficiencies of all the metals clearly decreased. This is attributed to a decrease in the available surface area per unit volume of the solution, with increasing pulp density.24 Therefore, 17 g/L was determined as the optimal pulp density. Effects of Temperature and Time. The effects of the temperature and time on the leaching efficiencies of Mn, Li, Co, and Ni were investigated at an H2O2 concentration of 4 vol%, an L-tartaric acid concentration of 2 M, and a pulp density of 17 g/L. As shown in Figure 9, the temperature and time affected the leaching efficiencies of Mn, Li, Co, and Ni significantly. The leaching efficiencies were found to increase with an increase in temperature, which was more obvious at the beginning of the leaching process. Increasing the temperature can promote the leaching reaction, because metal leaching is an endothermic process.46 Moreover, the average kinetic energy of the molecules increases with increasing temperature, thereby causing more frequent and more energetic collisions and thereby accelerating the leaching reaction.45 However, the leaching efficiencies decreased slightly when the temperature was further increased to 80 ^∘C. For instance, the leaching efficiencies at 30 min decreased from 99.31% to 96.94% for Mn, from 99.07% to 96.79% for Li, from 98.64% to 97.35% for Co, and from 99.31% to 96.67% for Ni, with an increase in temperature from 70 to 80 ^∘C. This is because the H2O2 is unstable when heated.37 Increasing the temperature to more than 70 ^∘C would accelerate the decomposition of H2O2, according to eq 8. The results presented in Figure 9 also show that the leaching efficiencies of all the metals increase with increasing leaching time. Simultaneously, the leaching rates (slope of the curves) of all the metals decreased. This is in accordance with the previous results.43 To obtain a high leaching efficiency in a short time, 70 °C and 30 min were selected as the optimal temperature and leaching time, respectively. Kinetics of Leaching. For most oxide minerals, the leaching efficiency depends on the rate of the chemical reaction and of the mass transfer (inner and outer difusion). Because reduction in the mass and particle size of the leaching residues occurred during leaching (Figure 3), the shrinking-core model ^47-49 was applied to describe the leaching kinetics. In this model, the leaching reaction occurs at the external surface of the cathodic materials. As the reaction proceeds, the reactive area is shifted progressively to the core of the solid. If the leaching process is controlled by the chemical reaction, the shrinking-core model can be represented as where f is the leaching efficiency of a metal, k is the reaction rate constant (min ^-1), and t is the leaching time (min). If the largest resistance to the leaching process is the difusion through the inert ash layer, the following expression can describe the leaching kinetics of the process where k ^' is the reaction rate constant (min ^-1) The plots of (1 - f) ^1 / 3 vs t at different temperatures (Figure 10) indicate that the experimental data fit well to the shrinkingcore model of chemical control (9). Moreover, the leaching process occurred in a fast stage and a slow stage, and the model parameters (R ^2 > 0.96) for each stage are shown in Table S2.",
+            "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+            "section_name": "RESULTS AND DISCUSSION",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 14210,
+            "position_end": 17699,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub2",
+              "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+              "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant/text.md",
+              "section_name": "RESULTS AND DISCUSSION",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 14210,
+              "position_end": 17699,
+              "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+              "chunk_type": "text",
+              "is_child": true
+            }
+          },
+          "condition_type": "Temperature",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Component_cathodic_material_PROCESSED_BY_text_Process_L_tartaric_acid_leaching",
+          "source_id": "text_Component_cathodic_material",
+          "source_name": "cathodic material",
+          "target_id": "text_Process_L_tartaric_acid_leaching",
+          "target_name": "L-tartaric acid leaching",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The effects of the temperature and time on the leaching efficiencies of Mn, Li, Co, and Ni were investigated at an H2O2 concentration of 4 vol%, an L-tartaric acid concentration of 2 M, and a pulp density of 17 g/L.",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "H2O2 concentration of 4 vol%, L-tartaric acid concentration of 2 M, pulp density of 17 g/L",
+            "process_agent": "H2O2, L-tartaric acid",
+            "treatment_members": [
+              "H2O2",
+              "L-tartaric acid"
+            ],
+            "condition_keys": [
+              {
+                "key": "pulp_density",
+                "value": "17 g/L",
+                "unit": null,
+                "raw_text": "H2O2 concentration of 4 vol%, L-tartaric acid concentration of 2 M, pulp density of 17 g/L"
+              }
+            ],
+            "condition_labels": [
+              "H2O2 concentration of 4 vol%, L-tartaric acid concentration of 2 M, pulp density of 17 g/L"
+            ],
+            "condition": "H2O2 concentration of 4 vol%, L-tartaric acid concentration of 2 M, pulp density of 17 g/L",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub2__cond_pulp_density_17_g_l"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "cathodic material",
+            "target_name": "L-tartaric acid leaching",
+            "evidence_span": "The effects of the temperature and time on the leaching efficiencies of Mn, Li, Co, and Ni were investigated at an H2O2 concentration of 4 vol%, an L-tartaric acid concentration of 2 M, and a pulp density of 17 g/L.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Mn",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "the leaching efficiencies at 30 min decreased from 99.31% to 96.94% for Mn, from 99.07% to 96.79% for Li, from 98.64% to 97.35% for Co, and from 99.31% to 96.67% for Ni, with an increase in temperature from 70 to 80 ^∘C.",
+          "properties": {
+            "property": "leaching",
+            "value": 96.94,
+            "unit": "%",
+            "secondary_value": 99.31,
+            "secondary_unit": "%",
+            "source_sample": "cathodic material",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "temperature increased from 70 to 80 °C, 30 min",
+            "process_agent": "H2O2, L-tartaric acid",
+            "treatment_members": [
+              "H2O2",
+              "L-tartaric acid"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 80.0,
+                "unit": "°C",
+                "raw_text": "temperature increased from 70 to 80 °C, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "temperature increased from 70 to 80 °C, 30 min"
+            ],
+            "condition": "temperature increased from 70 to 80 °C, 30 min",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub2__cond_temperature_80_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Mn",
+            "evidence_span": "the leaching efficiencies at 30 min decreased from 99.31% to 96.94% for Mn, from 99.07% to 96.79% for Li, from 98.64% to 97.35% for Co, and from 99.31% to 96.67% for Ni, with an increase in temperature from 70 to 80 ^∘C.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "the leaching efficiencies at 30 min decreased from 99.31% to 96.94% for Mn, from 99.07% to 96.79% for Li, from 98.64% to 97.35% for Co, and from 99.31% to 96.67% for Ni, with an increase in temperature from 70 to 80 ^∘C.",
+          "properties": {
+            "property": "leaching",
+            "value": 96.79,
+            "unit": "%",
+            "secondary_value": 99.07,
+            "secondary_unit": "%",
+            "source_sample": "cathodic material",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "temperature increased from 70 to 80 °C, 30 min",
+            "process_agent": "H2O2, L-tartaric acid",
+            "treatment_members": [
+              "H2O2",
+              "L-tartaric acid"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 80.0,
+                "unit": "°C",
+                "raw_text": "temperature increased from 70 to 80 °C, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "temperature increased from 70 to 80 °C, 30 min"
+            ],
+            "condition": "temperature increased from 70 to 80 °C, 30 min",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub2__cond_temperature_80_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Li",
+            "evidence_span": "the leaching efficiencies at 30 min decreased from 99.31% to 96.94% for Mn, from 99.07% to 96.79% for Li, from 98.64% to 97.35% for Co, and from 99.31% to 96.67% for Ni, with an increase in temperature from 70 to 80 ^∘C.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "the leaching efficiencies at 30 min decreased from 99.31% to 96.94% for Mn, from 99.07% to 96.79% for Li, from 98.64% to 97.35% for Co, and from 99.31% to 96.67% for Ni, with an increase in temperature from 70 to 80 ^∘C.",
+          "properties": {
+            "property": "leaching",
+            "value": 97.35,
+            "unit": "%",
+            "secondary_value": 98.64,
+            "secondary_unit": "%",
+            "source_sample": "cathodic material",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "temperature increased from 70 to 80 °C, 30 min",
+            "process_agent": "H2O2, L-tartaric acid",
+            "treatment_members": [
+              "H2O2",
+              "L-tartaric acid"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 80.0,
+                "unit": "°C",
+                "raw_text": "temperature increased from 70 to 80 °C, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "temperature increased from 70 to 80 °C, 30 min"
+            ],
+            "condition": "temperature increased from 70 to 80 °C, 30 min",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub2__cond_temperature_80_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Co",
+            "evidence_span": "the leaching efficiencies at 30 min decreased from 99.31% to 96.94% for Mn, from 99.07% to 96.79% for Li, from 98.64% to 97.35% for Co, and from 99.31% to 96.67% for Ni, with an increase in temperature from 70 to 80 ^∘C.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "the leaching efficiencies at 30 min decreased from 99.31% to 96.94% for Mn, from 99.07% to 96.79% for Li, from 98.64% to 97.35% for Co, and from 99.31% to 96.67% for Ni, with an increase in temperature from 70 to 80 ^∘C.",
+          "properties": {
+            "property": "leaching",
+            "value": 96.67,
+            "unit": "%",
+            "secondary_value": 99.31,
+            "secondary_unit": "%",
+            "source_sample": "cathodic material",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "temperature increased from 70 to 80 °C, 30 min",
+            "process_agent": "H2O2, L-tartaric acid",
+            "treatment_members": [
+              "H2O2",
+              "L-tartaric acid"
+            ],
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "temperature",
+                "value": 80.0,
+                "unit": "°C",
+                "raw_text": "temperature increased from 70 to 80 °C, 30 min"
+              }
+            ],
+            "condition_labels": [
+              "temperature increased from 70 to 80 °C, 30 min"
+            ],
+            "condition": "temperature increased from 70 to 80 °C, 30 min",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub2__cond_temperature_80_0_c"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Ni",
+            "evidence_span": "the leaching efficiencies at 30 min decreased from 99.31% to 96.94% for Mn, from 99.07% to 96.79% for Li, from 98.64% to 97.35% for Co, and from 99.31% to 96.67% for Ni, with an increase in temperature from 70 to 80 ^∘C.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub3",
+    "section_name": "RESULTS AND DISCUSSION",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 8,
+      "condition_count": 2,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_other_first_stage",
+          "name": "other",
+          "type": "other",
+          "value": "first stage",
+          "unit": null,
+          "source": {
+            "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+            "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub3",
+            "text": "where k ^' is the reaction rate constant (min ^-1) The plots of (1 - f) ^1 / 3 vs t at different temperatures (Figure 10) indicate that the experimental data fit well to the shrinkingcore model of chemical control (9). Moreover, the leaching process occurred in a fast stage and a slow stage, and the model parameters (R ^2 > 0.96) for each stage are shown in Table S2. Therefore, the leaching process using L-tartaric acid as the leachant is controlled by the rate of the leaching reaction and not by that of difusion. The relationship between the reaction rate constant and the temperature can be expressed by the Arrhenius equation (eq 11) where k (min−1) is the reaction rate constant, A is the frequency factor, Ea is the apparent activation energy, R (8.3145 J / K / mol)̇ is the gas constant, and T (K) is the absolute temperature. The Ea s of the leaching reactions can be estimated by using the linear form of the Arrhenius equation Plots of ln k vs 1 / T using the reaction rate constants (Table S2) are shown in Figure 11. For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively. For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively. These values are close to the reported results.24,50 The relatively high values of Ea s further indicate that the rate-controlling step of this leaching process is surface chemical reactions.",
+            "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+            "section_name": "RESULTS AND DISCUSSION",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 17699,
+            "position_end": 19179,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub3",
+              "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+              "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant/text.md",
+              "section_name": "RESULTS AND DISCUSSION",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 17699,
+              "position_end": 19179,
+              "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+              "chunk_type": "text",
+              "is_child": true
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_other_second_stage",
+          "name": "other",
+          "type": "other",
+          "value": "second stage",
+          "unit": null,
+          "source": {
+            "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+            "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub3",
+            "text": "where k ^' is the reaction rate constant (min ^-1) The plots of (1 - f) ^1 / 3 vs t at different temperatures (Figure 10) indicate that the experimental data fit well to the shrinkingcore model of chemical control (9). Moreover, the leaching process occurred in a fast stage and a slow stage, and the model parameters (R ^2 > 0.96) for each stage are shown in Table S2. Therefore, the leaching process using L-tartaric acid as the leachant is controlled by the rate of the leaching reaction and not by that of difusion. The relationship between the reaction rate constant and the temperature can be expressed by the Arrhenius equation (eq 11) where k (min−1) is the reaction rate constant, A is the frequency factor, Ea is the apparent activation energy, R (8.3145 J / K / mol)̇ is the gas constant, and T (K) is the absolute temperature. The Ea s of the leaching reactions can be estimated by using the linear form of the Arrhenius equation Plots of ln k vs 1 / T using the reaction rate constants (Table S2) are shown in Figure 11. For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively. For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively. These values are close to the reported results.24,50 The relatively high values of Ea s further indicate that the rate-controlling step of this leaching process is surface chemical reactions.",
+            "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+            "section_name": "RESULTS AND DISCUSSION",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 17699,
+            "position_end": 19179,
+            "metadata": {
+              "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2_sub3",
+              "doc_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+              "title": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant/text.md",
+              "section_name": "RESULTS AND DISCUSSION",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 17699,
+              "position_end": 19179,
+              "parent_chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_RESULTS AND DISCUSSION_af2376a2",
+              "chunk_type": "text",
+              "is_child": true
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Mn",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+          "properties": {
+            "property": "activation_energy",
+            "value": 66.0,
+            "unit": "kJ/mol",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "first stage",
+            "measurement_method": "Arrhenius equation",
+            "treatment_members": [],
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "first stage",
+                "unit": null,
+                "raw_text": "first stage"
+              }
+            ],
+            "condition_labels": [
+              "first stage"
+            ],
+            "condition": "first stage",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub3__cond_other_first_stage"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Mn",
+            "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+          "properties": {
+            "property": "activation_energy",
+            "value": 54.03,
+            "unit": "kJ/mol",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "first stage",
+            "measurement_method": "Arrhenius equation",
+            "treatment_members": [],
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "first stage",
+                "unit": null,
+                "raw_text": "first stage"
+              }
+            ],
+            "condition_labels": [
+              "first stage"
+            ],
+            "condition": "first stage",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub3__cond_other_first_stage"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Li",
+            "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+          "properties": {
+            "property": "activation_energy",
+            "value": 58.18,
+            "unit": "kJ/mol",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "first stage",
+            "measurement_method": "Arrhenius equation",
+            "treatment_members": [],
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "first stage",
+                "unit": null,
+                "raw_text": "first stage"
+              }
+            ],
+            "condition_labels": [
+              "first stage"
+            ],
+            "condition": "first stage",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub3__cond_other_first_stage"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Co",
+            "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+          "properties": {
+            "property": "activation_energy",
+            "value": 73.28,
+            "unit": "kJ/mol",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "first stage",
+            "measurement_method": "Arrhenius equation",
+            "treatment_members": [],
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "first stage",
+                "unit": null,
+                "raw_text": "first stage"
+              }
+            ],
+            "condition_labels": [
+              "first stage"
+            ],
+            "condition": "first stage",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub3__cond_other_first_stage"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Ni",
+            "evidence_span": "For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Mn",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+          "properties": {
+            "property": "activation_energy",
+            "value": 55.68,
+            "unit": "kJ/mol",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "second stage",
+            "measurement_method": "Arrhenius equation",
+            "treatment_members": [],
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "second stage",
+                "unit": null,
+                "raw_text": "second stage"
+              }
+            ],
+            "condition_labels": [
+              "second stage"
+            ],
+            "condition": "second stage",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub3__cond_other_second_stage"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Mn",
+            "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Li",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Li",
+          "target_name": "Li",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+          "properties": {
+            "property": "activation_energy",
+            "value": 53.86,
+            "unit": "kJ/mol",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "second stage",
+            "measurement_method": "Arrhenius equation",
+            "treatment_members": [],
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "second stage",
+                "unit": null,
+                "raw_text": "second stage"
+              }
+            ],
+            "condition_labels": [
+              "second stage"
+            ],
+            "condition": "second stage",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub3__cond_other_second_stage"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Li",
+            "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+          "properties": {
+            "property": "activation_energy",
+            "value": 58.94,
+            "unit": "kJ/mol",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "second stage",
+            "measurement_method": "Arrhenius equation",
+            "treatment_members": [],
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "second stage",
+                "unit": null,
+                "raw_text": "second stage"
+              }
+            ],
+            "condition_labels": [
+              "second stage"
+            ],
+            "condition": "second stage",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub3__cond_other_second_stage"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Co",
+            "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_L_tartaric_acid_leaching_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_L_tartaric_acid_leaching",
+          "source_name": "L-tartaric acid leaching",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+          "properties": {
+            "property": "activation_energy",
+            "value": 47.78,
+            "unit": "kJ/mol",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "second stage",
+            "measurement_method": "Arrhenius equation",
+            "treatment_members": [],
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "second stage",
+                "unit": null,
+                "raw_text": "second stage"
+              }
+            ],
+            "condition_labels": [
+              "second stage"
+            ],
+            "condition": "second stage",
+            "condition_ids": [
+              "CHUNK_Recovery_of_Lithium_Nickel_Cobalt_and_Manganese_from_Spent_Lithium_Ion_Batteries_Using_Scplscp_Tartaric_Acid_as_a_Leachant_RESULTS_AND_DISCUSSION_af2376a2_sub3__cond_other_second_stage"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "L-tartaric acid leaching",
+            "target_name": "Ni",
+            "evidence_span": "For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_CONCLUSIONS_da15c77f",
+    "section_name": "■ CONCLUSIONS",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_S Supporting Information_ff5faf78",
+    "section_name": "S Supporting Information",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_Notes_5fd8be49",
+    "section_name": "Notes",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  }
+]

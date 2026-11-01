@@ -1,0 +1,97 @@
+{
+  "process_stages": [
+    {
+      "name": "solvent method for scrap material recovery",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "The separated Al foil was treated again as above recovery method; most scrap materials could be directly recovered after solvent method."
+    },
+    {
+      "name": "NaOH dissolution of Al foil mixtures",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "After dissolving Al foil mixtures with excessive NaOH solution, the wasted scrap materials (m2) could be weighed."
+    },
+    {
+      "name": "electrochemical cycling of recovered scrap material electrodes",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": false,
+      "evidence_hint": "The electrochemical characterization of electrodes was performed using CR2032 coin-type test cells; cells were charged and discharged between 3.0 V and 4.3 V versus Li+/Li at 30 mA g-1 at 25 °C."
+    }
+  ],
+  "experiment_settings": [
+    {
+      "name": "solvent method recovery conditions",
+      "stage_name": "solvent method for scrap material recovery",
+      "sample": "separated Al foil with scrap materials",
+      "sample_aliases": [],
+      "treatment": "solvent method",
+      "treatment_members": [],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "solvent method as described above; no further conditions stated",
+      "evidence_hint": "The separated Al foil was treated again as above recovery method."
+    },
+    {
+      "name": "NaOH dissolution conditions",
+      "stage_name": "NaOH dissolution of Al foil mixtures",
+      "sample": "impure Al foil mixtures",
+      "sample_aliases": [],
+      "treatment": "excessive NaOH solution",
+      "treatment_members": [
+        "NaOH"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "excessive NaOH solution; no further conditions stated",
+      "evidence_hint": "After dissolving Al foil mixtures with excessive NaOH solution, the wasted scrap materials (m2) could be weighed."
+    },
+    {
+      "name": "electrochemical cycling conditions",
+      "stage_name": "electrochemical cycling of recovered scrap material electrodes",
+      "sample": "recovered scrap material electrode",
+      "sample_aliases": [],
+      "treatment": "CR2032 coin-type test cell with lithium foil anode and 1 M LiPF6 in EC:DEC (1:1 v/v)",
+      "treatment_members": [
+        "lithium foil",
+        "1 M LiPF6 in ethylene carbonate and diethyl carbonate (1:1 in volume)"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "charged and discharged between 3.0 V and 4.3 V versus Li+/Li; current density 30 mA g-1; temperature 25 °C",
+      "evidence_hint": "The cells were charged and discharged between 3.0 V and 4.3 V versus Li+/Li by applying a current density of 30 mA g-1 at 25 °C."
+    }
+  ],
+  "process_targets": [
+    {
+      "name": "solvent method for scrap material recovery",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "The separated Al foil was treated again as above recovery method; most scrap materials could be directly recovered after solvent method."
+    },
+    {
+      "name": "NaOH dissolution of Al foil mixtures",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "After dissolving Al foil mixtures with excessive NaOH solution, the wasted scrap materials (m2) could be weighed."
+    },
+    {
+      "name": "electrochemical cycling of recovered scrap material electrodes",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": false,
+      "evidence_hint": "The electrochemical characterization of electrodes was performed using CR2032 coin-type test cells; cells were charged and discharged between 3.0 V and 4.3 V versus Li+/Li at 30 mA g-1 at 25 °C."
+    }
+  ]
+}

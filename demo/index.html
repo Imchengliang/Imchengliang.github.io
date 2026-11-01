@@ -1,681 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OntoWEEE Knowledge Graph Demo</title>
-    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .main-content {
-            display: grid;
-            grid-template-columns: 350px 1fr;
-            gap: 20px;
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-
-        .sidebar {
-            padding-right: 20px;
-            border-right: 1px solid #e0e0e0;
-        }
-
-        .sidebar h2 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        .search-box {
-            margin-bottom: 15px;
-            position: relative;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 10px 14px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            color: #333;
-            background: #f8f9fa;
-            transition: border-color 0.3s ease, background 0.3s ease;
-            outline: none;
-        }
-
-        .search-box input:focus {
-            border-color: #667eea;
-            background: white;
-        }
-
-        .search-box input::placeholder {
-            color: #999;
-        }
-
-        .query-count {
-            font-size: 0.8rem;
-            color: #999;
-            margin-top: 6px;
-        }
-
-        .query-empty-state {
-            padding: 14px;
-            background: #f8f9fa;
-            border: 1px dashed #d8dcef;
-            border-radius: 8px;
-            color: #666;
-            font-size: 0.88rem;
-            line-height: 1.5;
-        }
-
-        .title-suggestions {
-            display: none;
-            position: absolute;
-            top: calc(100% - 2px);
-            left: 0;
-            right: 0;
-            max-height: 280px;
-            overflow-y: auto;
-            background: white;
-            border: 1px solid #d9ddf5;
-            border-radius: 8px;
-            box-shadow: 0 10px 24px rgba(102, 126, 234, 0.18);
-            z-index: 20;
-        }
-
-        .title-suggestions.open {
-            display: block;
-        }
-
-        .node-search-section .title-suggestions {
-            position: static;
-            top: auto;
-            left: auto;
-            right: auto;
-            transform: none;
-            max-height: 220px;
-            margin-top: 5px;
-            margin-bottom: 8px;
-        }
-
-        .title-suggestion {
-            width: 100%;
-            padding: 10px 12px;
-            border: 0;
-            border-bottom: 1px solid #edf0ff;
-            background: white;
-            color: #333;
-            cursor: pointer;
-            font-size: 0.88rem;
-            line-height: 1.35;
-            text-align: left;
-        }
-
-        .title-suggestion:hover,
-        .title-suggestion:focus {
-            background: #f0f2ff;
-            outline: none;
-        }
-
-        .title-suggestion:last-child {
-            border-bottom: 0;
-        }
-
-        .title-suggestion-meta {
-            display: block;
-            margin-top: 3px;
-            color: #888;
-            font-size: 0.75rem;
-        }
-
-        .title-suggestions-empty {
-            padding: 10px 12px;
-            color: #888;
-            font-size: 0.85rem;
-        }
-
-        .node-search-section {
-            margin-bottom: 15px;
-        }
-
-        .node-search-section.open {
-            display: block;
-        }
-
-        .root-node-search-group {
-            display: none;
-        }
-
-        .node-search-section.open .root-node-search-group {
-            display: block;
-        }
-
-        .node-search-label {
-            display: block;
-            margin-bottom: 6px;
-            color: #667eea;
-            font-size: 0.88rem;
-            font-weight: 600;
-        }
-
-        .process-search-label {
-            margin-top: 12px;
-        }
-
-        .graph-filter-option {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            margin-top: 8px;
-            color: #555;
-            font-size: 0.82rem;
-            line-height: 1.35;
-            cursor: pointer;
-            user-select: none;
-        }
-
-        .graph-filter-option input {
-            width: 14px;
-            height: 14px;
-            margin-top: 2px;
-            accent-color: #667eea;
-            cursor: pointer;
-            flex: 0 0 auto;
-        }
-
-        .query-card {
-            background: #f8f9fa;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .query-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .query-card.active {
-            border-color: #667eea;
-            background: #f0f2ff;
-        }
-
-        .query-card h3 {
-            color: #333;
-            font-size: 1rem;
-            margin-bottom: 8px;
-        }
-
-        .query-card p {
-            color: #666;
-            font-size: 0.85rem;
-            line-height: 1.5;
-        }
-
-        .query-card .tag {
-            display: inline-block;
-            padding: 3px 8px;
-            background: #667eea;
-            color: white;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            margin-top: 8px;
-        }
-
-        .visualization-area {
-            padding-left: 20px;
-        }
-
-        #graph-container {
-            width: 100%;
-            height: 600px;
-            background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
-            border-radius: 12px;
-            border: 1px solid rgba(102, 126, 234, 0.2);
-            box-shadow: inset 0 2px 8px rgba(102, 126, 234, 0.08);
-        }
-
-        .stats-panel {
-            margin-top: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 8px;
-        }
-
-        .stats-panel h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1rem;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-        }
-
-        .stat-item {
-            position: relative;
-            text-align: center;
-            padding: 10px;
-            background: white;
-            border-radius: 6px;
-            border: 1px solid #e0e0e0;
-        }
-
-        .stat-item .value {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #667eea;
-        }
-
-        .stat-item .label {
-            font-size: 0.85rem;
-            color: #666;
-            margin-top: 5px;
-        }
-
-        .stat-item.has-tooltip {
-            cursor: help;
-        }
-
-        .stat-tooltip {
-            display: none;
-            position: absolute;
-            left: 50%;
-            bottom: calc(100% + 10px);
-            transform: translateX(-50%);
-            width: min(320px, 70vw);
-            padding: 9px 11px;
-            background: #2d3748;
-            color: white;
-            border-radius: 6px;
-            box-shadow: 0 8px 20px rgba(45, 55, 72, 0.25);
-            font-size: 0.8rem;
-            font-weight: 500;
-            line-height: 1.35;
-            text-align: left;
-            z-index: 30;
-        }
-
-        .stat-tooltip::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            top: 100%;
-            transform: translateX(-50%);
-            border: 6px solid transparent;
-            border-top-color: #2d3748;
-        }
-
-        .stat-item.has-tooltip:hover .stat-tooltip,
-        .stat-item.has-tooltip:focus-within .stat-tooltip {
-            display: block;
-        }
-
-        .edge-detail-panel {
-            display: none;
-            margin-top: 20px;
-            padding: 15px;
-            background: #ffffff;
-            border: 1px solid #d9ddf5;
-            border-radius: 8px;
-            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.12);
-        }
-
-        .edge-detail-panel.open {
-            display: block;
-        }
-
-        .edge-detail-header {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 12px;
-            margin-bottom: 10px;
-        }
-
-        .edge-detail-title {
-            color: #4a5568;
-            font-size: 1rem;
-            font-weight: 700;
-            line-height: 1.35;
-        }
-
-        .edge-detail-close {
-            width: 28px;
-            height: 28px;
-            border: 0;
-            border-radius: 6px;
-            background: #edf0ff;
-            color: #667eea;
-            cursor: pointer;
-            font-size: 1.1rem;
-            line-height: 1;
-        }
-
-        .edge-detail-summary {
-            color: #666;
-            font-size: 0.86rem;
-            line-height: 1.45;
-            margin-bottom: 12px;
-        }
-
-        .edge-detail-table-wrap {
-            max-height: 280px;
-            overflow: auto;
-            border: 1px solid #edf0ff;
-            border-radius: 6px;
-        }
-
-        .edge-detail-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.82rem;
-        }
-
-        .edge-detail-table th,
-        .edge-detail-table td {
-            padding: 8px 9px;
-            border-bottom: 1px solid #edf0ff;
-            text-align: left;
-            vertical-align: top;
-        }
-
-        .edge-detail-table th {
-            position: sticky;
-            top: 0;
-            background: #f8f9ff;
-            color: #667eea;
-            font-weight: 700;
-            z-index: 1;
-        }
-
-        .edge-detail-table tr:last-child td {
-            border-bottom: 0;
-        }
-
-        .process-result-panel .edge-detail-title {
-            color: #2d3748;
-        }
-
-        .process-result-table-wrap {
-            max-height: 520px;
-        }
-
-        .process-result-table {
-            min-width: 760px;
-        }
-
-        .process-result-table td {
-            line-height: 1.35;
-        }
-
-        .process-result-in-graph {
-            height: 100%;
-            min-height: 620px;
-            padding: 20px;
-            overflow: auto;
-            background: #ffffff;
-        }
-
-        .process-result-in-graph .edge-detail-header {
-            margin-bottom: 12px;
-        }
-
-        .process-result-in-graph .edge-detail-table-wrap {
-            max-height: none;
-        }
-
-        .legend-panel {
-            margin-top: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 8px;
-        }
-
-        .legend-panel.hidden,
-        .stats-panel.hidden {
-            display: none;
-        }
-
-        .legend-panel h3 {
-            color: #667eea;
-            margin-bottom: 12px;
-            font-size: 1rem;
-        }
-
-        .legend-section {
-            margin-bottom: 10px;
-        }
-
-        .legend-section:last-child {
-            margin-bottom: 0;
-        }
-
-        .legend-subtitle {
-            font-size: 0.85rem;
-            color: #666;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .legend-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.8rem;
-            color: #333;
-        }
-
-        .legend-color {
-            width: 14px;
-            height: 14px;
-            border-radius: 3px;
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .legend-line {
-            width: 20px;
-            height: 3px;
-            border-radius: 2px;
-        }
-
-        .info-box {
-            margin-top: 20px;
-            padding: 15px;
-            background: #fff3cd;
-            border: 1px solid #ffc107;
-            border-radius: 8px;
-        }
-
-        .info-box h4 {
-            color: #856404;
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-        }
-
-        .info-box ul {
-            color: #856404;
-            font-size: 0.85rem;
-            padding-left: 20px;
-        }
-
-        .info-box li {
-            margin-bottom: 5px;
-        }
-
-        footer {
-            text-align: center;
-            color: white;
-            margin-top: 30px;
-            opacity: 0.8;
-            font-size: 0.9rem;
-        }
-
-        .loading {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 600px;
-            color: #667eea;
-            font-size: 1.2rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
-            border-radius: 12px;
-        }
-
-        @media (max-width: 968px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-            .sidebar {
-                border-right: none;
-                border-bottom: 1px solid #e0e0e0;
-                padding-right: 0;
-                padding-bottom: 20px;
-            }
-            .visualization-area {
-                padding-left: 0;
-                padding-top: 20px;
-            }
-        }
-    </style>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OntoWEEE</title><link rel="stylesheet" href="style.css?v=record-hierarchy"><link rel="stylesheet" href="redesign.css?v=reference-modules"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>🧪 OntoWEEE Knowledge Graph Demo</h1>
-            <p>Knowledge Extraction from Academic Literature · Conditional Query & Visual Exploration</p>
-        </header>
-
-        <div class="main-content">
-            <div class="sidebar">
-                <h2>📊 Query Scenarios</h2>
-                <div class="search-box">
-                    <input type="text" id="search-input" placeholder="Search by title or description..." autocomplete="off" />
-                    <div class="title-suggestions" id="title-suggestions"></div>
-                </div>
-                <div class="search-box node-search-section" id="node-search-section">
-                    <div class="root-node-search-group">
-                        <label class="node-search-label" for="node-search-input">Root node in current graph</label>
-                        <input type="text" id="node-search-input" placeholder="Choose Product / Component root..." autocomplete="off" />
-                        <div class="title-suggestions" id="node-suggestions"></div>
-                    </div>
-                    <label class="node-search-label process-search-label" for="process-search-input">Process facts across all papers</label>
-                    <input type="text" id="process-search-input" placeholder="Search process, e.g. bioleaching..." autocomplete="off" />
-                    <div class="title-suggestions" id="process-suggestions"></div>
-                    <label class="node-search-label process-search-label" for="material-search-input">Material chains across all papers</label>
-                    <input type="text" id="material-search-input" placeholder="Search material, e.g. Cu..." autocomplete="off" />
-                    <div class="title-suggestions" id="material-suggestions"></div>
-                    <label class="graph-filter-option" for="hide-material-no-value">
-                        <input type="checkbox" id="hide-material-no-value" />
-                        <span>Hide material edges without value</span>
-                    </label>
-                </div>
-                <div id="query-list">
-                    <div class="loading" style="height:auto;padding:20px;color:#667eea;font-size:0.95rem;">Loading queries...</div>
-                </div>
-
-                <div class="info-box">
-                    <h4>💡 Demo Instructions</h4>
-                    <ul>
-                        <li>Click a query card on the left to view results</li>
-                        <li>Graph supports zoom, pan, and hover details</li>
-                        <li>Data is loaded live from triples files — no code changes needed when data updates</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="visualization-area">
-                <div id="graph-container">
-                    <div class="loading">Select a query scenario to start demo...</div>
-                </div>
-
-                <div class="edge-detail-panel" id="edge-detail-panel" aria-live="polite"></div>
-
-                <div class="legend-panel" id="legend-panel">
-                    <h3>🎨 Graph Legend</h3>
-                    <div class="legend-section">
-                        <div class="legend-subtitle">Node Types</div>
-                        <div class="legend-items" id="legend-nodes"></div>
-                    </div>
-                    <div class="legend-section">
-                        <div class="legend-subtitle">Edge Types</div>
-                        <div class="legend-items" id="legend-edges"></div>
-                    </div>
-                </div>
-
-                <div class="stats-panel" id="stats-panel">
-                    <h3>📈 Results Statistics</h3>
-                    <div class="stats-grid" id="stats-grid">
-                        <div class="stat-item">
-                            <div class="value" id="stat-nodes">-</div>
-                            <div class="label">Nodes</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="value" id="stat-edges">-</div>
-                            <div class="label">Edges</div>
-                        </div>
-                        <div class="stat-item has-tooltip" id="stat-papers-item" tabindex="0">
-                            <div class="value" id="stat-papers">-</div>
-                            <div class="label">Source Papers</div>
-                            <div class="stat-tooltip" id="stat-papers-tooltip">Select a paper to view its source title</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<body data-graph="datasets/battery20/full-traces/data/graph.json" data-papers="datasets/battery20/papers.json">
+  <header>
+    <a class="brand" href="index.html"><span class="brand-mark">O<span>•</span></span><span>OntoWEEE</span></a>
+    <nav aria-label="Main views"><button class="tab active" data-view="fusion">Knowledge graph</button><button class="tab" data-view="replay">Extraction trace</button><button class="tab" data-view="papers">Paper</button></nav>
+  </header>
+  <div class="shell">
+    <aside class="sidebar">
+      <section id="fusion-controls">
+        <div class="eyebrow">LITERATURE × PRODUCT CATALOG</div>
+        <label for="search">Find an entity</label><input id="search" placeholder="Nokia 5110 / Cu / bioleaching" autocomplete="off">
+        <div id="search-results" class="search-results" role="list" aria-label="Entity search results"></div>
+        <label for="source-filter">Data source</label><select id="source-filter"><option value="">All 57 sources</option></select>
+        <label for="type-filter">Entity type</label><select id="type-filter"><option value="">All types</option></select>
+        <label for="relation-filter">Relation type</label><select id="relation-filter"><option value="">All relations</option></select>
+        <label class="switch"><input id="fusion-toggle" type="checkbox" checked>Show cross-source fusion links</label>
+        <div class="button-row"><button id="top-level">Top level</button><button id="show-all">All entities</button></div>
+      </section>
+      <section id="case-controls" class="walkthrough-entry" aria-label="Paper case studies" hidden>
+        <div class="eyebrow">PAPER EXTRACTION TRACES</div>
+        <label for="case-select">Paper case study</label>
+        <select id="case-select" disabled><option value="phones" data-guide="walkthrough.json" data-summary="Comprehensive phones · 8 steps">Comprehensive phones</option><option value="smartphones" data-guide="walkthrough-smartphones.json" data-summary="Smartphone Assessment · 8 steps">Smartphone Assessment</option><option value="battery-bioleaching" data-guide="walkthrough-bioleaching.json" data-summary="Battery bioleaching · 10 steps">Battery bioleaching</option><option value="pcb-bioleaching" data-guide="walkthrough-pcb-bioleaching.json" data-summary="PCB / goldfinger bioleaching · 10 steps">PCB / goldfinger bioleaching</option><option value="pcb-content" data-guide="walkthrough-content.json" data-summary="Content Evaluation · 10 steps">Content Evaluation</option><option value="flotation" data-guide="walkthrough-flotation.json" data-summary="Flotation failure · 9 steps">Flotation failure</option></select>
+        <p id="walkthrough-summary">Comprehensive phones · 8 steps</p>
+        <div class="case-actions"><button id="case-browse" disabled>Browse freely</button><button id="walkthrough-start" disabled>Start walkthrough</button></div>
+        <p id="walkthrough-result" role="status" hidden></p>
+        <div id="case-summary"></div><button id="case-on-graph" hidden>Locate paper in fused graph</button>
+      </section>
+      <div class="legend" id="legend"></div>
+      <footer><a id="snapshot-manifest" href="datasets/battery20/snapshot/data/manifest.json" target="_blank" rel="noopener">Snapshot manifest ↗</a><span id="snapshot-counts">20 papers · 17 catalog records</span></footer>
+    </aside>
+    <main>
+      <section id="walkthrough-panel" class="walkthrough-panel" aria-label="Current walkthrough step" hidden></section>
+      <section id="fusion-view" class="view">
+        <div class="view-header"><div><div class="eyebrow">01 / KNOWLEDGE GRAPH</div><h2>Fused graph</h2></div><button id="walkthrough-return" hidden>← Return to walkthrough step</button><span id="visible-stats" class="muted"></span></div>
+        <div class="graph-layout">
+          <div class="graph-pane"><div class="graph-navigation"><button id="graph-back" disabled>← Back</button><nav id="graph-path" aria-label="Graph location"></nav></div><canvas id="graph" tabindex="0" aria-label="Fused graph: drag a node to move it and its attached edges; drag empty space to pan; scroll to zoom; click to inspect. Entity search is also available in the sidebar."></canvas><div class="graph-tools"><button id="zoom-in" aria-label="Zoom in">＋</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit">Fit view</button><button id="clear-focus">Clear focus</button></div><div class="graph-legend" aria-label="Graph legend"><span><i class="lg-circle"></i>Paper-derived entity</span><span><i class="lg-square"></i>Catalog record</span><span><i class="lg-line"></i>Extracted relation</span><span><i class="lg-dash"></i>Cross-source fusion link</span><span><i class="lg-group">n</i>Display group (not an entity)</span></div><div id="graph-caption" class="graph-caption"></div><div id="graph-tooltip" role="tooltip" hidden></div><div class="graph-hint">Drag a node to move it · Drag empty space to pan · Scroll to zoom · Double-click to expand</div></div>
+          <aside id="inspector" class="inspector" aria-label="Entity and relation details"></aside>
         </div>
-
-        <footer>
-            OntoWEEE Knowledge Graph Demo · 2026
-        </footer>
-    </div>
-
-    <script src="app.js?v=20260507-schema-edge-filter"></script>
+      </section>
+      <section id="replay-view" class="view" hidden>
+        <div class="view-header"><div><div class="eyebrow">02 / EXTRACTION TRACE</div><h2 id="case-title">Extraction replay</h2></div></div>
+        <div class="replay-note">Archived replay · Browse actual stage outputs. Files may have been updated at different times and do not necessarily represent a single continuous run.</div>
+        <section id="trace-panel" class="trace-panel" aria-label="Graph to evidence trace" hidden></section>
+        <nav id="stages" class="stages" aria-label="Extraction stages"></nav>
+        <div class="replay-layout">
+          <section class="source-pane"><div class="pane-heading"><strong>Source text &amp; tables<small id="source-match-label" class="source-match-label" hidden></small></strong><div><button id="text-tab" class="small active">Text</button><button id="tables-tab" class="small">Tables</button></div></div><div id="source-content"></div></section>
+          <section class="output-pane"><div id="stage-heading" class="pane-heading"></div><div class="output-search"><input id="record-search" placeholder="Filter this stage: Cu / skip / one-step"><span id="record-count"></span></div><div id="stage-records"></div></section>
+        </div>
+      </section>
+      <section id="papers-view" class="view" aria-labelledby="papers-title" hidden>
+        <section class="reference-module" aria-labelledby="papers-title">
+          <h2 id="papers-title">Papers in this demo</h2>
+          <p class="reference-note">20 papers · Select a title to open its publication page in a new tab.</p>
+          <ol id="paper-list" class="reference-list" aria-label="Papers in alphabetical order"></ol>
+        </section>
+        <section class="catalog-reference reference-module" aria-labelledby="catalog-title">
+          <h2 id="catalog-title">Product catalog</h2>
+          <p class="reference-note">Source of the 17 product catalog records in this demo.</p>
+          <ul class="reference-list">
+            <li><a href="https://www.gsmarena.com/" target="_blank" rel="noopener noreferrer">GSMArena ↗</a></li>
+          </ul>
+        </section>
+      </section>
+      <div id="status" role="status">Loading frozen graph…</div>
+    </main>
+  </div>
+  <script src="hierarchy.js?v=component-name-groups-20261101"></script><script src="replay.js?v=text-navigation"></script><script src="trace.js?v=multi-quote-anchors"></script><script src="walkthrough.js?v=paper-page"></script><script src="app.js?v=preserve-graph-filters-20261101"></script>
 </body>
 </html>

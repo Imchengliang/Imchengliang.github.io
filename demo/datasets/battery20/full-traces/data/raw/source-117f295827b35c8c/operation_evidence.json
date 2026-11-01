@@ -1,0 +1,78 @@
+[
+  {
+    "reason": "experiment_binding_revision",
+    "operation_role": "microbial acclimation",
+    "conditions": "adapted to copper ion 10 g/L for a month",
+    "evidence_span": "These cultures were also adapted to the catalytic ions of copper ion 10 g/L for a month.",
+    "source_evidence": [
+      {
+        "file": "source/text.md",
+        "line": 35,
+        "quote": "## 2.2. Microorganisms and culture"
+      },
+      {
+        "file": "source/text.md",
+        "line": 37,
+        "quote": "Acidithiobacillus ferrooxidans (A.f) were applied in the experiments. The original bacteria were collected and isolated from the acidic mine drainage taken from Dexing Mine, Jiangxi Province, China. The bacteria were cultured in the 9 K medium (g/L): (NH4)2 SO4 3.0, K Cl0.1, K2HPO4 0.5, MgSO4 7 H2 O0.5, Ca (NO3)2 0.01 and FeSO4 7 H2O 44.8. The medium was adjusted to pH value 2.0 by sulfuric acid (3 mol L ^-1). Erlenmneyer flasks of 250 mL were used, containing 200 mL culture medium, and inoculum were 10% (v/v), and flasks were shaken at 160 rpm on an orbital shaker at 35 ^∘𝖢. The only energy source for bacteria growth was FeSO4,, and the isolates were identified as A. ferrooxidans. Before the bioleaching period of the experiment, these bacteria had been sub-cultured in medium containing 1% spent battery samples at 35 ^∘𝖢 for three months, so that they could adapt to the spent lithium-ion batteries circumstance faster. These cultures were also adapted to the catalytic ions of copper ion 10 g/L for a month."
+      },
+      {
+        "file": "source/text.md",
+        "line": 39,
+        "quote": "## 2.3. Bioleaching procedure"
+      }
+    ],
+    "original_relation": {
+      "id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
+      "subject": "Component_lithium_ion_battery",
+      "subject_name": "lithium-ion battery",
+      "subject_type": "Component",
+      "predicate": "PROCESSED_BY",
+      "object": "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
+      "object_name": "A. ferrooxidans bioleaching with 1.0 g/L copper ion",
+      "object_type": "Process",
+      "properties": {
+        "study_scope": "current_study",
+        "process_role": "pretreatment",
+        "conditions": "adapted to copper ion 10 g/L for a month",
+        "process_agent": "copper ion",
+        "treatment_members": [
+          "copper ion"
+        ],
+        "extra_qualifiers": "adaptation of A. ferrooxidans cultures to copper ion",
+        "condition_keys": [
+          {
+            "key": "mass",
+            "value": 10.0,
+            "unit": "g",
+            "raw_text": "adapted to copper ion 10 g/L for a month"
+          }
+        ],
+        "condition_labels": [
+          "adapted to copper ion 10 g/L for a month"
+        ],
+        "condition": "adapted to copper ion 10 g/L for a month",
+        "condition_ids": [
+          "COND_15973e4339a6"
+        ],
+        "raw_relation_type": "PROCESSED_BY",
+        "normalized_relation_type": "PROCESSED_BY",
+        "normalized_from_raw": false,
+        "source_name": "lithium-ion battery",
+        "target_name": "A. ferrooxidans bioleaching with 1.0 g/L copper ion",
+        "evidence_span": "These cultures were also adapted to the catalytic ions of copper ion 10 g/L for a month.",
+        "evidence_spans": [
+          "These cultures were also adapted to the catalytic ions of copper ion 10 g/L for a month."
+        ]
+      },
+      "conditions": [
+        {
+          "id": "COND_15973e4339a6",
+          "name": "mass",
+          "type": "mass",
+          "value": 10.0,
+          "unit": "g"
+        }
+      ]
+    }
+  }
+]

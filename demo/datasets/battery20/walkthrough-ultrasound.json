@@ -1,0 +1,94 @@
+{
+  "case": "ultrasound",
+  "title": "Battery cathode leaching: ultrasound, controls and measurements",
+  "steps": [
+    {
+      "title": "Exclude a literature conditions table",
+      "question": "Why is this table not a current-study result?",
+      "look": "Gate skips the table of cited leaching conditions. The current experiment’s outcomes are extracted from text instead.",
+      "boundary": "A skipped table does not imply that the paper has no useful recovery evidence.",
+      "stage": "gate",
+      "where": {
+        "table_id": "TABLE_Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries_0001"
+      }
+    },
+    {
+      "title": "Identify ultrasound-assisted leaching",
+      "question": "What treatment did this study perform?",
+      "look": "Process discovery records ultrasound-assisted leaching of Co and Li from calcined cathode material.",
+      "boundary": "This is the prepared cathode feed, not an untreated complete battery.",
+      "stage": "process",
+      "where": {
+        "phase": "Process discovery",
+        "name": "ultrasound-assisted leaching of Co and Li from calcined cathode materials"
+      }
+    },
+    {
+      "title": "Keep the conventional control distinct",
+      "question": "What is the comparison treatment?",
+      "look": "The archive separately records conventional leaching without ultrasound assistance.",
+      "boundary": "A common metal target does not make the two treatment routes identical.",
+      "stage": "process",
+      "where": {
+        "phase": "Process discovery",
+        "name": "conventional leaching of Co and Li from calcined cathode materials"
+      }
+    },
+    {
+      "title": "Distinguish a kinetic parameter from recovery",
+      "question": "Is 3.8482 kJ/mol a recovery percentage?",
+      "look": "The reviewed archive retains 3.8482 kJ/mol as a Co kinetic measurement in Revision / Postprocessing, outside the material-output graph.",
+      "boundary": "A fitted kinetic parameter is evidence about a process, not an amount or recovery of its material output.",
+      "stage": "revision",
+      "where": {
+        "source_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
+        "value": 3.8482,
+        "unit": "kJ/mol"
+      }
+    },
+    {
+      "title": "Attach method scope after extraction",
+      "question": "Which method family contextualizes this process?",
+      "look": "Scope annotates the existing ultrasound-assisted Process using archived evidence. It does not create another treatment result.",
+      "boundary": "Method scope is not an assertion that every battery or catalog model was tested.",
+      "stage": "scope",
+      "where": {
+        "scope_subject_text": "ultrasound-assisted leaching of Co and Li from calcined cathode material"
+      }
+    },
+    {
+      "title": "Read the cobalt outcome with its conditions",
+      "question": "What does the reported 94.63% apply to?",
+      "look": "The optimized ultrasound-assisted treatment reports 94.63% Co leaching: 2 M H2SO4, 5% H2O2, 100 g/L, 360 W, 30 minutes and 30 °C.",
+      "boundary": "Leaching efficiency is not final metal-product purity, and it must not be pooled with other treatment conditions.",
+      "stage": "final",
+      "where": {
+        "id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
+        "properties.value": 94.63,
+        "properties.unit": "%",
+        "evidence_span": "Optimal leaching efficiency of 94.63% for cobalt, and 98.62% for lithium, respectively, was achieved by using 2M H2SO4 with 5% (v/v) H2O2 at a solid/liquid ratio of 100 g/L, and an ultrasonic power of 360 W, and the leaching time being 30 min under 30 ℃."
+      }
+    },
+    {
+      "title": "Read lithium from the same reported treatment",
+      "question": "Does the same treatment have one universal recovery value?",
+      "look": "The same optimized treatment reports 98.62% Li leaching, separately from the Co result.",
+      "boundary": "Metal-specific outcomes remain separate observations.",
+      "stage": "final",
+      "where": {
+        "id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
+        "properties.value": 98.62,
+        "properties.unit": "%",
+        "evidence_span": "Optimal leaching efficiency of 94.63% for cobalt, and 98.62% for lithium, respectively, was achieved by using 2M H2SO4 with 5% (v/v) H2O2 at a solid/liquid ratio of 100 g/L, and an ultrasonic power of 360 W, and the leaching time being 30 min under 30 ℃."
+      }
+    },
+    {
+      "title": "Trace the treatment in the fused graph",
+      "question": "Can an industry user inspect the evidence behind an outcome?",
+      "look": "Open this Process’s HAS_OUTPUT observations and return to the source through View evidence in replay.",
+      "boundary": "The graph connects evidence; it does not recommend optimal conditions for an untested battery feed.",
+      "entity": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
+      "fusion": true
+    }
+  ]
+}

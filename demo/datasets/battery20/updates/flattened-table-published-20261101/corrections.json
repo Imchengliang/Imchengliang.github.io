@@ -1,0 +1,985 @@
+{
+  "date": "2026-11-01",
+  "extraction_api_calls": 0,
+  "reused_api_result": "demo/ontoweee/datasets/battery20/updates/flattened-table-test-20261101/result.json",
+  "reused_api_result_sha256": "30ebf11b6d49b5b699371e0a5e2aa44110abbe3a69cc76505b63999acbbd323e",
+  "papers": [
+    {
+      "paper": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+      "source_file": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/demo/ontoweee/datasets/battery20/updates/sample-state-20261101/inputs/Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes/triples_final.txt",
+      "source_sha256": "084cc223fa2353015bdb730e0c51ad12c336f4d7e78c89636e52c1228af62130",
+      "transactions": [
+        {
+          "action": "replace_with_successful_table_extraction",
+          "original": {
+            "id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_LiCoO2",
+            "subject": "Product_lithium_ion_secondary_battery",
+            "predicate": "CONTAINS",
+            "object": "Material_LiCoO2",
+            "subject_type": "Product",
+            "object_type": "Material",
+            "confidence": 0.5,
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 1 (LiCoO2): 27.5",
+            "source_name": "lithium ion secondary battery",
+            "target_name": "LiCoO2",
+            "properties": {
+              "property": "observation",
+              "template_id": "step_1",
+              "unit": "weight_percent",
+              "condition_ids": [],
+              "condition_labels": [],
+              "condition_sources": [],
+              "condition_evidence": [],
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_idx": 1,
+              "col_idx": 1,
+              "row_label": "Wt.%",
+              "row_context": null,
+              "row_context_labels": [],
+              "row_context_groups": [],
+              "column_header": "LiCoO2",
+              "column_descriptor": {
+                "id": "c1",
+                "index": 1,
+                "flat_label": "LiCoO2",
+                "header_path": [
+                  "LiCoO2"
+                ],
+                "header_leaf": "LiCoO2",
+                "header_group": "",
+                "raw_header_cells": [
+                  {
+                    "text": "LiCoO2",
+                    "header_row": 0,
+                    "column": 1
+                  }
+                ],
+                "recoverability": "mineru_header_rows",
+                "semantic": {
+                  "entity_text": "LiCoO2",
+                  "entity_type": "Material"
+                }
+              },
+              "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 1 (LiCoO2): 27.5",
+              "value": "27.5",
+              "uncertainty": null,
+              "qualifier": null,
+              "secondary_value": null,
+              "secondary_unit": null,
+              "raw_cell": "27.5",
+              "source": "table_ir",
+              "scope": {
+                "kind": "cell",
+                "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+                "row_span": [
+                  1,
+                  1
+                ],
+                "col_span": [
+                  1,
+                  1
+                ],
+                "source": "plan_select",
+                "evidence": {}
+              },
+              "source_name": "lithium ion secondary battery",
+              "target_name": "LiCoO2",
+              "table_title": "Chemical composition of lithium ion battery",
+              "evidence_spans": [
+                "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 1 (LiCoO2): 27.5"
+              ]
+            }
+          },
+          "corrected": {
+            "id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_LiCoO2",
+            "subject": "Product_lithium_ion_secondary_battery",
+            "subject_name": "lithium ion secondary battery",
+            "subject_type": "Product",
+            "predicate": "CONTAINS",
+            "object": "Material_LiCoO2",
+            "object_name": "LiCoO2",
+            "object_type": "Material",
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 1 (LiCoO2): 27.5",
+            "properties": {
+              "property": "mass fraction",
+              "template_id": "step_1",
+              "unit": "weight_percent",
+              "condition_ids": [],
+              "condition_labels": [],
+              "condition_sources": [],
+              "condition_evidence": [],
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_idx": 1,
+              "col_idx": 1,
+              "row_label": "Wt.%",
+              "row_context": null,
+              "row_context_labels": [],
+              "row_context_groups": [],
+              "column_header": "LiCoO2",
+              "column_descriptor": {
+                "id": "c1",
+                "index": 1,
+                "flat_label": "LiCoO2",
+                "header_path": [
+                  "LiCoO2"
+                ],
+                "header_leaf": "LiCoO2",
+                "header_group": "",
+                "raw_header_cells": [],
+                "recoverability": "flat_only",
+                "semantic": {
+                  "entity_text": "LiCoO2",
+                  "entity_type": "Material"
+                }
+              },
+              "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 1 (LiCoO2): 27.5",
+              "value": "27.5",
+              "uncertainty": null,
+              "qualifier": null,
+              "secondary_value": null,
+              "secondary_unit": null,
+              "raw_cell": "27.5",
+              "source": "table_ir",
+              "scope": {
+                "kind": "cell",
+                "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+                "row_span": [
+                  1,
+                  1
+                ],
+                "col_span": [
+                  1,
+                  1
+                ],
+                "source": "plan_select",
+                "evidence": {}
+              },
+              "source_name": "lithium ion secondary battery",
+              "target_name": "LiCoO2",
+              "table_title": "Chemical composition of lithium ion battery"
+            }
+          }
+        },
+        {
+          "action": "replace_with_successful_table_extraction",
+          "original": {
+            "id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Steel_Ni",
+            "subject": "Product_lithium_ion_secondary_battery",
+            "predicate": "CONTAINS",
+            "object": "Material_Steel_Ni",
+            "subject_type": "Product",
+            "object_type": "Material",
+            "confidence": 0.5,
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 2 (Steel/Ni): 24.5",
+            "source_name": "lithium ion secondary battery",
+            "target_name": "Steel/Ni",
+            "properties": {
+              "property": "observation",
+              "template_id": "step_1",
+              "unit": "weight_percent",
+              "condition_ids": [],
+              "condition_labels": [],
+              "condition_sources": [],
+              "condition_evidence": [],
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_idx": 1,
+              "col_idx": 2,
+              "row_label": "Wt.%",
+              "row_context": null,
+              "row_context_labels": [],
+              "row_context_groups": [],
+              "column_header": "Steel/Ni",
+              "column_descriptor": {
+                "id": "c2",
+                "index": 2,
+                "flat_label": "Steel/Ni",
+                "header_path": [
+                  "Steel/Ni"
+                ],
+                "header_leaf": "Steel/Ni",
+                "header_group": "",
+                "raw_header_cells": [
+                  {
+                    "text": "Steel/Ni",
+                    "header_row": 0,
+                    "column": 2
+                  }
+                ],
+                "recoverability": "mineru_header_rows",
+                "semantic": {
+                  "entity_text": "Steel/Ni",
+                  "entity_type": "Material"
+                }
+              },
+              "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 2 (Steel/Ni): 24.5",
+              "value": "24.5",
+              "uncertainty": null,
+              "qualifier": null,
+              "secondary_value": null,
+              "secondary_unit": null,
+              "raw_cell": "24.5",
+              "source": "table_ir",
+              "scope": {
+                "kind": "cell",
+                "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+                "row_span": [
+                  1,
+                  1
+                ],
+                "col_span": [
+                  2,
+                  2
+                ],
+                "source": "plan_select",
+                "evidence": {}
+              },
+              "source_name": "lithium ion secondary battery",
+              "target_name": "Steel/Ni",
+              "table_title": "Chemical composition of lithium ion battery",
+              "evidence_spans": [
+                "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 2 (Steel/Ni): 24.5"
+              ]
+            }
+          },
+          "corrected": {
+            "id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Steel_Ni",
+            "subject": "Product_lithium_ion_secondary_battery",
+            "subject_name": "lithium ion secondary battery",
+            "subject_type": "Product",
+            "predicate": "CONTAINS",
+            "object": "Material_Steel_Ni",
+            "object_name": "Steel/Ni",
+            "object_type": "Material",
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 2 (Steel/Ni): 24.5",
+            "properties": {
+              "property": "mass fraction",
+              "template_id": "step_1",
+              "unit": "weight_percent",
+              "condition_ids": [],
+              "condition_labels": [],
+              "condition_sources": [],
+              "condition_evidence": [],
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_idx": 1,
+              "col_idx": 2,
+              "row_label": "Wt.%",
+              "row_context": null,
+              "row_context_labels": [],
+              "row_context_groups": [],
+              "column_header": "Steel/Ni",
+              "column_descriptor": {
+                "id": "c2",
+                "index": 2,
+                "flat_label": "Steel/Ni",
+                "header_path": [
+                  "Steel/Ni"
+                ],
+                "header_leaf": "Steel/Ni",
+                "header_group": "",
+                "raw_header_cells": [],
+                "recoverability": "flat_only",
+                "semantic": {
+                  "entity_text": "Steel/Ni",
+                  "entity_type": "Material"
+                }
+              },
+              "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 2 (Steel/Ni): 24.5",
+              "value": "24.5",
+              "uncertainty": null,
+              "qualifier": null,
+              "secondary_value": null,
+              "secondary_unit": null,
+              "raw_cell": "24.5",
+              "source": "table_ir",
+              "scope": {
+                "kind": "cell",
+                "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+                "row_span": [
+                  1,
+                  1
+                ],
+                "col_span": [
+                  2,
+                  2
+                ],
+                "source": "plan_select",
+                "evidence": {}
+              },
+              "source_name": "lithium ion secondary battery",
+              "target_name": "Steel/Ni",
+              "table_title": "Chemical composition of lithium ion battery"
+            }
+          }
+        },
+        {
+          "action": "replace_with_successful_table_extraction",
+          "original": {
+            "id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Cu_Al",
+            "subject": "Product_lithium_ion_secondary_battery",
+            "predicate": "CONTAINS",
+            "object": "Material_Cu_Al",
+            "subject_type": "Product",
+            "object_type": "Material",
+            "confidence": 0.5,
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 3 (Cu/Al): 14.5",
+            "source_name": "lithium ion secondary battery",
+            "target_name": "Cu/Al",
+            "properties": {
+              "property": "observation",
+              "template_id": "step_1",
+              "unit": "weight_percent",
+              "condition_ids": [],
+              "condition_labels": [],
+              "condition_sources": [],
+              "condition_evidence": [],
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_idx": 1,
+              "col_idx": 3,
+              "row_label": "Wt.%",
+              "row_context": null,
+              "row_context_labels": [],
+              "row_context_groups": [],
+              "column_header": "Cu/Al",
+              "column_descriptor": {
+                "id": "c3",
+                "index": 3,
+                "flat_label": "Cu/Al",
+                "header_path": [
+                  "Cu/Al"
+                ],
+                "header_leaf": "Cu/Al",
+                "header_group": "",
+                "raw_header_cells": [
+                  {
+                    "text": "Cu/Al",
+                    "header_row": 0,
+                    "column": 3
+                  }
+                ],
+                "recoverability": "mineru_header_rows",
+                "semantic": {
+                  "entity_text": "Cu/Al",
+                  "entity_type": "Material"
+                }
+              },
+              "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 3 (Cu/Al): 14.5",
+              "value": "14.5",
+              "uncertainty": null,
+              "qualifier": null,
+              "secondary_value": null,
+              "secondary_unit": null,
+              "raw_cell": "14.5",
+              "source": "table_ir",
+              "scope": {
+                "kind": "cell",
+                "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+                "row_span": [
+                  1,
+                  1
+                ],
+                "col_span": [
+                  3,
+                  3
+                ],
+                "source": "plan_select",
+                "evidence": {}
+              },
+              "source_name": "lithium ion secondary battery",
+              "target_name": "Cu/Al",
+              "table_title": "Chemical composition of lithium ion battery",
+              "evidence_spans": [
+                "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 3 (Cu/Al): 14.5"
+              ]
+            }
+          },
+          "corrected": {
+            "id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Cu_Al",
+            "subject": "Product_lithium_ion_secondary_battery",
+            "subject_name": "lithium ion secondary battery",
+            "subject_type": "Product",
+            "predicate": "CONTAINS",
+            "object": "Material_Cu_Al",
+            "object_name": "Cu/Al",
+            "object_type": "Material",
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 3 (Cu/Al): 14.5",
+            "properties": {
+              "property": "mass fraction",
+              "template_id": "step_1",
+              "unit": "weight_percent",
+              "condition_ids": [],
+              "condition_labels": [],
+              "condition_sources": [],
+              "condition_evidence": [],
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_idx": 1,
+              "col_idx": 3,
+              "row_label": "Wt.%",
+              "row_context": null,
+              "row_context_labels": [],
+              "row_context_groups": [],
+              "column_header": "Cu/Al",
+              "column_descriptor": {
+                "id": "c3",
+                "index": 3,
+                "flat_label": "Cu/Al",
+                "header_path": [
+                  "Cu/Al"
+                ],
+                "header_leaf": "Cu/Al",
+                "header_group": "",
+                "raw_header_cells": [],
+                "recoverability": "flat_only",
+                "semantic": {
+                  "entity_text": "Cu/Al",
+                  "entity_type": "Material"
+                }
+              },
+              "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 3 (Cu/Al): 14.5",
+              "value": "14.5",
+              "uncertainty": null,
+              "qualifier": null,
+              "secondary_value": null,
+              "secondary_unit": null,
+              "raw_cell": "14.5",
+              "source": "table_ir",
+              "scope": {
+                "kind": "cell",
+                "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+                "row_span": [
+                  1,
+                  1
+                ],
+                "col_span": [
+                  3,
+                  3
+                ],
+                "source": "plan_select",
+                "evidence": {}
+              },
+              "source_name": "lithium ion secondary battery",
+              "target_name": "Cu/Al",
+              "table_title": "Chemical composition of lithium ion battery"
+            }
+          }
+        },
+        {
+          "action": "replace_with_successful_table_extraction",
+          "original": {
+            "id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_LiCoO2",
+            "subject": "Product_lithium_ion_secondary_battery",
+            "predicate": "CONTAINS",
+            "object": "Material_LiCoO2",
+            "subject_type": "Product",
+            "object_type": "Material",
+            "confidence": 0.5,
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 3, column 1 (LiCoO2): 16",
+            "source_name": "lithium ion secondary battery",
+            "target_name": "LiCoO2",
+            "properties": {
+              "property": "observation",
+              "template_id": "step_1",
+              "unit": "weight_percent",
+              "condition_ids": [],
+              "condition_labels": [],
+              "condition_sources": [],
+              "condition_evidence": [],
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_idx": 3,
+              "col_idx": 1,
+              "row_label": "Wt.%",
+              "row_context": null,
+              "row_context_labels": [],
+              "row_context_groups": [],
+              "column_header": "LiCoO2",
+              "column_descriptor": {
+                "id": "c1",
+                "index": 1,
+                "flat_label": "LiCoO2",
+                "header_path": [
+                  "LiCoO2"
+                ],
+                "header_leaf": "LiCoO2",
+                "header_group": "",
+                "raw_header_cells": [
+                  {
+                    "text": "LiCoO2",
+                    "header_row": 0,
+                    "column": 1
+                  }
+                ],
+                "recoverability": "mineru_header_rows",
+                "semantic": {
+                  "entity_text": "LiCoO2",
+                  "entity_type": "Material"
+                }
+              },
+              "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 3, column 1 (LiCoO2): 16",
+              "value": "16",
+              "uncertainty": null,
+              "qualifier": null,
+              "secondary_value": null,
+              "secondary_unit": null,
+              "raw_cell": "16",
+              "source": "table_ir",
+              "scope": {
+                "kind": "cell",
+                "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+                "row_span": [
+                  3,
+                  3
+                ],
+                "col_span": [
+                  1,
+                  1
+                ],
+                "source": "plan_select",
+                "evidence": {}
+              },
+              "source_name": "lithium ion secondary battery",
+              "target_name": "LiCoO2",
+              "table_title": "Chemical composition of lithium ion battery",
+              "evidence_spans": [
+                "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 3, column 1 (LiCoO2): 16"
+              ]
+            }
+          },
+          "corrected": {
+            "id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_C",
+            "subject": "Product_lithium_ion_secondary_battery",
+            "subject_name": "lithium ion secondary battery",
+            "subject_type": "Product",
+            "predicate": "CONTAINS",
+            "object": "Material_C",
+            "object_name": "C",
+            "object_type": "Material",
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 4 (carbon): 16",
+            "properties": {
+              "property": "mass fraction",
+              "template_id": "step_1",
+              "unit": "weight_percent",
+              "condition_ids": [],
+              "condition_labels": [],
+              "condition_sources": [],
+              "condition_evidence": [],
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_idx": 1,
+              "col_idx": 4,
+              "row_label": "Wt.%",
+              "row_context": null,
+              "row_context_labels": [],
+              "row_context_groups": [],
+              "column_header": "carbon",
+              "column_descriptor": {
+                "id": "c4",
+                "index": 4,
+                "flat_label": "carbon",
+                "header_path": [
+                  "carbon"
+                ],
+                "header_leaf": "carbon",
+                "header_group": "",
+                "raw_header_cells": [],
+                "recoverability": "flat_only",
+                "semantic": {
+                  "entity_text": "carbon",
+                  "entity_type": "Material"
+                }
+              },
+              "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 4 (carbon): 16",
+              "value": "16",
+              "uncertainty": null,
+              "qualifier": null,
+              "secondary_value": null,
+              "secondary_unit": null,
+              "raw_cell": "16",
+              "source": "table_ir",
+              "scope": {
+                "kind": "cell",
+                "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+                "row_span": [
+                  1,
+                  1
+                ],
+                "col_span": [
+                  4,
+                  4
+                ],
+                "source": "plan_select",
+                "evidence": {}
+              },
+              "source_name": "lithium ion secondary battery",
+              "target_name": "C",
+              "table_title": "Chemical composition of lithium ion battery"
+            }
+          }
+        },
+        {
+          "action": "replace_with_successful_table_extraction",
+          "original": {
+            "id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Steel_Ni",
+            "subject": "Product_lithium_ion_secondary_battery",
+            "predicate": "CONTAINS",
+            "object": "Material_Steel_Ni",
+            "subject_type": "Product",
+            "object_type": "Material",
+            "confidence": 0.5,
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 3, column 2 (Steel/Ni): 3.5",
+            "source_name": "lithium ion secondary battery",
+            "target_name": "Steel/Ni",
+            "properties": {
+              "property": "observation",
+              "template_id": "step_1",
+              "unit": "weight_percent",
+              "condition_ids": [],
+              "condition_labels": [],
+              "condition_sources": [],
+              "condition_evidence": [],
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_idx": 3,
+              "col_idx": 2,
+              "row_label": "Wt.%",
+              "row_context": null,
+              "row_context_labels": [],
+              "row_context_groups": [],
+              "column_header": "Steel/Ni",
+              "column_descriptor": {
+                "id": "c2",
+                "index": 2,
+                "flat_label": "Steel/Ni",
+                "header_path": [
+                  "Steel/Ni"
+                ],
+                "header_leaf": "Steel/Ni",
+                "header_group": "",
+                "raw_header_cells": [
+                  {
+                    "text": "Steel/Ni",
+                    "header_row": 0,
+                    "column": 2
+                  }
+                ],
+                "recoverability": "mineru_header_rows",
+                "semantic": {
+                  "entity_text": "Steel/Ni",
+                  "entity_type": "Material"
+                }
+              },
+              "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 3, column 2 (Steel/Ni): 3.5",
+              "value": "3.5",
+              "uncertainty": null,
+              "qualifier": null,
+              "secondary_value": null,
+              "secondary_unit": null,
+              "raw_cell": "3.5",
+              "source": "table_ir",
+              "scope": {
+                "kind": "cell",
+                "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+                "row_span": [
+                  3,
+                  3
+                ],
+                "col_span": [
+                  2,
+                  2
+                ],
+                "source": "plan_select",
+                "evidence": {}
+              },
+              "source_name": "lithium ion secondary battery",
+              "target_name": "Steel/Ni",
+              "table_title": "Chemical composition of lithium ion battery",
+              "evidence_spans": [
+                "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 3, column 2 (Steel/Ni): 3.5"
+              ]
+            }
+          },
+          "corrected": {
+            "id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_electrolyte",
+            "subject": "Product_lithium_ion_secondary_battery",
+            "subject_name": "lithium ion secondary battery",
+            "subject_type": "Product",
+            "predicate": "CONTAINS",
+            "object": "Material_electrolyte",
+            "object_name": "electrolyte",
+            "object_type": "Material",
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 5 (electrolyte): 3.5",
+            "properties": {
+              "property": "mass fraction",
+              "template_id": "step_1",
+              "unit": "weight_percent",
+              "condition_ids": [],
+              "condition_labels": [],
+              "condition_sources": [],
+              "condition_evidence": [],
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_idx": 1,
+              "col_idx": 5,
+              "row_label": "Wt.%",
+              "row_context": null,
+              "row_context_labels": [],
+              "row_context_groups": [],
+              "column_header": "electrolyte",
+              "column_descriptor": {
+                "id": "c5",
+                "index": 5,
+                "flat_label": "electrolyte",
+                "header_path": [
+                  "electrolyte"
+                ],
+                "header_leaf": "electrolyte",
+                "header_group": "",
+                "raw_header_cells": [],
+                "recoverability": "flat_only",
+                "semantic": {
+                  "entity_text": "electrolyte",
+                  "entity_type": "Material"
+                }
+              },
+              "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 5 (electrolyte): 3.5",
+              "value": "3.5",
+              "uncertainty": null,
+              "qualifier": null,
+              "secondary_value": null,
+              "secondary_unit": null,
+              "raw_cell": "3.5",
+              "source": "table_ir",
+              "scope": {
+                "kind": "cell",
+                "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+                "row_span": [
+                  1,
+                  1
+                ],
+                "col_span": [
+                  5,
+                  5
+                ],
+                "source": "plan_select",
+                "evidence": {}
+              },
+              "source_name": "lithium ion secondary battery",
+              "target_name": "electrolyte",
+              "table_title": "Chemical composition of lithium ion battery"
+            }
+          }
+        },
+        {
+          "action": "replace_with_successful_table_extraction",
+          "original": {
+            "id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Cu_Al",
+            "subject": "Product_lithium_ion_secondary_battery",
+            "predicate": "CONTAINS",
+            "object": "Material_Cu_Al",
+            "subject_type": "Product",
+            "object_type": "Material",
+            "confidence": 0.5,
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 3, column 3 (Cu/Al): 14",
+            "source_name": "lithium ion secondary battery",
+            "target_name": "Cu/Al",
+            "properties": {
+              "property": "observation",
+              "template_id": "step_1",
+              "unit": "weight_percent",
+              "condition_ids": [],
+              "condition_labels": [],
+              "condition_sources": [],
+              "condition_evidence": [],
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_idx": 3,
+              "col_idx": 3,
+              "row_label": "Wt.%",
+              "row_context": null,
+              "row_context_labels": [],
+              "row_context_groups": [],
+              "column_header": "Cu/Al",
+              "column_descriptor": {
+                "id": "c3",
+                "index": 3,
+                "flat_label": "Cu/Al",
+                "header_path": [
+                  "Cu/Al"
+                ],
+                "header_leaf": "Cu/Al",
+                "header_group": "",
+                "raw_header_cells": [
+                  {
+                    "text": "Cu/Al",
+                    "header_row": 0,
+                    "column": 3
+                  }
+                ],
+                "recoverability": "mineru_header_rows",
+                "semantic": {
+                  "entity_text": "Cu/Al",
+                  "entity_type": "Material"
+                }
+              },
+              "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 3, column 3 (Cu/Al): 14",
+              "value": "14",
+              "uncertainty": null,
+              "qualifier": null,
+              "secondary_value": null,
+              "secondary_unit": null,
+              "raw_cell": "14",
+              "source": "table_ir",
+              "scope": {
+                "kind": "cell",
+                "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+                "row_span": [
+                  3,
+                  3
+                ],
+                "col_span": [
+                  3,
+                  3
+                ],
+                "source": "plan_select",
+                "evidence": {}
+              },
+              "source_name": "lithium ion secondary battery",
+              "target_name": "Cu/Al",
+              "table_title": "Chemical composition of lithium ion battery",
+              "evidence_spans": [
+                "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 3, column 3 (Cu/Al): 14"
+              ]
+            }
+          },
+          "corrected": {
+            "id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_polymer",
+            "subject": "Product_lithium_ion_secondary_battery",
+            "subject_name": "lithium ion secondary battery",
+            "subject_type": "Product",
+            "predicate": "CONTAINS",
+            "object": "Material_polymer",
+            "object_name": "polymer",
+            "object_type": "Material",
+            "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 6 (polymer): 14",
+            "properties": {
+              "property": "mass fraction",
+              "template_id": "step_1",
+              "unit": "weight_percent",
+              "condition_ids": [],
+              "condition_labels": [],
+              "condition_sources": [],
+              "condition_evidence": [],
+              "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+              "row_idx": 1,
+              "col_idx": 6,
+              "row_label": "Wt.%",
+              "row_context": null,
+              "row_context_labels": [],
+              "row_context_groups": [],
+              "column_header": "polymer",
+              "column_descriptor": {
+                "id": "c6",
+                "index": 6,
+                "flat_label": "polymer",
+                "header_path": [
+                  "polymer"
+                ],
+                "header_leaf": "polymer",
+                "header_group": "",
+                "raw_header_cells": [],
+                "recoverability": "flat_only",
+                "semantic": {
+                  "entity_text": "polymer",
+                  "entity_type": "Material"
+                }
+              },
+              "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 row 1, column 6 (polymer): 14",
+              "value": "14",
+              "uncertainty": null,
+              "qualifier": null,
+              "secondary_value": null,
+              "secondary_unit": null,
+              "raw_cell": "14",
+              "source": "table_ir",
+              "scope": {
+                "kind": "cell",
+                "table_id": "TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+                "row_span": [
+                  1,
+                  1
+                ],
+                "col_span": [
+                  6,
+                  6
+                ],
+                "source": "plan_select",
+                "evidence": {}
+              },
+              "source_name": "lithium ion secondary battery",
+              "target_name": "polymer",
+              "table_title": "Chemical composition of lithium ion battery"
+            }
+          }
+        }
+      ],
+      "view_counts": {
+        "triples": 6,
+        "filtered_triples": 6,
+        "relations": 6,
+        "evidence_relations": 6
+      },
+      "added_entities": [
+        {
+          "id": "Material_C",
+          "name": "C",
+          "mention_text": "carbon",
+          "type": "Material",
+          "source": "table:TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "synonyms": [
+            "Carbon",
+            "carbon"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 4
+          },
+          "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 header: carbon"
+        },
+        {
+          "id": "Material_electrolyte",
+          "name": "electrolyte",
+          "mention_text": "electrolyte",
+          "type": "Material",
+          "source": "table:TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "synonyms": [
+            "electrolyte"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 5
+          },
+          "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 header: electrolyte"
+        },
+        {
+          "id": "Material_polymer",
+          "name": "polymer",
+          "mention_text": "polymer",
+          "type": "Material",
+          "source": "table:TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001",
+          "synonyms": [
+            "polymer"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 6
+          },
+          "evidence_span": "Table TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001 header: polymer"
+        }
+      ],
+      "container_binding": "Reused existing document-level LIB container mapping; only table layout/endpoints/provenance changed.",
+      "original_final_count": 45,
+      "corrected_final_count": 45,
+      "derived_sha256": "e6dfe0c45c29cc5d0af03f37ab92e90708c298b8a836d8b9096c94a53c66a0b0"
+    }
+  ]
+}

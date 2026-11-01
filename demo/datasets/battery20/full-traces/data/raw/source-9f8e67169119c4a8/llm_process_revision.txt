@@ -1,0 +1,116 @@
+{
+  "report": {
+    "initial": {
+      "typed_processes_rebound": 0,
+      "settings_inherited": 22,
+      "settings_evidence_bound": 0,
+      "relations_without_setting": 2,
+      "unresolved_setting_bindings": [
+        {
+          "relation_id": "REL_Process_EN_12457_2_leaching_test_HAS_OUTPUT_Material_Li",
+          "process_id": "Process_EN_12457_2_leaching_test",
+          "reason": "setting_condition_conflict",
+          "candidate_setting_ids": [
+            "setting:text:en-12457-2-leaching-test-conditions"
+          ]
+        },
+        {
+          "relation_id": "REL_Process_EN_12457_2_leaching_test_HAS_OUTPUT_Material_K",
+          "process_id": "Process_EN_12457_2_leaching_test",
+          "reason": "setting_condition_conflict",
+          "candidate_setting_ids": [
+            "setting:text:en-12457-2-leaching-test-conditions"
+          ]
+        }
+      ],
+      "relations_deduplicated": 0,
+      "process_revision_requests": [],
+      "process_revision_request_count": 0
+    },
+    "revision": {
+      "committed": false,
+      "applied": 0,
+      "errors": [],
+      "skipped": true
+    },
+    "final": {
+      "typed_processes_rebound": 0,
+      "settings_inherited": 22,
+      "settings_evidence_bound": 0,
+      "relations_without_setting": 2,
+      "unresolved_setting_bindings": [
+        {
+          "relation_id": "REL_Process_EN_12457_2_leaching_test_HAS_OUTPUT_Material_Li",
+          "process_id": "Process_EN_12457_2_leaching_test",
+          "reason": "setting_condition_conflict",
+          "candidate_setting_ids": [
+            "setting:text:en-12457-2-leaching-test-conditions"
+          ]
+        },
+        {
+          "relation_id": "REL_Process_EN_12457_2_leaching_test_HAS_OUTPUT_Material_K",
+          "process_id": "Process_EN_12457_2_leaching_test",
+          "reason": "setting_condition_conflict",
+          "candidate_setting_ids": [
+            "setting:text:en-12457-2-leaching-test-conditions"
+          ]
+        }
+      ],
+      "relations_deduplicated": 0,
+      "process_revision_requests": [],
+      "process_revision_request_count": 0
+    },
+    "llm_calls": 0,
+    "error": null,
+    "process_design": {
+      "process_stages": [
+        {
+          "name": "EN 12457-2 leaching test",
+          "parent_process": null,
+          "aliases": [],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "Leaching tests were performed according to European Standard Procedures (EN – 12457 – 2). All the seven sub-samples were put in contact with distilled water in capped bottles."
+        }
+      ],
+      "experiment_settings": [
+        {
+          "name": "EN 12457-2 leaching test conditions",
+          "stage_name": "EN 12457-2 leaching test",
+          "sample": "seven sub-samples",
+          "sample_aliases": [],
+          "treatment": "distilled water",
+          "treatment_members": [
+            "distilled water"
+          ],
+          "treatment_aliases": [],
+          "aliases": [],
+          "condition_summary": "liquid to solid ratio 10/1; overhead shaker 5 rpm; 24 h; room temperature (20 ± 5 C); capped bottles; solid residue separated by filtration",
+          "evidence_hint": "All the seven sub-samples were put in contact with distilled water in capped bottles. Liquid to solid ratio was 10/1 and the suspension was agitated by an overhead shaker (5 rpm) for 24 h at room temperature (20 ± 5 C)."
+        }
+      ],
+      "process_targets": [
+        {
+          "name": "EN 12457-2 leaching test",
+          "parent_process": null,
+          "aliases": [],
+          "stage_role": "recovery_process",
+          "acts_on_weee": true,
+          "evidence_hint": "Leaching tests were performed according to European Standard Procedures (EN – 12457 – 2). All the seven sub-samples were put in contact with distilled water in capped bottles."
+        }
+      ]
+    },
+    "missing_process": {
+      "requests": 0,
+      "revision_requested": 0,
+      "approved": 0,
+      "approved_request_ids": [],
+      "no_change": 0,
+      "rebound_relations": 0,
+      "postcondition_failures": [],
+      "remaining_unresolved": 0
+    }
+  },
+  "prompt": null,
+  "response": null
+}
