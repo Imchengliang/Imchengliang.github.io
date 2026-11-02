@@ -553,7 +553,7 @@ function renderCellResults(container){
   const clear=document.createElement('button');clear.textContent='Clear cell selection';clear.onclick=()=>{state.cellLookup=null;renderStage();};actions.append(clear);panel.append(actions);container.append(panel);
 }
 function graphRecord(record){
-  const node=state.case.entity_map[record.subject];if(!state.nodes.has(node))return;
+  const node=record.node_id||state.case.entity_map[record.subject];if(!state.nodes.has(node))return;
   setView('fusion');$('#source-filter').value=state.case.paper;$('#type-filter').value='';$('#relation-filter').value='';focusNode(node);
   const target=state.case.entity_map[record.object],predicates={CONTAINS:'contains',HAS_OUTPUT:'hasOutput',PROCESSED_BY:'processedBy'};
   const edge=state.shownEdges.find(e=>e.source===node&&e.target===target&&e.predicate===predicates[record.predicate]);
@@ -565,17 +565,35 @@ function selectStage(id){
   if(tab){state.sourceTab=tab;renderSource();}
   renderStage();
 }
+function renderProcessInventory(container,stage){
+  const inventory=state.case.process_inventory;if(!inventory)return;
+  const rows=stage==='revision'?inventory.final.filter(r=>r.revision_recorded):inventory.final;
+  if(stage==='revision'&&!rows.length)return;
+  const query=$('#record-search').value.toLowerCase();
+  const shown=rows.filter(row=>!query||JSON.stringify(row).toLowerCase().includes(query));
+  const section=document.createElement('section');section.className='process-inventory';
+  section.innerHTML=stage==='revision'?`<h3>Processes recorded in revisions · ${rows.length}</h3><p>These final identities appear in separate review artifacts. A Process already present in discovery is distinguished from a later addition. Offline reviewed corrections are distinct from the original automatic revision run and its execution status.</p>`:
+    `<h3>Final Process inventory · ${inventory.final_count}</h3><p>${inventory.discovered_count} original Process Agent discoveries; ${inventory.final_count} Processes in the published graph. Content records and Settings are not separate Processes. Entries below show final identities and their recorded sources; they are not additional original agent outputs.</p>`;
+  for(const data of shown)section.append(Replay.render({kind:'published_process',data,raw:data},{locate:locateRecord,graph:graphRecord}));
+  if(stage==='process'&&inventory.not_in_final.length){
+    const note=document.createElement('p');note.className='notice';
+    note.textContent='Original discoveries not represented in the final graph: '+inventory.not_in_final.map(r=>r.name).join('; ')+'. Absence alone does not establish the removal reason; inspect Revision / Postprocessing.';section.append(note);
+  }
+  container.append(section);
+  const heading=document.createElement('h3');heading.textContent=stage==='revision'?'Original revision archive':'Original Process Agent archive';container.append(heading);
+}
 function renderStage(){
   if(!state.case)return;
   const stage=state.case.stages.find(s=>s.id===state.stage)||state.case.stages[0];
   $('#stages').querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.stage===stage.id));
   renderTrace();
-  $('#stage-heading').innerHTML=`<strong>${esc(stage.label)}</strong><span class="muted">ARCHIVED OUTPUT</span>`+stageFlow(stage.id);
+  $('#stage-heading').innerHTML=`<strong>${esc(stage.label)}</strong><span class="muted">${stage.id==='process'?'ORIGINAL ARCHIVE + FINAL INVENTORY':'ARCHIVED OUTPUT'}</span>`+stageFlow(stage.id);
   const container=$('#stage-records');container.replaceChildren();
   const note=document.createElement('div');note.className='stage-note';note.textContent=stage.note;container.append(note);
   const files=document.createElement('div');files.className='file-links';
   stage.files.forEach(file=>{const link=document.createElement('a');link.href=file.url;link.download=file.name;link.textContent=file.name+' ↗';link.title='SHA-256: '+file.sha256;files.append(link);});container.append(files);
   const times=document.createElement('div');times.className='file-time';times.textContent=stage.files.map(f=>`${f.name}: ${new Date(f.modified).toLocaleString('en-GB')}`).join(' · ');container.append(times);
+  if(['process','revision'].includes(stage.id))renderProcessInventory(container,stage.id);
   renderCellResults(container);
   const spotlight=state.spotlight?.case===state.case.id?state.spotlight.target:null;
   const cellTarget=state.cellLookup?.active;

@@ -90,6 +90,9 @@ const Replay = (() => {
       body=badges([record.phase,record.stage_role])+paragraph(record.content||record.condition_summary)+
         detailFields({Sample:record.sample,Treatment:record.treatment,Equipment:record.equipment,'Process agents':record.process_agents,Aliases:[...(record.aliases||[]),...(record.synonyms||[])]});
       if(record.condition_keys?.length)body+='<table class="condition-table"><thead><tr><th>Condition</th><th>Value</th><th>Unit</th></tr></thead><tbody>'+record.condition_keys.map(c=>`<tr><td>${esc(c.key)}</td><td>${esc(text(c.value))}</td><td>${esc(c.unit)}</td></tr>`).join('')+'</tbody></table>';
+    }else if(item.kind==='published_process') {
+      body=badges(['Final graph Process',record.origin])+detailFields({'Original discovery':record.discovery_names,'Source marker':record.source_mark,'Table references':record.table_ids})+
+        paragraph(record.content);
     }else if(item.kind==='gate') {
       const decision=record.decision||{};title=tableTitle(tableId);
       body=badges([decision.decision,decision.table_role])+detailFields({Source:decision.causal_role?.source_object,Quantity:decision.causal_role?.measured_quantity,'Evidence role':decision.causal_role?.evidence_role})+paragraph(decision.ir_instruction);
@@ -131,14 +134,15 @@ const Replay = (() => {
     }else body=scalarFields(record);
     card.innerHTML=`<h4>${esc(title)}</h4>${item.section?`<p class="chunk-context">${esc(item.section)}</p>`:''}${body}`;
     if(quote){const p=document.createElement('p');p.className='evidence';const source=props(locationRecord);p.textContent=tableId&&present(source.raw_cell)?'Source cell: '+text(source.raw_cell)+(source.column_header?' · '+text(source.column_header):''):quote;card.append(p);}
-    const summary=!quote&&item.kind==='process'?(record.content||record.condition_summary||''):'';
+    const summary=!quote&&['process','published_process'].includes(item.kind)?(record.content||record.condition_summary||''):'';
     if(summary||(!quote&&!tableId&&['entity','process'].includes(item.kind))){const note=document.createElement('p');note.className='source-note';note.textContent=summary?'Process summary — not an archived quotation.':'No source quotation is archived for this record.';card.append(note);}
     const buttons=document.createElement('div');buttons.className='record-actions';
     if(quote||tableId||summary) {
       const button=document.createElement('button');button.textContent=tableId?'Locate source table / cell':summary?'Find related text (summary)':'Locate text evidence';
       button.onclick=()=>actions.locate({...locationRecord,location_query:quote||summary,location_is_summary:!!summary,table_id:tableId});buttons.append(button);
     }
-    if(item.kind==='final') {const button=document.createElement('button');button.textContent='View in graph';button.onclick=()=>actions.graph(record);buttons.append(button);}
+    if(item.kind==='final'||item.kind==='published_process') {const button=document.createElement('button');button.textContent='View in graph';button.onclick=()=>actions.graph(record);buttons.append(button);}
+    for(const file of record.source_files||[]){const link=document.createElement('a');link.href=file.url;link.download=file.name;link.textContent=file.name+' ↗';buttons.append(link);}
     card.append(buttons);
     if(item.kind==='table') {
       const output=record.extraction||{};

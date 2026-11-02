@@ -2039,5 +2039,98 @@
   "publication_cleanup": "datasets/battery20/updates/orphan-cleanup-20261101/cleanup.json",
   "type_normalization_manifest": "datasets/battery20/updates/battery-types-20261101/normalization.json",
   "catalog_file": "datasets/battery20/updates/connected-catalogs-20261102/catalog.json",
-  "catalog_selection_manifest": "datasets/battery20/updates/connected-catalogs-20261102/selection-receipt.json"
+  "catalog_selection_manifest": "datasets/battery20/updates/connected-catalogs-20261102/selection-receipt.json",
+  "process_inventory": {
+    "papers": 20,
+    "published_processes": 62,
+    "origin_counts": {
+      "process": 49,
+      "table": 11,
+      "revision": 2
+    },
+    "basis": "Derived comparison, not original Process Agent output or reconstructed execution history. Raw stage files remain unchanged.",
+    "source_graph_sha256": "d4a86057c9545457827da4dd63c23e435f12fe9f2616f4a5daab959db8b154de",
+    "case_files": [
+      {
+        "url": "datasets/battery20/full-traces/data/cases/source-98d7e11c7ecce524.json",
+        "sha256": "070076bbfacc01802807b087e1b254982463c3eaa3aee5284e5cf7d83da9033c"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/phones.json",
+        "sha256": "085cdbbe6dfd3b06c93219f2384f402475de79b11b178977613ebcc04f746f9a"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/source-117f295827b35c8c.json",
+        "sha256": "fa6273abfb31508f2ce9d2b15c6554fbb57c1599927546f0d1ddaefd37be1cb0"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/source-0b9440848ba21f0c.json",
+        "sha256": "28e9e162554f514dfba0e375c8917c98cd6c4c03f408610486a9473a3279efb0"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/smartphones.json",
+        "sha256": "68e5e9db4c3e86fffdc38a7f309ce19f32b4843614a24a664e8dc178976dacdb"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/battery-bioleaching.json",
+        "sha256": "5e32861dba21f1c888f06041dba57207a62dcda3ec87aa080e19deedcdbde323"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/source-9f8e67169119c4a8.json",
+        "sha256": "11c5a3fb328f20c38d9bfda0c1893c392a7af8218a8242f4ff4ec92e36179008"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/source-e9148efa492030e9.json",
+        "sha256": "e1ab2c2e9ee11fdf5f8280d1c7c22695bb41b87f3820bf0b5caea5d77efdaeaa"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/source-9f53ac139b934276.json",
+        "sha256": "fdca603d0e95c8cae0098398d8d5141b19a9c6935d5938142714e71f367512b1"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/source-088b0419b6777442.json",
+        "sha256": "d7802298f0d83a8c7c1372223c78e5b180dcd46509b0cbc2bdaae22c2f6fa6d3"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/anode-leaching.json",
+        "sha256": "c39f55c36671127a7900cde172c8899fc95e7d16b06b680df7c9dfe8233cbf22"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/source-b54b7c6d06066264.json",
+        "sha256": "b40d4db562527da249a231fcf4f2fb22f5f52761fa6ed72301f722d8ec91e6c8"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/source-db98ee012648b4f7.json",
+        "sha256": "319a9577d26ef961d6410c15f123def3d3cf90f79e028360581d6d8e8a76ec90"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/flotation.json",
+        "sha256": "c6e5de7135ff22c392034300355265673b4138c63226dcf40cdffd6429a9ef82"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/source-bec5c4afbdc9c450.json",
+        "sha256": "83a7c6878a9029e0cab76eef78cb15f7480ce1b24ec88e05c2b0696e6e64069e"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/source-3bb6879d7ff610d4.json",
+        "sha256": "292aef311577881c459b3fe61b3015488be22835c4ede5a5fc4174a220aa72e0"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/source-e7db048327a675c7.json",
+        "sha256": "ff759fed425c3ce9bf2dbfa830524be318c48dc0b2248dbc4f1fd897c10943c2"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/source-bfd8d51d466137b4.json",
+        "sha256": "79c8921356f7e815343d3fcfb845d3a176ce5a160a04fd7078586d17ccfe6230"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/source-3b192b1c95abe9c0.json",
+        "sha256": "d78bd7d06c54133fa29b8117351d26cc017ca0c4accac1f5b2c1baa95db9fc67"
+      },
+      {
+        "url": "datasets/battery20/full-traces/data/cases/ultrasound.json",
+        "sha256": "cac2be34b33c5849fa1a629e202792f9d59643f7d5ebafae63f70b1b0f17712b"
+      }
+    ]
+  }
 }
