@@ -382,47 +382,107 @@
         "scope_subject_text": "lithium ion battery",
         "scope_label": "lithium ion battery",
         "evidence_ids": [
-          "E0d9b329662"
+          "E221263d753",
+          "E1b5a18fe4b"
         ],
         "evidence_span": "The spent LIBs ofBL-5CA (Nokia mobile) series used in this work were collected in the local market.",
+        "evidence": [
+          {
+            "evidence_id": "E221263d753",
+            "quote": "The spent LIBs ofBL-5CA (Nokia mobile) series used in this work were collected in the local market."
+          },
+          {
+            "evidence_id": "E1b5a18fe4b",
+            "quote": "In this study we have determined the best conditions for Co leaching from spent LIBs (BL-5CANokia series)."
+          }
+        ],
         "population_granularity": "batch",
-        "sample_type": "lithium ion battery",
-        "scope_description": "Spent BL-5CA (Nokia mobile) series lithium ion batteries collected in the local market.",
+        "sample_type": "spent lithium-ion battery",
+        "scope_description": "Spent LIBs of the BL-5CA (Nokia mobile) series collected in the local market; the active cathode material (LiCoO2) was separated from the Al foil with NMP and used for leaching.",
         "sample_size": null
+      },
+      {
+        "root_entity_ids": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "scope_subject_text": "LiCoO2 dissolution in glycine and ascorbic acid",
+        "scope_label": "LiCoO2 dissolution in glycine and ascorbic acid",
+        "evidence_ids": [
+          "E313a901d43",
+          "E705f74b113"
+        ],
+        "evidence_span": "The above cathode material (LiCoO2, 0.2: g) was subjected for chemical dissolution using mild organic acids, an aqueous mixture of glycine and ascorbic acid were taken in a three necked roundbottomed flask with volume of100 mL and the flask was placed in a water bath to control the reaction temperature during the leaching.",
+        "evidence": [
+          {
+            "evidence_id": "E313a901d43",
+            "quote": "The above cathode material (LiCoO2, 0.2: g) was subjected for chemical dissolution using mild organic acids, an aqueous mixture of glycine and ascorbic acid were taken in a three necked roundbottomed flask with volume of100 mL and the flask was placed in a water bath to control the reaction temperature during the leaching."
+          },
+          {
+            "evidence_id": "E705f74b113",
+            "quote": "Leaching with 0.5 M glycine, 0.02 M ascorbic acid and 0.2 g LiCoO2 in a batch extractor, results in a highly efficient recovery of Co within 360 min of the processing time at 80 ^∘C."
+          }
+        ],
+        "method_family": "organic acid leaching"
       }
     ],
     "scope_audit": {
-      "evidence_record_count": 2,
-      "rejected_definition_count": 2,
+      "evidence_record_count": 20,
+      "rejected_definition_count": 0,
+      "unscoped_candidate_count": 0,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
     "scope_assertions": [
       {
-        "id": "scope-assertion:c404e755e6003221",
+        "id": "scope-assertion:19394e856df68edd",
         "micrograph_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
         "root_entity_ids": [
+          "Product_lithium_ion_battery"
+        ],
+        "requested_root_entity_ids": [
           "Product_lithium_ion_battery"
         ],
         "scope_kind": "declared_population",
         "facets": {
           "population_granularity": "batch",
-          "sample_type": "lithium ion battery"
+          "sample_type": "spent lithium-ion battery"
         },
-        "scope_description": "Spent BL-5CA (Nokia mobile) series lithium ion batteries collected in the local market.",
+        "scope_description": "Spent LIBs of the BL-5CA (Nokia mobile) series collected in the local market; the active cathode material (LiCoO2) was separated from the Al foil with NMP and used for leaching.",
         "sample_size": null,
         "evidence_span": "The spent LIBs ofBL-5CA (Nokia mobile) series used in this work were collected in the local market.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:04f67030ea9e86ba",
+        "micrograph_id": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+        "root_entity_ids": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "requested_root_entity_ids": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "organic acid leaching"
+        },
+        "scope_description": "The above cathode material (LiCoO2, 0.2: g) was subjected for chemical dissolution using mild organic acids, an aqueous mixture of glycine and ascorbic acid were taken in a three necked roundbottomed flask with volume of100 mL and the flask was placed in a water bath to control the reaction temperature during the leaching.",
+        "sample_size": null,
+        "evidence_span": "The above cathode material (LiCoO2, 0.2: g) was subjected for chemical dissolution using mild organic acids, an aqueous mixture of glycine and ascorbic acid were taken in a three necked roundbottomed flask with volume of100 mL and the flask was placed in a water bath to control the reaction temperature during the leaching.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:c2e2c1d8bba45d0b",
-        "scope_assertion_id": "scope-assertion:c404e755e6003221",
+        "id": "scope-path:3e6e6b2cc1568017",
+        "scope_assertion_id": "scope-assertion:19394e856df68edd",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -431,13 +491,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material"
         ]
       },
       {
-        "id": "scope-path:144e417ad13558a6",
-        "scope_assertion_id": "scope-assertion:c404e755e6003221",
+        "id": "scope-path:45286e1928a8365e",
+        "scope_assertion_id": "scope-assertion:19394e856df68edd",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Component_aluminum_foil",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -446,13 +506,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_aluminum_foil"
         ]
       },
       {
-        "id": "scope-path:78b464ce6e7fba37",
-        "scope_assertion_id": "scope-assertion:c404e755e6003221",
+        "id": "scope-path:9bbf02b024fadde2",
+        "scope_assertion_id": "scope-assertion:19394e856df68edd",
         "statement_relation_id": "REL_Component_cathode_material_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -464,14 +524,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_cathode_material_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material"
         ]
       },
       {
-        "id": "scope-path:6d0f525e16e26096",
-        "scope_assertion_id": "scope-assertion:c404e755e6003221",
+        "id": "scope-path:c963d24ae58fe1b2",
+        "scope_assertion_id": "scope-assertion:19394e856df68edd",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Component_anode",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -480,13 +540,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
         ]
       },
       {
-        "id": "scope-path:0675a9b6d3d5834d",
-        "scope_assertion_id": "scope-assertion:c404e755e6003221",
+        "id": "scope-path:e2e90aa3226a8201",
+        "scope_assertion_id": "scope-assertion:19394e856df68edd",
         "statement_relation_id": "REL_Component_cathode_material_CONTAINS_Component_Al_foil",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -498,14 +558,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_cathode_material_CONTAINS_Component_Al_foil",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material"
         ]
       },
       {
-        "id": "scope-path:394492615af28bdf",
-        "scope_assertion_id": "scope-assertion:c404e755e6003221",
+        "id": "scope-path:15751b4a7ce9b985",
+        "scope_assertion_id": "scope-assertion:19394e856df68edd",
         "statement_relation_id": "REL_Component_anode_CONTAINS_Component_Cu_foil",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -517,14 +577,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_anode_CONTAINS_Component_Cu_foil",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
         ]
       },
       {
-        "id": "scope-path:15d8be59ebedb756",
-        "scope_assertion_id": "scope-assertion:c404e755e6003221",
+        "id": "scope-path:04ac2e92b1d8c5c4",
+        "scope_assertion_id": "scope-assertion:19394e856df68edd",
         "statement_relation_id": "REL_Component_cathode_material_CONTAINS_Material_polyvinylidene_fluoride",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -536,14 +596,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_cathode_material_CONTAINS_Material_polyvinylidene_fluoride",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material"
         ]
       },
       {
-        "id": "scope-path:5343c8596ec8fe89",
-        "scope_assertion_id": "scope-assertion:c404e755e6003221",
+        "id": "scope-path:37a7fa6e3ae63246",
+        "scope_assertion_id": "scope-assertion:19394e856df68edd",
         "statement_relation_id": "REL_Component_cathode_material_CONTAINS_Material_C",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -555,14 +615,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_cathode_material_CONTAINS_Material_C",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material"
         ]
       },
       {
-        "id": "scope-path:5a768cca6f759223",
-        "scope_assertion_id": "scope-assertion:c404e755e6003221",
+        "id": "scope-path:96f6b932a143c473",
+        "scope_assertion_id": "scope-assertion:19394e856df68edd",
         "statement_relation_id": "REL_Component_cathode_material_CONTAINS_Material_acetylene_black",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -574,14 +634,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_cathode_material_CONTAINS_Material_acetylene_black",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material"
         ]
       },
       {
-        "id": "scope-path:78b464ce6e7fba37",
-        "scope_assertion_id": "scope-assertion:c404e755e6003221",
+        "id": "scope-path:9bbf02b024fadde2",
+        "scope_assertion_id": "scope-assertion:19394e856df68edd",
         "statement_relation_id": "REL_Component_cathode_material_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -593,14 +653,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_cathode_material_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material"
         ]
       },
       {
-        "id": "scope-path:e544337d7771cbf5",
-        "scope_assertion_id": "scope-assertion:c404e755e6003221",
+        "id": "scope-path:92dfb0e7b4176597",
+        "scope_assertion_id": "scope-assertion:19394e856df68edd",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_LiCoO2",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -609,13 +669,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:6f95203124804c2f",
-        "scope_assertion_id": "scope-assertion:c404e755e6003221",
+        "id": "scope-path:6076230d0639a8ae",
+        "scope_assertion_id": "scope-assertion:19394e856df68edd",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_CoO",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -624,13 +684,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_CoO"
         ]
       },
       {
-        "id": "scope-path:273a95ccb8c993f5",
-        "scope_assertion_id": "scope-assertion:c404e755e6003221",
+        "id": "scope-path:a34a1a78f31d850c",
+        "scope_assertion_id": "scope-assertion:19394e856df68edd",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_C",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -639,13 +699,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_C"
         ]
       },
       {
-        "id": "scope-path:be8cc93c4508f6f5",
-        "scope_assertion_id": "scope-assertion:c404e755e6003221",
+        "id": "scope-path:74758e55c1774376",
+        "scope_assertion_id": "scope-assertion:19394e856df68edd",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_acetylene_black",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -654,8 +714,218 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_acetylene_black"
+        ]
+      },
+      {
+        "id": "scope-path:ca8f3155f7824966",
+        "scope_assertion_id": "scope-assertion:04f67030ea9e86ba",
+        "statement_relation_id": "REL_Component_cathode_material_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "root_entity_id": "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "entity_path": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_cathode_material_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ]
+      },
+      {
+        "id": "scope-path:ca8f3155f7824966",
+        "scope_assertion_id": "scope-assertion:04f67030ea9e86ba",
+        "statement_relation_id": "REL_Component_cathode_material_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "root_entity_id": "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "entity_path": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_cathode_material_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ]
+      },
+      {
+        "id": "scope-path:515966707e64ca73",
+        "scope_assertion_id": "scope-assertion:04f67030ea9e86ba",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "root_entity_id": "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "entity_path": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ]
+      },
+      {
+        "id": "scope-path:04aa1d73685b8182",
+        "scope_assertion_id": "scope-assertion:04f67030ea9e86ba",
+        "statement_relation_id": "REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "entity_path": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:515966707e64ca73",
+        "scope_assertion_id": "scope-assertion:04f67030ea9e86ba",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "root_entity_id": "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "entity_path": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ]
+      },
+      {
+        "id": "scope-path:04aa1d73685b8182",
+        "scope_assertion_id": "scope-assertion:04f67030ea9e86ba",
+        "statement_relation_id": "REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "entity_path": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:04aa1d73685b8182",
+        "scope_assertion_id": "scope-assertion:04f67030ea9e86ba",
+        "statement_relation_id": "REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "entity_path": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:04aa1d73685b8182",
+        "scope_assertion_id": "scope-assertion:04f67030ea9e86ba",
+        "statement_relation_id": "REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "entity_path": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:04aa1d73685b8182",
+        "scope_assertion_id": "scope-assertion:04f67030ea9e86ba",
+        "statement_relation_id": "REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "entity_path": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:04aa1d73685b8182",
+        "scope_assertion_id": "scope-assertion:04f67030ea9e86ba",
+        "statement_relation_id": "REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "entity_path": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:515966707e64ca73",
+        "scope_assertion_id": "scope-assertion:04f67030ea9e86ba",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "root_entity_id": "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "entity_path": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ]
+      },
+      {
+        "id": "scope-path:04aa1d73685b8182",
+        "scope_assertion_id": "scope-assertion:04f67030ea9e86ba",
+        "statement_relation_id": "REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "entity_path": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:515966707e64ca73",
+        "scope_assertion_id": "scope-assertion:04f67030ea9e86ba",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "root_entity_id": "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "entity_path": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ]
+      },
+      {
+        "id": "scope-path:04aa1d73685b8182",
+        "scope_assertion_id": "scope-assertion:04f67030ea9e86ba",
+        "statement_relation_id": "REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
+        "entity_path": [
+          "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co"
         ]
       }
     ],
@@ -6509,13 +6779,13 @@
           "Component_cathode_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c404e755e6003221"
+          "scope-assertion:19394e856df68edd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:c2e2c1d8bba45d0b"
+          "scope-path:3e6e6b2cc1568017"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:349badaea9f8542c",
@@ -6534,13 +6804,13 @@
           "Component_aluminum_foil"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c404e755e6003221"
+          "scope-assertion:19394e856df68edd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:144e417ad13558a6"
+          "scope-path:45286e1928a8365e"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_aluminum_foil",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:b88c40b126847c2b",
@@ -6559,13 +6829,17 @@
           "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c404e755e6003221"
+          "scope-assertion:04f67030ea9e86ba",
+          "scope-assertion:19394e856df68edd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:78b464ce6e7fba37"
+          "scope-path:9bbf02b024fadde2",
+          "scope-path:ca8f3155f7824966"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_cathode_material_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material",
@@ -6585,13 +6859,13 @@
           "Component_anode"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c404e755e6003221"
+          "scope-assertion:19394e856df68edd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:6d0f525e16e26096"
+          "scope-path:c963d24ae58fe1b2"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:8fdfd606cdfded12",
@@ -6610,13 +6884,13 @@
           "Component_Al_foil"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c404e755e6003221"
+          "scope-assertion:19394e856df68edd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:0675a9b6d3d5834d"
+          "scope-path:e2e90aa3226a8201"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_cathode_material_CONTAINS_Component_Al_foil",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material",
@@ -6636,13 +6910,13 @@
           "Component_Cu_foil"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c404e755e6003221"
+          "scope-assertion:19394e856df68edd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:394492615af28bdf"
+          "scope-path:15751b4a7ce9b985"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_anode_CONTAINS_Component_Cu_foil",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode",
@@ -6662,13 +6936,13 @@
           "Material_polyvinylidene_fluoride"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c404e755e6003221"
+          "scope-assertion:19394e856df68edd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:15d8be59ebedb756"
+          "scope-path:04ac2e92b1d8c5c4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_cathode_material_CONTAINS_Material_polyvinylidene_fluoride",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material",
@@ -6688,13 +6962,13 @@
           "Material_C"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c404e755e6003221"
+          "scope-assertion:19394e856df68edd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:5343c8596ec8fe89"
+          "scope-path:37a7fa6e3ae63246"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_cathode_material_CONTAINS_Material_C",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material",
@@ -6714,13 +6988,13 @@
           "Material_acetylene_black"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c404e755e6003221"
+          "scope-assertion:19394e856df68edd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:5a768cca6f759223"
+          "scope-path:96f6b932a143c473"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_cathode_material_CONTAINS_Material_acetylene_black",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material",
@@ -6758,13 +7032,17 @@
           "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c404e755e6003221"
+          "scope-assertion:04f67030ea9e86ba",
+          "scope-assertion:19394e856df68edd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:78b464ce6e7fba37"
+          "scope-path:9bbf02b024fadde2",
+          "scope-path:ca8f3155f7824966"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Component_cathode_material_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode_material",
@@ -6784,13 +7062,13 @@
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c404e755e6003221"
+          "scope-assertion:19394e856df68edd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e544337d7771cbf5"
+          "scope-path:92dfb0e7b4176597"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_LiCoO2",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:d917fb888458762b",
@@ -6809,13 +7087,13 @@
           "Material_CoO"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c404e755e6003221"
+          "scope-assertion:19394e856df68edd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:6f95203124804c2f"
+          "scope-path:6076230d0639a8ae"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_CoO",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:f269b8c4a0bc1dd6",
@@ -6834,13 +7112,13 @@
           "Material_C"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c404e755e6003221"
+          "scope-assertion:19394e856df68edd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:273a95ccb8c993f5"
+          "scope-path:a34a1a78f31d850c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_C",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:5d9a9c8e145e81f8",
@@ -6859,13 +7137,13 @@
           "Material_acetylene_black"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c404e755e6003221"
+          "scope-assertion:19394e856df68edd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:be8cc93c4508f6f5"
+          "scope-path:74758e55c1774376"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c404e755e6003221:evidence",
+          "scope:scope-assertion:19394e856df68edd:evidence",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Product_lithium_ion_battery:entity",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_acetylene_black",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:92de9e49c7db17cd",
@@ -6883,9 +7161,16 @@
           "Material_LiCoO2",
           "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:04f67030ea9e86ba"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:515966707e64ca73"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:1cd7abe5b9d70936",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:1cd7abe5b9d70936:evidence"
         ]
@@ -6901,9 +7186,16 @@
           "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:04f67030ea9e86ba"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:04aa1d73685b8182"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:59fa79def136cd91",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:59fa79def136cd91:evidence"
         ]
@@ -6919,9 +7211,16 @@
           "Material_LiCoO2",
           "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:04f67030ea9e86ba"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:515966707e64ca73"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:61a9f84bb701eafb",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:61a9f84bb701eafb:evidence"
         ]
@@ -6937,9 +7236,16 @@
           "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:04f67030ea9e86ba"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:04aa1d73685b8182"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:35924f82fa936aa1",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:35924f82fa936aa1:evidence"
         ]
@@ -6955,9 +7261,16 @@
           "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:04f67030ea9e86ba"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:04aa1d73685b8182"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:8c21fc2c3654d910",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:8c21fc2c3654d910:evidence"
         ]
@@ -6973,9 +7286,16 @@
           "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:04f67030ea9e86ba"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:04aa1d73685b8182"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:70853640bc40947e",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:70853640bc40947e:evidence"
         ]
@@ -6991,9 +7311,16 @@
           "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:04f67030ea9e86ba"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:04aa1d73685b8182"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:bf1dcc27c0dd18d8",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:bf1dcc27c0dd18d8:evidence"
         ]
@@ -7009,9 +7336,16 @@
           "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:04f67030ea9e86ba"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:04aa1d73685b8182"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:8405f9dfba54b7ef",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:8405f9dfba54b7ef:evidence"
         ]
@@ -7027,9 +7361,16 @@
           "Material_LiCoO2",
           "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:04f67030ea9e86ba"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:515966707e64ca73"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:f3b6379ac606a952",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:f3b6379ac606a952:evidence"
         ]
@@ -7045,9 +7386,16 @@
           "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:04f67030ea9e86ba"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:04aa1d73685b8182"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:4c071b3d20316d5e",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:4c071b3d20316d5e:evidence"
         ]
@@ -7063,9 +7411,16 @@
           "Material_LiCoO2",
           "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:04f67030ea9e86ba"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:515966707e64ca73"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:03d3605e935504a8",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:03d3605e935504a8:evidence"
         ]
@@ -7081,9 +7436,16 @@
           "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:04f67030ea9e86ba"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:04aa1d73685b8182"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:04f67030ea9e86ba:evidence",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid:entity",
+          "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:REL_Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid_HAS_OUTPUT_Material_Co",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:d50a1c8277a67158",
           "source:Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent:relation:statement:d50a1c8277a67158:evidence"
         ]
@@ -12618,6 +12980,7 @@
       "document_evidence_builder": 0.062,
       "scope_llm": 1.359,
       "final_triples_export": 0.013
-    }
+    },
+    "scope_unscoped_candidates": []
   }
 }

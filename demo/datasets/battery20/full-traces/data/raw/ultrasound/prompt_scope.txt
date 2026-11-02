@@ -1,0 +1,239 @@
+Annotate study scope for the supplied final graph candidates using the source
+passages. Candidate names, aliases and context summaries help identify objects;
+they are not source evidence. Copy candidate IDs and passage IDs exactly.
+
+1. For each Product/Component candidate that represents this study's sampled
+   device, component or population, return one population scope. Use `instance`
+   for an individually identified model/sample and `batch` for an unspecified
+   population. Summarize only sample facts stated by this paper (source, brand,
+   collection, selection, etc.). Distinguish the initial sample from processed
+   fractions, residues, reagents, characterization media and table aggregates.
+   A shared sample declaration can support multiple named models. Do not invent
+   missing provenance. A root in graph topology is only a candidate, not proof
+   that it is an independently sampled population.
+2. For each Process candidate, return its broad parent method as `method_family`.
+   Use a short method noun phrase, without parenthetical alternatives or settings.
+   It can be a semantic generalization, not a verbatim substring of the name.
+   Cite an actual passage describing that method or its application. A sample
+   origin, culture adaptation or measurement sentence alone does not establish
+   a treatment method. Shared procedures may support multiple treatment arms;
+   do not replace a control with another arm's method.
+3. Use section and surrounding context to distinguish this study from cited
+   work and background. Choose the evidence yourself; no passage is preverified
+   as current-study evidence. Context summaries never qualify as quotations.
+4. Every candidate must have a scope or an `unscoped_candidates` entry explaining
+   why it is not a study subject or lacks sufficient source evidence. Do not
+   force a scope just to meet coverage. Cite relevant evidence for exclusions
+   when available. Never silently omit a candidate.
+5. Each scope needs exact source quotations in `evidence`. Put the quotation
+   most directly supporting its scope first, then any additional support for
+   summary details. Keep sample-origin and method evidence distinct. Return
+   one scope per selected candidate and JSON only:
+{
+  "population_scopes": [{
+    "root_entity_id": "component_id", "granularity": "batch",
+    "sample_type": "lithium-ion battery",
+    "scope_summary": "Study batteries supplied by the company named in the source.",
+    "evidence": [{"evidence_id": "E1", "quote": "Exact sample-source quotation."}]
+  }],
+  "process_scopes": [{
+    "root_entity_id": "process_id", "method_family": "acid leaching",
+    "evidence": [{"evidence_id": "E2", "quote": "Exact method quotation."}]
+  }],
+  "unscoped_candidates": [{
+    "root_entity_id": "other_id", "reason": "Why a study scope cannot be assigned.",
+    "evidence": [{"evidence_id": "E3", "quote": "Relevant source quotation."}]
+  }]
+}
+
+## Product/Component candidates
+- Product_Lithium_ion_battery | Component | Lithium-ion battery
+  Aliases: LIBs; lithium ion battery; spent lithium-ion batteries; Li-ion batteries; Lithium-ion batteries; Lithium-ion battery
+- Component_cathode | Component | cathode
+  Aliases: cathodes; cathode
+
+## Process candidates
+- Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material | Process | ultrasound-assisted leaching of Co and Li from calcined cathode material
+  Aliases: ultrasound-assisted leaching of Co and Li from calcined cathode materials; ultrasound-assisted leaching of Co and Li from calcined cathode material
+  Context summary (not evidence): Waste lithium cobalt oxide and a mixture of sulfuric acid and hydrogen peroxide were placed in a 250 mL glass beaker, which was kept in a water bath thermostat at controlled temperature (±1°C). Air was pumped into the solution. An ultrasonic probe (20 kHz, 100–1000 W) was inserted into the solution during leaching. After leaching, the solution was filtered, washed with distilled water, and the residue was dried; Co and Li contents were measured by AAS to calculate leaching efficiency.
+- Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material | Process | conventional leaching of Co and Li from calcined cathode material
+  Aliases: conventional leaching of Co and Li from calcined cathode materials; conventional leaching of Co and Li from calcined cathode material
+  Context summary (not evidence): Waste lithium cobalt oxide and a mixture of sulfuric acid and hydrogen peroxide were placed in a 250 mL glass beaker, which was kept in a water bath thermostat at controlled temperature (±1°C). Air was pumped into the solution, and an agitator was used to stir the solution. After leaching, the solution was filtered, washed with distilled water, and the residue was dried; Co and Li contents were measured by AAS to calculate leaching efficiency.
+
+## Source passages
+[E46eb70e97a] section=Accepted Manuscript
+Ultrasound-assisted Leaching of Cobalt and Lithium from Spent Lithium-ion Batteries
+
+[Ee46262f451] section=Accepted Manuscript
+Feng Jiang, Yuqian Chen, Shaohua Ju, Qinyu Zhu, Libo Zhang, Jinhui Peng, Xuming Wang, Jan D. Miller
+
+[E75f2105792] section=Accepted Manuscript
+PII: S1350-4177(18)30593-5
+
+[E7a8cb92b04] section=Accepted Manuscript
+DOI: https://doi.org/10.1016/j.ultsonch.2018.05.019
+
+[E39a8f5cadb] section=Accepted Manuscript
+Reference: ULTSON 4177
+
+[E9384395c56] section=Accepted Manuscript
+To appear in: Ultrasonics Sonochemistry
+
+[E534d2f6c38] section=Accepted Manuscript
+Received Date: 18 April 2018
+
+[E3ee1408733] section=Accepted Manuscript
+Revised Date: 10 May 2018
+
+[E391ed0c25b] section=Accepted Manuscript
+Accepted Date: 16 May 2018
+
+[Ecdaff952bd] section=Accepted Manuscript
+Please cite this article as: F. Jiang, Y. Chen, S. Ju, Q. Zhu, L. Zhang, J. Peng, X. Wang, J.D. Miller, Ultrasoundassisted Leaching of Cobalt and Lithium from Spent Lithium-ion Batteries, Ultrasonics Sonochemistry (2018), doi: https://doi.org/10.1016/j.ultsonch.2018.05.019
+
+[E856dcdd0db] section=Accepted Manuscript
+This is a PDF file of an unedited manuscript that has been accepted for publication. As a service to our customers we are providing this early version of the manuscript. The manuscript will undergo copyediting, typesetting, and review of the resulting proof before it is published in its final form. Please note that during the production process errors may be discovered which could affect the content, and all legal disclaimers that apply to the journal pertain.
+
+[Efcb047324e] section=Ultrasound-assisted Leaching of Cobalt and Lithium from Spent Lithium-ion Batteries
+Feng Jianga,b,c, Yuqian Chena,c, Shaohua Juac, Qinyu Zhub, Libo Zhanga,c\*, Jinhui Pengac, Xuming Wangb\*\*, Jan D. Millerb
+
+[E70315ae139] section=ABSTRACT
+Recovery of cobalt and lithium from spent Li-ion batteries (LIBs) has been studied using ultrasound-assisted leaching. The primary purpose of this work is to investigate the effects of ultrasound on leaching efficiency of cobalt and lithium. The results were compared to conventional leaching. In this study sulfuric acid was used as leaching agent in the presence of hydrogen peroxide. The cathode active materials from spent battery were characterized by X-ray diffraction (XRD) and scanning electron microscopy (SEM) before and after leaching. Effects of leaching time, leaching temperature, H2SO4 concentration, H2O2 concentration, solid/liquid ratio, and ultrasonic power have been studied. Optimal leaching efficiency of 94.63% for cobalt, and 98.62% for lithium, respectively, was achieved by using 2M H2SO4 with 5% (v/v) H2O2 at a solid/liquid ratio of 100 g/L, and an ultrasonic power of 360 W, and the leaching time being 30 min under 30 ℃. Compared with conventional leaching, the ultrasound-assisted leaching gave a higher leaching rate and improved leaching efficiency under the same experimental conditionals. The kinetic analysis of ultrasound-assisted leaching showed that the activation energy of cobalt and lithium were 3.848 KJ/mol and 11.6348 KJ/mol, respectively, indicating that ultrasound-assisted leaching of cobalt and lithium from spent LIBs was controlled by diffusion.
+
+[Edc324d227f] section=ABSTRACT
+Keywords: ultrasound-assisted leaching, spent lithium-ion batteries, recycling, cobalt
+
+[Ea2964aa6b1] section=1. Introduction
+Lithium-ion batteries (LIBs) have been widely used as electrochemical power sources in mobile phones, laptops, video-cameras and other portable electronics, and recently for electric vehicles (EVs), due to several advantages including high capacity, high energy density, light weight, and good performance [1-3]. The wide application of LIBs results in a rapid increase in the amount of spent LIBs [4]. Spent LIBs not only contain some valuable metals such as cobalt, lithium, nickel, copper and, etc., but also produce large amounts of hazardous materials. Therefore, the recovery of valuable metals from spent LIBs is necessary and beneficial to prevent environmental pollution and reuse resources [5-7].
+
+[E95dc941d86] section=1. Introduction
+Several physical and chemical processes have been reported for the recovery of valuable metals, including crushing, dismantling, sieving, acid leaching, solvent extraction, chemical precipitation, and electrochemical treatments. These are shown in Table 1. According to Table 1, cobalt and lithium can be leached from spent LIBs using nitric acid [8], sulfuric acid [6, 7, 9-12], hydrochloric acid [3], or organic acid [13-16] as leaching agents, but generally speaking, reducing agent like hydrogen peroxide is required. Although leaching valuable metals from spent LIBs has been studied several years, research efforts are still needed to increase leaching efficiency, reduce consumption of leaching agents, decrease leaching time, and reduce leaching temperature for large scale industrial application.
+
+[E7aa75bf9cc] section=1. Introduction
+[TABLE:TABLE_Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries_0001]
+
+[E223f30c8e6] section=1. Introduction
+Over the past decades, the application of ultrasound in leaching process of hydrometallurgy has become more and more popular [17-21]. Ultrasound was considered to be advantageously to increase leaching efficiency and yields of products [22]. Zhang et al. [23] reported that 96.8% of
+
+[E2c96673296] section=1. Introduction
+indium can be recovered from waste liquid crystal displays(LCDs) with an enhancement of 300 W ultrasonic waves. Brunelli et al. [24] applied sulfuric acid to the leaching of zinc from electric arc furnace (EAF) dust. A higher leaching efficiency of zinc and a lower consumption of acid were achieved using ultrasound-assisted leaching. Marafi et al. [25] studied extraction of valuable metals from spent hydro-processing catalysts by ultrasound-assisted leaching with acids More than 95% of all valuable metals were obtained in a short time at a relatively low temperature. Elik [26] reported that ultrasound-assisted leaching reduces the leaching time of Cu, Pb, Ni, Zn, and Mn from 12 h to 25 min. Wang et al. [27] reported that the removal efficiency of copper using ultrasound-assisted leaching increased considerably and the decopperization time was significantly shortened compared with the conventional method. Fu et al. [28] developed a chlorination-oxidation. The results showed that the sulfide was completely decomposed, and the extraction rate of gold was improved significantly by ultrasound and chlorination-oxidation in comparison with other extraction methods. However, only one study involving the application of ultrasound-assisted leaching in recycling metal ions from spent LIBs was reported. Li et al. [16] reported the recovery of valuable metals from spent LIBs by ultrasound-assisted leaching. But the leaching time was up to 5h due to the low ultrasonic power (90W). In order to present the advantages of ultrasound-assisted leaching and apply ultrasound-assisted leaching technology to industry in recycling valuable metals from spent LIBs, ultrasonic generator of high power rather than ultrasonic cleaning machine was used to provide ultrasonic agitation.
+
+[E94a505026a] section=1. Introduction
+This work focused on the leaching process for recycling valuable metals from spent LIBs. The purpose was to investigate an ultrasonically assisted approach for recovery of cobalt and lithium from spent LIBs. In this study, ultrasound was applied in the leaching of cobalt, and lithium from spent LIBs to increase leaching efficiency and reduce the leaching time. The results of ultrasound-assisted leaching and conventional magnetic stirring were compared. The effects of different parameters such as the leaching time, the leaching temperature, the concentration of sulfuric acid, the concentration of hydrogen peroxide, solid/liquid ratio and ultrasonic power on leaching efficiency of cobalt and lithium were studied. The leaching kinetics was also studied.
+
+[E2ff13cbd42] section=2.1 Materials
+The spent LIBs used in this work were kindly donated to us by Tianjin Lishen Battery Joint Stock Co. Ltd.. N-Methyl-2-pyrrolidone (NMP, supplied by Damao Chemical Reagent Factory, China) was used to separate the cathode materials from the aluminum foil. Sulfuric acid (H2SO4 supplied by Tianjin Fengchuan Chemical Reagent Technologies Co., Ltd., China) was used as the leaching agent. Hydrogen peroxide (H2O2,, supplied by Sinopharm Chemical Reagent Co., Ltd., China) was used as reducing agent. All reagents were of analytical grade and used without further purification.
+
+[E96cdec88cf] section=2.2 Sample preparation
+According to Li et al.[29], cathodes obtained after discharging and physical separation were treated with NMP at 100 ^∘C for 1h. The cathode materials were effectively separated from the aluminum foil and then calcined at 700 ^∘C for 5 h in a muffle oven to eliminate the carbon and the polyvinylidene fluoride (PVDF). The samples of the raw materials and the leaching residue were analyzed with X-ray diffraction (XRD, Rigaku, D/max 2500, Cu-Kα) and scanning electron microscopy (Phenom Prox SEM).
+
+[Ec4f5b7fd97] section=2.3 Experimental procedure
+A certain weight of waste lithium cobalt oxide and a certain amount of mixture of sulfuric acid and hydrogen peroxide were put into the glass beaker of 250 mL volume. The glass beaker was placed into a digital heat gathering stirrer magnetic stirrer water bath thermostat (DF-101S, Gongyi Yuhua Instrument Co., Ltd., Gongyi, China), with an accuracy of ±1°. The temperature of the reaction was controlled by this thermostat. Air was pumped into the solution during the reaction. The ultrasonic probe was placed in the solution during the ultrasound-assisted leaching experiments. The ultrasonic waves were generated by the ultrasonic generator (XC98-IIDN, Nanjing NingKai Instrument Co. Ltd., Nanjing, China) with a frequency of 20 KHz at varying power in the range from 100 W to 1000 W. The agitator was used to stir the solution in conventional leaching experiments. The schematic diagram of the experiment is shown in Fig.1.
+
+[E17e31d6892] section=2.3 Experimental procedure
+The conditions of reaction, such as the leaching time, the leaching temperature, the concentration of sulfuric acid, and hydrogen peroxide, were controlled during the reaction. The solution was filtered and washed with distilled water after leaching. The the leaching residue was dried and the amount of cobalt and lithium in the sample before and after leaching were measured by atomic absorption spectrometry (AAS, Thermo Scientific iCE 3000, USA) to calculate the leaching efficiency. The leaching efficiency is calculated by the following equation [30, 31]:
+
+[E678d6fb104] section=2.3 Experimental procedure
+η= (m0 w0 - mi wi) / (m0 w0) x100 (Eq. 1)
+
+[E4ab05f339e] section=2.3 Experimental procedure
+where is leaching efficiency of metal (%); m0 and mi represent the initial mass of sample and mass of leaching residue, respectively (g); w0 and wi refer to the mass concentration of metal in the sample before leaching and leaching residue, respectively (%).
+
+[Eaba134ca17] section=3. Results and discussion
+The reactions of reductive leaching of cobalt and lithium from waste lithium cobalt oxide in sulfuric acid using hydrogen peroxide as reductant are represented as follows [32]:
+
+[E6116ec2010] section=3. Results and discussion
+4 LiCoO2 (S) + 6 H2SO4 (aq) →2 Li2SO4 (aq) + 4 CoSO4 (aq) + 6 H2 O(aq) + O2 (g) (Eq. 2)
+
+[Ebfbdad150f] section=3. Results and discussion
+2 LiCoO2 (S) + 3 H2SO4 (aq) + H2O2 (a q) →Li2 SO4 (aq) + 2 CoSO4 (aq) + 4 H2 O(aq) + O2 (g) (Eq. 3)
+
+[E28b86b59fc] section=3. Results and discussion
+As described by Lee et al. [8] and Aaltonen et al. [12], the presence of H2O2 in the leach solution is to facilitate the reduction of cobalt in lithium cobalt oxide from Co (III) to Co (II). Several parameters, such as the leaching time and temperature, the concentration of sulfuric acid and hydrogen peroxide, solid/liquid ratio, and ultrasonic power, might influence the leaching efficiency. A series of experiments were conducted to optimize the operating conditions for ultrasound-assisted leaching of lithium cobalt oxide.
+
+[Ec62f3254c0] section=3.1 Effect of leaching time
+The effect of leaching time on the leaching efficiencies of cobalt and lithium was studied using 2M H2SO4 in the presence of 5% H2O2 (v / v) at a solid/liquid ratio of 100 g / L, a stirring speed of 300 rpm, and a temperature of 25 ^∘C Ultrasound-assisted leaching and conventional leaching
+
+[E380c53f4a9] section=3.1 Effect of leaching time
+(conditions: 2M H SO + 5% H2O2 (v / v), solid/liquid ratio = 100 g / L, stirring speed = 300 rpm, leaching temperature = 20 ^∘C ultrasonic power = 360 W)
+
+[Ef684841d4a] section=3.1 Effect of leaching time
+were leached after 5 min. The values were significantly higher than those of conventional leaching. It was observed that ultrasound increased the leaching rate, especial in the initial stage. The faster leaching rate for ultrasound-assisted leaching could be attributed to ultrasonic cavitation [21, 33]. The mechanical effects caused by ultrasonic wave such as micro jet and solids in the process of ultrasound-assisted leaching, which can strengthen eddy diffusion. This is difficult to realize using conventional mechanical mixing. Therefore, the effect of ultrasonic enhancement is significant in the leaching process and the interface reaction process.
+
+[E6f869238b0] section=3.1 Effect of leaching time
+The leaching efficiencies of cobalt and lithium increased to 88.22% and 89.5% after 20 minutes of ultrasound-assisted leaching, respectively, and then increased to 91.65% and 92.70% at the leaching time of 30 min, respectively. A slight change in leaching efficiencies of cobalt and lithium to 98.21% and 99.15%, respectively, was observed when leaching time was increased to 60 min. Therefore, the leaching time of 30 min was selected as the preferred operating condition for ultrasonic-assisted leaching of cobalt and lithium from waste lithium cobalt oxide.
+
+[Ee3b86a971b] section=3.2 Effect of leaching temperature
+The effect of leaching temperature on the leaching efficiencies of cobalt and lithium was studied using 2 M H2SO4 in the presence of 5% H2O2 (v/v) at a solid/liquid ratio of 100 g / L, a stirring speed of 300 rpm and a leaching time of 30 min. Ultrasonic-assisted leaching and conventional leaching experiments were performed at the same time for comparison. The results are shown in Fig.3.
+
+[E08226c8dcb] section=3.2 Effect of leaching temperature
+(conditions: 2 M H2SO4 + 5 % H2O2 (v / v), solid/liquid ratio = 100 g/L, stirring speed = 300 rpm, leaching time = 30 min, ultrasonic power = 360 W)
+
+[E8f2a477fcf] section=3.2 Effect of leaching temperature
+From Fig.3, there was a sharp increase in leaching efficiencies of cobalt and lithium at the temperature of 20 ^∘C to 30 ^∘C for conventional leaching. For conventional leaching, only 79.48% of cobalt and 81.02% of lithium were leached at a leaching temperature of 20 ^∘C The leaching efficiencies of cobalt and lithium increased to 93.22% and 98.36% at a leaching temperature of 30 ^∘C respectively. There was no significant increase in leaching efficiencies of the two metals when the leaching temperature was above 30 ^∘C For ultrasound-assisted leaching, the leaching efficiencies of cobalt and lithium increased from 91.65% and 92.70% to 94.63% and 98.62% with an increase in leaching temperature from 20 ^∘C to 30 ^∘C and there was no significant change in the leaching efficiencies of two metals when the temperature was further increased to 60 ^∘C The maximum leaching efficiencies for cobalt and lithium were 95.46% and 99.74% at a leaching temperature of 60 ^∘C By comparing the ultrasound-assisted leaching and the conventional leaching, the leaching efficiencies of lithium were basically the same and the leaching efficiencies of cobalt for ultrasound-assisted leaching was higher than that for conventional leaching when the temperature was above 30 ^∘C For both the ultrasound-assisted leaching and the conventional leaching, when the temperature was higher than 30 ^∘C there was no significant effect of temperature on the leaching efficiency, which implied that the process was not chemical reaction controlled. The improved leaching efficiency using ultrasonic was due to the fast diffusion of the reactant.
+
+[E8a62751043] section=3.3 Effect of H2SO4 concentration
+From equation (2), the concentration of H2SO4 plays an important role in leaching reaction. In this work, the effect of H2SO4 concentration on the leaching efficiencies of cobalt and lithium was studied by changing the H2SO4 concentration from 1 M to 3 M, with 5% H2O2 (v/v) at a solid/liquid ratio of 100 g / L, a stirring speed of 300 rpm, and a leaching time of 10 min, 30 min and 50 min for ultrasonic-assisted leaching, respectively. The leaching efficiencies of cobalt and lithium are shown in Fig.4 (a) and (b).
+
+[E42707d91f8] section=3.3 Effect of H2SO4 concentration
+From Fig.4(a) and (b), the leaching efficiencies of cobalt and lithium increased smoothly with the H2SO4 concentration at a leaching time of 10 min. However, when the leaching time increased to 30 min and 50 min, there was a sharp rise in the leaching efficiencies of cobalt and lithium, with an increase in H2SO4 concentration from 1.0 M to 2.0 M. The leaching efficiency of cobalt increased from 62.97% to 91.65% for a leaching time of 30 min, and from 63.74% to 94.46% for a leaching time of 50 min, with an increase in H2SO4 concentration from 1.0 M to 2.0 M. The leaching efficiency of lithium increased from 72.98% to 92.70% for a leaching time of 30 min, and from 74.42% to 97.41% for leaching time of 50 min with an increase of H2SO4 concentration from 1.0 M to 2.0 M. However, there was no significant increase in the leaching efficiencies of lithium and cobalt with a further increase in H2SO4 concentration from 2.0 M to 3.0 M. The results indicated that the bulk diffusion is the main leaching processing control factor at lower H2SO4 concentration and shorter leaching time. Therefore, the ultrasound significantly improved the diffusion processing. It is reasonable to set 2.0 M of H2SO4 as the preferred concentration in the subsequent studies.
+
+[E694a285a4a] section=3.4 Effect of H2O2 concentration
+The presence of H2O2 can help reduce the cobalt from Co(III) to Co(II). The effect of H2O2 concentration on the leaching of cobalt and lithium from spent lithium cobalt oxide using ultrasound-assisted leaching was investigated by varying H2O2 concentration from 0 to 10% (v/v) at a 2 M H2SO4., a solid/liquid ratio of 100 g/L, stirring speed of 300 rpm, the leaching time of 30 min, the leaching temperature of 30 ^∘C and ultrasonic power of 360 W. The results are presented in Fig.5.
+
+[E97bf4afae1] section=3.4 Effect of H2O2 concentration
+(conditions: 2M H2SO4, solid/liquid ratio = 10 mL Ω_ Jg, stirring speed = 300 rpm, leaching time = 30 min, leaching temperature = 30 ℃, ultrasonic power = 360 W)
+
+[E48262e6a8a] section=3.4 Effect of H2O2 concentration
+In Fig.5, only 43.20% of cobalt and 86.12% of lithium were leached without H2O2. There was a sharp increase in leaching efficiency of cobalt from 43.20% to 86.33% with an increase in H2O2 concentration from 0 to 2.5% (v/v). The leaching efficiency of cobalt slowly increased to 91.65 when the H2O2 concentration was further increased to 5% (v/v), and no significant change was observed afterwards. The leaching efficiency of lithium increased from 86.12% to 92.20% with an increase of H O concentration from 0 to 2.5% (v/v), and no significant change was observed afterwards. Equation (2) and (3) demonstrate that the H2O2 concentration will affect the leaching reaction. The acidic leaching without the reducing agent was difficult because of an extremely strong chemical bond between cobalt and oxygen [13, 34]. The presence of H2O2 can effectively break the chemical bond between cobalt and oxygen. Therefore, hydrogen peroxide played a remarkable role in reducing cobalt from Co(III) to Co(II) during the reaction.
+
+[E6aaf0f6acd] section=3.5 Effect of solid/liquid ratio
+To study the effect of solid/liquid ratio on the leaching efficiency using ultrasound-assisted leaching, the experiments were conducted at a solid/liquid ratio of 50 g/L, 100 g/L, and 200 g/L, respectively, using 2 M H2SO4 in the presence of 5% H2O2 (v / v), at a stirring speed of 300 rpm, a leaching time of 5-50 min, a leaching temperature of 30 ^∘C and an ultrasonic power of 360 W. The results are shown in Fig.6.
+
+[E2e5452ceb2] section=3.5 Effect of solid/liquid ratio
+It can be found from Fig.6 that the leaching efficiencies of cobalt and lithium decreased with an increase in the solid/liquid ratio, and had a sharp decrease with a solid/liquid ratio from 100 g/L to 50 g/L. The decrease in solid/liquid ratio means an increase in the volume of leaching solution, in other words, an increase of sulfuric acid and hydrogen peroxide at the solid–liquid interface, which promoted the ion transfer in the solution, leading to the increased leaching efficiency. 91.65% of cobalt and 92.70% of lithium were leached at a solid/liquid ratio of 100 g/L for a leaching time of 30 min. The lower leaching efficiency at higher solid/liquid ratio was due to the higher viscosity of the mixture, the higher resistance of diffusion mass transfer, and acid deficiency. Therefore, the solid/liquid ratio of 100 g/L was considered to be appropriate for leaching metals from waste lithium cobalt oxide.
+
+[Ebcde8baa8f] section=3.6 Effect of ultrasonic power
+The effect of ultrasonic power on leaching efficiency of cobalt and lithium was studied by changing the ultrasonic power from 0 to 480W, using 2 M H2SO4 in the presence of 5% H2O2 (v/v), at a solid/liquid ratio of 100 g/L, a stirring speed of 300 rpm, a leaching time of 30 min and a leaching temperature of 30 ^∘C The results are shown in Fig.7.
+
+[Ed1d73042c2] section=3.6 Effect of ultrasonic power
+H2SO4 + 5 % H2O2 (v/v)
+
+[E50a3b2dc24] section=3.6 Effect of ultrasonic power
+ratio = 100 g / L
+
+[E9aed5c8189] section=3.6 Effect of ultrasonic power
+= 30 ^∘C,
+
+[Eb23fdd3223] section=3.6 Effect of ultrasonic power
+From Fig.7, the leaching efficiency of lithium increased dramatically with an increase of ultrasonic power until 240W, and there was no significant change in further increase in the ultrasonic power from 240W to 480W. For example, only 81.02% of lithium was leached without ultrasonic radiation, however, the leaching efficiency of lithium was up to 98.40% at an ultrasonic power of 240W. The leaching efficiency of cobalt was only 79.84% without ultrasonic radiation, and increased steadily with an increase of the ultrasonic power until 360W. There was no significant change in the leaching efficiency of cobalt when the ultrasonic power was further increased to 480W. The main reason was that cavitation occurred near the surface of the particle, creating a large number of cavitation bubbles. And the number of cavitation bubbles increased with an increase of the ultrasonic power[35]. The collapses of cavitation occurring near the particle surface effectively reduced the thickness of diffusion layer and enlarged the surface of particles. The cavitation effect was enhanced by the increase in the ultrasonic power, which resulted in an increase in leaching efficiency. Therefore, the ultrasonic power of 360W was selected as an optimal condition for ultrasound-assisted leaching of cobalt and lithium from waste lithium cobalt oxide.
+
+[Ed01fd4a005] section=3.7 Kinetics analysis
+The process of leaching cobalt and lithium from spent LIBs was a solid-fluid heterogeneous reaction [36]. The rate of heterogeneous reaction was controlled by chemical reaction or diffusion [37]. The shrinking core kinetic model was used for the discussion of the kinetic parameters [38]. The equations of the shrinking core model when the reaction is controlled by chemical reaction and diffusion can be expressed as follows, respectively, [39]:
+
+[Ee9d8750caa] section=3.7 Kinetics analysis
+1 - (1 - X) ^1 / 3 = kc t (Eq. 4)
+
+[E1c7a5157ac] section=3.7 Kinetics analysis
+1 - 2 / 3 X - (1 - X) ^2 / 3 = kd t (Eq. 5)
+
+[E33b9cca929] section=3.7 Kinetics analysis
+where X is leaching efficiency (%); kc refer to the chemical reaction rate constant (min ^-1) ); kd represent the diffusion reaction rate constant (min ^-1) ); and t is the leaching time (min).
+
+[Ea5a8571782] section=3.7 Kinetics analysis
+The experimental data of ultrasound-assisted leaching at different temperatures and leaching times were fitted to the diffusion-controlled model presented in Eq. (5). The results are shown in Fig. 8. The correlation coefficients of these straight lines are close to 1, showing that the kinetic behaviors were mainly controlled by diffusion across the leached support layer. The slopes of Arrhenius equation, as follows:
+
+[E1d986802af] section=3.7 Kinetics analysis
+lnk = lnA - Ea / R T (Eq. 6)
+
+[E16c9a0f91d] section=3.7 Kinetics analysis
+where is the rate constant (min ^-1); is the frequency factor (min ^-1); Ea represents the J K ^-1 ∙mol-1.
+
+[E311c57d48f] section=3.7 Kinetics analysis
+The logarithms of slopes versus 1000/T was plotted, as shown in Fig.9. The activation energy for cobalt and lithium were determined from slopes of the lines. The calculated values of activation energy are 3.8482 kJ/mol for cobalt and 11.6348 kJ/mol for lithium. The low activation energy also clearly indicated that the process of ultrasound-assisted leaching of cobalt and lithium from spent LIBs was controlled by diffusion.
+
+[Eb79cb8ffc6] section=3.8 The mechanism of ultrasound-assisted leaching
+The XRD patterns of the raw materials and the leaching residues for conventional leaching and ultrasound-assisted leaching under the optimum conditions, respectively, were presented in between conventional leaching and ultrasound-assisted leaching. The main composition was lithium cobalt oxide, which is the same as raw materials. However, the intensity of peaks for LiCoO2 in diffractogram decreased significantly after the ultrasound-assisted leaching and the conventional leaching. This is mainly due to the incomplete reaction of LiCoO2 and the acid [29].
+
+[E4fcef3c933] section=4. Conclusions
+The leaching of cobalt and lithium from spent LIBs was conducted using ultrasonic irradiation. The optimal conditions were found to be, a leaching time of 30 min, a leaching temperature of 30 ^∘C., 2M H2SO4 with 5 % (v / v) H2O2., a solid/liquid ratio of 100 g/L and an ultrasonic power of 360W. 91.65% of cobalt and 92.7% of lithium were leached under the optimal conditions. Compared to conventional leaching, ultrasound-assisted leaching generated a faster leaching rate and an improved leaching efficiency under the same experimental conditions. The results of kinetics analysis indicated that the ultrasound-assisted leaching of cobalt and lithium from spent LIBs was controlled by diffusion. The fast diffusion using ultrasound promoted the leaching rate, and improved the leaching efficiency. The results indicated that the ultrasound-assisted leaching of cobalt and lithium from spent LIBs was more effective than conventional leaching. The results proposed a potential industrial application for recovery of valuable metals from spent LIBs.

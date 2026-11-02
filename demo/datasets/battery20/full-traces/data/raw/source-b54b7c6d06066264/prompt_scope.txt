@@ -1,0 +1,429 @@
+Annotate study scope for the supplied final graph candidates using the source
+passages. Candidate names, aliases and context summaries help identify objects;
+they are not source evidence. Copy candidate IDs and passage IDs exactly.
+
+1. For each Product/Component candidate that represents this study's sampled
+   device, component or population, return one population scope. Use `instance`
+   for an individually identified model/sample and `batch` for an unspecified
+   population. Summarize only sample facts stated by this paper (source, brand,
+   collection, selection, etc.). Distinguish the initial sample from processed
+   fractions, residues, reagents, characterization media and table aggregates.
+   A shared sample declaration can support multiple named models. Do not invent
+   missing provenance. A root in graph topology is only a candidate, not proof
+   that it is an independently sampled population.
+2. For each Process candidate, return its broad parent method as `method_family`.
+   Use a short method noun phrase, without parenthetical alternatives or settings.
+   It can be a semantic generalization, not a verbatim substring of the name.
+   Cite an actual passage describing that method or its application. A sample
+   origin, culture adaptation or measurement sentence alone does not establish
+   a treatment method. Shared procedures may support multiple treatment arms;
+   do not replace a control with another arm's method.
+3. Use section and surrounding context to distinguish this study from cited
+   work and background. Choose the evidence yourself; no passage is preverified
+   as current-study evidence. Context summaries never qualify as quotations.
+4. Every candidate must have a scope or an `unscoped_candidates` entry explaining
+   why it is not a study subject or lacks sufficient source evidence. Do not
+   force a scope just to meet coverage. Cite relevant evidence for exclusions
+   when available. Never silently omit a candidate.
+5. Each scope needs exact source quotations in `evidence`. Put the quotation
+   most directly supporting its scope first, then any additional support for
+   summary details. Keep sample-origin and method evidence distinct. Return
+   one scope per selected candidate and JSON only:
+{
+  "population_scopes": [{
+    "root_entity_id": "component_id", "granularity": "batch",
+    "sample_type": "lithium-ion battery",
+    "scope_summary": "Study batteries supplied by the company named in the source.",
+    "evidence": [{"evidence_id": "E1", "quote": "Exact sample-source quotation."}]
+  }],
+  "process_scopes": [{
+    "root_entity_id": "process_id", "method_family": "acid leaching",
+    "evidence": [{"evidence_id": "E2", "quote": "Exact method quotation."}]
+  }],
+  "unscoped_candidates": [{
+    "root_entity_id": "other_id", "reason": "Why a study scope cannot be assigned.",
+    "evidence": [{"evidence_id": "E3", "quote": "Relevant source quotation."}]
+  }]
+}
+
+## Product/Component candidates
+- Product_lithium_iron_phosphate_battery | Component | lithium iron phosphate battery
+  Aliases: lithium iron phosphate batteries; lithium iron phosphate battery
+- Product_power_battery | Component | power battery
+  Aliases: power battery; power lithium batteries; power batteries
+- Product_crushed_product | Product | crushed product
+  Aliases: crushed product
+- Product_lithium_iron_power_battery | Component | lithium iron power battery
+  Aliases: spent lithium iron power batteries; lithium iron power battery
+
+## Process candidates
+- Process_pneumatic_separation_of_crushed_battery_core_product | Process | pneumatic separation of crushed battery core product
+  Aliases: pneumatic separation of crushed battery core products; pneumatic separation of crushed battery core product
+  Context summary (not evidence): Crushed lithium iron phosphate power battery core products (copper and aluminum foil current collectors with particle sizes 3–15 mm, dissociated electrode powders) are fed into a pneumatic separation system where airflow velocity and inclination angle separate materials based on aerodynamic drag and gravity; the process is modeled with horizontal and vertical motion equations accounting for drag force, buoyancy, additional mass force, Saffman lift, Basset force, Magnus force, and pressure gradient force, with particle-wall and particle-particle interactions neglected.
+
+## Source passages
+[Ef7c3122029] section=Pneumatic separation and recycling of anode and cathode materials from spent lithium iron phosphate batteries
+Waste Management & Research 1–12 © The Author(s) 2019 Article reuse guidelines: sagepub.com/journals-permissions https://doi.org/10.1177/0734242X1882DOI: 10.1177/0734242X188 3939 journals.sagepub.com/home/wmr SAGE
+
+[Ea2bc3f9539] section=Pneumatic separation and recycling of anode and cathode materials from spent lithium iron phosphate batteries
+Haijun Bi, Huabing Zhu, Lei Zu, Shuanghua He, Yong Gao and Song Gao
+
+[Eba1c1a1d81] section=ABSTRACT
+A novel approach to recycling of copper and aluminum fragments in the crushed products of spent lithium iron phosphate batteries was proposed to achieve their eco-friendly processing. The model of pneumatic separation that determines the optimal airflow velocity was established using aerodynamics. The influence of the airflow velocity, and the density and thickness, and their ratios, of the aluminum and copper fragments on pneumatic separation were evaluated. The results show that the optimal airflow velocities of copper and aluminum fragments with and without the electrode materials are 3.27m/s and 1.67m/s, respectively. The accuracy and reliability of the present model was verified using a pneumatic separation experiment. It is concluded that graded pneumatic separation is unnecessary for the crushed particle size more than 9 mm. The experimentally determined optimal airflow velocity of the copper and aluminum fragments with and without the electrode materials is 3.3m/s and 1.7m/s, respectively. The mass fractions of the copper and aluminum fragments upon removal of the electrode materials after pneumatic separation are 97% and 96%, respectively, and both with the electrode material achieve 97.0%. The theoretically obtained optimal airflow velocities have good agreements with the experimentally obtained ones.
+
+[E2af028c6df] section=Introduction
+Recently, Ni-MH and lithium iron batteries as high-energy vehicle power batteries have been developed rapidly because of their advantages such as high energy density, fast charge and discharge process, long cycle life, and non-pollution attributes. However, the battery capacity decreases after hundreds of charge–discharge cycles, which finally leads to the battery being scrapped. From the viewpoint of environmental protection, conservation of natural resources and lowering the cost, battery recycling is necessary. The authors summarize the methods of Ni-MH battery and lithium iron battery recycling in domestic and foreign research, including the hydrometallurgical processing method, the pyrometallurgical processing method and the combined processing method, and each method is evaluated. An overview is then given about secondary pollution, security problems and solutions in the existing methods, which lays a foundation for future recycling of traction batteries (Yu et al., 2014). A shortage of Li material is expected when electric vehicles become extensively used, and new battery technology is needed (Vikström et al., 2013). Minimum recycling rates of 25% by September 2012 and 45% by 2016 are required according to the EU Directive 2006/66/EC. The recycling rate will reach 50%–75%, depending on various types of the batteries (Miedema and Moll, 2013).
+
+[Ec528d9fb14] section=Introduction
+The recycling processes of spent lithium iron phosphate batteries include thermal treatment, wet treatment, biological treatment and mechanical treatment (Al-Thyabat et al., 2013). Waste toner is dealt with by heat treatment (400°C, 600°C, and 800°C) to obtain carbon-coated ferric oxides, the structures, morphologies and electrochemical performances of which have been subsequently investigated as active materials for lithium iron batteries (Li et al., 2018). Hanisch et al. (2015) used thermal decomposition of the polyvinylidene fluoride binder to lessen the cohesion of coated active material particles and weaken the adhesion between coating and foil. Via incineration and impact liberation, 97.1% w/w of the electrode coating can be regained with aluminum impurities of only 0.1% w/w, 30 times purer than the comparative process. Fernandes et al. (2013) extracted and removed Zn(II), Fe(III), Co(II) and Ni(II) in the leachate with 2-ethylhexylphosphonic acid-2-ethylhexyl monoester (PC-88A). The lanthanide metal was extracted at pH = 1 and the recycling rate was more than 99.9%. Innocenzi and Vegliò (2012) pulverized the nickelhydrogen battery (<500μm) using 2 mol/L H2SO4 at 80 ^∘C for 3 h and 1 mol/L H2SO4 at 25 ^∘C for 1 h to obtain the leachate. The pH value was adjusted to 1.6 with NaOH and the rare earth metal was precipitated using sulfate precipitation. The resulting recycling rate was 99%, containing 64% lanthanide metal sulfate and 28% cerium sulfate. Nevertheless, the wet process requires a large amount of the strong acid, alkali, oxidant and extractant, and resulted in a large amount of waste liquid. Biological treatment with bio-acid instead of traditionally used sulfuric and nitric acids has less impact on the environment. Mishra et al. (2008) used the acidophilic Thiobacillus ferrooxidans to leach the metal in the cathode material of spent lithium iron batteries. The cobalt-containing positive electrode material with particle size ⩽150 μm after pulverization was mixed with the cultured bacteria in H2SO4 solution, and Fe ^2+ was added to catalyze to study the effects of Fe ^2+ concentration, pH values and solid–liquid ratios on the metal dissolution rate. The leaching rates of cobalt and lithium were the highest at 70% and 80% for the Fe ^2+ concentration of 3 g / L, the pH value of 2.5, and the solid–liquid ratio of 5 g / L. The leaching rate is relatively low as compared with hydrometallurgy, and the method has simple operation and is low cost. Xin et al. (2009) studied the mechanism of lithium and cobalt leaching of LiCoO2 in waste batteries using S and FeS as energy sources of acidophilic T. ferrooxidans and T. oxidans. The leaching of lithium was an organic acid-dissolving process. When sulfur was used as an energy source, the leaching of cobalt was also an acid-dissolving process. When FeS2 was used as the energy source, the leaching of cobalt was a common process of the acid-dissolving process and redox reaction. One should note that it is difficult to culture the biological bacteria; therefore, the biological treatment has narrow applications and low recycling efficiency.
+
+[E68b545cd44] section=Introduction
+The process of the mechanical treatment of spent lithium iron phosphate batteries primarily includes discharging, disassembly, crushing and sorting (Veit et al., 2002). The general mechanical separation techniques comprise pneumatic separation, magnetic separation, eddy current selection, high-voltage electrostatic selection, and color selection. These sorting methods have been widely used to separate and recycle crushed products such as ore, waste circuit boards and waste household appliances. Zheng et al. (2015, 2016b) proposed a pneumatic separation technology based on a vision system for coal and coal gangue, and the feasibility of the scheme was verified using PFC3D. Many scholars applied pneumatic separation, eddy current selection, and high-voltage electrostatic separation to the recycling of waste electronic products, circuit boards, refrigerators and toner cartridges in order to achieve the separation of metal and non-metal materials. Ruan and Xu (2011) presented some useful proposals for the crushing process, separator design and separator operation, aiming at improving the separation rate of eddy current separation in industrial applications of e-waste recycling, and demonstrating that eddy current separation technology is effective in the recovery of effective electronic waste. Eswaraiah et al. (2008) studied the separation of metals and plastics from milled printed circuit boards (PCBs) using a column air classifier, and analyzed the separation of species in the air classification system using the efficiency curve approach and classifier model parameters such as the reduced efficiency curve parameter (α), corrected cut size (Va / Vt)50c,, and the size selectivity increment (ΔS) with respect to the process variables. Zheng et al. (2016a) provided models of eddy current force and movement behavior of hollow nonferrous metallic particle in eddy current separation, and contrib uted to improving the efficiency of recovery line of waste toner cartridges. Xue and Xu (2013) designed a new type of pneu matic separator with an opening for electrostatic separation to recover waste PCBs and used computational fluid dynamics to simulate a new pneumatic separator to learn more about its mechanism. Li et al. (2014) proposed some novel methods tha used the image forces for the separation of the resin powder and fiberglass powder generated from fiberglass-resin powder dur ing the corona electrostatic separating process. Huang et al. (2011) reported that in the process of mechanical separation and recovery, waste nickel-cadmium and nickel-hydrogen batteries are treated by recycling technology without negative impact on the environment. The technology includes mechanical crush ing, size classification, gravity separation and magnetic separation. The pneumatic separation can effectively separate the mixed particles with largely different densities and avoids solid and liquid wastes and air pollution (Ruan et al., 2017). Innocentini et al. (2009) found that efficient operation of pneumatic dehullers depended on the data of both particle size distributions of hulls and meats and of their terminal velocities, and they collected and correlated such data in order to find operational conditions to optimize soybean dehulling. Feng et al. (2008) investigated the effects of operating parameters on flow field characteristics and conducted experimental tests of the classification performance and flow field measurement in a turbo air classifier. Cylindrical cyclone media separators using a suspended calcite separation media simulating industrial scale operations have been demonstrated to effectively separate a wide variety of forms and a greater range of particle sizes of plastics by density (Gent et al., 2009). However, few studies have so far focused on recycling spent power batteries using pneumatic separation, and have been limited merely to the sep aration of metal and non-metal materials.
+
+[E8c72132def] section=Introduction
+The goal of this paper is to evaluate the dynamic behavior of the flake crushed fragments using pneumatic separation, to create a mathematical model for pneumatic separation, and to determine the optimal airflow velocity for pneumatic separation of the copper and aluminum fragments from spent lithium iron phosphate batteries. The pneumatic separation process of the flake crushed fragments from the spent battery is simulated using the mathematical model for pneumatic separation, and the model for determining the optimal air velocities of pneumatic separation was established. The present model is able to offer a very useful reference for the pneumatic separation of the crushed products of the spent lithium iron phosphate batteries.
+
+[E6664076e7e] section=Introduction
+[TABLE:TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0001]
+
+[E665d272b71] section=Materials and recycling system
+The power battery consists of positive electrode, negative electrode, electrolyte, separator and sealed shell. The cathode materials such as lithium manganate, lithium cobalt acid, lithium iron phosphate and three-element system are bonded together to the aluminum foil using binder PVDF, and the negative electrode is formed by bonding a negative electrode material such as carbonbased, tin-based or silicon-based material, or lithium titanate to the copper foil. The electrolyte is mostly made of LiFL6 and organic solvent. The membrane material is mainly polyethylene (PE) or polypropylene (PP) and is used to prevent the electrons passing through the anode and cathode, allowing lithium ions to pass through. The sealed shell protects core and carries electrolyte, and is made of plastic, steel or aluminum alloy. Presently, most power lithium batteries have aluminum shells. The sample used here is a lithium iron phosphate power battery crushed using the production line in HeFei GuoXuan High-Tech Power Energy CO. Ltd. The crushed products of the core breakage are shown in Figure 1. The physical properties are listed in Table 1. The recycling system based on pneumatic separation is presented in Figure 2, and a flow chart of the recycling process is illustrated in Figure 3.
+
+[Ef4c4da93c8] section=Materials and recycling system
+The positive and negative electrodes of the battery core (see the right-hand side of Figure 1) were cut into a rectangular shape using a shear crusher (PC-250). The lithium iron phosphates and carbon powders of the positive and negative electrodes were dissociated from the aluminum and copper foil current collectors during the crushing process (see the left-hand side of Figure 1). The fragment thickness was measured using a high-precision electronic spiral micrometer (Nsing-Es217-111). The copper and aluminum foil current collectors after crushing had particle sizes ranging from 3 to 15 mm.
+
+[E6566f4b056] section=Dynamics for pneumatic separation
+Forces. The forces to which the crushed products are subjected in the airflow field are complex and depend on the distribution of the airflow field and the motion state of the crushed products, which mainly includes:
+
+[E033a5095eb] section=Dynamics for pneumatic separation
+(1) Drag force: a pulling force in case the airflow velocity is greater than the velocity of the crushed products; conversely, a resistance. The Stokes resistance can be defined for the laminar flow, i.e. Rep < 1 (Kaynan and Yariv, 2017):
+
+[Ee40b14739f] section=Dynamics for pneumatic separation
+fS = 3 πd μ (u - v) (Eq. 1)
+
+[E2230645ccc] section=Dynamics for pneumatic separation
+where u is the airflow velocity; v is the velocity of the crushed product; d is the particle size of the crushed product; μ is the dynamic viscosity of air; Rep is the Relative Reynolds number of the crushed products, given by:
+
+[E43576dfb08] section=Dynamics for pneumatic separation
+Rep = (d | u - v |) / (μ) (Eq. 2)
+
+[E5b055a20d9] section=Dynamics for pneumatic separation
+The Newton resistance is given for the transition or turbulent zones, i.e. Rep ⩾1 (Wagner, 2015):
+
+[E9a5318fd1f] section=Dynamics for pneumatic separation
+fN = 0.5 CD S1 (u - v) ^2 (Eq. 3)
+
+[Ed43bdb65f5] section=Dynamics for pneumatic separation
+where denotes the air density; CD is the resistance coefficient of air; S1 represents the effective upwind area of the crushed products. The relation between CD and Rep is given by:
+
+[Ea3be56eec4] section=Dynamics for pneumatic separation
+[ CD1 = (24) / (Rep) (1 ≤Rep < 2) CD2 = (24) / (Rep) (1 + 0.15 Rep ^0.687) (2 ≤Rep < 800) CD3 = 0.48 (800 ≤Rep ≤2 x10 ^5) CD4 ≈ 0.10 (Rep > 2 x10 ^5) ]. (Eq. 4)
+
+[E02f69812ec] section=Dynamics for pneumatic separation
+(2) Buoyancy: the pressure difference between the surface and the surface of the crushed product in the airflow (Farhangnia et al., 2015), defined as:
+
+[Ec3bcc62dcf] section=Dynamics for pneumatic separation
+Fb = g V (Eq. 5)
+
+[Ed330caf8e0] section=Dynamics for pneumatic separation
+where V is the volume of the crushed products; denotes the air density.
+
+[E97391c9b2d] section=Dynamics for pneumatic separation
+In this paper we have < ρ:, the buoyancy is considered negligible.
+
+[Ed54c253290] section=Dynamics for pneumatic separation
+(3) Additional mass force: a force to which the crushed products are subjected in the direction opposite to their velocity due to the accelerated surrounding fluid when the velocity of the crushed products is greater than that of the fluid (Xue and Zhen-Chao, 2011), given by:
+
+[Eedca706f90] section=Dynamics for pneumatic separation
+FA = (1) / (2) V (d) / (dt) (u - v) (Eq. 6)
+
+[E2e70adcd12] section=Dynamics for pneumatic separation
+For stable airflow, Equation (6) can be rewritten as:
+
+[E8ad3053c75] section=Dynamics for pneumatic separation
+FA = (1) / (2) Va (Eq. 7)
+
+[Ef727bfcc1c] section=Dynamics for pneumatic separation
+where a is the acceleration of the crushed product; denotes the air density; where V is the volume of the crushed products. Equation (7) indicates that the additional mass force equals to a half of the inertial force for the air (the same volume of the crushed products) moves with acceleration a. The additional mass force is considered negligible because o: < ρ in the gas– solid two-phase flow.
+
+[E4e1e244b0d] section=Dynamics for pneumatic separation
+(4) Saffman lift force: a lifting force exerted from low-speed zone to high-speed zone caused by the inconsistent velocity of the two sides of the crushed products when moving in an airflow field with a velocity gradient (Zheng and Silber-Li, 2009), stated as:
+
+[E35a525e050] section=Dynamics for pneumatic separation
+FS = 1.615 (μ) ^0.5 d ^2 (u - v) CLS (Eq. 8)
+
+[E2b4e51a3df] section=Dynamics for pneumatic separation
+where u is the airflow velocity; denotes the air density; d is the particle size of the crushed product; u is the airflow velocity; v is the velocity of the crushed product; CLS is the coefficient of Saffman lift force. Equation (8) is valid only if Rep < 1. Saffman lift force must be considered in the case of laminar airflow with a large velocity gradient in the boundary layer.
+
+[Ef460127cb8] section=Dynamics for pneumatic separation
+(5) Basset force: a resistance in the direction opposite to the acceleration of the crushed products in the viscous airflow, triggered by variable rectilinear motion of the crushed products (Moreno-Casas and Fabián A, 2016), given by:
+
+[Eb8f5a887f1] section=Dynamics for pneumatic separation
+FB = (3) / (2) √(πμ) d ^20^tp (1) / (√(tp - τ)) [ (d) / (dt) (u - v) ] d τ (Eq. 9)
+
+[Eaec801f699] section=Dynamics for pneumatic separation
+The Basset force for particle motion can be considered negligible in case of ρ̇ _ a / ρ< 0.002
+
+[E2d983e226a] section=Dynamics for pneumatic separation
+(6) Magnus force: a force perpendicular to the airflow direction, exerted from the upstream to the downstream side when the spherical crushed products rotate in the airflow (Yang, 1998), formulated by:
+
+[E83a2820d7c] section=Dynamics for pneumatic separation
+FM = (1) / (8) πd ^3 ω(u - v) (Eq. 10)
+
+[Ed898e95f16] section=Dynamics for pneumatic separation
+where ω is the rotation speed of the crushed product. Equation (10) is applicable only for the low Relative Reynolds numbers (Rep ≪1)
+
+[Eee8a6da154] section=Dynamics for pneumatic separation
+(7) Pressure gradient force (i.e. static pressure): a resultant pressure force acting on the crushed products in the direction opposite to the pressure gradient of airflow (Slørdal, 2015), defined as:
+
+[E8fee30ce8c] section=Dynamics for pneumatic separation
+Fp = - V (∂p) / (∂l) (Eq. 11)
+
+[E8423c71748] section=Dynamics for pneumatic separation
+where ∂p / ∂l is the static pressure gradient of airflow.
+
+[Ed76fe56166] section=Dynamics for pneumatic separation
+The calculated results show that the pressure gradient force can be considered negligible in vertical pneumatic separators with same cross-sections since the gravity of the square aluminum fragment with 5mm length is 104 times greater than the static pressure.
+
+[E05ceb4bdbc] section=Dynamics for pneumatic separation
+(8) In addition, the crushed products are subjected to collision and friction between particles and the pipe wall, and to a centrifugal force when the crushed products rotate around an axis. In order to precisely obtain the motion trajectories of particles, the interactions between particles and walls, between particles and particles, and between particles and fluids, should also be taken into account.
+
+[E78b061eeca] section=Dynamics for pneumatic separation
+The particles, especially with large diameters, are more likely to move away from the flow line to the inner wall surface, causing the particles to rebound from the inner wall after colliding. Collisions among particles will also lead to additional collision resistance, such as flow resistance, which affects the motion trajectories of particles. Turbulent pulsation has a significant effect on the motion of the particles and, vice versa, the particle has a certain effect on the flow field. However, the interactions between particles and walls, between particles and particles, and between particles and fluids were considered negligible in this paper to simplify the framework of the model.
+
+[Efd0fdc6382] section=Dynamics for pneumatic separation
+To sum up, the crushed products can be considered only subjected to the aerodynamic force and gravity in the airflow field.
+
+[Ed2fdd83b97] section=Dynamics for pneumatic separation
+Mathematical model of pneumatic separation in the horizontal direction. As shown in Figure 4, assuming that the crushed product moves into the pneumatic separator with the initial velocity of ν0, it is subjected to gravity and aerodynamic force in the pneumatic separator.
+
+[E00b03358da] section=Dynamics for pneumatic separation
+The differential equation of motion of the crushed product in the horizontal direction can be derived from Newton’s second law and hydrodynamics, given by:
+
+[Ef692ffc524] section=Dynamics for pneumatic separation
+m (d ^2 x) / (d t ^2) = ± R (u cosbeta - (dx) / (dt)) ^2 (Eq. 12)
+
+[E64d0935f6f] section=Dynamics for pneumatic separation
+where x is the displacement of the crushed product in the horizontal x-direction; u is the airflow velocity y; beta is the inclination angle of airflow; R is the resistance coefficient, given by:
+
+[E263893b170] section=Dynamics for pneumatic separation
+R = 0.5 CD S1 (Eq. 13)
+
+[Eb363b43fbb] section=Dynamics for pneumatic separation
+Separating variables of Equation (12) leads to:
+
+[Eb1db7cb94b] section=Dynamics for pneumatic separation
+(d vx) / ((u cosbeta - vx) ^2) = ± (R) / (m) d t (Eq. 14)
+
+[E3233674431] section=Dynamics for pneumatic separation
+One has = ν0 cosα for t = 0,, then the following equation holds:
+
+[E71c27dd295] section=Dynamics for pneumatic separation
+C1 = (1) / (u cosbeta - v0 cosalpha) (Eq. 15)
+
+[E23bbb558de] section=Dynamics for pneumatic separation
+where α is the angle between the initial velocity of the crushed product and the horizontal direction.
+
+[Efffbcf1572] section=Dynamics for pneumatic separation
+Substituting Equation (15) into (14), the solution of the velocity and the coordinate x can be given by:
+
+[E7c550ab08e] section=Dynamics for pneumatic separation
+vx = u cosbeta ∓(m (u cosbeta - v0 cosalpha)) / (Rt (u cosbeta - v0 cosalpha) + m) (Eq. 16)
+
+[E3a44dae03f] section=Dynamics for pneumatic separation
+x = u t cosbeta ∓(m) / (R) (ln(Rt (u cosbeta - v0 cosalpha) + m)) / (R (u cosbeta - v0 cosalpha)) (Eq. 17)
+
+[E669851b131] section=Dynamics for pneumatic separation
+If ⩽ ucosβ, we have:
+
+[E7fbc1bce75] section=Dynamics for pneumatic separation
+vx1 = u cosbeta - (m (u cosbeta - v0 cosalpha)) / (Rt (u cosbeta - v0 cosalpha) + m) (Eq. 18)
+
+[E0aafc6cf59] section=Dynamics for pneumatic separation
+x1 = u t cosbeta - (m) / (R) (ln(Rt (u cosbeta - v0 cosalpha) + m)) / (R (u cosbeta - v0 cosalpha)) (Eq. 19)
+
+[E7e135694e5] section=Dynamics for pneumatic separation
+If > ucosβ, we have:
+
+[Ec4fc643944] section=Dynamics for pneumatic separation
+vx1 = u cosbeta + (m (u cosbeta - v0 cosalpha)) / (Rt (u cosbeta - v0 cosalpha) + m) (Eq. 20)
+
+[E2a1977765c] section=Dynamics for pneumatic separation
+x2 = u t cosbeta + (m) / (R) (ln(Rt (u cosbeta - v0 cosalpha) + m)) / (R (u cosbeta - v0 cosalpha)) (Eq. 21)
+
+[E236a353fde] section=Dynamics for pneumatic separation
+Mathematical model of pneumatic separation in the vertical direction. Similarly, the differential equation of motion of the crushed product in the vertical direction can be given by Equation (22):
+
+[E280e91e638] section=Dynamics for pneumatic separation
+m (d ^2 y) / (d t ^2) = ± R (u sinbeta - (dy) / (dt)) ^2 - m g (Eq. 22)
+
+[Ee9a5bf410c] section=Dynamics for pneumatic separation
+where y is the displacement of the crushed product in the vertical y-direction; is the velocity of the crushed product in the vertical direction.
+
+[E8e738c1a8b] section=Dynamics for pneumatic separation
+(1) When the airflow direction is positive, i.e. ⩽ usinβ, the following formulations hold true: if (. u sinbeta - - f) / (u sinbeta - + f) z0, one has:
+
+[E1d63273aa0] section=Dynamics for pneumatic separation
+vy1 = ((u sinbeta + f) e ^- 2 f ((R) / (m) t - (1) / (2f) lnh) + f - u sinbeta) / (e ^- 2 f ((R) / (m) t - (1) / (2f) lnh) - 1) (Eq. 23)
+
+[E4efbd0b6aa] section=Dynamics for pneumatic separation
+where f = √((mg) / (R)); h = | (u sinbeta - ν0sin alpha - f) / (u sinbeta - ν0sin alpha + f) |.
+
+[E67b0cbd91e] section=Dynamics for pneumatic separation
+Integration of Equation (23) with respect to t, gives:
+
+[E2acd84f17e] section=Dynamics for pneumatic separation
+y1 = - (2 m f ln| (e ^p - 1) / (h - 1) | - q (p - lnh)) / (2Rf) (Eq. 24)
+
+[E3060b7ec25] section=Dynamics for pneumatic separation
+where q = m f - m u sinbeta; p = lnh - (2Rft) / (m)
+
+[E317b9e850d] section=Dynamics for pneumatic separation
+If (u sinbeta - vy - f) / (u sinbeta - vy + f) < 0, we have
+
+[Ef96b90338f] section=Dynamics for pneumatic separation
+vy2 = ((u sinbeta + f) e ^- 2 f ((R) / (m) t - (1) / (2f) lnh) - f + u sinbeta) / (e ^- 2 f ((R) / (m) t - (1) / (2f) lnh) + 1) (Eq. 25)
+
+[Ee84885a756] section=Dynamics for pneumatic separation
+y2 = - (2 m f ln| (e ^p + 1) / (h + 1) | - q (p - lnh)) / (2Rf) (Eq. 26)
+
+[E0862a335db] section=Dynamics for pneumatic separation
+(2) When the airflow direction is negative, i.e. v >usinβ, 3 and y3 can be calculated by:
+
+[E8e857c4ae4] section=Dynamics for pneumatic separation
+vy3 = u sinbeta - f tan((Rft) / (m) + j) (Eq. 27)
+
+[Eb7433c63ab] section=Dynamics for pneumatic separation
+y3 = u t sinbeta + (m) / (R) ln| (cos((Rft) / (m) + j)) / (cosj) | (Eq. 28)
+
+[E25f1320ae2] section=Dynamics for pneumatic separation
+in which:
+
+[Eb6d2d254e3] section=Dynamics for pneumatic separation
+j = arctan((u sinbeta - v0 sinalpha) / (f))
+
+[Ebaf1b8e6e2] section=Effects of the airflow velocity and particle size on the air drag coefficient
+(a)
+
+[E636a9e4890] section=Effects of the airflow velocity and particle size on the air drag coefficient
+mm the velocities of the different-sized copper fragments are closed and the fragments have basically the same kinematics; similarly, this also holds true for the aluminum fragments with d ⩾9 mm as shown in Figure 5(b). Figure 6 shows that the copper fragments with d ⩾5 mm as given in Figure 6(a) and the aluminum fragments with d ⩾4.5 mm with electrode materials have the basically identical kinematics for various sizes, as given in Figure 6(b).
+
+[Ebf19d46c4d] section=Effects of the airflow velocity and particle size on the air drag coefficient
+Letting th represent the thickness of the crushed fragment, substitution of th into Equations (12) and (22) leads to:
+
+[E74b0d72225] section=Effects of the airflow velocity and particle size on the air drag coefficient
+th ρ(d ^2 x) / (d t ^2) = ± R1 (u cosbeta - (dx) / (dt)) ^2 (Eq. 29)
+
+[Ec6794eb10b] section=Effects of the airflow velocity and particle size on the air drag coefficient
+th ρ(d ^2 y) / (d t ^2) = ± R1 (u sinbeta - (dy) / (dt)) ^2 - th ρg (Eq. 30)
+
+[Ec80a7c059f] section=Effects of the airflow velocity and particle size on the air drag coefficient
+where R1 = 0.5 CD the air drag coefficient CD is constant for 800 ⩽Rep < 2 x10 ^5 based on Equations (29) and (30) and the formulae for obtaining Relative Reynolds number; this indicates that the pneumatic separation of crushed fragments of spent lithium iron power batteries depends only on the thickness, and is independent of their particle sizes and shapes. Therefore, the copper and aluminum fragments can be effectively separated without grading.
+
+[E9ea81abb33] section=Effects of the crushed fragment thickness on pneumatic separation
+The pneumatic separation of the crushed fragments without electrode materials is independent of their particle sizes from the above-mentioned derivation for d ⩾9.00 mm. Assuming that the densities and thicknesses of Cu and Al fragments are, and thCu, thAl, respectively, substitution o ρ̇ _ Cu,, thAl, thCu into Equation (21) leads to the finding that the copper and aluminum fragments have the basically identical kinematics if thAl / thCu = /.. The necessary conditions for the complete separation of the copper and aluminum fragments can thus be given as follows:
+
+[E7870ae7060] section=Effects of the crushed fragment thickness on pneumatic separation
+[TABLE:TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0002]
+
+[E399cba2bff] section=Effects of the crushed fragment thickness on pneumatic separation
+∀(thAl / thCu < /) The upper and lower products of pneumatic separation are aluminum and copper fragments, respectively.
+
+[E3930769528] section=Effects of the crushed fragment thickness on pneumatic separation
+Or ∀thAl / thCu > /: The upper and lower products of pneu matic separation are copper and aluminum fragments, respectively.
+
+[E1bd509fa92] section=Effects of the crushed fragment thickness on pneumatic separation
+The crushed fragments may be folded after crushing the spent lithium iron phosphate batteries. The thickness of the folded products changes and the processing parameters of pneumatic separation will also be affected. Considering that the aluminum fragment is folded once and the copper fragment is not folded, Table 2 shows the airflow velocities for pneumatic separation of the unfolded copper fragment and folded aluminum fragment are 1.93–2.00 m/s, and the airflow velocities of the folded copper and aluminum fragments are 1.42–1.92 m/s. It can be seen that no airflow velocities of pneumatic separation can be used for both folded and unfolded crushed fragments since the both ranges of the airflow velocities ensuring successful pneumatic separation are not interactive.
+
+[E494c9370ce] section=Optimization of pneumatic separation
+The necessary condition thAl / thCu < / holds true upon removal of the electrode materials; as a result of this, the upper and lower separation products of pneumatic separation is aluminum and copper. Figure 8 presents the vertical displacements of the copper and aluminum fragments for various airflow velocities. It is shown that the vertical displacements of the aluminum and copper fragments are, respectively, positive and negative for the airflow velocity ranging from 1.42 m/s to 1.92 m/s; this indicates that the both crushed products can be completely separated. Since the airflow velocity in the separator is non-uniformly distributed, the optimal airflow velocity should be determined by equalizing the vertical displacement and velocity of the aluminum fragments to those of the copper ones, in order to ensure the most efficient separation. The optimal airflow velocity uol ≈ 1.67 m / s can be obtained using Equation (31). The necessary condition thAl / thCu > / holds true for the crushed fragments with the electrode materials and the related characteristics of pneumatic separation are in contrast to the former necessary condition. In the similar way, the optimal airflow velocity for this condition can be determined as uo2 ≈ 3.27 m/s.
+
+[Ef83822de6c] section=Optimization of pneumatic separation
+max [ - yCu = - f (u, v0, dCu, thCu, alpha, beta,, t) yAl = f (u, v0, dAl, thAl, alpha, beta,, t) ].
+
+[Eb287463894] section=Optimization of pneumatic separation
+..s t
+
+[E50798a4ac1] section=Optimization of pneumatic separation
+[ - yCu > 0; yAl > 0; u > 0; v0 ≤0; d > 0; - yCu = yAl; thCu = 12.0 x10 ^-6 m; thAl = 21.8 x10 ^-6 m; alpha = 90 ^∘; beta = 90 ^∘; = 8900 kg/m ^3; = 2700 kg/m ^3; t = 10 s ∘ ]. (Eq. 31)
+
+[Ee42a49adae] section=Simple determination of the optimal airflow velocity
+The crushed fragments are suspended if the airflow velocity equals the free-settling velocity of the fragments. Let u = 0 in Equation (21). The free-settling velocity of the crushed fragments can be determined by:
+
+[Edb01af3e4d] section=Simple determination of the optimal airflow velocity
+If v-f >0,
+
+[Eff746be3ee] section=Simple determination of the optimal airflow velocity
+v = - f (e ^- (rft) / (m) + 1) / (e ^- (rft) / (m) - 1) (Eq. 32)
+
+[E0aa4ce5a48] section=Simple determination of the optimal airflow velocity
+If v-f⩽0,
+
+[Eed32a63a87] section=Simple determination of the optimal airflow velocity
+v = f (1 - e ^- (rft) / (m)) / (e ^- (rft) / (m) + 1) (Eq. 33)
+
+[E1f9b054f25] section=Simple determination of the optimal airflow velocity
+The final free-settling velocity of the crushed fragments can be obtained by taking the limits of t for Equations (32) and (33):
+
+[Ed3be511378] section=Simple determination of the optimal airflow velocity
+[ vg = →∞v = →∞(- f (e ^- (rft) / (m) + 1) / (e ^- (rft) / (m) - 1)); = →∞(f (1 - e ^- (rft) / (m)) / (e ^- (rft) / (m) + 1)) = f = √((mg) / (R)) ] (Eq. 34)
+
+[Ef77c361c81] section=Simple determination of the optimal airflow velocity
+Substituting the physical parameters into Equation (34) leads to ≈ 1.42 m/s and ≈ 1.92: m / s,, where and are the final free-settling velocities of the copper and aluminum fragments without electrode materials, respectively. Similarly, we have 2 ≈ 2.93 m/s and 2 ≈ 3.60 m/s for the crushed products with electrode materials. The allowable ranges of the airflow velocities for successfully separating copper and aluminum fragments are 1.42–1.93 m/s for the crushed products without electrodes and 2.93–3.60 m/s for the ones with electrodes. Accordingly, Equation (31) for determining the optimal airflow velocity can be rewritten as:
+
+[Ed9c4f47b26] section=Simple determination of the optimal airflow velocity
+uo = (vgCu + vgAl) / (2) (Eq. 35)
+
+[E6bff1e0337] section=Simple determination of the optimal airflow velocity
+where uo is the optimal airflow velocity. uol ≈ 1.67 m/s and uo2 ≈ 3.27 m/s can be obtained by solutions of Equation (35); these are consistent with the results from the previous calculations. Hence, the determination of the optimal airflow velocity can be remarkably simplified using the present method if the moving distance of the crushed products is considered negligible.
+
+[E0a32c256a7] section=Experimental results
+As shown in Figure 9, here a vertical pneumatic separator was used for the experiment, of which the airflow velocity ranged from 1.4 to 30 m/s and its incremental regulation 0.1–0.3 m/s. An anemograph, an electronic weigher, a ruler and scissors are also equipped. Figure 10 depicts the relations between the airflow velocity and the mass fraction of pneumatic separation products upon removal of electrodes with the particle size ranged 3–15 mm. The results observed were as follows:
+
+[Ed2201ee3bc] section=Experimental results
+(1) All the copper fragments and most aluminum fragments moved downward and a few aluminum fragments moved upward for the airflow velocity of 1.4–1.5 m/s. The downward-moving aluminum fragments floated in the separator for a moment and then slid into the heavy-material collector along the inner wall of the pipeline.
+
+[E44ce962251] section=Experimental results
+(2) The maximum mass fraction of aluminum in the upper separation products was 96% as shown in Figure 10(a), and that of copper in the lower separation products was 97% for the airflow velocity of 1.6–1.9 m/s, as shown in Figure 10(b).
+
+[Ef6a1eb60f5] section=Experimental results
+(3) The upper products contain partial copper and all aluminum fragments, and all the lower separation products are copper for the airflow velocity of 2.0–2.1 m/s. The results indicate that some copper fragments had “up-and-down” periods in the separator.
+
+[E7b5114439b] section=Experimental results
+Therefore, the optimal airflow velocity for the copper and aluminum fragments without electrodes is 1.6–1.9 m/s. However, it was observed that the aluminum fragments floated too long in the separator for the airflow velocity of 1.6 m/s, and some copper fragments needed several “up-and-down” periods to finally reach the collector for the airflow velocity of 1.9 m/s. The results show that the optimal airflow velocity for separating the copper and aluminum fragments without electrodes are about 1.7 m/s. Figure 11 depicts the relations between the airflow velocity and the mass fraction of pneumatic separation products without removal of electrodes with the particle size range 3–15 mm. In a similar way, we can find that the optimal airflow velocity of the copper and aluminum fragments with electrodes is about 3.3 m/s.
+
+[E0b6eef4522] section=Experimental results
+thAl / thCu = 3.36 > / = 3.30 holds true for the copper and aluminum fragments with electrodes in which the aluminum fragment is once folded and the copper fragments is unfolded. The upper and lower separation products here are copper and aluminum, respectively. However, the results show that pneumatic separation of the copper and aluminum fragments is unfeasible for any air velocities because (a) the very close values of thAl / thCu and / and (b) the unevenness of the air velocity (0.1–0.3 m/s) in the separator is greater than that of the margin of the airflow velocity (0.07 m/s) of the copper and aluminum fragments. The results conclude that the uniformity and consistency of the thickness of the crushed products should be ensured when selecting the method for crushing of spent lithium iron phosphate batteries.
+
+[Edb2e252927] section=Experimental results
+[TABLE:TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0003]
+
+[Ee8a01680c6] section=Energy analysis of pneumatic separation technology
+The power battery contains a group of battery modules, each of which consists of 10 lithium iron phosphate batteries. The weight of a lithium iron phosphate battery is 1.973 kg. The total energy consumption is 0.0662 kWh (see Table 3) according to the breakdown list (see Table 4). Therefore, the energy consumption per unit of mass of processed waste is about 0.033 kWh/kg.
+
+[Ed30af8889d] section=Energy analysis of pneumatic separation technology
+Economic profit and eco-pressure are the primary motivations to recycle waste lithium iron phosphate power batteries; it is thus necessary to consider energy consumption during the recycling process, which includes discharge, disassembly, crushing and pneumatic separation. The energy consumption of pneumatic separation generally consists of direct consumption (derived from electrical energy) and indirect consumption (derived from abrasion). Table 3 shows the weights of the components of a lithium iron phosphate battery and the total energy consumption; Table 4 shows the energy consumption for every individual process for pneumatic separation. The energy consumption to recycle a single power battery using pneumatic separation was estimated in the laboratory environment. The energy cost of recycling a power battery is about $0.01 (the price for electricity in China is $0.15/kWh). One should note that the cost is compensated by the sale of recycled materials and government-supplied subsidies ($0.02 per used power battery unit) (Ruan and Xu, 2011).
+
+[E6658a186f2] section=Conclusions
+In this paper a mathematical model for the pneumatic separation of crushed products of spent lithium iron phosphate batteries was built. The optimal airflow velocities were determined based on evaluation of the effects of several geometric and processing parameters on pneumatic separation. The experimental results show that the present model has allowable accuracy and provides a theoretical reference for pneumatic separation of the crushed products. The feasibility of pneumatic separation for recycling the spent lithium iron phosphate batteries was also verified. Assuming that the particles have a similar/uniform thickness, disregarding particle–particle, particle–wall interactions and particle rotation, using separation in a counterflow classifier with vertical air flow, some conclusions can be given as follows:
+
+[Ee78d2767bc] section=Conclusions
+[TABLE:TABLE_Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries_0004]
+
+[Ec0171ad433] section=Conclusions
+(1) The process of pneumatic separation is independent of the sizes and shapes of the copper and aluminum fragments for particle sizes more than 9 mm; in this case, the copper and aluminum fragments can be effectively separated without classification of particle sizes before pneumatic separation.
+
+[E8a0d6404e1] section=Conclusions
+(2) The efficiency of pneumatic separation is strongly dependent upon consistency and uniformity of the thickness of the crushed products.
+
+[E227d0217b6] section=Conclusions
+(3) The copper and aluminum fragments cannot be effectively separated if their thickness and density ratios are too close. The upper and lower separation products are aluminum and copper if their thickness ratio is less than their density ratio; whereas, the upper and lower products are copper and aluminum.
+
+[Ef0556a2f72] section=Conclusions
+(4) The optimum airflow velocity of the copper and aluminum fragments upon removal of electrode materials is 1.7 m/s; this leads to the mass fraction 97% of the separated copper fragments and 96% of separated aluminum fragments. The optimal airflow velocity of the copper and aluminum fragments with electrode materials is 3.3 m/s; as a result of this, the mass fractions of the separated copper and aluminum fragments can both reach 97%. The experimental results are consistent with the theoretically obtained optimal airflow velocities.
+
+[E7c2a93ebef] section=Declaration of conflicting interests
+The authors declared no potential conflicts of interest with respect to the research, authorship, and/or publication of this article.
+
+[E7716c0ded8] section=Funding
+The authors disclosed receipt of the following financial support for the research, authorship, and/or publication of this article: This research is supported by the National Natural Science Foundation of China (Grant No. 51875159) and the Fundamental Research Funds for the Central Universities (Grant No. JZ2018HGTB0255).

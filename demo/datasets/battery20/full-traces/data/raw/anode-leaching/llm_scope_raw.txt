@@ -1,0 +1,417 @@
+{
+  "raw_response": "{\"population_scopes\":[{\"root_entity_id\":\"Product_lithium_ion_battery\",\"granularity\":\"batch\",\"sample_type\":\"spent lithium-ion battery\",\"scope_summary\":\"Spent lithium-ion batteries produced by Sony Ericsson Mobile Communications (China) Co., Ltd., discharged, manually dismantled, and their anode active material separated and calcined for the study.\",\"evidence\":[{\"evidence_id\":\"E13544eabca\",\"quote\":\"The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd.\"},{\"evidence_id\":\"E7042c39b47\",\"quote\":\"The spent LIBs were discharged firstly to prevent the dangers of short-circuits and spontaneous combustion. Then they were dismantled manually to different parts: cathode, anode, organic separator and the plastic case. With aid of scraper and tweezers, active materials were separated from the anode.\"}]},{\"root_entity_id\":\"Component_anode_active_material\",\"granularity\":\"batch\",\"sample_type\":\"anode active material from spent lithium-ion batteries\",\"scope_summary\":\"Anode active material separated from the spent Sony Ericsson LIBs, calcined at 500 °C for one hour to remove organic components before leaching.\",\"evidence\":[{\"evidence_id\":\"E7042c39b47\",\"quote\":\"With aid of scraper and tweezers, active materials were separated from the anode. These partitioned black active materials were placed in a furnace and calcined at 500 ^∘C for one hour to remove the organic components.\"},{\"evidence_id\":\"E13544eabca\",\"quote\":\"The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd.\"}]}],\"process_scopes\":[{\"root_entity_id\":\"Process_reductive_hydrochloric_acid_leaching_of_calcined_powder\",\"method_family\":\"reductive acid leaching\",\"evidence\":[{\"evidence_id\":\"E595b35ad9a\",\"quote\":\"In this study, hydrochloric acid was taken as leachate to recycle lithium from the calcined powder materials. To increase the leaching efficiency, reductive leaching was carried out with H2O2 as the reducing agent.\"}]},{\"root_entity_id\":\"Process_reviewed_c2ca1a770bfa07\",\"method_family\":\"water leaching\",\"evidence\":[{\"evidence_id\":\"E6c185ce685\",\"quote\":\"Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water.\"}]},{\"root_entity_id\":\"Process_reviewed_8daa8098cc6a94\",\"method_family\":\"acid leaching\",\"evidence\":[{\"evidence_id\":\"Eb01c0ea70f\",\"quote\":\"Being a solid–liquid reaction, the leaching process was mainly influenced by the concentration of hydrochloric acid, _ H Cl - H2O2 volume ratio, solid–liquid ratio, leaching time, and temperature and agitation rate.\"},{\"evidence_id\":\"E6c185ce685\",\"quote\":\"While others are almost insoluble in water and inlaid in the anode active materials, such as ROCO Li, LiF, and they will occur decomposition reaction in HCl solution.\"}]}],\"unscoped_candidates\":[]}",
+  "raw_payload": {
+    "population_scopes": [
+      {
+        "root_entity_id": "Product_lithium_ion_battery",
+        "granularity": "batch",
+        "sample_type": "spent lithium-ion battery",
+        "scope_summary": "Spent lithium-ion batteries produced by Sony Ericsson Mobile Communications (China) Co., Ltd., discharged, manually dismantled, and their anode active material separated and calcined for the study.",
+        "evidence": [
+          {
+            "evidence_id": "E13544eabca",
+            "quote": "The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd."
+          },
+          {
+            "evidence_id": "E7042c39b47",
+            "quote": "The spent LIBs were discharged firstly to prevent the dangers of short-circuits and spontaneous combustion. Then they were dismantled manually to different parts: cathode, anode, organic separator and the plastic case. With aid of scraper and tweezers, active materials were separated from the anode."
+          }
+        ]
+      },
+      {
+        "root_entity_id": "Component_anode_active_material",
+        "granularity": "batch",
+        "sample_type": "anode active material from spent lithium-ion batteries",
+        "scope_summary": "Anode active material separated from the spent Sony Ericsson LIBs, calcined at 500 °C for one hour to remove organic components before leaching.",
+        "evidence": [
+          {
+            "evidence_id": "E7042c39b47",
+            "quote": "With aid of scraper and tweezers, active materials were separated from the anode. These partitioned black active materials were placed in a furnace and calcined at 500 ^∘C for one hour to remove the organic components."
+          },
+          {
+            "evidence_id": "E13544eabca",
+            "quote": "The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd."
+          }
+        ]
+      }
+    ],
+    "process_scopes": [
+      {
+        "root_entity_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+        "method_family": "reductive acid leaching",
+        "evidence": [
+          {
+            "evidence_id": "E595b35ad9a",
+            "quote": "In this study, hydrochloric acid was taken as leachate to recycle lithium from the calcined powder materials. To increase the leaching efficiency, reductive leaching was carried out with H2O2 as the reducing agent."
+          }
+        ]
+      },
+      {
+        "root_entity_id": "Process_reviewed_c2ca1a770bfa07",
+        "method_family": "water leaching",
+        "evidence": [
+          {
+            "evidence_id": "E6c185ce685",
+            "quote": "Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water."
+          }
+        ]
+      },
+      {
+        "root_entity_id": "Process_reviewed_8daa8098cc6a94",
+        "method_family": "acid leaching",
+        "evidence": [
+          {
+            "evidence_id": "Eb01c0ea70f",
+            "quote": "Being a solid–liquid reaction, the leaching process was mainly influenced by the concentration of hydrochloric acid, _ H Cl - H2O2 volume ratio, solid–liquid ratio, leaching time, and temperature and agitation rate."
+          },
+          {
+            "evidence_id": "E6c185ce685",
+            "quote": "While others are almost insoluble in water and inlaid in the anode active materials, such as ROCO Li, LiF, and they will occur decomposition reaction in HCl solution."
+          }
+        ]
+      }
+    ],
+    "unscoped_candidates": []
+  },
+  "evidence_records": [
+    {
+      "id": "candidates",
+      "kind": "candidates",
+      "entity_ids": [
+        "Product_lithium_ion_battery",
+        "Component_anode_active_material",
+        "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+        "Process_reviewed_c2ca1a770bfa07",
+        "Process_reviewed_8daa8098cc6a94"
+      ],
+      "entity_types": {
+        "Product_lithium_ion_battery": "Component",
+        "Component_anode_active_material": "Component",
+        "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder": "Process",
+        "Process_reviewed_c2ca1a770bfa07": "Process",
+        "Process_reviewed_8daa8098cc6a94": "Process"
+      },
+      "entity_names": {
+        "Product_lithium_ion_battery": "lithium-ion battery",
+        "Component_anode_active_material": "anode active material",
+        "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder": "reductive hydrochloric acid leaching of calcined powder",
+        "Process_reviewed_c2ca1a770bfa07": "deionized water leaching of calcined anode powder",
+        "Process_reviewed_8daa8098cc6a94": "hydrochloric acid leaching of calcined anode powder without H2O2"
+      },
+      "entity_aliases": {
+        "Product_lithium_ion_battery": [
+          "LIBs",
+          "lithium ion battery",
+          "lithium-ion batteries",
+          "lithium-ion battery"
+        ],
+        "Component_anode_active_material": [
+          "anode active material",
+          "anode active materials"
+        ],
+        "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder": [
+          "reductive hydrochloric acid leaching of calcined powder"
+        ],
+        "Process_reviewed_c2ca1a770bfa07": [
+          "deionized water leaching of calcined anode powder"
+        ],
+        "Process_reviewed_8daa8098cc6a94": [
+          "hydrochloric acid leaching of calcined anode powder without H2O2"
+        ]
+      },
+      "entity_provenance": {
+        "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder": "Leach calcined powder with hydrochloric acid and H2O2 as reducing agent in a thermostatic water bath; HCl and H2O2 added sequentially to powder in a beaker, agitation manual and constant; after reaction, separate leach liquor and residue by vacuum filtration; leaching efficiency of Li determined by ICP-AES.",
+        "Process_reviewed_c2ca1a770bfa07": "As described above, the main forms of Li in the anode active material are Li2CO3,, Li O, LiF, ROCO Li, CH OLi. Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water. While others are almost insoluble in water and inlaid in the anode active materials, such as ROCO Li, LiF, and they will occur decomposition reaction in HCl solution. Therefore, the leaching reaction between anode materials and HCl solution is a multiple process (Aurbach et al., 2002; Jiangfeng et al., 2004): (1) the hydrolysis of lithium salt (2) double decomposition reaction between lithium salt and HCl solution.",
+        "Process_reviewed_8daa8098cc6a94": "Fig. 9 shows the alteration of the leaching efficiency of Li as a function of HCl - H2O2 ratio in the range of 1:0–25:1 by using HCl concentration of 3 M, S/L of 1:50, leaching time of 90 min and leaching temperature of 80 ^∘C. It can be observed from Fig. 7 that the leaching efficiency of Li was 97.1% without H2O2. And it reached to 99.4% with HCl - H2O2 ration being 10:1. A conclusion can be drawn from the experiment that H2O2 had a slight role in the leaching process of Li. In the leaching process for Hydrometallurgy, H2O2 was added as reductant to convert undissolved high valence ions to soluble low ones to promote the reaction process. Because of the absence of intermediate valence of Li, H2O2 can reduce Co(III) to Co (II) and thus facilitate the forward reaction. The result shows that the amount of H2O2 was sufficient for the complete dissolution of lithium, as further increasing t"
+      }
+    },
+    {
+      "id": "E549aa959bd",
+      "kind": "source",
+      "section_name": "Leaching lithium from the anode electrode materials of spent lithium-ion batteries by hydrochloric acid (HCl)",
+      "text": "Yang Guo a,b, Feng Li a, Haochen Zhu a,b, Guangming Li a, Juwen Huang a, Wenzhi He a,⇑"
+    },
+    {
+      "id": "Edc27f7e03b",
+      "kind": "source",
+      "section_name": "Leaching lithium from the anode electrode materials of spent lithium-ion batteries by hydrochloric acid (HCl)",
+      "text": "a r t i c l e i n f o"
+    },
+    {
+      "id": "E2b715deeed",
+      "kind": "source",
+      "section_name": "Leaching lithium from the anode electrode materials of spent lithium-ion batteries by hydrochloric acid (HCl)",
+      "text": "Article history: Received 25 August 2015 Revised 22 November 2015 Accepted 23 November 2015 Available online xxxx"
+    },
+    {
+      "id": "Ebb98ce742e",
+      "kind": "source",
+      "section_name": "Leaching lithium from the anode electrode materials of spent lithium-ion batteries by hydrochloric acid (HCl)",
+      "text": "Keywords: Lithium-ion battery Anode Lithium Recycle Hydrochloric acid"
+    },
+    {
+      "id": "E62b7eefa7c",
+      "kind": "source",
+      "section_name": "ABSTRACT",
+      "text": "Spent lithium-ion batteries (LIBs) are considered as an important secondary resource for its high contents of valuable components, such as lithium and cobalt. Currently, studies mainly focus on the recycling of cathode electrodes. There are few studies concentrating on the recovery of anode electrodes. In this work, based on the analysis result of high amount of lithium contained in the anode electrode, the acid leaching process was applied to recycle lithium from anode electrodes of spent LIBs. Hydrochloric acid was introduced as leaching reagent, and hydrogen peroxide as reducing agent. Within the range of experiment performed, hydrogen peroxide was found to have little effect on lithium leaching process. The highest leaching recovery of 99.4 wt% Li was obtained at leaching temperature of 80 ^∘𝖢, 3 M hydrochloric acid and S/L ratio of 1:50 g/ml for 90 min. The graphite configuration with a better crystal structure obtained after the leaching process can also be recycled."
+    },
+    {
+      "id": "Ef2df1267d5",
+      "kind": "source",
+      "section_name": "ABSTRACT",
+      "text": "\u0003 2015 Elsevier Ltd. All rights reserved."
+    },
+    {
+      "id": "E923f95d475",
+      "kind": "source",
+      "section_name": "1. Introduction",
+      "text": "In view of their distinctive advantages of higher operating voltage, smaller volume, lighter weight, longer cycling life, wider operating temperature range and low self-discharge (Dewulf et al., 2010; Jha et al., 2013; Zhang et al., 2014), lithium-ion batteries (LIBs) have been widely used as the power source in portable electronic applications, including mobile phones, computers, digital cameras (Nan et al., 2005, 2006). In addition, they are also expanding their potential application in electric vehicles and hybrid electric vehicles (Zhang et al., 2014). It is reported that the total world production in 2014 was about 36,000 tons, and lithium prices have nearly tripled over the last 10 years (Baike, 2015). The widespread and constantly increasing use of LIBs also leads to an increased battery scrap generation. Therefore, the recycling treatment of spent LIBs by proper methods has attracted worldwide concerns (Provazi et al., 2011; Mishra et al., 2008; Lee and Pandey, 2012)."
+    },
+    {
+      "id": "Ebd3be3d5cb",
+      "kind": "source",
+      "section_name": "1. Introduction",
+      "text": "Reasonable management and recycling of LIBs is appropriate for at least two important reasons (Chagnes and Pospiech, 2013; Shin et al., 2005): (1) batteries have been identified as a fundamental source of cobalt, lithium and other rare earth elements in WEEE, at least one-third of the production costs for a portable LIBs cell are related to the materials. (2) There contains many hazardous materials such as toxic and flammable electrolyte in spent LIBs, which are considered as environmental contaminant, it is mandatory to recycle LIBs for the sake of environmental sustainability and safety hazards. LIBs are composed of shell, cathode, anode, organic separator and organic electrolyte. Stainless steel nickel-plated metal or plastic is the main material of shell (Chagnes and Pospiech, 2013; Paulino et al., 2008; Sun and Qiu, 2011). The cathode is made of an aluminum plate coated with active materials. For most commercialized LIBs, Lithium cobalt oxide (LiCoO2) is commonly used in active cathode material mainly containing 90% Li2CoO3,, 7–8% acetylene black and 3–4% organic binder. Similarly, the anode consists of a copper plate coated with active materials mainly containing 90% graphite, 4–5% acetylene black and 6–7% organic blinder. The thickness of anode and cathode is 0.18–0.20 mm, separated by a 10 lm separator (Ping, 2013). Based on the structure and compositions of LIBs, the current recycling situation about the treatment of the spent LIBs mainly focused on the recycling Co and Li from cathode materials, because Co and Li in spent LIBs are not only rare metals, but also hazardous to the environment, while rarely on anode active materials (Suzuki et al., 2012)."
+    },
+    {
+      "id": "E0715205303",
+      "kind": "source",
+      "section_name": "1. Introduction",
+      "text": "Many studies report on the leaching of metal species in the separated cathode materials by critic acid such as HCl, HNO3, and H2SO4, with hydrogen peroxide (H2O2) as the reductant (Jha et al., 2013; Chagnes and Pospiech, 2013; Zhang et al., 2013)."
+    },
+    {
+      "id": "E6ef0de95cc",
+      "kind": "source",
+      "section_name": "1. Introduction",
+      "text": "And the main emphasis of most is on the recovery of lithium, cobalt or nickel. Fouad et al. (2007) calcined cathode materials at 800 - 900 ^∘C so as to react Aluminum plate and Li2CoO3. As a result, Li was converted to LiMO2 and Co to CoO. Grinding Li2CoO3 together with PVC in the planetary ball mill for 30 min, Saeki et al. (2004) found nearly 100% Li react with Cl coming from PVC and generated inorganic chlorides. Experiment performed by Li et al. (2010) showed that 90% of Co and near 100% of Li could be separated from the cathode active materials by taking citric acid and H2O2 as the leachate. Our research group has also done a lot in resource recycling from LIBs, including recovery of Co and Li from spent lithium-ion batteries by acid leaching and chemical precipitation (Zhu et al., 2012), partition of the copper from the anodes of spent LIBs by combination method of pulverization, vibratory screening and pneumatic separation (Zhu Shu Guang, 2011), and renovating LiCoO2 crystal structure by ultrasonic hydrothermal reaction (Zhang et al., 2013). In the experiment process, it was found that the anode active materials of spent LIBs contain comparatively high content of lithium, reaching 31.03 mg/g, much higher than that of the environmental standards (Shu, 2013; Meshram et al., 2014)."
+    },
+    {
+      "id": "E4872e3e391",
+      "kind": "source",
+      "section_name": "1. Introduction",
+      "text": "Nowadays, recycling of lithium in the long-term would be mainly for ecological benefits and for adherence to environmental laws, because the current market price and content of lithium contained in LIBs makes it less economically attractive. Thus, recycling lithium from anode active materials is significantly important mainly from environmental point of view (Chagnes and Pospiech, 2013; Wang et al., 2014). In the present work, HCl was employed to leach lithium from the anode electrode materials of spent lithium-ion batteries, with H2O2 as the reducing agent. The chemical composition of anode active materials was analyzed, and the effects of operating variables were investigated to optimize the leaching process."
+    },
+    {
+      "id": "E13544eabca",
+      "kind": "source",
+      "section_name": "2.1. Materials and agents",
+      "text": "The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd. Hydrochloric acid was taken as the leachate; meanwhile H2O2 was used as the reductant. Hydrochloric acid and nitric acid were used to measure the concentration of metal in the anode materials. All solutions were prepared by deionized water. Reagents used in this study were all analytically reagent."
+    },
+    {
+      "id": "E7042c39b47",
+      "kind": "source",
+      "section_name": "2.2. Preparation of powder samples",
+      "text": "Procedures of the present work are illustrated in Fig. 1 (a) and (b). The spent LIBs were discharged firstly to prevent the dangers of short-circuits and spontaneous combustion. Then they were dismantled manually to different parts: cathode, anode, organic separator and the plastic case. With aid of scraper and tweezers, active materials were separated from the anode. These partitioned black active materials were placed in a furnace and calcined at 500 ^∘C for one hour to remove the organic components."
+    },
+    {
+      "id": "E595b35ad9a",
+      "kind": "source",
+      "section_name": "2.3. Metal leaching",
+      "text": "In this study, hydrochloric acid was taken as leachate to recycle lithium from the calcined powder materials. To increase the leaching efficiency, reductive leaching was carried out with H2O2 as the reducing agent. Leaching processes were conducted in a thermostatic water bath. Powder samples were put into a beaker, and hydrochloric acid and hydrogen peroxide were added into the beaker in sequence. After reaction, liquid production and powder residue were separated through vacuum filtration for further analysis."
+    },
+    {
+      "id": "Eb01c0ea70f",
+      "kind": "source",
+      "section_name": "2.3. Metal leaching",
+      "text": "Being a solid–liquid reaction, the leaching process was mainly influenced by the concentration of hydrochloric acid, _ H Cl - H2O2 volume ratio, solid–liquid ratio, leaching time, and temperature and agitation rate. In this study, agitation rate was conducted manually and constantly. Therefore, the effects of concentration of hydrochloric acid, HCl - H2O2 volume ratio, solid–liquid ratio, time and temperature were investigated."
+    },
+    {
+      "id": "E3f285a9897",
+      "kind": "source",
+      "section_name": "2.4. Analytical methods",
+      "text": "The microwave digestion method, which was performed in Milestone ETHOS 1 microwave digestion dissolver, was adopted to dissolve powder materials. The solution for digestion was mixture of nitric acid, hydrochloric acid and hydrogen peroxide. Temperature increasing was made in three steps. Temperature was firstly increased to 180 \u0001C from indoor temperature in 10 min, then increased to 200 ^∘𝖢 in 5 min and ultimately maintained at 200 \u0001C for 5 min. The digestion solution was quantitatively analyzed by Inductively Coupled Plasma–Atomic Emission Spectrometry (ICP–AES, Agilent 720ES) to calculate the contents of metals. After leaching reaction, the amounts of Li in the leach liquor were also analyzed by ICP–AES. The leaching efficiency of Li is defined as the ratio of Li content in leach liquor to that in the materials. With the purpose of accurate and dependable determination of metal components, parallel experiments and blank experiments were conducted simultaneously."
+    },
+    {
+      "id": "Ed212983f22",
+      "kind": "source",
+      "section_name": "2.4. Analytical methods",
+      "text": "To determine the influence of leaching reaction on the structure of graphite, the crystal phase of anode active materials was characterized by X-ray Diffraction (XRD, D8 Advance) and scanning electron microscopy (SEM). For XRD analysis, the power materials before leaching and solid residues after leaching were scanned from 5\u0001 to 90\u0001 using increment of 0.02 ^∘ and scan speed of 0.15 ^∘/ s. In order to determine the proper degradation temperature of organic matters in anode active materials, the thermosgravimetric analysis (TGA) and differential thermal analysis (DTA) curves were performed using a TA Instruments Q600 under a dry static air atmosphere."
+    },
+    {
+      "id": "Ed33c168d03",
+      "kind": "source",
+      "section_name": "3.1. Characterization of the anode active materials in spent LIBs",
+      "text": "The characterization of anode active materials in spent LIBs was firstly analyzed with an X-ray diffractometer. As shown in Fig. 2, the strong diffraction intensity of peaks appeared at 2h of 26.5\u0001, in correspondence with the characteristic peaks of the hexagonal structure (PDF#25-284), indicated that the main composition of anode active materials was graphite with integrated graphite layered structure. And from the figure, it can be noted that the graphite materials basically remain good crystallinity and the complete layer structure after electrochemical processes."
+    },
+    {
+      "id": "E1adbdce7c9",
+      "kind": "source",
+      "section_name": "3.1. Characterization of the anode active materials in spent LIBs",
+      "text": "These adhesive agents, polyvinylidene fluoride (PVDF) binders in this study, have good chemical stability and mechanical performance, making it difficult to react with most of the strong acid, that can cause some issues during solid–liquid separation after"
+    },
+    {
+      "id": "E86c5830acb",
+      "kind": "source",
+      "section_name": "3.1. Characterization of the anode active materials in spent LIBs",
+      "text": "leaching and lower the recovery efficiency of the process. Therefore, it is usual to implement such pyrolysis pretreatment before hydrometallurgical processes as the high temperature decomposes the organic compounds in the electrodes, i.e. binder and carbon (Sun and Qiu, 2011, 2012)."
+    },
+    {
+      "id": "Ea2046d8ab7",
+      "kind": "source",
+      "section_name": "3.1. Characterization of the anode active materials in spent LIBs",
+      "text": "In order to decompose them effectively, thermogravimetric analysis (DTG) and differential thermal analysis (DTA) of anode were carried to determine the pyrolysis temperature range as shown in Fig. 4. Initially is observed a weight decrease (115 ^∘𝖢) due to loss of water in the anode active materials. With the temperature increase to 490 ^∘𝖢, it happened significantly weight loss and the maximum weight loss rate of anode active materials was in 590 ^∘C. In the meantime, the oxycompound groups in organic matters were degraded completely remaining the graphite with stable chemical properties. Therefore, in the experiment, the anode active powder materials separated from the spent batteries were calcined at 600 \u0001C for 1 h in a muffle and then cooled to room temperature to degrade organic compounds."
+    },
+    {
+      "id": "E84658ddcb6",
+      "kind": "source",
+      "section_name": "3.1. Characterization of the anode active materials in spent LIBs",
+      "text": "[TABLE:TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001]"
+    },
+    {
+      "id": "E1a6fa2bea7",
+      "kind": "source",
+      "section_name": "3.1. Characterization of the anode active materials in spent LIBs",
+      "text": "(1) In the process of lithium-ion travelling between the anode electrode and cathode electrode for energy storage and release, parts of the lithium-ion were inserted into the pores of graphite (Filso et al., 2013)."
+    },
+    {
+      "id": "Eeb06330f42",
+      "kind": "source",
+      "section_name": "3.1. Characterization of the anode active materials in spent LIBs",
+      "text": "(2) The solid electrolyte interface (SEI) film was found to be stuck to the interface of graphite and electrolyte by interfacial reaction. The main compositions of the SEI film were inorganic constituents (including Li2CO3, LiF, Li O) and organic constituents (including ROCO Li, ROLi, (ROCO Li) ) Xiaoxing, 2013."
+    },
+    {
+      "id": "E6c185ce685",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "As described above, the main forms of Li in the anode active material are Li2CO3,, Li O, LiF, ROCO Li, CH OLi. Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water. While others are almost insoluble in water and inlaid in the anode active materials, such as ROCO Li, LiF, and they will occur decomposition reaction in HCl solution. Therefore, the leaching reaction between anode materials and HCl solution is a multiple process (Aurbach et al., 2002; Jiangfeng et al., 2004): (1) the hydrolysis of lithium salt (2) double decomposition reaction between lithium salt and HCl solution."
+    },
+    {
+      "id": "Ef0f4a3707e",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "Theoretically, the leaching reaction of both steps can be represented as follows"
+    },
+    {
+      "id": "Eacd5716fba",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "(1) The hydrolysis of lithium salt"
+    },
+    {
+      "id": "E9eca907f2e",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "Li2O + H2O →2 LiOH (Eq. 1)"
+    },
+    {
+      "id": "Ef395796fe5",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "ROCO2 Li + H2O →LiOH + ROCOOH (Eq. 2)"
+    },
+    {
+      "id": "E4069b0636e",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "CH3OLi + H2O →LiOH + CH3OH (Eq. 3)"
+    },
+    {
+      "id": "Ef3ed90f097",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "(2) The double decomposition reaction"
+    },
+    {
+      "id": "Ecfef8a765e",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "Li2CO3 + 2 H ^+ →2 Li ^+ + H2O + CO2 ↑ (Eq. 4)"
+    },
+    {
+      "id": "Ed257cd2664",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "Li2O + 2 H ^+ →2 Li ^+ + H2O (Eq. 5)"
+    },
+    {
+      "id": "E42a66a0fda",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "ROCO2 Li + H ^+ →Li ^+ + ROCOOH (Eq. 6)"
+    },
+    {
+      "id": "Ed84c2206ba",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "CH3OLi + 2 H ^+ →2 Li ^+ + CH3OH (Eq. 7)"
+    },
+    {
+      "id": "E9e4e78eafb",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "LiF + H ^+ →Li ^+ + HF (Eq. 8)"
+    },
+    {
+      "id": "E6a101c7bff",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "3.2.1. Effect of hydrochloric acid concentration on leaching"
+    },
+    {
+      "id": "E07ef31878c",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "The effect of HCl concentration was investigated with the concentration varied from 2.5 to 4 M at a leaching temperature of 80 \u0001C, S/L ratio of 1:50 g/mL, HCl–H O volume ratio of 10:1 and a leaching time of 90 min. The results are showed in Fig. 5, which demonstrated that the leaching efficiency of lithium was significantly influenced by the concentration of HCl, in other words, by the concentration of proton and ion diffusion velocity. The higher the concentration is, the faster the reaction will be."
+    },
+    {
+      "id": "Ec079689cd8",
+      "kind": "source",
+      "section_name": "3.2. Leaching of lithium",
+      "text": "As shown in Fig. 5, leaching efficiency was firstly increasing and then decreasing with the continuous increasing of acid concentration. At the first stage, the hydrolysis of lithium salt was dominated that caused leaching efficiency can reach 83.6% when only using deionized water as the leachate merely (see Eqs. (1)–(3)). After adding HCl, it increased from 84% to 98% with HCl concentration increasing from 2.5 to 3 M. This is because that the increasing acid concentration brings incremental amount of proton which can replace more Li+. On the other hand, when HCl was consumed at the solid liquid interphase, the concentration gradient of H+ between solid–liquid interface and solution was gradually increased. It leaded to a quicker diffusion velocity. Both of them can promote the leaching process and bring higher leaching efficiency. Henceforth, the leaching reaction reached equilibrium, and the leaching efficiency of lithium reached its maximum. This is because that the diffusion velocity would not change with further increase of HCl concentration, and the Li+ had been replaced sufficiently. From the figure, 3 M was employed as the optimum acid concentration."
+    },
+    {
+      "id": "E82ca8b1b83",
+      "kind": "source",
+      "section_name": "3.2.2. Effect of solid–liquid ratio on leaching",
+      "text": "Considering the lower chemical consumption and a relatively high efficiency, 1:50 g/ml was recommended as the suitable solid–liquid ratio for further study."
+    },
+    {
+      "id": "E3945a21a88",
+      "kind": "source",
+      "section_name": "3.2.3. Effect of time on leaching",
+      "text": "To examine the effect of reaction time on leaching efficiency, the experiments were performed from 50 to 130 min. Other reaction parameters were held at HCl with a concentration of 3 M, solid–liquid ratio of 1:50 g/mL, HCl - H2O2 ratio of 10:1 and leaching temperature of 80 ^∘C. As observed in Fig. 7, before 70 min, the leaching efficiency basically maintained at 95%, and then it increased rapidly and reached the highest leaching efficiency of 99.5% with the leaching time increased from 70 to 90 min,"
+    },
+    {
+      "id": "Ed39a229b9d",
+      "kind": "source",
+      "section_name": "3.2.3. Effect of time on leaching",
+      "text": "Because the graphite materials were covered by SEI film, the leaching reaction was separated into two steps: SEI film dissolution, chemical reactions for lithium salt inside graphite. At the first stage, the double decomposition reaction between SEI film and H+ occurred. After that, with the dissolution of SEI film, graphite materials gradually exposed into the solution. Then H ^+ went into the pores of graphite and reacted with the lithium salt inside of it leading to the marked increase of the Li leaching efficiency with time. When all the Li was leached out, the leaching efficiency reached a stable status. Leaching time of 90 min, therefore, considered to be suitable to leach lithium from the view point of economy."
+    },
+    {
+      "id": "Eb51e9ddfd6",
+      "kind": "source",
+      "section_name": "3.2.4. Effect of temperature on leaching",
+      "text": "The effect of reaction temperature was studied with a range of temperature from 20 ^∘C to 100 ^∘𝖢. During the leaching process, concentration of HCl was maintained at 3 M, S/L at 1:50 g/ml, time at 90 min, HCl - H2O2 ratio at 10:1. Fig. 8 exhibited that the temperature can significantly influence the leaching process. The leaching efficiency of Li increased from 89.7% to 99% with temperature from 20 ^∘C to 75 ^∘𝖢, then the curve maintain stable with the increasing temperature. Namely, nearly all the lithium was leached out at 80 ^∘C."
+    },
+    {
+      "id": "Eb8c5f20522",
+      "kind": "source",
+      "section_name": "3.2.4. Effect of temperature on leaching",
+      "text": "A reasonable explanation for this phenomenon was that both the ionization reaction of HCl and the leaching reaction were endothermic reaction. On one hand, the protons used for leaching lithium came from the ionization of HCl. Therefore, with the increasing of temperature, the ionization velocity of proton increased which can accelerate the reaction velocity. On the other hand, as an endothermic reaction, the leaching process could also be promoted by the increasing temperature. Considering all the situation, 80 ^∘C was chosen as the optimum temperature for leaching."
+    },
+    {
+      "id": "E5b5c39e37e",
+      "kind": "source",
+      "section_name": "3.3. Effects of leaching process on graphite materials of anode electrodes",
+      "text": "In order to investigate the effects of leaching process on graphite materials of anode electrodes, the powder materials before and after its leaching were clearly identified by XRD analysis, see Figs. 2 and 10. Compared to the XRD pattern of the materials before leaching,"
+    },
+    {
+      "id": "E6b3a9687b8",
+      "kind": "source",
+      "section_name": "3.3. Effects of leaching process on graphite materials of anode electrodes",
+      "text": "XRD analysis indicates that the main components of the anode active material is hexagonal graphite as shown in Fig. 3. As we know, the narrower and sharper the diffraction peak is, the better the crystal structure will be. The diffracted intensity of characteristics diffraction peak in Fig. 2 was 55,281, which increased to 96,014 after leaching. Therefore, the XRD pattern conclusively demonstrated that the leaching process aiming at recycling lithium in anode electrode was clearly essential for maintaining the integrity of the hexagonal structure of graphite. Namely, the residues after leaching could be recycled as graphite."
+    },
+    {
+      "id": "E5575d376b3",
+      "kind": "source",
+      "section_name": "4. Conclusions",
+      "text": "The experimental results indicated that because of the SEI film deposited on the surface of anode active materials, high content of Li (about 30.07 mg/g Li) could exist in the anode of spent LIBs. Based on the existence form of Li, it occurred simultaneously hydrolysis and double decomposition reaction between lithium salt and HCl solution. Thus, the hydrochloric acid leaching process was firstly proposed, and it can successfully separate the valuable elements and leach out lithium. In this investigation, hydrogen peroxide was found to have no significant effects on lithium leaching. With the increase of concentration of HCl and temperature, the leaching efficiency increased firstly and then decreased. And the increase of leaching time and the decrease of S/L would improve the leaching rate of lithium and finally maintained at a high leaching efficiency. In the experimental condition of leaching temperature of 80 \u0001C, 3 M HCl, S/L ratio of 1:50 and reaction time of 90 min, the leaching efficiency reached its maximum of 99.4%."
+    },
+    {
+      "id": "E8131e17feb",
+      "kind": "source",
+      "section_name": "4. Conclusions",
+      "text": "According to the XRD pattern, the graphite which was the main component of anode electrodes was found to keep the original characteristics and configuration with a better crystal structure after leaching, and was fit for recycling."
+    }
+  ]
+}

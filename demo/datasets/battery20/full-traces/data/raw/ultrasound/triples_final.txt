@@ -571,12 +571,23 @@
         "scope_subject_text": "Lithium-ion battery",
         "scope_label": "Lithium-ion battery",
         "evidence_ids": [
-          "E48c6f46f0a"
+          "E2ff13cbd42",
+          "E96cdec88cf"
         ],
-        "evidence_span": "In order to present the advantages of ultrasound-assisted leaching and apply ultrasound-assisted leaching technology to industry in recycling valuable metals from spent LIBs, ultrasonic generator of high power rather than ultrasonic cleaning machine was used to provide ultrasonic agitation.",
+        "evidence_span": "The spent LIBs used in this work were kindly donated to us by Tianjin Lishen Battery Joint Stock Co. Ltd..",
+        "evidence": [
+          {
+            "evidence_id": "E2ff13cbd42",
+            "quote": "The spent LIBs used in this work were kindly donated to us by Tianjin Lishen Battery Joint Stock Co. Ltd.."
+          },
+          {
+            "evidence_id": "E96cdec88cf",
+            "quote": "cathodes obtained after discharging and physical separation were treated with NMP at 100 ^∘C for 1h. The cathode materials were effectively separated from the aluminum foil and then calcined at 700 ^∘C for 5 h in a muffle oven to eliminate the carbon and the polyvinylidene fluoride (PVDF)."
+          }
+        ],
         "population_granularity": "batch",
-        "sample_type": "Lithium-ion battery",
-        "scope_description": "Spent lithium-ion batteries (LIBs) used as the source of valuable metals for ultrasound-assisted leaching in this study.",
+        "sample_type": "spent lithium-ion batteries",
+        "scope_description": "Spent lithium-ion batteries donated by Tianjin Lishen Battery Joint Stock Co. Ltd.; cathodes were separated and calcined to obtain cathode active material for leaching.",
         "sample_size": null
       },
       {
@@ -586,25 +597,24 @@
         "scope_subject_text": "cathode",
         "scope_label": "cathode",
         "evidence_ids": [
-          "E8f6e2a2aeb"
+          "E96cdec88cf",
+          "E2ff13cbd42"
         ],
-        "evidence_span": "N-Methyl-2-pyrrolidone (NMP, supplied by Damao Chemical Reagent Factory, China) was used to separate the cathode materials from the aluminum foil.",
+        "evidence_span": "cathodes obtained after discharging and physical separation were treated with NMP at 100 ^∘C for 1h. The cathode materials were effectively separated from the aluminum foil and then calcined at 700 ^∘C for 5 h in a muffle oven to eliminate the carbon and the polyvinylidene fluoride (PVDF).",
+        "evidence": [
+          {
+            "evidence_id": "E96cdec88cf",
+            "quote": "cathodes obtained after discharging and physical separation were treated with NMP at 100 ^∘C for 1h. The cathode materials were effectively separated from the aluminum foil and then calcined at 700 ^∘C for 5 h in a muffle oven to eliminate the carbon and the polyvinylidene fluoride (PVDF)."
+          },
+          {
+            "evidence_id": "E2ff13cbd42",
+            "quote": "The spent LIBs used in this work were kindly donated to us by Tianjin Lishen Battery Joint Stock Co. Ltd.."
+          }
+        ],
         "population_granularity": "batch",
-        "sample_type": "cathode",
-        "scope_description": "Cathode materials separated from the aluminum foil of spent LIBs using N-Methyl-2-pyrrolidone (NMP).",
+        "sample_type": "cathode active material from spent lithium-ion batteries",
+        "scope_description": "Cathode materials separated from donated spent LIBs using NMP, then calcined at 700 °C for 5 h to remove carbon and PVDF before leaching.",
         "sample_size": null
-      },
-      {
-        "root_entity_ids": [
-          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "scope_subject_text": "conventional leaching of Co and Li from calcined cathode material",
-        "scope_label": "conventional leaching of Co and Li from calcined cathode material",
-        "evidence_ids": [
-          "Eaa22d2be13"
-        ],
-        "evidence_span": "The agitator was used to stir the solution in conventional leaching experiments.",
-        "method_family": "conventional leaching"
       },
       {
         "root_entity_ids": [
@@ -613,102 +623,149 @@
         "scope_subject_text": "ultrasound-assisted leaching of Co and Li from calcined cathode material",
         "scope_label": "ultrasound-assisted leaching of Co and Li from calcined cathode material",
         "evidence_ids": [
-          "Eb82d9296cc"
+          "Ec4f5b7fd97",
+          "E70315ae139"
         ],
-        "evidence_span": "The ultrasonic probe was placed in the solution during the ultrasound-assisted leaching experiments.",
-        "method_family": "ultrasound-assisted leaching"
+        "evidence_span": "The ultrasonic probe was placed in the solution during the ultrasound-assisted leaching experiments. The ultrasonic waves were generated by the ultrasonic generator (XC98-IIDN, Nanjing NingKai Instrument Co. Ltd., Nanjing, China) with a frequency of 20 KHz at varying power in the range from 100 W to 1000 W.",
+        "evidence": [
+          {
+            "evidence_id": "Ec4f5b7fd97",
+            "quote": "The ultrasonic probe was placed in the solution during the ultrasound-assisted leaching experiments. The ultrasonic waves were generated by the ultrasonic generator (XC98-IIDN, Nanjing NingKai Instrument Co. Ltd., Nanjing, China) with a frequency of 20 KHz at varying power in the range from 100 W to 1000 W."
+          },
+          {
+            "evidence_id": "E70315ae139",
+            "quote": "Recovery of cobalt and lithium from spent Li-ion batteries (LIBs) has been studied using ultrasound-assisted leaching."
+          }
+        ],
+        "method_family": "ultrasound-assisted acid leaching"
+      },
+      {
+        "root_entity_ids": [
+          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
+        "scope_subject_text": "conventional leaching of Co and Li from calcined cathode material",
+        "scope_label": "conventional leaching of Co and Li from calcined cathode material",
+        "evidence_ids": [
+          "Ec4f5b7fd97",
+          "E70315ae139"
+        ],
+        "evidence_span": "The agitator was used to stir the solution in conventional leaching experiments.",
+        "evidence": [
+          {
+            "evidence_id": "Ec4f5b7fd97",
+            "quote": "The agitator was used to stir the solution in conventional leaching experiments."
+          },
+          {
+            "evidence_id": "E70315ae139",
+            "quote": "The results were compared to conventional leaching. In this study sulfuric acid was used as leaching agent in the presence of hydrogen peroxide."
+          }
+        ],
+        "method_family": "conventional acid leaching"
       }
     ],
     "scope_audit": {
-      "evidence_record_count": 4,
+      "evidence_record_count": 60,
       "rejected_definition_count": 0,
+      "unscoped_candidate_count": 0,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
     "scope_assertions": [
       {
-        "id": "scope-assertion:fd7c501b785cab5d",
+        "id": "scope-assertion:b9cab9525c6b5733",
         "micrograph_id": "Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries",
         "root_entity_ids": [
+          "Product_Lithium_ion_battery"
+        ],
+        "requested_root_entity_ids": [
           "Product_Lithium_ion_battery"
         ],
         "scope_kind": "declared_population",
         "facets": {
           "population_granularity": "batch",
-          "sample_type": "Lithium-ion battery"
+          "sample_type": "spent lithium-ion batteries"
         },
-        "scope_description": "Spent lithium-ion batteries (LIBs) used as the source of valuable metals for ultrasound-assisted leaching in this study.",
+        "scope_description": "Spent lithium-ion batteries donated by Tianjin Lishen Battery Joint Stock Co. Ltd.; cathodes were separated and calcined to obtain cathode active material for leaching.",
         "sample_size": null,
-        "evidence_span": "In order to present the advantages of ultrasound-assisted leaching and apply ultrasound-assisted leaching technology to industry in recycling valuable metals from spent LIBs, ultrasonic generator of high power rather than ultrasonic cleaning machine was used to provide ultrasonic agitation.",
+        "evidence_span": "The spent LIBs used in this work were kindly donated to us by Tianjin Lishen Battery Joint Stock Co. Ltd..",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:fd7c501b785cab5d:evidence",
+          "scope:scope-assertion:b9cab9525c6b5733:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Product_Lithium_ion_battery:entity"
         ]
       },
       {
-        "id": "scope-assertion:1b9a47c94bfa31b0",
+        "id": "scope-assertion:e9444b2f75b7a4f3",
         "micrograph_id": "Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries",
         "root_entity_ids": [
+          "Component_cathode"
+        ],
+        "requested_root_entity_ids": [
           "Component_cathode"
         ],
         "scope_kind": "declared_population",
         "facets": {
           "population_granularity": "batch",
-          "sample_type": "cathode"
+          "sample_type": "cathode active material from spent lithium-ion batteries"
         },
-        "scope_description": "Cathode materials separated from the aluminum foil of spent LIBs using N-Methyl-2-pyrrolidone (NMP).",
+        "scope_description": "Cathode materials separated from donated spent LIBs using NMP, then calcined at 700 °C for 5 h to remove carbon and PVDF before leaching.",
         "sample_size": null,
-        "evidence_span": "N-Methyl-2-pyrrolidone (NMP, supplied by Damao Chemical Reagent Factory, China) was used to separate the cathode materials from the aluminum foil.",
+        "evidence_span": "cathodes obtained after discharging and physical separation were treated with NMP at 100 ^∘C for 1h. The cathode materials were effectively separated from the aluminum foil and then calcined at 700 ^∘C for 5 h in a muffle oven to eliminate the carbon and the polyvinylidene fluoride (PVDF).",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:1b9a47c94bfa31b0:evidence",
+          "scope:scope-assertion:e9444b2f75b7a4f3:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Component_cathode:entity"
         ]
       },
       {
-        "id": "scope-assertion:1351d64abcd86e53",
+        "id": "scope-assertion:8dfd71d1be8cd960",
+        "micrograph_id": "Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries",
+        "root_entity_ids": [
+          "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
+        "requested_root_entity_ids": [
+          "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "ultrasound-assisted acid leaching"
+        },
+        "scope_description": "The ultrasonic probe was placed in the solution during the ultrasound-assisted leaching experiments. The ultrasonic waves were generated by the ultrasonic generator (XC98-IIDN, Nanjing NingKai Instrument Co. Ltd., Nanjing, China) with a frequency of 20 KHz at varying power in the range from 100 W to 1000 W.",
+        "sample_size": null,
+        "evidence_span": "The ultrasonic probe was placed in the solution during the ultrasound-assisted leaching experiments. The ultrasonic waves were generated by the ultrasonic generator (XC98-IIDN, Nanjing NingKai Instrument Co. Ltd., Nanjing, China) with a frequency of 20 KHz at varying power in the range from 100 W to 1000 W.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:3805bbacf7bef1af",
         "micrograph_id": "Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries",
         "root_entity_ids": [
           "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ],
+        "requested_root_entity_ids": [
+          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
         "scope_kind": "process_method_family",
         "facets": {
-          "method_family": "conventional leaching"
+          "method_family": "conventional acid leaching"
         },
         "scope_description": "The agitator was used to stir the solution in conventional leaching experiments.",
         "sample_size": null,
         "evidence_span": "The agitator was used to stir the solution in conventional leaching experiments.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:4cb62c8d2c0b0a71",
-        "micrograph_id": "Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries",
-        "root_entity_ids": [
-          "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "ultrasound-assisted leaching"
-        },
-        "scope_description": "The ultrasonic probe was placed in the solution during the ultrasound-assisted leaching experiments.",
-        "sample_size": null,
-        "evidence_span": "The ultrasonic probe was placed in the solution during the ultrasound-assisted leaching experiments.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:d7b298e669447788",
-        "scope_assertion_id": "scope-assertion:fd7c501b785cab5d",
+        "id": "scope-path:c3b566d7f18ceb91",
+        "scope_assertion_id": "scope-assertion:b9cab9525c6b5733",
         "statement_relation_id": "REL_Product_Lithium_ion_battery_CONTAINS_Material_cathode_material",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -717,13 +774,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:fd7c501b785cab5d:evidence",
+          "scope:scope-assertion:b9cab9525c6b5733:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Product_Lithium_ion_battery_CONTAINS_Material_cathode_material"
         ]
       },
       {
-        "id": "scope-path:c1c90958de92177a",
-        "scope_assertion_id": "scope-assertion:fd7c501b785cab5d",
+        "id": "scope-path:bfaca257b6576aa5",
+        "scope_assertion_id": "scope-assertion:b9cab9525c6b5733",
         "statement_relation_id": "REL_Product_Lithium_ion_battery_CONTAINS_Component_aluminum_foil",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -732,13 +789,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:fd7c501b785cab5d:evidence",
+          "scope:scope-assertion:b9cab9525c6b5733:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_aluminum_foil"
         ]
       },
       {
-        "id": "scope-path:488c69950adbcbe8",
-        "scope_assertion_id": "scope-assertion:fd7c501b785cab5d",
+        "id": "scope-path:259e9f323e8ddc1a",
+        "scope_assertion_id": "scope-assertion:b9cab9525c6b5733",
         "statement_relation_id": "REL_Product_Lithium_ion_battery_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -747,13 +804,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:fd7c501b785cab5d:evidence",
+          "scope:scope-assertion:b9cab9525c6b5733:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Product_Lithium_ion_battery_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ]
       },
       {
-        "id": "scope-path:488c69950adbcbe8",
-        "scope_assertion_id": "scope-assertion:fd7c501b785cab5d",
+        "id": "scope-path:259e9f323e8ddc1a",
+        "scope_assertion_id": "scope-assertion:b9cab9525c6b5733",
         "statement_relation_id": "REL_Product_Lithium_ion_battery_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -762,193 +819,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:fd7c501b785cab5d:evidence",
+          "scope:scope-assertion:b9cab9525c6b5733:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Product_Lithium_ion_battery_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ]
       },
       {
-        "id": "scope-path:2b027ee8e9e608a9",
-        "scope_assertion_id": "scope-assertion:1b9a47c94bfa31b0",
-        "statement_relation_id": "REL_Component_cathode_CONTAINS_Material_cathode_material",
-        "root_entity_id": "Component_cathode",
-        "entity_path": [
-          "Component_cathode"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:1b9a47c94bfa31b0:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Component_cathode_CONTAINS_Material_cathode_material"
-        ]
-      },
-      {
-        "id": "scope-path:dfde597bbc7b5126",
-        "scope_assertion_id": "scope-assertion:1351d64abcd86e53",
-        "statement_relation_id": "REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "entity_path": [
-          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ]
-      },
-      {
-        "id": "scope-path:dfde597bbc7b5126",
-        "scope_assertion_id": "scope-assertion:1351d64abcd86e53",
-        "statement_relation_id": "REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "entity_path": [
-          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ]
-      },
-      {
-        "id": "scope-path:7f34fc9e974c3afe",
-        "scope_assertion_id": "scope-assertion:1351d64abcd86e53",
-        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
-        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "entity_path": [
-          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
-        ]
-      },
-      {
-        "id": "scope-path:e1442a271607c25a",
-        "scope_assertion_id": "scope-assertion:1351d64abcd86e53",
-        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "entity_path": [
-          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
-        ]
-      },
-      {
-        "id": "scope-path:7f34fc9e974c3afe",
-        "scope_assertion_id": "scope-assertion:1351d64abcd86e53",
-        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
-        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "entity_path": [
-          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
-        ]
-      },
-      {
-        "id": "scope-path:e1442a271607c25a",
-        "scope_assertion_id": "scope-assertion:1351d64abcd86e53",
-        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "entity_path": [
-          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
-        ]
-      },
-      {
-        "id": "scope-path:7f34fc9e974c3afe",
-        "scope_assertion_id": "scope-assertion:1351d64abcd86e53",
-        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
-        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "entity_path": [
-          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
-        ]
-      },
-      {
-        "id": "scope-path:e1442a271607c25a",
-        "scope_assertion_id": "scope-assertion:1351d64abcd86e53",
-        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "entity_path": [
-          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
-        ]
-      },
-      {
-        "id": "scope-path:7f34fc9e974c3afe",
-        "scope_assertion_id": "scope-assertion:1351d64abcd86e53",
-        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
-        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "entity_path": [
-          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
-        ]
-      },
-      {
-        "id": "scope-path:e1442a271607c25a",
-        "scope_assertion_id": "scope-assertion:1351d64abcd86e53",
-        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "entity_path": [
-          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
-        ]
-      },
-      {
-        "id": "scope-path:590ef7489c2a27b6",
-        "scope_assertion_id": "scope-assertion:1351d64abcd86e53",
-        "statement_relation_id": "REL_Material_cathode_material_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "entity_path": [
-          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_cathode_material_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ]
-      },
-      {
-        "id": "scope-path:959204634a29b3e5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:1d66632a9697127c",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -957,13 +834,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ]
       },
       {
-        "id": "scope-path:959204634a29b3e5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:1d66632a9697127c",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -972,13 +849,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:f53a92f2f886de71",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -987,13 +864,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:022b843788625376",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:da0e3fa6dd4b89fb",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1002,13 +879,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:f53a92f2f886de71",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1017,13 +894,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:022b843788625376",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:da0e3fa6dd4b89fb",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1032,13 +909,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:f53a92f2f886de71",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1047,13 +924,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:022b843788625376",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:da0e3fa6dd4b89fb",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1062,13 +939,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:f53a92f2f886de71",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1077,13 +954,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:022b843788625376",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:da0e3fa6dd4b89fb",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1092,13 +969,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:f53a92f2f886de71",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1107,13 +984,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:022b843788625376",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:da0e3fa6dd4b89fb",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1122,13 +999,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:f53a92f2f886de71",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1137,13 +1014,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:022b843788625376",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:da0e3fa6dd4b89fb",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1152,13 +1029,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:f53a92f2f886de71",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1167,13 +1044,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:f53a92f2f886de71",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1182,13 +1059,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:022b843788625376",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:da0e3fa6dd4b89fb",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1197,13 +1074,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:022b843788625376",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:da0e3fa6dd4b89fb",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1212,13 +1089,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:f53a92f2f886de71",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1227,13 +1104,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:022b843788625376",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:da0e3fa6dd4b89fb",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1242,13 +1119,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:f53a92f2f886de71",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1257,13 +1134,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:022b843788625376",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:da0e3fa6dd4b89fb",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1272,13 +1149,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:f53a92f2f886de71",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1287,13 +1164,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:959204634a29b3e5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:1d66632a9697127c",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1302,13 +1179,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:f53a92f2f886de71",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1317,13 +1194,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:022b843788625376",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:da0e3fa6dd4b89fb",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1332,13 +1209,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:959204634a29b3e5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:1d66632a9697127c",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1347,13 +1224,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ]
       },
       {
-        "id": "scope-path:022b843788625376",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:da0e3fa6dd4b89fb",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1362,13 +1239,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:f53a92f2f886de71",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1377,13 +1254,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:65ce260660687b0e",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:dccf494ff622f49e",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Product_Lithium_ion_battery_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1392,43 +1269,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Product_Lithium_ion_battery_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
-        "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
-        "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "entity_path": [
-          "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
-        ]
-      },
-      {
-        "id": "scope-path:022b843788625376",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
-        "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "entity_path": [
-          "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
-        ]
-      },
-      {
-        "id": "scope-path:263af06d84e2fd68",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:cdfb1b7f7d713cf4",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Material_cathode_material_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1437,13 +1284,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_cathode_material_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ]
       },
       {
-        "id": "scope-path:65ce260660687b0e",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:dccf494ff622f49e",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Product_Lithium_ion_battery_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1452,13 +1299,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Product_Lithium_ion_battery_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ]
       },
       {
-        "id": "scope-path:74dd9e780b9130c5",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:f53a92f2f886de71",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1467,13 +1314,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:022b843788625376",
-        "scope_assertion_id": "scope-assertion:4cb62c8d2c0b0a71",
+        "id": "scope-path:da0e3fa6dd4b89fb",
+        "scope_assertion_id": "scope-assertion:8dfd71d1be8cd960",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "entity_path": [
@@ -1482,8 +1329,173 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
+        ]
+      },
+      {
+        "id": "scope-path:5d45ed5294555438",
+        "scope_assertion_id": "scope-assertion:3805bbacf7bef1af",
+        "statement_relation_id": "REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
+        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
+        "entity_path": [
+          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ]
+      },
+      {
+        "id": "scope-path:5d45ed5294555438",
+        "scope_assertion_id": "scope-assertion:3805bbacf7bef1af",
+        "statement_relation_id": "REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
+        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
+        "entity_path": [
+          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ]
+      },
+      {
+        "id": "scope-path:743c59d7f9c417f8",
+        "scope_assertion_id": "scope-assertion:3805bbacf7bef1af",
+        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
+        "entity_path": [
+          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:5111f1433c78aa3c",
+        "scope_assertion_id": "scope-assertion:3805bbacf7bef1af",
+        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
+        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
+        "entity_path": [
+          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
+        ]
+      },
+      {
+        "id": "scope-path:743c59d7f9c417f8",
+        "scope_assertion_id": "scope-assertion:3805bbacf7bef1af",
+        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
+        "entity_path": [
+          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:5111f1433c78aa3c",
+        "scope_assertion_id": "scope-assertion:3805bbacf7bef1af",
+        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
+        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
+        "entity_path": [
+          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
+        ]
+      },
+      {
+        "id": "scope-path:743c59d7f9c417f8",
+        "scope_assertion_id": "scope-assertion:3805bbacf7bef1af",
+        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
+        "entity_path": [
+          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:5111f1433c78aa3c",
+        "scope_assertion_id": "scope-assertion:3805bbacf7bef1af",
+        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
+        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
+        "entity_path": [
+          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
+        ]
+      },
+      {
+        "id": "scope-path:743c59d7f9c417f8",
+        "scope_assertion_id": "scope-assertion:3805bbacf7bef1af",
+        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
+        "entity_path": [
+          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:5111f1433c78aa3c",
+        "scope_assertion_id": "scope-assertion:3805bbacf7bef1af",
+        "statement_relation_id": "REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
+        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
+        "entity_path": [
+          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li"
+        ]
+      },
+      {
+        "id": "scope-path:109fd80ce1cacb9c",
+        "scope_assertion_id": "scope-assertion:3805bbacf7bef1af",
+        "statement_relation_id": "REL_Material_cathode_material_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
+        "root_entity_id": "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
+        "entity_path": [
+          "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_cathode_material_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ]
       }
     ],
@@ -12988,13 +13000,13 @@
           "Material_cathode_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:fd7c501b785cab5d"
+          "scope-assertion:b9cab9525c6b5733"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:d7b298e669447788"
+          "scope-path:c3b566d7f18ceb91"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:fd7c501b785cab5d:evidence",
+          "scope:scope-assertion:b9cab9525c6b5733:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Product_Lithium_ion_battery:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Product_Lithium_ion_battery_CONTAINS_Material_cathode_material",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:649bd2455b2291ff",
@@ -13013,13 +13025,13 @@
           "Component_aluminum_foil"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:fd7c501b785cab5d"
+          "scope-assertion:b9cab9525c6b5733"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:c1c90958de92177a"
+          "scope-path:bfaca257b6576aa5"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:fd7c501b785cab5d:evidence",
+          "scope:scope-assertion:b9cab9525c6b5733:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Product_Lithium_ion_battery:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_aluminum_foil",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:477647a858206f03",
@@ -13038,13 +13050,13 @@
           "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:959204634a29b3e5"
+          "scope-path:1d66632a9697127c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:e3aaa6c84da61a2c",
@@ -13063,13 +13075,13 @@
           "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1351d64abcd86e53"
+          "scope-assertion:3805bbacf7bef1af"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:dfde597bbc7b5126"
+          "scope-path:5d45ed5294555438"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:f4601034565ad735",
@@ -13088,13 +13100,13 @@
           "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:959204634a29b3e5"
+          "scope-path:1d66632a9697127c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:993c7c049d32b71b",
@@ -13113,13 +13125,13 @@
           "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1351d64abcd86e53"
+          "scope-assertion:3805bbacf7bef1af"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:dfde597bbc7b5126"
+          "scope-path:5d45ed5294555438"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:e45ad2315b8bdcff",
@@ -13138,13 +13150,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
+          "scope-path:f53a92f2f886de71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:125e7e65536e73fa",
@@ -13163,13 +13175,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:022b843788625376"
+          "scope-path:da0e3fa6dd4b89fb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:2128fa4984c5115b",
@@ -13188,13 +13200,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
+          "scope-path:f53a92f2f886de71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:c67bec6d80cba5c1",
@@ -13213,13 +13225,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:022b843788625376"
+          "scope-path:da0e3fa6dd4b89fb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:7300f13c31ab697b",
@@ -13238,13 +13250,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
+          "scope-path:f53a92f2f886de71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:e14e816a8263a3ac",
@@ -13263,13 +13275,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:022b843788625376"
+          "scope-path:da0e3fa6dd4b89fb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:39c524fff29ea002",
@@ -13288,13 +13300,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1351d64abcd86e53"
+          "scope-assertion:3805bbacf7bef1af"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:7f34fc9e974c3afe"
+          "scope-path:743c59d7f9c417f8"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:727ca928c27496d3",
@@ -13313,13 +13325,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1351d64abcd86e53"
+          "scope-assertion:3805bbacf7bef1af"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e1442a271607c25a"
+          "scope-path:5111f1433c78aa3c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:d5975e88992c1312",
@@ -13338,13 +13350,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1351d64abcd86e53"
+          "scope-assertion:3805bbacf7bef1af"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:7f34fc9e974c3afe"
+          "scope-path:743c59d7f9c417f8"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:2b0e4d578454e523",
@@ -13363,13 +13375,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1351d64abcd86e53"
+          "scope-assertion:3805bbacf7bef1af"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e1442a271607c25a"
+          "scope-path:5111f1433c78aa3c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:0db05e6b0289523a",
@@ -13388,13 +13400,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
+          "scope-path:f53a92f2f886de71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:ef1f345c2dad8c2b",
@@ -13413,13 +13425,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:022b843788625376"
+          "scope-path:da0e3fa6dd4b89fb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:ee9b6c69ba7f2a89",
@@ -13438,13 +13450,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1351d64abcd86e53"
+          "scope-assertion:3805bbacf7bef1af"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:7f34fc9e974c3afe"
+          "scope-path:743c59d7f9c417f8"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:add13a8d5e5ec4d7",
@@ -13463,13 +13475,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1351d64abcd86e53"
+          "scope-assertion:3805bbacf7bef1af"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e1442a271607c25a"
+          "scope-path:5111f1433c78aa3c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:b9fb6ce486f1fe66",
@@ -13488,13 +13500,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1351d64abcd86e53"
+          "scope-assertion:3805bbacf7bef1af"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:7f34fc9e974c3afe"
+          "scope-path:743c59d7f9c417f8"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:2fe7f2858a3a7583",
@@ -13513,13 +13525,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1351d64abcd86e53"
+          "scope-assertion:3805bbacf7bef1af"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e1442a271607c25a"
+          "scope-path:5111f1433c78aa3c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:6b737fb35ebdb207",
@@ -13538,13 +13550,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
+          "scope-path:f53a92f2f886de71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:64ae3da3a93ba295",
@@ -13563,13 +13575,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:022b843788625376"
+          "scope-path:da0e3fa6dd4b89fb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:8e01c2ef64fc66dd",
@@ -13588,13 +13600,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
+          "scope-path:f53a92f2f886de71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:f9b98667a03c0fd3",
@@ -13613,13 +13625,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:022b843788625376"
+          "scope-path:da0e3fa6dd4b89fb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:1cd7bd6c5f3362b7",
@@ -13638,13 +13650,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
+          "scope-path:f53a92f2f886de71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:854a05bb851b97fa",
@@ -13663,13 +13675,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
+          "scope-path:f53a92f2f886de71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:d99c655e10dc2783",
@@ -13688,13 +13700,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:022b843788625376"
+          "scope-path:da0e3fa6dd4b89fb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:016115d579d95a4a",
@@ -13713,13 +13725,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:022b843788625376"
+          "scope-path:da0e3fa6dd4b89fb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:131aeaf6236f5e33",
@@ -13738,13 +13750,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
+          "scope-path:f53a92f2f886de71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:1dcc830fa308b893",
@@ -13763,13 +13775,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:022b843788625376"
+          "scope-path:da0e3fa6dd4b89fb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:dc6981f156c71a13",
@@ -13788,13 +13800,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
+          "scope-path:f53a92f2f886de71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:b4615798321a236f",
@@ -13813,13 +13825,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:022b843788625376"
+          "scope-path:da0e3fa6dd4b89fb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:d623cabeec4f9654",
@@ -13838,13 +13850,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
+          "scope-path:f53a92f2f886de71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:a24defcbff47ad15",
@@ -13863,13 +13875,13 @@
           "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:959204634a29b3e5"
+          "scope-path:1d66632a9697127c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:e690b4de83a0a867",
@@ -13888,13 +13900,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
+          "scope-path:f53a92f2f886de71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:95a947a837335009",
@@ -13913,13 +13925,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:022b843788625376"
+          "scope-path:da0e3fa6dd4b89fb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:fb0f91125b7467ba",
@@ -13938,13 +13950,13 @@
           "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:959204634a29b3e5"
+          "scope-path:1d66632a9697127c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_lithium_cobalt_oxide_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:a542ac845f792bea",
@@ -13963,13 +13975,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:022b843788625376"
+          "scope-path:da0e3fa6dd4b89fb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:0f22a2f6c31f40f8",
@@ -13988,13 +14000,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
+          "scope-path:f53a92f2f886de71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:29a3ccc544855f8c",
@@ -14013,16 +14025,16 @@
           "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71",
-          "scope-assertion:fd7c501b785cab5d"
+          "scope-assertion:8dfd71d1be8cd960",
+          "scope-assertion:b9cab9525c6b5733"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:488c69950adbcbe8",
-          "scope-path:65ce260660687b0e"
+          "scope-path:259e9f323e8ddc1a",
+          "scope-path:dccf494ff622f49e"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
-          "scope:scope-assertion:fd7c501b785cab5d:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
+          "scope:scope-assertion:b9cab9525c6b5733:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Product_Lithium_ion_battery:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Product_Lithium_ion_battery_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
@@ -14031,62 +14043,12 @@
         ]
       },
       {
-        "id": "local-unit:1455628191fc8751",
-        "micrograph_id": "Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries",
-        "statement_id": "statement:cfdff2c95b9773a9",
-        "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
-        "source_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 42,
-        "entity_ids": [
-          "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
-          "Material_Co"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:cfdff2c95b9773a9",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:cfdff2c95b9773a9:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:92616999f29be961",
-        "micrograph_id": "Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries",
-        "statement_id": "statement:01f411e228cb6223",
-        "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
-        "source_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 43,
-        "entity_ids": [
-          "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
-          "Material_Li"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:022b843788625376"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:01f411e228cb6223",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:01f411e228cb6223:evidence"
-        ]
-      },
-      {
         "id": "local-unit:cb7c6fd381a69f8a",
         "micrograph_id": "Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries",
         "statement_id": "statement:ef212af54b4c2613",
         "statement_relation_id": "REL_Material_cathode_material_CONTAINS_Material_lithium_cobalt_oxide",
         "source_relation_id": "REL_Material_cathode_material_CONTAINS_Material_lithium_cobalt_oxide",
-        "source_relation_index": 44,
+        "source_relation_index": 42,
         "entity_ids": [
           "Material_cathode_material",
           "Material_lithium_cobalt_oxide"
@@ -14104,19 +14066,19 @@
         "statement_id": "statement:5246646952b86f6b",
         "statement_relation_id": "REL_Material_cathode_material_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "source_relation_id": "REL_Material_cathode_material_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "source_relation_index": 45,
+        "source_relation_index": 43,
         "entity_ids": [
           "Material_cathode_material",
           "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:263af06d84e2fd68"
+          "scope-path:cdfb1b7f7d713cf4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_cathode_material_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:5246646952b86f6b",
@@ -14129,19 +14091,19 @@
         "statement_id": "statement:1856596ff7e76674",
         "statement_relation_id": "REL_Material_cathode_material_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "source_relation_id": "REL_Material_cathode_material_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "source_relation_index": 46,
+        "source_relation_index": 44,
         "entity_ids": [
           "Material_cathode_material",
           "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1351d64abcd86e53"
+          "scope-assertion:3805bbacf7bef1af"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:590ef7489c2a27b6"
+          "scope-path:109fd80ce1cacb9c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1351d64abcd86e53:evidence",
+          "scope:scope-assertion:3805bbacf7bef1af:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Material_cathode_material_PROCESSED_BY_Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:1856596ff7e76674",
@@ -14154,22 +14116,22 @@
         "statement_id": "statement:bfbb4098e05b1d08",
         "statement_relation_id": "REL_Product_Lithium_ion_battery_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
         "source_relation_id": "REL_Product_Lithium_ion_battery_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
-        "source_relation_index": 47,
+        "source_relation_index": 45,
         "entity_ids": [
           "Product_Lithium_ion_battery",
           "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71",
-          "scope-assertion:fd7c501b785cab5d"
+          "scope-assertion:8dfd71d1be8cd960",
+          "scope-assertion:b9cab9525c6b5733"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:488c69950adbcbe8",
-          "scope-path:65ce260660687b0e"
+          "scope-path:259e9f323e8ddc1a",
+          "scope-path:dccf494ff622f49e"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
-          "scope:scope-assertion:fd7c501b785cab5d:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
+          "scope:scope-assertion:b9cab9525c6b5733:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Product_Lithium_ion_battery:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Product_Lithium_ion_battery_PROCESSED_BY_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
@@ -14178,53 +14140,53 @@
         ]
       },
       {
-        "id": "local-unit:33c96bf19c6a1dbb",
+        "id": "local-unit:1455628191fc8751",
         "micrograph_id": "Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries",
-        "statement_id": "statement:60703c8f0d78aa22",
+        "statement_id": "statement:cfdff2c95b9773a9",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 48,
+        "source_relation_index": 46,
         "entity_ids": [
           "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:74dd9e780b9130c5"
+          "scope-path:f53a92f2f886de71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Co",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:60703c8f0d78aa22",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:60703c8f0d78aa22:evidence"
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:cfdff2c95b9773a9",
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:cfdff2c95b9773a9:evidence"
         ]
       },
       {
-        "id": "local-unit:d19439cfdf123703",
+        "id": "local-unit:92616999f29be961",
         "micrograph_id": "Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries",
-        "statement_id": "statement:7fdf2d7b063b61a6",
+        "statement_id": "statement:01f411e228cb6223",
         "statement_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 49,
+        "source_relation_index": 47,
         "entity_ids": [
           "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:4cb62c8d2c0b0a71"
+          "scope-assertion:8dfd71d1be8cd960"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:022b843788625376"
+          "scope-path:da0e3fa6dd4b89fb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:4cb62c8d2c0b0a71:evidence",
+          "scope:scope-assertion:8dfd71d1be8cd960:evidence",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material:entity",
           "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:REL_Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material_HAS_OUTPUT_Material_Li",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:7fdf2d7b063b61a6",
-          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:7fdf2d7b063b61a6:evidence"
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:01f411e228cb6223",
+          "source:Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries:relation:statement:01f411e228cb6223:evidence"
         ]
       }
     ],
@@ -29045,6 +29007,7 @@
       "measurement_evidence_records": 2,
       "receipt": "measurement_semantics_revision.json",
       "original_stages_preserved": true
-    }
+    },
+    "scope_unscoped_candidates": []
   }
 }

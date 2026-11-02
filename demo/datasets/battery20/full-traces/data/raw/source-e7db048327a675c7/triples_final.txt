@@ -462,47 +462,112 @@
         "scope_subject_text": "lithium ion secondary battery",
         "scope_label": "lithium ion secondary battery",
         "evidence_ids": [
-          "E5ecad56141"
+          "E7ec1a05529",
+          "E0e114227b8",
+          "E5b46903108"
         ],
-        "evidence_span": "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, calcination steps (Lee and Rhee, 2002).",
+        "evidence_span": "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, calcination steps (Lee and Rhee, 2002). First, LIB samples were thermally treated in a muffle furnace at 150 ^∘C for 1 h.",
+        "evidence": [
+          {
+            "evidence_id": "E7ec1a05529",
+            "quote": "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, calcination steps (Lee and Rhee, 2002). First, LIB samples were thermally treated in a muffle furnace at 150 ^∘C for 1 h."
+          },
+          {
+            "evidence_id": "E0e114227b8",
+            "quote": "Reductive leaching of LiCoO2 from spent lithium ion battery was investigated in terms of reaction variables."
+          },
+          {
+            "evidence_id": "E5b46903108",
+            "quote": "In this study, acid leaching has been applied to recover cobalt and lithium from cathodic active material of spent LIB."
+          }
+        ],
         "population_granularity": "batch",
-        "sample_type": "lithium ion secondary battery",
-        "scope_description": "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, and calcination steps.",
+        "sample_type": "spent lithium ion battery",
+        "scope_description": "Spent lithium ion secondary battery (LIB) waste used as the study sample; cathodic active material (LiCoO2) was separated from these LIB samples by thermal treatment, shredding, calcination, and screening.",
         "sample_size": null
+      },
+      {
+        "root_entity_ids": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "scope_subject_text": "LiCoO2 leaching in nitric acid solution",
+        "scope_label": "LiCoO2 leaching in nitric acid solution",
+        "evidence_ids": [
+          "E2990d35d70",
+          "Ef908ed912e"
+        ],
+        "evidence_span": "Leaching of LiCoO2 in nitric acid solution was tested in a reactor (Fig. 4), which was placed in a water bath to control the reaction temperature within ± 0.5 ^∘C.",
+        "evidence": [
+          {
+            "evidence_id": "E2990d35d70",
+            "quote": "Leaching of LiCoO2 in nitric acid solution was tested in a reactor (Fig. 4), which was placed in a water bath to control the reaction temperature within ± 0.5 ^∘C."
+          },
+          {
+            "evidence_id": "Ef908ed912e",
+            "quote": "Reductive leaching of the cathodic active material with H2O2 addition in a nitric acid solution was employed for a better dissolution of cobalt and lithium."
+          }
+        ],
+        "method_family": "acid leaching"
       }
     ],
     "scope_audit": {
-      "evidence_record_count": 2,
-      "rejected_definition_count": 2,
+      "evidence_record_count": 22,
+      "rejected_definition_count": 0,
+      "unscoped_candidate_count": 0,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
     "scope_assertions": [
       {
-        "id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-assertion:14247d109c3dc17c",
         "micrograph_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
         "root_entity_ids": [
+          "Product_lithium_ion_secondary_battery"
+        ],
+        "requested_root_entity_ids": [
           "Product_lithium_ion_secondary_battery"
         ],
         "scope_kind": "declared_population",
         "facets": {
           "population_granularity": "batch",
-          "sample_type": "lithium ion secondary battery"
+          "sample_type": "spent lithium ion battery"
         },
-        "scope_description": "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, and calcination steps.",
+        "scope_description": "Spent lithium ion secondary battery (LIB) waste used as the study sample; cathodic active material (LiCoO2) was separated from these LIB samples by thermal treatment, shredding, calcination, and screening.",
         "sample_size": null,
-        "evidence_span": "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, calcination steps (Lee and Rhee, 2002).",
+        "evidence_span": "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, calcination steps (Lee and Rhee, 2002). First, LIB samples were thermally treated in a muffle furnace at 150 ^∘C for 1 h.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:c663dda1ef03cf87",
+        "micrograph_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+        "root_entity_ids": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "requested_root_entity_ids": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "acid leaching"
+        },
+        "scope_description": "Leaching of LiCoO2 in nitric acid solution was tested in a reactor (Fig. 4), which was placed in a water bath to control the reaction temperature within ± 0.5 ^∘C.",
+        "sample_size": null,
+        "evidence_span": "Leaching of LiCoO2 in nitric acid solution was tested in a reactor (Fig. 4), which was placed in a water bath to control the reaction temperature within ± 0.5 ^∘C.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:725c63ee763117d4",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:eb3411913d97c342",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -511,13 +576,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit"
         ]
       },
       {
-        "id": "scope-path:9351abf0c5b70f36",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:3c03d1e4bd563989",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Component_cell_unit_CONTAINS_Component_cathode",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -529,14 +594,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_cathode",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit"
         ]
       },
       {
-        "id": "scope-path:6b67ff28dcdf4964",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:29b53c754bc7b1cf",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Component_cell_unit_CONTAINS_Component_anode",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -548,14 +613,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_anode",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit"
         ]
       },
       {
-        "id": "scope-path:efe598429ce59d1d",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:8409ee7ce849dfe3",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Component_cell_unit_CONTAINS_Component_organic_separator",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -567,14 +632,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_organic_separator",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit"
         ]
       },
       {
-        "id": "scope-path:c07d39fc81b88d7b",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:ab3ce37cb425892c",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Component_cell_unit_CONTAINS_Component_organic_electrolyte",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -586,14 +651,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_organic_electrolyte",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit"
         ]
       },
       {
-        "id": "scope-path:f85f617c4255d923",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:9f20fac4cf520141",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Component_cell_unit_CONTAINS_Component_Nicoated_steel_casing",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -605,14 +670,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_Nicoated_steel_casing",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit"
         ]
       },
       {
-        "id": "scope-path:c9ae4cf365ac34b0",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:9c2ca78d01e0eb76",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Component_cathode_CONTAINS_Material_LiCoO2",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -626,15 +691,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cathode_CONTAINS_Material_LiCoO2",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_cathode",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit"
         ]
       },
       {
-        "id": "scope-path:79b6e0f7bc3f7b7a",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:7e57d0704c1b6c81",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Component_cathode_CONTAINS_Material_carbon_conducting_additive",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -648,15 +713,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cathode_CONTAINS_Material_carbon_conducting_additive",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_cathode",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit"
         ]
       },
       {
-        "id": "scope-path:ba63bafc502ab315",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:f23e13b5b9d8b2f8",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Component_cathode_CONTAINS_Material_binder",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -670,15 +735,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cathode_CONTAINS_Material_binder",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_cathode",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit"
         ]
       },
       {
-        "id": "scope-path:4d243d308187e41e",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:eba27e04d4fbf0ce",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Component_cathode_CONTAINS_Material_aluminum_foil",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -692,15 +757,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cathode_CONTAINS_Material_aluminum_foil",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_cathode",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit"
         ]
       },
       {
-        "id": "scope-path:097c9dd3a9bdc950",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:dd263348eefdc20f",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Component_anode_CONTAINS_Material_graphite",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -714,15 +779,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_anode_CONTAINS_Material_graphite",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_anode",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit"
         ]
       },
       {
-        "id": "scope-path:23b50ff2762753f5",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:6e7f0af2f2cc00d1",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Component_anode_CONTAINS_Material_carbon_conducting_additive",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -736,15 +801,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_anode_CONTAINS_Material_carbon_conducting_additive",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_anode",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit"
         ]
       },
       {
-        "id": "scope-path:b65f91195a628ca5",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:2539facb4b888f77",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Component_anode_CONTAINS_Material_binder",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -758,15 +823,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_anode_CONTAINS_Material_binder",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_anode",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit"
         ]
       },
       {
-        "id": "scope-path:413c1cdd33400dc7",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:b4504353bc910e59",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Component_anode_CONTAINS_Material_copper_foil",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -780,15 +845,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_anode_CONTAINS_Material_copper_foil",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_anode",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit"
         ]
       },
       {
-        "id": "scope-path:8cb24cd06af36449",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:d13c2aebfb375e91",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -797,13 +862,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution"
         ]
       },
       {
-        "id": "scope-path:66af7927e12d135c",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:5d32ebfad9e3fb75",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_LiCoO2",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -812,13 +877,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:a830cb878e99a7f0",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:c9b32a16d417bf8c",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Steel_Ni",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -827,13 +892,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Steel_Ni"
         ]
       },
       {
-        "id": "scope-path:11c8309d6c327334",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
+        "id": "scope-path:c1658786cba02670",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
         "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Cu_Al",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
@@ -842,14 +907,14 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Cu_Al"
         ]
       },
       {
-        "id": "scope-path:66af7927e12d135c",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
-        "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_LiCoO2",
+        "id": "scope-path:9697262f7e4a365d",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
+        "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_C",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
           "Product_lithium_ion_secondary_battery"
@@ -857,14 +922,14 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_LiCoO2"
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_C"
         ]
       },
       {
-        "id": "scope-path:a830cb878e99a7f0",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
-        "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Steel_Ni",
+        "id": "scope-path:57e8133eaa4890bd",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
+        "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_electrolyte",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
           "Product_lithium_ion_secondary_battery"
@@ -872,14 +937,14 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Steel_Ni"
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_electrolyte"
         ]
       },
       {
-        "id": "scope-path:11c8309d6c327334",
-        "scope_assertion_id": "scope-assertion:02315dca8e10e903",
-        "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Cu_Al",
+        "id": "scope-path:a2a73885f81ae2fe",
+        "scope_assertion_id": "scope-assertion:14247d109c3dc17c",
+        "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_polymer",
         "root_entity_id": "Product_lithium_ion_secondary_battery",
         "entity_path": [
           "Product_lithium_ion_secondary_battery"
@@ -887,8 +952,338 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Cu_Al"
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_polymer"
+        ]
+      },
+      {
+        "id": "scope-path:02324f012aef1e1e",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ]
+      },
+      {
+        "id": "scope-path:985d5a6bda860e7f",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ]
+      },
+      {
+        "id": "scope-path:985d5a6bda860e7f",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ]
+      },
+      {
+        "id": "scope-path:28ed8c7b643c6386",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:66e6c6d34a8144b5",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li"
+        ]
+      },
+      {
+        "id": "scope-path:985d5a6bda860e7f",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ]
+      },
+      {
+        "id": "scope-path:28ed8c7b643c6386",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:66e6c6d34a8144b5",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li"
+        ]
+      },
+      {
+        "id": "scope-path:985d5a6bda860e7f",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ]
+      },
+      {
+        "id": "scope-path:28ed8c7b643c6386",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:66e6c6d34a8144b5",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li"
+        ]
+      },
+      {
+        "id": "scope-path:985d5a6bda860e7f",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ]
+      },
+      {
+        "id": "scope-path:28ed8c7b643c6386",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:66e6c6d34a8144b5",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li"
+        ]
+      },
+      {
+        "id": "scope-path:985d5a6bda860e7f",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ]
+      },
+      {
+        "id": "scope-path:28ed8c7b643c6386",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:28ed8c7b643c6386",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:28ed8c7b643c6386",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:985d5a6bda860e7f",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ]
+      },
+      {
+        "id": "scope-path:28ed8c7b643c6386",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:66e6c6d34a8144b5",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li"
+        ]
+      },
+      {
+        "id": "scope-path:985d5a6bda860e7f",
+        "scope_assertion_id": "scope-assertion:c663dda1ef03cf87",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "entity_path": [
+          "Process_LiCoO2_leaching_in_nitric_acid_solution"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution"
         ]
       }
     ],
@@ -6134,13 +6529,13 @@
           "Component_cell_unit"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:725c63ee763117d4"
+          "scope-path:eb3411913d97c342"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:76b624495dcbe129",
@@ -6159,13 +6554,13 @@
           "Component_cathode"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:9351abf0c5b70f36"
+          "scope-path:3c03d1e4bd563989"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_cathode",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit",
@@ -6185,13 +6580,13 @@
           "Component_anode"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:6b67ff28dcdf4964"
+          "scope-path:29b53c754bc7b1cf"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_anode",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit",
@@ -6211,13 +6606,13 @@
           "Component_organic_separator"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:efe598429ce59d1d"
+          "scope-path:8409ee7ce849dfe3"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_organic_separator",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit",
@@ -6237,13 +6632,13 @@
           "Component_organic_electrolyte"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:c07d39fc81b88d7b"
+          "scope-path:ab3ce37cb425892c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_organic_electrolyte",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit",
@@ -6263,13 +6658,13 @@
           "Component_Nicoated_steel_casing"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:f85f617c4255d923"
+          "scope-path:9f20fac4cf520141"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_Nicoated_steel_casing",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Component_cell_unit",
@@ -6289,13 +6684,13 @@
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:c9ae4cf365ac34b0"
+          "scope-path:9c2ca78d01e0eb76"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cathode_CONTAINS_Material_LiCoO2",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_cathode",
@@ -6316,13 +6711,13 @@
           "Material_carbon_conducting_additive"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:79b6e0f7bc3f7b7a"
+          "scope-path:7e57d0704c1b6c81"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cathode_CONTAINS_Material_carbon_conducting_additive",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_cathode",
@@ -6343,13 +6738,13 @@
           "Material_binder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:ba63bafc502ab315"
+          "scope-path:f23e13b5b9d8b2f8"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cathode_CONTAINS_Material_binder",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_cathode",
@@ -6370,13 +6765,13 @@
           "Material_aluminum_foil"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:4d243d308187e41e"
+          "scope-path:eba27e04d4fbf0ce"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cathode_CONTAINS_Material_aluminum_foil",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_cathode",
@@ -6397,13 +6792,13 @@
           "Material_graphite"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:097c9dd3a9bdc950"
+          "scope-path:dd263348eefdc20f"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_anode_CONTAINS_Material_graphite",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_anode",
@@ -6424,13 +6819,13 @@
           "Material_carbon_conducting_additive"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:23b50ff2762753f5"
+          "scope-path:6e7f0af2f2cc00d1"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_anode_CONTAINS_Material_carbon_conducting_additive",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_anode",
@@ -6451,13 +6846,13 @@
           "Material_binder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:b65f91195a628ca5"
+          "scope-path:2539facb4b888f77"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_anode_CONTAINS_Material_binder",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_anode",
@@ -6478,13 +6873,13 @@
           "Material_copper_foil"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:413c1cdd33400dc7"
+          "scope-path:b4504353bc910e59"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_anode_CONTAINS_Material_copper_foil",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Component_cell_unit_CONTAINS_Component_anode",
@@ -6505,13 +6900,17 @@
           "Process_LiCoO2_leaching_in_nitric_acid_solution"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c",
+          "scope-assertion:c663dda1ef03cf87"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:8cb24cd06af36449"
+          "scope-path:02324f012aef1e1e",
+          "scope-path:d13c2aebfb375e91"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:a39a1337dc10f911",
@@ -6529,9 +6928,16 @@
           "Material_LiCoO2",
           "Process_LiCoO2_leaching_in_nitric_acid_solution"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:985d5a6bda860e7f"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:bfa6423526c7e8bf",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:bfa6423526c7e8bf:evidence"
         ]
@@ -6547,9 +6953,16 @@
           "Material_LiCoO2",
           "Process_LiCoO2_leaching_in_nitric_acid_solution"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:985d5a6bda860e7f"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:38412cbfbef8d47f",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:38412cbfbef8d47f:evidence"
         ]
@@ -6565,9 +6978,16 @@
           "Process_LiCoO2_leaching_in_nitric_acid_solution",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:28ed8c7b643c6386"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:bf07870d04f773c1",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:bf07870d04f773c1:evidence"
         ]
@@ -6583,9 +7003,16 @@
           "Process_LiCoO2_leaching_in_nitric_acid_solution",
           "Material_Li"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:66e6c6d34a8144b5"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:b0425ef514c775e7",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:b0425ef514c775e7:evidence"
         ]
@@ -6601,9 +7028,16 @@
           "Material_LiCoO2",
           "Process_LiCoO2_leaching_in_nitric_acid_solution"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:985d5a6bda860e7f"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:6cf9246baae85afe",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:6cf9246baae85afe:evidence"
         ]
@@ -6619,9 +7053,16 @@
           "Process_LiCoO2_leaching_in_nitric_acid_solution",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:28ed8c7b643c6386"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:8315005110fe3202",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:8315005110fe3202:evidence"
         ]
@@ -6637,9 +7078,16 @@
           "Process_LiCoO2_leaching_in_nitric_acid_solution",
           "Material_Li"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:66e6c6d34a8144b5"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:44cc5f3e8aa32906",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:44cc5f3e8aa32906:evidence"
         ]
@@ -6655,9 +7103,16 @@
           "Material_LiCoO2",
           "Process_LiCoO2_leaching_in_nitric_acid_solution"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:985d5a6bda860e7f"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:3b6daa0f04d02a19",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:3b6daa0f04d02a19:evidence"
         ]
@@ -6673,9 +7128,16 @@
           "Process_LiCoO2_leaching_in_nitric_acid_solution",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:28ed8c7b643c6386"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:e3e3c54d819518f4",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:e3e3c54d819518f4:evidence"
         ]
@@ -6691,9 +7153,16 @@
           "Process_LiCoO2_leaching_in_nitric_acid_solution",
           "Material_Li"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:66e6c6d34a8144b5"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:4f988de2bbfc5cd1",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:4f988de2bbfc5cd1:evidence"
         ]
@@ -6709,9 +7178,16 @@
           "Material_LiCoO2",
           "Process_LiCoO2_leaching_in_nitric_acid_solution"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:985d5a6bda860e7f"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:e9b85614cca1ce86",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:e9b85614cca1ce86:evidence"
         ]
@@ -6727,9 +7203,16 @@
           "Process_LiCoO2_leaching_in_nitric_acid_solution",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:28ed8c7b643c6386"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:c584cb63eb15bd92",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:c584cb63eb15bd92:evidence"
         ]
@@ -6745,9 +7228,16 @@
           "Process_LiCoO2_leaching_in_nitric_acid_solution",
           "Material_Li"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:66e6c6d34a8144b5"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:2126207ee7b63316",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:2126207ee7b63316:evidence"
         ]
@@ -6763,9 +7253,16 @@
           "Material_LiCoO2",
           "Process_LiCoO2_leaching_in_nitric_acid_solution"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:985d5a6bda860e7f"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:313156aa4db1bcb5",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:313156aa4db1bcb5:evidence"
         ]
@@ -6781,9 +7278,16 @@
           "Process_LiCoO2_leaching_in_nitric_acid_solution",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:28ed8c7b643c6386"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:65ede198bcc6e2c4",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:65ede198bcc6e2c4:evidence"
         ]
@@ -6799,9 +7303,16 @@
           "Process_LiCoO2_leaching_in_nitric_acid_solution",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:28ed8c7b643c6386"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:ba8a433d693df888",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:ba8a433d693df888:evidence"
         ]
@@ -6817,65 +7328,18 @@
           "Process_LiCoO2_leaching_in_nitric_acid_solution",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:28ed8c7b643c6386"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:7624f2ebd2016279",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:7624f2ebd2016279:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:e164ee19edf85367",
-        "micrograph_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
-        "statement_id": "statement:20670755b2d9744e",
-        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
-        "source_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 32,
-        "entity_ids": [
-          "Process_LiCoO2_leaching_in_nitric_acid_solution",
-          "Material_Li"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:20670755b2d9744e",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:20670755b2d9744e:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:d8c1a5656992cf76",
-        "micrograph_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
-        "statement_id": "statement:3a28baf5fc7f6df7",
-        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
-        "source_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 33,
-        "entity_ids": [
-          "Process_LiCoO2_leaching_in_nitric_acid_solution",
-          "Material_Li"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:3a28baf5fc7f6df7",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:3a28baf5fc7f6df7:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:b6470d82acb847bc",
-        "micrograph_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
-        "statement_id": "statement:72a7a8bf2876e305",
-        "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
-        "source_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 34,
-        "entity_ids": [
-          "Process_LiCoO2_leaching_in_nitric_acid_solution",
-          "Material_Li"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:72a7a8bf2876e305",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:72a7a8bf2876e305:evidence"
         ]
       },
       {
@@ -6884,14 +7348,21 @@
         "statement_id": "statement:6b27f822b1e17088",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
         "source_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
-        "source_relation_index": 35,
+        "source_relation_index": 32,
         "entity_ids": [
           "Material_LiCoO2",
           "Process_LiCoO2_leaching_in_nitric_acid_solution"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:985d5a6bda860e7f"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:6b27f822b1e17088",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:6b27f822b1e17088:evidence"
         ]
@@ -6902,34 +7373,48 @@
         "statement_id": "statement:2bdcc0989bcc0866",
         "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 36,
+        "source_relation_index": 33,
         "entity_ids": [
           "Process_LiCoO2_leaching_in_nitric_acid_solution",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:28ed8c7b643c6386"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Co",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:2bdcc0989bcc0866",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:2bdcc0989bcc0866:evidence"
         ]
       },
       {
-        "id": "local-unit:13274d4bfe204f9b",
+        "id": "local-unit:e164ee19edf85367",
         "micrograph_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
-        "statement_id": "statement:1344c1bf61c723ec",
+        "statement_id": "statement:20670755b2d9744e",
         "statement_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 37,
+        "source_relation_index": 34,
         "entity_ids": [
           "Process_LiCoO2_leaching_in_nitric_acid_solution",
           "Material_Li"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:66e6c6d34a8144b5"
+        ],
         "evidence_refs": [
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:1344c1bf61c723ec",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:1344c1bf61c723ec:evidence"
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Process_LiCoO2_leaching_in_nitric_acid_solution_HAS_OUTPUT_Material_Li",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:20670755b2d9744e",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:20670755b2d9744e:evidence"
         ]
       },
       {
@@ -6938,14 +7423,21 @@
         "statement_id": "statement:ccd832d122b6bd0f",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
         "source_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
-        "source_relation_index": 38,
+        "source_relation_index": 35,
         "entity_ids": [
           "Material_LiCoO2",
           "Process_LiCoO2_leaching_in_nitric_acid_solution"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:c663dda1ef03cf87"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:985d5a6bda860e7f"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:c663dda1ef03cf87:evidence",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Process_LiCoO2_leaching_in_nitric_acid_solution:entity",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_LiCoO2_leaching_in_nitric_acid_solution",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:ccd832d122b6bd0f",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:ccd832d122b6bd0f:evidence"
         ]
@@ -6956,19 +7448,19 @@
         "statement_id": "statement:b8ea9ecf54e1a58d",
         "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_LiCoO2",
         "source_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_LiCoO2",
-        "source_relation_index": 39,
+        "source_relation_index": 36,
         "entity_ids": [
           "Product_lithium_ion_secondary_battery",
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:66af7927e12d135c"
+          "scope-path:5d32ebfad9e3fb75"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_LiCoO2",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:b8ea9ecf54e1a58d",
@@ -6981,19 +7473,19 @@
         "statement_id": "statement:3bf6fabe865c5857",
         "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Steel_Ni",
         "source_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Steel_Ni",
-        "source_relation_index": 40,
+        "source_relation_index": 37,
         "entity_ids": [
           "Product_lithium_ion_secondary_battery",
           "Material_Steel_Ni"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:a830cb878e99a7f0"
+          "scope-path:c9b32a16d417bf8c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Steel_Ni",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:3bf6fabe865c5857",
@@ -7006,19 +7498,19 @@
         "statement_id": "statement:da37b1b29002ee02",
         "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Cu_Al",
         "source_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Cu_Al",
-        "source_relation_index": 41,
+        "source_relation_index": 38,
         "entity_ids": [
           "Product_lithium_ion_secondary_battery",
           "Material_Cu_Al"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:11c8309d6c327334"
+          "scope-path:c1658786cba02670"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Cu_Al",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:da37b1b29002ee02",
@@ -7026,78 +7518,78 @@
         ]
       },
       {
-        "id": "local-unit:2c0ee7892b03f8bc",
+        "id": "local-unit:73205c3bbcfc0100",
         "micrograph_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
-        "statement_id": "statement:5580c07f2f91d0c3",
-        "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_LiCoO2",
-        "source_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_LiCoO2",
-        "source_relation_index": 42,
+        "statement_id": "statement:7d84aadb7eccbf5b",
+        "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_C",
+        "source_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_C",
+        "source_relation_index": 39,
         "entity_ids": [
           "Product_lithium_ion_secondary_battery",
-          "Material_LiCoO2"
+          "Material_C"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:66af7927e12d135c"
+          "scope-path:9697262f7e4a365d"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_LiCoO2",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:5580c07f2f91d0c3",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:5580c07f2f91d0c3:evidence"
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_C",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:7d84aadb7eccbf5b",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:7d84aadb7eccbf5b:evidence"
         ]
       },
       {
-        "id": "local-unit:148be7a357bb66e4",
+        "id": "local-unit:04f524b0b921d048",
         "micrograph_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
-        "statement_id": "statement:e59213f86b0c61fb",
-        "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Steel_Ni",
-        "source_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Steel_Ni",
-        "source_relation_index": 43,
+        "statement_id": "statement:9b148348a99e5e1e",
+        "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_electrolyte",
+        "source_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_electrolyte",
+        "source_relation_index": 40,
         "entity_ids": [
           "Product_lithium_ion_secondary_battery",
-          "Material_Steel_Ni"
+          "Material_electrolyte"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:a830cb878e99a7f0"
+          "scope-path:57e8133eaa4890bd"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Steel_Ni",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:e59213f86b0c61fb",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:e59213f86b0c61fb:evidence"
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_electrolyte",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:9b148348a99e5e1e",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:9b148348a99e5e1e:evidence"
         ]
       },
       {
-        "id": "local-unit:4f2724f9947dc39c",
+        "id": "local-unit:9ca9ca3451d8ba20",
         "micrograph_id": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
-        "statement_id": "statement:75d350db28c39bff",
-        "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Cu_Al",
-        "source_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Cu_Al",
-        "source_relation_index": 44,
+        "statement_id": "statement:73c08a1574ea473e",
+        "statement_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_polymer",
+        "source_relation_id": "REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_polymer",
+        "source_relation_index": 41,
         "entity_ids": [
           "Product_lithium_ion_secondary_battery",
-          "Material_Cu_Al"
+          "Material_polymer"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:02315dca8e10e903"
+          "scope-assertion:14247d109c3dc17c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:11c8309d6c327334"
+          "scope-path:a2a73885f81ae2fe"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:02315dca8e10e903:evidence",
+          "scope:scope-assertion:14247d109c3dc17c:evidence",
           "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:Product_lithium_ion_secondary_battery:entity",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_Cu_Al",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:75d350db28c39bff",
-          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:75d350db28c39bff:evidence"
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:REL_Product_lithium_ion_secondary_battery_CONTAINS_Material_polymer",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:73c08a1574ea473e",
+          "source:Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes:relation:statement:73c08a1574ea473e:evidence"
         ]
       }
     ],
@@ -13378,6 +13870,7 @@
       "co_temperature_points_preserved": 3,
       "qualitative_trend_preserved": true,
       "receipt": "numeric_attribution_revision.json"
-    }
+    },
+    "scope_unscoped_candidates": []
   }
 }

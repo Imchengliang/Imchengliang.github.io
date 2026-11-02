@@ -6,13 +6,23 @@
     "scope_subject_text": "lithium-ion battery",
     "scope_label": "lithium-ion battery",
     "evidence_ids": [
-      "E770c2f588b",
-      "Ed3b615b22e"
+      "E1ee53de78e",
+      "E1ee53de78e"
     ],
-    "evidence_span": "Spent LIBs from waste mobile phones were collected and pretreated following the procedure shown in Figure 1.",
+    "evidence_span": "Spent LIBs from waste mobile phones were collected and pretreated following the procedure shown in Figure 1. They were first discharged with 5 wt % NaCl solution for 48 h and then naturally air-dried.",
+    "evidence": [
+      {
+        "evidence_id": "E1ee53de78e",
+        "quote": "Spent LIBs from waste mobile phones were collected and pretreated following the procedure shown in Figure 1. They were first discharged with 5 wt % NaCl solution for 48 h and then naturally air-dried."
+      },
+      {
+        "evidence_id": "E1ee53de78e",
+        "quote": "a manual dismantling process instead of mechanical crushing was conducted, and then, the cathode and anode were obtained from this process, respectively."
+      }
+    ],
     "population_granularity": "batch",
-    "sample_type": "lithium-ion battery",
-    "scope_description": "Spent lithium-ion batteries from waste mobile phones, collected and pretreated following the procedure shown in Figure 1.",
+    "sample_type": "spent lithium-ion battery",
+    "scope_description": "Spent lithium-ion batteries collected from waste mobile phones, discharged in 5 wt % NaCl for 48 h and air-dried, then manually dismantled to obtain cathode and anode materials.",
     "sample_size": null
   },
   {
@@ -22,28 +32,29 @@
     "scope_subject_text": "electrode material",
     "scope_label": "electrode material",
     "evidence_ids": [
-      "Eb56371fa5f",
-      "Ec1447ffd98",
-      "Ee0bd7ef844",
-      "Ee197a06543"
+      "E1ee53de78e",
+      "E1ee53de78e",
+      "Ea9406a8339"
     ],
-    "evidence_span": "Advanced analysis technologies of scanning electron microscopy (SEM), X-ray fluorescence spectrometry (XRF), and X-ray photoelectron spectroscopy (XPS) were used to obtain the morphology, chemical composition, and chemical states of surface elements of electrode material particles before and after pyrolysis.",
+    "evidence_span": "Electrode materials were obtained by combining the crushing and sieving process.",
+    "evidence": [
+      {
+        "evidence_id": "E1ee53de78e",
+        "quote": "Electrode materials were obtained by combining the crushing and sieving process."
+      },
+      {
+        "evidence_id": "E1ee53de78e",
+        "quote": "the 0.075 mm size screen hole was used to obtain electrode materials with fine size in this study. Three kinds of samples were prepared including cathode materials (LiCoO ), anode materials (graphite), and an electrode material mixture (LiCoO and graphite)."
+      },
+      {
+        "evidence_id": "Ea9406a8339",
+        "quote": "three samples were prepared for flotation: raw electrode material mixture (REM), pyrolytic electrode material mixture (PEM), and pyrolysis-ultrasonic pretreated electrode material mixture (PUEM)."
+      }
+    ],
     "population_granularity": "batch",
-    "sample_type": "electrode material",
-    "scope_description": "Electrode materials obtained by combining crushing and sieving, with a 0.075 mm size screen hole used to obtain fine-sized electrode materials; separated by filtration and dried at 80 °C.",
+    "sample_type": "electrode material mixture",
+    "scope_description": "Electrode material mixture (LiCoO2 and graphite) obtained by crushing and sieving dismantled spent LIB electrodes to the -0.075 mm fraction; used as raw, pyrolytic, and pyrolysis-ultrasonic pretreated flotation feeds.",
     "sample_size": null
-  },
-  {
-    "root_entity_ids": [
-      "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
-    ],
-    "scope_subject_text": "flotation of pyrolysis-ultrasonic pretreated electrode material mixture",
-    "scope_label": "flotation of pyrolysis-ultrasonic pretreated electrode material mixture",
-    "evidence_ids": [
-      "Eb126c38526"
-    ],
-    "evidence_span": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
-    "method_family": "flotation"
   },
   {
     "root_entity_ids": [
@@ -52,10 +63,21 @@
     "scope_subject_text": "flotation of raw electrode material mixture",
     "scope_label": "flotation of raw electrode material mixture",
     "evidence_ids": [
-      "Eccaa4fe10a"
+      "E1cd0243391",
+      "E1cd0243391"
     ],
     "evidence_span": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
-    "method_family": "flotation"
+    "evidence": [
+      {
+        "evidence_id": "E1cd0243391",
+        "quote": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process."
+      },
+      {
+        "evidence_id": "E1cd0243391",
+        "quote": "Flotation experiments were conducted using an XFD-63 flotation machine at pulp density of 40 g / L,, impeller speed of 1800 rpm, and aeration quantity of 2.0 L/min"
+      }
+    ],
+    "method_family": "froth flotation"
   },
   {
     "root_entity_ids": [
@@ -64,9 +86,43 @@
     "scope_subject_text": "flotation of pyrolytic electrode material mixture",
     "scope_label": "flotation of pyrolytic electrode material mixture",
     "evidence_ids": [
-      "Edefb8ee36a"
+      "E1cd0243391",
+      "E1cd0243391"
     ],
     "evidence_span": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
-    "method_family": "flotation"
+    "evidence": [
+      {
+        "evidence_id": "E1cd0243391",
+        "quote": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process."
+      },
+      {
+        "evidence_id": "E1cd0243391",
+        "quote": "Flotation experiments were conducted using an XFD-63 flotation machine at pulp density of 40 g / L,, impeller speed of 1800 rpm, and aeration quantity of 2.0 L/min"
+      }
+    ],
+    "method_family": "froth flotation"
+  },
+  {
+    "root_entity_ids": [
+      "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+    ],
+    "scope_subject_text": "flotation of pyrolysis-ultrasonic pretreated electrode material mixture",
+    "scope_label": "flotation of pyrolysis-ultrasonic pretreated electrode material mixture",
+    "evidence_ids": [
+      "E1cd0243391",
+      "E1cd0243391"
+    ],
+    "evidence_span": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
+    "evidence": [
+      {
+        "evidence_id": "E1cd0243391",
+        "quote": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process."
+      },
+      {
+        "evidence_id": "E1cd0243391",
+        "quote": "Flotation experiments were conducted using an XFD-63 flotation machine at pulp density of 40 g / L,, impeller speed of 1800 rpm, and aeration quantity of 2.0 L/min"
+      }
+    ],
+    "method_family": "froth flotation"
   }
 ]

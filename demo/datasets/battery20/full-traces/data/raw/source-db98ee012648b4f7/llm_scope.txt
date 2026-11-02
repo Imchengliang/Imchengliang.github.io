@@ -6,14 +6,23 @@
     "scope_subject_text": "lithium ion battery",
     "scope_label": "lithium ion battery",
     "evidence_ids": [
-      "E3530a24522",
-      "E6374fb89cf",
-      "Ef1ef1b5f9a"
+      "E6fd1e3d56a",
+      "E92ca22ee79"
     ],
-    "evidence_span": "In the past studies, Acidithiobacillus ferrooxidans only as IOB was used for leaching spent LIBs (Mishra et al., 2008a; Zeng et al., 2012).",
+    "evidence_span": "The spent LIBs were manually dismantled into different portions including plastic shell, cathode, anode, aluminum foil and so on. Then the separated active cathode and anode containing dense Co and Li were mixed, ground by milling and sieved to obtain a mesh size of less than 200 lm (Mishra et al., 2008a). The resulting powder, used for bioleaching experiments, was digested by HF - HNO _ 3 –HCl method (USEPA, 1996) to determine the content of Co at 358 mg g ^-1 and Li at 45 mg g ^-1 using AAS.",
+    "evidence": [
+      {
+        "evidence_id": "E6fd1e3d56a",
+        "quote": "The spent LIBs were manually dismantled into different portions including plastic shell, cathode, anode, aluminum foil and so on. Then the separated active cathode and anode containing dense Co and Li were mixed, ground by milling and sieved to obtain a mesh size of less than 200 lm (Mishra et al., 2008a). The resulting powder, used for bioleaching experiments, was digested by HF - HNO _ 3 –HCl method (USEPA, 1996) to determine the content of Co at 358 mg g ^-1 and Li at 45 mg g ^-1 using AAS."
+      },
+      {
+        "evidence_id": "E92ca22ee79",
+        "quote": "In this work, bioleaching behavior of the spent LIBs at pulp densities ranging from 1% to 4% was investigated and process controls to improve bioleaching performance at pulp density of 2% were explored."
+      }
+    ],
     "population_granularity": "batch",
-    "sample_type": "lithium ion battery",
-    "scope_description": "Spent lithium ion batteries (LIBs) used as the study sample; LIB powder was added to media at a final concentration of 2% (w/v) for bioleaching.",
+    "sample_type": "spent lithium-ion battery",
+    "scope_description": "Spent LIBs manually dismantled into plastic shell, cathode, anode, aluminum foil, etc.; the separated active cathode and anode containing Co and Li were mixed, milled and sieved to <200 µm powder used for bioleaching, with Co at 358 mg/g and Li at 45 mg/g.",
     "sample_size": null
   },
   {
@@ -23,9 +32,15 @@
     "scope_subject_text": "bioleaching of Co and Li from spent LIB powder",
     "scope_label": "bioleaching of Co and Li from spent LIB powder",
     "evidence_ids": [
-      "E9c8dad21a7"
+      "Ed7a423d1fc"
     ],
-    "evidence_span": "Bioleaching of Co and Li from spent LIB powder using a mixed culture of SOB (Alicyclobacillus sp.) and IOB (Sulfobacillus sp.) acclimated for 30 d with 0.25–1.0% (w/v) LIB powder.",
+    "evidence_span": "Bioleaching experiments were conducted according to the previous paper (Xin et al., 2009). Unless specifically stated, bioleaching media containing 4.0 g L ^-1 of mixed energy matters (sulfur and pyrite) was inoculated respectively with SOB and IOB as the mixed culture, followed by incubation at 30 \u0003C until the pH value dropped to ca 1.0 and the ORP value rose to ca 450 mV. At that time, the spent LIB powder was added into the media to a final concentration of 2% to initiate the bioleaching after its pH value was adjusted precisely to pH 1.0.",
+    "evidence": [
+      {
+        "evidence_id": "Ed7a423d1fc",
+        "quote": "Bioleaching experiments were conducted according to the previous paper (Xin et al., 2009). Unless specifically stated, bioleaching media containing 4.0 g L ^-1 of mixed energy matters (sulfur and pyrite) was inoculated respectively with SOB and IOB as the mixed culture, followed by incubation at 30 \u0003C until the pH value dropped to ca 1.0 and the ORP value rose to ca 450 mV. At that time, the spent LIB powder was added into the media to a final concentration of 2% to initiate the bioleaching after its pH value was adjusted precisely to pH 1.0."
+      }
+    ],
     "method_family": "bioleaching"
   }
 ]

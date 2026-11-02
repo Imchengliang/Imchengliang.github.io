@@ -303,48 +303,455 @@
     "scope": [
       {
         "root_entity_ids": [
+          "Product_lithium_ion_battery"
+        ],
+        "scope_subject_text": "lithium-ion battery",
+        "scope_label": "lithium-ion battery",
+        "evidence_ids": [
+          "E13544eabca",
+          "E7042c39b47"
+        ],
+        "evidence_span": "The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd.",
+        "evidence": [
+          {
+            "evidence_id": "E13544eabca",
+            "quote": "The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd."
+          },
+          {
+            "evidence_id": "E7042c39b47",
+            "quote": "The spent LIBs were discharged firstly to prevent the dangers of short-circuits and spontaneous combustion. Then they were dismantled manually to different parts: cathode, anode, organic separator and the plastic case. With aid of scraper and tweezers, active materials were separated from the anode."
+          }
+        ],
+        "population_granularity": "batch",
+        "sample_type": "spent lithium-ion battery",
+        "scope_description": "Spent lithium-ion batteries produced by Sony Ericsson Mobile Communications (China) Co., Ltd., discharged, manually dismantled, and their anode active material separated and calcined for the study.",
+        "sample_size": null
+      },
+      {
+        "root_entity_ids": [
+          "Component_anode_active_material"
+        ],
+        "scope_subject_text": "anode active material",
+        "scope_label": "anode active material",
+        "evidence_ids": [
+          "E7042c39b47",
+          "E13544eabca"
+        ],
+        "evidence_span": "With aid of scraper and tweezers, active materials were separated from the anode. These partitioned black active materials were placed in a furnace and calcined at 500 ^∘C for one hour to remove the organic components.",
+        "evidence": [
+          {
+            "evidence_id": "E7042c39b47",
+            "quote": "With aid of scraper and tweezers, active materials were separated from the anode. These partitioned black active materials were placed in a furnace and calcined at 500 ^∘C for one hour to remove the organic components."
+          },
+          {
+            "evidence_id": "E13544eabca",
+            "quote": "The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd."
+          }
+        ],
+        "population_granularity": "batch",
+        "sample_type": "anode active material from spent lithium-ion batteries",
+        "scope_description": "Anode active material separated from the spent Sony Ericsson LIBs, calcined at 500 °C for one hour to remove organic components before leaching.",
+        "sample_size": null
+      },
+      {
+        "root_entity_ids": [
           "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
         ],
         "scope_subject_text": "reductive hydrochloric acid leaching of calcined powder",
         "scope_label": "reductive hydrochloric acid leaching of calcined powder",
         "evidence_ids": [
-          "E323714adbe"
+          "E595b35ad9a"
         ],
-        "evidence_span": "The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd.",
-        "method_family": "reductive hydrochloric acid leaching"
+        "evidence_span": "In this study, hydrochloric acid was taken as leachate to recycle lithium from the calcined powder materials. To increase the leaching efficiency, reductive leaching was carried out with H2O2 as the reducing agent.",
+        "evidence": [
+          {
+            "evidence_id": "E595b35ad9a",
+            "quote": "In this study, hydrochloric acid was taken as leachate to recycle lithium from the calcined powder materials. To increase the leaching efficiency, reductive leaching was carried out with H2O2 as the reducing agent."
+          }
+        ],
+        "method_family": "reductive acid leaching"
+      },
+      {
+        "root_entity_ids": [
+          "Process_reviewed_c2ca1a770bfa07"
+        ],
+        "scope_subject_text": "deionized water leaching of calcined anode powder",
+        "scope_label": "deionized water leaching of calcined anode powder",
+        "evidence_ids": [
+          "E6c185ce685"
+        ],
+        "evidence_span": "Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water.",
+        "evidence": [
+          {
+            "evidence_id": "E6c185ce685",
+            "quote": "Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water."
+          }
+        ],
+        "method_family": "water leaching"
+      },
+      {
+        "root_entity_ids": [
+          "Process_reviewed_8daa8098cc6a94"
+        ],
+        "scope_subject_text": "hydrochloric acid leaching of calcined anode powder without H2O2",
+        "scope_label": "hydrochloric acid leaching of calcined anode powder without H2O2",
+        "evidence_ids": [
+          "Eb01c0ea70f",
+          "E6c185ce685"
+        ],
+        "evidence_span": "Being a solid–liquid reaction, the leaching process was mainly influenced by the concentration of hydrochloric acid, _ H Cl - H2O2 volume ratio, solid–liquid ratio, leaching time, and temperature and agitation rate.",
+        "evidence": [
+          {
+            "evidence_id": "Eb01c0ea70f",
+            "quote": "Being a solid–liquid reaction, the leaching process was mainly influenced by the concentration of hydrochloric acid, _ H Cl - H2O2 volume ratio, solid–liquid ratio, leaching time, and temperature and agitation rate."
+          },
+          {
+            "evidence_id": "E6c185ce685",
+            "quote": "While others are almost insoluble in water and inlaid in the anode active materials, such as ROCO Li, LiF, and they will occur decomposition reaction in HCl solution."
+          }
+        ],
+        "method_family": "acid leaching"
       }
     ],
     "scope_audit": {
-      "evidence_record_count": 1,
+      "evidence_record_count": 49,
       "rejected_definition_count": 0,
+      "unscoped_candidate_count": 0,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
     "scope_assertions": [
       {
-        "id": "scope-assertion:2d9cd63ecce5c9ba",
+        "id": "scope-assertion:6baca0d29c579be1",
         "micrograph_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
         "root_entity_ids": [
-          "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
+          "Product_lithium_ion_battery"
         ],
-        "scope_kind": "process_method_family",
+        "requested_root_entity_ids": [
+          "Product_lithium_ion_battery"
+        ],
+        "scope_kind": "declared_population",
         "facets": {
-          "method_family": "reductive hydrochloric acid leaching"
+          "population_granularity": "batch",
+          "sample_type": "spent lithium-ion battery"
         },
-        "scope_description": "The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd.",
+        "scope_description": "Spent lithium-ion batteries produced by Sony Ericsson Mobile Communications (China) Co., Ltd., discharged, manually dismantled, and their anode active material separated and calcined for the study.",
         "sample_size": null,
         "evidence_span": "The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:6baca0d29c579be1:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Product_lithium_ion_battery:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:a4d3a859b00e7d0d",
+        "micrograph_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
+        "root_entity_ids": [
+          "Component_anode_active_material"
+        ],
+        "requested_root_entity_ids": [
+          "Component_anode_active_material"
+        ],
+        "scope_kind": "declared_population",
+        "facets": {
+          "population_granularity": "batch",
+          "sample_type": "anode active material from spent lithium-ion batteries"
+        },
+        "scope_description": "Anode active material separated from the spent Sony Ericsson LIBs, calcined at 500 °C for one hour to remove organic components before leaching.",
+        "sample_size": null,
+        "evidence_span": "With aid of scraper and tweezers, active materials were separated from the anode. These partitioned black active materials were placed in a furnace and calcined at 500 ^∘C for one hour to remove the organic components.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Component_anode_active_material:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:354a66ab986d1485",
+        "micrograph_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
+        "root_entity_ids": [
+          "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
+        ],
+        "requested_root_entity_ids": [
+          "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "reductive acid leaching"
+        },
+        "scope_description": "In this study, hydrochloric acid was taken as leachate to recycle lithium from the calcined powder materials. To increase the leaching efficiency, reductive leaching was carried out with H2O2 as the reducing agent.",
+        "sample_size": null,
+        "evidence_span": "In this study, hydrochloric acid was taken as leachate to recycle lithium from the calcined powder materials. To increase the leaching efficiency, reductive leaching was carried out with H2O2 as the reducing agent.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:354a66ab986d1485:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reductive_hydrochloric_acid_leaching_of_calcined_powder:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:48c37983a2a4870b",
+        "micrograph_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
+        "root_entity_ids": [
+          "Process_reviewed_c2ca1a770bfa07"
+        ],
+        "requested_root_entity_ids": [
+          "Process_reviewed_c2ca1a770bfa07"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "water leaching"
+        },
+        "scope_description": "Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water.",
+        "sample_size": null,
+        "evidence_span": "Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:48c37983a2a4870b:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reviewed_c2ca1a770bfa07:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:5089b4b695628b7d",
+        "micrograph_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
+        "root_entity_ids": [
+          "Process_reviewed_8daa8098cc6a94"
+        ],
+        "requested_root_entity_ids": [
+          "Process_reviewed_8daa8098cc6a94"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "acid leaching"
+        },
+        "scope_description": "Being a solid–liquid reaction, the leaching process was mainly influenced by the concentration of hydrochloric acid, _ H Cl - H2O2 volume ratio, solid–liquid ratio, leaching time, and temperature and agitation rate.",
+        "sample_size": null,
+        "evidence_span": "Being a solid–liquid reaction, the leaching process was mainly influenced by the concentration of hydrochloric acid, _ H Cl - H2O2 volume ratio, solid–liquid ratio, leaching time, and temperature and agitation rate.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:5089b4b695628b7d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reviewed_8daa8098cc6a94:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:4c42dc0152371e4c",
-        "scope_assertion_id": "scope-assertion:2d9cd63ecce5c9ba",
+        "id": "scope-path:9005fa1534e29e2e",
+        "scope_assertion_id": "scope-assertion:6baca0d29c579be1",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:6baca0d29c579be1:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
+        ]
+      },
+      {
+        "id": "scope-path:54fcc1719886ac19",
+        "scope_assertion_id": "scope-assertion:6baca0d29c579be1",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Component_cathode",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:6baca0d29c579be1:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ]
+      },
+      {
+        "id": "scope-path:d8525cbcd64bf599",
+        "scope_assertion_id": "scope-assertion:6baca0d29c579be1",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Component_anode",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:6baca0d29c579be1:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
+        ]
+      },
+      {
+        "id": "scope-path:9ae3890d532f38b8",
+        "scope_assertion_id": "scope-assertion:6baca0d29c579be1",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Component_organic_separator",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:6baca0d29c579be1:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Product_lithium_ion_battery_CONTAINS_Component_organic_separator"
+        ]
+      },
+      {
+        "id": "scope-path:6a6a30ec0e790fee",
+        "scope_assertion_id": "scope-assertion:6baca0d29c579be1",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Component_plastic_case",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:6baca0d29c579be1:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Product_lithium_ion_battery_CONTAINS_Component_plastic_case"
+        ]
+      },
+      {
+        "id": "scope-path:bb94479056eb8478",
+        "scope_assertion_id": "scope-assertion:6baca0d29c579be1",
+        "statement_relation_id": "REL_Component_anode_CONTAINS_Material_active_material",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery",
+          "Component_anode"
+        ],
+        "containment_relation_path": [
+          "REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
+        ],
+        "propagation_kind": "contains_path",
+        "evidence_refs": [
+          "scope:scope-assertion:6baca0d29c579be1:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_CONTAINS_Material_active_material",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
+        ]
+      },
+      {
+        "id": "scope-path:ca3ce7223500f9af",
+        "scope_assertion_id": "scope-assertion:a4d3a859b00e7d0d",
+        "statement_relation_id": "REL_Component_anode_active_material_PROCESSED_BY_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+        "root_entity_id": "Component_anode_active_material",
+        "entity_path": [
+          "Component_anode_active_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_active_material_PROCESSED_BY_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
+        ]
+      },
+      {
+        "id": "scope-path:3e8f04e6f1cb08e1",
+        "scope_assertion_id": "scope-assertion:a4d3a859b00e7d0d",
+        "statement_relation_id": "REL_Component_anode_active_material_CONTAINS_Material_lithium_carbonate",
+        "root_entity_id": "Component_anode_active_material",
+        "entity_path": [
+          "Component_anode_active_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_active_material_CONTAINS_Material_lithium_carbonate"
+        ]
+      },
+      {
+        "id": "scope-path:fd88054c32dc9fef",
+        "scope_assertion_id": "scope-assertion:a4d3a859b00e7d0d",
+        "statement_relation_id": "REL_Component_anode_active_material_CONTAINS_Material_lithium_oxide",
+        "root_entity_id": "Component_anode_active_material",
+        "entity_path": [
+          "Component_anode_active_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_active_material_CONTAINS_Material_lithium_oxide"
+        ]
+      },
+      {
+        "id": "scope-path:4b340c3a37a4addc",
+        "scope_assertion_id": "scope-assertion:a4d3a859b00e7d0d",
+        "statement_relation_id": "REL_Component_anode_active_material_CONTAINS_Material_lithium_fluoride",
+        "root_entity_id": "Component_anode_active_material",
+        "entity_path": [
+          "Component_anode_active_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_active_material_CONTAINS_Material_lithium_fluoride"
+        ]
+      },
+      {
+        "id": "scope-path:be60e68bea1b2818",
+        "scope_assertion_id": "scope-assertion:a4d3a859b00e7d0d",
+        "statement_relation_id": "REL_Component_anode_active_material_CONTAINS_Material_ROCO2Li",
+        "root_entity_id": "Component_anode_active_material",
+        "entity_path": [
+          "Component_anode_active_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_active_material_CONTAINS_Material_ROCO2Li"
+        ]
+      },
+      {
+        "id": "scope-path:0cf4f9f92a3fa76a",
+        "scope_assertion_id": "scope-assertion:a4d3a859b00e7d0d",
+        "statement_relation_id": "REL_Component_anode_active_material_CONTAINS_Material_CH3OLi",
+        "root_entity_id": "Component_anode_active_material",
+        "entity_path": [
+          "Component_anode_active_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_active_material_CONTAINS_Material_CH3OLi"
+        ]
+      },
+      {
+        "id": "scope-path:519a181a7b21c6c9",
+        "scope_assertion_id": "scope-assertion:a4d3a859b00e7d0d",
+        "statement_relation_id": "REL_reviewed_input_Process_reviewed_c2ca1a770bfa07",
+        "root_entity_id": "Component_anode_active_material",
+        "entity_path": [
+          "Component_anode_active_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_reviewed_input_Process_reviewed_c2ca1a770bfa07"
+        ]
+      },
+      {
+        "id": "scope-path:50b18bf9647d82ad",
+        "scope_assertion_id": "scope-assertion:a4d3a859b00e7d0d",
+        "statement_relation_id": "REL_reviewed_input_Process_reviewed_8daa8098cc6a94",
+        "root_entity_id": "Component_anode_active_material",
+        "entity_path": [
+          "Component_anode_active_material"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_reviewed_input_Process_reviewed_8daa8098cc6a94"
+        ]
+      },
+      {
+        "id": "scope-path:149025a8dd1aae8b",
+        "scope_assertion_id": "scope-assertion:354a66ab986d1485",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
         "root_entity_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
         "entity_path": [
@@ -353,13 +760,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
         ]
       },
       {
-        "id": "scope-path:b0f0d9474ab12c1f",
-        "scope_assertion_id": "scope-assertion:2d9cd63ecce5c9ba",
+        "id": "scope-path:adc0c30bcb9c50e0",
+        "scope_assertion_id": "scope-assertion:354a66ab986d1485",
         "statement_relation_id": "REL_Component_anode_active_material_PROCESSED_BY_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
         "root_entity_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
         "entity_path": [
@@ -368,13 +775,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_active_material_PROCESSED_BY_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
         ]
       },
       {
-        "id": "scope-path:cfaa67b3b8fa16cb",
-        "scope_assertion_id": "scope-assertion:2d9cd63ecce5c9ba",
+        "id": "scope-path:35e6f56dc32e496d",
+        "scope_assertion_id": "scope-assertion:354a66ab986d1485",
         "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
         "entity_path": [
@@ -383,13 +790,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:cfaa67b3b8fa16cb",
-        "scope_assertion_id": "scope-assertion:2d9cd63ecce5c9ba",
+        "id": "scope-path:35e6f56dc32e496d",
+        "scope_assertion_id": "scope-assertion:354a66ab986d1485",
         "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
         "entity_path": [
@@ -398,13 +805,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:cfaa67b3b8fa16cb",
-        "scope_assertion_id": "scope-assertion:2d9cd63ecce5c9ba",
+        "id": "scope-path:35e6f56dc32e496d",
+        "scope_assertion_id": "scope-assertion:354a66ab986d1485",
         "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
         "entity_path": [
@@ -413,13 +820,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:cfaa67b3b8fa16cb",
-        "scope_assertion_id": "scope-assertion:2d9cd63ecce5c9ba",
+        "id": "scope-path:35e6f56dc32e496d",
+        "scope_assertion_id": "scope-assertion:354a66ab986d1485",
         "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
         "entity_path": [
@@ -428,13 +835,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:cfaa67b3b8fa16cb",
-        "scope_assertion_id": "scope-assertion:2d9cd63ecce5c9ba",
+        "id": "scope-path:35e6f56dc32e496d",
+        "scope_assertion_id": "scope-assertion:354a66ab986d1485",
         "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
         "entity_path": [
@@ -443,13 +850,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:cfaa67b3b8fa16cb",
-        "scope_assertion_id": "scope-assertion:2d9cd63ecce5c9ba",
+        "id": "scope-path:35e6f56dc32e496d",
+        "scope_assertion_id": "scope-assertion:354a66ab986d1485",
         "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
         "entity_path": [
@@ -458,68 +865,68 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:cfaa67b3b8fa16cb",
-        "scope_assertion_id": "scope-assertion:2d9cd63ecce5c9ba",
-        "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+        "id": "scope-path:14adbec175a20f91",
+        "scope_assertion_id": "scope-assertion:48c37983a2a4870b",
+        "statement_relation_id": "REL_reviewed_a9a09b1adf9bea5e",
+        "root_entity_id": "Process_reviewed_c2ca1a770bfa07",
         "entity_path": [
-          "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
+          "Process_reviewed_c2ca1a770bfa07"
         ],
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li"
+          "scope:scope-assertion:48c37983a2a4870b:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_reviewed_a9a09b1adf9bea5e"
         ]
       },
       {
-        "id": "scope-path:cfaa67b3b8fa16cb",
-        "scope_assertion_id": "scope-assertion:2d9cd63ecce5c9ba",
-        "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+        "id": "scope-path:29c440e163ecab82",
+        "scope_assertion_id": "scope-assertion:48c37983a2a4870b",
+        "statement_relation_id": "REL_reviewed_input_Process_reviewed_c2ca1a770bfa07",
+        "root_entity_id": "Process_reviewed_c2ca1a770bfa07",
         "entity_path": [
-          "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
+          "Process_reviewed_c2ca1a770bfa07"
         ],
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li"
+          "scope:scope-assertion:48c37983a2a4870b:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_reviewed_input_Process_reviewed_c2ca1a770bfa07"
         ]
       },
       {
-        "id": "scope-path:d3523e5b87e94398",
-        "scope_assertion_id": "scope-assertion:2d9cd63ecce5c9ba",
-        "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_graphite",
-        "root_entity_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+        "id": "scope-path:84b797f7ef5ba258",
+        "scope_assertion_id": "scope-assertion:5089b4b695628b7d",
+        "statement_relation_id": "REL_reviewed_283200192ce04a28",
+        "root_entity_id": "Process_reviewed_8daa8098cc6a94",
         "entity_path": [
-          "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
+          "Process_reviewed_8daa8098cc6a94"
         ],
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_graphite"
+          "scope:scope-assertion:5089b4b695628b7d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_reviewed_283200192ce04a28"
         ]
       },
       {
-        "id": "scope-path:cfaa67b3b8fa16cb",
-        "scope_assertion_id": "scope-assertion:2d9cd63ecce5c9ba",
-        "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+        "id": "scope-path:5eb4723c76b0b653",
+        "scope_assertion_id": "scope-assertion:5089b4b695628b7d",
+        "statement_relation_id": "REL_reviewed_input_Process_reviewed_8daa8098cc6a94",
+        "root_entity_id": "Process_reviewed_8daa8098cc6a94",
         "entity_path": [
-          "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
+          "Process_reviewed_8daa8098cc6a94"
         ],
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li"
+          "scope:scope-assertion:5089b4b695628b7d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_reviewed_input_Process_reviewed_8daa8098cc6a94"
         ]
       }
     ],
@@ -6106,14 +6513,18 @@
           "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:2d9cd63ecce5c9ba"
+          "scope-assertion:354a66ab986d1485",
+          "scope-assertion:6baca0d29c579be1"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:4c42dc0152371e4c"
+          "scope-path:149025a8dd1aae8b",
+          "scope-path:9005fa1534e29e2e"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
+          "scope:scope-assertion:6baca0d29c579be1:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reductive_hydrochloric_acid_leaching_of_calcined_powder:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Product_lithium_ion_battery:entity",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:0843510a887d2b10",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:0843510a887d2b10:evidence"
@@ -6130,9 +6541,16 @@
           "Product_lithium_ion_battery",
           "Component_cathode"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:6baca0d29c579be1"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:54fcc1719886ac19"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:6baca0d29c579be1:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Product_lithium_ion_battery:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:652e614f14c7bdc2",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:652e614f14c7bdc2:evidence"
         ]
@@ -6148,9 +6566,16 @@
           "Product_lithium_ion_battery",
           "Component_anode"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:6baca0d29c579be1"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:d8525cbcd64bf599"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:6baca0d29c579be1:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Product_lithium_ion_battery:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:85ba9bc914fb1ff9",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:85ba9bc914fb1ff9:evidence"
         ]
@@ -6166,9 +6591,16 @@
           "Product_lithium_ion_battery",
           "Component_organic_separator"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:6baca0d29c579be1"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:9ae3890d532f38b8"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:6baca0d29c579be1:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Product_lithium_ion_battery:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Product_lithium_ion_battery_CONTAINS_Component_organic_separator",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:c35db302e81f073a",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:c35db302e81f073a:evidence"
         ]
@@ -6184,9 +6616,16 @@
           "Product_lithium_ion_battery",
           "Component_plastic_case"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:6baca0d29c579be1"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:6a6a30ec0e790fee"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:6baca0d29c579be1:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Product_lithium_ion_battery:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Product_lithium_ion_battery_CONTAINS_Component_plastic_case",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:5814291f7ab71e86",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:5814291f7ab71e86:evidence"
         ]
@@ -6202,9 +6641,17 @@
           "Component_anode",
           "Material_active_material"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:6baca0d29c579be1"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:bb94479056eb8478"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:6baca0d29c579be1:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Product_lithium_ion_battery:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_CONTAINS_Material_active_material",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:0e59e1166bede220",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:0e59e1166bede220:evidence"
         ]
@@ -6221,13 +6668,17 @@
           "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:2d9cd63ecce5c9ba"
+          "scope-assertion:354a66ab986d1485",
+          "scope-assertion:a4d3a859b00e7d0d"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:b0f0d9474ab12c1f"
+          "scope-path:adc0c30bcb9c50e0",
+          "scope-path:ca3ce7223500f9af"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Component_anode_active_material:entity",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reductive_hydrochloric_acid_leaching_of_calcined_powder:entity",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_active_material_PROCESSED_BY_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:16cc68f16a4ae3dd",
@@ -6245,9 +6696,16 @@
           "Component_anode_active_material",
           "Material_lithium_carbonate"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:a4d3a859b00e7d0d"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:3e8f04e6f1cb08e1"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Component_anode_active_material:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_active_material_CONTAINS_Material_lithium_carbonate",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:c0f729bfbe3aa2a0",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:c0f729bfbe3aa2a0:evidence"
         ]
@@ -6263,9 +6721,16 @@
           "Component_anode_active_material",
           "Material_lithium_oxide"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:a4d3a859b00e7d0d"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:fd88054c32dc9fef"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Component_anode_active_material:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_active_material_CONTAINS_Material_lithium_oxide",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:e95134483dbd2fc2",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:e95134483dbd2fc2:evidence"
         ]
@@ -6281,9 +6746,16 @@
           "Component_anode_active_material",
           "Material_lithium_fluoride"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:a4d3a859b00e7d0d"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:4b340c3a37a4addc"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Component_anode_active_material:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_active_material_CONTAINS_Material_lithium_fluoride",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:8821747bdaf3a30f",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:8821747bdaf3a30f:evidence"
         ]
@@ -6299,9 +6771,16 @@
           "Component_anode_active_material",
           "Material_ROCO2Li"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:a4d3a859b00e7d0d"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:be60e68bea1b2818"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Component_anode_active_material:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_active_material_CONTAINS_Material_ROCO2Li",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:1b9e860dd185c7ac",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:1b9e860dd185c7ac:evidence"
         ]
@@ -6317,11 +6796,43 @@
           "Component_anode_active_material",
           "Material_CH3OLi"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:a4d3a859b00e7d0d"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:0cf4f9f92a3fa76a"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Component_anode_active_material:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Component_anode_active_material_CONTAINS_Material_CH3OLi",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:88a0684c207e61ea",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:88a0684c207e61ea:evidence"
+        ]
+      },
+      {
+        "id": "local-unit:7db2d98101760f24",
+        "micrograph_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
+        "statement_id": "statement:2f7830828abd9098",
+        "statement_relation_id": "REL_reviewed_a9a09b1adf9bea5e",
+        "source_relation_id": "REL_reviewed_a9a09b1adf9bea5e",
+        "source_relation_index": 12,
+        "entity_ids": [
+          "Process_reviewed_c2ca1a770bfa07",
+          "Material_Li"
+        ],
+        "scope_assertion_ids": [
+          "scope-assertion:48c37983a2a4870b"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:14adbec175a20f91"
+        ],
+        "evidence_refs": [
+          "scope:scope-assertion:48c37983a2a4870b:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reviewed_c2ca1a770bfa07:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_reviewed_a9a09b1adf9bea5e",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:2f7830828abd9098",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:2f7830828abd9098:evidence"
         ]
       },
       {
@@ -6330,19 +6841,19 @@
         "statement_id": "statement:ea5855fd1285948a",
         "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 12,
+        "source_relation_index": 13,
         "entity_ids": [
           "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:2d9cd63ecce5c9ba"
+          "scope-assertion:354a66ab986d1485"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cfaa67b3b8fa16cb"
+          "scope-path:35e6f56dc32e496d"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reductive_hydrochloric_acid_leaching_of_calcined_powder:entity",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:ea5855fd1285948a",
@@ -6355,19 +6866,19 @@
         "statement_id": "statement:7edca9da8f18efa1",
         "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 13,
+        "source_relation_index": 14,
         "entity_ids": [
           "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:2d9cd63ecce5c9ba"
+          "scope-assertion:354a66ab986d1485"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cfaa67b3b8fa16cb"
+          "scope-path:35e6f56dc32e496d"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reductive_hydrochloric_acid_leaching_of_calcined_powder:entity",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:7edca9da8f18efa1",
@@ -6380,48 +6891,23 @@
         "statement_id": "statement:3b35a7ac99b5b6ae",
         "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 14,
-        "entity_ids": [
-          "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
-          "Material_Li"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:2d9cd63ecce5c9ba"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:cfaa67b3b8fa16cb"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reductive_hydrochloric_acid_leaching_of_calcined_powder:entity",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:3b35a7ac99b5b6ae",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:3b35a7ac99b5b6ae:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:40e065796397f528",
-        "micrograph_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
-        "statement_id": "statement:a652e8b364b0340a",
-        "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
         "source_relation_index": 15,
         "entity_ids": [
           "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:2d9cd63ecce5c9ba"
+          "scope-assertion:354a66ab986d1485"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cfaa67b3b8fa16cb"
+          "scope-path:35e6f56dc32e496d"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reductive_hydrochloric_acid_leaching_of_calcined_powder:entity",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:a652e8b364b0340a",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:a652e8b364b0340a:evidence"
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:3b35a7ac99b5b6ae",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:3b35a7ac99b5b6ae:evidence"
         ]
       },
       {
@@ -6461,9 +6947,9 @@
         ]
       },
       {
-        "id": "local-unit:a68abe0a84f20389",
+        "id": "local-unit:40e065796397f528",
         "micrograph_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
-        "statement_id": "statement:281dd5d200705df0",
+        "statement_id": "statement:a652e8b364b0340a",
         "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
         "source_relation_index": 18,
@@ -6472,13 +6958,63 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:2d9cd63ecce5c9ba"
+          "scope-assertion:354a66ab986d1485"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cfaa67b3b8fa16cb"
+          "scope-path:35e6f56dc32e496d"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reductive_hydrochloric_acid_leaching_of_calcined_powder:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:a652e8b364b0340a",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:a652e8b364b0340a:evidence"
+        ]
+      },
+      {
+        "id": "local-unit:93f218934900fe9f",
+        "micrograph_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
+        "statement_id": "statement:b76ffa2c9e2620c6",
+        "statement_relation_id": "REL_reviewed_283200192ce04a28",
+        "source_relation_id": "REL_reviewed_283200192ce04a28",
+        "source_relation_index": 19,
+        "entity_ids": [
+          "Process_reviewed_8daa8098cc6a94",
+          "Material_Li"
+        ],
+        "scope_assertion_ids": [
+          "scope-assertion:5089b4b695628b7d"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:84b797f7ef5ba258"
+        ],
+        "evidence_refs": [
+          "scope:scope-assertion:5089b4b695628b7d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reviewed_8daa8098cc6a94:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_reviewed_283200192ce04a28",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:b76ffa2c9e2620c6",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:b76ffa2c9e2620c6:evidence"
+        ]
+      },
+      {
+        "id": "local-unit:a68abe0a84f20389",
+        "micrograph_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
+        "statement_id": "statement:281dd5d200705df0",
+        "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+        "source_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
+        "source_relation_index": 20,
+        "entity_ids": [
+          "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+          "Material_Li"
+        ],
+        "scope_assertion_ids": [
+          "scope-assertion:354a66ab986d1485"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:35e6f56dc32e496d"
+        ],
+        "evidence_refs": [
+          "scope:scope-assertion:354a66ab986d1485:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reductive_hydrochloric_acid_leaching_of_calcined_powder:entity",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:281dd5d200705df0",
@@ -6491,73 +7027,23 @@
         "statement_id": "statement:5d903d9d98c291c3",
         "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 19,
-        "entity_ids": [
-          "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
-          "Material_Li"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:2d9cd63ecce5c9ba"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:cfaa67b3b8fa16cb"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reductive_hydrochloric_acid_leaching_of_calcined_powder:entity",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:5d903d9d98c291c3",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:5d903d9d98c291c3:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:303b1fe44dcd8e46",
-        "micrograph_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
-        "statement_id": "statement:174b20cdb67fb285",
-        "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 20,
-        "entity_ids": [
-          "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
-          "Material_Li"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:2d9cd63ecce5c9ba"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:cfaa67b3b8fa16cb"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reductive_hydrochloric_acid_leaching_of_calcined_powder:entity",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:174b20cdb67fb285",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:174b20cdb67fb285:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:60335339522dfd3c",
-        "micrograph_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
-        "statement_id": "statement:47aac1fd117a309a",
-        "statement_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_id": "REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
         "source_relation_index": 21,
         "entity_ids": [
           "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:2d9cd63ecce5c9ba"
+          "scope-assertion:354a66ab986d1485"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cfaa67b3b8fa16cb"
+          "scope-path:35e6f56dc32e496d"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:2d9cd63ecce5c9ba:evidence",
+          "scope:scope-assertion:354a66ab986d1485:evidence",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reductive_hydrochloric_acid_leaching_of_calcined_powder:entity",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_Process_reductive_hydrochloric_acid_leaching_of_calcined_powder_HAS_OUTPUT_Material_Li",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:47aac1fd117a309a",
-          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:47aac1fd117a309a:evidence"
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:5d903d9d98c291c3",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:5d903d9d98c291c3:evidence"
         ]
       },
       {
@@ -6648,6 +7134,64 @@
         "evidence_refs": [
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:fa117f95754c4b4f",
           "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:fa117f95754c4b4f:evidence"
+        ]
+      },
+      {
+        "id": "local-unit:16b9d1ba219d2c31",
+        "micrograph_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
+        "statement_id": "statement:8a1bb52ba472cd32",
+        "statement_relation_id": "REL_reviewed_input_Process_reviewed_c2ca1a770bfa07",
+        "source_relation_id": "REL_reviewed_input_Process_reviewed_c2ca1a770bfa07",
+        "source_relation_index": 27,
+        "entity_ids": [
+          "Component_anode_active_material",
+          "Process_reviewed_c2ca1a770bfa07"
+        ],
+        "scope_assertion_ids": [
+          "scope-assertion:48c37983a2a4870b",
+          "scope-assertion:a4d3a859b00e7d0d"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:29c440e163ecab82",
+          "scope-path:519a181a7b21c6c9"
+        ],
+        "evidence_refs": [
+          "scope:scope-assertion:48c37983a2a4870b:evidence",
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Component_anode_active_material:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reviewed_c2ca1a770bfa07:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_reviewed_input_Process_reviewed_c2ca1a770bfa07",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:8a1bb52ba472cd32",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:8a1bb52ba472cd32:evidence"
+        ]
+      },
+      {
+        "id": "local-unit:324b9d16e6bed428",
+        "micrograph_id": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
+        "statement_id": "statement:01980c2341ff1ee4",
+        "statement_relation_id": "REL_reviewed_input_Process_reviewed_8daa8098cc6a94",
+        "source_relation_id": "REL_reviewed_input_Process_reviewed_8daa8098cc6a94",
+        "source_relation_index": 28,
+        "entity_ids": [
+          "Component_anode_active_material",
+          "Process_reviewed_8daa8098cc6a94"
+        ],
+        "scope_assertion_ids": [
+          "scope-assertion:5089b4b695628b7d",
+          "scope-assertion:a4d3a859b00e7d0d"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:50b18bf9647d82ad",
+          "scope-path:5eb4723c76b0b653"
+        ],
+        "evidence_refs": [
+          "scope:scope-assertion:5089b4b695628b7d:evidence",
+          "scope:scope-assertion:a4d3a859b00e7d0d:evidence",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Component_anode_active_material:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):Process_reviewed_8daa8098cc6a94:entity",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:REL_reviewed_input_Process_reviewed_8daa8098cc6a94",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:01980c2341ff1ee4",
+          "source:Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl):relation:statement:01980c2341ff1ee4:evidence"
         ]
       }
     ],
@@ -11533,6 +12077,7 @@
       "reviewed_records": 3,
       "operation_evidence_records": 0,
       "added_processes": 2
-    }
+    },
+    "scope_unscoped_candidates": []
   }
 }

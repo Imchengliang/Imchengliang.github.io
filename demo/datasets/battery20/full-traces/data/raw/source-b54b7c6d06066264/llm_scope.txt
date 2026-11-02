@@ -6,12 +6,18 @@
     "scope_subject_text": "lithium iron phosphate battery",
     "scope_label": "lithium iron phosphate battery",
     "evidence_ids": [
-      "E3e3bd7a3d7"
+      "E665d272b71"
     ],
-    "evidence_span": "The process of the mechanical treatment of spent lithium iron phosphate batteries primarily includes discharging, disassembly, crushing and sorting (Veit et al., 2002).",
-    "population_granularity": "batch",
-    "sample_type": "lithium iron phosphate battery",
-    "scope_description": "Spent lithium iron phosphate batteries subjected to mechanical treatment including discharging, disassembly, crushing and sorting.",
+    "evidence_span": "The sample used here is a lithium iron phosphate power battery crushed using the production line in HeFei GuoXuan High-Tech Power Energy CO. Ltd.",
+    "evidence": [
+      {
+        "evidence_id": "E665d272b71",
+        "quote": "The sample used here is a lithium iron phosphate power battery crushed using the production line in HeFei GuoXuan High-Tech Power Energy CO. Ltd."
+      }
+    ],
+    "population_granularity": "instance",
+    "sample_type": "lithium iron phosphate power battery",
+    "scope_description": "A single lithium iron phosphate power battery sample crushed using the production line at HeFei GuoXuan High-Tech Power Energy CO. Ltd.",
     "sample_size": null
   },
   {
@@ -21,12 +27,75 @@
     "scope_subject_text": "power battery",
     "scope_label": "power battery",
     "evidence_ids": [
-      "E86a60b1508"
+      "E665d272b71",
+      "E665d272b71"
     ],
-    "evidence_span": "Economic profit and eco-pressure are the primary motivations to recycle waste lithium iron phosphate power batteries; it is thus necessary to consider energy consumption during the recycling process, which includes discharge, disassembly, crushing and pneumatic separation.",
+    "evidence_span": "The power battery consists of positive electrode, negative electrode, electrolyte, separator and sealed shell.",
+    "evidence": [
+      {
+        "evidence_id": "E665d272b71",
+        "quote": "The power battery consists of positive electrode, negative electrode, electrolyte, separator and sealed shell."
+      },
+      {
+        "evidence_id": "E665d272b71",
+        "quote": "The sample used here is a lithium iron phosphate power battery crushed using the production line in HeFei GuoXuan High-Tech Power Energy CO. Ltd."
+      }
+    ],
     "population_granularity": "batch",
     "sample_type": "power battery",
-    "scope_description": "Waste lithium iron phosphate power batteries recycled for economic profit and eco-pressure, with recycling including discharge, disassembly, crushing and pneumatic separation.",
+    "scope_description": "Power batteries in general, described as consisting of positive electrode, negative electrode, electrolyte, separator and sealed shell; the study's sample is a lithium iron phosphate power battery.",
+    "sample_size": null
+  },
+  {
+    "root_entity_ids": [
+      "Product_lithium_iron_power_battery"
+    ],
+    "scope_subject_text": "lithium iron power battery",
+    "scope_label": "lithium iron power battery",
+    "evidence_ids": [
+      "Ec80a7c059f",
+      "E665d272b71"
+    ],
+    "evidence_span": "the pneumatic separation of crushed fragments of spent lithium iron power batteries depends only on the thickness",
+    "evidence": [
+      {
+        "evidence_id": "Ec80a7c059f",
+        "quote": "the pneumatic separation of crushed fragments of spent lithium iron power batteries depends only on the thickness"
+      },
+      {
+        "evidence_id": "E665d272b71",
+        "quote": "The sample used here is a lithium iron phosphate power battery crushed using the production line in HeFei GuoXuan High-Tech Power Energy CO. Ltd."
+      }
+    ],
+    "population_granularity": "batch",
+    "sample_type": "spent lithium iron power battery",
+    "scope_description": "Spent lithium iron power batteries whose crushed fragments are subjected to pneumatic separation; the study's sample is a lithium iron phosphate power battery.",
+    "sample_size": null
+  },
+  {
+    "root_entity_ids": [
+      "Product_crushed_product"
+    ],
+    "scope_subject_text": "crushed product",
+    "scope_label": "crushed product",
+    "evidence_ids": [
+      "Ef4c4da93c8",
+      "E665d272b71"
+    ],
+    "evidence_span": "The copper and aluminum foil current collectors after crushing had particle sizes ranging from 3 to 15 mm.",
+    "evidence": [
+      {
+        "evidence_id": "Ef4c4da93c8",
+        "quote": "The copper and aluminum foil current collectors after crushing had particle sizes ranging from 3 to 15 mm."
+      },
+      {
+        "evidence_id": "E665d272b71",
+        "quote": "The sample used here is a lithium iron phosphate power battery crushed using the production line in HeFei GuoXuan High-Tech Power Energy CO. Ltd."
+      }
+    ],
+    "population_granularity": "batch",
+    "sample_type": "crushed battery core product",
+    "scope_description": "Crushed products from the core of the sampled lithium iron phosphate power battery, with copper and aluminum foil current collectors having particle sizes of 3–15 mm.",
     "sample_size": null
   },
   {
@@ -36,9 +105,20 @@
     "scope_subject_text": "pneumatic separation of crushed battery core product",
     "scope_label": "pneumatic separation of crushed battery core product",
     "evidence_ids": [
-      "E9447aa0ae7"
+      "E0a32c256a7",
+      "E8c72132def"
     ],
-    "evidence_span": "Crushed lithium iron phosphate power battery core products (copper and aluminum foil current collectors with particle sizes 3–15 mm, dissociated electrode powders) are fed into a pneumatic separation system where airflow velocity and inclination angle separate materials based on aerodynamic drag and gravity; the process is modeled with horizontal and vertical motion equations accounting for drag force, buoyancy, additional mass force, Saffman lift, Basset force, Magnus force, and pressure gradient force, with particle-wall and particle-particle interactions neglected.",
+    "evidence_span": "here a vertical pneumatic separator was used for the experiment, of which the airflow velocity ranged from 1.4 to 30 m/s and its incremental regulation 0.1–0.3 m/s.",
+    "evidence": [
+      {
+        "evidence_id": "E0a32c256a7",
+        "quote": "here a vertical pneumatic separator was used for the experiment, of which the airflow velocity ranged from 1.4 to 30 m/s and its incremental regulation 0.1–0.3 m/s."
+      },
+      {
+        "evidence_id": "E8c72132def",
+        "quote": "The goal of this paper is to evaluate the dynamic behavior of the flake crushed fragments using pneumatic separation, to create a mathematical model for pneumatic separation, and to determine the optimal airflow velocity for pneumatic separation of the copper and aluminum fragments from spent lithium iron phosphate batteries."
+      }
+    ],
     "method_family": "pneumatic separation"
   }
 ]

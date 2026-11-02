@@ -602,13 +602,23 @@
         "scope_subject_text": "lithium-ion battery",
         "scope_label": "lithium-ion battery",
         "evidence_ids": [
-          "E770c2f588b",
-          "Ed3b615b22e"
+          "E1ee53de78e",
+          "E1ee53de78e"
         ],
-        "evidence_span": "Spent LIBs from waste mobile phones were collected and pretreated following the procedure shown in Figure 1.",
+        "evidence_span": "Spent LIBs from waste mobile phones were collected and pretreated following the procedure shown in Figure 1. They were first discharged with 5 wt % NaCl solution for 48 h and then naturally air-dried.",
+        "evidence": [
+          {
+            "evidence_id": "E1ee53de78e",
+            "quote": "Spent LIBs from waste mobile phones were collected and pretreated following the procedure shown in Figure 1. They were first discharged with 5 wt % NaCl solution for 48 h and then naturally air-dried."
+          },
+          {
+            "evidence_id": "E1ee53de78e",
+            "quote": "a manual dismantling process instead of mechanical crushing was conducted, and then, the cathode and anode were obtained from this process, respectively."
+          }
+        ],
         "population_granularity": "batch",
-        "sample_type": "lithium-ion battery",
-        "scope_description": "Spent lithium-ion batteries from waste mobile phones, collected and pretreated following the procedure shown in Figure 1.",
+        "sample_type": "spent lithium-ion battery",
+        "scope_description": "Spent lithium-ion batteries collected from waste mobile phones, discharged in 5 wt % NaCl for 48 h and air-dried, then manually dismantled to obtain cathode and anode materials.",
         "sample_size": null
       },
       {
@@ -618,28 +628,29 @@
         "scope_subject_text": "electrode material",
         "scope_label": "electrode material",
         "evidence_ids": [
-          "Eb56371fa5f",
-          "Ec1447ffd98",
-          "Ee0bd7ef844",
-          "Ee197a06543"
+          "E1ee53de78e",
+          "E1ee53de78e",
+          "Ea9406a8339"
         ],
-        "evidence_span": "Advanced analysis technologies of scanning electron microscopy (SEM), X-ray fluorescence spectrometry (XRF), and X-ray photoelectron spectroscopy (XPS) were used to obtain the morphology, chemical composition, and chemical states of surface elements of electrode material particles before and after pyrolysis.",
+        "evidence_span": "Electrode materials were obtained by combining the crushing and sieving process.",
+        "evidence": [
+          {
+            "evidence_id": "E1ee53de78e",
+            "quote": "Electrode materials were obtained by combining the crushing and sieving process."
+          },
+          {
+            "evidence_id": "E1ee53de78e",
+            "quote": "the 0.075 mm size screen hole was used to obtain electrode materials with fine size in this study. Three kinds of samples were prepared including cathode materials (LiCoO ), anode materials (graphite), and an electrode material mixture (LiCoO and graphite)."
+          },
+          {
+            "evidence_id": "Ea9406a8339",
+            "quote": "three samples were prepared for flotation: raw electrode material mixture (REM), pyrolytic electrode material mixture (PEM), and pyrolysis-ultrasonic pretreated electrode material mixture (PUEM)."
+          }
+        ],
         "population_granularity": "batch",
-        "sample_type": "electrode material",
-        "scope_description": "Electrode materials obtained by combining crushing and sieving, with a 0.075 mm size screen hole used to obtain fine-sized electrode materials; separated by filtration and dried at 80 °C.",
+        "sample_type": "electrode material mixture",
+        "scope_description": "Electrode material mixture (LiCoO2 and graphite) obtained by crushing and sieving dismantled spent LIB electrodes to the -0.075 mm fraction; used as raw, pyrolytic, and pyrolysis-ultrasonic pretreated flotation feeds.",
         "sample_size": null
-      },
-      {
-        "root_entity_ids": [
-          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
-        ],
-        "scope_subject_text": "flotation of pyrolysis-ultrasonic pretreated electrode material mixture",
-        "scope_label": "flotation of pyrolysis-ultrasonic pretreated electrode material mixture",
-        "evidence_ids": [
-          "Eb126c38526"
-        ],
-        "evidence_span": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
-        "method_family": "flotation"
       },
       {
         "root_entity_ids": [
@@ -648,10 +659,21 @@
         "scope_subject_text": "flotation of raw electrode material mixture",
         "scope_label": "flotation of raw electrode material mixture",
         "evidence_ids": [
-          "Eccaa4fe10a"
+          "E1cd0243391",
+          "E1cd0243391"
         ],
         "evidence_span": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
-        "method_family": "flotation"
+        "evidence": [
+          {
+            "evidence_id": "E1cd0243391",
+            "quote": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process."
+          },
+          {
+            "evidence_id": "E1cd0243391",
+            "quote": "Flotation experiments were conducted using an XFD-63 flotation machine at pulp density of 40 g / L,, impeller speed of 1800 rpm, and aeration quantity of 2.0 L/min"
+          }
+        ],
+        "method_family": "froth flotation"
       },
       {
         "root_entity_ids": [
@@ -660,115 +682,164 @@
         "scope_subject_text": "flotation of pyrolytic electrode material mixture",
         "scope_label": "flotation of pyrolytic electrode material mixture",
         "evidence_ids": [
-          "Edefb8ee36a"
+          "E1cd0243391",
+          "E1cd0243391"
         ],
         "evidence_span": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
-        "method_family": "flotation"
+        "evidence": [
+          {
+            "evidence_id": "E1cd0243391",
+            "quote": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process."
+          },
+          {
+            "evidence_id": "E1cd0243391",
+            "quote": "Flotation experiments were conducted using an XFD-63 flotation machine at pulp density of 40 g / L,, impeller speed of 1800 rpm, and aeration quantity of 2.0 L/min"
+          }
+        ],
+        "method_family": "froth flotation"
+      },
+      {
+        "root_entity_ids": [
+          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+        ],
+        "scope_subject_text": "flotation of pyrolysis-ultrasonic pretreated electrode material mixture",
+        "scope_label": "flotation of pyrolysis-ultrasonic pretreated electrode material mixture",
+        "evidence_ids": [
+          "E1cd0243391",
+          "E1cd0243391"
+        ],
+        "evidence_span": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
+        "evidence": [
+          {
+            "evidence_id": "E1cd0243391",
+            "quote": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process."
+          },
+          {
+            "evidence_id": "E1cd0243391",
+            "quote": "Flotation experiments were conducted using an XFD-63 flotation machine at pulp density of 40 g / L,, impeller speed of 1800 rpm, and aeration quantity of 2.0 L/min"
+          }
+        ],
+        "method_family": "froth flotation"
       }
     ],
     "scope_assertions": [
       {
-        "id": "scope-assertion:aae7e97bd3190c28",
+        "id": "scope-assertion:904933e3b7c3e5ae",
         "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
         "root_entity_ids": [
+          "Component_lithium_ion_battery"
+        ],
+        "requested_root_entity_ids": [
           "Component_lithium_ion_battery"
         ],
         "scope_kind": "declared_population",
         "facets": {
           "population_granularity": "batch",
-          "sample_type": "lithium-ion battery"
+          "sample_type": "spent lithium-ion battery"
         },
-        "scope_description": "Spent lithium-ion batteries from waste mobile phones, collected and pretreated following the procedure shown in Figure 1.",
+        "scope_description": "Spent lithium-ion batteries collected from waste mobile phones, discharged in 5 wt % NaCl for 48 h and air-dried, then manually dismantled to obtain cathode and anode materials.",
         "sample_size": null,
-        "evidence_span": "Spent LIBs from waste mobile phones were collected and pretreated following the procedure shown in Figure 1.",
+        "evidence_span": "Spent LIBs from waste mobile phones were collected and pretreated following the procedure shown in Figure 1. They were first discharged with 5 wt % NaCl solution for 48 h and then naturally air-dried.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:aae7e97bd3190c28:evidence",
+          "scope:scope-assertion:904933e3b7c3e5ae:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity"
         ]
       },
       {
-        "id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-assertion:22ca24f3c191a8cc",
         "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
         "root_entity_ids": [
+          "Component_electrode_material"
+        ],
+        "requested_root_entity_ids": [
           "Component_electrode_material"
         ],
         "scope_kind": "declared_population",
         "facets": {
           "population_granularity": "batch",
-          "sample_type": "electrode material"
+          "sample_type": "electrode material mixture"
         },
-        "scope_description": "Electrode materials obtained by combining crushing and sieving, with a 0.075 mm size screen hole used to obtain fine-sized electrode materials; separated by filtration and dried at 80 °C.",
+        "scope_description": "Electrode material mixture (LiCoO2 and graphite) obtained by crushing and sieving dismantled spent LIB electrodes to the -0.075 mm fraction; used as raw, pyrolytic, and pyrolysis-ultrasonic pretreated flotation feeds.",
         "sample_size": null,
-        "evidence_span": "Advanced analysis technologies of scanning electron microscopy (SEM), X-ray fluorescence spectrometry (XRF), and X-ray photoelectron spectroscopy (XPS) were used to obtain the morphology, chemical composition, and chemical states of surface elements of electrode material particles before and after pyrolysis.",
+        "evidence_span": "Electrode materials were obtained by combining the crushing and sieving process.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity"
         ]
       },
       {
-        "id": "scope-assertion:88ac036d64f17e4d",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "root_entity_ids": [
-          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "flotation"
-        },
-        "scope_description": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
-        "sample_size": null,
-        "evidence_span": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:88ac036d64f17e4d:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:64a4b1496c815143",
+        "id": "scope-assertion:32a5fd41f51c0e83",
         "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
         "root_entity_ids": [
           "Process_flotation_of_raw_electrode_material_mixture"
         ],
+        "requested_root_entity_ids": [
+          "Process_flotation_of_raw_electrode_material_mixture"
+        ],
         "scope_kind": "process_method_family",
         "facets": {
-          "method_family": "flotation"
+          "method_family": "froth flotation"
         },
         "scope_description": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
         "sample_size": null,
         "evidence_span": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:64a4b1496c815143:evidence",
+          "scope:scope-assertion:32a5fd41f51c0e83:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_raw_electrode_material_mixture:entity"
         ]
       },
       {
-        "id": "scope-assertion:89efedbb084eadd3",
+        "id": "scope-assertion:09192612fb0debcd",
         "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
         "root_entity_ids": [
           "Process_flotation_of_pyrolytic_electrode_material_mixture"
         ],
+        "requested_root_entity_ids": [
+          "Process_flotation_of_pyrolytic_electrode_material_mixture"
+        ],
         "scope_kind": "process_method_family",
         "facets": {
-          "method_family": "flotation"
+          "method_family": "froth flotation"
         },
         "scope_description": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
         "sample_size": null,
         "evidence_span": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:89efedbb084eadd3:evidence",
+          "scope:scope-assertion:09192612fb0debcd:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolytic_electrode_material_mixture:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:676421736d13306e",
+        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
+        "root_entity_ids": [
+          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+        ],
+        "requested_root_entity_ids": [
+          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "froth flotation"
+        },
+        "scope_description": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
+        "sample_size": null,
+        "evidence_span": "Three kinds of flotation feeds (REM, PEM, PUEM) were utilized in the flotation process.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:676421736d13306e:evidence",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:862041aa9c14b835",
-        "scope_assertion_id": "scope-assertion:aae7e97bd3190c28",
+        "id": "scope-path:3e2f8e2e6ee384f6",
+        "scope_assertion_id": "scope-assertion:904933e3b7c3e5ae",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Component_cathode",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -777,13 +848,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:aae7e97bd3190c28:evidence",
+          "scope:scope-assertion:904933e3b7c3e5ae:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:86cde9849c1d5a5c",
-        "scope_assertion_id": "scope-assertion:aae7e97bd3190c28",
+        "id": "scope-path:f867d3237f66618b",
+        "scope_assertion_id": "scope-assertion:904933e3b7c3e5ae",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Component_anode",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -792,13 +863,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:aae7e97bd3190c28:evidence",
+          "scope:scope-assertion:904933e3b7c3e5ae:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_anode"
         ]
       },
       {
-        "id": "scope-path:e1db1a44f5c5afda",
-        "scope_assertion_id": "scope-assertion:aae7e97bd3190c28",
+        "id": "scope-path:d7f5b9af12be5996",
+        "scope_assertion_id": "scope-assertion:904933e3b7c3e5ae",
         "statement_relation_id": "REL_Component_cathode_CONTAINS_Material_LiCoO2",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -810,14 +881,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:aae7e97bd3190c28:evidence",
+          "scope:scope-assertion:904933e3b7c3e5ae:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_cathode_CONTAINS_Material_LiCoO2",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:03c606069be00ac2",
-        "scope_assertion_id": "scope-assertion:aae7e97bd3190c28",
+        "id": "scope-path:3b49b6e3c2c0fad0",
+        "scope_assertion_id": "scope-assertion:904933e3b7c3e5ae",
         "statement_relation_id": "REL_Component_anode_CONTAINS_Material_graphite",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -829,14 +900,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:aae7e97bd3190c28:evidence",
+          "scope:scope-assertion:904933e3b7c3e5ae:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_anode_CONTAINS_Material_graphite",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_anode"
         ]
       },
       {
-        "id": "scope-path:b93a18129469350f",
-        "scope_assertion_id": "scope-assertion:aae7e97bd3190c28",
+        "id": "scope-path:3bb15fd10addfc20",
+        "scope_assertion_id": "scope-assertion:904933e3b7c3e5ae",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_LiCoO2",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -845,13 +916,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:aae7e97bd3190c28:evidence",
+          "scope:scope-assertion:904933e3b7c3e5ae:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:3125df31d3897b77",
-        "scope_assertion_id": "scope-assertion:aae7e97bd3190c28",
+        "id": "scope-path:67b3e63c12817afc",
+        "scope_assertion_id": "scope-assertion:904933e3b7c3e5ae",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_graphite",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -860,13 +931,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:aae7e97bd3190c28:evidence",
+          "scope:scope-assertion:904933e3b7c3e5ae:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_graphite"
         ]
       },
       {
-        "id": "scope-path:ac1623d51bc613b2",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:3b74ea6ac15a1f87",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_LiCoO2",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -875,13 +946,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:e3704544c6c412b7",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:12e51f3b14400238",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_graphite",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -890,13 +961,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_graphite"
         ]
       },
       {
-        "id": "scope-path:aa85a5446e122f3a",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:a824bea7d90c7d9e",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_raw_electrode_material_mixture",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -905,13 +976,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_raw_electrode_material_mixture"
         ]
       },
       {
-        "id": "scope-path:83e3f33f21480f30",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:189834860ba81f28",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolytic_electrode_material_mixture",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -920,13 +991,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolytic_electrode_material_mixture"
         ]
       },
       {
-        "id": "scope-path:f01ced9420b7dade",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:7c2a5b1d66db143e",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -935,13 +1006,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
         ]
       },
       {
-        "id": "scope-path:078581188e7494cd",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:19659b647a8ff1fc",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_electrolyte",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -950,13 +1021,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_electrolyte"
         ]
       },
       {
-        "id": "scope-path:fe93a04ba753de4a",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:f858a83114db59a4",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_organic_binder",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -965,13 +1036,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_organic_binder"
         ]
       },
       {
-        "id": "scope-path:2a4c871e98031065",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:64533ca44db29bbf",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_PVDF",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -980,13 +1051,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_PVDF"
         ]
       },
       {
-        "id": "scope-path:edf82eca53043e42",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:72797808ec61a69f",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_dimethyl_carbonate",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -995,13 +1066,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_dimethyl_carbonate"
         ]
       },
       {
-        "id": "scope-path:d18f8052dc213359",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:fe3959c68111acbb",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_ethylene_carbonate",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -1010,13 +1081,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_ethylene_carbonate"
         ]
       },
       {
-        "id": "scope-path:ded800f5772df990",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:dcfa7855b58e0689",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_propylene_carbonate",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -1025,88 +1096,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_propylene_carbonate"
         ]
       },
       {
-        "id": "scope-path:19ded31e6ce270e3",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
-        "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_vinylidene_fluoride",
-        "root_entity_id": "Component_electrode_material",
-        "entity_path": [
-          "Component_electrode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_vinylidene_fluoride"
-        ]
-      },
-      {
-        "id": "scope-path:2162243bc6bd01bf",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
-        "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_1_3_5_trifluorobenzene",
-        "root_entity_id": "Component_electrode_material",
-        "entity_path": [
-          "Component_electrode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_1_3_5_trifluorobenzene"
-        ]
-      },
-      {
-        "id": "scope-path:4450eb6b84d84721",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
-        "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_1_4_difluorobenzene",
-        "root_entity_id": "Component_electrode_material",
-        "entity_path": [
-          "Component_electrode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_1_4_difluorobenzene"
-        ]
-      },
-      {
-        "id": "scope-path:2f64126c11c6e1d5",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
-        "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_1_1_1_3_3_3_hexafluoropropane",
-        "root_entity_id": "Component_electrode_material",
-        "entity_path": [
-          "Component_electrode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_1_1_1_3_3_3_hexafluoropropane"
-        ]
-      },
-      {
-        "id": "scope-path:70ee934743d4da58",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
-        "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_1_2_4_trifluorobenzene",
-        "root_entity_id": "Component_electrode_material",
-        "entity_path": [
-          "Component_electrode_material"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_1_2_4_trifluorobenzene"
-        ]
-      },
-      {
-        "id": "scope-path:1687c05c403a816f",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:c0313b5045cd28f7",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_poly_vinylidene_fluoride_",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -1115,13 +1111,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_poly_vinylidene_fluoride_"
         ]
       },
       {
-        "id": "scope-path:f01ced9420b7dade",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:7c2a5b1d66db143e",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -1130,13 +1126,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
         ]
       },
       {
-        "id": "scope-path:aa85a5446e122f3a",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:a824bea7d90c7d9e",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_raw_electrode_material_mixture",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -1145,13 +1141,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_raw_electrode_material_mixture"
         ]
       },
       {
-        "id": "scope-path:83e3f33f21480f30",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:189834860ba81f28",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolytic_electrode_material_mixture",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -1160,13 +1156,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolytic_electrode_material_mixture"
         ]
       },
       {
-        "id": "scope-path:f01ced9420b7dade",
-        "scope_assertion_id": "scope-assertion:a4ea8b4dea68c354",
+        "id": "scope-path:7c2a5b1d66db143e",
+        "scope_assertion_id": "scope-assertion:22ca24f3c191a8cc",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
         "root_entity_id": "Component_electrode_material",
         "entity_path": [
@@ -1175,88 +1171,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
         ]
       },
       {
-        "id": "scope-path:1aafbb42ac4aaadb",
-        "scope_assertion_id": "scope-assertion:88ac036d64f17e4d",
-        "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
-        "root_entity_id": "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
-        "entity_path": [
-          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:88ac036d64f17e4d:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
-        ]
-      },
-      {
-        "id": "scope-path:1aafbb42ac4aaadb",
-        "scope_assertion_id": "scope-assertion:88ac036d64f17e4d",
-        "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
-        "root_entity_id": "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
-        "entity_path": [
-          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:88ac036d64f17e4d:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
-        ]
-      },
-      {
-        "id": "scope-path:f213f8edc5348147",
-        "scope_assertion_id": "scope-assertion:88ac036d64f17e4d",
-        "statement_relation_id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
-        "root_entity_id": "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
-        "entity_path": [
-          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:88ac036d64f17e4d:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2"
-        ]
-      },
-      {
-        "id": "scope-path:f213f8edc5348147",
-        "scope_assertion_id": "scope-assertion:88ac036d64f17e4d",
-        "statement_relation_id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
-        "root_entity_id": "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
-        "entity_path": [
-          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:88ac036d64f17e4d:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2"
-        ]
-      },
-      {
-        "id": "scope-path:1aafbb42ac4aaadb",
-        "scope_assertion_id": "scope-assertion:88ac036d64f17e4d",
-        "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
-        "root_entity_id": "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
-        "entity_path": [
-          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:88ac036d64f17e4d:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
-        ]
-      },
-      {
-        "id": "scope-path:04df386ab6687cf3",
-        "scope_assertion_id": "scope-assertion:64a4b1496c815143",
+        "id": "scope-path:f1c54e4baf617a6e",
+        "scope_assertion_id": "scope-assertion:32a5fd41f51c0e83",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_raw_electrode_material_mixture",
         "root_entity_id": "Process_flotation_of_raw_electrode_material_mixture",
         "entity_path": [
@@ -1265,13 +1186,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:64a4b1496c815143:evidence",
+          "scope:scope-assertion:32a5fd41f51c0e83:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_raw_electrode_material_mixture"
         ]
       },
       {
-        "id": "scope-path:95ef758c5a87ac11",
-        "scope_assertion_id": "scope-assertion:64a4b1496c815143",
+        "id": "scope-path:93d7935ee0bb46af",
+        "scope_assertion_id": "scope-assertion:32a5fd41f51c0e83",
         "statement_relation_id": "REL_Process_flotation_of_raw_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
         "root_entity_id": "Process_flotation_of_raw_electrode_material_mixture",
         "entity_path": [
@@ -1280,13 +1201,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:64a4b1496c815143:evidence",
+          "scope:scope-assertion:32a5fd41f51c0e83:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_raw_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:04df386ab6687cf3",
-        "scope_assertion_id": "scope-assertion:64a4b1496c815143",
+        "id": "scope-path:f1c54e4baf617a6e",
+        "scope_assertion_id": "scope-assertion:32a5fd41f51c0e83",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_raw_electrode_material_mixture",
         "root_entity_id": "Process_flotation_of_raw_electrode_material_mixture",
         "entity_path": [
@@ -1295,13 +1216,28 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:64a4b1496c815143:evidence",
+          "scope:scope-assertion:32a5fd41f51c0e83:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_raw_electrode_material_mixture"
         ]
       },
       {
-        "id": "scope-path:7ad6f4ee2dd3fdd0",
-        "scope_assertion_id": "scope-assertion:89efedbb084eadd3",
+        "id": "scope-path:8ea590fce9fd5909",
+        "scope_assertion_id": "scope-assertion:32a5fd41f51c0e83",
+        "statement_relation_id": "REL_Process_flotation_of_raw_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+        "root_entity_id": "Process_flotation_of_raw_electrode_material_mixture",
+        "entity_path": [
+          "Process_flotation_of_raw_electrode_material_mixture"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:32a5fd41f51c0e83:evidence",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_raw_electrode_material_mixture_HAS_OUTPUT_Material_graphite"
+        ]
+      },
+      {
+        "id": "scope-path:db2c6335ea5052d9",
+        "scope_assertion_id": "scope-assertion:09192612fb0debcd",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolytic_electrode_material_mixture",
         "root_entity_id": "Process_flotation_of_pyrolytic_electrode_material_mixture",
         "entity_path": [
@@ -1310,13 +1246,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:89efedbb084eadd3:evidence",
+          "scope:scope-assertion:09192612fb0debcd:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolytic_electrode_material_mixture"
         ]
       },
       {
-        "id": "scope-path:b5f4c0589014a5ac",
-        "scope_assertion_id": "scope-assertion:89efedbb084eadd3",
+        "id": "scope-path:2a89d8e0268b87ba",
+        "scope_assertion_id": "scope-assertion:09192612fb0debcd",
         "statement_relation_id": "REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
         "root_entity_id": "Process_flotation_of_pyrolytic_electrode_material_mixture",
         "entity_path": [
@@ -1325,13 +1261,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:89efedbb084eadd3:evidence",
+          "scope:scope-assertion:09192612fb0debcd:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:b5f4c0589014a5ac",
-        "scope_assertion_id": "scope-assertion:89efedbb084eadd3",
+        "id": "scope-path:2a89d8e0268b87ba",
+        "scope_assertion_id": "scope-assertion:09192612fb0debcd",
         "statement_relation_id": "REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
         "root_entity_id": "Process_flotation_of_pyrolytic_electrode_material_mixture",
         "entity_path": [
@@ -1340,13 +1276,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:89efedbb084eadd3:evidence",
+          "scope:scope-assertion:09192612fb0debcd:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:7ad6f4ee2dd3fdd0",
-        "scope_assertion_id": "scope-assertion:89efedbb084eadd3",
+        "id": "scope-path:db2c6335ea5052d9",
+        "scope_assertion_id": "scope-assertion:09192612fb0debcd",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolytic_electrode_material_mixture",
         "root_entity_id": "Process_flotation_of_pyrolytic_electrode_material_mixture",
         "entity_path": [
@@ -1355,8 +1291,128 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:89efedbb084eadd3:evidence",
+          "scope:scope-assertion:09192612fb0debcd:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolytic_electrode_material_mixture"
+        ]
+      },
+      {
+        "id": "scope-path:9491540729177243",
+        "scope_assertion_id": "scope-assertion:09192612fb0debcd",
+        "statement_relation_id": "REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+        "root_entity_id": "Process_flotation_of_pyrolytic_electrode_material_mixture",
+        "entity_path": [
+          "Process_flotation_of_pyrolytic_electrode_material_mixture"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:09192612fb0debcd:evidence",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_graphite"
+        ]
+      },
+      {
+        "id": "scope-path:7e3f5339970dc082",
+        "scope_assertion_id": "scope-assertion:676421736d13306e",
+        "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
+        "root_entity_id": "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
+        "entity_path": [
+          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:676421736d13306e:evidence",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+        ]
+      },
+      {
+        "id": "scope-path:7e3f5339970dc082",
+        "scope_assertion_id": "scope-assertion:676421736d13306e",
+        "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
+        "root_entity_id": "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
+        "entity_path": [
+          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:676421736d13306e:evidence",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+        ]
+      },
+      {
+        "id": "scope-path:d740c1d03df75ec2",
+        "scope_assertion_id": "scope-assertion:676421736d13306e",
+        "statement_relation_id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
+        "root_entity_id": "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
+        "entity_path": [
+          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:676421736d13306e:evidence",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2"
+        ]
+      },
+      {
+        "id": "scope-path:d740c1d03df75ec2",
+        "scope_assertion_id": "scope-assertion:676421736d13306e",
+        "statement_relation_id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
+        "root_entity_id": "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
+        "entity_path": [
+          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:676421736d13306e:evidence",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2"
+        ]
+      },
+      {
+        "id": "scope-path:7e3f5339970dc082",
+        "scope_assertion_id": "scope-assertion:676421736d13306e",
+        "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
+        "root_entity_id": "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
+        "entity_path": [
+          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:676421736d13306e:evidence",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+        ]
+      },
+      {
+        "id": "scope-path:7c7a047a3318201d",
+        "scope_assertion_id": "scope-assertion:676421736d13306e",
+        "statement_relation_id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+        "root_entity_id": "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
+        "entity_path": [
+          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:676421736d13306e:evidence",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_graphite"
+        ]
+      },
+      {
+        "id": "scope-path:7c7a047a3318201d",
+        "scope_assertion_id": "scope-assertion:676421736d13306e",
+        "statement_relation_id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+        "root_entity_id": "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
+        "entity_path": [
+          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:676421736d13306e:evidence",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_graphite"
         ]
       }
     ],
@@ -8652,13 +8708,13 @@
           "Component_cathode"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:aae7e97bd3190c28"
+          "scope-assertion:904933e3b7c3e5ae"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:862041aa9c14b835"
+          "scope-path:3e2f8e2e6ee384f6"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:aae7e97bd3190c28:evidence",
+          "scope:scope-assertion:904933e3b7c3e5ae:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_cathode",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:02a9b8d36e844765",
@@ -8677,13 +8733,13 @@
           "Component_anode"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:aae7e97bd3190c28"
+          "scope-assertion:904933e3b7c3e5ae"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:86cde9849c1d5a5c"
+          "scope-path:f867d3237f66618b"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:aae7e97bd3190c28:evidence",
+          "scope:scope-assertion:904933e3b7c3e5ae:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_anode",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:7ae2ce84bebb322e",
@@ -8702,13 +8758,13 @@
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:aae7e97bd3190c28"
+          "scope-assertion:904933e3b7c3e5ae"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e1db1a44f5c5afda"
+          "scope-path:d7f5b9af12be5996"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:aae7e97bd3190c28:evidence",
+          "scope:scope-assertion:904933e3b7c3e5ae:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_cathode_CONTAINS_Material_LiCoO2",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_cathode",
@@ -8728,13 +8784,13 @@
           "Material_graphite"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:aae7e97bd3190c28"
+          "scope-assertion:904933e3b7c3e5ae"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:03c606069be00ac2"
+          "scope-path:3b49b6e3c2c0fad0"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:aae7e97bd3190c28:evidence",
+          "scope:scope-assertion:904933e3b7c3e5ae:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_anode_CONTAINS_Material_graphite",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_anode",
@@ -8754,13 +8810,13 @@
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:22ca24f3c191a8cc"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:ac1623d51bc613b2"
+          "scope-path:3b74ea6ac15a1f87"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_LiCoO2",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:8d1a92bedca20e7b",
@@ -8779,13 +8835,13 @@
           "Material_graphite"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:22ca24f3c191a8cc"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e3704544c6c412b7"
+          "scope-path:12e51f3b14400238"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_graphite",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:27ef8fc7a782f65c",
@@ -8804,16 +8860,16 @@
           "Process_flotation_of_raw_electrode_material_mixture"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:64a4b1496c815143",
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:22ca24f3c191a8cc",
+          "scope-assertion:32a5fd41f51c0e83"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:04df386ab6687cf3",
-          "scope-path:aa85a5446e122f3a"
+          "scope-path:a824bea7d90c7d9e",
+          "scope-path:f1c54e4baf617a6e"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:64a4b1496c815143:evidence",
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
+          "scope:scope-assertion:32a5fd41f51c0e83:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_raw_electrode_material_mixture:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_raw_electrode_material_mixture",
@@ -8833,16 +8889,16 @@
           "Process_flotation_of_pyrolytic_electrode_material_mixture"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:89efedbb084eadd3",
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:09192612fb0debcd",
+          "scope-assertion:22ca24f3c191a8cc"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:7ad6f4ee2dd3fdd0",
-          "scope-path:83e3f33f21480f30"
+          "scope-path:189834860ba81f28",
+          "scope-path:db2c6335ea5052d9"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:89efedbb084eadd3:evidence",
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:09192612fb0debcd:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolytic_electrode_material_mixture:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolytic_electrode_material_mixture",
@@ -8862,16 +8918,16 @@
           "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:88ac036d64f17e4d",
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:22ca24f3c191a8cc",
+          "scope-assertion:676421736d13306e"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:1aafbb42ac4aaadb",
-          "scope-path:f01ced9420b7dade"
+          "scope-path:7c2a5b1d66db143e",
+          "scope-path:7e3f5339970dc082"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:88ac036d64f17e4d:evidence",
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
+          "scope:scope-assertion:676421736d13306e:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
@@ -8891,13 +8947,13 @@
           "Material_electrolyte"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:22ca24f3c191a8cc"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:078581188e7494cd"
+          "scope-path:19659b647a8ff1fc"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_electrolyte",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:41bcc637afe36dd3",
@@ -8916,13 +8972,13 @@
           "Material_organic_binder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:22ca24f3c191a8cc"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:fe93a04ba753de4a"
+          "scope-path:f858a83114db59a4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_organic_binder",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:59d0d9a15021774c",
@@ -8941,13 +8997,13 @@
           "Material_PVDF"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:22ca24f3c191a8cc"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:2a4c871e98031065"
+          "scope-path:64533ca44db29bbf"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_PVDF",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:43dab604f9bc0e4c",
@@ -8966,13 +9022,13 @@
           "Material_dimethyl_carbonate"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:22ca24f3c191a8cc"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:edf82eca53043e42"
+          "scope-path:72797808ec61a69f"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_dimethyl_carbonate",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:4a5f6366e1bd81b3",
@@ -8991,13 +9047,13 @@
           "Material_ethylene_carbonate"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:22ca24f3c191a8cc"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:d18f8052dc213359"
+          "scope-path:fe3959c68111acbb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_ethylene_carbonate",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:a0d288a5a0f02d5e",
@@ -9016,142 +9072,17 @@
           "Material_propylene_carbonate"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:22ca24f3c191a8cc"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:ded800f5772df990"
+          "scope-path:dcfa7855b58e0689"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_propylene_carbonate",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:180bdea237921b05",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:180bdea237921b05:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:f08b947fb0acc001",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:689503b270eee5fb",
-        "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_vinylidene_fluoride",
-        "source_relation_id": "REL_Component_electrode_material_CONTAINS_Material_vinylidene_fluoride",
-        "source_relation_index": 15,
-        "entity_ids": [
-          "Component_electrode_material",
-          "Material_vinylidene_fluoride"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:a4ea8b4dea68c354"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:19ded31e6ce270e3"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_vinylidene_fluoride",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:689503b270eee5fb",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:689503b270eee5fb:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:f01b0a5c520e59fd",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:ba546dbd134c0830",
-        "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_1_3_5_trifluorobenzene",
-        "source_relation_id": "REL_Component_electrode_material_CONTAINS_Material_1_3_5_trifluorobenzene",
-        "source_relation_index": 16,
-        "entity_ids": [
-          "Component_electrode_material",
-          "Material_1_3_5_trifluorobenzene"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:a4ea8b4dea68c354"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:2162243bc6bd01bf"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_1_3_5_trifluorobenzene",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:ba546dbd134c0830",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:ba546dbd134c0830:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:7f02885f9494aefe",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:8eef157ff340cf82",
-        "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_1_4_difluorobenzene",
-        "source_relation_id": "REL_Component_electrode_material_CONTAINS_Material_1_4_difluorobenzene",
-        "source_relation_index": 17,
-        "entity_ids": [
-          "Component_electrode_material",
-          "Material_1_4_difluorobenzene"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:a4ea8b4dea68c354"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:4450eb6b84d84721"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_1_4_difluorobenzene",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:8eef157ff340cf82",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:8eef157ff340cf82:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:6bab8da921d8441a",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:c5770d6ef0000864",
-        "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_1_1_1_3_3_3_hexafluoropropane",
-        "source_relation_id": "REL_Component_electrode_material_CONTAINS_Material_1_1_1_3_3_3_hexafluoropropane",
-        "source_relation_index": 18,
-        "entity_ids": [
-          "Component_electrode_material",
-          "Material_1_1_1_3_3_3_hexafluoropropane"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:a4ea8b4dea68c354"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:2f64126c11c6e1d5"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_1_1_1_3_3_3_hexafluoropropane",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:c5770d6ef0000864",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:c5770d6ef0000864:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:b2332a2a6a175ac0",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:a2a98de6d65ea615",
-        "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_1_2_4_trifluorobenzene",
-        "source_relation_id": "REL_Component_electrode_material_CONTAINS_Material_1_2_4_trifluorobenzene",
-        "source_relation_index": 19,
-        "entity_ids": [
-          "Component_electrode_material",
-          "Material_1_2_4_trifluorobenzene"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:a4ea8b4dea68c354"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:70ee934743d4da58"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_1_2_4_trifluorobenzene",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:a2a98de6d65ea615",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:a2a98de6d65ea615:evidence"
         ]
       },
       {
@@ -9160,19 +9091,19 @@
         "statement_id": "statement:aceede77d67ec144",
         "statement_relation_id": "REL_Component_electrode_material_CONTAINS_Material_poly_vinylidene_fluoride_",
         "source_relation_id": "REL_Component_electrode_material_CONTAINS_Material_poly_vinylidene_fluoride_",
-        "source_relation_index": 20,
+        "source_relation_index": 15,
         "entity_ids": [
           "Component_electrode_material",
           "Material_poly_vinylidene_fluoride_"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:22ca24f3c191a8cc"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:1687c05c403a816f"
+          "scope-path:c0313b5045cd28f7"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_CONTAINS_Material_poly_vinylidene_fluoride_",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:aceede77d67ec144",
@@ -9185,22 +9116,22 @@
         "statement_id": "statement:e1a42e7004c0d55e",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
         "source_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
-        "source_relation_index": 21,
+        "source_relation_index": 16,
         "entity_ids": [
           "Component_electrode_material",
           "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:88ac036d64f17e4d",
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:22ca24f3c191a8cc",
+          "scope-assertion:676421736d13306e"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:1aafbb42ac4aaadb",
-          "scope-path:f01ced9420b7dade"
+          "scope-path:7c2a5b1d66db143e",
+          "scope-path:7e3f5339970dc082"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:88ac036d64f17e4d:evidence",
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
+          "scope:scope-assertion:676421736d13306e:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
@@ -9214,19 +9145,19 @@
         "statement_id": "statement:66e6d5b7f8bb5405",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_LiCoO2",
         "source_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_LiCoO2",
-        "source_relation_index": 22,
+        "source_relation_index": 17,
         "entity_ids": [
           "Component_lithium_ion_battery",
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:aae7e97bd3190c28"
+          "scope-assertion:904933e3b7c3e5ae"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:b93a18129469350f"
+          "scope-path:3bb15fd10addfc20"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:aae7e97bd3190c28:evidence",
+          "scope:scope-assertion:904933e3b7c3e5ae:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_LiCoO2",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:66e6d5b7f8bb5405",
@@ -9239,19 +9170,19 @@
         "statement_id": "statement:53463acbadd79959",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_graphite",
         "source_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_graphite",
-        "source_relation_index": 23,
+        "source_relation_index": 18,
         "entity_ids": [
           "Component_lithium_ion_battery",
           "Material_graphite"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:aae7e97bd3190c28"
+          "scope-assertion:904933e3b7c3e5ae"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:3125df31d3897b77"
+          "scope-path:67b3e63c12817afc"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:aae7e97bd3190c28:evidence",
+          "scope:scope-assertion:904933e3b7c3e5ae:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_graphite",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:53463acbadd79959",
@@ -9264,7 +9195,7 @@
         "statement_id": "statement:8e07a3c9a6b4e7f8",
         "statement_relation_id": "REL_Material_LiCoO2_CONTAINS_Material_carbon_black",
         "source_relation_id": "REL_Material_LiCoO2_CONTAINS_Material_carbon_black",
-        "source_relation_index": 24,
+        "source_relation_index": 19,
         "entity_ids": [
           "Material_LiCoO2",
           "Material_carbon_black"
@@ -9282,7 +9213,7 @@
         "statement_id": "statement:593bb934587929b4",
         "statement_relation_id": "REL_Material_LiCoO2_CONTAINS_Material_PVDF",
         "source_relation_id": "REL_Material_LiCoO2_CONTAINS_Material_PVDF",
-        "source_relation_index": 25,
+        "source_relation_index": 20,
         "entity_ids": [
           "Material_LiCoO2",
           "Material_PVDF"
@@ -9300,7 +9231,7 @@
         "statement_id": "statement:cbc167ba5008ee72",
         "statement_relation_id": "REL_Material_LiCoO2_CONTAINS_Material_pyrolytic_carbon",
         "source_relation_id": "REL_Material_LiCoO2_CONTAINS_Material_pyrolytic_carbon",
-        "source_relation_index": 26,
+        "source_relation_index": 21,
         "entity_ids": [
           "Material_LiCoO2",
           "Material_pyrolytic_carbon"
@@ -9318,19 +9249,19 @@
         "statement_id": "statement:f73c2a13b1c15d4d",
         "statement_relation_id": "REL_Process_flotation_of_raw_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
         "source_relation_id": "REL_Process_flotation_of_raw_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
-        "source_relation_index": 27,
+        "source_relation_index": 22,
         "entity_ids": [
           "Process_flotation_of_raw_electrode_material_mixture",
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:64a4b1496c815143"
+          "scope-assertion:32a5fd41f51c0e83"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:95ef758c5a87ac11"
+          "scope-path:93d7935ee0bb46af"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:64a4b1496c815143:evidence",
+          "scope:scope-assertion:32a5fd41f51c0e83:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_raw_electrode_material_mixture:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_raw_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:f73c2a13b1c15d4d",
@@ -9343,19 +9274,19 @@
         "statement_id": "statement:2c835a68ee9dd979",
         "statement_relation_id": "REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
         "source_relation_id": "REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
-        "source_relation_index": 28,
+        "source_relation_index": 23,
         "entity_ids": [
           "Process_flotation_of_pyrolytic_electrode_material_mixture",
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:89efedbb084eadd3"
+          "scope-assertion:09192612fb0debcd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:b5f4c0589014a5ac"
+          "scope-path:2a89d8e0268b87ba"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:89efedbb084eadd3:evidence",
+          "scope:scope-assertion:09192612fb0debcd:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolytic_electrode_material_mixture:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:2c835a68ee9dd979",
@@ -9368,19 +9299,19 @@
         "statement_id": "statement:781cc45b25ea33d4",
         "statement_relation_id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
         "source_relation_id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
-        "source_relation_index": 29,
+        "source_relation_index": 24,
         "entity_ids": [
           "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:88ac036d64f17e4d"
+          "scope-assertion:676421736d13306e"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:f213f8edc5348147"
+          "scope-path:d740c1d03df75ec2"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:88ac036d64f17e4d:evidence",
+          "scope:scope-assertion:676421736d13306e:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:781cc45b25ea33d4",
@@ -9393,19 +9324,19 @@
         "statement_id": "statement:1cb0cdd69a482c71",
         "statement_relation_id": "REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
         "source_relation_id": "REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
-        "source_relation_index": 30,
+        "source_relation_index": 25,
         "entity_ids": [
           "Process_flotation_of_pyrolytic_electrode_material_mixture",
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:89efedbb084eadd3"
+          "scope-assertion:09192612fb0debcd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:b5f4c0589014a5ac"
+          "scope-path:2a89d8e0268b87ba"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:89efedbb084eadd3:evidence",
+          "scope:scope-assertion:09192612fb0debcd:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolytic_electrode_material_mixture:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:1cb0cdd69a482c71",
@@ -9418,19 +9349,19 @@
         "statement_id": "statement:7e539f25de828471",
         "statement_relation_id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
         "source_relation_id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
-        "source_relation_index": 31,
+        "source_relation_index": 26,
         "entity_ids": [
           "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:88ac036d64f17e4d"
+          "scope-assertion:676421736d13306e"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:f213f8edc5348147"
+          "scope-path:d740c1d03df75ec2"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:88ac036d64f17e4d:evidence",
+          "scope:scope-assertion:676421736d13306e:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_LiCoO2",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:7e539f25de828471",
@@ -9443,22 +9374,22 @@
         "statement_id": "statement:e45f9799d4961495",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_raw_electrode_material_mixture",
         "source_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_raw_electrode_material_mixture",
-        "source_relation_index": 32,
+        "source_relation_index": 27,
         "entity_ids": [
           "Component_electrode_material",
           "Process_flotation_of_raw_electrode_material_mixture"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:64a4b1496c815143",
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:22ca24f3c191a8cc",
+          "scope-assertion:32a5fd41f51c0e83"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:04df386ab6687cf3",
-          "scope-path:aa85a5446e122f3a"
+          "scope-path:a824bea7d90c7d9e",
+          "scope-path:f1c54e4baf617a6e"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:64a4b1496c815143:evidence",
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
+          "scope:scope-assertion:32a5fd41f51c0e83:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_raw_electrode_material_mixture:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_raw_electrode_material_mixture",
@@ -9472,22 +9403,22 @@
         "statement_id": "statement:84344a91882be7d5",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolytic_electrode_material_mixture",
         "source_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolytic_electrode_material_mixture",
-        "source_relation_index": 33,
+        "source_relation_index": 28,
         "entity_ids": [
           "Component_electrode_material",
           "Process_flotation_of_pyrolytic_electrode_material_mixture"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:89efedbb084eadd3",
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:09192612fb0debcd",
+          "scope-assertion:22ca24f3c191a8cc"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:7ad6f4ee2dd3fdd0",
-          "scope-path:83e3f33f21480f30"
+          "scope-path:189834860ba81f28",
+          "scope-path:db2c6335ea5052d9"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:89efedbb084eadd3:evidence",
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:09192612fb0debcd:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolytic_electrode_material_mixture:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolytic_electrode_material_mixture",
@@ -9501,22 +9432,22 @@
         "statement_id": "statement:26de536c4f9ce9f3",
         "statement_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
         "source_relation_id": "REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
-        "source_relation_index": 34,
+        "source_relation_index": 29,
         "entity_ids": [
           "Component_electrode_material",
           "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:88ac036d64f17e4d",
-          "scope-assertion:a4ea8b4dea68c354"
+          "scope-assertion:22ca24f3c191a8cc",
+          "scope-assertion:676421736d13306e"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:1aafbb42ac4aaadb",
-          "scope-path:f01ced9420b7dade"
+          "scope-path:7c2a5b1d66db143e",
+          "scope-path:7e3f5339970dc082"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:88ac036d64f17e4d:evidence",
-          "scope:scope-assertion:a4ea8b4dea68c354:evidence",
+          "scope:scope-assertion:22ca24f3c191a8cc:evidence",
+          "scope:scope-assertion:676421736d13306e:evidence",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Component_electrode_material:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture:entity",
           "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_material_PROCESSED_BY_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
@@ -9530,7 +9461,7 @@
         "statement_id": "statement:75627f50c4593159",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_carbon_black",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_carbon_black",
-        "source_relation_index": 35,
+        "source_relation_index": 30,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_carbon_black"
@@ -9548,7 +9479,7 @@
         "statement_id": "statement:0916bcf3b82c93eb",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_carbon_black",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_carbon_black",
-        "source_relation_index": 36,
+        "source_relation_index": 31,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_carbon_black"
@@ -9566,7 +9497,7 @@
         "statement_id": "statement:431ede3c198079b7",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_carbon_black",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_carbon_black",
-        "source_relation_index": 37,
+        "source_relation_index": 32,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_carbon_black"
@@ -9584,7 +9515,7 @@
         "statement_id": "statement:b00f45f9ac333a15",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_C_C_C_H",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_C_C_C_H",
-        "source_relation_index": 38,
+        "source_relation_index": 33,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_C_C_C_H"
@@ -9602,7 +9533,7 @@
         "statement_id": "statement:14ca79eb1de89e6c",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_C_C_C_H",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_C_C_C_H",
-        "source_relation_index": 39,
+        "source_relation_index": 34,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_C_C_C_H"
@@ -9620,7 +9551,7 @@
         "statement_id": "statement:18db332c86f04972",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_C_C_C_H",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_C_C_C_H",
-        "source_relation_index": 40,
+        "source_relation_index": 35,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_C_C_C_H"
@@ -9638,7 +9569,7 @@
         "statement_id": "statement:ce60ed9b1b36f94b",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_C_COOR",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_C_COOR",
-        "source_relation_index": 41,
+        "source_relation_index": 36,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_C_COOR"
@@ -9656,7 +9587,7 @@
         "statement_id": "statement:3a68f737ae617abf",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_C_COOR",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_C_COOR",
-        "source_relation_index": 42,
+        "source_relation_index": 37,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_C_COOR"
@@ -9674,7 +9605,7 @@
         "statement_id": "statement:e6f5e6cb4f1f4f45",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_C_COOR",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_C_COOR",
-        "source_relation_index": 43,
+        "source_relation_index": 38,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_C_COOR"
@@ -9692,7 +9623,7 @@
         "statement_id": "statement:a8ffab5861186855",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material___CH2CF2__n",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material___CH2CF2__n",
-        "source_relation_index": 44,
+        "source_relation_index": 39,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material___CH2CF2__n"
@@ -9710,7 +9641,7 @@
         "statement_id": "statement:40d1937af42f22f2",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material___CH2CF2__n",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material___CH2CF2__n",
-        "source_relation_index": 45,
+        "source_relation_index": 40,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material___CH2CF2__n"
@@ -9728,7 +9659,7 @@
         "statement_id": "statement:ccc5bb6651d56290",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material___CH2CF2__n",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material___CH2CF2__n",
-        "source_relation_index": 46,
+        "source_relation_index": 41,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material___CH2CF2__n"
@@ -9746,7 +9677,7 @@
         "statement_id": "statement:fa83550242360e60",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_C_O",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_C_O",
-        "source_relation_index": 47,
+        "source_relation_index": 42,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_O_C_O"
@@ -9764,7 +9695,7 @@
         "statement_id": "statement:d7e265290da4cfe1",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_C_O",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_C_O",
-        "source_relation_index": 48,
+        "source_relation_index": 43,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_O_C_O"
@@ -9782,7 +9713,7 @@
         "statement_id": "statement:6bd6169057a0ab9c",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_C_O",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_C_O",
-        "source_relation_index": 49,
+        "source_relation_index": 44,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_O_C_O"
@@ -9795,57 +9726,57 @@
         ]
       },
       {
-        "id": "local-unit:2863476a43d430e2",
+        "id": "local-unit:8645fe803b501220",
         "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:c7a31dc9e6d5d89d",
-        "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_Co",
-        "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_Co",
-        "source_relation_index": 50,
+        "statement_id": "statement:3c0d1012bb2cbaf0",
+        "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_Co__identity_cca440e8",
+        "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_Co__identity_cca440e8",
+        "source_relation_index": 45,
         "entity_ids": [
           "Material_raw_LiCoO2",
-          "Material_Co"
+          "Material_C_O"
         ],
         "scope_assertion_ids": [],
         "scope_propagation_path_ids": [],
         "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:c7a31dc9e6d5d89d",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:c7a31dc9e6d5d89d:evidence"
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:3c0d1012bb2cbaf0",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:3c0d1012bb2cbaf0:evidence"
         ]
       },
       {
-        "id": "local-unit:ddb9df9fae2cf697",
+        "id": "local-unit:8af5436699085582",
         "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:38a9089c1ddee68d",
-        "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_Co",
-        "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_Co",
-        "source_relation_index": 51,
+        "statement_id": "statement:14827e328e4c6106",
+        "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_Co__identity_cca440e8",
+        "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_Co__identity_cca440e8",
+        "source_relation_index": 46,
         "entity_ids": [
           "Material_raw_LiCoO2",
-          "Material_Co"
+          "Material_C_O"
         ],
         "scope_assertion_ids": [],
         "scope_propagation_path_ids": [],
         "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:38a9089c1ddee68d",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:38a9089c1ddee68d:evidence"
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:14827e328e4c6106",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:14827e328e4c6106:evidence"
         ]
       },
       {
-        "id": "local-unit:1c8f97d7d8acebcb",
+        "id": "local-unit:707d0364cd5576f7",
         "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:500bf4b56ee61430",
-        "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_Co",
-        "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_Co",
-        "source_relation_index": 52,
+        "statement_id": "statement:88dce0eba5e94835",
+        "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_Co__identity_cca440e8",
+        "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_Co__identity_cca440e8",
+        "source_relation_index": 47,
         "entity_ids": [
           "Material_raw_LiCoO2",
-          "Material_Co"
+          "Material_C_O"
         ],
         "scope_assertion_ids": [],
         "scope_propagation_path_ids": [],
         "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:500bf4b56ee61430",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:500bf4b56ee61430:evidence"
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:88dce0eba5e94835",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:88dce0eba5e94835:evidence"
         ]
       },
       {
@@ -9854,7 +9785,7 @@
         "statement_id": "statement:e3ecdd58c8a30bfc",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_C_O",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_C_O",
-        "source_relation_index": 53,
+        "source_relation_index": 48,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_O_C_O"
@@ -9872,7 +9803,7 @@
         "statement_id": "statement:83dcd1be1d1e9a3e",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_C_O",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_C_O",
-        "source_relation_index": 54,
+        "source_relation_index": 49,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_O_C_O"
@@ -9890,7 +9821,7 @@
         "statement_id": "statement:dfe75cd380c5ce3f",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_C_O",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_C_O",
-        "source_relation_index": 55,
+        "source_relation_index": 50,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_O_C_O"
@@ -9908,7 +9839,7 @@
         "statement_id": "statement:8360b7bdcc3185f2",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_COOR",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_COOR",
-        "source_relation_index": 56,
+        "source_relation_index": 51,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_O_COOR"
@@ -9926,7 +9857,7 @@
         "statement_id": "statement:508ac8fef5340550",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_COOR",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_COOR",
-        "source_relation_index": 57,
+        "source_relation_index": 52,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_O_COOR"
@@ -9944,7 +9875,7 @@
         "statement_id": "statement:119dc4e8b77e93b2",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_COOR",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material_O_COOR",
-        "source_relation_index": 58,
+        "source_relation_index": 53,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material_O_COOR"
@@ -9962,7 +9893,7 @@
         "statement_id": "statement:03941e03b279b67f",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material___CH2CF2__n",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material___CH2CF2__n",
-        "source_relation_index": 59,
+        "source_relation_index": 54,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material___CH2CF2__n"
@@ -9980,7 +9911,7 @@
         "statement_id": "statement:5ebeba2fb19daaf9",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material___CH2CF2__n",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material___CH2CF2__n",
-        "source_relation_index": 60,
+        "source_relation_index": 55,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material___CH2CF2__n"
@@ -9998,7 +9929,7 @@
         "statement_id": "statement:d02efad207c6b3f8",
         "statement_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material___CH2CF2__n",
         "source_relation_id": "REL_Material_raw_LiCoO2_CONTAINS_Material___CH2CF2__n",
-        "source_relation_index": 61,
+        "source_relation_index": 56,
         "entity_ids": [
           "Material_raw_LiCoO2",
           "Material___CH2CF2__n"
@@ -10016,7 +9947,7 @@
         "statement_id": "statement:fb0f285658634753",
         "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_CONTAINS_Material_pyrolytic_carbon",
         "source_relation_id": "REL_Material_pyrolytic_LiCoO2_CONTAINS_Material_pyrolytic_carbon",
-        "source_relation_index": 62,
+        "source_relation_index": 57,
         "entity_ids": [
           "Material_pyrolytic_LiCoO2",
           "Material_pyrolytic_carbon"
@@ -10034,7 +9965,7 @@
         "statement_id": "statement:fea73477465ca228",
         "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_CONTAINS_Material_C_C_C_H",
         "source_relation_id": "REL_Material_pyrolytic_LiCoO2_CONTAINS_Material_C_C_C_H",
-        "source_relation_index": 63,
+        "source_relation_index": 58,
         "entity_ids": [
           "Material_pyrolytic_LiCoO2",
           "Material_C_C_C_H"
@@ -10052,7 +9983,7 @@
         "statement_id": "statement:e9edb0c32be7679c",
         "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_CONTAINS_Material_C_CF_in_trifluorobenzene",
         "source_relation_id": "REL_Material_pyrolytic_LiCoO2_CONTAINS_Material_C_CF_in_trifluorobenzene",
-        "source_relation_index": 64,
+        "source_relation_index": 59,
         "entity_ids": [
           "Material_pyrolytic_LiCoO2",
           "Material_C_CF_in_trifluorobenzene"
@@ -10070,7 +10001,7 @@
         "statement_id": "statement:b8d99c3fb5a9f16f",
         "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_CONTAINS_Material_O_C_O",
         "source_relation_id": "REL_Material_pyrolytic_LiCoO2_CONTAINS_Material_O_C_O",
-        "source_relation_index": 65,
+        "source_relation_index": 60,
         "entity_ids": [
           "Material_pyrolytic_LiCoO2",
           "Material_O_C_O"
@@ -10088,7 +10019,7 @@
         "statement_id": "statement:2412e819ce365fd2",
         "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_CONTAINS_Material_Cf",
         "source_relation_id": "REL_Material_pyrolytic_LiCoO2_CONTAINS_Material_Cf",
-        "source_relation_index": 66,
+        "source_relation_index": 61,
         "entity_ids": [
           "Material_pyrolytic_LiCoO2",
           "Material_Cf"
@@ -10101,327 +10032,103 @@
         ]
       },
       {
-        "id": "local-unit:feed2aac14c8f54a",
+        "id": "local-unit:faf68333a0346855",
         "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:595cb67872f397a7",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_BE_pyrolytic_carbon",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_BE_pyrolytic_carbon",
-        "source_relation_index": 67,
+        "statement_id": "statement:5f5d230342657fb2",
+        "statement_relation_id": "REL_Process_flotation_of_raw_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+        "source_relation_id": "REL_Process_flotation_of_raw_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+        "source_relation_index": 62,
         "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_BE_pyrolytic_carbon"
+          "Process_flotation_of_raw_electrode_material_mixture",
+          "Material_graphite"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:32a5fd41f51c0e83"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:8ea590fce9fd5909"
+        ],
         "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:595cb67872f397a7",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:595cb67872f397a7:evidence"
+          "scope:scope-assertion:32a5fd41f51c0e83:evidence",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_raw_electrode_material_mixture:entity",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_raw_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:5f5d230342657fb2",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:5f5d230342657fb2:evidence"
         ]
       },
       {
-        "id": "local-unit:fdcbc4fda7d314ce",
+        "id": "local-unit:9282d039d7c9ca8e",
         "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:c831170609cdbc59",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_BE_C_C_C_H",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_BE_C_C_C_H",
-        "source_relation_index": 68,
+        "statement_id": "statement:e3f1e3e07b4494cc",
+        "statement_relation_id": "REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+        "source_relation_id": "REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+        "source_relation_index": 63,
         "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_BE_C_C_C_H"
+          "Process_flotation_of_pyrolytic_electrode_material_mixture",
+          "Material_graphite"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:09192612fb0debcd"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:9491540729177243"
+        ],
         "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:c831170609cdbc59",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:c831170609cdbc59:evidence"
+          "scope:scope-assertion:09192612fb0debcd:evidence",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolytic_electrode_material_mixture:entity",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolytic_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:e3f1e3e07b4494cc",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:e3f1e3e07b4494cc:evidence"
         ]
       },
       {
-        "id": "local-unit:d5483531814ec3ce",
+        "id": "local-unit:d602c646626503c7",
         "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:bf51aafcdce9f90d",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_BE_C_CF_in_trifluorobenzene",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_BE_C_CF_in_trifluorobenzene",
-        "source_relation_index": 69,
+        "statement_id": "statement:eb28f5c707cc4d9a",
+        "statement_relation_id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+        "source_relation_id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+        "source_relation_index": 64,
         "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_BE_C_CF_in_trifluorobenzene"
+          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
+          "Material_graphite"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:676421736d13306e"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:7c7a047a3318201d"
+        ],
         "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:bf51aafcdce9f90d",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:bf51aafcdce9f90d:evidence"
+          "scope:scope-assertion:676421736d13306e:evidence",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture:entity",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:eb28f5c707cc4d9a",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:eb28f5c707cc4d9a:evidence"
         ]
       },
       {
-        "id": "local-unit:826b5f53fedabfdc",
+        "id": "local-unit:4cd446793f7638e3",
         "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:8bfa626f91583502",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_BE_O_C_O",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_BE_O_C_O",
-        "source_relation_index": 70,
+        "statement_id": "statement:c98e6328960b68ce",
+        "statement_relation_id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+        "source_relation_id": "REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+        "source_relation_index": 65,
         "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_BE_O_C_O"
+          "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture",
+          "Material_graphite"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:8bfa626f91583502",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:8bfa626f91583502:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:0f028dd1cbc661a5",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:0fc2912201f29c8b",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_BE_C_CF_in_trifluorobenzene",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_BE_C_CF_in_trifluorobenzene",
-        "source_relation_index": 71,
-        "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_BE_C_CF_in_trifluorobenzene"
+        "scope_assertion_ids": [
+          "scope-assertion:676421736d13306e"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:0fc2912201f29c8b",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:0fc2912201f29c8b:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:c1c06229b9c89859",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:209c3f5acd487dd4",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_BE_CF",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_BE_CF",
-        "source_relation_index": 72,
-        "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_BE_CF"
+        "scope_propagation_path_ids": [
+          "scope-path:7c7a047a3318201d"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
         "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:209c3f5acd487dd4",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:209c3f5acd487dd4:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:3fac24fe2bd01743",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:7d7160c03ee1c286",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_fwhm_pyrolytic_carbon",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_fwhm_pyrolytic_carbon",
-        "source_relation_index": 73,
-        "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_fwhm_pyrolytic_carbon"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:7d7160c03ee1c286",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:7d7160c03ee1c286:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:dd39b33e8a27e672",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:57c98b1c5f4d3748",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_fwhm_C_C_C_H",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_fwhm_C_C_C_H",
-        "source_relation_index": 74,
-        "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_fwhm_C_C_C_H"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:57c98b1c5f4d3748",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:57c98b1c5f4d3748:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:0615427d7fbd35fb",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:21e5a0e2fb122179",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_fwhm_C_CF_in_trifluorobenzene",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_fwhm_C_CF_in_trifluorobenzene",
-        "source_relation_index": 75,
-        "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_fwhm_C_CF_in_trifluorobenzene"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:21e5a0e2fb122179",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:21e5a0e2fb122179:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:167f4a486ed996f2",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:484113d636d7892f",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_fwhm_O_C_O",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_fwhm_O_C_O",
-        "source_relation_index": 76,
-        "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_fwhm_O_C_O"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:484113d636d7892f",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:484113d636d7892f:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:b451605ad9b82c2f",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:d4d0b60433ffe078",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_fwhm_C_CF_in_trifluorobenzene",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_fwhm_C_CF_in_trifluorobenzene",
-        "source_relation_index": 77,
-        "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_fwhm_C_CF_in_trifluorobenzene"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:d4d0b60433ffe078",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:d4d0b60433ffe078:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:169562201bcebaaa",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:e552e9880bb9267e",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_fwhm_CF",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_fwhm_CF",
-        "source_relation_index": 78,
-        "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_fwhm_CF"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:e552e9880bb9267e",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:e552e9880bb9267e:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:9da7300de627299c",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:fbff2651e6a4929b",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_atomic_pyrolytic_carbon",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_atomic_pyrolytic_carbon",
-        "source_relation_index": 79,
-        "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_atomic_pyrolytic_carbon"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:fbff2651e6a4929b",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:fbff2651e6a4929b:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:2f16d969266756d0",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:dd8401dd77c8cfad",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_atomic_C_C_C_H",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_atomic_C_C_C_H",
-        "source_relation_index": 80,
-        "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_atomic_C_C_C_H"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:dd8401dd77c8cfad",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:dd8401dd77c8cfad:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:05f0493705eb4691",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:7eaaa3e9bb0ab5bd",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_atomic_C_CF_in_trifluorobenzene",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_atomic_C_CF_in_trifluorobenzene",
-        "source_relation_index": 81,
-        "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_atomic_C_CF_in_trifluorobenzene"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:7eaaa3e9bb0ab5bd",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:7eaaa3e9bb0ab5bd:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:3304bc9c544939c0",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:fc8dc6b4e4aa17dd",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_atomic_O_C_O",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_atomic_O_C_O",
-        "source_relation_index": 82,
-        "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_atomic_O_C_O"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:fc8dc6b4e4aa17dd",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:fc8dc6b4e4aa17dd:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:5f5b17420e77d838",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:36a6751a48ee0337",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_atomic_C_CF_in_trifluorobenzene",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_atomic_C_CF_in_trifluorobenzene",
-        "source_relation_index": 83,
-        "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_atomic_C_CF_in_trifluorobenzene"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:36a6751a48ee0337",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:36a6751a48ee0337:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:6ccbe02ad5be639f",
-        "micrograph_id": "Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:d8340a8457f2eb9d",
-        "statement_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_atomic_CF",
-        "source_relation_id": "REL_Material_pyrolytic_LiCoO2_HAS_OBSERVATION_Observation_atomic_CF",
-        "source_relation_index": 84,
-        "entity_ids": [
-          "Material_pyrolytic_LiCoO2",
-          "Observation_atomic_CF"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:d8340a8457f2eb9d",
-          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:d8340a8457f2eb9d:evidence"
+          "scope:scope-assertion:676421736d13306e:evidence",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture:entity",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture_HAS_OUTPUT_Material_graphite",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:c98e6328960b68ce",
+          "source:Pyrolysis-Ultrasonic-Assisted_Flotation_Technology_for_Recovering_Graphite_and_Licoosub2sub_from_Spent_Lithium-Ion_Batteries:relation:statement:c98e6328960b68ce:evidence"
         ]
       }
     ],
@@ -27475,8 +27182,9 @@
       "final_triples_export": 0.022
     },
     "scope_audit": {
-      "evidence_record_count": 9,
+      "evidence_record_count": 33,
       "rejected_definition_count": 0,
+      "unscoped_candidate_count": 0,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
@@ -31522,6 +31230,7 @@
       "reviewed_records": 5,
       "state_qualified_residue_observations": 0,
       "transformation_evidence_records": 5
-    }
+    },
+    "scope_unscoped_candidates": []
   }
 }

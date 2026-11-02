@@ -6,14 +6,284 @@
     "scope_subject_text": "lithium-ion battery",
     "scope_label": "lithium-ion battery",
     "evidence_ids": [
-      "E18cd83c94b",
-      "E37ffe9dd58",
-      "Eb5ce4c6b17"
+      "E12c9888083",
+      "E9acc8afff8"
     ],
-    "evidence_span": "The cathode scrap, which are the cathodes used for manufacturing lithium-ion battery, was supplied by a local recycling company (Huayou Cobalt, China).",
+    "evidence_span": "The cathode scrap, which are the cathodes used for manufacturing lithium-ion battery, was supplied by a local recycling company (Huayou Cobalt, China). Before leaching, the cathode scrap was cut into pieces with the size of 10 mm and dried at 60 ^∘𝖢 for 24 h.",
+    "evidence": [
+      {
+        "evidence_id": "E12c9888083",
+        "quote": "The cathode scrap, which are the cathodes used for manufacturing lithium-ion battery, was supplied by a local recycling company (Huayou Cobalt, China). Before leaching, the cathode scrap was cut into pieces with the size of 10 mm and dried at 60 ^∘𝖢 for 24 h."
+      },
+      {
+        "evidence_id": "E9acc8afff8",
+        "quote": "The X-ray diffraction pattern of the cathode scrap (Fig. S1) shows that LiCoO2 is the major phases while TiO only appeared with the amount lower than 5 wt%."
+      }
+    ],
     "population_granularity": "batch",
     "sample_type": "lithium-ion battery",
-    "scope_description": "Spent lithium-ion batteries (LiCoO2 used for simplification) whose cathode scrap was supplied by a local recycling company (Huayou Cobalt, China) and used to study leaching behavior with 12 acidic solutions.",
+    "scope_description": "Cathode scrap (cathodes used for manufacturing lithium-ion batteries, with LiCoO2 as the major phase) supplied by a local recycling company, Huayou Cobalt, China; cut into 10 mm pieces and dried at 60 °C for 24 h before leaching.",
     "sample_size": null
+  },
+  {
+    "root_entity_ids": [
+      "Process_acidic_leaching_of_cathode"
+    ],
+    "scope_subject_text": "acidic leaching of cathode",
+    "scope_label": "acidic leaching of cathode",
+    "evidence_ids": [
+      "E6c685106d5"
+    ],
+    "evidence_span": "The cathode scrap was leached in a 50 mL sealed reactor which was placed in a temperature controlled shaking bath. The acidic solution was added to the reactor with a volume of 25 mL. The leaching conditions including acid species, acid concentration, reductant content and pH of the leaching solution were examined.",
+    "evidence": [
+      {
+        "evidence_id": "E6c685106d5",
+        "quote": "The cathode scrap was leached in a 50 mL sealed reactor which was placed in a temperature controlled shaking bath. The acidic solution was added to the reactor with a volume of 25 mL. The leaching conditions including acid species, acid concentration, reductant content and pH of the leaching solution were examined."
+      }
+    ],
+    "method_family": "acid leaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_leaching_with_Hydrochloric_acid"
+    ],
+    "scope_subject_text": "leaching with Hydrochloric acid",
+    "scope_label": "leaching with Hydrochloric acid",
+    "evidence_ids": [
+      "E2a498c8b1b",
+      "E47943005e0"
+    ],
+    "evidence_span": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated.",
+    "evidence": [
+      {
+        "evidence_id": "E2a498c8b1b",
+        "quote": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated."
+      },
+      {
+        "evidence_id": "E47943005e0",
+        "quote": "For the leaching of Al, hydrochloric acid (acid A) is the only acid which can leach Al faster than Li and Co because it may easily form a complex [ AlCl6 ] ^3- with Al (FOLEY, 1986)."
+      }
+    ],
+    "method_family": "acid leaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_leaching_with_Sulfuric_acid"
+    ],
+    "scope_subject_text": "leaching with Sulfuric acid",
+    "scope_label": "leaching with Sulfuric acid",
+    "evidence_ids": [
+      "E2a498c8b1b",
+      "E0ac00894d8"
+    ],
+    "evidence_span": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated.",
+    "evidence": [
+      {
+        "evidence_id": "E2a498c8b1b",
+        "quote": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated."
+      },
+      {
+        "evidence_id": "E0ac00894d8",
+        "quote": "Among the mineral acids, sulfuric acid (acid B) is frequently used for the recycling of spent LIBs."
+      }
+    ],
+    "method_family": "acid leaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_leaching_with_Nitric_acid"
+    ],
+    "scope_subject_text": "leaching with Nitric acid",
+    "scope_label": "leaching with Nitric acid",
+    "evidence_ids": [
+      "E2a498c8b1b",
+      "E0ac00894d8"
+    ],
+    "evidence_span": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated.",
+    "evidence": [
+      {
+        "evidence_id": "E2a498c8b1b",
+        "quote": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated."
+      },
+      {
+        "evidence_id": "E0ac00894d8",
+        "quote": "The existing acids in the leaching processes of LiCoO for spent LIBs are divided into inorganic acids (acid A to C) and organic acids (acid D to L)."
+      }
+    ],
+    "method_family": "acid leaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_leaching_with_Maleic_acid"
+    ],
+    "scope_subject_text": "leaching with Maleic acid",
+    "scope_label": "leaching with Maleic acid",
+    "evidence_ids": [
+      "E2a498c8b1b",
+      "E0ac00894d8"
+    ],
+    "evidence_span": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated.",
+    "evidence": [
+      {
+        "evidence_id": "E2a498c8b1b",
+        "quote": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated."
+      },
+      {
+        "evidence_id": "E0ac00894d8",
+        "quote": "The existing acids in the leaching processes of LiCoO for spent LIBs are divided into inorganic acids (acid A to C) and organic acids (acid D to L)."
+      }
+    ],
+    "method_family": "acid leaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_leaching_with_Citric_acid"
+    ],
+    "scope_subject_text": "leaching with Citric acid",
+    "scope_label": "leaching with Citric acid",
+    "evidence_ids": [
+      "E2a498c8b1b",
+      "E0ac00894d8"
+    ],
+    "evidence_span": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated.",
+    "evidence": [
+      {
+        "evidence_id": "E2a498c8b1b",
+        "quote": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated."
+      },
+      {
+        "evidence_id": "E0ac00894d8",
+        "quote": "For organic acids, citric acid (acid E) is the most frequently used organic acid."
+      }
+    ],
+    "method_family": "acid leaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_leaching_with_Succinic_acid"
+    ],
+    "scope_subject_text": "leaching with Succinic acid",
+    "scope_label": "leaching with Succinic acid",
+    "evidence_ids": [
+      "E2a498c8b1b",
+      "E0ac00894d8"
+    ],
+    "evidence_span": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated.",
+    "evidence": [
+      {
+        "evidence_id": "E2a498c8b1b",
+        "quote": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated."
+      },
+      {
+        "evidence_id": "E0ac00894d8",
+        "quote": "The existing acids in the leaching processes of LiCoO for spent LIBs are divided into inorganic acids (acid A to C) and organic acids (acid D to L)."
+      }
+    ],
+    "method_family": "acid leaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_leaching_with_Ascorbic_acid"
+    ],
+    "scope_subject_text": "leaching with Ascorbic acid",
+    "scope_label": "leaching with Ascorbic acid",
+    "evidence_ids": [
+      "E2a498c8b1b",
+      "E3ee3dd601b"
+    ],
+    "evidence_span": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated.",
+    "evidence": [
+      {
+        "evidence_id": "E2a498c8b1b",
+        "quote": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated."
+      },
+      {
+        "evidence_id": "E3ee3dd601b",
+        "quote": "Due to the self-reducibility, the leaching speed of ascorbic acid (acid G) is higher than other organic acids and it therefore does not follow the trend of other acidic leaching processes."
+      }
+    ],
+    "method_family": "acid leaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_leaching_with_Tartaric_acid"
+    ],
+    "scope_subject_text": "leaching with Tartaric acid",
+    "scope_label": "leaching with Tartaric acid",
+    "evidence_ids": [
+      "E2a498c8b1b",
+      "E98bcd7f7b9"
+    ],
+    "evidence_span": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated.",
+    "evidence": [
+      {
+        "evidence_id": "E2a498c8b1b",
+        "quote": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated."
+      },
+      {
+        "evidence_id": "E98bcd7f7b9",
+        "quote": "In the tartaric acid leaching process, the lower recovery rate of Co was caused by the precipitation of cobalt, which is similar to the formic acid and/or oxalate leaching process (Gao et al., 2017; Zeng et al., 2015b)."
+      }
+    ],
+    "method_family": "acid leaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_leaching_with_Iminodiacetic_acid"
+    ],
+    "scope_subject_text": "leaching with Iminodiacetic acid",
+    "scope_label": "leaching with Iminodiacetic acid",
+    "evidence_ids": [
+      "E2a498c8b1b"
+    ],
+    "evidence_span": "Aspartic acid and iminodiacetic acid under the corresponding parameters have a very low solubility which lead to a lot of solid existed in their leachant and leachate, so the reference of these two acids are not apparent although some of their leaching speeds or recovery rates were in the curve trend of figures.",
+    "evidence": [
+      {
+        "evidence_id": "E2a498c8b1b",
+        "quote": "Aspartic acid and iminodiacetic acid under the corresponding parameters have a very low solubility which lead to a lot of solid existed in their leachant and leachate, so the reference of these two acids are not apparent although some of their leaching speeds or recovery rates were in the curve trend of figures."
+      }
+    ],
+    "method_family": "acid leaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_leaching_with_Aspartic_acid"
+    ],
+    "scope_subject_text": "leaching with Aspartic acid",
+    "scope_label": "leaching with Aspartic acid",
+    "evidence_ids": [
+      "E2a498c8b1b"
+    ],
+    "evidence_span": "Aspartic acid and iminodiacetic acid under the corresponding parameters have a very low solubility which lead to a lot of solid existed in their leachant and leachate, so the reference of these two acids are not apparent although some of their leaching speeds or recovery rates were in the curve trend of figures.",
+    "evidence": [
+      {
+        "evidence_id": "E2a498c8b1b",
+        "quote": "Aspartic acid and iminodiacetic acid under the corresponding parameters have a very low solubility which lead to a lot of solid existed in their leachant and leachate, so the reference of these two acids are not apparent although some of their leaching speeds or recovery rates were in the curve trend of figures."
+      }
+    ],
+    "method_family": "acid leaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_leaching_with_DL_malic_acid"
+    ],
+    "scope_subject_text": "leaching with DL-malic acid",
+    "scope_label": "leaching with DL-malic acid",
+    "evidence_ids": [
+      "E2a498c8b1b",
+      "E0ac00894d8"
+    ],
+    "evidence_span": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated.",
+    "evidence": [
+      {
+        "evidence_id": "E2a498c8b1b",
+        "quote": "Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated."
+      },
+      {
+        "evidence_id": "E0ac00894d8",
+        "quote": "The existing acids in the leaching processes of LiCoO for spent LIBs are divided into inorganic acids (acid A to C) and organic acids (acid D to L)."
+      }
+    ],
+    "method_family": "acid leaching"
   }
 ]

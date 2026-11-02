@@ -6,15 +6,78 @@
     "scope_subject_text": "mobile phone",
     "scope_label": "mobile phone",
     "evidence_ids": [
-      "E863a9565cf",
-      "E9581670887",
-      "Eba3f54936e"
+      "E276f866f5a",
+      "Eb420b206e2",
+      "E07caf30192"
     ],
-    "evidence_span": "To improve representativeness, a well distribution of manufacturing years, variety of brands, and devices in good conditions were prioritized: devices from nine different brands were collected, and no model was repeated.",
+    "evidence_span": "EoL smartphones were directly collected from users, through announcements on social media. To improve representativeness, a well distribution of manufacturing years, variety of brands, and devices in good conditions were prioritized: devices from nine different brands were collected, and no model was repeated.",
+    "evidence": [
+      {
+        "evidence_id": "E276f866f5a",
+        "quote": "EoL smartphones were directly collected from users, through announcements on social media. To improve representativeness, a well distribution of manufacturing years, variety of brands, and devices in good conditions were prioritized: devices from nine different brands were collected, and no model was repeated."
+      },
+      {
+        "evidence_id": "Eb420b206e2",
+        "quote": "During the collection, model/brands and manufacturing years were cataloged to obtain two groups, containing 15 smartphones each: manufactured before and after 2015."
+      },
+      {
+        "evidence_id": "E07caf30192",
+        "quote": "As aforementioned, 30 smartphones were collected and divided into two groups according to their manufacturing years (before and after 2015)."
+      }
+    ],
     "population_granularity": "batch",
-    "sample_type": "mobile phone",
-    "scope_description": "30 end-of-life smartphones from nine different brands, with no repeated model, collected to improve representativeness by prioritizing a well distribution of manufacturing years, variety of brands, and devices in good condition; divided into two groups according to manufacturing years (before and after 2015).",
+    "sample_type": "end-of-life smartphones",
+    "scope_description": "30 end-of-life smartphones collected directly from users via social media announcements, from nine different brands with no repeated model, distributed across manufacturing years before and after 2015 (15 devices per group).",
     "sample_size": null
+  },
+  {
+    "root_entity_ids": [
+      "Component_Entire"
+    ],
+    "scope_subject_text": "Entire",
+    "scope_label": "Entire",
+    "evidence_ids": [
+      "Ebc0ee7c03c",
+      "E07caf30192"
+    ],
+    "evidence_span": "Characterization included 30 devices of different brands fabricated before and after 2015, analysis of 50 metal elements, and FTIR analysis and loss on ignition for polymers.",
+    "evidence": [
+      {
+        "evidence_id": "Ebc0ee7c03c",
+        "quote": "Characterization included 30 devices of different brands fabricated before and after 2015, analysis of 50 metal elements, and FTIR analysis and loss on ignition for polymers."
+      },
+      {
+        "evidence_id": "E07caf30192",
+        "quote": "As aforementioned, 30 smartphones were collected and divided into two groups according to their manufacturing years (before and after 2015). Devices were manually separated into four components (casing, PCB, screen, and battery), with individual measurements of their mass."
+      }
+    ],
+    "population_granularity": "batch",
+    "sample_type": "end-of-life smartphones",
+    "scope_description": "The 'entire' device corresponds to the same 30 collected end-of-life smartphones, analyzed as whole devices (entire smartphones) in addition to their separated components.",
+    "sample_size": null
+  },
+  {
+    "root_entity_ids": [
+      "Process_nitric_acid_acidic_digestion"
+    ],
+    "scope_subject_text": "nitric acid acidic digestion",
+    "scope_label": "nitric acid acidic digestion",
+    "evidence_ids": [
+      "Ebb52b171e4",
+      "E44507b14f6"
+    ],
+    "evidence_span": "Digestions were performed with analytical grade aqua regia (3:1 chloride acid and nitric acid). In parallel, another set of digestions (in the same conditions) were performed using nitric acid due to possible precipitation of chlorides in aqua regia.",
+    "evidence": [
+      {
+        "evidence_id": "Ebb52b171e4",
+        "quote": "Digestions were performed with analytical grade aqua regia (3:1 chloride acid and nitric acid). In parallel, another set of digestions (in the same conditions) were performed using nitric acid due to possible precipitation of chlorides in aqua regia."
+      },
+      {
+        "evidence_id": "E44507b14f6",
+        "quote": "The parameters for acidic digestions were: 20 mL of solution per gram of solids, at 80 ^∘C, under agitation speed of 300 rpm, for 2 h."
+      }
+    ],
+    "method_family": "acid digestion"
   },
   {
     "root_entity_ids": [
@@ -23,9 +86,20 @@
     "scope_subject_text": "thermal treatment (loss on ignition)",
     "scope_label": "thermal treatment (loss on ignition)",
     "evidence_ids": [
-      "Ec6a8f3fa96"
+      "Ece54af1135",
+      "Ece54af1135"
     ],
-    "evidence_span": "Dry 3–5 g samples of milled smartphone components at 100 °C for 2 h, then ignite in alumina crucibles in a muffle furnace at 550 °C for 80 min; cool to room temperature, dry again at 100 °C for 2 h, and measure mass loss.",
-    "method_family": "thermal treatment"
+    "evidence_span": "It is usual to perform a thermal treatment (also called loss on ignition) on e-waste to evaporate volatile compounds, and consider this fraction as an approximation of polymers [25, 26]. Three samples of each of the eight groups were submitted to thermal treatment",
+    "evidence": [
+      {
+        "evidence_id": "Ece54af1135",
+        "quote": "It is usual to perform a thermal treatment (also called loss on ignition) on e-waste to evaporate volatile compounds, and consider this fraction as an approximation of polymers [25, 26]. Three samples of each of the eight groups were submitted to thermal treatment"
+      },
+      {
+        "evidence_id": "Ece54af1135",
+        "quote": "the samples were placed in alumina crucibles and arrayed in a mufle furnace at 550 ^∘C for 80 min."
+      }
+    ],
+    "method_family": "loss on ignition"
   }
 ]

@@ -1,0 +1,344 @@
+{
+  "raw_response": "{\"population_scopes\":[{\"root_entity_id\":\"Product_Lithium_ion_battery\",\"granularity\":\"batch\",\"sample_type\":\"spent lithium-ion batteries\",\"scope_summary\":\"Spent LIBs collected from different consumer electronics, including mobile phones, cameras, and portable power storage devices; total sample weight 1 kg.\",\"evidence\":[{\"evidence_id\":\"E39b1293736\",\"quote\":\"Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study. The total weight of the samples was 1 kg.\"}]}],\"process_scopes\":[{\"root_entity_id\":\"Process_L_tartaric_acid_leaching\",\"method_family\":\"organic acid leaching\",\"evidence\":[{\"evidence_id\":\"E020c2e8774\",\"quote\":\"(3) L-Tartaric acid leaching: All the leaching experiments were carried out using a 250 mL glass reactor, which was placed in a water bath to control the reaction temperature.\"},{\"evidence_id\":\"Ebaede24a34\",\"quote\":\"In this paper, we report a newly developed green process using -tartaric acid as a leachant for the sustainable recovery of Mn, Li, Co, and Ni from spent LIBs.\"}]}],\"unscoped_candidates\":[]}",
+  "raw_payload": {
+    "population_scopes": [
+      {
+        "root_entity_id": "Product_Lithium_ion_battery",
+        "granularity": "batch",
+        "sample_type": "spent lithium-ion batteries",
+        "scope_summary": "Spent LIBs collected from different consumer electronics, including mobile phones, cameras, and portable power storage devices; total sample weight 1 kg.",
+        "evidence": [
+          {
+            "evidence_id": "E39b1293736",
+            "quote": "Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study. The total weight of the samples was 1 kg."
+          }
+        ]
+      }
+    ],
+    "process_scopes": [
+      {
+        "root_entity_id": "Process_L_tartaric_acid_leaching",
+        "method_family": "organic acid leaching",
+        "evidence": [
+          {
+            "evidence_id": "E020c2e8774",
+            "quote": "(3) L-Tartaric acid leaching: All the leaching experiments were carried out using a 250 mL glass reactor, which was placed in a water bath to control the reaction temperature."
+          },
+          {
+            "evidence_id": "Ebaede24a34",
+            "quote": "In this paper, we report a newly developed green process using -tartaric acid as a leachant for the sustainable recovery of Mn, Li, Co, and Ni from spent LIBs."
+          }
+        ]
+      }
+    ],
+    "unscoped_candidates": []
+  },
+  "evidence_records": [
+    {
+      "id": "candidates",
+      "kind": "candidates",
+      "entity_ids": [
+        "Product_Lithium_ion_battery",
+        "Process_L_tartaric_acid_leaching"
+      ],
+      "entity_types": {
+        "Product_Lithium_ion_battery": "Component",
+        "Process_L_tartaric_acid_leaching": "Process"
+      },
+      "entity_names": {
+        "Product_Lithium_ion_battery": "Lithium-ion battery",
+        "Process_L_tartaric_acid_leaching": "L-tartaric acid leaching"
+      },
+      "entity_aliases": {
+        "Product_Lithium_ion_battery": [
+          "lithium ion battery",
+          "Lithium-ion batteries",
+          "LIBs",
+          "Lithium-ion battery"
+        ],
+        "Process_L_tartaric_acid_leaching": [
+          "L-tartaric acid leaching"
+        ]
+      },
+      "entity_provenance": {
+        "Process_L_tartaric_acid_leaching": "Cathodic materials were leached in a 250 mL glass reactor placed in a water bath with mechanical stirring at 400 rpm. L-Tartaric acid concentration was varied from 0.25 to 2.5 M, H2O2 concentration from 0 to 5 vol %, pulp density from 14 to 33 g/L, temperature from 40 to 80 °C, and time up to 300 min. After leaching, the insoluble residue and leachate were separated by filtration, and the leachate was analyzed for Mn, Li, Co, and Ni to calculate leaching efficiencies."
+      }
+    },
+    {
+      "id": "E26b5861a40",
+      "kind": "source",
+      "section_name": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+      "text": "Li-Po He, Shu-Ying Sun,\\* Yan-Yu Mu, Xing-Fu Song, and Jian-Guo Yu\\*"
+    },
+    {
+      "id": "E4a697d89e8",
+      "kind": "source",
+      "section_name": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+      "text": "\\*S Supporting Information"
+    },
+    {
+      "id": "E2476a6090d",
+      "kind": "source",
+      "section_name": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L‑Tartaric Acid as a Leachant",
+      "text": "KEYWORDS: Spent lithium-ion batteries, Green process, Recovery, L-Tartaric acid, Leaching, Kinetics"
+    },
+    {
+      "id": "E0d2a57d19f",
+      "kind": "source",
+      "section_name": "■ INTRODUCTION",
+      "text": "Lithium-ion batteries (LIBs) are currently very important for energy storage and have been widely used in portable electronic products, such as mobile phones, laptops, and cameras. As battery technology continues to develop, the use of LIBs is expected to expand to meet the rising demand for energy storage devices for electric vehicles and for storage of energy from renewable sources, such as solar and wind.1 The cycle lifetime of LIBs is limited,2,3 and the result of such wide application has been the generation of significant numbers of spent LIBs. These batteries contain many toxic materials and valuable metals (the total metal content ranged from 26 wt% to 76 wt%4); thus improperly disposing them will not only result in long-term environmental impact but also lead to a major waste of resources.5 Therefore, an environmentally friendly technology is urgently needed to mitigate and recycle this rapidly growing stockpile of electronic waste (e-waste)."
+    },
+    {
+      "id": "E7c82646920",
+      "kind": "source",
+      "section_name": "■ INTRODUCTION",
+      "text": "Changes in the market of cathode-active, LIB materials are shown in Figure S1.6 In 2005, the LIB market was dominated by LiCoO2, which had 94% of the market share. Considering the cost and safety issues of LiCoO2, a variety of substitute cathode-active materials were developed. After 2011, Li-Nix CoνMnz O2 (NCM) surpassed LiCoO as the most widely used cathode-active material in LIBs. As a variety of spent LIBs enter the waste stream, the composition of the cathodic materials that might be recycled from spent LIBs has become complicated, raising new challenges for their reclamation."
+    },
+    {
+      "id": "E6572a7cedc",
+      "kind": "source",
+      "section_name": "■ INTRODUCTION",
+      "text": "State-of-the-art techniques for the recovery of materials from spent LIBs have been reviewed in several studies.7−10 Overall, the recycling process can be divided into discharging and dismantling, pretreatment, metals leaching, and the separation of metals. Pretreatment procedures, such as mechanical separation,11−13 ultrasonic cleaning,14 solvent dissolution,15 and ionic liquid dismantlin g,16 are necessary to separate the cathodic materials from the Al foil. Leaching plays a key role in the whole recycling process. A summary of the reaction conditions for leaching valuable metals from spent LIBs is provided in Table 1. Several inorganic acids, such as HCl,17−19 HNO3, ^20-22 and H2SO4, ^23-27 have been used to leach metals from the cathodic materials of spent LIBs; however, these leachants release toxic gases during the process, thereby causing significant secondary pollution.28"
+    },
+    {
+      "id": "Eac405bad52",
+      "kind": "source",
+      "section_name": "■ INTRODUCTION",
+      "text": "[TABLE:TABLE_Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant_0001]"
+    },
+    {
+      "id": "E2e9558c754",
+      "kind": "source",
+      "section_name": "■ INTRODUCTION",
+      "text": "In recent years, some researchers have used natural organic acids as leachants to avoid adverse environmental impacts. These included citric acid (C6H8O7), ^28-31 DL-malic acid (C4H5O6), ^32 oxalic acid (H2C2O4), ^33, 34 ascorbic acid (C6H8O6), ^35 L-aspartic acid (C̅4 H̅7 O4), ^36 succinic acid (C4H6O4), ^37 and glycine (C2H5NO2). ^38 However, all these studies focus only on the leaching of Li and Co from the LiCoO2 cathodic materials during the recycling of spent LIBs and neglect other toxic metals, such as Ni and Mn. Considering the importance of environmental conservation and resource recovery, it is necessary to develop a novel green process to recycle all the metals present in the cathodic materials of spent LIBs."
+    },
+    {
+      "id": "Ebaede24a34",
+      "kind": "source",
+      "section_name": "■ INTRODUCTION",
+      "text": "-Tartaric acid (C4H6O6) is a natural organic acid mainly found in plants and is especially enriched in grapes. It has wide industrial use in foods, pharmaceuticals, and manufacturing.39 Compared to DL-malic acid, ascorbic acid, L-aspartic acid, succinic acid, and glycine, L-tartaric acid has lower cost and higher acidity. In this paper, we report a newly developed green process using -tartaric acid as a leachant for the sustainable recovery of Mn, Li, Co, and Ni from spent LIBs. To our knowledge, this has never before been reported in the literature. The advantages of this method include the absence of toxic gases during the reaction process and the relative ease with which wastes can be managed, because L-tartaric acid is biodegradable. The effects of operating factors on the leaching efficiencies of Mn, Li, Co, and Ni were investigated. The leaching kinetics were studied, and the corresponding activation energies (Ea s) for metal leaching were determined."
+    },
+    {
+      "id": "E39b1293736",
+      "kind": "source",
+      "section_name": "■ EXPERIMENTAL SECTION",
+      "text": "Materials and Reagents. Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study. The total weight of the samples was 1 kg. Aqua regia (volume ratio of HCl to H V̅O3 = 3: 1) was used to dissolve the cathodic materials fully in order to analyze their metal contents. L-Tartaric acid was employed as the leachant and hydrogen peroxide (H2O2) as the reductant. All the solutions were prepared in deionized water, and all the reagents were of analytical grade."
+    },
+    {
+      "id": "Ebf88945448",
+      "kind": "source",
+      "section_name": "■ EXPERIMENTAL SECTION",
+      "text": "Experimental Procedures. A flowsheet designed for the recovery of valuable metals from spent LIBs is shown in Figure 1. The recycling process mainly comprises the following procedures:"
+    },
+    {
+      "id": "Ec453fd1ea1",
+      "kind": "source",
+      "section_name": "■ EXPERIMENTAL SECTION",
+      "text": "(1) Discharging and dismantling: First, the spent LIBs were discharged completely via submersion in a 5 wt% NaCl solution to avoid short-circuiting and self-ignition and then manually dismantled to remove both the plastic and metal cases using sharp-nosed pliers in a fume hood. Once uncurled and separated, the cathode and anode were dried at 60 ^∘C for 24 h."
+    },
+    {
+      "id": "E231c4619aa",
+      "kind": "source",
+      "section_name": "■ EXPERIMENTAL SECTION",
+      "text": "(2) Ultrasonic cleaning: The cathodes were cut into small parts (10 x20 mm) using scissors and then immersed in solvent in a conical flask with cover. The conical flask was then placed in an ultrasonic cleaner under the following conditions: solid/liquid ratio of 1:10 g / Å mL, cleaning temperature 7̌ 0 ^∘C,, ultrasonic power 240 W, ultrasonic frequency of 40 Hz, and ultrasonic time of 90 min. The cathodic materials separated from the Al foil after ultrasonic cleaning were filtered, screened, and dried."
+    },
+    {
+      "id": "E020c2e8774",
+      "kind": "source",
+      "section_name": "■ EXPERIMENTAL SECTION",
+      "text": "(3) L-Tartaric acid leaching: All the leaching experiments were carried out using a 250 mL glass reactor, which was placed in a water bath to control the reaction temperature. The reactor was covered to reduce the loss of water by evaporation at a high temperature. Solutions of -tartaric acid and H2O2 at different concentrations were poured into the reactor and stirred mechanically using a magnetic stirrer. After the leaching solutions were heated to a preselected temperature, a certain amount of cathodic materials was added to the reactor. The following operating variables were investigated: concentration of H2O2 (0 - 5̅ vol %), concentration of L-tartaric acid (0.25−2.5 M), pulp density (14 - 33 g / L), temperature (40 - 80 ^∘C). and time (up to 300 min). The stirring speed (400−800 rpm) showed no obvious effect on leaching efficiencies (data not included), indicating that the external difusion surrounding the solid particles could be minimized at 400 rpm. Therefore, all the experiments were carried out at this stirring speed. After leaching, the insoluble residues and leachate were separated via filtering. The leachate was withdrawn to determine the concentrations of Mn, Li, Co, and Ni, and these data were used to calculate the leaching efficiencies."
+    },
+    {
+      "id": "Ed388576f1c",
+      "kind": "source",
+      "section_name": "■ EXPERIMENTAL SECTION",
+      "text": "Analytical Methods. After the sample of cathodic materials was completely dissolved by the aqua regia, the total amounts of Mn, Li, Co, and Ni from the cathodic materials were determined by inductively coupled plasma-atomic emission spectroscopy (ICP-AES, Spectro Arcos FHS12). The concentrations of Mn, Li, Co, and Ni in the leachate were also analyzed using ICP-AES. Leaching efficiency can be calculated using eq 1."
+    },
+    {
+      "id": "E5cc800f725",
+      "kind": "source",
+      "section_name": "■ EXPERIMENTAL SECTION",
+      "text": "The compositions of the cathodic materials separated from the Al foil after ultrasonic cleaning and the residues left after leaching were analyzed using X-ray difraction (XRD, Rigaku D/max-2550 V). A scanning electron microscope (SEM, Quanta250) associated with an energy dispersive spectrometer (EDS, EDAX Genesis-SiLi) was used to observe the morphology and to determine the elemental composition of the sample. The molecular structures of possible products generated during the process of L-tartaric acid leaching were simulated and calculated using Materials Studio (Accelrys Enterprise Platform)."
+    },
+    {
+      "id": "Ecfe887f442",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "Characterization of the Cathodic Materials and Leaching Residues. Figure 2 shows the XRD patterns of"
+    },
+    {
+      "id": "Eb37ac6c644",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "the cathodic materials separated via ultrasonic cleaning, as well as the residues under the optimized leaching conditions. The results of the analysis show that the cathodic materials contained LiCoO2,, and LiNi0. 5 Co0. 2 Mn0. 3 O2. The peak of LiNi0. 5 Co0. 2 Mn0. 3 O2 in the cathodic materials may come from the mixture of NCM cathode-active materials, because the"
+    },
+    {
+      "id": "E5a37ac3d4a",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "NCM materials of varying proportions have similar XRD patterns. Moreover, the intensity of peaks in the residues after leaching is clearly weaker than that in the cathodic materials. The content of the metals present in the cathodic materials is shown in Table S1. The metals in the cathodic materials included Li (6.28 wt%), Ni (11.85 wt%), Co (35.52 wt%), Mn (8.15 wt%), and Al (0.11 wt%). The existence of a slight amount of Al is from the already decayed cathode, which was easily shredded during the ultrasonic cleaning."
+    },
+    {
+      "id": "Ed1cd8cd944",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "The SEM images of the cathodic materials separated via ultrasonic cleaning and the residues under the optimized leaching conditions are shown in Figure 3(a) and (b), respectively. Because of the dissolution of polyvinylidene fluoride (PVDF) and the dispersive effect of ultrasound, the cathodic materials displayed a low degree of agglomeration, which is beneficial for the subsequent leaching process. Moreover, the residues after leaching showed a smaller particle size (approximately 2−22 μm) compared to that before leaching (approximately 7 - 45 μ m). The EDS results for the residues (Figure 4) indicate the presence of C and F, which is attributed to the conductive agent and organic binder (PVDF). These materials cannot be dissolved in acidic solutions, so they remain as an “ash” layer after leaching."
+    },
+    {
+      "id": "Ec8d2b3a892",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "Leaching Mechanism of -Tartaric Acid. -Tartaric acid contains two carboxyls in one molecule, and its dissociation reaction can be expressed as follows:"
+    },
+    {
+      "id": "E6b920a321d",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "HOOCCHOHCHOHCOOH"
+    },
+    {
+      "id": "Eb488587fb9",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "HOOCCHOHCHOHCOO"
+    },
+    {
+      "id": "Ec6ec2e30a9",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "The pK values of L-tartaric acid are p Kal = 2.98 and p Ka2 = 4.34. ^42 Normally, H2O2 can act as both oxidant and reductant in acidic solution, as shown in the following equations43"
+    },
+    {
+      "id": "E018b965263",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "where E1 ^0 and E2 ^0 are the standard electrode potentials corresponding to the reactions. The leaching of valuable metals from the cathodic materials involves the conversion of highvalence Ni, Co, and Mn in the solid phase to Ni ^2+, Co ^2+ +, and Mn ^2+ in the aqueous phase. The addition of H2O2 is necessary to increase the rate of the leaching reaction, because of the strong reducibility of this reagent ⊆(eq5). Theoretically, the leaching products containing Ni ^2+, Co ^2+, and Mn ^2+ have several possible structures, as shown in Figure 5. However, thermodynamic calculation shows that only the generation of C8H10O12Co, C8H10O12Ni,, and C8H10O1 Mn is thermodynamically favorable during leaching ^35, 37, 44 Therefore, the leaching reaction can be represented as"
+    },
+    {
+      "id": "Eff07484aa6",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "Effect of H2O2 Concentration. The effect of the H2O2 concentration on the leaching efficiencies of Mn, Li, Co, and Ni"
+    },
+    {
+      "id": "E39acbf694f",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "was investigated by fixing the concentration of the -tartaric acid at 2 M, pulp density at 17 g / L,, temperature at 70 ^∘C, and leaching time at 30 min. Figure 6 shows that the addition of H2O2 significantly improved the leaching efficiencies of all the metals studied. In the absence of 2 O2 in the leaching solutions, the leaching efficiencies were only 30.44% for Mn, 31.47% for Li, 16.69% for Co, and 29.59% for Ni. When the H2O2 concentration was increased to 4 vol%, however, the leaching efficiencies of Mn, Li, Co, and Ni increased to 99.31, 99.07, 98.64, and 99.31%, respectively. The increase in the leaching efficiencies occurred because the H2O2 acts as a reducing agent to increase the rate of the leaching reaction. A further increase in the H2O2 concentration to 5 vol% did not cause significant change in the leaching efficiencies; therefore, 4 vol% 2 O2 was considered the optimal concentration."
+    },
+    {
+      "id": "E5d82c275ee",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "Effect of L-Tartaric Acid Concentration. Figure 7 shows the effect of the L-tartaric acid concentration on the leaching"
+    },
+    {
+      "id": "E83be5952c7",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "efficiencies of Mn, Li, Co, and Ni under the conditions: H2O2 concentration of 4 vol%, pulp density of 17 g / L,, temperature of 70 ^∘C, and leaching time of 30 min. The leaching efficiencies of Mn, Li, Co,, and Ni were found to increase with increasing Ltartaric acid concentration. This can be attributed to the fact that an increase in the L-tartaric acid concentration improves the frequency of collisions between reactants, thus speeding up the rate of reaction.45 When the concentration of L-tartaric acid reached 2 M, the leaching efficiencies increased to ∼99% for all the metals. With a further increase in the L-tartaric acid concentration to 2.5 M, the leaching efficiencies showed almost no change. Therefore, 2 M was determined as the optimal concentration of -tartaric acid."
+    },
+    {
+      "id": "Ed2eb549e02",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "Effect of Pulp Density. The effect of the pulp density on the leaching efficiencies of Mn, Li, Co, and Ni was studied by fixing the H _ 2 O2 concentration at 4 vol%, L-tartaric acid concentration at 2 M, temperature at 70 ^∘C,, and leaching time at 30 min. Figure 8 shows that the leaching efficiencies are nearly constant in the pulp density range of 14−17 g/L. When the pulp density was increased to 20 g /, however, the leaching efficiencies of all the metals clearly decreased. This is attributed to a decrease in the available surface area per unit volume of the solution, with increasing pulp density.24 Therefore, 17 g/L was determined as the optimal pulp density."
+    },
+    {
+      "id": "Ea962c5ad87",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "Effects of Temperature and Time. The effects of the temperature and time on the leaching efficiencies of Mn, Li, Co, and Ni were investigated at an H2O2 concentration of 4 vol%, an L-tartaric acid concentration of 2 M, and a pulp density of 17 g/L. As shown in Figure 9, the temperature and time affected the leaching efficiencies of Mn, Li, Co, and Ni significantly. The leaching efficiencies were found to increase with an increase in temperature, which was more obvious at the beginning of the leaching process. Increasing the temperature can promote the leaching reaction, because metal leaching is an endothermic process.46 Moreover, the average kinetic energy of the molecules increases with increasing temperature, thereby causing more frequent and more energetic collisions and thereby accelerating the leaching reaction.45 However, the leaching efficiencies decreased slightly when the temperature was further increased to 80 ^∘C. For instance, the leaching efficiencies at 30 min decreased from 99.31% to 96.94% for Mn, from 99.07% to 96.79% for Li, from 98.64% to 97.35% for Co, and from 99.31% to 96.67% for Ni, with an increase in temperature from 70 to 80 ^∘C. This is because the H2O2 is unstable when heated.37 Increasing the temperature to more than 70 ^∘C would accelerate the decomposition of H2O2, according to eq 8."
+    },
+    {
+      "id": "E16fcc70551",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "The results presented in Figure 9 also show that the leaching efficiencies of all the metals increase with increasing leaching time. Simultaneously, the leaching rates (slope of the curves) of all the metals decreased. This is in accordance with the previous results.43 To obtain a high leaching efficiency in a short time, 70 °C and 30 min were selected as the optimal temperature and leaching time, respectively."
+    },
+    {
+      "id": "E09b751bff8",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "Kinetics of Leaching. For most oxide minerals, the leaching efficiency depends on the rate of the chemical reaction and of the mass transfer (inner and outer difusion). Because reduction in the mass and particle size of the leaching residues occurred during leaching (Figure 3), the shrinking-core model ^47-49 was applied to describe the leaching kinetics. In this model, the leaching reaction occurs at the external surface of the cathodic materials. As the reaction proceeds, the reactive area is shifted progressively to the core of the solid. If the leaching process is controlled by the chemical reaction, the shrinking-core model can be represented as"
+    },
+    {
+      "id": "Eab6941d936",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "where f is the leaching efficiency of a metal, k is the reaction rate constant (min ^-1), and t is the leaching time (min)."
+    },
+    {
+      "id": "Ea61f4b2238",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "If the largest resistance to the leaching process is the difusion through the inert ash layer, the following expression can describe the leaching kinetics of the process"
+    },
+    {
+      "id": "E36041d19bc",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "where k ^' is the reaction rate constant (min ^-1)"
+    },
+    {
+      "id": "E414d4f8e47",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "The plots of (1 - f) ^1 / 3 vs t at different temperatures (Figure 10) indicate that the experimental data fit well to the shrinkingcore model of chemical control (9). Moreover, the leaching process occurred in a fast stage and a slow stage, and the model parameters (R ^2 > 0.96) for each stage are shown in Table S2."
+    },
+    {
+      "id": "Ef46f3a3ab4",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "Therefore, the leaching process using L-tartaric acid as the leachant is controlled by the rate of the leaching reaction and not by that of difusion."
+    },
+    {
+      "id": "E06c1a2bd77",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "The relationship between the reaction rate constant and the temperature can be expressed by the Arrhenius equation (eq 11)"
+    },
+    {
+      "id": "Ed71b1ab331",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "where k (min−1) is the reaction rate constant, A is the frequency factor, Ea is the apparent activation energy, R (8.3145 J / K / mol)̇ is the gas constant, and T (K) is the absolute temperature. The Ea s of the leaching reactions can be estimated by using the linear form of the Arrhenius equation"
+    },
+    {
+      "id": "E3c032afc7f",
+      "kind": "source",
+      "section_name": "■ RESULTS AND DISCUSSION",
+      "text": "Plots of ln k vs 1 / T using the reaction rate constants (Table S2) are shown in Figure 11. For the first stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 66.00, 54.03, 58.18, and 73.28 kJ/mol, respectively. For the second stage, the Ea s for the leaching of Mn, Li, Co, and Ni were 55.68, 53.86, 58.94, and 47.78 kJ/mol, respectively. These values are close to the reported results.24,50 The relatively high values of Ea s further indicate that the rate-controlling step of this leaching process is surface chemical reactions."
+    },
+    {
+      "id": "E5c06edc95e",
+      "kind": "source",
+      "section_name": "■ CONCLUSIONS",
+      "text": "A simple, efficient, and green process was developed to mitigate and recycle Mn, Li, Co, and Ni from spent LIBs. L-Tartaric acid was employed as the leaching agent and H2O2 as the reductant. The optimum leaching conditions were determined to be H2O2 concentration of 4 vol%, -tartaric acid concentration of 2 M, pulp density of 17 g / L, temperature of 70 ^∘C, and leaching time of 30 min. Under these experimental conditions, the leaching efficiencies achieved for Mn, Li, Co, and Ni were 99.31, 99.07, 98.64, and 99.31%, respectively. These results show that the elimination of secondary pollution from use of inorganic acids can be achieved without sacrificing high leaching efficiencies. Kinetics analysis indicates that the leaching process using Ltartaric acid as the leachant is controlled by the chemical reactions."
+    },
+    {
+      "id": "Ecb50004991",
+      "kind": "source",
+      "section_name": "\\S Supporting Information",
+      "text": "The Supporting Information is available free of charge on the ACS Publications website at DOI: 10.1021/acssuschemeng.6b02056."
+    },
+    {
+      "id": "Ee73b58d1f0",
+      "kind": "source",
+      "section_name": "\\S Supporting Information",
+      "text": "Tables S1 and S2 and Figure S1 (PDF)"
+    },
+    {
+      "id": "Eb852e6b310",
+      "kind": "source",
+      "section_name": "ORCID",
+      "text": "Shu-Ying Sun: 0000-0002-7106-8569"
+    },
+    {
+      "id": "E89e2247290",
+      "kind": "source",
+      "section_name": "Notes",
+      "text": "The authors declare no competing financial interest."
+    }
+  ]
+}

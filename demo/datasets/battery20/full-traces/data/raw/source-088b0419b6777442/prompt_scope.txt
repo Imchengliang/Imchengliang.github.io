@@ -1,0 +1,139 @@
+Annotate study scope for the supplied final graph candidates using the source
+passages. Candidate names, aliases and context summaries help identify objects;
+they are not source evidence. Copy candidate IDs and passage IDs exactly.
+
+1. For each Product/Component candidate that represents this study's sampled
+   device, component or population, return one population scope. Use `instance`
+   for an individually identified model/sample and `batch` for an unspecified
+   population. Summarize only sample facts stated by this paper (source, brand,
+   collection, selection, etc.). Distinguish the initial sample from processed
+   fractions, residues, reagents, characterization media and table aggregates.
+   A shared sample declaration can support multiple named models. Do not invent
+   missing provenance. A root in graph topology is only a candidate, not proof
+   that it is an independently sampled population.
+2. For each Process candidate, return its broad parent method as `method_family`.
+   Use a short method noun phrase, without parenthetical alternatives or settings.
+   It can be a semantic generalization, not a verbatim substring of the name.
+   Cite an actual passage describing that method or its application. A sample
+   origin, culture adaptation or measurement sentence alone does not establish
+   a treatment method. Shared procedures may support multiple treatment arms;
+   do not replace a control with another arm's method.
+3. Use section and surrounding context to distinguish this study from cited
+   work and background. Choose the evidence yourself; no passage is preverified
+   as current-study evidence. Context summaries never qualify as quotations.
+4. Every candidate must have a scope or an `unscoped_candidates` entry explaining
+   why it is not a study subject or lacks sufficient source evidence. Do not
+   force a scope just to meet coverage. Cite relevant evidence for exclusions
+   when available. Never silently omit a candidate.
+5. Each scope needs exact source quotations in `evidence`. Put the quotation
+   most directly supporting its scope first, then any additional support for
+   summary details. Keep sample-origin and method evidence distinct. Return
+   one scope per selected candidate and JSON only:
+{
+  "population_scopes": [{
+    "root_entity_id": "component_id", "granularity": "batch",
+    "sample_type": "lithium-ion battery",
+    "scope_summary": "Study batteries supplied by the company named in the source.",
+    "evidence": [{"evidence_id": "E1", "quote": "Exact sample-source quotation."}]
+  }],
+  "process_scopes": [{
+    "root_entity_id": "process_id", "method_family": "acid leaching",
+    "evidence": [{"evidence_id": "E2", "quote": "Exact method quotation."}]
+  }],
+  "unscoped_candidates": [{
+    "root_entity_id": "other_id", "reason": "Why a study scope cannot be assigned.",
+    "evidence": [{"evidence_id": "E3", "quote": "Relevant source quotation."}]
+  }]
+}
+
+## Product/Component candidates
+- Component_Al_foil | Component | Al foil
+  Aliases: Al foil; Al foil mixtures
+- Component_cathode_scrap | Component | cathode scrap
+  Aliases: cathode scraps; cathode scrap
+- Component_cathode_electrode | Component | cathode electrode
+  Aliases: cathode electrodes; cathode electrode
+
+## Process candidates
+- Process_solvent_method_for_scrap_material_recovery | Process | solvent method for scrap material recovery
+  Aliases: solvent method for scrap material recovery
+  Context summary (not evidence): Separated Al foil was treated again with the solvent method to enhance recovery rate of scrap materials and purity of Al foil; most scrap materials (m1) were directly recovered after the solvent method.
+- Process_NaOH_dissolution_of_Al_foil_mixtures | Process | NaOH dissolution of Al foil mixtures
+  Aliases: NaOH dissolution of Al foil mixtures
+  Context summary (not evidence): Impure Al foil mixtures (m3) containing residual scrap materials were dissolved with excessive NaOH solution; the wasted scrap materials (m2) were then weighed to calculate recovery rate m1/(m1+m2) and Al foil purity (m3-m2)/m3.
+- Process_electrochemical_cycling_of_recovered_scrap_material_electrodes | Process | electrochemical cycling of recovered scrap material electrodes
+  Aliases: electrochemical cycling of recovered scrap material electrodes
+  Context summary (not evidence): Cathode electrodes were fabricated with 83 wt.% active materials (from recovered scrap materials), 10 wt.% acetylene black, and 7 wt.% PVDF in NMP; CR2032 coin cells with lithium foil anode and 1 M LiPF6 in EC:DEC (1:1 v/v) were charged/discharged between 3.0 V and 4.3 V vs Li+/Li at 30 mA g-1 and 25 °C.
+
+## Source passages
+[Efce363df22] section=Heat treatment of recovered from cathode scraps with solvent method
+Dawei Song a,b, Xiaoqing Wang c, Hehe Nie a, Hua Shi a, Dongge Wang a, Fenxia Guo a, Xixi Shi a, Lianqi Zhang a,\*
+
+[E597359d88c] section=Heat treatment of recovered from cathode scraps with solvent method
+Acetylene black and Al foil can be recovered at the same time with this method.
+
+[Eb7248ef954] section=ABSTRACT
+Solvent method was used to recover LiCoO2 scrap materials, and the effects of heat treatment on the scrap materials for Li-ion battery were investigated in detail. SEM results showed that heat treatment could slightly reduce the degree agglomeration of the scrap materials. XRD results showed that the layer structure of LiCoO2 was partly destroyed during the recovery process. Low temperature heat treatment could contribute to restore the original layer structure of LiCoO2,, however, high temperature heat treatment could lead to the further damage of the layer structure. Compared with the unheat-treated scrap materials, the discharge capacity and the cycle life of the pristine scrap materials heat-treated at 200 C, 250 C and 300 C were obviously improved, Especially after heat-treated at 250 C, the discharge capacity could reach about 154.6 mAh g ^-1 and the capacity retention rate still remained at 92.0% after 360 cycles. Particle size distribution, tap density and recovery rate of scrap materials were also investigated.
+
+[Ed2b19821dd] section=ABSTRACT
+ 2013 Elsevier B.V. All rights reserved.
+
+[Ec80bb1c589] section=1. Introduction
+The increased demand for Li-ion batteries (LIBs) has greatly stimulated its production in recent years. Except for a large amount of spent LIBs after use, the electrode scraps generated in the production process of LIBs are also dramatically increasing. Therefore, the recovery and recycle of spent LIBs and electrode scraps attract more and more attention. At present, the conventional recovery process of spent LIBs aims to abstract noble metals (such as Co, Ni and Li) by extraction method, chemical precipitation method or electrolytic method, and the electrode scraps (mainly cathode scraps) are recovered and recycled with the same process [1e16].
+
+[Eef4eba4c16] section=1. Introduction
+These conventional recovery processes are efficient, but there are still many problems. Firstly, they could lead to serious resource waste and environmental pollution because a large amount of acid, alkali and organic solvent are used. Secondly, because of the high recovery cost, these conventional recovery processes are only suitable for the recovery of scraps contained noble metals (such as LiCoO2, Li (Nix Coy Mn1-x-y) O2), but not suitable for LiFePO or LiMn2O4 scraps in which there are no noble metals.
+
+[E1a473259b4] section=1. Introduction
+Different from spent LIBs, the cathode scraps generated in the production process have not been undergone the chargeedischarge process, so the scrap materials can be directly reused only after removing Polyvinylidene Fluoride (PVDF) in scraps and separating down from Al foil with a suitable method. Sintering method is once used to remove PVDF and acetylene black in cathode scraps, but HF from the decomposition of PVDF leads to the decomposition of active material during sintering method, because HF can react with active material. So the obtained scrap materials display poor electrochemical performance compared with the unused material [17]. Therefore, developing a new, simply-operated, low-cost, highlypure, high recovery rate and green recovery method of cathode scrap materials has importantly economic and social significance. Now LiCoO2 material occupies a large proportion of cathode materials in market, so the recovery research on LiCoO2 scraps is representative for other cathode scraps.
+
+[E92d85e1d66] section=1. Introduction
+Herein, in order to study the recovery and heat treatment on the LiCoO2 scrap material for Li-ion battery, a new solvent method with inexpensive mixture of N,N-Dimethylformamide (DMF) and ethanol was used to remove PVDF and recover scrap materials from LiCoO2 scraps. Structure, electrochemical performances, particle size distribution, tap density and recovery rate of recovered scrap materials were investigated in detail.
+
+[E4929e58333] section=2.1.1. Solvent method
+In order to enhance the recovery rate of scrap materials and the purity of Al foil, the separated Al foil was treated again as above recovery method.
+
+[E2d5e7e2254] section=2.1.2. Recovery rate of scrap materials
+Most of scrap materials (m ) could be directly recovered after solvent method, but a small amount of the scrap materials (m ) still remained on impure Al foil mixtures (m ) and were wasted. After dissolving Al foil mixtures with excessive NaOH solution, the wasted scrap materials (m2) could be weighed. So the recovery rate of scrap materials with solvent method was m1 / (m1 + m2), and the purity of obtained Al foil mixtures was [ (m3 - m2) / m3. ]
+
+[E8432aaed62] section=2.2. Compositional and structural characterization
+The crystal structure and surface configuration of the scrap materials were characterized by infrared spectrometer (FTIR-650), thermal gravimetric analysis (TGA, EXSTAR6000, SEIKO), scanning electron microscope (SEM, JMS-6700F, JEOL), X-ray diffraction (XRD, Rigaku D/MAX-2500). The particle size distribution was measured with a particle size analyzer (OMEC, LS-POP (6)) and the tap density of scrap materials was measured by ZS tap density meter (ZS-201).
+
+[E3639cf8ecc] section=2.3. Electrochemical measurement
+According to the datas provided by the Tianjin Lishen Battery Joint-Stock Co., Ltd., the slurry for cathode scraps consisted of 93.5 wt.% active materials, 4 wt.% acetylene black and 2.5 wt.% PVDF, so the composition of recovered the scrap materials included 95.9% wt.% active materials and 4.1 wt.% acetylene black (Assume that PVDF had been completely removed).
+
+[Ee3e51cbff3] section=2.3. Electrochemical measurement
+For fabrication of cathode electrodes consisted of 83 wt.% active materials, 10 wt.% acetylene black, and 7 wt.% PVDF, 3.46 g recovered scrap materials (active materials and acetylene black) were mixed with 0.26 g acetylene black and 0.28 g PVDF in N-methyl-2- pyrrolidone (NMP). The electrochemical characterization of electrodes was performed using CR2032 coin-type test cells with lithium foil as the anode and 1 M LiPF6 in ethylene carbonate and diethyl carbonate (1:1 in volume) as the electrolyte. The cells were charged and discharged between 3.0 V and 4.3 V versus Li ^+ / Li by applying a current density of 30 mA g ^-1 at 25 ^∘𝖢.
+
+[E11a88e3627] section=3.1. Compositional and structural change of scrap materials
+Common solvents which could dissolve PVDF include N-methyl-2-pyrrolidone (NMP), Dimethylacetamide (DMAC) and N,N-Dimethylformamide (DMF). DMF was chosen in this experiment due to its low cost, high solubility and reusability. Fig. 2 presents IR spectrums of the unheat-treated scrap materials recovered with solvent method. It was observed that there were still some weak characteristic absorption peaks of PVDF (such as 1630 cm1, 1402 cm ^-1 and 881 cm ^-1) in unheat-treated scrap materials, indicating that PVDF was not removed completely with solvent method, even if the intensity of PVDF was decreased compared with that in the pristine scrap materials directly separated from scraps. Considering the crystal form of LiCoO2 might be partly destroyed during recovery process, heat treatment after recovered was designed to improve the crystal form. On the other hand, HF decomposed from PVDF could react with LiCoO2 at high temperature, so the low heat treatment temperature was important to avoid or reduce the reaction between LiCoO2 and HF decomposed from PVDF. From the TGeDTG curve of PVDF in Fig. 3, there was no obvious decomposition of PVDF until 375 ^∘𝖢, so 200 ^∘𝖢, 250 C, 300 C and 350 ^∘𝖢 were chosen as heat treatment temperature.
+
+[Ef921b2206e] section=3.1. Compositional and structural change of scrap materials
+SEM images of the scrap materials heat treated at different temperatures are shown in Fig. 4. There were amounts of flocculent PVDF in the pristine scrap materials, which led to the serious agglomeration of the pristine scrap materials. After recovered with the mixture of DMF and ethanol, flocculent PVDF significantly decreased and agglomeration of the unheat-treated scrap materials was reduced, which was consistent with the IR result in Fig. 2. After heat treated and with the heat treatment temperature increasing, flocculent PVDF decreased and became smaller gradually, thus, agglomeration degree of the scrap materials was further reduced.
+
+[E01fb761418] section=3.2. Electrochemical properties of scrap materials
+[TABLE:TABLE_Heat Treatment of Licoo2 Recovered from Cathode Scraps with Solvent Method_0001]
+
+[Eabbb4f8bfe] section=3.2. Electrochemical properties of scrap materials
+250 ^∘C and 300 ^∘𝖢, respectively, the discharge capacity and the cycle life were obviously improved, compared with the unheattreated scrap materials. Especially after heat-treated at 250 ^∘C, the discharge capacity could reach about 154.6 mAh g ^-1 (close to that of the pristine scrap materials) and the capacity retention rate still remained at 92.0% after 360 cycles (better than that of the pristine scrap materials). However, the discharge capacity of scrap materials treated at 350 ^∘C was only about 135 m Ah: g ^-1, which was far below the pristine scrap materials. It could be seen that the heat treatment at low temperature (200 ^∘𝖢, 250 ^∘𝖢 and 300 ^∘C) could improve electrochemical performances of scrap materials and the heat treatment at high temperature (350 ^∘C) could lead to the decomposition of LiCoO2 caused by HF from PVDF and the poor electrochemical performances. The results were consistent with the XRD results in Fig. 5.
+
+[E2332c3aa39] section=3.2. Electrochemical properties of scrap materials
+Except for the structure and electrochemical performance, the research about the effects of heat treatment on the particle size distribution and tap density of scrap materials is essential, which are also the important parameters for Li-ion battery cathode materials. Fig. 7 shows the particle size distribution curves of the scrap materials heat treated at different temperatures. Heat treatment had a little effect on the particle size distribution. After recovered, the average particle diameter (D50) of the unheat-treated scrap materials slightly decreased compared with the pristine scrap materials. After heat treated, the average particle diameter gradually decreased with the heat treatment temperature increasing.
+
+[E07126baa67] section=3.2. Electrochemical properties of scrap materials
+[TABLE:TABLE_Heat Treatment of Licoo2 Recovered from Cathode Scraps with Solvent Method_0002]
+
+[E7c80c7f4b7] section=3.2. Electrochemical properties of scrap materials
+The tap densities results are consistent with particle size distribution results. Table 1 lists the tap densities of the scrap materials heat treated at different temperatures. It is obvious that the tap densities of the recovered scrap materials after heat-treated are a little larger than those of both pristine and unheat-treated scrap material, and the tap densities of the recovered scrap materials become larger gradually with the increase of heat treatment temperature. The reason for these changes of tap densities and particle size distribution could be explained as follows. After recovered with the mixture of DMF and ethanol, most PVDF was removed and the agglomeration of particles was reduced, so the average particle diameter decreased and the tap density increased. With the heat treatment temperature increasing, the residual PVDF began to soften and fail, even gradually decomposed, so the agglomeration degree of the scrap materials reduced, the average particle diameter further decreased and the tap density further increased. In addition, after heat treated, the average particle diameter and the tap density of the scrap materials reached the demand for the commercial use.
+
+[Ecd0fa5a183] section=3.3. Recovery rate of scrap materials
+In order to investigate the recovery rate of scrap materials, 200 g LiCoO2 scraps were recovered with the above solvent method. After the recovery, 145.82 g scrap materials (active material, acetylene black) and 41.86 g impure Al foil mixtures (Al foil, active material, acetylene black) were directly obtained through the first separation. Then, after the second step, 21.60 g scrap materials (active material, acetylene black) were collected from 41.86 g impure Al foil mixtures after dissolving Al foil mixtures with excessive NaOH solution. From Fig. 8, there is no Al (OH)3 impurity in 21.60 g scrap materials. So the recovery rate of scrap materials is 145.82/ (145.82 + 21.60) ^* 100 % = 87.10 %, and the purity of Al foil mixtures is (41.86 - 21.60) / 41.86 ^∗100 % = 48.40 %
+
+[Eb5bad7f8c2] section=3.3. Recovery rate of scrap materials
+In order to improve the recovery rate of scrap materials, the obtained impure Al foil mixtures were recovered with the solvent method again. After calculation, the recovery rate ofscrap materials increased to 91.88% and the purity of Al foil increased to 59.83% after two step recovery processes. The high recovery rate of scrap materials and the high purity of Al foil make this recovery method feasible in practice.
+
+[Ec777bc8c55] section=3.4. Economic analysis
+Compared with the conventional recovery process, the new solvent method is significantly simplified and simply operated. The mixture of DMF and ethanol could be reused during recovery process until saturation, saturated DMF ethanol mixtures were also not worthless and wasted. After vacuum distillation, PVDF, DMF and ethanol could be recovered from saturated DMF ethanol mixtures, respectively. During the whole recovery process, there is no pollutant discharge into environment, so this new solvent method is low-cost and environmental friendly. At last, acetylene black and Al foil were also recovered at the same time with this method, which further enhanced the recovery added-value.
+
+[E449413b5cd] section=4. Conclusions
+LiCoO2 scrap materials are recovered with solvent method using inexpensive mixture of DMF and ethanol, and the effects of heat treatment on the scrap materials are systematically investigated. The layer structure of LiCoO2 is partly destroyed during the recovery process. Low temperature heat treatment can contribute to restore the original layer structure of LiCoO2, however, high temperature heat treatment can lead to the further damage of the layer structure. The heat treatment at 200 ^∘C, 250 ^∘C and 300 ^∘𝖢 can obviously improve electrochemical performances of scrap materials, while the heat treatment at 350 C can lead to the decomposition ofLiCoO caused by HF from PVDF and the poor electrochemical performances. Remarkably, after heat-treated at 250 ^∘𝖢,, the discharge capacity and the capacity retention rate are close to or better than those of the pristine scrap materials. Meanwhile, compared with the unheat-treated scrap materials, the heat treatment can decrease the average particle diameter and increase the tap density. The recovery rate of scrap materials can reach 91.88% after two-step recovery processes. This recovery method is simply operated, low-cost, high-purity, high recovery rate and environmental friendly.

@@ -6,15 +6,65 @@
     "scope_subject_text": "lithium-ion battery",
     "scope_label": "lithium-ion battery",
     "evidence_ids": [
-      "E133a833279",
-      "E28a8d4aa45",
-      "E4504511aef",
-      "E9561b1d529"
+      "Ec32f558196"
     ],
-    "evidence_span": "By using a combination of ultrasonic washing, the investigation of acid leaching and chemical precipitation, a recycling process for spent LIBs has been developed, in which ultrasonic washing was used for the first time as an alternative process to improve the recovery efficiency of Co, and to reduce energy consumption and pollution.",
+    "evidence_span": "The spent LIBs used in this study were provided by TES-AMM Co. Ltd. LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively.",
+    "evidence": [
+      {
+        "evidence_id": "Ec32f558196",
+        "quote": "The spent LIBs used in this study were provided by TES-AMM Co. Ltd. LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively."
+      }
+    ],
     "population_granularity": "batch",
-    "sample_type": "lithium-ion battery",
-    "scope_description": "Spent LIBs used in this study, provided by TES-AMM Co.",
+    "sample_type": "spent lithium-ion batteries",
+    "scope_description": "Spent LIBs used in this study were provided by TES-AMM Co. Ltd.; the batteries contained LiCoO2 and carbon powders fixed on Al and Cu foils as positive and negative electrodes, respectively.",
+    "sample_size": null
+  },
+  {
+    "root_entity_ids": [
+      "Component_positive_electrode"
+    ],
+    "scope_subject_text": "positive electrode",
+    "scope_label": "positive electrode",
+    "evidence_ids": [
+      "Ec32f558196",
+      "E918947584e"
+    ],
+    "evidence_span": "LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively.",
+    "evidence": [
+      {
+        "evidence_id": "Ec32f558196",
+        "quote": "LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively."
+      },
+      {
+        "evidence_id": "E918947584e",
+        "quote": "Then a 2 mm aperture screen was used to select the screen underflow materials called recovered electrodes from the washed materials mentioned above."
+      }
+    ],
+    "population_granularity": "batch",
+    "sample_type": "positive electrode material (LiCoO2 on Al foil)",
+    "scope_description": "Positive electrodes in the study's spent LIBs consisted of LiCoO2 fixed on Al foils; recovered electrodes were the 2 mm screen underflow after crushing and ultrasonic washing.",
+    "sample_size": null
+  },
+  {
+    "root_entity_ids": [
+      "Component_negative_electrode"
+    ],
+    "scope_subject_text": "negative electrode",
+    "scope_label": "negative electrode",
+    "evidence_ids": [
+      "Ec32f558196"
+    ],
+    "evidence_span": "LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively.",
+    "evidence": [
+      {
+        "evidence_id": "Ec32f558196",
+        "quote": "LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively."
+      }
+    ],
+    "population_granularity": "batch",
+    "sample_type": "negative electrode material (carbon on Cu foil)",
+    "scope_description": "Negative electrodes in the study's spent LIBs consisted of carbon powder fixed on Cu foils.",
     "sample_size": null
   },
   {
@@ -24,9 +74,20 @@
     "scope_subject_text": "hydrochloric acid leaching of recovered electrodes",
     "scope_label": "hydrochloric acid leaching of recovered electrodes",
     "evidence_ids": [
-      "E8fe70ad9e3"
+      "E918947584e",
+      "E4a6a317be0"
     ],
-    "evidence_span": "Then, all of the parts were put into hydrochloric acid, heated and agitated at 90 -C for 4 h, dissolving all of the metals.",
+    "evidence_span": "Following this sifting, hydrochloric acid was used to dissolve the recovered electrodes, and the influences of duration, temperature, and H+ concentration on leaching efficiency were studied.",
+    "evidence": [
+      {
+        "evidence_id": "E918947584e",
+        "quote": "Following this sifting, hydrochloric acid was used to dissolve the recovered electrodes, and the influences of duration, temperature, and H+ concentration on leaching efficiency were studied."
+      },
+      {
+        "evidence_id": "E4a6a317be0",
+        "quote": "When the temperature was 80 ^∘C (Fig. 6a), H+ concentration was 4 M (Fig. 6b) and reaction time was 2 h (Fi g. 6 c), a high leaching efficiency was achieved; 97% of the Li and 99% of the Co were dissolved."
+      }
+    ],
     "method_family": "acid leaching"
   },
   {
@@ -36,9 +97,20 @@
     "scope_subject_text": "chemical precipitation for Co and Li recovery",
     "scope_label": "chemical precipitation for Co and Li recovery",
     "evidence_ids": [
-      "E9105399209"
+      "E918947584e",
+      "E6f049d6485"
     ],
     "evidence_span": "Finally, a chemical precipitation method was used to remove the impurities in the solution and to recover Co and Li, in which the influence of pH was tested.",
+    "evidence": [
+      {
+        "evidence_id": "E918947584e",
+        "quote": "Finally, a chemical precipitation method was used to remove the impurities in the solution and to recover Co and Li, in which the influence of pH was tested."
+      },
+      {
+        "evidence_id": "E6f049d6485",
+        "quote": "According to the differences of the solubility product constant between different M ^n+ (OH)n, these metals could be extracted step by step with the gradual addition of a 40% NaOH solution."
+      }
+    ],
     "method_family": "chemical precipitation"
   }
 ]

@@ -6,12 +6,18 @@
     "scope_subject_text": "Lithium-ion battery",
     "scope_label": "Lithium-ion battery",
     "evidence_ids": [
-      "E732c5b0d2a"
+      "E39b1293736"
     ],
-    "evidence_span": "Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study.",
+    "evidence_span": "Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study. The total weight of the samples was 1 kg.",
+    "evidence": [
+      {
+        "evidence_id": "E39b1293736",
+        "quote": "Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study. The total weight of the samples was 1 kg."
+      }
+    ],
     "population_granularity": "batch",
-    "sample_type": "Lithium-ion battery",
-    "scope_description": "Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study.",
+    "sample_type": "spent lithium-ion batteries",
+    "scope_description": "Spent LIBs collected from different consumer electronics, including mobile phones, cameras, and portable power storage devices; total sample weight 1 kg.",
     "sample_size": null
   },
   {
@@ -21,9 +27,20 @@
     "scope_subject_text": "L-tartaric acid leaching",
     "scope_label": "L-tartaric acid leaching",
     "evidence_ids": [
-      "E913640c2f0"
+      "E020c2e8774",
+      "Ebaede24a34"
     ],
-    "evidence_span": "After the leaching solutions were heated to a preselected temperature, a certain amount of cathodic materials was added to the reactor.",
-    "method_family": "acid leaching"
+    "evidence_span": "(3) L-Tartaric acid leaching: All the leaching experiments were carried out using a 250 mL glass reactor, which was placed in a water bath to control the reaction temperature.",
+    "evidence": [
+      {
+        "evidence_id": "E020c2e8774",
+        "quote": "(3) L-Tartaric acid leaching: All the leaching experiments were carried out using a 250 mL glass reactor, which was placed in a water bath to control the reaction temperature."
+      },
+      {
+        "evidence_id": "Ebaede24a34",
+        "quote": "In this paper, we report a newly developed green process using -tartaric acid as a leachant for the sustainable recovery of Mn, Li, Co, and Ni from spent LIBs."
+      }
+    ],
+    "method_family": "organic acid leaching"
   }
 ]

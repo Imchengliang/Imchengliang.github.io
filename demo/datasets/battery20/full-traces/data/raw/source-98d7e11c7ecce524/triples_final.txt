@@ -294,15 +294,65 @@
         "scope_subject_text": "lithium-ion battery",
         "scope_label": "lithium-ion battery",
         "evidence_ids": [
-          "E133a833279",
-          "E28a8d4aa45",
-          "E4504511aef",
-          "E9561b1d529"
+          "Ec32f558196"
         ],
-        "evidence_span": "By using a combination of ultrasonic washing, the investigation of acid leaching and chemical precipitation, a recycling process for spent LIBs has been developed, in which ultrasonic washing was used for the first time as an alternative process to improve the recovery efficiency of Co, and to reduce energy consumption and pollution.",
+        "evidence_span": "The spent LIBs used in this study were provided by TES-AMM Co. Ltd. LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively.",
+        "evidence": [
+          {
+            "evidence_id": "Ec32f558196",
+            "quote": "The spent LIBs used in this study were provided by TES-AMM Co. Ltd. LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively."
+          }
+        ],
         "population_granularity": "batch",
-        "sample_type": "lithium-ion battery",
-        "scope_description": "Spent LIBs used in this study, provided by TES-AMM Co.",
+        "sample_type": "spent lithium-ion batteries",
+        "scope_description": "Spent LIBs used in this study were provided by TES-AMM Co. Ltd.; the batteries contained LiCoO2 and carbon powders fixed on Al and Cu foils as positive and negative electrodes, respectively.",
+        "sample_size": null
+      },
+      {
+        "root_entity_ids": [
+          "Component_positive_electrode"
+        ],
+        "scope_subject_text": "positive electrode",
+        "scope_label": "positive electrode",
+        "evidence_ids": [
+          "Ec32f558196",
+          "E918947584e"
+        ],
+        "evidence_span": "LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively.",
+        "evidence": [
+          {
+            "evidence_id": "Ec32f558196",
+            "quote": "LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively."
+          },
+          {
+            "evidence_id": "E918947584e",
+            "quote": "Then a 2 mm aperture screen was used to select the screen underflow materials called recovered electrodes from the washed materials mentioned above."
+          }
+        ],
+        "population_granularity": "batch",
+        "sample_type": "positive electrode material (LiCoO2 on Al foil)",
+        "scope_description": "Positive electrodes in the study's spent LIBs consisted of LiCoO2 fixed on Al foils; recovered electrodes were the 2 mm screen underflow after crushing and ultrasonic washing.",
+        "sample_size": null
+      },
+      {
+        "root_entity_ids": [
+          "Component_negative_electrode"
+        ],
+        "scope_subject_text": "negative electrode",
+        "scope_label": "negative electrode",
+        "evidence_ids": [
+          "Ec32f558196"
+        ],
+        "evidence_span": "LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively.",
+        "evidence": [
+          {
+            "evidence_id": "Ec32f558196",
+            "quote": "LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively."
+          }
+        ],
+        "population_granularity": "batch",
+        "sample_type": "negative electrode material (carbon on Cu foil)",
+        "scope_description": "Negative electrodes in the study's spent LIBs consisted of carbon powder fixed on Cu foils.",
         "sample_size": null
       },
       {
@@ -312,9 +362,20 @@
         "scope_subject_text": "hydrochloric acid leaching of recovered electrodes",
         "scope_label": "hydrochloric acid leaching of recovered electrodes",
         "evidence_ids": [
-          "E8fe70ad9e3"
+          "E918947584e",
+          "E4a6a317be0"
         ],
-        "evidence_span": "Then, all of the parts were put into hydrochloric acid, heated and agitated at 90 -C for 4 h, dissolving all of the metals.",
+        "evidence_span": "Following this sifting, hydrochloric acid was used to dissolve the recovered electrodes, and the influences of duration, temperature, and H+ concentration on leaching efficiency were studied.",
+        "evidence": [
+          {
+            "evidence_id": "E918947584e",
+            "quote": "Following this sifting, hydrochloric acid was used to dissolve the recovered electrodes, and the influences of duration, temperature, and H+ concentration on leaching efficiency were studied."
+          },
+          {
+            "evidence_id": "E4a6a317be0",
+            "quote": "When the temperature was 80 ^∘C (Fig. 6a), H+ concentration was 4 M (Fig. 6b) and reaction time was 2 h (Fi g. 6 c), a high leaching efficiency was achieved; 97% of the Li and 99% of the Co were dissolved."
+          }
+        ],
         "method_family": "acid leaching"
       },
       {
@@ -324,56 +385,122 @@
         "scope_subject_text": "chemical precipitation for Co and Li recovery",
         "scope_label": "chemical precipitation for Co and Li recovery",
         "evidence_ids": [
-          "E9105399209"
+          "E918947584e",
+          "E6f049d6485"
         ],
         "evidence_span": "Finally, a chemical precipitation method was used to remove the impurities in the solution and to recover Co and Li, in which the influence of pH was tested.",
+        "evidence": [
+          {
+            "evidence_id": "E918947584e",
+            "quote": "Finally, a chemical precipitation method was used to remove the impurities in the solution and to recover Co and Li, in which the influence of pH was tested."
+          },
+          {
+            "evidence_id": "E6f049d6485",
+            "quote": "According to the differences of the solubility product constant between different M ^n+ (OH)n, these metals could be extracted step by step with the gradual addition of a 40% NaOH solution."
+          }
+        ],
         "method_family": "chemical precipitation"
       }
     ],
     "scope_assertions": [
       {
-        "id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-assertion:272c5418a2edc6a5",
         "micrograph_id": "A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries",
         "root_entity_ids": [
+          "Component_lithium_ion_battery"
+        ],
+        "requested_root_entity_ids": [
           "Component_lithium_ion_battery"
         ],
         "scope_kind": "declared_population",
         "facets": {
           "population_granularity": "batch",
-          "sample_type": "lithium-ion battery"
+          "sample_type": "spent lithium-ion batteries"
         },
-        "scope_description": "Spent LIBs used in this study, provided by TES-AMM Co.",
+        "scope_description": "Spent LIBs used in this study were provided by TES-AMM Co. Ltd.; the batteries contained LiCoO2 and carbon powders fixed on Al and Cu foils as positive and negative electrodes, respectively.",
         "sample_size": null,
-        "evidence_span": "By using a combination of ultrasonic washing, the investigation of acid leaching and chemical precipitation, a recycling process for spent LIBs has been developed, in which ultrasonic washing was used for the first time as an alternative process to improve the recovery efficiency of Co, and to reduce energy consumption and pollution.",
+        "evidence_span": "The spent LIBs used in this study were provided by TES-AMM Co. Ltd. LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity"
         ]
       },
       {
-        "id": "scope-assertion:9fc82b3463609fe4",
+        "id": "scope-assertion:9af7cd0c9ca6f4f9",
         "micrograph_id": "A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries",
         "root_entity_ids": [
+          "Component_positive_electrode"
+        ],
+        "requested_root_entity_ids": [
+          "Component_positive_electrode"
+        ],
+        "scope_kind": "declared_population",
+        "facets": {
+          "population_granularity": "batch",
+          "sample_type": "positive electrode material (LiCoO2 on Al foil)"
+        },
+        "scope_description": "Positive electrodes in the study's spent LIBs consisted of LiCoO2 fixed on Al foils; recovered electrodes were the 2 mm screen underflow after crushing and ultrasonic washing.",
+        "sample_size": null,
+        "evidence_span": "LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:9af7cd0c9ca6f4f9:evidence",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_positive_electrode:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:2f048105bdeeb0a7",
+        "micrograph_id": "A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries",
+        "root_entity_ids": [
+          "Component_negative_electrode"
+        ],
+        "requested_root_entity_ids": [
+          "Component_negative_electrode"
+        ],
+        "scope_kind": "declared_population",
+        "facets": {
+          "population_granularity": "batch",
+          "sample_type": "negative electrode material (carbon on Cu foil)"
+        },
+        "scope_description": "Negative electrodes in the study's spent LIBs consisted of carbon powder fixed on Cu foils.",
+        "sample_size": null,
+        "evidence_span": "LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:2f048105bdeeb0a7:evidence",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_negative_electrode:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:eeec876dccb2b9c0",
+        "micrograph_id": "A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries",
+        "root_entity_ids": [
+          "Process_hydrochloric_acid_leaching_of_recovered_electrodes"
+        ],
+        "requested_root_entity_ids": [
           "Process_hydrochloric_acid_leaching_of_recovered_electrodes"
         ],
         "scope_kind": "process_method_family",
         "facets": {
           "method_family": "acid leaching"
         },
-        "scope_description": "Then, all of the parts were put into hydrochloric acid, heated and agitated at 90 -C for 4 h, dissolving all of the metals.",
+        "scope_description": "Following this sifting, hydrochloric acid was used to dissolve the recovered electrodes, and the influences of duration, temperature, and H+ concentration on leaching efficiency were studied.",
         "sample_size": null,
-        "evidence_span": "Then, all of the parts were put into hydrochloric acid, heated and agitated at 90 -C for 4 h, dissolving all of the metals.",
+        "evidence_span": "Following this sifting, hydrochloric acid was used to dissolve the recovered electrodes, and the influences of duration, temperature, and H+ concentration on leaching efficiency were studied.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_hydrochloric_acid_leaching_of_recovered_electrodes:entity"
         ]
       },
       {
-        "id": "scope-assertion:474e6d7620b5015e",
+        "id": "scope-assertion:48238426b65467a3",
         "micrograph_id": "A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries",
         "root_entity_ids": [
+          "Process_chemical_precipitation_for_Co_and_Li_recovery"
+        ],
+        "requested_root_entity_ids": [
           "Process_chemical_precipitation_for_Co_and_Li_recovery"
         ],
         "scope_kind": "process_method_family",
@@ -385,15 +512,15 @@
         "evidence_span": "Finally, a chemical precipitation method was used to remove the impurities in the solution and to recover Co and Li, in which the influence of pH was tested.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:474e6d7620b5015e:evidence",
+          "scope:scope-assertion:48238426b65467a3:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_chemical_precipitation_for_Co_and_Li_recovery:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:8808f53183fde5e3",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:208d4f2526fab7a3",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_Co",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -402,13 +529,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_Co"
         ]
       },
       {
-        "id": "scope-path:df93184ac793a6e9",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:9016a5dd517b45e7",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_Li",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -417,13 +544,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_Li"
         ]
       },
       {
-        "id": "scope-path:2b23cbf504ad039b",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:a162a1a04e46a860",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_Cu",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -432,13 +559,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_Cu"
         ]
       },
       {
-        "id": "scope-path:7d4ea04c11a66134",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:e5e6d58ddf1ea2f1",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_Al",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -447,13 +574,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_Al"
         ]
       },
       {
-        "id": "scope-path:3565f6621a205b98",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:f8ff15181021fb07",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_Fe",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -462,28 +589,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_Fe"
         ]
       },
       {
-        "id": "scope-path:e8d630d20856473a",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
-        "statement_relation_id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
-        "root_entity_id": "Component_lithium_ion_battery",
-        "entity_path": [
-          "Component_lithium_ion_battery"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
-          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes"
-        ]
-      },
-      {
-        "id": "scope-path:60583726a71314d7",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:207c9fcec8c488bf",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Component_electrode",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -492,13 +604,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode"
         ]
       },
       {
-        "id": "scope-path:83a87e1775ed8c8b",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:9446de23c5be9ca2",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_LiCoO2",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -510,14 +622,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_LiCoO2",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode"
         ]
       },
       {
-        "id": "scope-path:58524d4db52a6cfc",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:48888c55f5c6b2e0",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_Al",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -529,14 +641,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_Al",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode"
         ]
       },
       {
-        "id": "scope-path:989c7e88bf458bab",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:1fbe9182b8840413",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_C",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -548,14 +660,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_C",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode"
         ]
       },
       {
-        "id": "scope-path:e994dd99ab952d9e",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:f4b3a1531c059d82",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_Cu",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -567,14 +679,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_Cu",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode"
         ]
       },
       {
-        "id": "scope-path:e5e26f74756103a9",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:e66b4ee1ec9cac5b",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_electrode_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -586,14 +698,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode"
         ]
       },
       {
-        "id": "scope-path:e8d630d20856473a",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:89f3d04fd6b46842",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -602,13 +714,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes"
         ]
       },
       {
-        "id": "scope-path:e5e26f74756103a9",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:e66b4ee1ec9cac5b",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_electrode_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -620,14 +732,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode"
         ]
       },
       {
-        "id": "scope-path:0a603043fd680993",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:51a3887746ef3637",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_Co",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -639,14 +751,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_Co",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode"
         ]
       },
       {
-        "id": "scope-path:58524d4db52a6cfc",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:48888c55f5c6b2e0",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_Al",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -658,14 +770,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_Al",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode"
         ]
       },
       {
-        "id": "scope-path:8e6d0d868d420b9e",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:c0e80212946310fa",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_Fe",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -677,14 +789,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_Fe",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode"
         ]
       },
       {
-        "id": "scope-path:e994dd99ab952d9e",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:f4b3a1531c059d82",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_Cu",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -696,14 +808,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_Cu",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode"
         ]
       },
       {
-        "id": "scope-path:57d784e4aad224c2",
-        "scope_assertion_id": "scope-assertion:9a992fee65c7a0b3",
+        "id": "scope-path:3e418be40922a0c9",
+        "scope_assertion_id": "scope-assertion:272c5418a2edc6a5",
         "statement_relation_id": "REL_Component_electrode_PROCESSED_BY_Process_chemical_precipitation_for_Co_and_Li_recovery",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -715,29 +827,74 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_PROCESSED_BY_Process_chemical_precipitation_for_Co_and_Li_recovery",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode"
         ]
       },
       {
-        "id": "scope-path:44654604a65475c3",
-        "scope_assertion_id": "scope-assertion:9fc82b3463609fe4",
-        "statement_relation_id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
-        "root_entity_id": "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
+        "id": "scope-path:cf0368688a5deebb",
+        "scope_assertion_id": "scope-assertion:9af7cd0c9ca6f4f9",
+        "statement_relation_id": "REL_Component_positive_electrode_CONTAINS_Material_LiCoO2",
+        "root_entity_id": "Component_positive_electrode",
         "entity_path": [
-          "Process_hydrochloric_acid_leaching_of_recovered_electrodes"
+          "Component_positive_electrode"
         ],
         "containment_relation_path": [],
-        "propagation_kind": "process_scope",
+        "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
-          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes"
+          "scope:scope-assertion:9af7cd0c9ca6f4f9:evidence",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_positive_electrode_CONTAINS_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:272ef99f26a661c8",
-        "scope_assertion_id": "scope-assertion:9fc82b3463609fe4",
+        "id": "scope-path:e4cc4fe50d3e8578",
+        "scope_assertion_id": "scope-assertion:9af7cd0c9ca6f4f9",
+        "statement_relation_id": "REL_Component_positive_electrode_CONTAINS_Material_Al",
+        "root_entity_id": "Component_positive_electrode",
+        "entity_path": [
+          "Component_positive_electrode"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:9af7cd0c9ca6f4f9:evidence",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_positive_electrode_CONTAINS_Material_Al"
+        ]
+      },
+      {
+        "id": "scope-path:88fe2f3801fb323f",
+        "scope_assertion_id": "scope-assertion:2f048105bdeeb0a7",
+        "statement_relation_id": "REL_Component_negative_electrode_CONTAINS_Material_C",
+        "root_entity_id": "Component_negative_electrode",
+        "entity_path": [
+          "Component_negative_electrode"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:2f048105bdeeb0a7:evidence",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_negative_electrode_CONTAINS_Material_C"
+        ]
+      },
+      {
+        "id": "scope-path:d66a8ec524f8a5e1",
+        "scope_assertion_id": "scope-assertion:2f048105bdeeb0a7",
+        "statement_relation_id": "REL_Component_negative_electrode_CONTAINS_Material_Cu",
+        "root_entity_id": "Component_negative_electrode",
+        "entity_path": [
+          "Component_negative_electrode"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:2f048105bdeeb0a7:evidence",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_negative_electrode_CONTAINS_Material_Cu"
+        ]
+      },
+      {
+        "id": "scope-path:f72b4e6482683d63",
+        "scope_assertion_id": "scope-assertion:eeec876dccb2b9c0",
         "statement_relation_id": "REL_Component_electrode_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "root_entity_id": "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "entity_path": [
@@ -746,13 +903,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes"
         ]
       },
       {
-        "id": "scope-path:44654604a65475c3",
-        "scope_assertion_id": "scope-assertion:9fc82b3463609fe4",
+        "id": "scope-path:73db3087507675b0",
+        "scope_assertion_id": "scope-assertion:eeec876dccb2b9c0",
         "statement_relation_id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "root_entity_id": "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "entity_path": [
@@ -761,13 +918,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes"
         ]
       },
       {
-        "id": "scope-path:3a6842e613c9c2ed",
-        "scope_assertion_id": "scope-assertion:9fc82b3463609fe4",
+        "id": "scope-path:81d45c2425ff0a68",
+        "scope_assertion_id": "scope-assertion:eeec876dccb2b9c0",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "entity_path": [
@@ -776,13 +933,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:e0347b3653da9ed6",
-        "scope_assertion_id": "scope-assertion:9fc82b3463609fe4",
+        "id": "scope-path:acae50019b721c48",
+        "scope_assertion_id": "scope-assertion:eeec876dccb2b9c0",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "entity_path": [
@@ -791,13 +948,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:272ef99f26a661c8",
-        "scope_assertion_id": "scope-assertion:9fc82b3463609fe4",
+        "id": "scope-path:f72b4e6482683d63",
+        "scope_assertion_id": "scope-assertion:eeec876dccb2b9c0",
         "statement_relation_id": "REL_Component_electrode_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "root_entity_id": "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "entity_path": [
@@ -806,13 +963,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes"
         ]
       },
       {
-        "id": "scope-path:e0347b3653da9ed6",
-        "scope_assertion_id": "scope-assertion:9fc82b3463609fe4",
+        "id": "scope-path:acae50019b721c48",
+        "scope_assertion_id": "scope-assertion:eeec876dccb2b9c0",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "entity_path": [
@@ -821,13 +978,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:3a6842e613c9c2ed",
-        "scope_assertion_id": "scope-assertion:9fc82b3463609fe4",
+        "id": "scope-path:81d45c2425ff0a68",
+        "scope_assertion_id": "scope-assertion:eeec876dccb2b9c0",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "entity_path": [
@@ -836,13 +993,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:78692398b20ce989",
-        "scope_assertion_id": "scope-assertion:9fc82b3463609fe4",
+        "id": "scope-path:35c8c2f6890e3f37",
+        "scope_assertion_id": "scope-assertion:eeec876dccb2b9c0",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Cu",
         "root_entity_id": "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "entity_path": [
@@ -851,13 +1008,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Cu"
         ]
       },
       {
-        "id": "scope-path:dbf22df235c5a392",
-        "scope_assertion_id": "scope-assertion:9fc82b3463609fe4",
+        "id": "scope-path:9ab4a488b2dc6c50",
+        "scope_assertion_id": "scope-assertion:eeec876dccb2b9c0",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Al",
         "root_entity_id": "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "entity_path": [
@@ -866,13 +1023,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Al"
         ]
       },
       {
-        "id": "scope-path:0dc702cd00c2fbee",
-        "scope_assertion_id": "scope-assertion:9fc82b3463609fe4",
+        "id": "scope-path:6d59897e659a60e5",
+        "scope_assertion_id": "scope-assertion:eeec876dccb2b9c0",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Fe",
         "root_entity_id": "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "entity_path": [
@@ -881,13 +1038,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Fe"
         ]
       },
       {
-        "id": "scope-path:e0347b3653da9ed6",
-        "scope_assertion_id": "scope-assertion:9fc82b3463609fe4",
+        "id": "scope-path:acae50019b721c48",
+        "scope_assertion_id": "scope-assertion:eeec876dccb2b9c0",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "entity_path": [
@@ -896,13 +1053,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:49b216a1e5e53d9a",
-        "scope_assertion_id": "scope-assertion:474e6d7620b5015e",
+        "id": "scope-path:d3db2097362ac156",
+        "scope_assertion_id": "scope-assertion:48238426b65467a3",
         "statement_relation_id": "REL_Process_chemical_precipitation_for_Co_and_Li_recovery_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_chemical_precipitation_for_Co_and_Li_recovery",
         "entity_path": [
@@ -911,13 +1068,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:474e6d7620b5015e:evidence",
+          "scope:scope-assertion:48238426b65467a3:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_chemical_precipitation_for_Co_and_Li_recovery_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:49b216a1e5e53d9a",
-        "scope_assertion_id": "scope-assertion:474e6d7620b5015e",
+        "id": "scope-path:d3db2097362ac156",
+        "scope_assertion_id": "scope-assertion:48238426b65467a3",
         "statement_relation_id": "REL_Process_chemical_precipitation_for_Co_and_Li_recovery_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_chemical_precipitation_for_Co_and_Li_recovery",
         "entity_path": [
@@ -926,13 +1083,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:474e6d7620b5015e:evidence",
+          "scope:scope-assertion:48238426b65467a3:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_chemical_precipitation_for_Co_and_Li_recovery_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:8d5f6290c379c275",
-        "scope_assertion_id": "scope-assertion:474e6d7620b5015e",
+        "id": "scope-path:287735d4b65ae1c3",
+        "scope_assertion_id": "scope-assertion:48238426b65467a3",
         "statement_relation_id": "REL_Component_electrode_PROCESSED_BY_Process_chemical_precipitation_for_Co_and_Li_recovery",
         "root_entity_id": "Process_chemical_precipitation_for_Co_and_Li_recovery",
         "entity_path": [
@@ -941,7 +1098,7 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:474e6d7620b5015e:evidence",
+          "scope:scope-assertion:48238426b65467a3:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_PROCESSED_BY_Process_chemical_precipitation_for_Co_and_Li_recovery"
         ]
       }
@@ -3861,13 +4018,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:8808f53183fde5e3"
+          "scope-path:208d4f2526fab7a3"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_Co",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:c97fb641cbd90404",
@@ -3886,13 +4043,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:df93184ac793a6e9"
+          "scope-path:9016a5dd517b45e7"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_Li",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:36b41c96c4d20f38",
@@ -3911,13 +4068,13 @@
           "Material_Cu"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:2b23cbf504ad039b"
+          "scope-path:a162a1a04e46a860"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_Cu",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:9facf2bdb25bdbc1",
@@ -3936,13 +4093,13 @@
           "Material_Al"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:7d4ea04c11a66134"
+          "scope-path:e5e6d58ddf1ea2f1"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_Al",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:ceee44c8cfbd3a1f",
@@ -3961,13 +4118,13 @@
           "Material_Fe"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:3565f6621a205b98"
+          "scope-path:f8ff15181021fb07"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_Fe",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:a3aeab4959f89b2d",
@@ -3985,9 +4142,16 @@
           "Component_positive_electrode",
           "Material_LiCoO2"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:9af7cd0c9ca6f4f9"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:cf0368688a5deebb"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:9af7cd0c9ca6f4f9:evidence",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_positive_electrode:entity",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_positive_electrode_CONTAINS_Material_LiCoO2",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:e32cb80e2ac7ade8",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:e32cb80e2ac7ade8:evidence"
         ]
@@ -4003,9 +4167,16 @@
           "Component_positive_electrode",
           "Material_Al"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:9af7cd0c9ca6f4f9"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:e4cc4fe50d3e8578"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:9af7cd0c9ca6f4f9:evidence",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_positive_electrode:entity",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_positive_electrode_CONTAINS_Material_Al",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:e9cc52b8665ba881",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:e9cc52b8665ba881:evidence"
         ]
@@ -4021,9 +4192,16 @@
           "Component_negative_electrode",
           "Material_C"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:2f048105bdeeb0a7"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:88fe2f3801fb323f"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:2f048105bdeeb0a7:evidence",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_negative_electrode:entity",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_negative_electrode_CONTAINS_Material_C",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:12fd9848b4adee03",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:12fd9848b4adee03:evidence"
         ]
@@ -4039,40 +4217,18 @@
           "Component_negative_electrode",
           "Material_Cu"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:bc7245007079d660",
-          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:bc7245007079d660:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:8567a88c44e76595",
-        "micrograph_id": "A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:8df450cda36c0e56",
-        "statement_relation_id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
-        "source_relation_id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
-        "source_relation_index": 9,
-        "entity_ids": [
-          "Component_lithium_ion_battery",
-          "Process_hydrochloric_acid_leaching_of_recovered_electrodes"
-        ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3",
-          "scope-assertion:9fc82b3463609fe4"
+          "scope-assertion:2f048105bdeeb0a7"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:44654604a65475c3",
-          "scope-path:e8d630d20856473a"
+          "scope-path:d66a8ec524f8a5e1"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
-          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
-          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_hydrochloric_acid_leaching_of_recovered_electrodes:entity",
-          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
-          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:8df450cda36c0e56",
-          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:8df450cda36c0e56:evidence"
+          "scope:scope-assertion:2f048105bdeeb0a7:evidence",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_negative_electrode:entity",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_negative_electrode_CONTAINS_Material_Cu",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:bc7245007079d660",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:bc7245007079d660:evidence"
         ]
       },
       {
@@ -4081,19 +4237,19 @@
         "statement_id": "statement:da9af4f1229becfd",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Component_electrode",
         "source_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Component_electrode",
-        "source_relation_index": 10,
+        "source_relation_index": 9,
         "entity_ids": [
           "Component_lithium_ion_battery",
           "Component_electrode"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:60583726a71314d7"
+          "scope-path:207c9fcec8c488bf"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:da9af4f1229becfd",
@@ -4106,19 +4262,19 @@
         "statement_id": "statement:06e5000306f4b9ab",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_LiCoO2",
         "source_relation_id": "REL_Component_electrode_CONTAINS_Material_LiCoO2",
-        "source_relation_index": 11,
+        "source_relation_index": 10,
         "entity_ids": [
           "Component_electrode",
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:83a87e1775ed8c8b"
+          "scope-path:9446de23c5be9ca2"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_LiCoO2",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode",
@@ -4132,19 +4288,19 @@
         "statement_id": "statement:0b0f07dca0e6819c",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_Al",
         "source_relation_id": "REL_Component_electrode_CONTAINS_Material_Al",
-        "source_relation_index": 12,
+        "source_relation_index": 11,
         "entity_ids": [
           "Component_electrode",
           "Material_Al"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:58524d4db52a6cfc"
+          "scope-path:48888c55f5c6b2e0"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_Al",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode",
@@ -4158,19 +4314,19 @@
         "statement_id": "statement:d7987ad7450b770d",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_C",
         "source_relation_id": "REL_Component_electrode_CONTAINS_Material_C",
-        "source_relation_index": 13,
+        "source_relation_index": 12,
         "entity_ids": [
           "Component_electrode",
           "Material_C"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:989c7e88bf458bab"
+          "scope-path:1fbe9182b8840413"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_C",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode",
@@ -4184,19 +4340,19 @@
         "statement_id": "statement:1fd7d497340f5034",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_Cu",
         "source_relation_id": "REL_Component_electrode_CONTAINS_Material_Cu",
-        "source_relation_index": 14,
+        "source_relation_index": 13,
         "entity_ids": [
           "Component_electrode",
           "Material_Cu"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e994dd99ab952d9e"
+          "scope-path:f4b3a1531c059d82"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_Cu",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode",
@@ -4210,22 +4366,22 @@
         "statement_id": "statement:83babfdec898b397",
         "statement_relation_id": "REL_Component_electrode_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "source_relation_id": "REL_Component_electrode_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
-        "source_relation_index": 15,
+        "source_relation_index": 14,
         "entity_ids": [
           "Component_electrode",
           "Process_hydrochloric_acid_leaching_of_recovered_electrodes"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3",
-          "scope-assertion:9fc82b3463609fe4"
+          "scope-assertion:272c5418a2edc6a5",
+          "scope-assertion:eeec876dccb2b9c0"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:272ef99f26a661c8",
-          "scope-path:e5e26f74756103a9"
+          "scope-path:e66b4ee1ec9cac5b",
+          "scope-path:f72b4e6482683d63"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_hydrochloric_acid_leaching_of_recovered_electrodes:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
@@ -4235,32 +4391,32 @@
         ]
       },
       {
-        "id": "local-unit:83847ac226bc0008",
+        "id": "local-unit:8567a88c44e76595",
         "micrograph_id": "A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:37aeb345e1eb557c",
+        "statement_id": "statement:8df450cda36c0e56",
         "statement_relation_id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "source_relation_id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
-        "source_relation_index": 16,
+        "source_relation_index": 15,
         "entity_ids": [
           "Component_lithium_ion_battery",
           "Process_hydrochloric_acid_leaching_of_recovered_electrodes"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3",
-          "scope-assertion:9fc82b3463609fe4"
+          "scope-assertion:272c5418a2edc6a5",
+          "scope-assertion:eeec876dccb2b9c0"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:44654604a65475c3",
-          "scope-path:e8d630d20856473a"
+          "scope-path:73db3087507675b0",
+          "scope-path:89f3d04fd6b46842"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_hydrochloric_acid_leaching_of_recovered_electrodes:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
-          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:37aeb345e1eb557c",
-          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:37aeb345e1eb557c:evidence"
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:8df450cda36c0e56",
+          "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:8df450cda36c0e56:evidence"
         ]
       },
       {
@@ -4269,19 +4425,19 @@
         "statement_id": "statement:d035ac151bba676f",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 17,
+        "source_relation_index": 16,
         "entity_ids": [
           "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9fc82b3463609fe4"
+          "scope-assertion:eeec876dccb2b9c0"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:3a6842e613c9c2ed"
+          "scope-path:81d45c2425ff0a68"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_hydrochloric_acid_leaching_of_recovered_electrodes:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Li",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:d035ac151bba676f",
@@ -4294,19 +4450,19 @@
         "statement_id": "statement:a57f902410da45d2",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 18,
+        "source_relation_index": 17,
         "entity_ids": [
           "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9fc82b3463609fe4"
+          "scope-assertion:eeec876dccb2b9c0"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e0347b3653da9ed6"
+          "scope-path:acae50019b721c48"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_hydrochloric_acid_leaching_of_recovered_electrodes:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:a57f902410da45d2",
@@ -4319,22 +4475,22 @@
         "statement_id": "statement:3d834de258c53ae8",
         "statement_relation_id": "REL_Component_electrode_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
         "source_relation_id": "REL_Component_electrode_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
-        "source_relation_index": 19,
+        "source_relation_index": 18,
         "entity_ids": [
           "Component_electrode",
           "Process_hydrochloric_acid_leaching_of_recovered_electrodes"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3",
-          "scope-assertion:9fc82b3463609fe4"
+          "scope-assertion:272c5418a2edc6a5",
+          "scope-assertion:eeec876dccb2b9c0"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:272ef99f26a661c8",
-          "scope-path:e5e26f74756103a9"
+          "scope-path:e66b4ee1ec9cac5b",
+          "scope-path:f72b4e6482683d63"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_hydrochloric_acid_leaching_of_recovered_electrodes:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_PROCESSED_BY_Process_hydrochloric_acid_leaching_of_recovered_electrodes",
@@ -4349,19 +4505,19 @@
         "statement_id": "statement:58850cd3a3f639e7",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 20,
+        "source_relation_index": 19,
         "entity_ids": [
           "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9fc82b3463609fe4"
+          "scope-assertion:eeec876dccb2b9c0"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e0347b3653da9ed6"
+          "scope-path:acae50019b721c48"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_hydrochloric_acid_leaching_of_recovered_electrodes:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:58850cd3a3f639e7",
@@ -4374,19 +4530,19 @@
         "statement_id": "statement:c85449b995eaebc6",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 21,
+        "source_relation_index": 20,
         "entity_ids": [
           "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9fc82b3463609fe4"
+          "scope-assertion:eeec876dccb2b9c0"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:3a6842e613c9c2ed"
+          "scope-path:81d45c2425ff0a68"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_hydrochloric_acid_leaching_of_recovered_electrodes:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Li",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:c85449b995eaebc6",
@@ -4399,19 +4555,19 @@
         "statement_id": "statement:851bcd6971aaee20",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Cu",
         "source_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Cu",
-        "source_relation_index": 22,
+        "source_relation_index": 21,
         "entity_ids": [
           "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
           "Material_Cu"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9fc82b3463609fe4"
+          "scope-assertion:eeec876dccb2b9c0"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:78692398b20ce989"
+          "scope-path:35c8c2f6890e3f37"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_hydrochloric_acid_leaching_of_recovered_electrodes:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Cu",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:851bcd6971aaee20",
@@ -4424,19 +4580,19 @@
         "statement_id": "statement:971447ce898a8e7e",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Al",
         "source_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Al",
-        "source_relation_index": 23,
+        "source_relation_index": 22,
         "entity_ids": [
           "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
           "Material_Al"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9fc82b3463609fe4"
+          "scope-assertion:eeec876dccb2b9c0"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:dbf22df235c5a392"
+          "scope-path:9ab4a488b2dc6c50"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_hydrochloric_acid_leaching_of_recovered_electrodes:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Al",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:971447ce898a8e7e",
@@ -4449,19 +4605,19 @@
         "statement_id": "statement:a30629b22c1f0666",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Fe",
         "source_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Fe",
-        "source_relation_index": 24,
+        "source_relation_index": 23,
         "entity_ids": [
           "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
           "Material_Fe"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9fc82b3463609fe4"
+          "scope-assertion:eeec876dccb2b9c0"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:0dc702cd00c2fbee"
+          "scope-path:6d59897e659a60e5"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_hydrochloric_acid_leaching_of_recovered_electrodes:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Fe",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:a30629b22c1f0666",
@@ -4474,19 +4630,19 @@
         "statement_id": "statement:69537ef6e172c960",
         "statement_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 25,
+        "source_relation_index": 24,
         "entity_ids": [
           "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9fc82b3463609fe4"
+          "scope-assertion:eeec876dccb2b9c0"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e0347b3653da9ed6"
+          "scope-path:acae50019b721c48"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9fc82b3463609fe4:evidence",
+          "scope:scope-assertion:eeec876dccb2b9c0:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_hydrochloric_acid_leaching_of_recovered_electrodes:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_hydrochloric_acid_leaching_of_recovered_electrodes_HAS_OUTPUT_Material_Co",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:69537ef6e172c960",
@@ -4499,19 +4655,19 @@
         "statement_id": "statement:0f61ed5c97d03cee",
         "statement_relation_id": "REL_Process_chemical_precipitation_for_Co_and_Li_recovery_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_chemical_precipitation_for_Co_and_Li_recovery_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 26,
+        "source_relation_index": 25,
         "entity_ids": [
           "Process_chemical_precipitation_for_Co_and_Li_recovery",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:474e6d7620b5015e"
+          "scope-assertion:48238426b65467a3"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:49b216a1e5e53d9a"
+          "scope-path:d3db2097362ac156"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:474e6d7620b5015e:evidence",
+          "scope:scope-assertion:48238426b65467a3:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_chemical_precipitation_for_Co_and_Li_recovery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_chemical_precipitation_for_Co_and_Li_recovery_HAS_OUTPUT_Material_Co",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:0f61ed5c97d03cee",
@@ -4524,19 +4680,19 @@
         "statement_id": "statement:12bf685e8500329b",
         "statement_relation_id": "REL_Process_chemical_precipitation_for_Co_and_Li_recovery_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_chemical_precipitation_for_Co_and_Li_recovery_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 27,
+        "source_relation_index": 26,
         "entity_ids": [
           "Process_chemical_precipitation_for_Co_and_Li_recovery",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:474e6d7620b5015e"
+          "scope-assertion:48238426b65467a3"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:49b216a1e5e53d9a"
+          "scope-path:d3db2097362ac156"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:474e6d7620b5015e:evidence",
+          "scope:scope-assertion:48238426b65467a3:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_chemical_precipitation_for_Co_and_Li_recovery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Process_chemical_precipitation_for_Co_and_Li_recovery_HAS_OUTPUT_Material_Co",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:statement:12bf685e8500329b",
@@ -4549,19 +4705,19 @@
         "statement_id": "statement:a7cee9ee0a61be6b",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_Co",
         "source_relation_id": "REL_Component_electrode_CONTAINS_Material_Co",
-        "source_relation_index": 28,
+        "source_relation_index": 27,
         "entity_ids": [
           "Component_electrode",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:0a603043fd680993"
+          "scope-path:51a3887746ef3637"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_Co",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode",
@@ -4575,19 +4731,19 @@
         "statement_id": "statement:2ea4809d9f491200",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_Al",
         "source_relation_id": "REL_Component_electrode_CONTAINS_Material_Al",
-        "source_relation_index": 29,
+        "source_relation_index": 28,
         "entity_ids": [
           "Component_electrode",
           "Material_Al"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:58524d4db52a6cfc"
+          "scope-path:48888c55f5c6b2e0"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_Al",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode",
@@ -4601,19 +4757,19 @@
         "statement_id": "statement:904e644c244d7404",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_Fe",
         "source_relation_id": "REL_Component_electrode_CONTAINS_Material_Fe",
-        "source_relation_index": 30,
+        "source_relation_index": 29,
         "entity_ids": [
           "Component_electrode",
           "Material_Fe"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:8e6d0d868d420b9e"
+          "scope-path:c0e80212946310fa"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_Fe",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode",
@@ -4627,19 +4783,19 @@
         "statement_id": "statement:45e5ee60c3e0532e",
         "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_Cu",
         "source_relation_id": "REL_Component_electrode_CONTAINS_Material_Cu",
-        "source_relation_index": 31,
+        "source_relation_index": 30,
         "entity_ids": [
           "Component_electrode",
           "Material_Cu"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e994dd99ab952d9e"
+          "scope-path:f4b3a1531c059d82"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_CONTAINS_Material_Cu",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_electrode",
@@ -4653,22 +4809,22 @@
         "statement_id": "statement:8a0b5d8426891faa",
         "statement_relation_id": "REL_Component_electrode_PROCESSED_BY_Process_chemical_precipitation_for_Co_and_Li_recovery",
         "source_relation_id": "REL_Component_electrode_PROCESSED_BY_Process_chemical_precipitation_for_Co_and_Li_recovery",
-        "source_relation_index": 32,
+        "source_relation_index": 31,
         "entity_ids": [
           "Component_electrode",
           "Process_chemical_precipitation_for_Co_and_Li_recovery"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:474e6d7620b5015e",
-          "scope-assertion:9a992fee65c7a0b3"
+          "scope-assertion:272c5418a2edc6a5",
+          "scope-assertion:48238426b65467a3"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:57d784e4aad224c2",
-          "scope-path:8d5f6290c379c275"
+          "scope-path:287735d4b65ae1c3",
+          "scope-path:3e418be40922a0c9"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:474e6d7620b5015e:evidence",
-          "scope:scope-assertion:9a992fee65c7a0b3:evidence",
+          "scope:scope-assertion:272c5418a2edc6a5:evidence",
+          "scope:scope-assertion:48238426b65467a3:evidence",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:Process_chemical_precipitation_for_Co_and_Li_recovery:entity",
           "source:A_Combined_Recovery_Process_of_Metals_in_Spent_Lithium-Ion_Batteries:relation:REL_Component_electrode_PROCESSED_BY_Process_chemical_precipitation_for_Co_and_Li_recovery",
@@ -9614,8 +9770,9 @@
       "final_triples_export": 0.009
     },
     "scope_audit": {
-      "evidence_record_count": 6,
+      "evidence_record_count": 18,
       "rejected_definition_count": 0,
+      "unscoped_candidate_count": 0,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
@@ -10965,6 +11122,7 @@
       "reviewed_records": 1,
       "operation_evidence_records": 1,
       "added_processes": 0
-    }
+    },
+    "scope_unscoped_candidates": []
   }
 }

@@ -1,55 +1,81 @@
 [
   {
     "root_entity_ids": [
+      "Component_cathode_scrap"
+    ],
+    "scope_subject_text": "cathode scrap",
+    "scope_label": "cathode scrap",
+    "evidence_ids": [
+      "E3639cf8ecc",
+      "Ecd0fa5a183",
+      "E1a473259b4"
+    ],
+    "evidence_span": "According to the datas provided by the Tianjin Lishen Battery Joint-Stock Co., Ltd., the slurry for cathode scraps consisted of 93.5 wt.% active materials, 4 wt.% acetylene black and 2.5 wt.% PVDF",
+    "evidence": [
+      {
+        "evidence_id": "E3639cf8ecc",
+        "quote": "According to the datas provided by the Tianjin Lishen Battery Joint-Stock Co., Ltd., the slurry for cathode scraps consisted of 93.5 wt.% active materials, 4 wt.% acetylene black and 2.5 wt.% PVDF"
+      },
+      {
+        "evidence_id": "Ecd0fa5a183",
+        "quote": "In order to investigate the recovery rate of scrap materials, 200 g LiCoO2 scraps were recovered with the above solvent method."
+      },
+      {
+        "evidence_id": "E1a473259b4",
+        "quote": "the cathode scraps generated in the production process have not been undergone the chargeedischarge process"
+      }
+    ],
+    "population_granularity": "batch",
+    "sample_type": "LiCoO2 cathode scrap",
+    "scope_description": "LiCoO2 cathode scraps generated in the production process of Li-ion batteries, supplied by Tianjin Lishen Battery Joint-Stock Co., Ltd.; 200 g used for the recovery-rate experiment.",
+    "sample_size": null
+  },
+  {
+    "root_entity_ids": [
       "Component_Al_foil"
     ],
     "scope_subject_text": "Al foil",
     "scope_label": "Al foil",
     "evidence_ids": [
-      "E630d26544e",
-      "Efd8fb1547a"
+      "Ecd0fa5a183",
+      "E4929e58333"
     ],
-    "evidence_span": "Then, after the second step, 21.60 g scrap materials (active material, acetylene black) were collected from 41.86 g impure Al foil mixtures after dissolving Al foil mixtures with excessive NaOH solution.",
+    "evidence_span": "41.86 g impure Al foil mixtures (Al foil, active material, acetylene black) were directly obtained through the first separation",
+    "evidence": [
+      {
+        "evidence_id": "Ecd0fa5a183",
+        "quote": "41.86 g impure Al foil mixtures (Al foil, active material, acetylene black) were directly obtained through the first separation"
+      },
+      {
+        "evidence_id": "E4929e58333",
+        "quote": "the separated Al foil was treated again as above recovery method"
+      }
+    ],
     "population_granularity": "batch",
-    "sample_type": "Al foil",
-    "scope_description": "Impure Al foil mixtures from which scrap materials were recovered; 41.86 g of impure Al foil mixtures were dissolved with excessive NaOH solution to collect 21.60 g scrap materials.",
+    "sample_type": "Al foil from cathode scraps",
+    "scope_description": "Al foil separated from the LiCoO2 cathode scraps during the solvent recovery; impure Al foil mixtures (Al foil, active material, acetylene black) were obtained after the first separation and further treated.",
     "sample_size": null
   },
   {
     "root_entity_ids": [
-      "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes"
+      "Component_cathode_electrode"
     ],
-    "scope_subject_text": "electrochemical cycling of recovered scrap material electrodes",
-    "scope_label": "electrochemical cycling of recovered scrap material electrodes",
+    "scope_subject_text": "cathode electrode",
+    "scope_label": "cathode electrode",
     "evidence_ids": [
-      "E050079510c"
+      "Ee3e51cbff3"
     ],
-    "evidence_span": "Cathode electrodes were fabricated with 83 wt.% active materials (from recovered scrap materials), 10 wt.% acetylene black, and 7 wt.% PVDF in NMP; CR2032 coin cells with lithium foil anode and 1 M LiPF6 in EC:DEC (1:1 v/v) were charged/discharged between 3.0 V and 4.3 V vs Li+/Li at 30 mA g-1 and 25 °C.",
-    "method_family": "electrochemical cycling"
-  },
-  {
-    "root_entity_ids": [
-      "Process_Al_foil"
+    "evidence_span": "For fabrication of cathode electrodes consisted of 83 wt.% active materials, 10 wt.% acetylene black, and 7 wt.% PVDF, 3.46 g recovered scrap materials (active materials and acetylene black) were mixed with 0.26 g acetylene black and 0.28 g PVDF in N-methyl-2- pyrrolidone (NMP).",
+    "evidence": [
+      {
+        "evidence_id": "Ee3e51cbff3",
+        "quote": "For fabrication of cathode electrodes consisted of 83 wt.% active materials, 10 wt.% acetylene black, and 7 wt.% PVDF, 3.46 g recovered scrap materials (active materials and acetylene black) were mixed with 0.26 g acetylene black and 0.28 g PVDF in N-methyl-2- pyrrolidone (NMP)."
+      }
     ],
-    "scope_subject_text": "Al foil",
-    "scope_label": "Al foil",
-    "evidence_ids": [
-      "E164436886f"
-    ],
-    "evidence_span": "Most of scrap materials (m ) could be directly recovered after solvent method, but a small amount of the scrap materials (m ) still remained on impure Al foil mixtures (m ) and were wasted.",
-    "method_family": "solvent method"
-  },
-  {
-    "root_entity_ids": [
-      "Process_NaOH_dissolution_of_Al_foil_mixtures"
-    ],
-    "scope_subject_text": "NaOH dissolution of Al foil mixtures",
-    "scope_label": "NaOH dissolution of Al foil mixtures",
-    "evidence_ids": [
-      "E60aef5b260"
-    ],
-    "evidence_span": "Then, after the second step, 21.60 g scrap materials (active material, acetylene black) were collected from 41.86 g impure Al foil mixtures after dissolving Al foil mixtures with excessive NaOH solution.",
-    "method_family": "NaOH dissolution"
+    "population_granularity": "batch",
+    "sample_type": "recovered scrap material cathode electrode",
+    "scope_description": "Cathode electrodes fabricated in this study from recovered scrap materials (83 wt.% active materials, 10 wt.% acetylene black, 7 wt.% PVDF in NMP) and tested in CR2032 coin cells.",
+    "sample_size": null
   },
   {
     "root_entity_ids": [
@@ -58,9 +84,56 @@
     "scope_subject_text": "solvent method for scrap material recovery",
     "scope_label": "solvent method for scrap material recovery",
     "evidence_ids": [
-      "Ef33c302a08"
+      "E92d85e1d66",
+      "E4929e58333"
     ],
-    "evidence_span": "Separated Al foil was treated again with the solvent method to enhance recovery rate of scrap materials and purity of Al foil; most scrap materials (m1) were directly recovered after the solvent method.",
-    "method_family": "solvent method"
+    "evidence_span": "a new solvent method with inexpensive mixture of N,N-Dimethylformamide (DMF) and ethanol was used to remove PVDF and recover scrap materials from LiCoO2 scraps",
+    "evidence": [
+      {
+        "evidence_id": "E92d85e1d66",
+        "quote": "a new solvent method with inexpensive mixture of N,N-Dimethylformamide (DMF) and ethanol was used to remove PVDF and recover scrap materials from LiCoO2 scraps"
+      },
+      {
+        "evidence_id": "E4929e58333",
+        "quote": "In order to enhance the recovery rate of scrap materials and the purity of Al foil, the separated Al foil was treated again as above recovery method."
+      }
+    ],
+    "method_family": "solvent dissolution recovery"
+  },
+  {
+    "root_entity_ids": [
+      "Process_NaOH_dissolution_of_Al_foil_mixtures"
+    ],
+    "scope_subject_text": "NaOH dissolution of Al foil mixtures",
+    "scope_label": "NaOH dissolution of Al foil mixtures",
+    "evidence_ids": [
+      "E2d5e7e2254"
+    ],
+    "evidence_span": "After dissolving Al foil mixtures with excessive NaOH solution, the wasted scrap materials (m2) could be weighed.",
+    "evidence": [
+      {
+        "evidence_id": "E2d5e7e2254",
+        "quote": "After dissolving Al foil mixtures with excessive NaOH solution, the wasted scrap materials (m2) could be weighed."
+      }
+    ],
+    "method_family": "alkaline dissolution"
+  },
+  {
+    "root_entity_ids": [
+      "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes"
+    ],
+    "scope_subject_text": "electrochemical cycling of recovered scrap material electrodes",
+    "scope_label": "electrochemical cycling of recovered scrap material electrodes",
+    "evidence_ids": [
+      "Ee3e51cbff3"
+    ],
+    "evidence_span": "The cells were charged and discharged between 3.0 V and 4.3 V versus Li ^+ / Li by applying a current density of 30 mA g ^-1 at 25 ^∘𝖢.",
+    "evidence": [
+      {
+        "evidence_id": "Ee3e51cbff3",
+        "quote": "The cells were charged and discharged between 3.0 V and 4.3 V versus Li ^+ / Li by applying a current density of 30 mA g ^-1 at 25 ^∘𝖢."
+      }
+    ],
+    "method_family": "galvanostatic charge-discharge cycling"
   }
 ]

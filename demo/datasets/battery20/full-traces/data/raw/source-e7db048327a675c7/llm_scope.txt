@@ -6,12 +6,51 @@
     "scope_subject_text": "lithium ion secondary battery",
     "scope_label": "lithium ion secondary battery",
     "evidence_ids": [
-      "E5ecad56141"
+      "E7ec1a05529",
+      "E0e114227b8",
+      "E5b46903108"
     ],
-    "evidence_span": "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, calcination steps (Lee and Rhee, 2002).",
+    "evidence_span": "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, calcination steps (Lee and Rhee, 2002). First, LIB samples were thermally treated in a muffle furnace at 150 ^∘C for 1 h.",
+    "evidence": [
+      {
+        "evidence_id": "E7ec1a05529",
+        "quote": "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, calcination steps (Lee and Rhee, 2002). First, LIB samples were thermally treated in a muffle furnace at 150 ^∘C for 1 h."
+      },
+      {
+        "evidence_id": "E0e114227b8",
+        "quote": "Reductive leaching of LiCoO2 from spent lithium ion battery was investigated in terms of reaction variables."
+      },
+      {
+        "evidence_id": "E5b46903108",
+        "quote": "In this study, acid leaching has been applied to recover cobalt and lithium from cathodic active material of spent LIB."
+      }
+    ],
     "population_granularity": "batch",
-    "sample_type": "lithium ion secondary battery",
-    "scope_description": "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, and calcination steps.",
+    "sample_type": "spent lithium ion battery",
+    "scope_description": "Spent lithium ion secondary battery (LIB) waste used as the study sample; cathodic active material (LiCoO2) was separated from these LIB samples by thermal treatment, shredding, calcination, and screening.",
     "sample_size": null
+  },
+  {
+    "root_entity_ids": [
+      "Process_LiCoO2_leaching_in_nitric_acid_solution"
+    ],
+    "scope_subject_text": "LiCoO2 leaching in nitric acid solution",
+    "scope_label": "LiCoO2 leaching in nitric acid solution",
+    "evidence_ids": [
+      "E2990d35d70",
+      "Ef908ed912e"
+    ],
+    "evidence_span": "Leaching of LiCoO2 in nitric acid solution was tested in a reactor (Fig. 4), which was placed in a water bath to control the reaction temperature within ± 0.5 ^∘C.",
+    "evidence": [
+      {
+        "evidence_id": "E2990d35d70",
+        "quote": "Leaching of LiCoO2 in nitric acid solution was tested in a reactor (Fig. 4), which was placed in a water bath to control the reaction temperature within ± 0.5 ^∘C."
+      },
+      {
+        "evidence_id": "Ef908ed912e",
+        "quote": "Reductive leaching of the cathodic active material with H2O2 addition in a nitric acid solution was employed for a better dissolution of cobalt and lithium."
+      }
+    ],
+    "method_family": "acid leaching"
   }
 ]

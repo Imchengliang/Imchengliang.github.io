@@ -208,48 +208,366 @@
     "scope": [
       {
         "root_entity_ids": [
+          "Product_lithium_ion_battery"
+        ],
+        "scope_subject_text": "lithium ion battery",
+        "scope_label": "lithium ion battery",
+        "evidence_ids": [
+          "E725a96d2a9",
+          "E2c49d0676b"
+        ],
+        "evidence_span": "For the metal recovery from waste LIBs of mobile phones (collected from the local scrap market) these were discharge first and then dismantled to separate the cathode and anode film (Scheme 1).",
+        "evidence": [
+          {
+            "evidence_id": "E725a96d2a9",
+            "quote": "For the metal recovery from waste LIBs of mobile phones (collected from the local scrap market) these were discharge first and then dismantled to separate the cathode and anode film (Scheme 1)."
+          },
+          {
+            "evidence_id": "E2c49d0676b",
+            "quote": "Li, Co, Mn and Ni concentration varies in different brands of LIBs waste and broadly in the range of 4224 to 3065 for Li, 8756 to 4822 for Γ0, 28,368 to 19,470 for Mn, 3843 to 2514 ppm for Ni as found in 05 popular brands Nokia, Samsung, Lava, Sony and Max."
+          }
+        ],
+        "population_granularity": "batch",
+        "sample_type": "spent lithium-ion batteries from waste mobile phones",
+        "scope_description": "Waste lithium-ion batteries from mobile phones collected from a local scrap market; five popular brands (Nokia, Samsung, Lava, Sony, Max) were examined, with cathode and anode films separated after discharge and dismantling.",
+        "sample_size": null
+      },
+      {
+        "root_entity_ids": [
           "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
         ],
         "scope_subject_text": "metal leaching from cathode and anode film using citrus pseudolimon juice",
         "scope_label": "metal leaching from cathode and anode film using citrus pseudolimon juice",
         "evidence_ids": [
-          "E2cb65b6970"
+          "E1ac960baae",
+          "E2c49d0676b"
         ],
-        "evidence_span": "Cathode and anode films from waste mobile phone LIBs were treated with Citrus pseudolimon (galgal) juice in a 250 mL round-bottom flask at a film-to-juice w/v ratio of 50,000 mg/L, 90 °C for 20 min for binder removal; after separating Cu and Al films, the remaining solution was refluxed for 30 min and filtered to remove carbon and impurities, and the filtrate was analyzed for leaching rate by ICP-MS relative to tri-acid digestion.",
-        "method_family": "metal leaching"
+        "evidence_span": "Experiments were performed by using CJ with cathode and anode film. Optimum w/v ratio of film to CJ was found to be 50,000 mg/L at 90 ^∘C and 20 min for binder removal.",
+        "evidence": [
+          {
+            "evidence_id": "E1ac960baae",
+            "quote": "Experiments were performed by using CJ with cathode and anode film. Optimum w/v ratio of film to CJ was found to be 50,000 mg/L at 90 ^∘C and 20 min for binder removal."
+          },
+          {
+            "evidence_id": "E2c49d0676b",
+            "quote": "The solution was further refluxed for 30 min at 90 ^∘C to ensure the maximum leaching. The leachate was then separated by filtration and filtrate was analyzed through ICP-MS."
+          }
+        ],
+        "method_family": "citrus juice leaching"
       }
     ],
     "scope_audit": {
-      "evidence_record_count": 1,
+      "evidence_record_count": 41,
       "rejected_definition_count": 0,
+      "unscoped_candidate_count": 0,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
     "scope_assertions": [
       {
-        "id": "scope-assertion:3225394c5449dc2f",
+        "id": "scope-assertion:ee54798d25f0bbe3",
+        "micrograph_id": "Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries",
+        "root_entity_ids": [
+          "Product_lithium_ion_battery"
+        ],
+        "requested_root_entity_ids": [
+          "Product_lithium_ion_battery"
+        ],
+        "scope_kind": "declared_population",
+        "facets": {
+          "population_granularity": "batch",
+          "sample_type": "spent lithium-ion batteries from waste mobile phones"
+        },
+        "scope_description": "Waste lithium-ion batteries from mobile phones collected from a local scrap market; five popular brands (Nokia, Samsung, Lava, Sony, Max) were examined, with cathode and anode films separated after discharge and dismantling.",
+        "sample_size": null,
+        "evidence_span": "For the metal recovery from waste LIBs of mobile phones (collected from the local scrap market) these were discharge first and then dismantled to separate the cathode and anode film (Scheme 1).",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:3299daa06e3467e2",
         "micrograph_id": "Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries",
         "root_entity_ids": [
           "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
         ],
+        "requested_root_entity_ids": [
+          "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
+        ],
         "scope_kind": "process_method_family",
         "facets": {
-          "method_family": "metal leaching"
+          "method_family": "citrus juice leaching"
         },
-        "scope_description": "Cathode and anode films from waste mobile phone LIBs were treated with Citrus pseudolimon (galgal) juice in a 250 mL round-bottom flask at a film-to-juice w/v ratio of 50,000 mg/L, 90 °C for 20 min for binder removal; after separating Cu and Al films, the remaining solution was refluxed for 30 min and filtered to remove carbon and impurities, and the filtrate was analyzed for leaching rate by ICP-MS relative to tri-acid digestion.",
+        "scope_description": "Experiments were performed by using CJ with cathode and anode film. Optimum w/v ratio of film to CJ was found to be 50,000 mg/L at 90 ^∘C and 20 min for binder removal.",
         "sample_size": null,
-        "evidence_span": "Cathode and anode films from waste mobile phone LIBs were treated with Citrus pseudolimon (galgal) juice in a 250 mL round-bottom flask at a film-to-juice w/v ratio of 50,000 mg/L, 90 °C for 20 min for binder removal; after separating Cu and Al films, the remaining solution was refluxed for 30 min and filtered to remove carbon and impurities, and the filtrate was analyzed for leaching rate by ICP-MS relative to tri-acid digestion.",
+        "evidence_span": "Experiments were performed by using CJ with cathode and anode film. Optimum w/v ratio of film to CJ was found to be 50,000 mg/L at 90 ^∘C and 20 min for binder removal.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:99c857a672918f29",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
+        "id": "scope-path:827b15c975575510",
+        "scope_assertion_id": "scope-assertion:ee54798d25f0bbe3",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Component_cathode",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ]
+      },
+      {
+        "id": "scope-path:656d9bd791f26b3a",
+        "scope_assertion_id": "scope-assertion:ee54798d25f0bbe3",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Component_anode",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
+        ]
+      },
+      {
+        "id": "scope-path:4739dce95c10c3e1",
+        "scope_assertion_id": "scope-assertion:ee54798d25f0bbe3",
+        "statement_relation_id": "REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery",
+          "Component_cathode"
+        ],
+        "containment_relation_path": [
+          "REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ],
+        "propagation_kind": "contains_path",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ]
+      },
+      {
+        "id": "scope-path:02d26d9d1a1473c0",
+        "scope_assertion_id": "scope-assertion:ee54798d25f0bbe3",
+        "statement_relation_id": "REL_Component_anode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery",
+          "Component_anode"
+        ],
+        "containment_relation_path": [
+          "REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
+        ],
+        "propagation_kind": "contains_path",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_anode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
+        ]
+      },
+      {
+        "id": "scope-path:4739dce95c10c3e1",
+        "scope_assertion_id": "scope-assertion:ee54798d25f0bbe3",
+        "statement_relation_id": "REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery",
+          "Component_cathode"
+        ],
+        "containment_relation_path": [
+          "REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ],
+        "propagation_kind": "contains_path",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ]
+      },
+      {
+        "id": "scope-path:02d26d9d1a1473c0",
+        "scope_assertion_id": "scope-assertion:ee54798d25f0bbe3",
+        "statement_relation_id": "REL_Component_anode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery",
+          "Component_anode"
+        ],
+        "containment_relation_path": [
+          "REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
+        ],
+        "propagation_kind": "contains_path",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_anode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
+        ]
+      },
+      {
+        "id": "scope-path:de5de05a97d73644",
+        "scope_assertion_id": "scope-assertion:ee54798d25f0bbe3",
+        "statement_relation_id": "REL_Component_cathode_CONTAINS_Material_LiCoO2",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery",
+          "Component_cathode"
+        ],
+        "containment_relation_path": [
+          "REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ],
+        "propagation_kind": "contains_path",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_CONTAINS_Material_LiCoO2",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ]
+      },
+      {
+        "id": "scope-path:787fda7d1ec561ce",
+        "scope_assertion_id": "scope-assertion:ee54798d25f0bbe3",
+        "statement_relation_id": "REL_Component_cathode_CONTAINS_Material_Co3O4",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery",
+          "Component_cathode"
+        ],
+        "containment_relation_path": [
+          "REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ],
+        "propagation_kind": "contains_path",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_CONTAINS_Material_Co3O4",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ]
+      },
+      {
+        "id": "scope-path:400649261a4c6f0d",
+        "scope_assertion_id": "scope-assertion:ee54798d25f0bbe3",
+        "statement_relation_id": "REL_Component_cathode_CONTAINS_Material_Al",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery",
+          "Component_cathode"
+        ],
+        "containment_relation_path": [
+          "REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ],
+        "propagation_kind": "contains_path",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_CONTAINS_Material_Al",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ]
+      },
+      {
+        "id": "scope-path:cd6ad359bb18111a",
+        "scope_assertion_id": "scope-assertion:ee54798d25f0bbe3",
+        "statement_relation_id": "REL_Component_cathode_CONTAINS_Material_C",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery",
+          "Component_cathode"
+        ],
+        "containment_relation_path": [
+          "REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ],
+        "propagation_kind": "contains_path",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_CONTAINS_Material_C",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ]
+      },
+      {
+        "id": "scope-path:7557df363b6548a5",
+        "scope_assertion_id": "scope-assertion:ee54798d25f0bbe3",
+        "statement_relation_id": "REL_Component_anode_CONTAINS_Material_C",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery",
+          "Component_anode"
+        ],
+        "containment_relation_path": [
+          "REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
+        ],
+        "propagation_kind": "contains_path",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_anode_CONTAINS_Material_C",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
+        ]
+      },
+      {
+        "id": "scope-path:05847ba81c9b7428",
+        "scope_assertion_id": "scope-assertion:ee54798d25f0bbe3",
+        "statement_relation_id": "REL_Component_anode_CONTAINS_Material_Cu",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery",
+          "Component_anode"
+        ],
+        "containment_relation_path": [
+          "REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
+        ],
+        "propagation_kind": "contains_path",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_anode_CONTAINS_Material_Cu",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
+        ]
+      },
+      {
+        "id": "scope-path:4739dce95c10c3e1",
+        "scope_assertion_id": "scope-assertion:ee54798d25f0bbe3",
+        "statement_relation_id": "REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery",
+          "Component_cathode"
+        ],
+        "containment_relation_path": [
+          "REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ],
+        "propagation_kind": "contains_path",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
+        ]
+      },
+      {
+        "id": "scope-path:5c71f9f97adfeb8c",
+        "scope_assertion_id": "scope-assertion:ee54798d25f0bbe3",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
+        ]
+      },
+      {
+        "id": "scope-path:1b7ba31ab2ae1fd0",
+        "scope_assertion_id": "scope-assertion:3299daa06e3467e2",
         "statement_relation_id": "REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "entity_path": [
@@ -258,13 +576,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
         ]
       },
       {
-        "id": "scope-path:4c746a06cf8d9c72",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
+        "id": "scope-path:156ede611303e6ec",
+        "scope_assertion_id": "scope-assertion:3299daa06e3467e2",
         "statement_relation_id": "REL_Component_anode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "entity_path": [
@@ -273,103 +591,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_anode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
         ]
       },
       {
-        "id": "scope-path:39f8c9a1e4abfbc7",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
-        "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_quercetin",
-        "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
-        "entity_path": [
-          "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_quercetin"
-        ]
-      },
-      {
-        "id": "scope-path:c5965630c5e275ba",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
-        "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_myricitin",
-        "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
-        "entity_path": [
-          "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_myricitin"
-        ]
-      },
-      {
-        "id": "scope-path:4df513df818235c1",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
-        "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_rutin",
-        "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
-        "entity_path": [
-          "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_rutin"
-        ]
-      },
-      {
-        "id": "scope-path:cf673e1c220ebfee",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
-        "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_tangeritin",
-        "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
-        "entity_path": [
-          "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_tangeritin"
-        ]
-      },
-      {
-        "id": "scope-path:488e5bc0b2b31688",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
-        "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_naringin",
-        "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
-        "entity_path": [
-          "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_naringin"
-        ]
-      },
-      {
-        "id": "scope-path:bcb70f46aca80267",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
-        "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_hesperidin",
-        "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
-        "entity_path": [
-          "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_hesperidin"
-        ]
-      },
-      {
-        "id": "scope-path:99c857a672918f29",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
+        "id": "scope-path:1b7ba31ab2ae1fd0",
+        "scope_assertion_id": "scope-assertion:3299daa06e3467e2",
         "statement_relation_id": "REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "entity_path": [
@@ -378,13 +606,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
         ]
       },
       {
-        "id": "scope-path:4c746a06cf8d9c72",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
+        "id": "scope-path:156ede611303e6ec",
+        "scope_assertion_id": "scope-assertion:3299daa06e3467e2",
         "statement_relation_id": "REL_Component_anode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "entity_path": [
@@ -393,13 +621,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_anode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
         ]
       },
       {
-        "id": "scope-path:99c857a672918f29",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
+        "id": "scope-path:1b7ba31ab2ae1fd0",
+        "scope_assertion_id": "scope-assertion:3299daa06e3467e2",
         "statement_relation_id": "REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "entity_path": [
@@ -408,43 +636,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
         ]
       },
       {
-        "id": "scope-path:5cfa79d8ddfa6262",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
-        "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_PVDF",
-        "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
-        "entity_path": [
-          "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_PVDF"
-        ]
-      },
-      {
-        "id": "scope-path:5cfa79d8ddfa6262",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
-        "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_PVDF",
-        "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
-        "entity_path": [
-          "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_PVDF"
-        ]
-      },
-      {
-        "id": "scope-path:041152af27ca7940",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
+        "id": "scope-path:5fa0cb2c27c69d4a",
+        "scope_assertion_id": "scope-assertion:3299daa06e3467e2",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "entity_path": [
@@ -453,13 +651,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
         ]
       },
       {
-        "id": "scope-path:1fcc0bb4d41768d7",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
+        "id": "scope-path:f47553b35c57560b",
+        "scope_assertion_id": "scope-assertion:3299daa06e3467e2",
         "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "entity_path": [
@@ -468,13 +666,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:698ab12c0c9f4919",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
+        "id": "scope-path:f40cd7150690677c",
+        "scope_assertion_id": "scope-assertion:3299daa06e3467e2",
         "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Mn",
         "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "entity_path": [
@@ -483,13 +681,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Mn"
         ]
       },
       {
-        "id": "scope-path:4bc5cf978fa60369",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
+        "id": "scope-path:828a117dd65db1f9",
+        "scope_assertion_id": "scope-assertion:3299daa06e3467e2",
         "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Ni",
         "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "entity_path": [
@@ -498,13 +696,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Ni"
         ]
       },
       {
-        "id": "scope-path:b26b37009e5f6320",
-        "scope_assertion_id": "scope-assertion:3225394c5449dc2f",
+        "id": "scope-path:eedd967d08ed2ea5",
+        "scope_assertion_id": "scope-assertion:3299daa06e3467e2",
         "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "entity_path": [
@@ -513,7 +711,7 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Co"
         ]
       }
@@ -3667,9 +3865,16 @@
           "Product_lithium_ion_battery",
           "Component_cathode"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:ee54798d25f0bbe3"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:827b15c975575510"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:b84af3d478d6366a",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:b84af3d478d6366a:evidence"
         ]
@@ -3685,9 +3890,16 @@
           "Product_lithium_ion_battery",
           "Component_anode"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:ee54798d25f0bbe3"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:656d9bd791f26b3a"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:4968d0b83edce4ac",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:4968d0b83edce4ac:evidence"
         ]
@@ -3704,15 +3916,20 @@
           "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:3225394c5449dc2f"
+          "scope-assertion:3299daa06e3467e2",
+          "scope-assertion:ee54798d25f0bbe3"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:99c857a672918f29"
+          "scope-path:1b7ba31ab2ae1fd0",
+          "scope-path:4739dce95c10c3e1"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice:entity",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:1503911c02d615a7",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:1503911c02d615a7:evidence"
         ]
@@ -3729,15 +3946,20 @@
           "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:3225394c5449dc2f"
+          "scope-assertion:3299daa06e3467e2",
+          "scope-assertion:ee54798d25f0bbe3"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:4c746a06cf8d9c72"
+          "scope-path:02d26d9d1a1473c0",
+          "scope-path:156ede611303e6ec"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice:entity",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_anode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:accb5ad5f63208a0",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:accb5ad5f63208a0:evidence"
         ]
@@ -3754,15 +3976,20 @@
           "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:3225394c5449dc2f"
+          "scope-assertion:3299daa06e3467e2",
+          "scope-assertion:ee54798d25f0bbe3"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:99c857a672918f29"
+          "scope-path:1b7ba31ab2ae1fd0",
+          "scope-path:4739dce95c10c3e1"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice:entity",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:eb4f5cd6650fe1d7",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:eb4f5cd6650fe1d7:evidence"
         ]
@@ -3779,15 +4006,20 @@
           "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:3225394c5449dc2f"
+          "scope-assertion:3299daa06e3467e2",
+          "scope-assertion:ee54798d25f0bbe3"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:4c746a06cf8d9c72"
+          "scope-path:02d26d9d1a1473c0",
+          "scope-path:156ede611303e6ec"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice:entity",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_anode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:874ac233179591f1",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:874ac233179591f1:evidence"
         ]
@@ -3803,9 +4035,17 @@
           "Component_cathode",
           "Material_LiCoO2"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:ee54798d25f0bbe3"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:de5de05a97d73644"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_CONTAINS_Material_LiCoO2",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:8bae229ce9506344",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:8bae229ce9506344:evidence"
         ]
@@ -3821,9 +4061,17 @@
           "Component_cathode",
           "Material_Co3O4"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:ee54798d25f0bbe3"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:787fda7d1ec561ce"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_CONTAINS_Material_Co3O4",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:98a75243425b4b75",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:98a75243425b4b75:evidence"
         ]
@@ -3839,9 +4087,17 @@
           "Component_cathode",
           "Material_Al"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:ee54798d25f0bbe3"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:400649261a4c6f0d"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_CONTAINS_Material_Al",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:67bd6597262eccc7",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:67bd6597262eccc7:evidence"
         ]
@@ -3857,9 +4113,17 @@
           "Component_cathode",
           "Material_C"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:ee54798d25f0bbe3"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:cd6ad359bb18111a"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_CONTAINS_Material_C",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:1b082f172c2b0db9",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:1b082f172c2b0db9:evidence"
         ]
@@ -3875,9 +4139,17 @@
           "Component_anode",
           "Material_C"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:ee54798d25f0bbe3"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:7557df363b6548a5"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_anode_CONTAINS_Material_C",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:e98b979de34343b2",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:e98b979de34343b2:evidence"
         ]
@@ -3893,9 +4165,17 @@
           "Component_anode",
           "Material_Cu"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:ee54798d25f0bbe3"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:05847ba81c9b7428"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_anode_CONTAINS_Material_Cu",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:d3448e9a25d59d06",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:d3448e9a25d59d06:evidence"
         ]
@@ -3912,67 +4192,22 @@
           "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:3225394c5449dc2f"
+          "scope-assertion:3299daa06e3467e2",
+          "scope-assertion:ee54798d25f0bbe3"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:99c857a672918f29"
+          "scope-path:1b7ba31ab2ae1fd0",
+          "scope-path:4739dce95c10c3e1"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice:entity",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Component_cathode_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:44bf9f69d6267726",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:44bf9f69d6267726:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:e876e32aaa4f7d7f",
-        "micrograph_id": "Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries",
-        "statement_id": "statement:2a363d46614133d5",
-        "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_PVDF",
-        "source_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_PVDF",
-        "source_relation_index": 13,
-        "entity_ids": [
-          "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
-          "Material_PVDF"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:3225394c5449dc2f"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:5cfa79d8ddfa6262"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice:entity",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_PVDF",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:2a363d46614133d5",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:2a363d46614133d5:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:7e533bb26055ffe5",
-        "micrograph_id": "Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries",
-        "statement_id": "statement:df173c5fa58ffa89",
-        "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_PVDF",
-        "source_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_PVDF",
-        "source_relation_index": 14,
-        "entity_ids": [
-          "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
-          "Material_PVDF"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:3225394c5449dc2f"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:5cfa79d8ddfa6262"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice:entity",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_PVDF",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:df173c5fa58ffa89",
-          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:df173c5fa58ffa89:evidence"
         ]
       },
       {
@@ -3981,20 +4216,24 @@
         "statement_id": "statement:dfcacedcd7850144",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
         "source_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
-        "source_relation_index": 15,
+        "source_relation_index": 13,
         "entity_ids": [
           "Product_lithium_ion_battery",
           "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:3225394c5449dc2f"
+          "scope-assertion:3299daa06e3467e2",
+          "scope-assertion:ee54798d25f0bbe3"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:041152af27ca7940"
+          "scope-path:5c71f9f97adfeb8c",
+          "scope-path:5fa0cb2c27c69d4a"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
+          "scope:scope-assertion:ee54798d25f0bbe3:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice:entity",
+          "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Product_lithium_ion_battery:entity",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:dfcacedcd7850144",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:dfcacedcd7850144:evidence"
@@ -4006,19 +4245,19 @@
         "statement_id": "statement:e2cc8e9e33ed145f",
         "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 16,
+        "source_relation_index": 14,
         "entity_ids": [
           "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:3225394c5449dc2f"
+          "scope-assertion:3299daa06e3467e2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:1fcc0bb4d41768d7"
+          "scope-path:f47553b35c57560b"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice:entity",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Li",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:e2cc8e9e33ed145f",
@@ -4031,19 +4270,19 @@
         "statement_id": "statement:58b13702c7454b44",
         "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Mn",
         "source_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Mn",
-        "source_relation_index": 17,
+        "source_relation_index": 15,
         "entity_ids": [
           "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
           "Material_Mn"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:3225394c5449dc2f"
+          "scope-assertion:3299daa06e3467e2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:698ab12c0c9f4919"
+          "scope-path:f40cd7150690677c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice:entity",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Mn",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:58b13702c7454b44",
@@ -4056,19 +4295,19 @@
         "statement_id": "statement:a0fb26f8ba7e615f",
         "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Ni",
         "source_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Ni",
-        "source_relation_index": 18,
+        "source_relation_index": 16,
         "entity_ids": [
           "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
           "Material_Ni"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:3225394c5449dc2f"
+          "scope-assertion:3299daa06e3467e2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:4bc5cf978fa60369"
+          "scope-path:828a117dd65db1f9"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice:entity",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Ni",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:a0fb26f8ba7e615f",
@@ -4081,19 +4320,19 @@
         "statement_id": "statement:3de986cca2c042d1",
         "statement_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 19,
+        "source_relation_index": 17,
         "entity_ids": [
           "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:3225394c5449dc2f"
+          "scope-assertion:3299daa06e3467e2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:b26b37009e5f6320"
+          "scope-path:eedd967d08ed2ea5"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:3225394c5449dc2f:evidence",
+          "scope:scope-assertion:3299daa06e3467e2:evidence",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice:entity",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:REL_Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice_HAS_OUTPUT_Material_Co",
           "source:Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries:relation:statement:3de986cca2c042d1",
@@ -6883,6 +7122,7 @@
       "measurement_evidence_records": 2,
       "receipt": "measurement_semantics_revision.json",
       "original_stages_preserved": true
-    }
+    },
+    "scope_unscoped_candidates": []
   }
 }

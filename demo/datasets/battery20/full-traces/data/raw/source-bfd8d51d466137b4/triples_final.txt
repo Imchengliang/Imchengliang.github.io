@@ -431,15 +431,23 @@
         "scope_subject_text": "lithium-ion battery",
         "scope_label": "lithium-ion battery",
         "evidence_ids": [
-          "E3226c3f679",
-          "E998e946f25",
-          "Eadc95ec56c",
-          "Eb6338ce809"
+          "E7680074a20",
+          "E49cb17f2b4"
         ],
-        "evidence_span": "200 g of spent LIBs powder was added.",
+        "evidence_span": "The spent LIBs powder was obtained from a recycling company in Zhejiang, China. The powder is a retired ternary lithium-ion battery that has been processed through “discharge-disassembly-crushingscreening” and other processes to form a black powder.",
+        "evidence": [
+          {
+            "evidence_id": "E7680074a20",
+            "quote": "The spent LIBs powder was obtained from a recycling company in Zhejiang, China. The powder is a retired ternary lithium-ion battery that has been processed through “discharge-disassembly-crushingscreening” and other processes to form a black powder."
+          },
+          {
+            "evidence_id": "E49cb17f2b4",
+            "quote": "Its diffraction peaks were indexed to carbon and LNCM (LiNi _ x Co _ y Mn _ z O _ 2) as the major phase"
+          }
+        ],
         "population_granularity": "batch",
-        "sample_type": "lithium-ion battery",
-        "scope_description": "Spent LIBs powder obtained from a recycling company in Zhejiang, China, processed through discharge-disassembly-crushing-screening to form a black powder from retired ternary lithium-ion batteries.",
+        "sample_type": "spent lithium-ion battery powder",
+        "scope_description": "Spent LIBs powder obtained from a recycling company in Zhejiang, China, derived from a retired ternary lithium-ion battery processed by discharge-disassembly-crushing-screening into black powder.",
         "sample_size": null
       },
       {
@@ -449,93 +457,81 @@
         "scope_subject_text": "glycine leaching of spent LIBs powder",
         "scope_label": "glycine leaching of spent LIBs powder",
         "evidence_ids": [
-          "E11d0d1b5b9"
+          "Ed0957d1ec4",
+          "E8e3f68ee27"
         ],
-        "evidence_span": "After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed.",
-        "method_family": "glycine leaching"
+        "evidence_span": "After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed. After the reaction time, the beaker was removed and left to cool to room temperature. Then, the leachate and leach residue were separated by vacuum filtration, and the metal content of the leach solution was measured.",
+        "evidence": [
+          {
+            "evidence_id": "Ed0957d1ec4",
+            "quote": "After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed. After the reaction time, the beaker was removed and left to cool to room temperature. Then, the leachate and leach residue were separated by vacuum filtration, and the metal content of the leach solution was measured."
+          },
+          {
+            "evidence_id": "E8e3f68ee27",
+            "quote": "Glycine solutions of different concentrations were used as leaching agents, in which Gly− is the ligand. Hydrogen peroxide (30%) was used as a reducing agent."
+          }
+        ],
+        "method_family": "alkaline glycinate leaching"
       }
     ],
     "scope_audit": {
-      "evidence_record_count": 5,
+      "evidence_record_count": 66,
       "rejected_definition_count": 0,
+      "unscoped_candidate_count": 0,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
     "scope_assertions": [
       {
-        "id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-assertion:8e7a6a2a45a217a5",
         "micrograph_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
         "root_entity_ids": [
+          "Product_lithium_ion_battery"
+        ],
+        "requested_root_entity_ids": [
           "Product_lithium_ion_battery"
         ],
         "scope_kind": "declared_population",
         "facets": {
           "population_granularity": "batch",
-          "sample_type": "lithium-ion battery"
+          "sample_type": "spent lithium-ion battery powder"
         },
-        "scope_description": "Spent LIBs powder obtained from a recycling company in Zhejiang, China, processed through discharge-disassembly-crushing-screening to form a black powder from retired ternary lithium-ion batteries.",
+        "scope_description": "Spent LIBs powder obtained from a recycling company in Zhejiang, China, derived from a retired ternary lithium-ion battery processed by discharge-disassembly-crushing-screening into black powder.",
         "sample_size": null,
-        "evidence_span": "200 g of spent LIBs powder was added.",
+        "evidence_span": "The spent LIBs powder was obtained from a recycling company in Zhejiang, China. The powder is a retired ternary lithium-ion battery that has been processed through “discharge-disassembly-crushingscreening” and other processes to form a black powder.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity"
         ]
       },
       {
-        "id": "scope-assertion:9920811edc716c40",
+        "id": "scope-assertion:83b7738772f8601c",
         "micrograph_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
         "root_entity_ids": [
           "Process_glycine_leaching_of_spent_LIBs_powder"
         ],
+        "requested_root_entity_ids": [
+          "Process_glycine_leaching_of_spent_LIBs_powder"
+        ],
         "scope_kind": "process_method_family",
         "facets": {
-          "method_family": "glycine leaching"
+          "method_family": "alkaline glycinate leaching"
         },
-        "scope_description": "After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed.",
+        "scope_description": "After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed. After the reaction time, the beaker was removed and left to cool to room temperature. Then, the leachate and leach residue were separated by vacuum filtration, and the metal content of the leach solution was measured.",
         "sample_size": null,
-        "evidence_span": "After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed.",
+        "evidence_span": "After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed. After the reaction time, the beaker was removed and left to cool to room temperature. Then, the leachate and leach residue were separated by vacuum filtration, and the metal content of the leach solution was measured.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:e20c85eb11a42e98",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
-        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_C",
-        "root_entity_id": "Product_lithium_ion_battery",
-        "entity_path": [
-          "Product_lithium_ion_battery"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_C"
-        ]
-      },
-      {
-        "id": "scope-path:0e4480d8314f967c",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
-        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_LNCM__LiNi___x_Co___y_Mn___z_O___2_",
-        "root_entity_id": "Product_lithium_ion_battery",
-        "entity_path": [
-          "Product_lithium_ion_battery"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_LNCM__LiNi___x_Co___y_Mn___z_O___2_"
-        ]
-      },
-      {
-        "id": "scope-path:95c679503f243ba3",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:a605b8608828159b",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -544,13 +540,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:90798d6052863eec",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:05f37ddd0f4837c4",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Co",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -559,13 +555,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Co"
         ]
       },
       {
-        "id": "scope-path:eb0e8661fa240dc1",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:932045750b8bda1e",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Ni",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -574,13 +570,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Ni"
         ]
       },
       {
-        "id": "scope-path:ce2054092e47c4e9",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:19b7f40bd73ecf03",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Mn",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -589,13 +585,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Mn"
         ]
       },
       {
-        "id": "scope-path:510c12c8c2b226d1",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:0520799121b00d15",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Li",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -604,13 +600,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Li"
         ]
       },
       {
-        "id": "scope-path:34c12326fa77733c",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:ce68cb1a6731f216",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Cu",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -619,13 +615,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Cu"
         ]
       },
       {
-        "id": "scope-path:bfaded28e845cf66",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:19f5fa58d6d65e89",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Al",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -634,13 +630,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Al"
         ]
       },
       {
-        "id": "scope-path:95c679503f243ba3",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:a605b8608828159b",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -649,13 +645,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:95c679503f243ba3",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:a605b8608828159b",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -664,13 +660,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:34c12326fa77733c",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:ce68cb1a6731f216",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Cu",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -679,13 +675,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Cu"
         ]
       },
       {
-        "id": "scope-path:bfaded28e845cf66",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:19f5fa58d6d65e89",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Al",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -694,13 +690,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Al"
         ]
       },
       {
-        "id": "scope-path:95c679503f243ba3",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:a605b8608828159b",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -709,13 +705,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:95c679503f243ba3",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:a605b8608828159b",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -724,13 +720,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:95c679503f243ba3",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:a605b8608828159b",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -739,13 +735,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:95c679503f243ba3",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:a605b8608828159b",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -754,13 +750,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:95c679503f243ba3",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:a605b8608828159b",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -769,13 +765,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:15f972b8c6fd7d82",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:6f81b7d66a3cf515",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_MnCO",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -784,13 +780,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_MnCO"
         ]
       },
       {
-        "id": "scope-path:95c679503f243ba3",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:a605b8608828159b",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -799,13 +795,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:510c12c8c2b226d1",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:0520799121b00d15",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Li",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -814,13 +810,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Li"
         ]
       },
       {
-        "id": "scope-path:eb0e8661fa240dc1",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:932045750b8bda1e",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Ni",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -829,13 +825,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Ni"
         ]
       },
       {
-        "id": "scope-path:90798d6052863eec",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:05f37ddd0f4837c4",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Co",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -844,13 +840,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Co"
         ]
       },
       {
-        "id": "scope-path:ce2054092e47c4e9",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:19b7f40bd73ecf03",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Mn",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -859,13 +855,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Mn"
         ]
       },
       {
-        "id": "scope-path:bfaded28e845cf66",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:19f5fa58d6d65e89",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Al",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -874,13 +870,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Al"
         ]
       },
       {
-        "id": "scope-path:b08b966c2b217f38",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:14d147a100567d8d",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Fe",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -889,13 +885,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Fe"
         ]
       },
       {
-        "id": "scope-path:34c12326fa77733c",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:ce68cb1a6731f216",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Cu",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -904,13 +900,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Cu"
         ]
       },
       {
-        "id": "scope-path:438dc2352403c991",
-        "scope_assertion_id": "scope-assertion:afe7ea82acc10171",
+        "id": "scope-path:64873699f625308a",
+        "scope_assertion_id": "scope-assertion:8e7a6a2a45a217a5",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Ca",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -919,13 +915,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Ca"
         ]
       },
       {
-        "id": "scope-path:afdab647cc43773e",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:b8c0c90ede43e42c",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -934,13 +930,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:afdab647cc43773e",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:b8c0c90ede43e42c",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -949,13 +945,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:afdab647cc43773e",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:b8c0c90ede43e42c",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -964,13 +960,28 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:84eeaf7a34d55a47",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:b8c0c90ede43e42c",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
+        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
+        "entity_path": [
+          "Process_glycine_leaching_of_spent_LIBs_powder"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:83b7738772f8601c:evidence",
+          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
+        ]
+      },
+      {
+        "id": "scope-path:f415a43453a0b416",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -979,14 +990,14 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:2874a9dc74bd38bc",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co",
+        "id": "scope-path:b8c0c90ede43e42c",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
           "Process_glycine_leaching_of_spent_LIBs_powder"
@@ -994,13 +1005,28 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co"
+          "scope:scope-assertion:83b7738772f8601c:evidence",
+          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:9db2b39ed8924c9f",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:f415a43453a0b416",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
+        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
+        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
+        "entity_path": [
+          "Process_glycine_leaching_of_spent_LIBs_powder"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:83b7738772f8601c:evidence",
+          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li"
+        ]
+      },
+      {
+        "id": "scope-path:3c2d60cc5972a640",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -1009,103 +1035,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni"
         ]
       },
       {
-        "id": "scope-path:25a0bed38e8bef7f",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn"
-        ]
-      },
-      {
-        "id": "scope-path:afdab647cc43773e",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
-        ]
-      },
-      {
-        "id": "scope-path:84eeaf7a34d55a47",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li"
-        ]
-      },
-      {
-        "id": "scope-path:afdab647cc43773e",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
-        ]
-      },
-      {
-        "id": "scope-path:84eeaf7a34d55a47",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li"
-        ]
-      },
-      {
-        "id": "scope-path:9db2b39ed8924c9f",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni"
-        ]
-      },
-      {
-        "id": "scope-path:2874a9dc74bd38bc",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:5cfccc8a92a0eaeb",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -1114,13 +1050,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:25a0bed38e8bef7f",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:be074eba91b2d6a6",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -1129,13 +1065,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn"
         ]
       },
       {
-        "id": "scope-path:afdab647cc43773e",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:b8c0c90ede43e42c",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -1144,13 +1080,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:afdab647cc43773e",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:b8c0c90ede43e42c",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -1159,13 +1095,28 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
         ]
       },
       {
-        "id": "scope-path:84eeaf7a34d55a47",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:b8c0c90ede43e42c",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
+        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
+        "entity_path": [
+          "Process_glycine_leaching_of_spent_LIBs_powder"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:83b7738772f8601c:evidence",
+          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
+        ]
+      },
+      {
+        "id": "scope-path:f415a43453a0b416",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -1174,13 +1125,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:2874a9dc74bd38bc",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:5cfccc8a92a0eaeb",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -1189,13 +1140,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:9db2b39ed8924c9f",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:3c2d60cc5972a640",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -1204,13 +1155,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni"
         ]
       },
       {
-        "id": "scope-path:25a0bed38e8bef7f",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:be074eba91b2d6a6",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -1219,103 +1170,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn"
         ]
       },
       {
-        "id": "scope-path:5f820a253413c5c0",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co_OH_",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co_OH_"
-        ]
-      },
-      {
-        "id": "scope-path:afdab647cc43773e",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
-        ]
-      },
-      {
-        "id": "scope-path:84eeaf7a34d55a47",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li"
-        ]
-      },
-      {
-        "id": "scope-path:2874a9dc74bd38bc",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co"
-        ]
-      },
-      {
-        "id": "scope-path:9db2b39ed8924c9f",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni"
-        ]
-      },
-      {
-        "id": "scope-path:25a0bed38e8bef7f",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn"
-        ]
-      },
-      {
-        "id": "scope-path:e373e63ce900b2f6",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:5e5b44c8943bb7e6",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ca",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -1324,13 +1185,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ca"
         ]
       },
       {
-        "id": "scope-path:a4a6065a04843fd8",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:f212f7a6b39dc814",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Al",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -1339,13 +1200,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Al"
         ]
       },
       {
-        "id": "scope-path:736d27aea492e9ea",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:14926879b2f3dd79",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Fe",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -1354,13 +1215,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Fe"
         ]
       },
       {
-        "id": "scope-path:0af6d94f8f7cccf9",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:d09d81df9ffb466e",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Cu",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -1369,13 +1230,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Cu"
         ]
       },
       {
-        "id": "scope-path:afdab647cc43773e",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
+        "id": "scope-path:b8c0c90ede43e42c",
+        "scope_assertion_id": "scope-assertion:83b7738772f8601c",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
         "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
         "entity_path": [
@@ -1384,68 +1245,8 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder"
-        ]
-      },
-      {
-        "id": "scope-path:84eeaf7a34d55a47",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li"
-        ]
-      },
-      {
-        "id": "scope-path:9db2b39ed8924c9f",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni"
-        ]
-      },
-      {
-        "id": "scope-path:2874a9dc74bd38bc",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co"
-        ]
-      },
-      {
-        "id": "scope-path:25a0bed38e8bef7f",
-        "scope_assertion_id": "scope-assertion:9920811edc716c40",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn",
-        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
-        "entity_path": [
-          "Process_glycine_leaching_of_spent_LIBs_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn"
         ]
       }
     ],
@@ -11367,16 +11168,16 @@
           "Process_glycine_leaching_of_spent_LIBs_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40",
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:83b7738772f8601c",
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:95c679503f243ba3",
-          "scope-path:afdab647cc43773e"
+          "scope-path:a605b8608828159b",
+          "scope-path:b8c0c90ede43e42c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
@@ -11396,13 +11197,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:90798d6052863eec"
+          "scope-path:05f37ddd0f4837c4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Co",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:b540f1215d8d1721",
@@ -11421,13 +11222,13 @@
           "Material_Ni"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:eb0e8661fa240dc1"
+          "scope-path:932045750b8bda1e"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Ni",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:197e63daeacc6c72",
@@ -11446,13 +11247,13 @@
           "Material_Mn"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:ce2054092e47c4e9"
+          "scope-path:19b7f40bd73ecf03"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Mn",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:3f42ab2b43f8914f",
@@ -11471,13 +11272,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:510c12c8c2b226d1"
+          "scope-path:0520799121b00d15"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Li",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:c41e811c197098de",
@@ -11496,13 +11297,13 @@
           "Material_Cu"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:34c12326fa77733c"
+          "scope-path:ce68cb1a6731f216"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Cu",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:0744e6c3cb631e2c",
@@ -11521,13 +11322,13 @@
           "Material_Al"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:bfaded28e845cf66"
+          "scope-path:19f5fa58d6d65e89"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Al",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:cd1f7e954aa84218",
@@ -11546,16 +11347,16 @@
           "Process_glycine_leaching_of_spent_LIBs_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40",
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:83b7738772f8601c",
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:95c679503f243ba3",
-          "scope-path:afdab647cc43773e"
+          "scope-path:a605b8608828159b",
+          "scope-path:b8c0c90ede43e42c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
@@ -11575,16 +11376,16 @@
           "Process_glycine_leaching_of_spent_LIBs_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40",
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:83b7738772f8601c",
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:95c679503f243ba3",
-          "scope-path:afdab647cc43773e"
+          "scope-path:a605b8608828159b",
+          "scope-path:b8c0c90ede43e42c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
@@ -11604,13 +11405,13 @@
           "Material_Cu"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:34c12326fa77733c"
+          "scope-path:ce68cb1a6731f216"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Cu",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:a6654fa06f283e1f",
@@ -11629,13 +11430,13 @@
           "Material_Al"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:bfaded28e845cf66"
+          "scope-path:19f5fa58d6d65e89"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Al",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:ea82357920d04348",
@@ -11654,16 +11455,16 @@
           "Process_glycine_leaching_of_spent_LIBs_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40",
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:83b7738772f8601c",
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:95c679503f243ba3",
-          "scope-path:afdab647cc43773e"
+          "scope-path:a605b8608828159b",
+          "scope-path:b8c0c90ede43e42c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
@@ -11683,13 +11484,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
+          "scope-assertion:83b7738772f8601c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:84eeaf7a34d55a47"
+          "scope-path:f415a43453a0b416"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:a2a9066e500e9441",
@@ -11708,16 +11509,16 @@
           "Process_glycine_leaching_of_spent_LIBs_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40",
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:83b7738772f8601c",
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:95c679503f243ba3",
-          "scope-path:afdab647cc43773e"
+          "scope-path:a605b8608828159b",
+          "scope-path:b8c0c90ede43e42c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
@@ -11737,13 +11538,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
+          "scope-assertion:83b7738772f8601c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:84eeaf7a34d55a47"
+          "scope-path:f415a43453a0b416"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:3a3a763ef32c1fac",
@@ -11762,13 +11563,13 @@
           "Material_Ni"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
+          "scope-assertion:83b7738772f8601c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:9db2b39ed8924c9f"
+          "scope-path:3c2d60cc5972a640"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:b52ab4407b6c0e3e",
@@ -11787,13 +11588,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
+          "scope-assertion:83b7738772f8601c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:2874a9dc74bd38bc"
+          "scope-path:5cfccc8a92a0eaeb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:f8ae31c3e1127f1d",
@@ -11812,13 +11613,13 @@
           "Material_Mn"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
+          "scope-assertion:83b7738772f8601c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:25a0bed38e8bef7f"
+          "scope-path:be074eba91b2d6a6"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:e29d1635ee1d85d8",
@@ -11837,16 +11638,16 @@
           "Process_glycine_leaching_of_spent_LIBs_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40",
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:83b7738772f8601c",
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:95c679503f243ba3",
-          "scope-path:afdab647cc43773e"
+          "scope-path:a605b8608828159b",
+          "scope-path:b8c0c90ede43e42c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
@@ -11866,16 +11667,16 @@
           "Process_glycine_leaching_of_spent_LIBs_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40",
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:83b7738772f8601c",
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:95c679503f243ba3",
-          "scope-path:afdab647cc43773e"
+          "scope-path:a605b8608828159b",
+          "scope-path:b8c0c90ede43e42c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
@@ -11895,16 +11696,16 @@
           "Process_glycine_leaching_of_spent_LIBs_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40",
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:83b7738772f8601c",
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:95c679503f243ba3",
-          "scope-path:afdab647cc43773e"
+          "scope-path:a605b8608828159b",
+          "scope-path:b8c0c90ede43e42c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
@@ -11924,13 +11725,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
+          "scope-assertion:83b7738772f8601c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:84eeaf7a34d55a47"
+          "scope-path:f415a43453a0b416"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:3cab08409fe246c1",
@@ -11949,13 +11750,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
+          "scope-assertion:83b7738772f8601c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:2874a9dc74bd38bc"
+          "scope-path:5cfccc8a92a0eaeb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:86ae62b4bce71a56",
@@ -11974,13 +11775,13 @@
           "Material_Ni"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
+          "scope-assertion:83b7738772f8601c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:9db2b39ed8924c9f"
+          "scope-path:3c2d60cc5972a640"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:74bd7ea3acfc2fde",
@@ -11999,13 +11800,13 @@
           "Material_Mn"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
+          "scope-assertion:83b7738772f8601c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:25a0bed38e8bef7f"
+          "scope-path:be074eba91b2d6a6"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:3d9a9e836eb1eada",
@@ -12024,13 +11825,13 @@
           "Material_Ca"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
+          "scope-assertion:83b7738772f8601c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e373e63ce900b2f6"
+          "scope-path:5e5b44c8943bb7e6"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ca",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:fd30c4d7874d4548",
@@ -12049,13 +11850,13 @@
           "Material_Al"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
+          "scope-assertion:83b7738772f8601c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:a4a6065a04843fd8"
+          "scope-path:f212f7a6b39dc814"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Al",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:25f1ce4e5c720232",
@@ -12074,13 +11875,13 @@
           "Material_Fe"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
+          "scope-assertion:83b7738772f8601c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:736d27aea492e9ea"
+          "scope-path:14926879b2f3dd79"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Fe",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:370fe1664b815dbb",
@@ -12099,13 +11900,13 @@
           "Material_Cu"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
+          "scope-assertion:83b7738772f8601c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:0af6d94f8f7cccf9"
+          "scope-path:d09d81df9ffb466e"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Cu",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:3f6c27485397149b",
@@ -12124,13 +11925,13 @@
           "Material_MnCO"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:15f972b8c6fd7d82"
+          "scope-path:6f81b7d66a3cf515"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_MnCO",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:f8d24b03ef073645",
@@ -12149,16 +11950,16 @@
           "Process_glycine_leaching_of_spent_LIBs_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40",
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:83b7738772f8601c",
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:95c679503f243ba3",
-          "scope-path:afdab647cc43773e"
+          "scope-path:a605b8608828159b",
+          "scope-path:b8c0c90ede43e42c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:83b7738772f8601c:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_glycine_leaching_of_spent_LIBs_powder",
@@ -12167,124 +11968,24 @@
         ]
       },
       {
-        "id": "local-unit:dd632b431e43684a",
-        "micrograph_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
-        "statement_id": "statement:6252829aee8d26fb",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 31,
-        "entity_ids": [
-          "Process_glycine_leaching_of_spent_LIBs_powder",
-          "Material_Li"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:84eeaf7a34d55a47"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Li",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:6252829aee8d26fb",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:6252829aee8d26fb:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:d4776a541633faaa",
-        "micrograph_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
-        "statement_id": "statement:a9b4534493e67e53",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni",
-        "source_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni",
-        "source_relation_index": 32,
-        "entity_ids": [
-          "Process_glycine_leaching_of_spent_LIBs_powder",
-          "Material_Ni"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:9db2b39ed8924c9f"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Ni",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:a9b4534493e67e53",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:a9b4534493e67e53:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:0a29ddf489cf14ee",
-        "micrograph_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
-        "statement_id": "statement:63ce8d49c533b5d1",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co",
-        "source_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 33,
-        "entity_ids": [
-          "Process_glycine_leaching_of_spent_LIBs_powder",
-          "Material_Co"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:2874a9dc74bd38bc"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Co",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:63ce8d49c533b5d1",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:63ce8d49c533b5d1:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:0c411e2097940d93",
-        "micrograph_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
-        "statement_id": "statement:c4bf141f4d62452b",
-        "statement_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn",
-        "source_relation_id": "REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn",
-        "source_relation_index": 34,
-        "entity_ids": [
-          "Process_glycine_leaching_of_spent_LIBs_powder",
-          "Material_Mn"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:9920811edc716c40"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:25a0bed38e8bef7f"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:9920811edc716c40:evidence",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Process_glycine_leaching_of_spent_LIBs_powder:entity",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Process_glycine_leaching_of_spent_LIBs_powder_HAS_OUTPUT_Material_Mn",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:c4bf141f4d62452b",
-          "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:c4bf141f4d62452b:evidence"
-        ]
-      },
-      {
         "id": "local-unit:1887a178c33cd4f0",
         "micrograph_id": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
         "statement_id": "statement:3dde02086b710349",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Li",
         "source_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Li",
-        "source_relation_index": 35,
+        "source_relation_index": 31,
         "entity_ids": [
           "Product_lithium_ion_battery",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:510c12c8c2b226d1"
+          "scope-path:0520799121b00d15"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Li",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:3dde02086b710349",
@@ -12297,19 +11998,19 @@
         "statement_id": "statement:44aaf735255bf028",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Ni",
         "source_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Ni",
-        "source_relation_index": 36,
+        "source_relation_index": 32,
         "entity_ids": [
           "Product_lithium_ion_battery",
           "Material_Ni"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:eb0e8661fa240dc1"
+          "scope-path:932045750b8bda1e"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Ni",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:44aaf735255bf028",
@@ -12322,19 +12023,19 @@
         "statement_id": "statement:c4458d327c84e027",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Co",
         "source_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Co",
-        "source_relation_index": 37,
+        "source_relation_index": 33,
         "entity_ids": [
           "Product_lithium_ion_battery",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:90798d6052863eec"
+          "scope-path:05f37ddd0f4837c4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Co",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:c4458d327c84e027",
@@ -12347,19 +12048,19 @@
         "statement_id": "statement:58a7177e48bc56f2",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Mn",
         "source_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Mn",
-        "source_relation_index": 38,
+        "source_relation_index": 34,
         "entity_ids": [
           "Product_lithium_ion_battery",
           "Material_Mn"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:ce2054092e47c4e9"
+          "scope-path:19b7f40bd73ecf03"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Mn",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:58a7177e48bc56f2",
@@ -12372,19 +12073,19 @@
         "statement_id": "statement:f0deee169b68be9b",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Al",
         "source_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Al",
-        "source_relation_index": 39,
+        "source_relation_index": 35,
         "entity_ids": [
           "Product_lithium_ion_battery",
           "Material_Al"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:bfaded28e845cf66"
+          "scope-path:19f5fa58d6d65e89"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Al",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:f0deee169b68be9b",
@@ -12397,19 +12098,19 @@
         "statement_id": "statement:01f1611951e80422",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Fe",
         "source_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Fe",
-        "source_relation_index": 40,
+        "source_relation_index": 36,
         "entity_ids": [
           "Product_lithium_ion_battery",
           "Material_Fe"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:b08b966c2b217f38"
+          "scope-path:14d147a100567d8d"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Fe",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:01f1611951e80422",
@@ -12422,19 +12123,19 @@
         "statement_id": "statement:c3f05ae7e4c8e44d",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Cu",
         "source_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Cu",
-        "source_relation_index": 41,
+        "source_relation_index": 37,
         "entity_ids": [
           "Product_lithium_ion_battery",
           "Material_Cu"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:34c12326fa77733c"
+          "scope-path:ce68cb1a6731f216"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Cu",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:c3f05ae7e4c8e44d",
@@ -12447,19 +12148,19 @@
         "statement_id": "statement:db0449624677bd1f",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Ca",
         "source_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Ca",
-        "source_relation_index": 42,
+        "source_relation_index": 38,
         "entity_ids": [
           "Product_lithium_ion_battery",
           "Material_Ca"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:afe7ea82acc10171"
+          "scope-assertion:8e7a6a2a45a217a5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:438dc2352403c991"
+          "scope-path:64873699f625308a"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:afe7ea82acc10171:evidence",
+          "scope:scope-assertion:8e7a6a2a45a217a5:evidence",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:Product_lithium_ion_battery:entity",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Ca",
           "source:Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System:relation:statement:db0449624677bd1f",
@@ -21131,6 +20832,7 @@
       "measurement_evidence_records": 4,
       "receipt": "measurement_semantics_revision.json",
       "original_stages_preserved": true
-    }
+    },
+    "scope_unscoped_candidates": []
   }
 }

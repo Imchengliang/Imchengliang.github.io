@@ -1,0 +1,189 @@
+Annotate study scope for the supplied final graph candidates using the source
+passages. Candidate names, aliases and context summaries help identify objects;
+they are not source evidence. Copy candidate IDs and passage IDs exactly.
+
+1. For each Product/Component candidate that represents this study's sampled
+   device, component or population, return one population scope. Use `instance`
+   for an individually identified model/sample and `batch` for an unspecified
+   population. Summarize only sample facts stated by this paper (source, brand,
+   collection, selection, etc.). Distinguish the initial sample from processed
+   fractions, residues, reagents, characterization media and table aggregates.
+   A shared sample declaration can support multiple named models. Do not invent
+   missing provenance. A root in graph topology is only a candidate, not proof
+   that it is an independently sampled population.
+2. For each Process candidate, return its broad parent method as `method_family`.
+   Use a short method noun phrase, without parenthetical alternatives or settings.
+   It can be a semantic generalization, not a verbatim substring of the name.
+   Cite an actual passage describing that method or its application. A sample
+   origin, culture adaptation or measurement sentence alone does not establish
+   a treatment method. Shared procedures may support multiple treatment arms;
+   do not replace a control with another arm's method.
+3. Use section and surrounding context to distinguish this study from cited
+   work and background. Choose the evidence yourself; no passage is preverified
+   as current-study evidence. Context summaries never qualify as quotations.
+4. Every candidate must have a scope or an `unscoped_candidates` entry explaining
+   why it is not a study subject or lacks sufficient source evidence. Do not
+   force a scope just to meet coverage. Cite relevant evidence for exclusions
+   when available. Never silently omit a candidate.
+5. Each scope needs exact source quotations in `evidence`. Put the quotation
+   most directly supporting its scope first, then any additional support for
+   summary details. Keep sample-origin and method evidence distinct. Return
+   one scope per selected candidate and JSON only:
+{
+  "population_scopes": [{
+    "root_entity_id": "component_id", "granularity": "batch",
+    "sample_type": "lithium-ion battery",
+    "scope_summary": "Study batteries supplied by the company named in the source.",
+    "evidence": [{"evidence_id": "E1", "quote": "Exact sample-source quotation."}]
+  }],
+  "process_scopes": [{
+    "root_entity_id": "process_id", "method_family": "acid leaching",
+    "evidence": [{"evidence_id": "E2", "quote": "Exact method quotation."}]
+  }],
+  "unscoped_candidates": [{
+    "root_entity_id": "other_id", "reason": "Why a study scope cannot be assigned.",
+    "evidence": [{"evidence_id": "E3", "quote": "Relevant source quotation."}]
+  }]
+}
+
+## Product/Component candidates
+- Component_lithium_ion_battery | Component | lithium-ion battery
+  Aliases: spent lithium-ion batteries; lithium-ion batteries; lithium-ion battery; LIB; LIBs; Li-ion battery; Li-ion batteries; Li ion battery; Li ion batteries; lithium ion battery; lithium ion batteries; spent battery samples
+
+## Process candidates
+- Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion | Process | A. ferrooxidans bioleaching with 0.01 g/L copper ion
+  Aliases: A. ferrooxidans bioleaching with 0.01 g/L copper ion
+  Context summary (not evidence): Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.01 g/L copper ion; Co concentration determined over 10 days.
+- Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion | Process | A. ferrooxidans bioleaching with 0.1 g/L copper ion
+  Aliases: A. ferrooxidans bioleaching with 0.1 g/L copper ion
+  Context summary (not evidence): Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.1 g/L copper ion; Co concentration determined over 10 days.
+- Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion | Process | A. ferrooxidans bioleaching with 0.25 g/L copper ion
+  Aliases: A. ferrooxidans bioleaching with 0.25 g/L copper ion
+  Context summary (not evidence): Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.25 g/L copper ion; Co concentration determined over 10 days.
+- Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion | Process | A. ferrooxidans bioleaching with 0.50 g/L copper ion
+  Aliases: A. ferrooxidans bioleaching with 0.50 g/L copper ion
+  Context summary (not evidence): Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.50 g/L copper ion; Co concentration determined over 10 days.
+- Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion | Process | A. ferrooxidans bioleaching with 0.75 g/L copper ion
+  Aliases: A. ferrooxidans bioleaching with 0.75 g/L copper ion
+  Context summary (not evidence): Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.75 g/L copper ion; Co concentration determined over 10 days.
+- Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion | Process | A. ferrooxidans bioleaching with 1.0 g/L copper ion
+  Aliases: A. ferrooxidans bioleaching with 1.0 g/L copper ion
+  Context summary (not evidence): Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 1.0 g/L copper ion; Co concentration determined over 10 days.
+- Process_A__ferrooxidans_bioleaching_without_copper_ion__control_ | Process | A. ferrooxidans bioleaching without copper ion (control)
+  Aliases: A. ferrooxidans bioleaching without copper ion (control); controlled experiment without copper ion
+  Context summary (not evidence): Controlled bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days without added copper ion; Co concentration determined over 10 days.
+- Process_reviewed_5a8f38ab000de8 | Process | A. ferrooxidans bioleaching with 10 g/L copper ion
+  Aliases: A. ferrooxidans bioleaching with 10 g/L copper ion
+  Context summary (not evidence): The dissolution percentages of cobalt catalyzed under different Cu ^2+ concentrations are shown in Fig. 3, which show that copper ion has an important catalytic effect on the dissolution rate and cobalt dissolution percentage. The best catalytic effect was obtained using 0.75 g copper/L at 6 days, cobalt dissolution percentage increased from 43.1% in the absence of copper ions to 99.9% at the copper concentration of 0.75 g / L, and the corresponding Co concentration was 4.8 g/L. However, when the copper ions concentrations were 0.01, 0.1 and 10 g/L, cobalt dissolution percentages were 46.0%, 86.4% and 32.7%, respectively. It shows that additional amounts of Cu ^2+ increased the percentage of leached cobalt, which is in agreement with the previous study. Ballester et al. [18] reported that the microbiological dissolution ofthe sphalerite improves considerably when using Ag ^+ and Cu ^2+ a
+
+## Source passages
+[Ec72ff9f697] section=A copper-catalyzed bioleaching process for enhancement of cobalt dissolution from spent lithium-ion batteries
+Guisheng Zenga,b,∗, Xiaorong Denga,c, Shenglian Luoa,b,c,∗, Xubiao Luoa,c, Jianping Zoua,c
+
+[Ed8517d84ce] section=ABSTRACT
+A copper-catalyzed bioleaching process was developed to recycle cobalt from spent lithium-ion batteries (mainly LiCoO ) in this paper. The influence of copper ions on bioleaching of LiCoO by Acidithiobacillus ferrooxidans (A.f) was investigated. It was shown that almost all cobalt (99.9%) went into solution after being bioleached for 6 days in the presence of 0.75 g/L copper ions, while only 43.1% of cobalt dissolution was obtained after 10 days without copper ions. EDX, XRD and SEM analyses additionally confirmed that the cobalt dissolution from spent lithium-ion batteries could be improved in the presence ofcopper ions. The catalytic mechanism was investigated to explain the enhancement of cobalt dissolution by copper ions, in which LiCoO underwent a cationic interchange reaction with copper ions to form CuCo O on the surface of the sample, which could be easily dissolved by Fe3+.
+
+[E59b1fe8da1] section=ABSTRACT
+© 2011 Elsevier B.V. All rights reserved.
+
+[Efed671d43b] section=1. Introduction
+The usage of lithium-ion batteries (LIBs) has rapidly increased as they are widely used as electrochemical power sources in mobile telephones, personal computers, video cameras and other modernlife appliances [1]. However, the spent LIBs contain many metal values such as nickel, cobalt, and lithium, which may also have a potential hazard to the ecosystem and human health [2–4]. Recycling of the major components of spent cells appears to be a beneficial way to prevent environmental pollution and raw material consumption. In addition, it meets the new legal requirements [5,6]. Therefore, the development of recycling technologies for spent LIBs has attracted great attention.
+
+[Ead89a0b8f0] section=1. Introduction
+Although many methods have been used to recycle the spent LIBs, there is no efficient recycling method as yet [7]. Bioleaching is a mineral bio-oxidation process assisted by microorganisms, during which insoluble metal sulfides are converted into watersoluble metal sulfates. Bioleaching technique shows competitive advantages owing to environment friendly and low cost process. However, due to its slow kinetics, the commercial application of bioleaching in metal extraction is limited relatively [8,9]. Therefore, different methods, such as improvement of bacteria culture, accession of metal ions, and addition of surfactants, have been carried out in order to enhance the bioleaching rate [10–13].
+
+[E83a9f687f6] section=1. Introduction
+Recently, it has been observed that metal dissolution rate in bioleaching process can be improved by using catalytic ions in the solution [14–16], which shows great significance for optimizing the bioleaching processes [17,18]. Although the bioleaching process using catalysts has been indicated to be an effective technology for metals dissolution from minerals, high cost metals such as Ag, Bi, Ru and Hg were normally used [19,20]. Thus, it is very important to find a cheaper effective metal catalyst applied in bioleaching process for industrial application.
+
+[E1453637e90] section=1. Introduction
+Bioleaching process using Cu ^2+ catalyst was firstly carried out by Scott and Dyson [21], who applied some metal ions, such as Cu, Bi, Ru, Mo and Fe, as catalysts to accelerate the dissolution rate of zinc sulfide. They found that copper ions made the best effects. Dutrizac [22] investigated the leaching effect by applying cupric chloride on sintered chalcopyrite in ferric chloride solution and found that CuC1 could substantially accelerate the leaching rate. Furthermore, it was shown that the percentage of metal leached was enhanced with additional amounts of metal catalyst [23]. The main feature of the copper-catalyzed mechanism for the dissolution ofsynthetic magnetite is the electron transfer between Cu+ and a surface Fe3+ species. The electron transfer process is proposed to proceed through an inner sphere mechanism, in which the surface hydroxyl ligand functions as a bridging ligand between the surface Fe and the Cu reductant species [24]. However, the role of metal catalysts in the chalcopyrite bioleaching has been attributed to the formation of a metal sulfide on the chalcopyrite surface, which dissolves the original sulfide material by galvanic reaction [25–27].
+
+[Ef14bf8175d] section=1. Introduction
+[TABLE:TABLE_A Copper-Catalyzed Bioleaching Process for Enhancement of Cobalt Dissolution from Spent Lithium-Ion Batteries_0001]
+
+[Ec87df1e5c2] section=1. Introduction
+Meanwhile, it has been reported that the catalytic mechanism of Cu ^2+ is due to the formation of CuS on the surface of realgar, which was then dissolved by Fe^3+ [ 28 ].. Chen et al. [29] reported a positive effect ofmarmatite bioleaching in the presence ofcopper ions. Iron sulfide, elemental sulfur and jarosite are formed on the mineral surface during bioleaching which become barrier for bioleaching of marmatite, and the copper ions catalyze the bio-oxidation of elemental sulfur and thus eliminate the barrier to bioleaching.
+
+[E6fed8ca11c] section=1. Introduction
+Copper ion was found to efficiently catalyze the bioleaching of metal sulfides. However, the spent LiCoO2 is a kind of metal oxide different from metal sulfides, consequently, the catalytic mechanism of the LiCoO2 may differ from that of metal sulfides [30–32]. Besides, it is still lack ofstudies on the bioleaching process ofLiCoO catalyzed by catalytic ions, and for the first time copper ion was applied for bioleaching of LiCoO2 from spent batteries.
+
+[E41ed00b46e] section=1. Introduction
+The main objective of this paper is to investigate the catalytic effect of copper ions on the dissolution of LiCoO2,, and to propose a mechanism to account for the catalytic effect. These results are helpful to improve the recovery of Co from spent lithium-ion batteries and to find an appropriate method to solve the problem of low efficiency.
+
+[Ebae61844a0] section=2.1. Materials
+The spent lithium-ion batteries used in the experiments were provided by Youteli Co. Ltd. in Jiangxi Province of China, which were manually separated into many portions: plastic shell, cathode material, anode material and aluminum foil. Then the cathode material was grinded into powder and sieved to 0.075 mm, oversize material was pulverized and added to the undersize fraction. EDX analysis ofthe powder was carried out, and chemical compositions were shown in Table 1.
+
+[E63ab3581be] section=2.2. Microorganisms and culture
+Acidithiobacillus ferrooxidans (A.f) were applied in the experiments. The original bacteria were collected and isolated from the acidic mine drainage taken from Dexing Mine, Jiangxi Province, China. The bacteria were cultured in the 9 K medium (g/L): (NH4)2 SO4 3.0, K Cl0.1, K2HPO4 0.5, MgSO4 7 H2 O0.5, Ca (NO3)2 0.01 and FeSO4 7 H2O 44.8. The medium was adjusted to pH value 2.0 by sulfuric acid (3 mol L ^-1). Erlenmneyer flasks of 250 mL were used, containing 200 mL culture medium, and inoculum were 10% (v/v), and flasks were shaken at 160 rpm on an orbital shaker at 35 ^∘𝖢. The only energy source for bacteria growth was FeSO4,, and the isolates were identified as A. ferrooxidans. Before the bioleaching period of the experiment, these bacteria had been sub-cultured in medium containing 1% spent battery samples at 35 ^∘𝖢 for three months, so that they could adapt to the spent lithium-ion batteries circumstance faster. These cultures were also adapted to the catalytic ions of copper ion 10 g/L for a month.
+
+[E868aecd7d4] section=2.3. Bioleaching procedure
+The bioleaching experiments were carried out in a constanttemperature shaker at 160 rpm using 250 mL Erlenmeyer flasks at
+
+[E212ec7a9a6] section=2.3. Bioleaching procedure
+35 ^∘𝖢. In each bioleaching experiment, the pulp density was kept at 1% (s/v) in 250 mL flasks with 200 mL medium while the volume fraction of inoculation was 5% (v / v).. When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively. A controlled experiment was performed in parallel without copper ion for comparison. All experiments were carried out for 10 days. During the bioleaching experiment, 1 mL of solution was sampled every 24 h, the solution filtered through a 0.45 -m membrane was used for Co and Cu concentrations determination. By the end of the experiment, leaching solution were also filtered through a 0.45 -m membrane, and the residues dried in vacuum dry oven at 35 ^∘C for _ X - r a y diffraction (XRD), energy spectrum analysis (EDX) and scanning electron microscopy (SEM) analyses, the solution after separation were used for pH and redox potential determination.
+
+[Ee1e78e3147] section=2.4. Measurement and analysis
+The bacteria in solution were counted by direct counting, using a counting chamber (Neubauer) with phase contrast microscope (LEICA DMI 3000B). The concentration ofdissolved C0 ^2+ in solution was analyzed by atomic absorption spectroscopy (Varian AA-400). The solid residues were air dried and samples were taken for Xray diffraction (D8ADVANCE), energy spectrum analysis (INCA) and scanning electron microscopy (SEM, Quanta 200) analyses. The pH value and redox potential were measured at room temperature with a pH meter (PHSJ-3F) and a Pt electrode with reference to an Ag/AgCl electrode, respectively.
+
+[E49b89a3e9a] section=3.1. Variations ofpH and redox potential
+Variations ofpH during the bioleaching at different Cu ^2+ concentrations are shown in Fig. 1(a). A maximum pH value was obtained at the Cu ^2+ concentration of 0.75 g/L. However, with more copper addition of 1.0 g/L and 10 g/L, the pH value was decreased because high Cu ^2+ concentrations have toxic effect on the bacteria growth and activity. On the other hand, the pH increased apparently and showed similar behavior when copper ion was added, which could be attributed to the catalytic effect of copper ions, because the Li ρ̅ _ o O _ 2 was dissolved by the reaction (Eq. (1)), and the presence of copper ions accelerated the reaction rate, resulting in the increase of pH.
+
+[E31dbf97ea9] section=3.1. Variations ofpH and redox potential
+4 LiCoO2 + 12 H ^+ →4 Li ^+ + 4 Co ^2+ + 6 H2O + O2 ↑ (Eq. 1)
+
+[Ee3313e9b0f] section=3.1. Variations ofpH and redox potential
+Initially, all of the pH curves were observed to have the trends of declining, which could be attributed to the bacteria growth that ferrous iron was oxidized to ferric iron. Since the ferric iron increased, the hydrolysis of ferric iron was also enhanced. Meanwhile, the quantity of acid production was much more than acid consumption, this resulted in the pH decreased. After four days, the pH in the solution is in rising trends, which could be contributed to the acid consumption was much more than the acid production, and finally, the acid was reduced and pH was increased.
+
+[Eb87034e06b] section=3.1. Variations ofpH and redox potential
+As the experiments continue, the pH in the leaching solution was decreased when the copper addition were 0.25, 0.50, 0.75 and 1.0 g/L, which indicated that almost all of the LiCoO in the solution has been dissolved, so the acid in solution would not be consumed. Thus, the pH value decreased. However, the pH in solution showed inconspicuous changes when the copper ions were 0.01, 0.1 and 10 g/L, which indicated that the LiCoO2 in the leaching solution has not been entirely dissolved.
+
+[E0d9908ba90] section=3.1. Variations ofpH and redox potential
+Variations of redox potential during the bioleaching at different Cu ^2+ concentrations are shown in Fig. 1(b). Big difference was clearly observed in the presence and absence of copper ions, the redox potential in solution decreased quickly when copper ions were added into the bioleaching processes, and a minimum redox potential was achieved at 327 mV when Cu ^2+ concentration was 0.75 g/L. However, when the addition of Cu ^2+ concentrations were 0 g/L and 0.01 g/L, the corresponding redox potential were 578 mV and 560 mV, respectively. The redox potential in the solution represents the concentration ratio of the couple Fe ^3+ / Fe ^2+, which was affected by the presence of copper ions. When copper ions were added into the bioleaching solution, the ferric iron concentration was decreased accordingly, so that the redox potential in solution decreased, which indicated that the addition of copper ions accelerate reduction rate of ferric ion.
+
+[Ec62ee345f4] section=3.1. Variations ofpH and redox potential
+Variations of pH and redox potential after the removing of the sediment at different Cu^2+ concentrations are shown in Fig. 2. The pH curves (Fig. 2(a)) and redox potential (Fig. 2(b)) show similar trends, both of the pH and redox potential changed greatly on the first day, and the balance was almost achieved from the second day to the end of the experiments. On the other hand, bacteria growth still existed in the processes after separation, and there were no remarkable differences of the pH and redox potential in the presence and absence of copper ions. So it can be concluded that the addition of copper will not change the balance of bacteria growth, but only accelerate the balance rates.
+
+[E15252d30cc] section=3.2. Cobalt dissolution
+The dissolution percentages of cobalt catalyzed under different Cu ^2+ concentrations are shown in Fig. 3, which show that copper ion has an important catalytic effect on the dissolution rate and cobalt dissolution percentage. The best catalytic effect was obtained using 0.75 g copper/L at 6 days, cobalt dissolution percentage increased from 43.1% in the absence of copper ions to 99.9% at the copper concentration of 0.75 g / L, and the corresponding Co concentration was 4.8 g/L. However, when the copper ions concentrations were 0.01, 0.1 and 10 g/L, cobalt dissolution percentages were 46.0%, 86.4% and 32.7%, respectively. It shows that additional amounts of Cu ^2+ increased the percentage of leached cobalt, which is in agreement with the previous study. Ballester et al. [18] reported that the microbiological dissolution ofthe sphalerite improves considerably when using Ag ^+ and Cu ^2+ as catalysts, with zinc dissolution of 90%. Furthermore, it showed that additional amounts of Cu ^2+ increased the percentage of metal leached.
+
+[E7f94d8a7ba] section=3.2. Cobalt dissolution
+For the bioleaching process, the pH is expected to be decreased and the redox potential is expected to be increased to achieve higher metal solubilization [33–35]. However, according to Fig. 1(a), when the metal solubilization was higher, the pH was also in a relative higher level. It is just due to the addition of copper ions catalyzed the LiCoO2 dissolution rates and increased acid consumption, this resulted the pH in a relative higher level, or not due to the higher pH increased the metal solubilization. Similarly, the redox potential was in lower level according to Fig. 1(b), because the addition of copper ions accelerated the hydrolysis of Fe ^3+, this maintained the redox potential in a relative lower level.
+
+[E5b7c45a159] section=3.2. Cobalt dissolution
+EDX analyses was further used for determining the surplus quantity of LiCoO2 in the residues, the contents of. C0,. Fe, O, S and Cu are shown in Table 2. When the Cu ^2+ concentration was 0.75 g/L, the percentage of Co in the residues was only 0.09%, it indicated that almost all of the LiCoO2 were dissolved in the solution, which was accorded with the high cobalt dissolution percentage (Fig. 3). On the other hand, great differences of Co contents were observed in the residues, the content of Co was lowest when the copper ion concentration was 0.75 g / L,, it indicates that the copper ions not only catalyzed the leaching efficiencies of LiCoO2, but also resulted in more cobalt dissolution from spent lithium-ion batteries. The Cu ^2+ concentrations in the overall processes were determined, and Cu ^2+ concentrations in the solution were almost kept at the initial concentrations. Besides, copper was not detected in the residues.
+
+[E03157b1064] section=3.2. Cobalt dissolution
+[TABLE:TABLE_A Copper-Catalyzed Bioleaching Process for Enhancement of Cobalt Dissolution from Spent Lithium-Ion Batteries_0002]
+
+[Ed0e9aa6d85] section=3.2. Cobalt dissolution
+These results indicated that copper existed in the leaching solution and did not precipitate in the residues.
+
+[E02f2567257] section=3.2. Cobalt dissolution
+SEM was used to characterize the particle size and morphology changes of LiCoO2 (Fig. 4). Clear differences of the residues morphologies in the presence of different copper ion concentrations were observed. When the experiment was performed in the absence of copper ion (Fig. 4(a)) and with copper concentration of 0.001 g/L, residues surface were coated with a solid product layer, a relative larger particle size of the residues was observed. However, when the experiment was performed at Cu ^2+ concentration of 0.75 g / L, a extreme exiguous particle was observed in Fig. 4(c). Associated with the EDX analysis results that little Co contents in the presence of Cu ^2+ concentration of 0.75 g / L, and also the XRD results (Fig. 5) show that only jarosite was existed in the residues. So the observed particles were jarosite, and almost no LiCoO2 particles remained. These results are also in good agreement with the dissolution percentage curves.
+
+[Ea38e2c2ca6] section=3.2. Cobalt dissolution
+According to these results, it can be deduced that the catalytic effect of copper ions on the LiCoO2 bioleaching is obviously, and the reason for greatest efficiency achieved in 0.75 g copper/L concentrate lies in the lower level ofjarosite precipitation in solution, since the bacteria were not hindered from attacking the LiCoO2
+
+[E462826f066] section=3.3. Bacteria growth
+The bacterial growth at different copper ion concentrations during the bioleaching process is shown in Fig. 6. When the copper concentration was less than 0.75 g/L, the addition of copper ions in the bioleaching process caused a slight enhancement in bacterial growth. However, when the copper ions were greater than 0.75 g/L, the bacteria was inhibited owing to the toxic effect on the bacteria growth. When the copper ion was 10 g/L, there were also some bacteria in the solution. It can be concluded the growth were not totally inhibited at high copper concentration. On the other hand, the bacteria were firstly counted at the initial of log phase, so an obvious growth was observed on the first day. Later, a sharp decrease ofthe bacterial was shown in the curves since the bacteria were in stationary phase. Compared with the results of cobalt dissolution in Fig. 3, a conclusion can be drawn to explain the relationship between bacteria number and leaching efficiency, the more bacteria, the higher leaching efficiency. These results were in good agreement with the work reported by Chen and Lin [32], who also found the bacterial growth ofA.ferrooxidans and Acidithiobacillus thiooxidans were enhanced by the addition of30 mg/L silver in the batch bioleaching experiment, and the leaching efficiency was also improved.
+
+[Ef79c4111eb] section=3.4. Catalytic mechanism
+When the copper ion was added into the bioleaching process, EDX analyses shows that Fe, K, S and O were contained in the residues, while copper was not detected in the residues (Fig. 7), which indicated that the copper ion did not precipitate in the residues and it supposed to exist in the solution. Thus, it is difficult to confirm its existing form, and it may exist as CuCo2O4. Similar work has been proposed, Chen et al. [29] indicated that Cu ^2+ had catalytic effect on the bioleaching of marmatite, the catalytic mechanism was intermediate products CuS accelerated the process. Many researchers reported that Ag2S is formed on the particle surface when the silver ion was added in the bioleaching process, and then dissolution rates were enhanced [32,36,37]. Thus, the possible catalytic mechanisms are proposed in Eqs. (2)–(4):
+
+[Eebe187ad4e] section=3.4. Catalytic mechanism
+Cu ^2+ + 2 LiCoO2 →CuCo2 O4 + 2 Li ^+ (Eq. 2)
+
+[Ebe8558aeda] section=3.4. Catalytic mechanism
+CuCo2O4 + 6 Fe ^3+ →6 Fe ^2+ + Cu ^2+ + 2 O2 + 2 Co ^2+
+
+[Edb26ed92fa] section=3.4. Catalytic mechanism
+4 Fe ^2+ + O2 + 4 H ^+ 4 Fe ^3+ + 2 H2O (Eq. 3)
+
+[E83d1bcd0c9] section=3.4. Catalytic mechanism
+(4)
+
+[E0c5a40ab53] section=3.4. Catalytic mechanism
+The main requirement for metal ion to exhibit catalytic activity appears to be the formation of such intermediate products (CuCo2O4), which are oxidized by leaching solution so that catalytic ion is reproduced. Firstly, CuCo2O4 is formed on the particle surface when the copper ion was added in the bioleaching process (Eq. (2)). Based on the reaction, Cu ^2+ is regenerated through the oxidation of CuCo2O4 by ferric iron (Eq. (3)). Subsequently, ferric ion is produced from the ferrous ions according to Eq. (4). These results indicated that CuCo2O4 has high performance on catalyze aspect, and also has ability to catalyze hydrolysis of ferric iron, and then enhance the acid production. Consequently, the dissolution rate of LiCoO2 is accelerated.
+
+[Efd64c75a0e] section=4. Conclusions
+Bioleaching of Co from spent lithium-ion batteries was studied using low cost copper ions as catalyst for the first time. Cobalt dissolution percentage was increased from 43.1% in the absence of copper ion within 10 days to 99.9% at copper concentration of 0.75 g/L after 6 days, indicating that the copper ions could enhance not only the oxidation rate of LiCoO2, but also the leaching amount of cobalt from spent lithium-ion batteries. A probable catalytic mechanism was proposed to explain the catalytic effect of copper ions on bioleaching ofCo from spent lithium-ion batteries. Thus, the primary leaching efficiency problem of Co recovery from lithium ion batteries was solved by applying a low cost copper ions as catalysis, which is very important for recycling ofspent lithium-ion batteries.

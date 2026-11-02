@@ -6,18 +6,18 @@
     "scope_subject_text": "lithium-ion battery",
     "scope_label": "lithium-ion battery",
     "evidence_ids": [
-      "E8d64cfde87",
-      "E02265d958c",
-      "E2e82484cab",
-      "E39d7d31fee",
-      "Ea62ae96ebb",
-      "Ea902c3fd40",
-      "Ecf0278c48e"
+      "Edfffb18617"
     ],
-    "evidence_span": "Spent mobile phone batteries were collected from mobile phone markets.",
+    "evidence_span": "Spent mobile phone batteries were collected from mobile phone markets. All batteries were Li-ion made from different manufacturers with different sizes and types of cathode.",
+    "evidence": [
+      {
+        "evidence_id": "Edfffb18617",
+        "quote": "Spent mobile phone batteries were collected from mobile phone markets. All batteries were Li-ion made from different manufacturers with different sizes and types of cathode."
+      }
+    ],
     "population_granularity": "batch",
-    "sample_type": "lithium-ion battery",
-    "scope_description": "Spent mobile phone batteries collected from mobile phone markets; used as battery powder in the study.",
+    "sample_type": "spent lithium-ion mobile phone batteries",
+    "scope_description": "Spent mobile phone batteries collected from mobile phone markets; all were Li-ion batteries from different manufacturers with different sizes and cathode types.",
     "sample_size": null
   },
   {
@@ -27,17 +27,18 @@
     "scope_subject_text": "powder",
     "scope_label": "powder",
     "evidence_ids": [
-      "E02265d958c",
-      "E2e82484cab",
-      "E39d7d31fee",
-      "Ea62ae96ebb",
-      "Ea902c3fd40",
-      "Ecf0278c48e"
+      "E1090404311"
     ],
-    "evidence_span": "In the two-step approach, the fungi were, firstly, pre-cultured in sucrose medium; no battery powder was added until the fungi entered the logarithmic phase.",
+    "evidence_span": "Cathodes and anodes were manually crushed into small particles with a pair of scissors and then ground by a ball mill (Fritsch, Germany) until transmuted to fine powder. The powder was sieved by vibrator shifter with mesh# 200 to get homogeneous mixture. All battery powders used in this research were of a particle size less than 75 mm. The final mixture was used for all subsequent experiments, yet prior to use, it was autoclaved at 121 ^∘C for 15 min.",
+    "evidence": [
+      {
+        "evidence_id": "E1090404311",
+        "quote": "Cathodes and anodes were manually crushed into small particles with a pair of scissors and then ground by a ball mill (Fritsch, Germany) until transmuted to fine powder. The powder was sieved by vibrator shifter with mesh# 200 to get homogeneous mixture. All battery powders used in this research were of a particle size less than 75 mm. The final mixture was used for all subsequent experiments, yet prior to use, it was autoclaved at 121 ^∘C for 15 min."
+      }
+    ],
     "population_granularity": "batch",
-    "sample_type": "powder",
-    "scope_description": "Battery powder prepared from spent mobile phone batteries collected from mobile phone markets; used in bioleaching and characterization tests.",
+    "sample_type": "battery powder",
+    "scope_description": "Powder prepared from manually crushed and ball-milled cathodes and anodes of the collected spent Li-ion batteries, sieved to <75 µm and autoclaved before use.",
     "sample_size": null
   },
   {
@@ -47,18 +48,23 @@
     "scope_subject_text": "battery",
     "scope_label": "battery",
     "evidence_ids": [
-      "E8d64cfde87",
-      "E02265d958c",
-      "E2e82484cab",
-      "E39d7d31fee",
-      "Ea62ae96ebb",
-      "Ea902c3fd40",
-      "Ecf0278c48e"
+      "E6c55cf818b",
+      "Edfffb18617"
     ],
-    "evidence_span": "Spent mobile phone batteries were collected from mobile phone markets.",
+    "evidence_span": "All Bioleaching experiments were performed in 250 mL autoclaved Erlenmeyer flasks with 100 mL sucrose medium at a pH of 6 containing 1% (w v ^-1) sterilized battery powder.",
+    "evidence": [
+      {
+        "evidence_id": "E6c55cf818b",
+        "quote": "All Bioleaching experiments were performed in 250 mL autoclaved Erlenmeyer flasks with 100 mL sucrose medium at a pH of 6 containing 1% (w v ^-1) sterilized battery powder."
+      },
+      {
+        "evidence_id": "Edfffb18617",
+        "quote": "Spent mobile phone batteries were collected from mobile phone markets. All batteries were Li-ion made from different manufacturers with different sizes and types of cathode."
+      }
+    ],
     "population_granularity": "batch",
-    "sample_type": "battery",
-    "scope_description": "Spent mobile phone batteries collected from mobile phone markets; processed to battery powder for the study.",
+    "sample_type": "battery powder",
+    "scope_description": "Battery powder derived from the collected spent Li-ion mobile phone batteries, used as the solid substrate in bioleaching and chemical leaching experiments.",
     "sample_size": null
   },
   {
@@ -68,45 +74,15 @@
     "scope_subject_text": "one-step bioleaching",
     "scope_label": "one-step bioleaching",
     "evidence_ids": [
-      "E449b1038a4"
+      "E6c55cf818b"
     ],
     "evidence_span": "In the one-step bioleaching process, 1 mL of spore suspension was inoculated into sucrose medium (containing battery powder) and incubated for 30 days.",
-    "method_family": "bioleaching"
-  },
-  {
-    "root_entity_ids": [
-      "Process_chemical_leaching"
+    "evidence": [
+      {
+        "evidence_id": "E6c55cf818b",
+        "quote": "In the one-step bioleaching process, 1 mL of spore suspension was inoculated into sucrose medium (containing battery powder) and incubated for 30 days."
+      }
     ],
-    "scope_subject_text": "chemical leaching",
-    "scope_label": "chemical leaching",
-    "evidence_ids": [
-      "E5c789c917b"
-    ],
-    "evidence_span": "Spent battery powder (1% w/v) was leached in 100 mL of a mixture of commercial citric acid, oxalic acid, malic acid, and gluconic acid at concentrations similar to those in bioleaching, in a 250 mL Erlenmeyer flask shaken at 130 rpm and 30 °C.",
-    "method_family": "chemical leaching"
-  },
-  {
-    "root_entity_ids": [
-      "Process_control_bioleaching"
-    ],
-    "scope_subject_text": "control bioleaching",
-    "scope_label": "control bioleaching",
-    "evidence_ids": [
-      "E9cad8c0939"
-    ],
-    "evidence_span": "A control experiment was performed in parallel using fresh sucrose medium (pH 6) with 1% (w/v) sterilized battery powder but without inoculation, incubated at 30 °C and 130 rpm.",
-    "method_family": "bioleaching"
-  },
-  {
-    "root_entity_ids": [
-      "Process_spent_medium_bioleaching"
-    ],
-    "scope_subject_text": "spent medium bioleaching",
-    "scope_label": "spent medium bioleaching",
-    "evidence_ids": [
-      "E9d026aa5ac"
-    ],
-    "evidence_span": "At last, the battery powder was added to the filtrate which included fungal metabolites and then bioleached in a shaker-incubator for 16 days.",
     "method_family": "bioleaching"
   },
   {
@@ -116,9 +92,69 @@
     "scope_subject_text": "two-step bioleaching",
     "scope_label": "two-step bioleaching",
     "evidence_ids": [
-      "Ef1f54900f8"
+      "E6c55cf818b"
     ],
-    "evidence_span": "niger was pre-cultured in 100 mL sucrose medium (pH 6) at 30 °C and 130 rpm; after 3 days when the fungus entered logarithmic phase, 1% (w/v) sterilized battery powder was added and bioleaching continued for 27 days under the same conditions.",
+    "evidence_span": "In the two-step approach, the fungi were, firstly, pre-cultured in sucrose medium; no battery powder was added until the fungi entered the logarithmic phase.",
+    "evidence": [
+      {
+        "evidence_id": "E6c55cf818b",
+        "quote": "In the two-step approach, the fungi were, firstly, pre-cultured in sucrose medium; no battery powder was added until the fungi entered the logarithmic phase."
+      }
+    ],
     "method_family": "bioleaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_spent_medium_bioleaching"
+    ],
+    "scope_subject_text": "spent medium bioleaching",
+    "scope_label": "spent medium bioleaching",
+    "evidence_ids": [
+      "E6c55cf818b"
+    ],
+    "evidence_span": "In the spent medium process, the fungi were primarily cultured in sucrose medium without battery powder until the fungi entered the stationary phase, which took 14 days for the A. niger.",
+    "evidence": [
+      {
+        "evidence_id": "E6c55cf818b",
+        "quote": "In the spent medium process, the fungi were primarily cultured in sucrose medium without battery powder until the fungi entered the stationary phase, which took 14 days for the A. niger."
+      }
+    ],
+    "method_family": "bioleaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_chemical_leaching"
+    ],
+    "scope_subject_text": "chemical leaching",
+    "scope_label": "chemical leaching",
+    "evidence_ids": [
+      "E63c2aaaf35"
+    ],
+    "evidence_span": "Chemical leaching of the spent battery powder was carried out to evaluate the leaching effectiveness of organic acids through the use of a mixture of commercial citric acid, oxalic acid, malic acid and gluconic acid at a concentration similar to the bioleaching experiment.",
+    "evidence": [
+      {
+        "evidence_id": "E63c2aaaf35",
+        "quote": "Chemical leaching of the spent battery powder was carried out to evaluate the leaching effectiveness of organic acids through the use of a mixture of commercial citric acid, oxalic acid, malic acid and gluconic acid at a concentration similar to the bioleaching experiment."
+      }
+    ],
+    "method_family": "chemical leaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_control_bioleaching"
+    ],
+    "scope_subject_text": "control bioleaching",
+    "scope_label": "control bioleaching",
+    "evidence_ids": [
+      "E931f4adb62"
+    ],
+    "evidence_span": "A control experiment was performed in a parallel manner, using fresh sucrose medium without inoculation.",
+    "evidence": [
+      {
+        "evidence_id": "E931f4adb62",
+        "quote": "A control experiment was performed in a parallel manner, using fresh sucrose medium without inoculation."
+      }
+    ],
+    "method_family": "control leaching"
   }
 ]

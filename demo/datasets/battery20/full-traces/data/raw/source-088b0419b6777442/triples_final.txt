@@ -551,55 +551,81 @@
     "scope": [
       {
         "root_entity_ids": [
+          "Component_cathode_scrap"
+        ],
+        "scope_subject_text": "cathode scrap",
+        "scope_label": "cathode scrap",
+        "evidence_ids": [
+          "E3639cf8ecc",
+          "Ecd0fa5a183",
+          "E1a473259b4"
+        ],
+        "evidence_span": "According to the datas provided by the Tianjin Lishen Battery Joint-Stock Co., Ltd., the slurry for cathode scraps consisted of 93.5 wt.% active materials, 4 wt.% acetylene black and 2.5 wt.% PVDF",
+        "evidence": [
+          {
+            "evidence_id": "E3639cf8ecc",
+            "quote": "According to the datas provided by the Tianjin Lishen Battery Joint-Stock Co., Ltd., the slurry for cathode scraps consisted of 93.5 wt.% active materials, 4 wt.% acetylene black and 2.5 wt.% PVDF"
+          },
+          {
+            "evidence_id": "Ecd0fa5a183",
+            "quote": "In order to investigate the recovery rate of scrap materials, 200 g LiCoO2 scraps were recovered with the above solvent method."
+          },
+          {
+            "evidence_id": "E1a473259b4",
+            "quote": "the cathode scraps generated in the production process have not been undergone the chargeedischarge process"
+          }
+        ],
+        "population_granularity": "batch",
+        "sample_type": "LiCoO2 cathode scrap",
+        "scope_description": "LiCoO2 cathode scraps generated in the production process of Li-ion batteries, supplied by Tianjin Lishen Battery Joint-Stock Co., Ltd.; 200 g used for the recovery-rate experiment.",
+        "sample_size": null
+      },
+      {
+        "root_entity_ids": [
           "Component_Al_foil"
         ],
         "scope_subject_text": "Al foil",
         "scope_label": "Al foil",
         "evidence_ids": [
-          "E630d26544e",
-          "Efd8fb1547a"
+          "Ecd0fa5a183",
+          "E4929e58333"
         ],
-        "evidence_span": "Then, after the second step, 21.60 g scrap materials (active material, acetylene black) were collected from 41.86 g impure Al foil mixtures after dissolving Al foil mixtures with excessive NaOH solution.",
+        "evidence_span": "41.86 g impure Al foil mixtures (Al foil, active material, acetylene black) were directly obtained through the first separation",
+        "evidence": [
+          {
+            "evidence_id": "Ecd0fa5a183",
+            "quote": "41.86 g impure Al foil mixtures (Al foil, active material, acetylene black) were directly obtained through the first separation"
+          },
+          {
+            "evidence_id": "E4929e58333",
+            "quote": "the separated Al foil was treated again as above recovery method"
+          }
+        ],
         "population_granularity": "batch",
-        "sample_type": "Al foil",
-        "scope_description": "Impure Al foil mixtures from which scrap materials were recovered; 41.86 g of impure Al foil mixtures were dissolved with excessive NaOH solution to collect 21.60 g scrap materials.",
+        "sample_type": "Al foil from cathode scraps",
+        "scope_description": "Al foil separated from the LiCoO2 cathode scraps during the solvent recovery; impure Al foil mixtures (Al foil, active material, acetylene black) were obtained after the first separation and further treated.",
         "sample_size": null
       },
       {
         "root_entity_ids": [
-          "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes"
+          "Component_cathode_electrode"
         ],
-        "scope_subject_text": "electrochemical cycling of recovered scrap material electrodes",
-        "scope_label": "electrochemical cycling of recovered scrap material electrodes",
+        "scope_subject_text": "cathode electrode",
+        "scope_label": "cathode electrode",
         "evidence_ids": [
-          "E050079510c"
+          "Ee3e51cbff3"
         ],
-        "evidence_span": "Cathode electrodes were fabricated with 83 wt.% active materials (from recovered scrap materials), 10 wt.% acetylene black, and 7 wt.% PVDF in NMP; CR2032 coin cells with lithium foil anode and 1 M LiPF6 in EC:DEC (1:1 v/v) were charged/discharged between 3.0 V and 4.3 V vs Li+/Li at 30 mA g-1 and 25 °C.",
-        "method_family": "electrochemical cycling"
-      },
-      {
-        "root_entity_ids": [
-          "Process_Al_foil"
+        "evidence_span": "For fabrication of cathode electrodes consisted of 83 wt.% active materials, 10 wt.% acetylene black, and 7 wt.% PVDF, 3.46 g recovered scrap materials (active materials and acetylene black) were mixed with 0.26 g acetylene black and 0.28 g PVDF in N-methyl-2- pyrrolidone (NMP).",
+        "evidence": [
+          {
+            "evidence_id": "Ee3e51cbff3",
+            "quote": "For fabrication of cathode electrodes consisted of 83 wt.% active materials, 10 wt.% acetylene black, and 7 wt.% PVDF, 3.46 g recovered scrap materials (active materials and acetylene black) were mixed with 0.26 g acetylene black and 0.28 g PVDF in N-methyl-2- pyrrolidone (NMP)."
+          }
         ],
-        "scope_subject_text": "Al foil",
-        "scope_label": "Al foil",
-        "evidence_ids": [
-          "E164436886f"
-        ],
-        "evidence_span": "Most of scrap materials (m ) could be directly recovered after solvent method, but a small amount of the scrap materials (m ) still remained on impure Al foil mixtures (m ) and were wasted.",
-        "method_family": "solvent method"
-      },
-      {
-        "root_entity_ids": [
-          "Process_NaOH_dissolution_of_Al_foil_mixtures"
-        ],
-        "scope_subject_text": "NaOH dissolution of Al foil mixtures",
-        "scope_label": "NaOH dissolution of Al foil mixtures",
-        "evidence_ids": [
-          "E60aef5b260"
-        ],
-        "evidence_span": "Then, after the second step, 21.60 g scrap materials (active material, acetylene black) were collected from 41.86 g impure Al foil mixtures after dissolving Al foil mixtures with excessive NaOH solution.",
-        "method_family": "NaOH dissolution"
+        "population_granularity": "batch",
+        "sample_type": "recovered scrap material cathode electrode",
+        "scope_description": "Cathode electrodes fabricated in this study from recovered scrap materials (83 wt.% active materials, 10 wt.% acetylene black, 7 wt.% PVDF in NMP) and tested in CR2032 coin cells.",
+        "sample_size": null
       },
       {
         "root_entity_ids": [
@@ -608,114 +634,275 @@
         "scope_subject_text": "solvent method for scrap material recovery",
         "scope_label": "solvent method for scrap material recovery",
         "evidence_ids": [
-          "Ef33c302a08"
+          "E92d85e1d66",
+          "E4929e58333"
         ],
-        "evidence_span": "Separated Al foil was treated again with the solvent method to enhance recovery rate of scrap materials and purity of Al foil; most scrap materials (m1) were directly recovered after the solvent method.",
-        "method_family": "solvent method"
+        "evidence_span": "a new solvent method with inexpensive mixture of N,N-Dimethylformamide (DMF) and ethanol was used to remove PVDF and recover scrap materials from LiCoO2 scraps",
+        "evidence": [
+          {
+            "evidence_id": "E92d85e1d66",
+            "quote": "a new solvent method with inexpensive mixture of N,N-Dimethylformamide (DMF) and ethanol was used to remove PVDF and recover scrap materials from LiCoO2 scraps"
+          },
+          {
+            "evidence_id": "E4929e58333",
+            "quote": "In order to enhance the recovery rate of scrap materials and the purity of Al foil, the separated Al foil was treated again as above recovery method."
+          }
+        ],
+        "method_family": "solvent dissolution recovery"
+      },
+      {
+        "root_entity_ids": [
+          "Process_NaOH_dissolution_of_Al_foil_mixtures"
+        ],
+        "scope_subject_text": "NaOH dissolution of Al foil mixtures",
+        "scope_label": "NaOH dissolution of Al foil mixtures",
+        "evidence_ids": [
+          "E2d5e7e2254"
+        ],
+        "evidence_span": "After dissolving Al foil mixtures with excessive NaOH solution, the wasted scrap materials (m2) could be weighed.",
+        "evidence": [
+          {
+            "evidence_id": "E2d5e7e2254",
+            "quote": "After dissolving Al foil mixtures with excessive NaOH solution, the wasted scrap materials (m2) could be weighed."
+          }
+        ],
+        "method_family": "alkaline dissolution"
+      },
+      {
+        "root_entity_ids": [
+          "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes"
+        ],
+        "scope_subject_text": "electrochemical cycling of recovered scrap material electrodes",
+        "scope_label": "electrochemical cycling of recovered scrap material electrodes",
+        "evidence_ids": [
+          "Ee3e51cbff3"
+        ],
+        "evidence_span": "The cells were charged and discharged between 3.0 V and 4.3 V versus Li ^+ / Li by applying a current density of 30 mA g ^-1 at 25 ^∘𝖢.",
+        "evidence": [
+          {
+            "evidence_id": "Ee3e51cbff3",
+            "quote": "The cells were charged and discharged between 3.0 V and 4.3 V versus Li ^+ / Li by applying a current density of 30 mA g ^-1 at 25 ^∘𝖢."
+          }
+        ],
+        "method_family": "galvanostatic charge-discharge cycling"
       }
     ],
     "scope_assertions": [
       {
-        "id": "scope-assertion:bb4de8658bd5352a",
+        "id": "scope-assertion:84a853a971dadb83",
         "micrograph_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method",
         "root_entity_ids": [
+          "Component_cathode_scrap"
+        ],
+        "requested_root_entity_ids": [
+          "Component_cathode_scrap"
+        ],
+        "scope_kind": "declared_population",
+        "facets": {
+          "population_granularity": "batch",
+          "sample_type": "LiCoO2 cathode scrap"
+        },
+        "scope_description": "LiCoO2 cathode scraps generated in the production process of Li-ion batteries, supplied by Tianjin Lishen Battery Joint-Stock Co., Ltd.; 200 g used for the recovery-rate experiment.",
+        "sample_size": null,
+        "evidence_span": "According to the datas provided by the Tianjin Lishen Battery Joint-Stock Co., Ltd., the slurry for cathode scraps consisted of 93.5 wt.% active materials, 4 wt.% acetylene black and 2.5 wt.% PVDF",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:84a853a971dadb83:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_cathode_scrap:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:d2bd301f40b9b9f3",
+        "micrograph_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method",
+        "root_entity_ids": [
+          "Component_Al_foil"
+        ],
+        "requested_root_entity_ids": [
           "Component_Al_foil"
         ],
         "scope_kind": "declared_population",
         "facets": {
           "population_granularity": "batch",
-          "sample_type": "Al foil"
+          "sample_type": "Al foil from cathode scraps"
         },
-        "scope_description": "Impure Al foil mixtures from which scrap materials were recovered; 41.86 g of impure Al foil mixtures were dissolved with excessive NaOH solution to collect 21.60 g scrap materials.",
+        "scope_description": "Al foil separated from the LiCoO2 cathode scraps during the solvent recovery; impure Al foil mixtures (Al foil, active material, acetylene black) were obtained after the first separation and further treated.",
         "sample_size": null,
-        "evidence_span": "Then, after the second step, 21.60 g scrap materials (active material, acetylene black) were collected from 41.86 g impure Al foil mixtures after dissolving Al foil mixtures with excessive NaOH solution.",
+        "evidence_span": "41.86 g impure Al foil mixtures (Al foil, active material, acetylene black) were directly obtained through the first separation",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:bb4de8658bd5352a:evidence",
+          "scope:scope-assertion:d2bd301f40b9b9f3:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_Al_foil:entity"
         ]
       },
       {
-        "id": "scope-assertion:a1b657c6e86cd44a",
+        "id": "scope-assertion:cf249a63cb499259",
         "micrograph_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method",
         "root_entity_ids": [
-          "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes"
+          "Component_cathode_electrode"
         ],
-        "scope_kind": "process_method_family",
+        "requested_root_entity_ids": [
+          "Component_cathode_electrode"
+        ],
+        "scope_kind": "declared_population",
         "facets": {
-          "method_family": "electrochemical cycling"
+          "population_granularity": "batch",
+          "sample_type": "recovered scrap material cathode electrode"
         },
-        "scope_description": "Cathode electrodes were fabricated with 83 wt.% active materials (from recovered scrap materials), 10 wt.% acetylene black, and 7 wt.% PVDF in NMP; CR2032 coin cells with lithium foil anode and 1 M LiPF6 in EC:DEC (1:1 v/v) were charged/discharged between 3.0 V and 4.3 V vs Li+/Li at 30 mA g-1 and 25 °C.",
+        "scope_description": "Cathode electrodes fabricated in this study from recovered scrap materials (83 wt.% active materials, 10 wt.% acetylene black, 7 wt.% PVDF in NMP) and tested in CR2032 coin cells.",
         "sample_size": null,
-        "evidence_span": "Cathode electrodes were fabricated with 83 wt.% active materials (from recovered scrap materials), 10 wt.% acetylene black, and 7 wt.% PVDF in NMP; CR2032 coin cells with lithium foil anode and 1 M LiPF6 in EC:DEC (1:1 v/v) were charged/discharged between 3.0 V and 4.3 V vs Li+/Li at 30 mA g-1 and 25 °C.",
+        "evidence_span": "For fabrication of cathode electrodes consisted of 83 wt.% active materials, 10 wt.% acetylene black, and 7 wt.% PVDF, 3.46 g recovered scrap materials (active materials and acetylene black) were mixed with 0.26 g acetylene black and 0.28 g PVDF in N-methyl-2- pyrrolidone (NMP).",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:a1b657c6e86cd44a:evidence",
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_electrochemical_cycling_of_recovered_scrap_material_electrodes:entity"
+          "scope:scope-assertion:cf249a63cb499259:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_cathode_electrode:entity"
         ]
       },
       {
-        "id": "scope-assertion:4d78cd896b26082a",
-        "micrograph_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method",
-        "root_entity_ids": [
-          "Process_Al_foil"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "solvent method"
-        },
-        "scope_description": "Most of scrap materials (m ) could be directly recovered after solvent method, but a small amount of the scrap materials (m ) still remained on impure Al foil mixtures (m ) and were wasted.",
-        "sample_size": null,
-        "evidence_span": "Most of scrap materials (m ) could be directly recovered after solvent method, but a small amount of the scrap materials (m ) still remained on impure Al foil mixtures (m ) and were wasted.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:4d78cd896b26082a:evidence",
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_Al_foil:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:88c8f3f1a0923ea5",
-        "micrograph_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method",
-        "root_entity_ids": [
-          "Process_NaOH_dissolution_of_Al_foil_mixtures"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "NaOH dissolution"
-        },
-        "scope_description": "Then, after the second step, 21.60 g scrap materials (active material, acetylene black) were collected from 41.86 g impure Al foil mixtures after dissolving Al foil mixtures with excessive NaOH solution.",
-        "sample_size": null,
-        "evidence_span": "Then, after the second step, 21.60 g scrap materials (active material, acetylene black) were collected from 41.86 g impure Al foil mixtures after dissolving Al foil mixtures with excessive NaOH solution.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:88c8f3f1a0923ea5:evidence",
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_NaOH_dissolution_of_Al_foil_mixtures:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:72ffc658e345c772",
+        "id": "scope-assertion:7eadfbf38dfa8a36",
         "micrograph_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method",
         "root_entity_ids": [
           "Process_solvent_method_for_scrap_material_recovery"
         ],
+        "requested_root_entity_ids": [
+          "Process_solvent_method_for_scrap_material_recovery"
+        ],
         "scope_kind": "process_method_family",
         "facets": {
-          "method_family": "solvent method"
+          "method_family": "solvent dissolution recovery"
         },
-        "scope_description": "Separated Al foil was treated again with the solvent method to enhance recovery rate of scrap materials and purity of Al foil; most scrap materials (m1) were directly recovered after the solvent method.",
+        "scope_description": "a new solvent method with inexpensive mixture of N,N-Dimethylformamide (DMF) and ethanol was used to remove PVDF and recover scrap materials from LiCoO2 scraps",
         "sample_size": null,
-        "evidence_span": "Separated Al foil was treated again with the solvent method to enhance recovery rate of scrap materials and purity of Al foil; most scrap materials (m1) were directly recovered after the solvent method.",
+        "evidence_span": "a new solvent method with inexpensive mixture of N,N-Dimethylformamide (DMF) and ethanol was used to remove PVDF and recover scrap materials from LiCoO2 scraps",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_solvent_method_for_scrap_material_recovery:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:477a4cc88cddf238",
+        "micrograph_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method",
+        "root_entity_ids": [
+          "Process_NaOH_dissolution_of_Al_foil_mixtures"
+        ],
+        "requested_root_entity_ids": [
+          "Process_NaOH_dissolution_of_Al_foil_mixtures"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "alkaline dissolution"
+        },
+        "scope_description": "After dissolving Al foil mixtures with excessive NaOH solution, the wasted scrap materials (m2) could be weighed.",
+        "sample_size": null,
+        "evidence_span": "After dissolving Al foil mixtures with excessive NaOH solution, the wasted scrap materials (m2) could be weighed.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:477a4cc88cddf238:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_NaOH_dissolution_of_Al_foil_mixtures:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:5b86a0e1b5236937",
+        "micrograph_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method",
+        "root_entity_ids": [
+          "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes"
+        ],
+        "requested_root_entity_ids": [
+          "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "galvanostatic charge-discharge cycling"
+        },
+        "scope_description": "The cells were charged and discharged between 3.0 V and 4.3 V versus Li ^+ / Li by applying a current density of 30 mA g ^-1 at 25 ^∘𝖢.",
+        "sample_size": null,
+        "evidence_span": "The cells were charged and discharged between 3.0 V and 4.3 V versus Li ^+ / Li by applying a current density of 30 mA g ^-1 at 25 ^∘𝖢.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:5b86a0e1b5236937:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_electrochemical_cycling_of_recovered_scrap_material_electrodes:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:ae34b99d4b7b99fe",
-        "scope_assertion_id": "scope-assertion:bb4de8658bd5352a",
+        "id": "scope-path:2fa32acc8c06a5c4",
+        "scope_assertion_id": "scope-assertion:84a853a971dadb83",
+        "statement_relation_id": "REL_Component_cathode_scrap_CONTAINS_Material_cathode_active_material",
+        "root_entity_id": "Component_cathode_scrap",
+        "entity_path": [
+          "Component_cathode_scrap"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:84a853a971dadb83:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_scrap_CONTAINS_Material_cathode_active_material"
+        ]
+      },
+      {
+        "id": "scope-path:131ece1ef83f76a7",
+        "scope_assertion_id": "scope-assertion:84a853a971dadb83",
+        "statement_relation_id": "REL_Component_cathode_scrap_CONTAINS_Material_acetylene_black",
+        "root_entity_id": "Component_cathode_scrap",
+        "entity_path": [
+          "Component_cathode_scrap"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:84a853a971dadb83:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_scrap_CONTAINS_Material_acetylene_black"
+        ]
+      },
+      {
+        "id": "scope-path:e61517d3280fdb06",
+        "scope_assertion_id": "scope-assertion:84a853a971dadb83",
+        "statement_relation_id": "REL_Component_cathode_scrap_CONTAINS_Material_PVDF",
+        "root_entity_id": "Component_cathode_scrap",
+        "entity_path": [
+          "Component_cathode_scrap"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:84a853a971dadb83:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_scrap_CONTAINS_Material_PVDF"
+        ]
+      },
+      {
+        "id": "scope-path:2fa32acc8c06a5c4",
+        "scope_assertion_id": "scope-assertion:84a853a971dadb83",
+        "statement_relation_id": "REL_Component_cathode_scrap_CONTAINS_Material_cathode_active_material",
+        "root_entity_id": "Component_cathode_scrap",
+        "entity_path": [
+          "Component_cathode_scrap"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:84a853a971dadb83:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_scrap_CONTAINS_Material_cathode_active_material"
+        ]
+      },
+      {
+        "id": "scope-path:131ece1ef83f76a7",
+        "scope_assertion_id": "scope-assertion:84a853a971dadb83",
+        "statement_relation_id": "REL_Component_cathode_scrap_CONTAINS_Material_acetylene_black",
+        "root_entity_id": "Component_cathode_scrap",
+        "entity_path": [
+          "Component_cathode_scrap"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:84a853a971dadb83:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_scrap_CONTAINS_Material_acetylene_black"
+        ]
+      },
+      {
+        "id": "scope-path:9557b3ea06ae3c8e",
+        "scope_assertion_id": "scope-assertion:d2bd301f40b9b9f3",
         "statement_relation_id": "REL_Component_Al_foil_PROCESSED_BY_Process_solvent_method_for_scrap_material_recovery",
         "root_entity_id": "Component_Al_foil",
         "entity_path": [
@@ -724,13 +911,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:bb4de8658bd5352a:evidence",
+          "scope:scope-assertion:d2bd301f40b9b9f3:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_Al_foil_PROCESSED_BY_Process_solvent_method_for_scrap_material_recovery"
         ]
       },
       {
-        "id": "scope-path:f7267dad7bdfe44e",
-        "scope_assertion_id": "scope-assertion:bb4de8658bd5352a",
+        "id": "scope-path:244aede218280161",
+        "scope_assertion_id": "scope-assertion:d2bd301f40b9b9f3",
         "statement_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Component_Al_foil",
         "root_entity_id": "Component_Al_foil",
         "entity_path": [
@@ -739,13 +926,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:bb4de8658bd5352a:evidence",
+          "scope:scope-assertion:d2bd301f40b9b9f3:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Component_Al_foil"
         ]
       },
       {
-        "id": "scope-path:f7267dad7bdfe44e",
-        "scope_assertion_id": "scope-assertion:bb4de8658bd5352a",
+        "id": "scope-path:244aede218280161",
+        "scope_assertion_id": "scope-assertion:d2bd301f40b9b9f3",
         "statement_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Component_Al_foil",
         "root_entity_id": "Component_Al_foil",
         "entity_path": [
@@ -754,58 +941,73 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:bb4de8658bd5352a:evidence",
+          "scope:scope-assertion:d2bd301f40b9b9f3:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Component_Al_foil"
         ]
       },
       {
-        "id": "scope-path:41c8908ea21d1232",
-        "scope_assertion_id": "scope-assertion:a1b657c6e86cd44a",
+        "id": "scope-path:b3dd51e4a798cf45",
+        "scope_assertion_id": "scope-assertion:cf249a63cb499259",
+        "statement_relation_id": "REL_Component_cathode_electrode_CONTAINS_Material_cathode_active_material",
+        "root_entity_id": "Component_cathode_electrode",
+        "entity_path": [
+          "Component_cathode_electrode"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:cf249a63cb499259:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_electrode_CONTAINS_Material_cathode_active_material"
+        ]
+      },
+      {
+        "id": "scope-path:fe73fc220b22fd71",
+        "scope_assertion_id": "scope-assertion:cf249a63cb499259",
+        "statement_relation_id": "REL_Component_cathode_electrode_CONTAINS_Material_acetylene_black",
+        "root_entity_id": "Component_cathode_electrode",
+        "entity_path": [
+          "Component_cathode_electrode"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:cf249a63cb499259:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_electrode_CONTAINS_Material_acetylene_black"
+        ]
+      },
+      {
+        "id": "scope-path:7f7d3e6f947d6847",
+        "scope_assertion_id": "scope-assertion:cf249a63cb499259",
+        "statement_relation_id": "REL_Component_cathode_electrode_CONTAINS_Material_PVDF",
+        "root_entity_id": "Component_cathode_electrode",
+        "entity_path": [
+          "Component_cathode_electrode"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:cf249a63cb499259:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_electrode_CONTAINS_Material_PVDF"
+        ]
+      },
+      {
+        "id": "scope-path:474ed4b2f32abf33",
+        "scope_assertion_id": "scope-assertion:cf249a63cb499259",
         "statement_relation_id": "REL_Component_cathode_electrode_PROCESSED_BY_Process_electrochemical_cycling_of_recovered_scrap_material_electrodes",
-        "root_entity_id": "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes",
+        "root_entity_id": "Component_cathode_electrode",
         "entity_path": [
-          "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes"
+          "Component_cathode_electrode"
         ],
         "containment_relation_path": [],
-        "propagation_kind": "process_scope",
+        "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:a1b657c6e86cd44a:evidence",
+          "scope:scope-assertion:cf249a63cb499259:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_electrode_PROCESSED_BY_Process_electrochemical_cycling_of_recovered_scrap_material_electrodes"
         ]
       },
       {
-        "id": "scope-path:082be939fc440681",
-        "scope_assertion_id": "scope-assertion:88c8f3f1a0923ea5",
-        "statement_relation_id": "REL_Process_NaOH_dissolution_of_Al_foil_mixtures_HAS_OUTPUT_Material_cathode_active_material",
-        "root_entity_id": "Process_NaOH_dissolution_of_Al_foil_mixtures",
-        "entity_path": [
-          "Process_NaOH_dissolution_of_Al_foil_mixtures"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:88c8f3f1a0923ea5:evidence",
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_NaOH_dissolution_of_Al_foil_mixtures_HAS_OUTPUT_Material_cathode_active_material"
-        ]
-      },
-      {
-        "id": "scope-path:ffef3b07ec696910",
-        "scope_assertion_id": "scope-assertion:88c8f3f1a0923ea5",
-        "statement_relation_id": "REL_Process_NaOH_dissolution_of_Al_foil_mixtures_HAS_OUTPUT_Material_acetylene_black",
-        "root_entity_id": "Process_NaOH_dissolution_of_Al_foil_mixtures",
-        "entity_path": [
-          "Process_NaOH_dissolution_of_Al_foil_mixtures"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:88c8f3f1a0923ea5:evidence",
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_NaOH_dissolution_of_Al_foil_mixtures_HAS_OUTPUT_Material_acetylene_black"
-        ]
-      },
-      {
-        "id": "scope-path:3370c2a176de9ea6",
-        "scope_assertion_id": "scope-assertion:72ffc658e345c772",
+        "id": "scope-path:8ab8cb464b55223b",
+        "scope_assertion_id": "scope-assertion:7eadfbf38dfa8a36",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_solvent_method_for_scrap_material_recovery",
         "root_entity_id": "Process_solvent_method_for_scrap_material_recovery",
         "entity_path": [
@@ -814,13 +1016,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_solvent_method_for_scrap_material_recovery"
         ]
       },
       {
-        "id": "scope-path:e31e22ffda147658",
-        "scope_assertion_id": "scope-assertion:72ffc658e345c772",
+        "id": "scope-path:d33cd7409a4e49af",
+        "scope_assertion_id": "scope-assertion:7eadfbf38dfa8a36",
         "statement_relation_id": "REL_Component_Al_foil_PROCESSED_BY_Process_solvent_method_for_scrap_material_recovery",
         "root_entity_id": "Process_solvent_method_for_scrap_material_recovery",
         "entity_path": [
@@ -829,13 +1031,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_Al_foil_PROCESSED_BY_Process_solvent_method_for_scrap_material_recovery"
         ]
       },
       {
-        "id": "scope-path:32e6e205b1bee9ef",
-        "scope_assertion_id": "scope-assertion:72ffc658e345c772",
+        "id": "scope-path:577d8fc3c3b09623",
+        "scope_assertion_id": "scope-assertion:7eadfbf38dfa8a36",
         "statement_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_cathode_active_material",
         "root_entity_id": "Process_solvent_method_for_scrap_material_recovery",
         "entity_path": [
@@ -844,13 +1046,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_cathode_active_material"
         ]
       },
       {
-        "id": "scope-path:d3ebb25083bd3a0a",
-        "scope_assertion_id": "scope-assertion:72ffc658e345c772",
+        "id": "scope-path:688e7adb718076d0",
+        "scope_assertion_id": "scope-assertion:7eadfbf38dfa8a36",
         "statement_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_acetylene_black",
         "root_entity_id": "Process_solvent_method_for_scrap_material_recovery",
         "entity_path": [
@@ -859,13 +1061,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_acetylene_black"
         ]
       },
       {
-        "id": "scope-path:2155016cf98ae268",
-        "scope_assertion_id": "scope-assertion:72ffc658e345c772",
+        "id": "scope-path:25b59a228e6f0567",
+        "scope_assertion_id": "scope-assertion:7eadfbf38dfa8a36",
         "statement_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Component_Al_foil",
         "root_entity_id": "Process_solvent_method_for_scrap_material_recovery",
         "entity_path": [
@@ -874,13 +1076,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Component_Al_foil"
         ]
       },
       {
-        "id": "scope-path:32e6e205b1bee9ef",
-        "scope_assertion_id": "scope-assertion:72ffc658e345c772",
+        "id": "scope-path:577d8fc3c3b09623",
+        "scope_assertion_id": "scope-assertion:7eadfbf38dfa8a36",
         "statement_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_cathode_active_material",
         "root_entity_id": "Process_solvent_method_for_scrap_material_recovery",
         "entity_path": [
@@ -889,13 +1091,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_cathode_active_material"
         ]
       },
       {
-        "id": "scope-path:32e6e205b1bee9ef",
-        "scope_assertion_id": "scope-assertion:72ffc658e345c772",
+        "id": "scope-path:577d8fc3c3b09623",
+        "scope_assertion_id": "scope-assertion:7eadfbf38dfa8a36",
         "statement_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_cathode_active_material",
         "root_entity_id": "Process_solvent_method_for_scrap_material_recovery",
         "entity_path": [
@@ -904,13 +1106,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_cathode_active_material"
         ]
       },
       {
-        "id": "scope-path:2155016cf98ae268",
-        "scope_assertion_id": "scope-assertion:72ffc658e345c772",
+        "id": "scope-path:25b59a228e6f0567",
+        "scope_assertion_id": "scope-assertion:7eadfbf38dfa8a36",
         "statement_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Component_Al_foil",
         "root_entity_id": "Process_solvent_method_for_scrap_material_recovery",
         "entity_path": [
@@ -919,8 +1121,113 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Component_Al_foil"
+        ]
+      },
+      {
+        "id": "scope-path:64bad4d6e646790a",
+        "scope_assertion_id": "scope-assertion:7eadfbf38dfa8a36",
+        "statement_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_LiCoO2",
+        "root_entity_id": "Process_solvent_method_for_scrap_material_recovery",
+        "entity_path": [
+          "Process_solvent_method_for_scrap_material_recovery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_LiCoO2"
+        ]
+      },
+      {
+        "id": "scope-path:7cbf1aa76d400b18",
+        "scope_assertion_id": "scope-assertion:7eadfbf38dfa8a36",
+        "statement_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_PVDF",
+        "root_entity_id": "Process_solvent_method_for_scrap_material_recovery",
+        "entity_path": [
+          "Process_solvent_method_for_scrap_material_recovery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_PVDF"
+        ]
+      },
+      {
+        "id": "scope-path:7cbf1aa76d400b18",
+        "scope_assertion_id": "scope-assertion:7eadfbf38dfa8a36",
+        "statement_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_PVDF",
+        "root_entity_id": "Process_solvent_method_for_scrap_material_recovery",
+        "entity_path": [
+          "Process_solvent_method_for_scrap_material_recovery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_PVDF"
+        ]
+      },
+      {
+        "id": "scope-path:f3f2e17d2ad99f0b",
+        "scope_assertion_id": "scope-assertion:477a4cc88cddf238",
+        "statement_relation_id": "REL_Process_NaOH_dissolution_of_Al_foil_mixtures_HAS_OUTPUT_Material_cathode_active_material",
+        "root_entity_id": "Process_NaOH_dissolution_of_Al_foil_mixtures",
+        "entity_path": [
+          "Process_NaOH_dissolution_of_Al_foil_mixtures"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:477a4cc88cddf238:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_NaOH_dissolution_of_Al_foil_mixtures_HAS_OUTPUT_Material_cathode_active_material"
+        ]
+      },
+      {
+        "id": "scope-path:2cb8605dc1dcb057",
+        "scope_assertion_id": "scope-assertion:477a4cc88cddf238",
+        "statement_relation_id": "REL_Process_NaOH_dissolution_of_Al_foil_mixtures_HAS_OUTPUT_Material_acetylene_black",
+        "root_entity_id": "Process_NaOH_dissolution_of_Al_foil_mixtures",
+        "entity_path": [
+          "Process_NaOH_dissolution_of_Al_foil_mixtures"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:477a4cc88cddf238:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_NaOH_dissolution_of_Al_foil_mixtures_HAS_OUTPUT_Material_acetylene_black"
+        ]
+      },
+      {
+        "id": "scope-path:d0540f1025b17eb5",
+        "scope_assertion_id": "scope-assertion:5b86a0e1b5236937",
+        "statement_relation_id": "REL_Component_cathode_electrode_PROCESSED_BY_Process_electrochemical_cycling_of_recovered_scrap_material_electrodes",
+        "root_entity_id": "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes",
+        "entity_path": [
+          "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:5b86a0e1b5236937:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_electrode_PROCESSED_BY_Process_electrochemical_cycling_of_recovered_scrap_material_electrodes"
+        ]
+      },
+      {
+        "id": "scope-path:85019d4becd2a358",
+        "scope_assertion_id": "scope-assertion:5b86a0e1b5236937",
+        "statement_relation_id": "REL_Process_electrochemical_cycling_of_recovered_scrap_material_electrodes_HAS_OUTPUT_Material_LiCoO2",
+        "root_entity_id": "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes",
+        "entity_path": [
+          "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:5b86a0e1b5236937:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_electrochemical_cycling_of_recovered_scrap_material_electrodes_HAS_OUTPUT_Material_LiCoO2"
         ]
       }
     ],
@@ -3712,13 +4019,13 @@
           "Process_solvent_method_for_scrap_material_recovery"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:72ffc658e345c772"
+          "scope-assertion:7eadfbf38dfa8a36"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:3370c2a176de9ea6"
+          "scope-path:8ab8cb464b55223b"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_solvent_method_for_scrap_material_recovery:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_solvent_method_for_scrap_material_recovery",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:4d9ff3dc1c8c5d80",
@@ -3737,16 +4044,16 @@
           "Process_solvent_method_for_scrap_material_recovery"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:72ffc658e345c772",
-          "scope-assertion:bb4de8658bd5352a"
+          "scope-assertion:7eadfbf38dfa8a36",
+          "scope-assertion:d2bd301f40b9b9f3"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:ae34b99d4b7b99fe",
-          "scope-path:e31e22ffda147658"
+          "scope-path:9557b3ea06ae3c8e",
+          "scope-path:d33cd7409a4e49af"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
-          "scope:scope-assertion:bb4de8658bd5352a:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
+          "scope:scope-assertion:d2bd301f40b9b9f3:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_Al_foil:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_solvent_method_for_scrap_material_recovery:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_Al_foil_PROCESSED_BY_Process_solvent_method_for_scrap_material_recovery",
@@ -3765,9 +4072,16 @@
           "Component_cathode_scrap",
           "Material_cathode_active_material"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:84a853a971dadb83"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:2fa32acc8c06a5c4"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:84a853a971dadb83:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_cathode_scrap:entity",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_scrap_CONTAINS_Material_cathode_active_material",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:379fa5fe69dd1c7a",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:379fa5fe69dd1c7a:evidence"
         ]
@@ -3783,9 +4097,16 @@
           "Component_cathode_scrap",
           "Material_acetylene_black"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:84a853a971dadb83"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:131ece1ef83f76a7"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:84a853a971dadb83:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_cathode_scrap:entity",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_scrap_CONTAINS_Material_acetylene_black",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:61bcda2b6890cdaa",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:61bcda2b6890cdaa:evidence"
         ]
@@ -3801,9 +4122,16 @@
           "Component_cathode_scrap",
           "Material_PVDF"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:84a853a971dadb83"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:e61517d3280fdb06"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:84a853a971dadb83:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_cathode_scrap:entity",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_scrap_CONTAINS_Material_PVDF",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:44ed6adff33ce9cb",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:44ed6adff33ce9cb:evidence"
         ]
@@ -3819,9 +4147,16 @@
           "Component_cathode_scrap",
           "Material_cathode_active_material"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:84a853a971dadb83"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:2fa32acc8c06a5c4"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:84a853a971dadb83:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_cathode_scrap:entity",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_scrap_CONTAINS_Material_cathode_active_material",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:ba1e9551e3b43d1f",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:ba1e9551e3b43d1f:evidence"
         ]
@@ -3837,9 +4172,16 @@
           "Component_cathode_scrap",
           "Material_acetylene_black"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:84a853a971dadb83"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:131ece1ef83f76a7"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:84a853a971dadb83:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_cathode_scrap:entity",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_scrap_CONTAINS_Material_acetylene_black",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:2cc261f8838bff1c",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:2cc261f8838bff1c:evidence"
         ]
@@ -3855,9 +4197,16 @@
           "Component_cathode_electrode",
           "Material_cathode_active_material"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:cf249a63cb499259"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:b3dd51e4a798cf45"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:cf249a63cb499259:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_cathode_electrode:entity",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_electrode_CONTAINS_Material_cathode_active_material",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:38662a1bfb83af33",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:38662a1bfb83af33:evidence"
         ]
@@ -3873,9 +4222,16 @@
           "Component_cathode_electrode",
           "Material_acetylene_black"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:cf249a63cb499259"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:fe73fc220b22fd71"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:cf249a63cb499259:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_cathode_electrode:entity",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_electrode_CONTAINS_Material_acetylene_black",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:29f243e27fbb0f7b",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:29f243e27fbb0f7b:evidence"
         ]
@@ -3891,9 +4247,16 @@
           "Component_cathode_electrode",
           "Material_PVDF"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:cf249a63cb499259"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:7f7d3e6f947d6847"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:cf249a63cb499259:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_cathode_electrode:entity",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_electrode_CONTAINS_Material_PVDF",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:d789f54d7bf57666",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:d789f54d7bf57666:evidence"
         ]
@@ -3910,13 +4273,17 @@
           "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:a1b657c6e86cd44a"
+          "scope-assertion:5b86a0e1b5236937",
+          "scope-assertion:cf249a63cb499259"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:41c8908ea21d1232"
+          "scope-path:474ed4b2f32abf33",
+          "scope-path:d0540f1025b17eb5"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:a1b657c6e86cd44a:evidence",
+          "scope:scope-assertion:5b86a0e1b5236937:evidence",
+          "scope:scope-assertion:cf249a63cb499259:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_cathode_electrode:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_electrochemical_cycling_of_recovered_scrap_material_electrodes:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Component_cathode_electrode_PROCESSED_BY_Process_electrochemical_cycling_of_recovered_scrap_material_electrodes",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:ddbf33375b8da667",
@@ -3935,13 +4302,13 @@
           "Material_cathode_active_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:72ffc658e345c772"
+          "scope-assertion:7eadfbf38dfa8a36"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:32e6e205b1bee9ef"
+          "scope-path:577d8fc3c3b09623"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_solvent_method_for_scrap_material_recovery:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_cathode_active_material",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:8b21e44840d096ad",
@@ -3960,13 +4327,13 @@
           "Material_acetylene_black"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:72ffc658e345c772"
+          "scope-assertion:7eadfbf38dfa8a36"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:d3ebb25083bd3a0a"
+          "scope-path:688e7adb718076d0"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_solvent_method_for_scrap_material_recovery:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_acetylene_black",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:92d4b58c2808fb68",
@@ -3985,16 +4352,16 @@
           "Component_Al_foil"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:72ffc658e345c772",
-          "scope-assertion:bb4de8658bd5352a"
+          "scope-assertion:7eadfbf38dfa8a36",
+          "scope-assertion:d2bd301f40b9b9f3"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:2155016cf98ae268",
-          "scope-path:f7267dad7bdfe44e"
+          "scope-path:244aede218280161",
+          "scope-path:25b59a228e6f0567"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
-          "scope:scope-assertion:bb4de8658bd5352a:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
+          "scope:scope-assertion:d2bd301f40b9b9f3:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_Al_foil:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_solvent_method_for_scrap_material_recovery:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Component_Al_foil",
@@ -4014,13 +4381,13 @@
           "Material_cathode_active_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:88c8f3f1a0923ea5"
+          "scope-assertion:477a4cc88cddf238"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:082be939fc440681"
+          "scope-path:f3f2e17d2ad99f0b"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:88c8f3f1a0923ea5:evidence",
+          "scope:scope-assertion:477a4cc88cddf238:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_NaOH_dissolution_of_Al_foil_mixtures:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_NaOH_dissolution_of_Al_foil_mixtures_HAS_OUTPUT_Material_cathode_active_material",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:754742eca1401edc",
@@ -4039,13 +4406,13 @@
           "Material_acetylene_black"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:88c8f3f1a0923ea5"
+          "scope-assertion:477a4cc88cddf238"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:ffef3b07ec696910"
+          "scope-path:2cb8605dc1dcb057"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:88c8f3f1a0923ea5:evidence",
+          "scope:scope-assertion:477a4cc88cddf238:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_NaOH_dissolution_of_Al_foil_mixtures:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_NaOH_dissolution_of_Al_foil_mixtures_HAS_OUTPUT_Material_acetylene_black",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:33001d85675fb5ba",
@@ -4064,13 +4431,13 @@
           "Material_cathode_active_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:72ffc658e345c772"
+          "scope-assertion:7eadfbf38dfa8a36"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:32e6e205b1bee9ef"
+          "scope-path:577d8fc3c3b09623"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_solvent_method_for_scrap_material_recovery:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_cathode_active_material",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:ee1cc3a80070c771",
@@ -4089,13 +4456,13 @@
           "Material_cathode_active_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:72ffc658e345c772"
+          "scope-assertion:7eadfbf38dfa8a36"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:32e6e205b1bee9ef"
+          "scope-path:577d8fc3c3b09623"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_solvent_method_for_scrap_material_recovery:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_cathode_active_material",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:ad161176608b26e5",
@@ -4114,16 +4481,16 @@
           "Component_Al_foil"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:72ffc658e345c772",
-          "scope-assertion:bb4de8658bd5352a"
+          "scope-assertion:7eadfbf38dfa8a36",
+          "scope-assertion:d2bd301f40b9b9f3"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:2155016cf98ae268",
-          "scope-path:f7267dad7bdfe44e"
+          "scope-path:244aede218280161",
+          "scope-path:25b59a228e6f0567"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:72ffc658e345c772:evidence",
-          "scope:scope-assertion:bb4de8658bd5352a:evidence",
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
+          "scope:scope-assertion:d2bd301f40b9b9f3:evidence",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Component_Al_foil:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_solvent_method_for_scrap_material_recovery:entity",
           "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Component_Al_foil",
@@ -4132,111 +4499,103 @@
         ]
       },
       {
-        "id": "local-unit:ae1649892c510d1e",
+        "id": "local-unit:e87dde70c38bbf7e",
         "micrograph_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method",
-        "statement_id": "statement:05bee6e45d561973",
-        "statement_relation_id": "REL_Material_Scrap_materials_Pristine_HAS_OBSERVATION_Observation_Tap_densities",
-        "source_relation_id": "REL_Material_Scrap_materials_Pristine_HAS_OBSERVATION_Observation_Tap_densities",
+        "statement_id": "statement:88e9145e8aa0581c",
+        "statement_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_LiCoO2",
+        "source_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_LiCoO2",
         "source_relation_index": 20,
         "entity_ids": [
-          "Material_Scrap_materials_Pristine",
-          "Observation_Tap_densities"
+          "Process_solvent_method_for_scrap_material_recovery",
+          "Material_LiCoO2"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:7eadfbf38dfa8a36"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:64bad4d6e646790a"
+        ],
         "evidence_refs": [
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:05bee6e45d561973",
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:05bee6e45d561973:evidence"
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_solvent_method_for_scrap_material_recovery:entity",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_LiCoO2",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:88e9145e8aa0581c",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:88e9145e8aa0581c:evidence"
         ]
       },
       {
-        "id": "local-unit:2d74906a644e8824",
+        "id": "local-unit:e6c4397a59d8115a",
         "micrograph_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method",
-        "statement_id": "statement:3f64671cf4a17431",
-        "statement_relation_id": "REL_Material_Scrap_materials_Unheat_treated_HAS_OBSERVATION_Observation_Tap_densities",
-        "source_relation_id": "REL_Material_Scrap_materials_Unheat_treated_HAS_OBSERVATION_Observation_Tap_densities",
+        "statement_id": "statement:9e2b226ce49192b9",
+        "statement_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_PVDF",
+        "source_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_PVDF",
         "source_relation_index": 21,
         "entity_ids": [
-          "Material_Scrap_materials_Unheat_treated",
-          "Observation_Tap_densities"
+          "Process_solvent_method_for_scrap_material_recovery",
+          "Material_PVDF"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:7eadfbf38dfa8a36"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:7cbf1aa76d400b18"
+        ],
         "evidence_refs": [
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:3f64671cf4a17431",
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:3f64671cf4a17431:evidence"
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_solvent_method_for_scrap_material_recovery:entity",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_PVDF",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:9e2b226ce49192b9",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:9e2b226ce49192b9:evidence"
         ]
       },
       {
-        "id": "local-unit:51b319c6dbbb4cce",
+        "id": "local-unit:deb4857f536d478c",
         "micrograph_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method",
-        "statement_id": "statement:063fc59789fb6e0f",
-        "statement_relation_id": "REL_Material_Scrap_materials_200__C_HAS_OBSERVATION_Observation_Tap_densities",
-        "source_relation_id": "REL_Material_Scrap_materials_200__C_HAS_OBSERVATION_Observation_Tap_densities",
+        "statement_id": "statement:fceee22bc187bf59",
+        "statement_relation_id": "REL_Process_electrochemical_cycling_of_recovered_scrap_material_electrodes_HAS_OUTPUT_Material_LiCoO2",
+        "source_relation_id": "REL_Process_electrochemical_cycling_of_recovered_scrap_material_electrodes_HAS_OUTPUT_Material_LiCoO2",
         "source_relation_index": 22,
         "entity_ids": [
-          "Material_Scrap_materials_200__C",
-          "Observation_Tap_densities"
+          "Process_electrochemical_cycling_of_recovered_scrap_material_electrodes",
+          "Material_LiCoO2"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:5b86a0e1b5236937"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:85019d4becd2a358"
+        ],
         "evidence_refs": [
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:063fc59789fb6e0f",
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:063fc59789fb6e0f:evidence"
+          "scope:scope-assertion:5b86a0e1b5236937:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_electrochemical_cycling_of_recovered_scrap_material_electrodes:entity",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_electrochemical_cycling_of_recovered_scrap_material_electrodes_HAS_OUTPUT_Material_LiCoO2",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:fceee22bc187bf59",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:fceee22bc187bf59:evidence"
         ]
       },
       {
-        "id": "local-unit:ca429dabc75dea2d",
+        "id": "local-unit:2e247384c95c875e",
         "micrograph_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method",
-        "statement_id": "statement:d0b33d867d2349d9",
-        "statement_relation_id": "REL_Material_Scrap_materials_250__C_HAS_OBSERVATION_Observation_Tap_densities",
-        "source_relation_id": "REL_Material_Scrap_materials_250__C_HAS_OBSERVATION_Observation_Tap_densities",
+        "statement_id": "statement:5e757abee1c26d1d",
+        "statement_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_PVDF",
+        "source_relation_id": "REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_PVDF",
         "source_relation_index": 23,
         "entity_ids": [
-          "Material_Scrap_materials_250__C",
-          "Observation_Tap_densities"
+          "Process_solvent_method_for_scrap_material_recovery",
+          "Material_PVDF"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:d0b33d867d2349d9",
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:d0b33d867d2349d9:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:084d6bd9506b08cf",
-        "micrograph_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method",
-        "statement_id": "statement:5c4ea66d9ce77ede",
-        "statement_relation_id": "REL_Material_Scrap_materials_300__C_HAS_OBSERVATION_Observation_Tap_densities",
-        "source_relation_id": "REL_Material_Scrap_materials_300__C_HAS_OBSERVATION_Observation_Tap_densities",
-        "source_relation_index": 24,
-        "entity_ids": [
-          "Material_Scrap_materials_300__C",
-          "Observation_Tap_densities"
+        "scope_assertion_ids": [
+          "scope-assertion:7eadfbf38dfa8a36"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:5c4ea66d9ce77ede",
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:5c4ea66d9ce77ede:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:02c27ef1583b57c8",
-        "micrograph_id": "Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method",
-        "statement_id": "statement:859ad49ff6609548",
-        "statement_relation_id": "REL_Material_Scrap_materials_350__C_HAS_OBSERVATION_Observation_Tap_densities",
-        "source_relation_id": "REL_Material_Scrap_materials_350__C_HAS_OBSERVATION_Observation_Tap_densities",
-        "source_relation_index": 25,
-        "entity_ids": [
-          "Material_Scrap_materials_350__C",
-          "Observation_Tap_densities"
+        "scope_propagation_path_ids": [
+          "scope-path:7cbf1aa76d400b18"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
         "evidence_refs": [
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:859ad49ff6609548",
-          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:859ad49ff6609548:evidence"
+          "scope:scope-assertion:7eadfbf38dfa8a36:evidence",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:Process_solvent_method_for_scrap_material_recovery:entity",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:REL_Process_solvent_method_for_scrap_material_recovery_HAS_OUTPUT_Material_PVDF",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:5e757abee1c26d1d",
+          "source:Heat_Treatment_of_Licoo2_Recovered_from_Cathode_Scraps_with_Solvent_Method:relation:statement:5e757abee1c26d1d:evidence"
         ]
       }
     ],
@@ -9391,8 +9750,9 @@
       "final_triples_export": 0.009
     },
     "scope_audit": {
-      "evidence_record_count": 6,
+      "evidence_record_count": 25,
       "rejected_definition_count": 0,
+      "unscoped_candidate_count": 0,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
@@ -10501,6 +10861,7 @@
         },
         "evidence_span": "After vacuum distillation, PVDF, DMF and ethanol could be recovered from saturated DMF ethanol mixtures, respectively."
       }
-    ]
+    ],
+    "scope_unscoped_candidates": []
   }
 }

@@ -1,0 +1,466 @@
+{
+  "raw_response": "{\"population_scopes\":[{\"root_entity_id\":\"Product_lithium_ion_battery\",\"granularity\":\"batch\",\"sample_type\":\"spent lithium-ion battery powder\",\"scope_summary\":\"Spent LIBs powder obtained from a recycling company in Zhejiang, China, derived from a retired ternary lithium-ion battery processed by discharge-disassembly-crushing-screening into black powder.\",\"evidence\":[{\"evidence_id\":\"E7680074a20\",\"quote\":\"The spent LIBs powder was obtained from a recycling company in Zhejiang, China. The powder is a retired ternary lithium-ion battery that has been processed through “discharge-disassembly-crushingscreening” and other processes to form a black powder.\"},{\"evidence_id\":\"E49cb17f2b4\",\"quote\":\"Its diffraction peaks were indexed to carbon and LNCM (LiNi _ x Co _ y Mn _ z O _ 2) as the major phase\"}]}],\"process_scopes\":[{\"root_entity_id\":\"Process_glycine_leaching_of_spent_LIBs_powder\",\"method_family\":\"alkaline glycinate leaching\",\"evidence\":[{\"evidence_id\":\"Ed0957d1ec4\",\"quote\":\"After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed. After the reaction time, the beaker was removed and left to cool to room temperature. Then, the leachate and leach residue were separated by vacuum filtration, and the metal content of the leach solution was measured.\"},{\"evidence_id\":\"E8e3f68ee27\",\"quote\":\"Glycine solutions of different concentrations were used as leaching agents, in which Gly− is the ligand. Hydrogen peroxide (30%) was used as a reducing agent.\"}]}],\"unscoped_candidates\":[]}",
+  "raw_payload": {
+    "population_scopes": [
+      {
+        "root_entity_id": "Product_lithium_ion_battery",
+        "granularity": "batch",
+        "sample_type": "spent lithium-ion battery powder",
+        "scope_summary": "Spent LIBs powder obtained from a recycling company in Zhejiang, China, derived from a retired ternary lithium-ion battery processed by discharge-disassembly-crushing-screening into black powder.",
+        "evidence": [
+          {
+            "evidence_id": "E7680074a20",
+            "quote": "The spent LIBs powder was obtained from a recycling company in Zhejiang, China. The powder is a retired ternary lithium-ion battery that has been processed through “discharge-disassembly-crushingscreening” and other processes to form a black powder."
+          },
+          {
+            "evidence_id": "E49cb17f2b4",
+            "quote": "Its diffraction peaks were indexed to carbon and LNCM (LiNi _ x Co _ y Mn _ z O _ 2) as the major phase"
+          }
+        ]
+      }
+    ],
+    "process_scopes": [
+      {
+        "root_entity_id": "Process_glycine_leaching_of_spent_LIBs_powder",
+        "method_family": "alkaline glycinate leaching",
+        "evidence": [
+          {
+            "evidence_id": "Ed0957d1ec4",
+            "quote": "After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed. After the reaction time, the beaker was removed and left to cool to room temperature. Then, the leachate and leach residue were separated by vacuum filtration, and the metal content of the leach solution was measured."
+          },
+          {
+            "evidence_id": "E8e3f68ee27",
+            "quote": "Glycine solutions of different concentrations were used as leaching agents, in which Gly− is the ligand. Hydrogen peroxide (30%) was used as a reducing agent."
+          }
+        ]
+      }
+    ],
+    "unscoped_candidates": []
+  },
+  "evidence_records": [
+    {
+      "id": "candidates",
+      "kind": "candidates",
+      "entity_ids": [
+        "Product_lithium_ion_battery",
+        "Process_glycine_leaching_of_spent_LIBs_powder"
+      ],
+      "entity_types": {
+        "Product_lithium_ion_battery": "Component",
+        "Process_glycine_leaching_of_spent_LIBs_powder": "Process"
+      },
+      "entity_names": {
+        "Product_lithium_ion_battery": "lithium-ion battery",
+        "Process_glycine_leaching_of_spent_LIBs_powder": "glycine leaching of spent LIBs powder"
+      },
+      "entity_aliases": {
+        "Product_lithium_ion_battery": [
+          "spent LIBs",
+          "lithium ion battery",
+          "LIBs",
+          "spent lithium-ion batteries",
+          "spent LIB",
+          "LIB",
+          "lithium-ion batteries",
+          "lithium-ion battery"
+        ],
+        "Process_glycine_leaching_of_spent_LIBs_powder": [
+          "glycine leaching of spent LIBs powder"
+        ]
+      },
+      "entity_provenance": {
+        "Process_glycine_leaching_of_spent_LIBs_powder": "Leach 20 g of spent LIBs powder in a glycine solution of specified concentration with 30% H2O2 as reducing agent; adjust pH to the set value with solid NaOH, maintain at the desired temperature (water bath below 100 °C or high-pressure reactor above 100 °C) with magnetic stirring, then vacuum-filter to separate leachate and residue for metal analysis."
+      }
+    },
+    {
+      "id": "E1c6b045bf1",
+      "kind": "source",
+      "section_name": "Selective leaching of valuable metal from spent lithium-ion batteries in the alkaline glycinate system",
+      "text": "DOU Ai-chun(窦爱春)1\\*, FAN Yu-qian(范钰倩)1, KONG Xiao(孔箫)1, CHEN Yao-dong(陈耀东)1, QIAN Ji-kai(钱继凯)1, LIU Yun-jian(刘云建)1, SU Ming-ru(苏明如)1, ZHOU Yu(周玉)1, ZHAO Xiao-chao(赵晓朝)2"
+    },
+    {
+      "id": "E2cc3054ae4",
+      "kind": "source",
+      "section_name": "Graphic abstract:",
+      "text": "Abstract: In view of the difference in coordination capacity of the glycine ion (Gly−), a selective leaching process for treating with spent lithium-ion batteries (LIBs) in the alkaline glycinate system was proposed. The effects of retention time, leaching temperature, concentration of glycine ligand, liquid-solid ratio (L/S), pH, stirring speed, and H2O2 dosage on the leaching efficiency of valuable metals and the dissolution of impurities were investigated. When the spent LIBs were leached in 3 mol/Lglycine aqueous solution with pH of 8, L/S of 5 mL:1 g and H2O2 dosage of 5 vol.% at 90 ℃ and stirring speed of 400 r/min for 3 h, lithium, cobalt, nickel, and manganese recoveries were 96.31%, 83.18%, 91.56%, and"
+    },
+    {
+      "id": "E0e22188e1c",
+      "kind": "source",
+      "section_name": "Graphic abstract:",
+      "text": "31.16%, respectively, but Ca, Al, Fe, and Cu were almost insoluble. Meanwhile, the kinetic study showed that the activation energies for the leaching of Li, Co, Ni, and Mn were all in the range of 45−61 kJ/mol. The results indicate tha the leaching process is all controlled by chemical reactions."
+    },
+    {
+      "id": "E0cdea0b487",
+      "kind": "source",
+      "section_name": "Graphic abstract:",
+      "text": "Key words: spent lithium-ion batteries (LIBs); alkaline glycinate system; selective leaching; recovery; reaction kinetics"
+    },
+    {
+      "id": "E8b9f5ee5e3",
+      "kind": "source",
+      "section_name": "1 Introduction",
+      "text": "Lithium-ion batteries are being used increasingly due to their exceptional performance, which is one of the main reasons for the growth of lithium-ion batteries [1]. Lithium-ion battery vehicle sales reportedly exceed 10% of global vehicle sales. The market size for lithium batteries is expected to rise at a conforming compound annual growth rate (CAGR) of 14.6% to reach approximately $92 billion in 2026 [2, 3]. Additionally, the massive use of lithium batteries will lead to an increasing number of spent lithium-ion batteries (LIBs). Large quantities of valuable metals, such as lithium, cobalt, nickel, and manganese, can be found in these spent LIBs. If these metals are not recycled, they will cause serious waste of resources and environmental pollution [4, 5]."
+    },
+    {
+      "id": "Ec6d14fa3a4",
+      "kind": "source",
+      "section_name": "1 Introduction",
+      "text": "Researchers have extensively researched extracting metals such as Li, Co, Ni, and Mn from spent LIBs. Pyrometallurgical and hydrometallurgical processes are the most established and commonly used processes [6]. Traditional pyrometallurgy involves roasting spent lithium batteries at high temperatures under a reducing atmosphere, similar to natural ores. Typical reducing agents include carbon [7 − 9] and some highly reducing active metals, such as aluminum and iron [10, 11]. Also, reducing gases, such as the hydrogen reduction method [12] or the methane reduction method [13], can be used. The convenience and high efficiency of pyrometallurgy have made it widely used. Hydrometallurgical techniques are favored over pyrometallurgy for several factors. Pyrometallurgy requires high energy consumption, high equipment requirements, emits harmful gases, and recovers high levels of metal impurities. On the other hand, hydrometallurgy has high recovery efficiency, low energy consumption, high product purity, and low levels of harmful gases [14, 15]."
+    },
+    {
+      "id": "Ef26cc0b603",
+      "kind": "source",
+      "section_name": "1 Introduction",
+      "text": "Hydrometallurgy is usually divided into acid leaching [15], alkaline leaching [16], and microbial leaching [17, 18]. There are two types of acids, organic and inorganic acids. Typically, inorganic acids are H SO [19], HCl [20, 21], HNO [22], and so forth. Inorganic acids are highly efficient in leaching, but they produce harmful by-products. In contrast, organic acids, including citric [23, 24], ascorbic [25], malonic acids [26], D, L-malic acid [27], and oxalic acid [28, 29], are more friendly to the environment. Several reducing agents are often used in the leaching process to disrupt the solid crystal structure of highly valent metals and to make the liquid-solid phase reaction more complete [30]. Reducing agents typically include, but are not limited to, hydrogen peroxide [31], glucose [32], and sodium sulfite [16]. However, this aforementioned indiscriminate leaching behavior for metals can lead to an overly complex composition of metal ions in an acid solution, which causes difficulties in separating valuable metals in the subsequent solution and potentially hazardous emissions of heavy metals, weakening its application prospects [33]."
+    },
+    {
+      "id": "Ec05b5801f4",
+      "kind": "source",
+      "section_name": "1 Introduction",
+      "text": "In recent years, selective leaching processes were found to be more suitable for recovering spent LIBs powder using the formation of a complex in leaching [34−37]. WANG et al [33] investigated the selective leaching of 96.4% nickel and 96.3% cobalt from spent lithium batteries using ammoniaammonium bicarbonate solution. MA et al [38] investigated that 97.7% nickel and 99.1% cobalt could be selectively leached from spent lithium batteries using ammonia and ammonium sulfite."
+    },
+    {
+      "id": "Ef5a7d865ff",
+      "kind": "source",
+      "section_name": "1 Introduction",
+      "text": "However, these methods still suffer from difficulties, such as the need for reductive roasting and the additional wastewater discharge of sulfate from sulfites. In addition, the volatilization of ammonia makes the operating environment intensely harsh."
+    },
+    {
+      "id": "Eb87874f3fc",
+      "kind": "source",
+      "section_name": "1 Introduction",
+      "text": "Therefore, based on the selectivity of the alkaline glycinate system for calcium, magnesium, and iron [39−41], this system has been proposed for the first time to leach spent LIBs to prepare relatively pure solutions containing Li, Co, Ni, and Mn, which facilitates the direct preparation of a new ternary precursor from it in the later stage [42]. The results show that the glycinate aqueous solution system can simultaneously leach Li, Co, Ni, and Mn in spent LIBs. The rest of the impurity metals, such as Al, Fe, and Cu, are hardly leached out. This also indicates that the glycinate aqueous solution system has a better selectivity for the valuable metals in the spent LIBs powder. In parallel, appropriate regulation rules for the leaching process are determined by analyzing the kinetics of the whole process and then studying its reaction mechanism for use in industrial production later."
+    },
+    {
+      "id": "E7680074a20",
+      "kind": "source",
+      "section_name": "2.1 Materials",
+      "text": "The spent LIBs powder was obtained from a recycling company in Zhejiang, China. The powder is a retired ternary lithium-ion battery that has been processed through “discharge-disassembly-crushingscreening” and other processes to form a black powder. The metal contents of the powders are shown in Table 1."
+    },
+    {
+      "id": "E49cb17f2b4",
+      "kind": "source",
+      "section_name": "2.1 Materials",
+      "text": "The spent LIBs powder was analyzed separately by X-ray diffraction (XRD, D/MAX-C). Its diffraction peaks were indexed to carbon and LNCM (LiNi _ x Co _ y Mn _ z O _ 2) as the major phase (Figure 1)."
+    },
+    {
+      "id": "Ebe95c9c288",
+      "kind": "source",
+      "section_name": "2.1 Materials",
+      "text": "[TABLE:TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001]"
+    },
+    {
+      "id": "E1d734bd79b",
+      "kind": "source",
+      "section_name": "2.1 Materials",
+      "text": "The spent LIBs powder was characterized using scanning electron microscopy (SEM, FEI QUANTA FEG250). As shown in Figure 2, although the agglomeration of the material is relatively serious, the particles of the material are tiny and uniform in size. Therefore, the shrinkage kernel model can be used for kinetic analysis."
+    },
+    {
+      "id": "E8e3f68ee27",
+      "kind": "source",
+      "section_name": "2.2 Experimental method",
+      "text": "Glycine solutions of different concentrations were used as leaching agents, in which Gly− is the ligand. Hydrogen peroxide (30%) was used as a reducing agent. All the chemical reagents used in this study were analytically pure, and the solutions were prepared using distilled water at the prescribed concentrations."
+    },
+    {
+      "id": "Ed0957d1ec4",
+      "kind": "source",
+      "section_name": "2.2 Experimental method",
+      "text": "As required by the experiment, a glycine solution at a specific concentration was made. The solution was warmed up in a water bath with a constant temperature while being stirred with a magnetic stirrer. Once the desired temperature was reached, solid NaOH pellets were added to the solution until the experimentally set pH value was achieved, which was monitored using a pH meter. After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed. After the reaction time, the beaker was removed and left to cool to room temperature. Then, the leachate and leach residue were separated by vacuum filtration, and the metal content of the leach solution was measured. It was worth mentioning that experiments with reaction temperatures exceeding 100 °C needed to be carried out in a highpressure reactor. Due to the mixing of leaching and washing solutions, all concentrations of impurity metals in this paper were converted to concentrations in 100 mL of solution."
+    },
+    {
+      "id": "Efc1d65a627",
+      "kind": "source",
+      "section_name": "2.3 Analysis methods",
+      "text": "The concentrations of four target elements, Li, Ni, Co, Mn, and four impurities, Ca, Al, Fe, and Cu in the leachate, were analyzed by atomic absorption spectrometry (AAS, 4510F-PC) and inductively coupled plasma spectrometry (ICP-OES, Agilent 5110). The changes in the material before and after leaching were also detected by X-ray diffraction."
+    },
+    {
+      "id": "Ec3c7b3120e",
+      "kind": "source",
+      "section_name": "3.1 Reduction leaching",
+      "text": "The leaching mechanism of the spent LIBs in the alkaline glycinate system is a process of reduction and complexation. The leaching mechanism is shown in Figure 3. The reaction between solid and glycine is a heterogeneous reaction, mainly occurring at the interface layer between the solid (metal oxide lattice) and liquid (alkaline glycine hydrogen peroxide solution) phases, and the reaction deepens over time. Under the reduction of hydrogen peroxide, Co, Ni, and Mn ions enter the solution as divalent metal ions and then complex with glycine. Li+ can dissolve directly in the system, while copper and aluminum exist in elemental form and cannot dissolve in the system."
+    },
+    {
+      "id": "E84a3b4c196",
+      "kind": "source",
+      "section_name": "3.1 Reduction leaching",
+      "text": "The optimum conditions for leaching were investigated in terms of seven aspects: reaction time, reaction temperature, total concentration of Gly−([Gly−]T), liquid-solid ratio (L/S), pH, stirring rate, and hydrogen peroxide addition. The leaching results of valuable metals for each experimental parameter are presented in Figure 4."
+    },
+    {
+      "id": "Eb72613371d",
+      "kind": "source",
+      "section_name": "3.1.1 Effect of retention time",
+      "text": "The aim was to investigate the recoveries of Li, Co, Ni, and Mn from spent LIBs powder over time and the dissolution of impurities in the leaching solution. The experiments were conducted under the following conditions: leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL: 1 g, pH 8, and stirring speed 400 r/min."
+    },
+    {
+      "id": "E1db64376e0",
+      "kind": "source",
+      "section_name": "3.1.1 Effect of retention time",
+      "text": "It can be observed from Figure 4(a) that the leaching efficiencies of valuable metals (Li, Co, Ni, and Mn) increase significantly with the prolonging of retention time from 1 h to 3 h. Afterward, leaching efficiencies remain stable or slightly decrease between 3 h and 4 h. The reason is that the long reaction time at higher temperatures makes part of the water in the solution evaporate, which decreases the liquid-solid ratio in the system and weakens the liquid-solid interaction ability, thus"
+    },
+    {
+      "id": "E71193f6cd7",
+      "kind": "source",
+      "section_name": "3.1.1 Effect of retention time",
+      "text": "reached equilibrium at around 3 h. Meanwhile, Table S1 demonstrates that varying the leaching time had little impact on the dissolution of impurities in the leach solution. Therefore, 3 h was the optimal leaching time in the subsequent leaching process."
+    },
+    {
+      "id": "Ea531dbab7f",
+      "kind": "source",
+      "section_name": "3.1.1 Effect of retention time",
+      "text": "Cu and Al in spent LIBs are present as metal monomers and hydrogen peroxide was predominantly reducing under alkaline conditions. So, these two are almost insoluble in this system."
+    },
+    {
+      "id": "E48231b3136",
+      "kind": "source",
+      "section_name": "3.1.2 Effect of reaction temperature",
+      "text": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIB powders over temperature and the dissolution of impurities in the leach solution. The experiments were conducted under the following conditions: leaching time 3 h, 3.0 mol/L [Gly−]T, L/S 5 mL: 1 g, pH 8, and stirring speed 400 r/min."
+    },
+    {
+      "id": "E5b5078f1f1",
+      "kind": "source",
+      "section_name": "3.1.2 Effect of reaction temperature",
+      "text": "It can be concluded from Figure 4(b) that the enhancement of reaction temperature can effectively improve the leaching efficiencies of different metals. For instance, the extraction ratio of Li increases from 26.51% to 94.13% as the temperature is increased from 50 to 90 ℃."
+    },
+    {
+      "id": "Eb71ffd7e70",
+      "kind": "source",
+      "section_name": "3.1.2 Effect of reaction temperature",
+      "text": "With the increase in temperature, the reaction rate is accelerated by the rise of molecular diffusion ability, and the complexation of Gly− is improved. Thus, the efficiency of leaching for each metal is significantly enhanced. Subsequently, the leaching efficiency of each metal gradually leveled off by continuing to raise the temperature. The temperature can affect the complexation ability between Gly− and M2+ (M=Co, Ni, Mn), as well as the difficult degree of metal ions and OH− forming hydroxide or oxide precipitates. As a result, the leaching efficiency exhibits the zig-zag phenomenon. Considering that in addition to the increase in the leaching efficiency of the valuable metals, the dissolution of the impurity metals will also be enhanced to some extent, as shown in Table S2. Therefore, the leaching temperature is determined to be 90 ℃, considering the leaching efficiency, the purity of the leach solution, the energy consumption, and the safety of operation."
+    },
+    {
+      "id": "Ed669d03b9f",
+      "kind": "source",
+      "section_name": "3.1.3 Effect of leaching agent concentration",
+      "text": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder over leaching agent concentration and the dissolution of impurities in the leach solution. The experiments were conducted under the following conditions: leaching time 3 h, leaching temperature 90 ℃, L/S 5 mL:1 g, pH 8, and stirring speed 400 r/min."
+    },
+    {
+      "id": "Ea1a0c2675f",
+      "kind": "source",
+      "section_name": "3.1.3 Effect of leaching agent concentration",
+      "text": "It can be found from Figure 4(c) that properly enhancing the [Gly−]T concentration plays a favorable role in improving the leaching efficiency of valuable metals from spent LIBs powder. The overall leaching efficiency of the reaction system tends to increase as the [Gly−]T concentration increases from 0.5 mol/L to 3.0 mol/L. With the increases of the ligand concentration, the free Gly in the system increases and forms more complexes with the metal ions. Moreover, the leaching efficiency of Co decreases to some extent while the concentration of Gly− increases from 1 to 2.5 mol/L. In this concentration range, the coordination reaction of Ni with Gly− has a higher priority relative to Co, resulting in the preferential coordination of Gly− with Ni."
+    },
+    {
+      "id": "Ef8abfefe95",
+      "kind": "source",
+      "section_name": "3.1.3 Effect of leaching agent concentration",
+      "text": "As the ligand concentration gradually increases to 3.0 mol/L, the ligand reactivity increases, and many stable metal complexes are formed in the solution. When the ligand concentration is more significant than 3.0 mol/L, the coordination effect between Gly− and the metals in the spent LIBs powder gradually is saturated, the overall viscosity in the solution is increased, and the motility of each metal ion is decreased, resulting in the leaching efficiency starting to decline."
+    },
+    {
+      "id": "E387be08508",
+      "kind": "source",
+      "section_name": "3.1.3 Effect of leaching agent concentration",
+      "text": "At the same time, too high a concentration of ligands will cause the reaction products to adhere to the surface of the leaching material, affecting the leaching reaction positively. When the leaching solution gradually becomes supersaturated, the overall coordination ability of the glycinate is reduced. In general, as [Gly−]T increases, coordination ions with different coordination numbers are formed, and between these complex ion conversions, leaching efficiency will experience fluctuations. The leaching efficiency curves obtain the best leaching results for Li, Ni, Co, and Mn at a leaching agent concentration of 3.0 mol/L, with 45.31%, 57.35%, 28.63%, and 15.31%, respectively. As seen from Table S3, the dissolution of impurity metal remained shallow as the concentration of glycinate increased."
+    },
+    {
+      "id": "E93e6b847c8",
+      "kind": "source",
+      "section_name": "3.1.4 Effect of liquid-solid ratio",
+      "text": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder and the dissolution of impurities in the leach solution as the liquid-solid ratio varied. The liquid-solid ratio can affect dispersion, but if it is too large, the dispersion performance may deteriorate at the same rotational speed. When the liquid/solid ratio continues to increase, it is equivalent to raising the absolute amount of reactant and may also improve the leaching efficiency. The experiments were conducted under the following conditions: leaching temperature 90 ℃, leaching time 3 h, 3.0 mol/L [Gly−], pH 8, and stirring speed 400 r/min."
+    },
+    {
+      "id": "E6ab4e33092",
+      "kind": "source",
+      "section_name": "3.1.5 Effect of pH",
+      "text": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder and the dissolution of impurities in the leach solution as the pH varied. The experiments were conducted under the following conditions: leaching time 3 h, leaching temperature 90 °C, 3.0 mol/L [Gly−], L/S 5 mL:1 g, and stirring speed 400 r/min."
+    },
+    {
+      "id": "E83a3584034",
+      "kind": "source",
+      "section_name": "3.1.5 Effect of pH",
+      "text": "From Figure 4(e), it can be found that the leaching efficiency fluctuates more significantly with the change in reaction pH. When the pH of the solution is between 6 and 7, the whole reaction system is in a weakly acidic environment, and Gly will react with H+ as follows:"
+    },
+    {
+      "id": "E22a47c7e09",
+      "kind": "source",
+      "section_name": "3.1.5 Effect of pH",
+      "text": "Hx Gly ^x-1 ⇌x H ^+ + Gly ^- (Eq. 1)"
+    },
+    {
+      "id": "E639c6c9324",
+      "kind": "source",
+      "section_name": "3.1.5 Effect of pH",
+      "text": "This makes Gly− less cooperative with the metal ions in the spent LIBs powder. As the pH increases, the free H+ in the solution decreases, and more free Gly− can participate in the coordination reaction. The leaching efficiency reaches its highest when the pH reaches 8 and then begins to decrease significantly. This is due to the elevated OH− concentration in the solution, which forms insoluble or slightly soluble precipitates with major metal ions, such as Co(OH). As a result, the number of metal ions in the system decreases, leading to a lower leaching efficiency. On the other hand, Table S5 demonstrates the dissolution of impurity metals decreased significantly with increasing pH. After comprehensive consideration, the pH of 8 is the superior reaction condition."
+    },
+    {
+      "id": "E7f3358e7fc",
+      "kind": "source",
+      "section_name": "3.1.6 Effect of stirring speed",
+      "text": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder over stirring speed and the dissolution of impurities in the leach solution. The experiments were conducted under the following conditions: leaching time 3 h, leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL:1 g, and pH 8."
+    },
+    {
+      "id": "E77b8d593ae",
+      "kind": "source",
+      "section_name": "3.1.7 Effect of hydrogen peroxide addition",
+      "text": "The aim was to investigate the recovery of Li, Co, Ni, and Mn from spent LIBs powder and the dissolution of impurities in the leach solution as the amount of hydrogen peroxide. The concentration of hydrogen peroxide was 30%. The experiments were conducted under the following conditions: leaching time 3 h, leaching temperature 90 ℃, 3.0 mol/L [Gly−], L/S 5 mL: 1 g, pH 8, and stirring speed 400 r/min."
+    },
+    {
+      "id": "Edf2657ab7f",
+      "kind": "source",
+      "section_name": "3.1.7 Effect of hydrogen peroxide addition",
+      "text": "Hydrogen peroxide acts as a reducing agent in the system, and its addition destroys the solid crystal structure built by the high-valent metal, allowing the liquid-phase reaction process to proceed more completely [5]. Figure 4 (g) shows the effect of hydrogen peroxide addition on the leaching efficiencies of valuable metals. The leaching efficiencies of Co and Ni are significantly improved. As shown in Table S7, the dissolution of the impurity metals remained almost constant as the amount of hydrogen peroxide changed. The dosage of 5 vol.% of hydrogen peroxide is the optimum condition."
+    },
+    {
+      "id": "Ed3ef7b6e06",
+      "kind": "source",
+      "section_name": "3.1.7 Effect of hydrogen peroxide addition",
+      "text": "In summary, the optimal conditions for the leaching of retired ternary lithium batteries by the alkaline glycinate system are reaction time of 3 h, temperature of 90 ^∘C, [Gly−] concentration of 3 mol/L, liquid-solid ratio of 5: 1, pH of 8, stirring speed of 400 r/min and H2O2 dosage of 5 vol.%. Under these optimal leaching conditions, the optimal leaching efficiencies of Li, Co, Ni, and Mn were 96.31%, 83.18%, 91.56%, and 31.16%, respectively. Compared with other metals, Li was the easiest to leach. And the concentrations of Ca, Al, Fe, and Cu are 13.52, 46.13, 53.56, and 40.04 mg/L. Figure 5 compares X-ray diffraction patterns of spent LIBs powder before and after leaching. Some of the unleashed Mn is present in the form of MnCO. As shown in Figures 6 and 7, the valuable metals almost disappeared after leaching, and the impurity metals Ca, Al, Fe, and Cu remained almost unchanged."
+    },
+    {
+      "id": "E2bd4d9b28a",
+      "kind": "source",
+      "section_name": "3.1.7 Effect of hydrogen peroxide addition",
+      "text": "reactions at the liquid-solid interface. The modeling of the reaction and the elucidation of the control steps of the reaction process plays an essential role in controlling the reaction rate of the whole system and understanding the reaction mechanism [43]."
+    },
+    {
+      "id": "Ef0ab2d3d3f",
+      "kind": "source",
+      "section_name": "3.1.7 Effect of hydrogen peroxide addition",
+      "text": "The investigation of leaching kinetics allows for a better understanding of the mechanisms of the leaching process to define and regulate the production steps. The shrinkage kernel model is the classical method used for the analysis of liquid-solid reaction kinetics. It consists of three control steps, namely chemical reaction control, internal diffusion control, and mixing control [44, 45]. The specific expressions are as follows."
+    },
+    {
+      "id": "E91b32d361c",
+      "kind": "source",
+      "section_name": "3.1.7 Effect of hydrogen peroxide addition",
+      "text": "Chemical reaction control:"
+    },
+    {
+      "id": "Efc85434078",
+      "kind": "source",
+      "section_name": "3.1.7 Effect of hydrogen peroxide addition",
+      "text": "1 - (1 - x) ^1 / 3 = k1 t (Eq. 2)"
+    },
+    {
+      "id": "E8b83fcdf1e",
+      "kind": "source",
+      "section_name": "3.1.7 Effect of hydrogen peroxide addition",
+      "text": "Internal diffusion control:"
+    },
+    {
+      "id": "E5effedd9cb",
+      "kind": "source",
+      "section_name": "3.1.7 Effect of hydrogen peroxide addition",
+      "text": "1 - 2 x / 3 - (1 - x) ^2 / 3 = k2 t (Eq. 3)"
+    },
+    {
+      "id": "E99a42862b1",
+      "kind": "source",
+      "section_name": "3.1.7 Effect of hydrogen peroxide addition",
+      "text": "Leaching kinetics is the study of multiphase"
+    },
+    {
+      "id": "E6eb4a42b3f",
+      "kind": "source",
+      "section_name": "3.2 Leaching kinetics",
+      "text": "Mixing control:"
+    },
+    {
+      "id": "E3fd5ae69bf",
+      "kind": "source",
+      "section_name": "3.2 Leaching kinetics",
+      "text": "ln(1 - x) / 3 + (1 - x) ^(- 1 / 3) - 1 = k3 t (Eq. 4)"
+    },
+    {
+      "id": "Ee5e4bb296d",
+      "kind": "source",
+      "section_name": "3.2 Leaching kinetics",
+      "text": "In the above equation, x represents the leaching efficiencies of Li, Co, Ni, and Mn; k1-3 ^ (min ^-1) represents the integrated rate constants; t (min) represents the leaching time."
+    },
+    {
+      "id": "Eec17c6aaa9",
+      "kind": "source",
+      "section_name": "3.2 Leaching kinetics",
+      "text": "The experiments were performed in a 1.5 L beaker. The beaker was filled with 1 L of 3 mol/Lsolution of [ Gly ^- ]T, and the pH was adjusted to 8 with NaOH solid particles at 25, 35, 45, 55, and 65 ^∘C. 200 g of spent LIBs powder was added. The leaching efficiency of the target metals was then analyzed by sampling every 10 min. It was found that the early leaching rate of lithium was too fast, so the sampling interval for lithium was every minute in the first 10 min of the reaction start and every five minutes after 10 min. The results of the Li, Co, Ni, and Mn leaching efficiencies are shown in Figure 8."
+    },
+    {
+      "id": "E7587e381b4",
+      "kind": "source",
+      "section_name": "3.2 Leaching kinetics",
+      "text": "The experimental data in Figure 8 were fitted, and the results obtained from the fitting are shown in Figure 9 and Table 2. In addition, the Arrhenius equation [46] is applied to plot lnk against 1000/T, thus calculating the activation energy of the target metal and determining the type of reaction."
+    },
+    {
+      "id": "Ee8cfe0cae1",
+      "kind": "source",
+      "section_name": "3.2 Leaching kinetics",
+      "text": "lnk = lnA - Ea / R T (Eq. 5)"
+    },
+    {
+      "id": "Ecb3fce990e",
+      "kind": "source",
+      "section_name": "3.2 Leaching kinetics",
+      "text": "where Ea is the apparent activation energy; A is the frequency factor; T (K) is the leaching temperature; and R is the gas constant 8.3145 J/(K·mol)."
+    },
+    {
+      "id": "E756d45bab7",
+      "kind": "source",
+      "section_name": "3.2 Leaching kinetics",
+      "text": "The correlation results of the activation energy fit are shown in Figure 10. The leaching activation energies of Li, Ni, Co, and Mn are 45.73, 53.13, 50.64, and 60.36 kJ/mol, respectively. They indicated that the leaching process is controlled by chemical reactions. The leaching temperature has a significant influence on the leaching efficiencies of metals. Based on the magnitude of activation energy, Li is more easily leached, and Mn is the most difficult to be leached. This is also verified in the condition experiment."
+    },
+    {
+      "id": "Ec8945d873e",
+      "kind": "source",
+      "section_name": "3.2 Leaching kinetics",
+      "text": "The Arrhenius equations for Li, Co, Ni, and Mn in the temperature range of 25 to 65 ^∘C can be derived from the fitting results of Figure 10."
+    },
+    {
+      "id": "E906498d850",
+      "kind": "source",
+      "section_name": "3.2 Leaching kinetics",
+      "text": "Li: y = - 5.55 x + 11.51, R ^2 = 0.91 (Eq. 6)"
+    },
+    {
+      "id": "E27041558cf",
+      "kind": "source",
+      "section_name": "3.2 Leaching kinetics",
+      "text": "Co: y = - 6.39 x + 11.71, R ^2 = 0.99 (Eq. 7)"
+    },
+    {
+      "id": "Ec2c1d75ba5",
+      "kind": "source",
+      "section_name": "3.2 Leaching kinetics",
+      "text": "[TABLE:TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0002]"
+    },
+    {
+      "id": "E25b065932e",
+      "kind": "source",
+      "section_name": "3.2 Leaching kinetics",
+      "text": "Ni: y = - 6.09 x + 11.53, R ^2 = 0.96 (Eq. 8)"
+    },
+    {
+      "id": "Ed2d0b797ae",
+      "kind": "source",
+      "section_name": "3.2 Leaching kinetics",
+      "text": "Mn: y = - 7.26 x + 14.16, R ^2 = 0.98 (Eq. 9)"
+    },
+    {
+      "id": "E8a556ccd7d",
+      "kind": "source",
+      "section_name": "4 Conclusions",
+      "text": "A new method for recycling spent LIBs using the alkaline glycinate system has been proposed in this study. This method aims to recover valuable metals from these batteries."
+    },
+    {
+      "id": "E9bd93f6a7f",
+      "kind": "source",
+      "section_name": "4 Conclusions",
+      "text": "1) Li, Co, Ni, and Mn leaching efficiencies are 96.31%, 83.18%, 91.56%, and 31.16%, respectively."
+    },
+    {
+      "id": "E537158058e",
+      "kind": "source",
+      "section_name": "4 Conclusions",
+      "text": "These high leaching efficiencies are achieved under specific conditions, including the reaction time of 3 h, temperature of 90 ℃, [Gly−] of 3 mol/L, liquidsolid ratio of 5 mL: 1 g, pH of 8, stirring speed of 400 r/min and H2O2 dosage of 5 vol.%."
+    },
+    {
+      "id": "E3de89d8216",
+      "kind": "source",
+      "section_name": "4 Conclusions",
+      "text": "2) The concentrations of Ca, Al, Fe, and Cu are 13.52, 46.13, 53.56, and 40.04 mg/L. This selectivity is because the glycine ligand is not readily complex with metals such as Ca, Al, Fe,, and Cu."
+    },
+    {
+      "id": "E370d396cc1",
+      "kind": "source",
+      "section_name": "4 Conclusions",
+      "text": "3) The detailed analysis of the kinetics of the leaching reaction provides a deeper understanding of the reaction mechanism. This analysis is in complete agreement with the experimental results. With this knowledge, a solid theoretical basis existed for further efforts to develop a closed-loop recycling process for spent lithium batteries."
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "raw_response": "{\"population_scopes\":[{\"root_entity_id\":\"Product_lithium_ion_secondary_battery\",\"granularity\":\"batch\",\"sample_type\":\"spent lithium ion battery\",\"scope_summary\":\"Spent lithium ion secondary battery (LIB) waste used as the study sample; cathodic active material (LiCoO2) was separated from these LIB samples by thermal treatment, shredding, calcination, and screening.\",\"evidence\":[{\"evidence_id\":\"E7ec1a05529\",\"quote\":\"Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, calcination steps (Lee and Rhee, 2002). First, LIB samples were thermally treated in a muffle furnace at 150 ^∘C for 1 h.\"},{\"evidence_id\":\"E0e114227b8\",\"quote\":\"Reductive leaching of LiCoO2 from spent lithium ion battery was investigated in terms of reaction variables.\"},{\"evidence_id\":\"E5b46903108\",\"quote\":\"In this study, acid leaching has been applied to recover cobalt and lithium from cathodic active material of spent LIB.\"}]}],\"process_scopes\":[{\"root_entity_id\":\"Process_LiCoO2_leaching_in_nitric_acid_solution\",\"method_family\":\"acid leaching\",\"evidence\":[{\"evidence_id\":\"E2990d35d70\",\"quote\":\"Leaching of LiCoO2 in nitric acid solution was tested in a reactor (Fig. 4), which was placed in a water bath to control the reaction temperature within ± 0.5 ^∘C.\"},{\"evidence_id\":\"Ef908ed912e\",\"quote\":\"Reductive leaching of the cathodic active material with H2O2 addition in a nitric acid solution was employed for a better dissolution of cobalt and lithium.\"}]}],\"unscoped_candidates\":[]}",
+  "raw_payload": {
+    "population_scopes": [
+      {
+        "root_entity_id": "Product_lithium_ion_secondary_battery",
+        "granularity": "batch",
+        "sample_type": "spent lithium ion battery",
+        "scope_summary": "Spent lithium ion secondary battery (LIB) waste used as the study sample; cathodic active material (LiCoO2) was separated from these LIB samples by thermal treatment, shredding, calcination, and screening.",
+        "evidence": [
+          {
+            "evidence_id": "E7ec1a05529",
+            "quote": "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, calcination steps (Lee and Rhee, 2002). First, LIB samples were thermally treated in a muffle furnace at 150 ^∘C for 1 h."
+          },
+          {
+            "evidence_id": "E0e114227b8",
+            "quote": "Reductive leaching of LiCoO2 from spent lithium ion battery was investigated in terms of reaction variables."
+          },
+          {
+            "evidence_id": "E5b46903108",
+            "quote": "In this study, acid leaching has been applied to recover cobalt and lithium from cathodic active material of spent LIB."
+          }
+        ]
+      }
+    ],
+    "process_scopes": [
+      {
+        "root_entity_id": "Process_LiCoO2_leaching_in_nitric_acid_solution",
+        "method_family": "acid leaching",
+        "evidence": [
+          {
+            "evidence_id": "E2990d35d70",
+            "quote": "Leaching of LiCoO2 in nitric acid solution was tested in a reactor (Fig. 4), which was placed in a water bath to control the reaction temperature within ± 0.5 ^∘C."
+          },
+          {
+            "evidence_id": "Ef908ed912e",
+            "quote": "Reductive leaching of the cathodic active material with H2O2 addition in a nitric acid solution was employed for a better dissolution of cobalt and lithium."
+          }
+        ]
+      }
+    ],
+    "unscoped_candidates": []
+  },
+  "evidence_records": [
+    {
+      "id": "candidates",
+      "kind": "candidates",
+      "entity_ids": [
+        "Product_lithium_ion_secondary_battery",
+        "Process_LiCoO2_leaching_in_nitric_acid_solution"
+      ],
+      "entity_types": {
+        "Product_lithium_ion_secondary_battery": "Component",
+        "Process_LiCoO2_leaching_in_nitric_acid_solution": "Process"
+      },
+      "entity_names": {
+        "Product_lithium_ion_secondary_battery": "lithium ion secondary battery",
+        "Process_LiCoO2_leaching_in_nitric_acid_solution": "LiCoO2 leaching in nitric acid solution"
+      },
+      "entity_aliases": {
+        "Product_lithium_ion_secondary_battery": [
+          "LIB",
+          "lithium ion secondary battery",
+          "lithium ion secondary batteries",
+          "LIBs"
+        ],
+        "Process_LiCoO2_leaching_in_nitric_acid_solution": [
+          "LiCoO2 leaching in nitric acid solution"
+        ]
+      },
+      "entity_provenance": {
+        "Process_LiCoO2_leaching_in_nitric_acid_solution": "Leaching of LiCoO2 in nitric acid solution was tested in a reactor placed in a water bath to control temperature within ±0.5 °C. Experiments varied HNO3 concentration, solid/liquid ratio, temperature, and H2O2 concentration. Reductive leaching was carried out in the presence of H2O2 as a reducing agent to increase leaching efficiency."
+      }
+    },
+    {
+      "id": "Eb05a8583de",
+      "kind": "source",
+      "section_name": "Reductive leaching of cathodic active materials from lithium ion battery wastes",
+      "text": "Churl Kyoung Leea,\\*, Kang-In Rheeb"
+    },
+    {
+      "id": "E2b82920b6b",
+      "kind": "source",
+      "section_name": "Reductive leaching of cathodic active materials from lithium ion battery wastes",
+      "text": "Received 24 August 2001; received in revised form 12 March 2002; accepted 9 September 2002"
+    },
+    {
+      "id": "E0e114227b8",
+      "kind": "source",
+      "section_name": "ABSTRACT",
+      "text": "Reductive leaching of LiCoO2 from spent lithium ion battery was investigated in terms of reaction variables. The leaching efficiency of LiCoO2 increased with increasing temperature, and concentration of HNO3, but with decreasing solid/liquid (S/L) ratio. Li and Co from LiCoO were leached over 95% with the addition of 1.7 vol Ω^0 / ΩH2 O2 as a reducing agent. This is due to the reduction of Co ^3+ to Co ^2+ which can be readily dissolved. The dissolution rates of Co and Li were inversely proportional to their respective concentrations in the solution. Apparent activation energies of 12.5 and 11.4 kcal/mol were obtained for Co and Li, respectively. This indicates that the dissolution of LiCoO2 is controlled by surface chemical reaction. D 2003 Elsevier Science B.V. All rights reserved."
+    },
+    {
+      "id": "Eb1986f5362",
+      "kind": "source",
+      "section_name": "ABSTRACT",
+      "text": "Keywords: Lithium ion battery; Cathodic active materials; Reductive leaching; H2O2"
+    },
+    {
+      "id": "E247d73fe99",
+      "kind": "source",
+      "section_name": "1. Introduction",
+      "text": "Recycling of lithium batteries has become important because, due to their characteristics of lightness and good performance (Lundblad and Bergman, 1997; Plichta and Salomon, 1987), these batteries are increasingly substituting for other batteries. In 2000, the worldwide production of lithium ion secondary batteries (LIBs) reached about 500 millions cells of which Korea has a 10% market share. From this consumption, LIB waste is annually estimated at 200 to 500 MT, with a metal content of 5 to 15 wt.% Co and 2 to 7 wt.% Li."
+    },
+    {
+      "id": "Ee9d179bba7",
+      "kind": "source",
+      "section_name": "1. Introduction",
+      "text": "Spent lithium primary batteries cannot be disposed of unless the contained metallic lithium is properly removed, due to its explosive nature. Also, lithium cobalt oxide is adopted as cathodic active material; therefore, valuable metals such as cobalt and lithium have to be recycled (Sabin, 1997; Shackle and Calif, 1994; Suita, 1990; William et al., 1982; Zhang et al., 1998). Thus, there are two problems to be solved; disposal of harmful waste and prevention of explosion during recycling of LIB waste. Metallic lithium in the used LIBs can be formed on graphite anode by overcharging and abnormal deposition. Vigorous oxidation of metallic lithium with moisture can be dangerous during the mechanical treatment of spent LIBs. For successful recovery of cobalt and lithium from spent LIBs, safety in mechanical treatment, and waste minimization are considered to be the most important."
+    },
+    {
+      "id": "E5b46903108",
+      "kind": "source",
+      "section_name": "1. Introduction",
+      "text": "In this study, acid leaching has been applied to recover cobalt and lithium from cathodic active material of spent LIB. The cathodic active material was separated by physical processes involving thermal treatment, shredding, and vibrating screening as shown in Fig. 1 (Lee and Rhee, 2002). Thermal pretreatment was necessary for the separation of cell units from the battery package. However, it caused thermal hardening of the plastic casing, and partial oxidation of metallic lithium. Thus, the batteries were shredded for the liberation of electrode materials; a shredder was designed considering the selectivity of active materials as well as the reduction of cost and impurities (Lee and Rhee, 2000)."
+    },
+    {
+      "id": "Ef908ed912e",
+      "kind": "source",
+      "section_name": "1. Introduction",
+      "text": "Reductive leaching of the cathodic active material with H2O2 addition in a nitric acid solution was employed for a better dissolution of cobalt and lithium. Effects of temperature, HNO3 concentration, solid/liquid (S/L) ratio, and H2O2 concentration were investigated. The kinetics of the reductive leaching was also studied."
+    },
+    {
+      "id": "E2684e5a7c9",
+      "kind": "source",
+      "section_name": "2. Experimental procedures",
+      "text": "A LIB consists of a plastic casing and several cell units. Each cell unit has a cathode, an anode, an organic separator, an organic electrolyte, and a Nicoated steel casing. In the cathode, LiCoO2 active materials, carbon-conducting additives, and a binder are pasted on aluminum foil. The anode is fabricated by the same process with graphite active materials, carbon-conducting additives, and a binder pasted on copper foil. Table 1 shows a typical chemical composition of the LIB."
+    },
+    {
+      "id": "E7ec1a05529",
+      "kind": "source",
+      "section_name": "2. Experimental procedures",
+      "text": "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, calcination steps (Lee and Rhee, 2002). First, LIB samples were thermally treated in a muffle furnace at 150 ^∘C for 1 h. Then, the samples were disassembled with a highspeed shredder. Separated segments were simultaneously classified into the range 1–10 mm in size. Second, thermal treatment was performed in a furnace, and electrode materials were separated from the current collectors by vibrating screening. Next, cathodic active material, LiCoO2 was obtained by burning carbon and binder off in the temperature range 700– 900 ^∘C for 1 h. Fig. 2 shows XRD patterns of calcined cathodic active material at temperature of 700– 900 ^∘C.. The diffractogram indicates that the carbon and binder were burnt off by calcining above 800 ^∘C.. The cathodic active material was ground in a ball mill and dried in an oven at 60 ^∘C for 48 h. The mean particle size was about 15 Am, as shown in Fig. 3 (Lee and Rhee, 2002)."
+    },
+    {
+      "id": "E75e6a86bdb",
+      "kind": "source",
+      "section_name": "2. Experimental procedures",
+      "text": "[TABLE:TABLE_Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes_0001]"
+    },
+    {
+      "id": "E2990d35d70",
+      "kind": "source",
+      "section_name": "2. Experimental procedures",
+      "text": "Leaching of LiCoO2 in nitric acid solution was tested in a reactor (Fig. 4), which was placed in a water bath to control the reaction temperature within ± 0.5 ^∘C. To obtain the optimum conditions of LiCoO2 leaching, leaching experiments were tested at various conditions, i.e. changing HNO3 concentration, S/L ratio, temperature, and H2O2 concentration. To increase leaching efficiency, reductive leaching was carried out in the presence of a reducing agent such as H2O2"
+    },
+    {
+      "id": "E50d20b25e2",
+      "kind": "source",
+      "section_name": "2. Experimental procedures",
+      "text": "The concentration of various metallic ions was measured using an atomic absorption spectrometer (Perkin-Elmer M3100) and inductively coupled plasma atomic emission spectrometer (JY-38). The solid phases in the cathodic active material were identified using an X-ray diffractometer (Rigaku, Cu-Ka)."
+    },
+    {
+      "id": "E2b48ec2f29",
+      "kind": "source",
+      "section_name": "3.1. Reductive leaching",
+      "text": "To obtain the optimum conditions for the reductive leaching of LiCoO2, several sets of leaching experiments were made under different conditions, i.e. various HNO3 concentrations, S/L ratio, temperature, and H2O2 amount added. Fig. 6 shows the effect of HNO3 concentration on the leaching of LiCoO2 at 20 g/L S/L ratio, 75 ^∘ ^,, 0.8 vol.% H2O2,, and 30 min. The leaching efficiency of Co and Li increased with increasing HNO3 concentration. More than 80% of Co and Li was extracted within 30 min above 1 M HNO3"
+    },
+    {
+      "id": "Eddd1a15b9e",
+      "kind": "source",
+      "section_name": "3.1. Reductive leaching",
+      "text": "The leaching behavior with different S/L ratios is presented in Fig. 7 at a fixed condition of 1 M HNO3, 75 ^∘C, 0.8 vol.% H2O2, and 30 min. The leaching efficiency of Co and Li decreased with increasing S/L ratio. Extractions of 90% of Co and Li were achieved within 30 min when S/L ratio was lower than 20 g/L for H2O2 addition of 0.8 vol.%."
+    },
+    {
+      "id": "E401a39d6f2",
+      "kind": "source",
+      "section_name": "3.2. Kinetic considerations",
+      "text": "Assuming that leaching of Co and Li has no interdependence and the dissolution rate is inversely proportional to their respective ionic concentrations (CCo and CLi), the square of Ci has a linear relationship with respect to reaction time as described by the following equation,"
+    },
+    {
+      "id": "E4157ce4c99",
+      "kind": "source",
+      "section_name": "3.2. Kinetic considerations",
+      "text": "Ci ^2 = k t (Eq. 1)"
+    },
+    {
+      "id": "Ea1b1c29050",
+      "kind": "source",
+      "section_name": "3.2. Kinetic considerations",
+      "text": "where Ci represents the concentration of species i in the leaching solution(mol cm ^-3), k is the apparent rate constant (mol ^2 cm ^-6 s ^-1), and t is time (s). Fig. 10 is the plot of square of C vs. time, which is drawn from the effect of temperature (Fig. 8). From the linearity observed as shown in the case of Co (Fig. 10 (a)) and Li (Fig. 10(b)), the assumptions could be confirmed. Therefore, the dissolution rate of Co and Li was inversely proportional to their respective ionic concentrations. The apparent activation energy of Co and Li was calculated from the Arrhenius plot (Fig. 11) to be 12.5 and 11.4 kcal/mol, respectively. Therefore, the dissolution of LiCoO2 seems to be controlled by surface chemical reaction (Han and Lawson, 1980)."
+    },
+    {
+      "id": "E339983a220",
+      "kind": "source",
+      "section_name": "4. Conclusions",
+      "text": "An investigation of leaching of LiCoO2 by the use of nitric acid led to the following conclusions."
+    },
+    {
+      "id": "E5b75a7bf1a",
+      "kind": "source",
+      "section_name": "4. Conclusions",
+      "text": "1. By reductive leaching with the addition of hydrogen peroxide as a reducing agent, the leaching efficiency increased by 45% for Co and 10% for Li compared with that in only nitric acid leaching. This behavior seems to be due to the reduction of Co^3 + to Co2 +, which is readily dissolved. The leaching efficiency of Co and Li increased with increasing HNO3 concentration, temperature, and hydrogen peroxide concentration and with decreasing S/L ratio. An effective condition for the leaching would be 1 M HNO3, 10 to 20 g/L initial S/L ratio, 75 ^∘C temperature, and 1.7 vol.% H2O2 addition."
+    },
+    {
+      "id": "E1ec03fbd60",
+      "kind": "source",
+      "section_name": "4. Conclusions",
+      "text": "2. From the kinetic study, the dissolution rates of Co and Li were found to be inversely proportional to their respective ionic concentrations. The apparent activation energy was obtained as 12.5 and 11.4 kcal/mol for Co and Li, respectively. This indicates that the dissolution of LiCoO2 is controlled by surface chemical reaction."
+    }
+  ]
+}

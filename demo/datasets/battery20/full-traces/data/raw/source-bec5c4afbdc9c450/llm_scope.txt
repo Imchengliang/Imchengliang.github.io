@@ -6,12 +6,46 @@
     "scope_subject_text": "lithium ion battery",
     "scope_label": "lithium ion battery",
     "evidence_ids": [
-      "E0d9b329662"
+      "E221263d753",
+      "E1b5a18fe4b"
     ],
     "evidence_span": "The spent LIBs ofBL-5CA (Nokia mobile) series used in this work were collected in the local market.",
+    "evidence": [
+      {
+        "evidence_id": "E221263d753",
+        "quote": "The spent LIBs ofBL-5CA (Nokia mobile) series used in this work were collected in the local market."
+      },
+      {
+        "evidence_id": "E1b5a18fe4b",
+        "quote": "In this study we have determined the best conditions for Co leaching from spent LIBs (BL-5CANokia series)."
+      }
+    ],
     "population_granularity": "batch",
-    "sample_type": "lithium ion battery",
-    "scope_description": "Spent BL-5CA (Nokia mobile) series lithium ion batteries collected in the local market.",
+    "sample_type": "spent lithium-ion battery",
+    "scope_description": "Spent LIBs of the BL-5CA (Nokia mobile) series collected in the local market; the active cathode material (LiCoO2) was separated from the Al foil with NMP and used for leaching.",
     "sample_size": null
+  },
+  {
+    "root_entity_ids": [
+      "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+    ],
+    "scope_subject_text": "LiCoO2 dissolution in glycine and ascorbic acid",
+    "scope_label": "LiCoO2 dissolution in glycine and ascorbic acid",
+    "evidence_ids": [
+      "E313a901d43",
+      "E705f74b113"
+    ],
+    "evidence_span": "The above cathode material (LiCoO2, 0.2: g) was subjected for chemical dissolution using mild organic acids, an aqueous mixture of glycine and ascorbic acid were taken in a three necked roundbottomed flask with volume of100 mL and the flask was placed in a water bath to control the reaction temperature during the leaching.",
+    "evidence": [
+      {
+        "evidence_id": "E313a901d43",
+        "quote": "The above cathode material (LiCoO2, 0.2: g) was subjected for chemical dissolution using mild organic acids, an aqueous mixture of glycine and ascorbic acid were taken in a three necked roundbottomed flask with volume of100 mL and the flask was placed in a water bath to control the reaction temperature during the leaching."
+      },
+      {
+        "evidence_id": "E705f74b113",
+        "quote": "Leaching with 0.5 M glycine, 0.02 M ascorbic acid and 0.2 g LiCoO2 in a batch extractor, results in a highly efficient recovery of Co within 360 min of the processing time at 80 ^∘C."
+      }
+    ],
+    "method_family": "organic acid leaching"
   }
 ]

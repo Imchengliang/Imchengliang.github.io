@@ -1,0 +1,227 @@
+Annotate study scope for the supplied final graph candidates using the source
+passages. Candidate names, aliases and context summaries help identify objects;
+they are not source evidence. Copy candidate IDs and passage IDs exactly.
+
+1. For each Product/Component candidate that represents this study's sampled
+   device, component or population, return one population scope. Use `instance`
+   for an individually identified model/sample and `batch` for an unspecified
+   population. Summarize only sample facts stated by this paper (source, brand,
+   collection, selection, etc.). Distinguish the initial sample from processed
+   fractions, residues, reagents, characterization media and table aggregates.
+   A shared sample declaration can support multiple named models. Do not invent
+   missing provenance. A root in graph topology is only a candidate, not proof
+   that it is an independently sampled population.
+2. For each Process candidate, return its broad parent method as `method_family`.
+   Use a short method noun phrase, without parenthetical alternatives or settings.
+   It can be a semantic generalization, not a verbatim substring of the name.
+   Cite an actual passage describing that method or its application. A sample
+   origin, culture adaptation or measurement sentence alone does not establish
+   a treatment method. Shared procedures may support multiple treatment arms;
+   do not replace a control with another arm's method.
+3. Use section and surrounding context to distinguish this study from cited
+   work and background. Choose the evidence yourself; no passage is preverified
+   as current-study evidence. Context summaries never qualify as quotations.
+4. Every candidate must have a scope or an `unscoped_candidates` entry explaining
+   why it is not a study subject or lacks sufficient source evidence. Do not
+   force a scope just to meet coverage. Cite relevant evidence for exclusions
+   when available. Never silently omit a candidate.
+5. Each scope needs exact source quotations in `evidence`. Put the quotation
+   most directly supporting its scope first, then any additional support for
+   summary details. Keep sample-origin and method evidence distinct. Return
+   one scope per selected candidate and JSON only:
+{
+  "population_scopes": [{
+    "root_entity_id": "component_id", "granularity": "batch",
+    "sample_type": "lithium-ion battery",
+    "scope_summary": "Study batteries supplied by the company named in the source.",
+    "evidence": [{"evidence_id": "E1", "quote": "Exact sample-source quotation."}]
+  }],
+  "process_scopes": [{
+    "root_entity_id": "process_id", "method_family": "acid leaching",
+    "evidence": [{"evidence_id": "E2", "quote": "Exact method quotation."}]
+  }],
+  "unscoped_candidates": [{
+    "root_entity_id": "other_id", "reason": "Why a study scope cannot be assigned.",
+    "evidence": [{"evidence_id": "E3", "quote": "Relevant source quotation."}]
+  }]
+}
+
+## Product/Component candidates
+- Product_lithium_ion_battery | Component | lithium ion battery
+  Aliases: Lithium ion batteries; LIBs; spent Lithium ion batteries; spent lithium-ion batteries; lithium ion battery; spent LIB; LIB
+- Component_cathode | Component | cathode
+  Aliases: cathode material; cathode active materials; cathode materials; cathode
+
+## Process candidates
+- Process_secondary_alkaline_leaching | Process | secondary alkaline leaching
+  Aliases: secondary alkaline leaching
+  Context summary (not evidence): Secondary alkaline leaching is part of the recycling process for spent lithium-ion batteries, following thermal treatment, crushing, ball milling, and sieving, and preceding secondary acid leaching and purification. Specific operating conditions are not provided in the experimental section.
+- Process_secondary_acid_leaching | Process | secondary acid leaching
+  Aliases: secondary acid leaching
+  Context summary (not evidence): Secondary acid leaching is part of the recycling process for spent lithium-ion batteries, following secondary alkaline leaching and preceding purification. Specific operating conditions are not provided in the experimental section.
+- Process_purification | Process | purification
+  Aliases: purification
+  Context summary (not evidence): Purification is part of the recycling process for spent lithium-ion batteries, following secondary acid leaching. It produces a purified leaching liquor with enriched transition metal ions. Specific operating conditions are not provided in the experimental section.
+- Process_organic_solvent_extraction | Process | organic solvent extraction
+  Aliases: organic solvent extraction
+  Context summary (not evidence): Organic solvent extraction is used to recover NiSO4, CoSO4, and MnSO4 one by one from the purified leaching liquor, followed by corresponding scrubbing and stripping procedures. Specific organic solvents and operating conditions are not provided in the experimental section.
+- Process_scrubbing | Process | scrubbing
+  Aliases: scrubbing
+  Context summary (not evidence): Scrubbing is performed as part of the organic solvent extraction procedure to recover NiSO4, CoSO4, and MnSO4 one by one. Specific operating conditions are not provided in the experimental section.
+- Process_stripping | Process | stripping
+  Aliases: stripping
+  Context summary (not evidence): Stripping is performed as part of the organic solvent extraction procedure to recover NiSO4, CoSO4, and MnSO4 one by one. Specific operating conditions are not provided in the experimental section.
+- Process_NaF_deposition | Process | NaF deposition
+  Aliases: NaF deposition
+  Context summary (not evidence): NaF deposition method is used to remove Mg2+ ions from the leachate if the magnesium ion concentration exceeds the limitation of the national standard. Specific operating conditions are not provided in the experimental section.
+- Process_controlled_crystallization | Process | controlled crystallization
+  Aliases: controlled crystallization
+  Context summary (not evidence): Controlled crystallization is used to prepare LiNi1/3Co1/3Mn1/3O2 cathode material from the purified solution, followed by solid-state calcinations. Specific operating conditions are not provided in the experimental section.
+- Process_solid_state_calcination | Process | solid-state calcination
+  Aliases: solid-state calcinations; solid-state calcination
+  Context summary (not evidence): Solid-state calcinations are performed after controlled crystallization to prepare LiNi1/3Co1/3Mn1/3O2 cathode material from the purified solution. Specific operating conditions are not provided in the experimental section.
+- Process_co_precipitation | Process | co-precipitation
+  Aliases: co-precipitation
+  Context summary (not evidence): Co-precipitation is used to synthesize Li[(Ni1/3Co1/3Mn1/3)1-xMgx]O2 (x = 0, 0.01, 0.025, 0.05) cathode materials by doping with magnesium. Magnesium is added during co-precipitation using MgSO4 to achieve Mg/(Ni+Co+Mn) molar ratios of 0%, 1%, 2.5%, and 5%. The recovered metal sulfate salts NiSO4, CoSO4, and MnSO4 are used as starting materials. Specific operating conditions are not provided in the experimental section.
+- Process_high_temperature_sintering | Process | high temperature sintering
+  Aliases: high temperature sintering
+  Context summary (not evidence): High temperature sintering is performed after co-precipitation to synthesize Li[(Ni1/3Co1/3Mn1/3)1-xMgx]O2 (x = 0, 0.01, 0.025, 0.05) cathode materials using the recovered metal sulfate salts NiSO4, CoSO4, and MnSO4 as starting materials. Specific operating conditions are not provided in the experimental section.
+
+## Source passages
+[E91072abf25] section=Synthesis and performance of Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 prepared from spent lithium ion batteries
+Yaqing Weng, Shengming Xu∗, Guoyong Huang, Changyin Jiang
+
+[E19cf03f803] section=Synthesis and performance of Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 prepared from spent lithium ion batteries
+\- A safe and economic disposal technology for toxic metals from mixed batteries waste.
+
+[E571fe71171] section=Synthesis and performance of Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 prepared from spent lithium ion batteries
+\- Performance of regenerated LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 was comparable to that of commercial electrodes.
+
+[Edf7ad073a4] section=Synthesis and performance of Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 prepared from spent lithium ion batteries
+\- The Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 ^- showed an enhanced cyclability within x ≤0.01
+
+[E6fbbff9b43] section=Synthesis and performance of Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 prepared from spent lithium ion batteries
+\- A tolerable removal level of Mg2+ was achieved without F− pollution caused by conventional NaF method.
+
+[Ec068260edd] section=Synthesis and performance of Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 prepared from spent lithium ion batteries
+\- The recycling process exhibits extensive and promising application for battery waste.
+
+[E14659bfd7d] section=ABSTRACT
+To reduce cost and secondary pollution ofspent lithium ion battery (LIB) recycling caused by complicated separation and purification, a novel simplified recycling process is investigated in this paper. Removal of magnesium is a common issue in hydrometallurgy process. Considering magnesium as an important additive in LIB modification, tolerant level of magnesium in leachate is explored as well. Based on the novel recycling technology, Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 (0 ≤x ≤0.05) cathode materials are achieved from spent LIB. Tests ofXRD, SEM, TG-DTA and so on are carried out to evaluate material properties. Electrochemical test shows an initial charge and discharge capacity ofthe regenerated LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 to be 175.4 mAh g−1 and 152.7 mAh g ^1 (2.7 – 4.3, 0.2 C),, respectively. The capacity remains 94% ofthe original value after 50 cycles (2.7–4.3 V, 1 C). Results indicate that presence of magnesium up to x = 0.01 has no significant impact on overall performance of Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1 Mg ]O. As a result, magnesium level as high as 360 mg L−1 in leachate remains tolerable. Compared with conventional limitation ofmagnesium content, the elimination level of magnesium exceeded general impurity-removal requirement.
+
+[E904e3b6c50] section=ABSTRACT
+© 2012 Elsevier B.V. All rights reserved.
+
+[E1f825c2085] section=1. Introduction
+Lithium ion batteries (LIBs) are extensively used as electrochemical power sources for portable electronic devices due to their outstanding electrochemical performances. With the development of these portable electronic products, the worldwide consumption of LIBs has increased tremendously. Total worldwide rechargeable batteries production is estimated to be 7.0 billion in 2015 [1]. Therefore, it is expected that a massive amount of exhausted batteries together with waste generated during LIB manufacturing process will become a focus issue. Spent LIBs contain large amounts of valuable metals; meanwhile, they are reorganized as typical hazardous solid waste due to toxic heavy metals and corrosive electrolytes. Nowadays, highly concerns on environmental preserve as well as reuse of secondary resource demand for desirable disposal ofbattery waste. Moreover, strict environmental legislation and regulations stimulate the recycling for batteries waste. Consequently, clean recycling of spent Lithium ion batteries (LIBs) is a critical issue to achieve a sustainable LIB industry.
+
+[E776060327c] section=1. Introduction
+Lithium cobalt oxide is the first commercial cathode material available in the market. Lots of research has been carried out to recover metal values such as cobalt and lithium from LiCoO2 active materials [1–4]. The current recycling processes for spent lithiumion batteries have been reviewed by Xu et al. [4]. The overall recycling technology basically consists of physical and chemical processes. The majority chemical processes employ dilute HCl, HNO3, H2SO4, or even mixed acid to dissolve the cathode material [5]. Co, Li and Cu are easily leached from spent Li-ion batteries using acid solutions and reducing agents like hydrogen peroxide (H2O2). H2O2 is usually added in order to convert all cobalt or manganese to the 2+ state which was more readily dissolvable in acid solution. Solvent extraction, precipitation method, crystallization, ion exchange and electrolysis were found as main separation operations proposed to treat leaching liquors [3,6], while solvent extraction using cationic commercial extractants such as D2EHPA, PC-88A, Cyanex 272 and Acorga M5640 to separate metal values presented very promising results. In addition, using spent batteries to prepare LiCoO2 electrode materials was also investigated. For Lee [7], LiCoO2 was separated from spent electrodes in a single synthetic step using hydrothermal method without any scraping procedure, and the renovated LiCoO2 cathode material was obtained simultaneously. Nan et al. [8] achieved LiCoO2 cathode material with good electrochemical performance which was synthesized by recovered compounds of cobalt and lithium.
+
+[Ea9dcc3e898] section=1. Introduction
+Nevertheless, traditional LiC ρ̅ _ o O _ 2 cathode material has disadvantages of high cost and inferior stability. Scientists and engineers have worked on searching for alternative materials [9–11]. Research and development have been made to synthesize cathode materials such as Li (Ni1-x-y Cox Mny) 02, LiMn2O4,, and LiFePO4 with enhanced performance and environmentally more friendly [12,13]. Among them, the layered LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 has been widely used because ofits excellent performance [ 14, 15 ]. Attention has been paid to recover and recycle Li (Ni1-x-y Cox Mny) O2 cathode materials for they contain rich valuable metals. Up to now, most of the research works in the chemical process cannot fulfill the complete separation ofeach metal value from the Li (Ni1-x-y Cox Mny) O2 cathode materials. Wang et al. [16] developed a recycling process to separate and recover as much of the valuable metals as possible. Metal values such as Co, Mn, Ni and Li from the cathode active materials of spent lithium-ion batteries were leached out employing hydrochloric acid system. For the recovery process of the mixture: Mn was recovered as MnO2 and manganese hydroxide with KMnO4 reagent; Ni was extracted with dimethylglyoxime; Co was precipitated as cobalt hydroxide; Li was recovered as Li2CO3 precipitation. Li et al. [6] establish a recovery process of valuable metals from spent battery material. The leaching solution was used to prepare the precursor of Nix Coy Mnz cathode material directly after separation of impurities, the cost is competitive with the market price for the same chemicals prepared from primary resources.
+
+[E36e831038c] section=1. Introduction
+It is worthy noted that cathode materials used for commercial LIBs are not always pure compound. Significant electric drive vehicle technology growth is to be expected in the next 10 years while batteries will be the key factor to achieve essential progress in electric vehicle. As a result, application of Li-ion batteries in electric and hybrid vehicles is expected to increase significantly for the next decades. Extensive application and scale effect of LIBs in HEV and PHEV demands for high power and safety stability batteries as well as lower cost, which has led to the utilization of mixed cathode materials [17–20]. To improve the storage performance of Li–Mn spinel at high temperatures, Kim et al. [17] prepared the LiCoO2 / LiNi1 / 3 Mn1 / 3 Co1 / 3 O2 mixed cathode electrodes. Cells using the mixed electrodes showed very stable cyclability in a high cut-off voltage. Liu et al. [18] presented their studies on applying LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 mixed with LiCoO2 in mass ratios of 1:1 and 1:2 in high-power lithium-ion secondary cells. LIB with the mixed positive electrode exhibits improved safety performance during overcharge period. Kitao et al. [19] investigated a mixture of Li–Mn spinel (Li1. 1 Mn1. 9 O4) and Li–Ni–Co–Mn oxide (LiNi0. 4 Co0. 3 Mn0. 3 O2) as a positive electrode material. They found that improved storage performance resulted from the suppression of capacity loss of Li–Mn-spinel in the mixture. The adoption of mixed cathode materials makes the current recycling technology aimed at solely separating and extracting valuable metals no longer applicable. Cobalt, nickel and manganese are extremely similar in chemical properties; separation from each other is difficult. Besides, more elements would be involved in the collected battery waste, and the purification cost and large-scale feasibility should also be particularly considered for a practicable application. Evidently, traditional process is not economically attractive due to long and complicated separation steps and thus must be readjusted. Alternative recycling methods are desirable and the existing process to dispose spent batteries need to be modified as well. Consequently, this work proposed a new idea: whether is feasible to regenerate LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 active material directly from the leaching liquid without complicated separation and impurity removal steps? In a word, this paper aimed at developing a novel recycling process applicable to a mixture of spent Li-ion batteries, with emphasis on regeneration of a pure and marketable form of cathode material and generation of low amounts of second pollution.
+
+[E9a0cd28131] section=1. Introduction
+Furthermore, as we all know, impurities in feed influence recovered product quality significantly thus purification process is an essential step of an overall recycling route. From the viewpoint of expanded reproduction and industrialization, price of impurity removal procedure constitutes a major cost of whole recovery process and must be given particular consideration for a large-scale application. Magnesium has been used as a modification ingredient in design of improved cathode materials, which also compromises a common impurity source of battery waste. On one hand, Mg ^2+ is difficult to remove from the leaching solution. Due to relatively low magnesium content, an excess of NaF has to be used in order to produce precipitate MgF2. To achieve good crystalline materials of acceptable filterability, reaction is usually conducted at high temperature (80 - 90 ^∘C) and requires long aging time. As a result, the NaF deposition method has disadvantages of consuming high reagents and energy, and is time consuming. Besides, severe corrosion to equipment and secondary pollution of wastewater disposal are unavoidable duo to high content of fluoride ions added in the process. On the other hand, a small amount of Mg doping has been claimed to improve electrochemical performance and extensively used in research [21–26]. It would therefore be desirable to determine what level of impurity removal is best for a cost saving consideration.
+
+[E673e567b8f] section=1. Introduction
+In this paper, a novel recycling technology to regenerate LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 as usable cathode material from exhausted LIBs was developed. By a combination of dismantling, ball milling, leaching and impurity removing, LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 powder was directly prepared from purified leaching liquor via co-precipitation followed by solid-state synthesis [ 27 - 31 ]. Experiments to examine the comprehensive performances of regenerated cathode material were conducted and electrochemical property was compared with commercial LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 electrode. The treatment route was tailored to the battery scraps of a wide range of compositions, providing a flexible solution to dispose various kinds of spent batteries, which could be feasible for recycling of spent LIBs in large scales. In an attempt to determine the tolerant level of Mg ^2+, the divalent magnesium ions were added to solution during the precursor preparation step. The effects of Mg ^2+ ion on structure, surface morphology and electrochemical performance of Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 were presented. Conventional route employing NaF deposition method to treat leaching liquid containing high amount of magnesium will be reported in another paper later.
+
+[E3c7a6f2ccf] section=2.1. Cathode materials recovery and preparation
+An overall recycling route proposed to treat spent LIBs is shown in Fig. 1:
+
+[Eab06362431] section=2.1. Cathode materials recovery and preparation
+Recycling process consists of thermal treatment, crushing, ball milling, sieving, secondary alkaline leaching, secondary acid leaching and purification. It is applied to preparation of a regenerated solution with enriched transition metal ions from spent lithiumion batteries. There are three approaches proposed to deal with the purified leaching liquor. Compound of NiSO4, CoSO4,, and MnSO4 is recovered one by one as the final products by organic solvent extraction and corresponding scrubbing and stripping procedures. If the concentration of magnesium ion remained in the leachate exceeds the limitation of national standard, NaF deposition method is used to remove the Mg ^2+ ion. While there is small amount of Mg ^2+ ions present in the leaching solution, complete elimination of Mg ^2+ could be avoided if the cathode materials with low content of Mg is acceptable. LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 cathode material is prepared from purified solution by controlled crystallization followed by solid-state calcinations. On the purpose of determining the fate of magnesium ions in the leaching liquid, Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 (x = 0, 0.01, 0.025, 0.05) cathode materials were synthesized by doping method. Magnesium was added during co-precipitation process followed by high temperature sintering using the recovered metal sulfate salts of NiSO4, CoSO4, and MnSO4 as staring materials. The Mg content is set at Mg / (Ni + Co + Mn) ofmolar ratios 0%, 1%, 2.5%, 5% by controlling the amount of MgSO4.
+
+[Ec3081dc4eb] section=2.2. Measurement and characterization
+The gravimetric titration method with dimethylglyoxime was used to determine concentration of nickel; the aluminum content was determined by standard zinc solution titration with EDTA; cobalt concentration was determined by the 722S-type spectrophotometer; iodometric method was used to determine concentration of copper; the manganese content was determined by potentiometer titration with potassium hypermanganate based on oxidization–reduction principle [32]. Inductively coupled plasmas spectrometer ICP-AES was employed to determine the concentration of metal cations.
+
+[E99ad17034b] section=2.2. Measurement and characterization
+X-ray diffraction (XRD) pattern was collected on a Rigaku Ru-200 power diffractometer (Japan), with Cu K- radiation in the 2- range of 10–80◦ by step of 0.02 ^∘ and a scanning rate of 0.5 ^∘min ^-1 (operated at 40 kV and 100 mA). The particle shape and morphology ofcathode materials were observed using scanning electron microscope (SEM, JSM-6301F, JEOL Instrument and EM3900M, KYKY Instrument). The particle size distributions were measured by a laser granulometer (Mastersizer, Malvern). The thermal decomposition behavior of mixed transition metal carbonates (precursor) was first examined by thermo-gravimetric analysis (TGA) and differential thermal analysis (DTA). The electrochemical performance was evaluated by using a laboratory half-cells (size 2032). The cathode was fabricated from a paste made of active material, acetylene black as conductive additive, and PTFE as binder at 8:1:1 (mass) ratio. The electrode was pressed into a thin sheet and punched into pellets with 6–8 mm in diameter. Subsequently, the as-prepared electrode film was dried in vacuum at 120 ^∘C for 24 h to remove the surface solvents. The coin-type cells were assembled and sealed in a dry and argon-filled glove box to evaluate the electrochemical properties of the cathode material. Lithium metal foil was used as the counter electrode and EC-DMC with a molar volume ratio of1:1 as a solvent and a supporting electrolyte of1 mo L ^-1 LiPF6 (Jiangshu Guotaihuarong Limed). Celgard 2400 polyethylene/polypropylene was employed as a separating film. After aging for 12 h to ensure full infiltration ofthe electrolyte, cells were charged and discharged for three cycles at a current density of 0.2 C rate (150 m Ag ^-1 was assumed to be the 1 C rate) in the potential range of 2.7 – 4.3 (vs. Li ^+ / Li) for activation. The galvanostatic charge–discharge test was performed between the desired potential limits with different current densities. Charge and discharge tests were carried out on a LAND-CT2001A system (Wuhan, China) at room temperature.
+
+[E9944dd635e] section=3.1. Elemental analysis
+D2EHPA solvent extraction and NaF deposition method, which is demonstrated in Fig. 1 in detail. However, the metal loss of nickel, cobalt and manganese increases as the continuous impurity removal process progresses.
+
+[E16b97962a0] section=3.1. Elemental analysis
+D2EHPA is used as extractant to further remove impurities after chemical deposition and neutralization. According to the pH influence on metal ions extraction from a sulfuric solution using D2EHPA as extractant [33], metals are extracted based on the following sequence: Fe ^3 ^+ > Zn ^2+ > Ca ^2+ > Al ^3+ > Mn ^2+ > Cd ^2+ > Cu ^2+ > Co ^2+ ≈ N̅ ̅i̅ ̅^̅2̅+̅ ≈ M̂ ̂ĝ ̂^̂2̂+̂ ≫Ca ^2+ ≫Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ approximately Ca ^2+ Li ^+. Co ^2+, Ni ^2+ and Mg ^2+ can only be extracted at higher pH solutions. It is evident that D2EHPA is effective in eliminating impurities such as iron, zinc, calcium and aluminum, but not that effective in dealing with magnesium, which exhibits extremely low extraction ratio of 0.4 - 0.5 %. With D2EHPA as extractant, cobalt, nickel and magnesium are not easily separated even applying multi-stage separation and extraction. Furthermore, since manganese would be preferentially extracted at lower pH values than magnesium, the balance between high removal of magnesium impurity and low loss of major components is difficult to achieve. For instance, the total loss of main elements nickel, cobalt and manganese could reach up to about 5.0% with reduction of manganese recovery being the highest. The magnesium is thus suggested to be extracted together with cobalt, nickel and manganese to minimize the loss of three valuable elements, caused by co-extraction effect of D2EHPA.
+
+[E071b2772f7] section=3.1. Elemental analysis
+The whole recycling route comprises the main steps schematically shown in Fig. 1: preliminary treatment of batteries, followed by leaching with alkaline and sulfuric acid solution respectively, metal separation by liquid–liquid extraction and chemical deposition method and synthesis ofcathode active materials. As indicated in Fig. 1, concentration ofthe purified solution is adjusted by adding an appropriate amount of corresponding metal salts or dilution with distilled water to 11.5 mol L ^-1 mix aqueous solution of NiSO4, CoSO4, MnSO4 (Ni:Co:Ni cationic ratio of 1:1:1). The above regenerated solution is used as starting materials, a 1.5 mol L ^-1 Na2CO3 aqueous solution as precipitant, and NH3H2O as the chelating agent. These aqueous solutions are dripped simultaneously into a three mouth flask using a two-channel peristaltic pump, in which a certain amount of NH3H2O is added in advance as a buffer, and reaction system is maintained at 55 ^∘𝖢 with continuous stirring. The pH value of the mixture is regulated to 7.5–8.0 and related operating parameters are controlled carefully as well. This leads to the precipitation of Ni, Co and Mn carbonate with a homogeneous cation distribution. The (Ni1 / 3 Co1 / 3 Mn1 / 3) CO3 precipitates are separated by filtration after aging, and washed with distilled water several times until the absence of BaSO4 precipitate by BaCl addition. The metal carbonate is then dried at 80 ^∘C overnight in vacuum. The (Ni1 / 3 Co1 / 3 Mn1 / 3) CO3 precursor is calcined initially at 550 ^∘C for 5 h in air. The pre-calcined complex oxide is then mixed sufficiently with Li2CO3 salt at a Li/M molar ratio of 1.05 using an agate mortar, and finally sintered in air at 920 ^∘C for 15 h to obtain the cathode material.
+
+[E6cb3e1de0b] section=3.1. Elemental analysis
+Elemental analysis shows that the regenerated cathode material synthesized directly from the purified leaching liquor is pure compound of Li [ Ni1 / 3 Co1 / 3 Mn1 / 3 ] O2. Impurities such as copper, aluminum, magnesium, zinc are all less than 0.01 wt.%. Table 2 lists the results of elemental analysis on the regenerated Li [ Ni1 / 3 Co1 / 3 Mn1 / 3 ] O2
+
+[Ee5ad45d3c4] section=3.1. Elemental analysis
+The allowable level of magnesium in regenerated Li [ Ni1 / 3 Co1 / 3 Mn1 / 3 ] O2 product is limited to below 200 mgL ^-1 depending on individual national standard. Once extracted into 1.5 mol L−1 mixed metal ions solutions for synthesis of Li [ Ni1 / 3 Co1 / 3 Mn1 / 3 ] O2 precursor, the maximum concentration of magnesium contained in the purified solution cannot exceed 40 m g L ^-1
+
+[E1a65192b5c] section=3.1. Elemental analysis
+[TABLE:TABLE_Synthesis and Performance of Li[(ni13co13mn13)1−mg ]o2 Prepared from Spent Lithium Ion Batteries_0001]
+
+[E280e738fd3] section=3.1. Elemental analysis
+[TABLE:TABLE_Synthesis and Performance of Li[(ni13co13mn13)1−mg ]o2 Prepared from Spent Lithium Ion Batteries_0002]
+
+[E7127c1d7f8] section=3.1. Elemental analysis
+To ensure that impurities in recovered product are limited to required specification without sacrificing the recovery efficiency of major elements, a series of synthesis were conducted via controlled-crystallization and solid state sintering by adding a varying amount of Mg ^2+ to the solution of precursor preparation. The effect of M̅ g̅ ^2+ doping on the structure, micromorphology and electrochemical properties of the resultant Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 materials was studied in the later section.
+
+[Ee5c793386c] section=3.2. TG-DTA analysis
+The thermal behavior ofthe obtained (Ni1 / 3 Co1 / 3 Mn1 / 3) CO3 carbonate precursor is analyzed using TG and DTA measurements. The TG-DTA curves for the transition-metal carbonate samples are shown in Fig. 2.
+
+[Ed454fbf784] section=3.2. TG-DTA analysis
+Three endothermic peaks are observed in DSC curve, corresponding to three apparent weight loss stages in TG curve. The initial endothermic peak (1) shows up over the temperature range between 100 and 200 ◦C with a weight loss of ca. 8 wt.%, which is due to dehydration of adsorbed water. The second sharper endothermic peak (2) appears at around 250 - 365 ^∘C, accompanied by a weight loss of 26 wt.%. This peak is attributed to the thermal decomposition of the mixed carbonates. A considerable amount of CO2 is liberated continuously in this stage which constituted to the major total weight loss. Finally, the third endothermic peak (3) occurs between 370 and 400 ^∘𝖢 with a 4% weight loss. The last weight loss is mainly due to the decomposition of basic transition metal carbonate by release of structural water molecules. Only a small amount of weight loss is observed in the TG curve which becomes smooth and flat in the temperature range from 400 to
+
+[Ebc4248b91f] section=3.2. TG-DTA analysis
+500 ^∘C. The curve is almost flat with negligible weight loss beyond 500 ^∘𝖢, indicating the formation ofa stable complex oxide at 500 ^∘𝖢.
+
+[E721c09e811] section=3.2. TG-DTA analysis
+(Ni1 / 3 Co1 / 3 Mn1 / 3) CO3
+
+[Ec59661e4a3] section=3.2. TG-DTA analysis
+550 ^∘C
+
+[Eab8b5421ae] section=3.3. Structure analysis
+Crystal structure of all samples is investigated by X-ray diffraction. The XRD pattern of the recovered product is shown in Fig. 3. All characteristic peaks are sharp with smooth background, indicating highly crystalline products. Furthermore, all the diffraction peaks can be indexed to a hexagonal lattice of alpha - NaFeO2 type with R3¯ m space group without any impurity phase, indicating a single phase regenerated cathode material. A distinct splitting of the [ (108), (110) ] and [(0 6), (1 0 2)] peaks is observed, suggesting a well-developed layered structure.
+
+[E8a009b3866] section=3.3. Structure analysis
+As shown in Fig. 4, XRD patterns of doped cathode material, Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 with x varying from 0 to 0.05, exhibit similar features of a typical - - NaFeO2 layered structure. No impurity peak is found, confirming a single-phase crystalline product. It is evident that presence of magnesium does not affect the bulk structure of cathode material.
+
+[E4921b8b558] section=3.4. Morphology and particle size distribution
+SEM (scanning electron microscope) of the product at different magnifications is shown in Fig. 5. From these SEM micrographs, we can see that the Li (Ni1 / 3 Co1 / 3 Mn1 / 3) O2 powder has a uniform size distribution and regular round particle morphology. CO2 gas is released during high temperature sintering, leading to the formation of porous products with rough surface morphology and clearly visible primary particles.
+
+[Ea759d59a4d] section=3.4. Morphology and particle size distribution
+[TABLE:TABLE_Synthesis and Performance of Li[(ni13co13mn13)1−mg ]o2 Prepared from Spent Lithium Ion Batteries_0003]
+
+[E2f6bc908ee] section=3.4. Morphology and particle size distribution
+As seen in Fig. 6, the (Ni1 / 3 Co1 / 3 Mn1 / 3) CO3 carbonate precursor has narrow, symmetric particle size distribution. The log-size distribution curve confirms the typical normal size distribution. The D50 of the precursor particles is around 19.765 m, while D10 and D90 are 12.244 m and 31.865 m, respectively. The distribution curves of both the precursor and the final cathode material are of similar shape. However CO2 emission during thermal decomposition results in the shrinkage of the precursor particles, leading to a smaller size cathode material. Table 3 reports the D50, D10, D90 data results of the precursor and cathode particles. The narrow particle size distribution can be obtained.
+
+[Eb6f06e2579] section=3.4. Morphology and particle size distribution
+The SEM micrographs of Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 (x = 0, 0.01, 0.025, 0.05) samples at 2000 and 10,000 magnifications are shown in Fig. 7. All the samples are of round shape. The particles of Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 (x = 0, 0.01, 0.025, 0.05) are within a narrow size distribution range from 5 to 10 m. The surface of the powder appears as an aggregate of many small particles. Each secondary particle is composed of tightly piled cubic primary particles. The particle size decreased with the increasing Mg ^2+ content in Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 powders (x = 0, 0.01, 0.025, 0.05) The round shape becomes loose and non-uniform with increasing Mg content, indicating poor electrochemical performances ofcomposite electrode, which agreed with the following electrochemical testing results.
+
+[Eaf387ef65d] section=3.5. Electrochemical performances
+The electrochemical behaviors are investigated by capacity measurement and charging–discharging performance. The voltage vs. capacity profiles within a potential window of 2.7–4.3 V at a constant current density of 30 mA, 0.2 C rate in the first charge/discharge are shown in Fig. 8. Curves are all quite smooth. An apparent potential plateau around 3.75 V is shown in both samples, which is the typical characteristics for the layered Li (Ni1 / 3 Co1 / 3 Mn1 / 3) O2.. The initial discharge specific capacity of the regenerated Li (Ni1 / 3 Co1 / 3 Mn1 / 3) O2 cathode material and Li (Ni1 / 3 Co1 / 3 Mn1 / 3) O2 synthesized from pure compound can reach up to 152.7: mAhg ^-1 and 157.3 m Ah g ^-1, respectively. The charging–discharging performance is examined in the voltage range of 4.3–2.7 V at 1 C constant current rate, and the regenerated Li (Ni1 / 3 Co1 / 3 Mn1 / 3) O2 sample exhibits a 94% of discharge capacity retention rate at the end of the 50th cycle. Obviously, as shown in Figs. 8 and 9, both the capacity and cyclability of the regenerated sample are comparable to cathode material synthesized by pure sulfate salt of cobalt, nickel and manganese while cost is competitive with the market price for the same chemicals prepared from primary resources.
+
+[Ee9130f424e] section=3.5. Electrochemical performances
+Figs. 10 and 11 show the first charge/discharge curves and the corresponding capacity vs. cycle number curves of all the Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 (x = 0, 0.01, 0.025, 0.05) cells in the voltage range between 2.7 and 4.3 V at 2 C current rate (300 m Ag ^-1), while Figs. 12 and 13 demonstrate the electrochemical performance cycled between 2.7 and 4.5 V at 0.5 C current rate. It is revealed that the introduction of impurity magnesium ion in Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 affects the elec trochemical performance primarily by a reduction in capacity but cycle performance retained well [23–27]. As can be seen, while cells are cycled at high current density or between high voltage range, although the capacity loss is obvious with the increasing of magnesium content, capacity retention rate is improved by trace magnesium presence. In Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 cathode materials, the magnesium ions cannot be oxidized during cell charge, namely, electrochemically inactive. Magnesium cations, with a radius close to that of lithium, might move to the interslab position during Li ^+ de-intercalation and act as pillar which in turn assist the migration of Li ^+ ion and suppress the cation disorder. The presence ofan optimum concentration ofmagnesium ions prevents any local collapse of the inter-slab space upon repeated charge–discharge cycling [21,22]. Therefore, magnesium doping in layered Li [ Ni1 / 3 Co1 / 3 Mn1 / 3 ] O2 improves the structure stability and enhanced cycling stability is observed. Enhancement in cycling performance can be achieved when the amount of magnesium is less than 0.01 (x < 0.01). However, both the reversible capacity and capacity retention rate decrease at high magnesium ion level (x > 0.025).
+
+[E322135fa6e] section=3.5. Electrochemical performances
+Variable valence of impurity ions in leaching solution is often not available, which means that those impurity ions are always electrochemically inactive. Presence of Mg ^ 2̅ + in purified leaching solution decreases the active species of the as-prepared cathode material. Thereby, the higher the magnesium content is, the lower the capacity of the electrode. There is a declining trend in electrochemical performance while the addition ofMg is beyond the molar percentage of 0.025 (x > 0.025), namely, magnesium ion might be detrimental at such high level.
+
+[E774c888016] section=3.5. Electrochemical performances
+As can be implied from the measurements of XRD, SEM and electrochemical properties, low content of Mg in Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 (x ≤0.01) cathode materials has no significant impact on the overall performance of the electrode. Economic profits of the recovered product with acceptable magnesium impurity presence are satisfactory given the savings of purification expense. Once converted into the concentration of magnesium in purified solution used for preparation of carbonate precursor, the elimination level of magnesium ion can be enlarged to 360 mgL ^-1, far from the preliminary 40 m g L ^-1. This value greatly exceeds the general level required by impurity removal, preventing from the loss of main valuable metals caused by long and complicated purification process, which in turn cut down disposal cost dramatically.
+
+[E2a4100b392] section=4. Conclusions
+From the work presented above, following conclusions can be drawn:
+
+[Eb812a68c54] section=4. Conclusions
+(1) The cathode active material of Li (Ni1 / 3 Co1 / 3 Mn1 / 3) O2 with satisfactory electrochemical performance was successfully regenerated from the leaching liquor of spent lithium-ion batteries by a series of pretreatment, leaching, purification and controlled crystallization-solid state synthesis.
+
+[E06d70cd545] section=4. Conclusions
+(2) The electrochemical property of the regenerated Li (Ni1 / 3 Co1 / 3 Mn1 / 3) O2 material turned to be encouraging as cathode material for lithium rechargeable batteries with perfect layer structure and the uniform spherical morphology.
+
+[Ee7b6689f65] section=4. Conclusions
+(3) XRD showed that Mg successfully replaced Co within the layered structure. All of the Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 (0 ≤x ≤0.05) samples were found to be spherical particle. Over the voltage range 2.7–4.3 V at constant current 2 C rate, or between the 2.7–4.5 V at 0.5 C rate, electrochemical research revealed that the reversible capacities of the Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 (0 ≤x ≤0.05) cells decreased with the increasing Mg ^2+ content but the presence of Mg was found beneficial in enhancing the cycling performance at low content (x ≤0.01), however, high content of Mg (x ≥0.025) led to evident capacity loss and decline of cyclability because homogeneous distribution of Mg ^2+ ions in the material became difficult at high content with the present method. With the amount of the remaining magnesium ion in leaching liquid no more than 360 mg L−1, the presence o g ^2+ in the final cathode materials over a certain range ofconcentration (x ≤0.01) was of no significant impact on the overall performance of the ternary cathode materials.
+
+[Efdef9222a0] section=4. Conclusions
+(4) The regeneration technology developed in this study could be of some practical benefits since it is feasible for large-scale treatment by rather efficient and easily achievable operations. Furthermore, based on the projected quantities of lithium ion batteries available for recycling in the next few years, there is a considerable market opportunity for this technology to be applied further into the disposal of hybrid batteries and other cobalt/nickel scraps without sophisticated impurities removing steps.

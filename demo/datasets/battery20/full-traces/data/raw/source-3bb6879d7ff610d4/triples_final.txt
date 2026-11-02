@@ -376,12 +376,18 @@
         "scope_subject_text": "Lithium-ion battery",
         "scope_label": "Lithium-ion battery",
         "evidence_ids": [
-          "E732c5b0d2a"
+          "E39b1293736"
         ],
-        "evidence_span": "Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study.",
+        "evidence_span": "Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study. The total weight of the samples was 1 kg.",
+        "evidence": [
+          {
+            "evidence_id": "E39b1293736",
+            "quote": "Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study. The total weight of the samples was 1 kg."
+          }
+        ],
         "population_granularity": "batch",
-        "sample_type": "Lithium-ion battery",
-        "scope_description": "Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study.",
+        "sample_type": "spent lithium-ion batteries",
+        "scope_description": "Spent LIBs collected from different consumer electronics, including mobile phones, cameras, and portable power storage devices; total sample weight 1 kg.",
         "sample_size": null
       },
       {
@@ -391,63 +397,81 @@
         "scope_subject_text": "L-tartaric acid leaching",
         "scope_label": "L-tartaric acid leaching",
         "evidence_ids": [
-          "E913640c2f0"
+          "E020c2e8774",
+          "Ebaede24a34"
         ],
-        "evidence_span": "After the leaching solutions were heated to a preselected temperature, a certain amount of cathodic materials was added to the reactor.",
-        "method_family": "acid leaching"
+        "evidence_span": "(3) L-Tartaric acid leaching: All the leaching experiments were carried out using a 250 mL glass reactor, which was placed in a water bath to control the reaction temperature.",
+        "evidence": [
+          {
+            "evidence_id": "E020c2e8774",
+            "quote": "(3) L-Tartaric acid leaching: All the leaching experiments were carried out using a 250 mL glass reactor, which was placed in a water bath to control the reaction temperature."
+          },
+          {
+            "evidence_id": "Ebaede24a34",
+            "quote": "In this paper, we report a newly developed green process using -tartaric acid as a leachant for the sustainable recovery of Mn, Li, Co, and Ni from spent LIBs."
+          }
+        ],
+        "method_family": "organic acid leaching"
       }
     ],
     "scope_audit": {
-      "evidence_record_count": 5,
+      "evidence_record_count": 47,
       "rejected_definition_count": 0,
+      "unscoped_candidate_count": 0,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
     "scope_assertions": [
       {
-        "id": "scope-assertion:864216318a2264a0",
+        "id": "scope-assertion:e958442e76f63d48",
         "micrograph_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
         "root_entity_ids": [
+          "Product_Lithium_ion_battery"
+        ],
+        "requested_root_entity_ids": [
           "Product_Lithium_ion_battery"
         ],
         "scope_kind": "declared_population",
         "facets": {
           "population_granularity": "batch",
-          "sample_type": "Lithium-ion battery"
+          "sample_type": "spent lithium-ion batteries"
         },
-        "scope_description": "Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study.",
+        "scope_description": "Spent LIBs collected from different consumer electronics, including mobile phones, cameras, and portable power storage devices; total sample weight 1 kg.",
         "sample_size": null,
-        "evidence_span": "Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study.",
+        "evidence_span": "Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study. The total weight of the samples was 1 kg.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity"
         ]
       },
       {
-        "id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-assertion:0c023b27aa6d8774",
         "micrograph_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
         "root_entity_ids": [
           "Process_L_tartaric_acid_leaching"
         ],
+        "requested_root_entity_ids": [
+          "Process_L_tartaric_acid_leaching"
+        ],
         "scope_kind": "process_method_family",
         "facets": {
-          "method_family": "acid leaching"
+          "method_family": "organic acid leaching"
         },
-        "scope_description": "After the leaching solutions were heated to a preselected temperature, a certain amount of cathodic materials was added to the reactor.",
+        "scope_description": "(3) L-Tartaric acid leaching: All the leaching experiments were carried out using a 250 mL glass reactor, which was placed in a water bath to control the reaction temperature.",
         "sample_size": null,
-        "evidence_span": "After the leaching solutions were heated to a preselected temperature, a certain amount of cathodic materials was added to the reactor.",
+        "evidence_span": "(3) L-Tartaric acid leaching: All the leaching experiments were carried out using a 250 mL glass reactor, which was placed in a water bath to control the reaction temperature.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:82e89bda4c93939a",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:c49bb6ec19575efd",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -456,13 +480,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:684778135aa26ecb",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:180b972b95f53303",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Product_Lithium_ion_battery_CONTAINS_Component_anode",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -471,13 +495,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_anode"
         ]
       },
       {
-        "id": "scope-path:7e7788c29fb2bc63",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:a967d8327685b577",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Component_cathode_CONTAINS_Component_cathodic_material",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -489,14 +513,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:05aa75a169db1ce9",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:990bb3444808bde1",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Component_cathode_CONTAINS_Component_Al_foil",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -508,14 +532,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_Al_foil",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:f791f25d9e59bff4",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:8e5af48b9a8d7cec",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Component_cathodic_material_PROCESSED_BY_Process_L_tartaric_acid_leaching",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -529,15 +553,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_PROCESSED_BY_Process_L_tartaric_acid_leaching",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:e9d71e053a341327",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:a11c8e01b85f243f",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Component_cathodic_material_CONTAINS_Material_LiCoO2",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -551,15 +575,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_LiCoO2",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:166ee095a6a95ec4",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:f864ad64868f61ae",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Component_cathodic_material_CONTAINS_Material_LiNi0_5Co0_2Mn0_3O2",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -573,15 +597,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_LiNi0_5Co0_2Mn0_3O2",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:8a4345d4b0603e9e",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:e3e2285e3ed847a4",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Component_cathodic_material_CONTAINS_Material_Li",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -595,15 +619,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_Li",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:6262a6e189bad84a",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:c29df08eb20dbc57",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Component_cathodic_material_CONTAINS_Material_Ni",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -617,15 +641,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_Ni",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:05219e308c4292a8",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:59491dbf7fd5fcb0",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Component_cathodic_material_CONTAINS_Material_Co",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -639,15 +663,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_Co",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:b2e59049e3da7087",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:b3a95a52892b5444",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Component_cathodic_material_CONTAINS_Material_Mn",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -661,15 +685,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_Mn",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:7b34553e8294d8fb",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:270076839768814f",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Component_cathodic_material_CONTAINS_Material_Al",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -683,15 +707,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_Al",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:bc52020acab2b591",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:001c7c20f7250e4f",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Component_cathodic_material_CONTAINS_Material_polyvinylidene_fluoride",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -705,15 +729,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_polyvinylidene_fluoride",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:fd98b5bc1d867a88",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:41aa054d519546a4",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Component_cathodic_material_CONTAINS_Material_C",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -727,15 +751,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_C",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:3330e5128354e276",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:b52af1cfe22e3d0c",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Component_cathodic_material_CONTAINS_Material_F",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -749,15 +773,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_F",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:f791f25d9e59bff4",
-        "scope_assertion_id": "scope-assertion:864216318a2264a0",
+        "id": "scope-path:8e5af48b9a8d7cec",
+        "scope_assertion_id": "scope-assertion:e958442e76f63d48",
         "statement_relation_id": "REL_Component_cathodic_material_PROCESSED_BY_Process_L_tartaric_acid_leaching",
         "root_entity_id": "Product_Lithium_ion_battery",
         "entity_path": [
@@ -771,15 +795,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_PROCESSED_BY_Process_L_tartaric_acid_leaching",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:6b0ba575f2649e24",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-path:7db65ef4c8488296",
+        "scope_assertion_id": "scope-assertion:0c023b27aa6d8774",
         "statement_relation_id": "REL_Component_cathodic_material_PROCESSED_BY_Process_L_tartaric_acid_leaching",
         "root_entity_id": "Process_L_tartaric_acid_leaching",
         "entity_path": [
@@ -788,13 +812,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_PROCESSED_BY_Process_L_tartaric_acid_leaching"
         ]
       },
       {
-        "id": "scope-path:f9ca247238efa4cc",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-path:9838e8a7e8b2c68d",
+        "scope_assertion_id": "scope-assertion:0c023b27aa6d8774",
         "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
         "root_entity_id": "Process_L_tartaric_acid_leaching",
         "entity_path": [
@@ -803,13 +827,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn"
         ]
       },
       {
-        "id": "scope-path:1d136b13c9bcd9a8",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-path:ae3fcefacab5ba29",
+        "scope_assertion_id": "scope-assertion:0c023b27aa6d8774",
         "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_L_tartaric_acid_leaching",
         "entity_path": [
@@ -818,13 +842,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:e3d84139717334f2",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-path:fa20122df0ff52b5",
+        "scope_assertion_id": "scope-assertion:0c023b27aa6d8774",
         "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_L_tartaric_acid_leaching",
         "entity_path": [
@@ -833,13 +857,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:c1e4b7f352adb330",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-path:f87d9ad5cc302c27",
+        "scope_assertion_id": "scope-assertion:0c023b27aa6d8774",
         "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
         "root_entity_id": "Process_L_tartaric_acid_leaching",
         "entity_path": [
@@ -848,13 +872,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni"
         ]
       },
       {
-        "id": "scope-path:f9ca247238efa4cc",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-path:9838e8a7e8b2c68d",
+        "scope_assertion_id": "scope-assertion:0c023b27aa6d8774",
         "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
         "root_entity_id": "Process_L_tartaric_acid_leaching",
         "entity_path": [
@@ -863,13 +887,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn"
         ]
       },
       {
-        "id": "scope-path:1d136b13c9bcd9a8",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-path:ae3fcefacab5ba29",
+        "scope_assertion_id": "scope-assertion:0c023b27aa6d8774",
         "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_L_tartaric_acid_leaching",
         "entity_path": [
@@ -878,13 +902,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:e3d84139717334f2",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-path:fa20122df0ff52b5",
+        "scope_assertion_id": "scope-assertion:0c023b27aa6d8774",
         "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_L_tartaric_acid_leaching",
         "entity_path": [
@@ -893,13 +917,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:c1e4b7f352adb330",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-path:f87d9ad5cc302c27",
+        "scope_assertion_id": "scope-assertion:0c023b27aa6d8774",
         "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
         "root_entity_id": "Process_L_tartaric_acid_leaching",
         "entity_path": [
@@ -908,73 +932,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni"
         ]
       },
       {
-        "id": "scope-path:f9ca247238efa4cc",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
-        "root_entity_id": "Process_L_tartaric_acid_leaching",
-        "entity_path": [
-          "Process_L_tartaric_acid_leaching"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn"
-        ]
-      },
-      {
-        "id": "scope-path:1d136b13c9bcd9a8",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_L_tartaric_acid_leaching",
-        "entity_path": [
-          "Process_L_tartaric_acid_leaching"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li"
-        ]
-      },
-      {
-        "id": "scope-path:e3d84139717334f2",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
-        "root_entity_id": "Process_L_tartaric_acid_leaching",
-        "entity_path": [
-          "Process_L_tartaric_acid_leaching"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co"
-        ]
-      },
-      {
-        "id": "scope-path:c1e4b7f352adb330",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
-        "root_entity_id": "Process_L_tartaric_acid_leaching",
-        "entity_path": [
-          "Process_L_tartaric_acid_leaching"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni"
-        ]
-      },
-      {
-        "id": "scope-path:6b0ba575f2649e24",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-path:7db65ef4c8488296",
+        "scope_assertion_id": "scope-assertion:0c023b27aa6d8774",
         "statement_relation_id": "REL_Component_cathodic_material_PROCESSED_BY_Process_L_tartaric_acid_leaching",
         "root_entity_id": "Process_L_tartaric_acid_leaching",
         "entity_path": [
@@ -983,13 +947,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_PROCESSED_BY_Process_L_tartaric_acid_leaching"
         ]
       },
       {
-        "id": "scope-path:f9ca247238efa4cc",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-path:9838e8a7e8b2c68d",
+        "scope_assertion_id": "scope-assertion:0c023b27aa6d8774",
         "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
         "root_entity_id": "Process_L_tartaric_acid_leaching",
         "entity_path": [
@@ -998,13 +962,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn"
         ]
       },
       {
-        "id": "scope-path:1d136b13c9bcd9a8",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-path:ae3fcefacab5ba29",
+        "scope_assertion_id": "scope-assertion:0c023b27aa6d8774",
         "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_L_tartaric_acid_leaching",
         "entity_path": [
@@ -1013,13 +977,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:e3d84139717334f2",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-path:fa20122df0ff52b5",
+        "scope_assertion_id": "scope-assertion:0c023b27aa6d8774",
         "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_L_tartaric_acid_leaching",
         "entity_path": [
@@ -1028,13 +992,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:c1e4b7f352adb330",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
+        "id": "scope-path:f87d9ad5cc302c27",
+        "scope_assertion_id": "scope-assertion:0c023b27aa6d8774",
         "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
         "root_entity_id": "Process_L_tartaric_acid_leaching",
         "entity_path": [
@@ -1043,127 +1007,7 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni"
-        ]
-      },
-      {
-        "id": "scope-path:f9ca247238efa4cc",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
-        "root_entity_id": "Process_L_tartaric_acid_leaching",
-        "entity_path": [
-          "Process_L_tartaric_acid_leaching"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn"
-        ]
-      },
-      {
-        "id": "scope-path:1d136b13c9bcd9a8",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_L_tartaric_acid_leaching",
-        "entity_path": [
-          "Process_L_tartaric_acid_leaching"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li"
-        ]
-      },
-      {
-        "id": "scope-path:e3d84139717334f2",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
-        "root_entity_id": "Process_L_tartaric_acid_leaching",
-        "entity_path": [
-          "Process_L_tartaric_acid_leaching"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co"
-        ]
-      },
-      {
-        "id": "scope-path:c1e4b7f352adb330",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
-        "root_entity_id": "Process_L_tartaric_acid_leaching",
-        "entity_path": [
-          "Process_L_tartaric_acid_leaching"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni"
-        ]
-      },
-      {
-        "id": "scope-path:f9ca247238efa4cc",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
-        "root_entity_id": "Process_L_tartaric_acid_leaching",
-        "entity_path": [
-          "Process_L_tartaric_acid_leaching"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn"
-        ]
-      },
-      {
-        "id": "scope-path:1d136b13c9bcd9a8",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
-        "root_entity_id": "Process_L_tartaric_acid_leaching",
-        "entity_path": [
-          "Process_L_tartaric_acid_leaching"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li"
-        ]
-      },
-      {
-        "id": "scope-path:e3d84139717334f2",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
-        "root_entity_id": "Process_L_tartaric_acid_leaching",
-        "entity_path": [
-          "Process_L_tartaric_acid_leaching"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co"
-        ]
-      },
-      {
-        "id": "scope-path:c1e4b7f352adb330",
-        "scope_assertion_id": "scope-assertion:58582442a20a15a1",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
-        "root_entity_id": "Process_L_tartaric_acid_leaching",
-        "entity_path": [
-          "Process_L_tartaric_acid_leaching"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni"
         ]
       }
@@ -7268,13 +7112,13 @@
           "Component_cathode"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:82e89bda4c93939a"
+          "scope-path:c49bb6ec19575efd"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:4357554db7bce181",
@@ -7293,13 +7137,13 @@
           "Component_anode"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:684778135aa26ecb"
+          "scope-path:180b972b95f53303"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_anode",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:7acd3fc1a3d96608",
@@ -7318,13 +7162,13 @@
           "Component_cathodic_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:7e7788c29fb2bc63"
+          "scope-path:a967d8327685b577"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode",
@@ -7344,13 +7188,13 @@
           "Component_Al_foil"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:05aa75a169db1ce9"
+          "scope-path:990bb3444808bde1"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_Al_foil",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Product_Lithium_ion_battery_CONTAINS_Component_cathode",
@@ -7370,16 +7214,16 @@
           "Process_L_tartaric_acid_leaching"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1",
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:0c023b27aa6d8774",
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:6b0ba575f2649e24",
-          "scope-path:f791f25d9e59bff4"
+          "scope-path:7db65ef4c8488296",
+          "scope-path:8e5af48b9a8d7cec"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
@@ -7401,13 +7245,13 @@
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e9d71e053a341327"
+          "scope-path:a11c8e01b85f243f"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_LiCoO2",
@@ -7428,13 +7272,13 @@
           "Material_LiNi0_5Co0_2Mn0_3O2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:166ee095a6a95ec4"
+          "scope-path:f864ad64868f61ae"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_LiNi0_5Co0_2Mn0_3O2",
@@ -7455,13 +7299,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:8a4345d4b0603e9e"
+          "scope-path:e3e2285e3ed847a4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_Li",
@@ -7482,13 +7326,13 @@
           "Material_Ni"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:6262a6e189bad84a"
+          "scope-path:c29df08eb20dbc57"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_Ni",
@@ -7509,13 +7353,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:05219e308c4292a8"
+          "scope-path:59491dbf7fd5fcb0"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_Co",
@@ -7536,13 +7380,13 @@
           "Material_Mn"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:b2e59049e3da7087"
+          "scope-path:b3a95a52892b5444"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_Mn",
@@ -7563,13 +7407,13 @@
           "Material_Al"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:7b34553e8294d8fb"
+          "scope-path:270076839768814f"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_Al",
@@ -7590,13 +7434,13 @@
           "Material_polyvinylidene_fluoride"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:bc52020acab2b591"
+          "scope-path:001c7c20f7250e4f"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_polyvinylidene_fluoride",
@@ -7617,13 +7461,13 @@
           "Material_C"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:fd98b5bc1d867a88"
+          "scope-path:41aa054d519546a4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_C",
@@ -7644,13 +7488,13 @@
           "Material_F"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:3330e5128354e276"
+          "scope-path:b52af1cfe22e3d0c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathodic_material_CONTAINS_Material_F",
@@ -7671,13 +7515,13 @@
           "Material_Mn"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
+          "scope-assertion:0c023b27aa6d8774"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:f9ca247238efa4cc"
+          "scope-path:9838e8a7e8b2c68d"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:d5aff667d3fd6570",
@@ -7696,13 +7540,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
+          "scope-assertion:0c023b27aa6d8774"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:1d136b13c9bcd9a8"
+          "scope-path:ae3fcefacab5ba29"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:d24fdc98ee566a77",
@@ -7721,13 +7565,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
+          "scope-assertion:0c023b27aa6d8774"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e3d84139717334f2"
+          "scope-path:fa20122df0ff52b5"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:3c3c90af9fc0f3d5",
@@ -7746,13 +7590,13 @@
           "Material_Ni"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
+          "scope-assertion:0c023b27aa6d8774"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:c1e4b7f352adb330"
+          "scope-path:f87d9ad5cc302c27"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:88c166b6c16f3364",
@@ -7771,13 +7615,13 @@
           "Material_Mn"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
+          "scope-assertion:0c023b27aa6d8774"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:f9ca247238efa4cc"
+          "scope-path:9838e8a7e8b2c68d"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:e479444956f21e5d",
@@ -7796,13 +7640,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
+          "scope-assertion:0c023b27aa6d8774"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:1d136b13c9bcd9a8"
+          "scope-path:ae3fcefacab5ba29"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:b3657e2a7b51e585",
@@ -7821,13 +7665,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
+          "scope-assertion:0c023b27aa6d8774"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e3d84139717334f2"
+          "scope-path:fa20122df0ff52b5"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:003a3c02357bad38",
@@ -7846,13 +7690,13 @@
           "Material_Ni"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
+          "scope-assertion:0c023b27aa6d8774"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:c1e4b7f352adb330"
+          "scope-path:f87d9ad5cc302c27"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:ea25c81f3d9669f1",
@@ -7871,16 +7715,16 @@
           "Process_L_tartaric_acid_leaching"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1",
-          "scope-assertion:864216318a2264a0"
+          "scope-assertion:0c023b27aa6d8774",
+          "scope-assertion:e958442e76f63d48"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:6b0ba575f2649e24",
-          "scope-path:f791f25d9e59bff4"
+          "scope-path:7db65ef4c8488296",
+          "scope-path:8e5af48b9a8d7cec"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "scope:scope-assertion:864216318a2264a0:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
+          "scope:scope-assertion:e958442e76f63d48:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Product_Lithium_ion_battery:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Component_cathode_CONTAINS_Component_cathodic_material",
@@ -7902,13 +7746,13 @@
           "Material_Mn"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
+          "scope-assertion:0c023b27aa6d8774"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:f9ca247238efa4cc"
+          "scope-path:9838e8a7e8b2c68d"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:8aa50862574742fc",
@@ -7927,13 +7771,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
+          "scope-assertion:0c023b27aa6d8774"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:1d136b13c9bcd9a8"
+          "scope-path:ae3fcefacab5ba29"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:af7d875f09254f4c",
@@ -7952,13 +7796,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
+          "scope-assertion:0c023b27aa6d8774"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e3d84139717334f2"
+          "scope-path:fa20122df0ff52b5"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:d21d7a841bf86394",
@@ -7977,217 +7821,17 @@
           "Material_Ni"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
+          "scope-assertion:0c023b27aa6d8774"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:c1e4b7f352adb330"
+          "scope-path:f87d9ad5cc302c27"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
+          "scope:scope-assertion:0c023b27aa6d8774:evidence",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:9afeddeb802d1aab",
           "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:9afeddeb802d1aab:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:856c727fd954e2ba",
-        "micrograph_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
-        "statement_id": "statement:90e525da7d134a84",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
-        "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
-        "source_relation_index": 28,
-        "entity_ids": [
-          "Process_L_tartaric_acid_leaching",
-          "Material_Mn"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:f9ca247238efa4cc"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:90e525da7d134a84",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:90e525da7d134a84:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:522cfca2bb4dc478",
-        "micrograph_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
-        "statement_id": "statement:7bf22ac480a97527",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
-        "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 29,
-        "entity_ids": [
-          "Process_L_tartaric_acid_leaching",
-          "Material_Li"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:1d136b13c9bcd9a8"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:7bf22ac480a97527",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:7bf22ac480a97527:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:7ce3fbb647aeaa35",
-        "micrograph_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
-        "statement_id": "statement:8f415180a880acda",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
-        "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 30,
-        "entity_ids": [
-          "Process_L_tartaric_acid_leaching",
-          "Material_Co"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:e3d84139717334f2"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:8f415180a880acda",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:8f415180a880acda:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:f23781698554b282",
-        "micrograph_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
-        "statement_id": "statement:9d895a63ad2ac940",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
-        "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
-        "source_relation_index": 31,
-        "entity_ids": [
-          "Process_L_tartaric_acid_leaching",
-          "Material_Ni"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:c1e4b7f352adb330"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:9d895a63ad2ac940",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:9d895a63ad2ac940:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:13e718538b6b65d6",
-        "micrograph_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
-        "statement_id": "statement:78cea552c7784a55",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
-        "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
-        "source_relation_index": 32,
-        "entity_ids": [
-          "Process_L_tartaric_acid_leaching",
-          "Material_Mn"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:f9ca247238efa4cc"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Mn",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:78cea552c7784a55",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:78cea552c7784a55:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:522f226862e59883",
-        "micrograph_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
-        "statement_id": "statement:5584461ca0fddbb2",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
-        "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 33,
-        "entity_ids": [
-          "Process_L_tartaric_acid_leaching",
-          "Material_Li"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:1d136b13c9bcd9a8"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Li",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:5584461ca0fddbb2",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:5584461ca0fddbb2:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:972724e5eb8f6a9e",
-        "micrograph_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
-        "statement_id": "statement:7d0f79b448c744a0",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
-        "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 34,
-        "entity_ids": [
-          "Process_L_tartaric_acid_leaching",
-          "Material_Co"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:e3d84139717334f2"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Co",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:7d0f79b448c744a0",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:7d0f79b448c744a0:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:211a4e96b426a9e1",
-        "micrograph_id": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
-        "statement_id": "statement:4c13838682d653b1",
-        "statement_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
-        "source_relation_id": "REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
-        "source_relation_index": 35,
-        "entity_ids": [
-          "Process_L_tartaric_acid_leaching",
-          "Material_Ni"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:58582442a20a15a1"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:c1e4b7f352adb330"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:58582442a20a15a1:evidence",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:Process_L_tartaric_acid_leaching:entity",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:REL_Process_L_tartaric_acid_leaching_HAS_OUTPUT_Material_Ni",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:4c13838682d653b1",
-          "source:Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant:relation:statement:4c13838682d653b1:evidence"
         ]
       }
     ],
@@ -15004,6 +14648,7 @@
       "measurement_evidence_records": 8,
       "receipt": "measurement_semantics_revision.json",
       "original_stages_preserved": true
-    }
+    },
+    "scope_unscoped_candidates": []
   }
 }

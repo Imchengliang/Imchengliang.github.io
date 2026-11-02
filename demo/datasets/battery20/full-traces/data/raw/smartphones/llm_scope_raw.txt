@@ -1,0 +1,627 @@
+{
+  "raw_response": "{\"population_scopes\":[{\"root_entity_id\":\"Product_mobile_phone\",\"granularity\":\"batch\",\"sample_type\":\"end-of-life smartphones\",\"scope_summary\":\"30 end-of-life smartphones collected directly from users via social media announcements, from nine different brands with no repeated model, distributed across manufacturing years before and after 2015 (15 devices per group).\",\"evidence\":[{\"evidence_id\":\"E276f866f5a\",\"quote\":\"EoL smartphones were directly collected from users, through announcements on social media. To improve representativeness, a well distribution of manufacturing years, variety of brands, and devices in good conditions were prioritized: devices from nine different brands were collected, and no model was repeated.\"},{\"evidence_id\":\"Eb420b206e2\",\"quote\":\"During the collection, model/brands and manufacturing years were cataloged to obtain two groups, containing 15 smartphones each: manufactured before and after 2015.\"},{\"evidence_id\":\"E07caf30192\",\"quote\":\"As aforementioned, 30 smartphones were collected and divided into two groups according to their manufacturing years (before and after 2015).\"}]},{\"root_entity_id\":\"Component_Entire\",\"granularity\":\"batch\",\"sample_type\":\"end-of-life smartphones\",\"scope_summary\":\"The 'entire' device corresponds to the same 30 collected end-of-life smartphones, analyzed as whole devices (entire smartphones) in addition to their separated components.\",\"evidence\":[{\"evidence_id\":\"Ebc0ee7c03c\",\"quote\":\"Characterization included 30 devices of different brands fabricated before and after 2015, analysis of 50 metal elements, and FTIR analysis and loss on ignition for polymers.\"},{\"evidence_id\":\"E07caf30192\",\"quote\":\"As aforementioned, 30 smartphones were collected and divided into two groups according to their manufacturing years (before and after 2015). Devices were manually separated into four components (casing, PCB, screen, and battery), with individual measurements of their mass.\"}]}],\"process_scopes\":[{\"root_entity_id\":\"Process_nitric_acid_acidic_digestion\",\"method_family\":\"acid digestion\",\"evidence\":[{\"evidence_id\":\"Ebb52b171e4\",\"quote\":\"Digestions were performed with analytical grade aqua regia (3:1 chloride acid and nitric acid). In parallel, another set of digestions (in the same conditions) were performed using nitric acid due to possible precipitation of chlorides in aqua regia.\"},{\"evidence_id\":\"E44507b14f6\",\"quote\":\"The parameters for acidic digestions were: 20 mL of solution per gram of solids, at 80 ^∘C, under agitation speed of 300 rpm, for 2 h.\"}]},{\"root_entity_id\":\"Process_thermal_treatment__loss_on_ignition_\",\"method_family\":\"loss on ignition\",\"evidence\":[{\"evidence_id\":\"Ece54af1135\",\"quote\":\"It is usual to perform a thermal treatment (also called loss on ignition) on e-waste to evaporate volatile compounds, and consider this fraction as an approximation of polymers [25, 26]. Three samples of each of the eight groups were submitted to thermal treatment\"},{\"evidence_id\":\"Ece54af1135\",\"quote\":\"the samples were placed in alumina crucibles and arrayed in a mufle furnace at 550 ^∘C for 80 min.\"}]}],\"unscoped_candidates\":[]}",
+  "raw_payload": {
+    "population_scopes": [
+      {
+        "root_entity_id": "Product_mobile_phone",
+        "granularity": "batch",
+        "sample_type": "end-of-life smartphones",
+        "scope_summary": "30 end-of-life smartphones collected directly from users via social media announcements, from nine different brands with no repeated model, distributed across manufacturing years before and after 2015 (15 devices per group).",
+        "evidence": [
+          {
+            "evidence_id": "E276f866f5a",
+            "quote": "EoL smartphones were directly collected from users, through announcements on social media. To improve representativeness, a well distribution of manufacturing years, variety of brands, and devices in good conditions were prioritized: devices from nine different brands were collected, and no model was repeated."
+          },
+          {
+            "evidence_id": "Eb420b206e2",
+            "quote": "During the collection, model/brands and manufacturing years were cataloged to obtain two groups, containing 15 smartphones each: manufactured before and after 2015."
+          },
+          {
+            "evidence_id": "E07caf30192",
+            "quote": "As aforementioned, 30 smartphones were collected and divided into two groups according to their manufacturing years (before and after 2015)."
+          }
+        ]
+      },
+      {
+        "root_entity_id": "Component_Entire",
+        "granularity": "batch",
+        "sample_type": "end-of-life smartphones",
+        "scope_summary": "The 'entire' device corresponds to the same 30 collected end-of-life smartphones, analyzed as whole devices (entire smartphones) in addition to their separated components.",
+        "evidence": [
+          {
+            "evidence_id": "Ebc0ee7c03c",
+            "quote": "Characterization included 30 devices of different brands fabricated before and after 2015, analysis of 50 metal elements, and FTIR analysis and loss on ignition for polymers."
+          },
+          {
+            "evidence_id": "E07caf30192",
+            "quote": "As aforementioned, 30 smartphones were collected and divided into two groups according to their manufacturing years (before and after 2015). Devices were manually separated into four components (casing, PCB, screen, and battery), with individual measurements of their mass."
+          }
+        ]
+      }
+    ],
+    "process_scopes": [
+      {
+        "root_entity_id": "Process_nitric_acid_acidic_digestion",
+        "method_family": "acid digestion",
+        "evidence": [
+          {
+            "evidence_id": "Ebb52b171e4",
+            "quote": "Digestions were performed with analytical grade aqua regia (3:1 chloride acid and nitric acid). In parallel, another set of digestions (in the same conditions) were performed using nitric acid due to possible precipitation of chlorides in aqua regia."
+          },
+          {
+            "evidence_id": "E44507b14f6",
+            "quote": "The parameters for acidic digestions were: 20 mL of solution per gram of solids, at 80 ^∘C, under agitation speed of 300 rpm, for 2 h."
+          }
+        ]
+      },
+      {
+        "root_entity_id": "Process_thermal_treatment__loss_on_ignition_",
+        "method_family": "loss on ignition",
+        "evidence": [
+          {
+            "evidence_id": "Ece54af1135",
+            "quote": "It is usual to perform a thermal treatment (also called loss on ignition) on e-waste to evaporate volatile compounds, and consider this fraction as an approximation of polymers [25, 26]. Three samples of each of the eight groups were submitted to thermal treatment"
+          },
+          {
+            "evidence_id": "Ece54af1135",
+            "quote": "the samples were placed in alumina crucibles and arrayed in a mufle furnace at 550 ^∘C for 80 min."
+          }
+        ]
+      }
+    ],
+    "unscoped_candidates": []
+  },
+  "evidence_records": [
+    {
+      "id": "candidates",
+      "kind": "candidates",
+      "entity_ids": [
+        "Product_mobile_phone",
+        "Component_Entire",
+        "Process_nitric_acid_acidic_digestion",
+        "Process_thermal_treatment__loss_on_ignition_"
+      ],
+      "entity_types": {
+        "Product_mobile_phone": "Product",
+        "Component_Entire": "Component",
+        "Process_nitric_acid_acidic_digestion": "Process",
+        "Process_thermal_treatment__loss_on_ignition_": "Process"
+      },
+      "entity_names": {
+        "Product_mobile_phone": "mobile phone",
+        "Component_Entire": "Entire",
+        "Process_nitric_acid_acidic_digestion": "nitric acid acidic digestion",
+        "Process_thermal_treatment__loss_on_ignition_": "thermal treatment (loss on ignition)"
+      },
+      "entity_aliases": {
+        "Product_mobile_phone": [
+          "EoL smartphones",
+          "smartphones",
+          "devices",
+          "smartphone",
+          "mobile phone",
+          "mobile phones",
+          "mobile phone e-waste",
+          "mobile phone ewaste",
+          "mobile-phone e-waste",
+          "mobile-phone ewaste",
+          "cell phone",
+          "cell phones",
+          "smartphone’s",
+          "entire smartphones",
+          "entire devices",
+          "Entire smartphone before",
+          "Entire smartphone",
+          "Entire smartphone after",
+          "Entire smartphones"
+        ],
+        "Component_Entire": [
+          "Entire"
+        ],
+        "Process_nitric_acid_acidic_digestion": [
+          "nitric acid acidic digestion"
+        ],
+        "Process_thermal_treatment__loss_on_ignition_": [
+          "thermal treatment (loss on ignition)",
+          "loss on ignition"
+        ]
+      },
+      "entity_provenance": {
+        "Process_nitric_acid_acidic_digestion": "Digest 3–5 g samples of milled smartphone components with analytical grade nitric acid under the same conditions as aqua regia digestion: 20 mL solution per gram of solids, 80 °C, 300 rpm agitation for 2 h in Schlenk flasks with Allihn condensers; then filter and dilute for ICP-OES analysis.",
+        "Process_thermal_treatment__loss_on_ignition_": "Dry 3–5 g samples of milled smartphone components at 100 °C for 2 h, then ignite in alumina crucibles in a muffle furnace at 550 °C for 80 min; cool to room temperature, dry again at 100 °C for 2 h, and measure mass loss."
+      }
+    },
+    {
+      "id": "E1821c732f3",
+      "kind": "source",
+      "section_name": "Assessment of smartphones’ components and materials for a recycling perspective: tendencies of composition and target elements",
+      "text": "Marcelo Pilotto Cenci1 · Estela Moschetta Eidelwein1 · Tatiana Scarazzato2 · Hugo Marcelo Veit"
+    },
+    {
+      "id": "E3266367019",
+      "kind": "source",
+      "section_name": "Assessment of smartphones’ components and materials for a recycling perspective: tendencies of composition and target elements",
+      "text": "Received: 30 October 2022 / Accepted: 9 January 2024 / Published online: 6 March 2024 © The Author(s), under exclusive licence to Springer Nature Japan KK, part of Springer Nature 2024"
+    },
+    {
+      "id": "Ebc0ee7c03c",
+      "kind": "source",
+      "section_name": "ABSTRACT",
+      "text": "Although several recycling solutions are already being applied for electronic scraps, the seek for more efficient routes is a hotspot in research, and crucial to achieve the so needed circular economy. This study is the first step of a project that aims to develop recycling solutions for entire smartphones. A comprehensive characterization of all smartphones’ components and a definition of the main material targets for recovery are provided. Characterization included 30 devices of different brands fabricated before and after 2015, analysis of 50 metal elements, and FTIR analysis and loss on ignition for polymers. Significant information about tendencies of composition and distribution of materials were noted, such as the increasing in concentration of Al, and the decreasing in precious metals. The definition of material targets included parameters of mass fraction, economic potential, scarcity, and associated environmental burden (values are given for each material in all components). At the end, Cu, Al, Au, Pd, Co, and Li were found the most relevant elements for recovering. By addressing these elements (73% of the total mass of metals), 99% of the total economic potential could be recovered, as well as 90 and 97% of the calculated scarcity and environmental burden parameters, respectively."
+    },
+    {
+      "id": "E3c596fe480",
+      "kind": "source",
+      "section_name": "ABSTRACT",
+      "text": "Keywords Characterization · Circular economy · E-waste · WEEE · Battery"
+    },
+    {
+      "id": "Eba438898aa",
+      "kind": "source",
+      "section_name": "Introduction",
+      "text": "Smartphones play an important role in modern society, useful for daily activities, business, entertainment, and communication in general. Through their incredible practicability, smartphones can save time and money for the owners. Thus, the aforementioned advantages generate a high demand for this device, practically burying old feature phones. Globally, approximately 80% of the population own a smartphone [1], and the consumption is expected to increase, as new features, applicability, and materials are being developed, and lifespan decreases [2, 3]."
+    },
+    {
+      "id": "E26b832effa",
+      "kind": "source",
+      "section_name": "Introduction",
+      "text": "Since consumption generates wastes, the generation of end-of-life (EoL) smartphones also tends to increase [4]. In order to reach circular economy and sustainable patterns of consumption (which are mentioned as part of the sustainable development goals of the 2030 Agenda of the United Nations [5]), recycling strategies for electronic scraps became a recent hotspot in academic research. Proposed solutions normally focus on the separation and recovery of valuable components and materials, which can drive and support the recycling initiatives due to the economic and strategic relevance [6]. Smartphones are considered one of the most valuable e-wastes [7]. A non-exhaustive list of elements that can be found in smartphones is gold, silver, copper, palladium, tin, lithium, aluminum, indium, gallium, and cobalt [4, 8]."
+    },
+    {
+      "id": "E435d7dc484",
+      "kind": "source",
+      "section_name": "Introduction",
+      "text": "An important point for efficient recycling solutions is considering the constant evolution of technology and composition of electronic devices over time. Bruch et al. [9] alerted that recycling routes need to be constantly adapted to the variations in the composition of residues. For example,"
+    },
+    {
+      "id": "Ed144949ed4",
+      "kind": "source",
+      "section_name": "Introduction",
+      "text": "Tunali et al. [10] evaluated printed circuit boards (PCBs) from feature phones and smartphones and found significant differences in their composition. Indeed, to better represent the materials flow of residues in the middle and long term, it is important to only consider fashionable studies about smartphones’ composition, as they dominate the market and will compose most of the flow of EoL mobile phones in the next years. Considering feature phones or a mix among any types of mobile phones can lead to errors due to misrepresented data."
+    },
+    {
+      "id": "E0b84af7058",
+      "kind": "source",
+      "section_name": "Introduction",
+      "text": "Addressing the importance of the composition of residues in the definition of recycling routes, it is important to highlight the accomplishment of characterization steps. Characterizing residues is essential to uncover new and efficient strategies for e-waste management [11]. Based on the experience of the authors in dealing with e-waste recycling, one of the main benefits of conducting a proper characterization study is to gather data to define the target components and materials for the recycling route, as well as predict the viability of the routes. The authors manifest concern about the procedures of disassembling and segregating components from e-wastes (normally carried out in the first stage recycling after collection), in which recyclers do not have correct information about the composition of the residue, and often waste some valuable pieces. Recyclers are autonomous and not standardized in deciding what to do with the waste [12]. For example, only dealing with PCBs is a common practice [8, 13–15], wasting possible valuable materials from screens, batteries, and other parts."
+    },
+    {
+      "id": "E70af5989a3",
+      "kind": "source",
+      "section_name": "Introduction",
+      "text": "Clear information about the composition of each component of smartphones are useful to support the decisions of recyclers and essential to select and prioritize target components and materials for recycling. Unfortunately, this type of information is rare, despite the considerable number of characterization studies available in literature. The lack of harmonization and different types of classification and terminology also hinder the identification of clear and usable data [16]. Among the studies on smartphones, emphasis is given to the comprehensive study of Gupta et al. [17], in which the authors characterized 26 elements of PCBs, screens, and casings of smartphones. However, the authors selected few brands and variety of models (many older than 2010), and did not provide results for batteries and entire devices. Mejame et al. [18] and Bookhagen et al. [19] provided a characterization for many elements of entire smartphones. Nevertheless, they also ignored batteries and did not provide results separately for components. Singh et al. [20], Holgersson et al. [14], and Tunali et al. [10] provided characterizations only for PCBs."
+    },
+    {
+      "id": "E30ceb34572",
+      "kind": "source",
+      "section_name": "Introduction",
+      "text": "As the first step of a complete recycling route for smartphones that is being idealized by the authors, this study presents a comprehensive and representative characterization of EoL smartphones and their components (filling the literature gaps concerning smartphone composition) and a novel methodology to objectively select target components and materials for recovery. Considering the relevance of the topic and the limitations and challenges of the scenario of smartphone recycling aforementioned, this study provides an important source of data for recyclers and researchers. The choice of target components and materials is based on the analysis of the mass fraction, economic potential, scarcity, and environmental burden of each individual metal, in a way to minimize subjectivity and maximize the recovery of valuable materials in all these senses."
+    },
+    {
+      "id": "E276f866f5a",
+      "kind": "source",
+      "section_name": "Collection of EoL smartphones and preparation of samples",
+      "text": "EoL smartphones were directly collected from users, through announcements on social media. To improve representativeness, a well distribution of manufacturing years, variety of brands, and devices in good conditions were prioritized: devices from nine different brands were collected, and no model was repeated."
+    },
+    {
+      "id": "Eb420b206e2",
+      "kind": "source",
+      "section_name": "Collection of EoL smartphones and preparation of samples",
+      "text": "During the collection, model/brands and manufacturing years were cataloged to obtain two groups, containing 15 smartphones each: manufactured before and after 2015. The following steps of the characterization were identical for the two groups. Since the variation of composition over time is one of the main concerns of this study, these two groups were proposed to check for significant differences. It is important to highlight that there is no technological milestone in 2015. As smartphones became consolidated in the market, approximately, in 2010 [21, 22] and this study was performed in 2020, the year of 2015 is selected as the median of the interval (groups 2010–2014 and 2015–2020). If significant differences are found between these two groups, only smartphones manufactured after 2015 will be considered for the rest of the study, as they represent tendencies in composition and better represent future flows of residues in the middle and long term."
+    },
+    {
+      "id": "E32e703c57b",
+      "kind": "source",
+      "section_name": "Collection of EoL smartphones and preparation of samples",
+      "text": "Smartphones were manually dismantled to separate their four main components (screens, PCBs, batteries, and casings) and measure their individual mass. In total, eight groups of components were generated: two main groups according to manufacturing year (before and after 2015), and four components for each group. All pieces of a group were processed together."
+    },
+    {
+      "id": "E064ae6872a",
+      "kind": "source",
+      "section_name": "Physical processing",
+      "text": "Initiating the physical processing, each single component had its magnets removed to perform demagnetization in a mufle furnace at 700 ^∘C,, for 4 h, under natural atmosphere (a high temperature was applied to guarantee demagnetization in all pieces). Demagnetization is essential to prevent mass losses during the milling."
+    },
+    {
+      "id": "E1f45ba061e",
+      "kind": "source",
+      "section_name": "Physical processing",
+      "text": "The components of the eight groups were milled in knife mill with a 2 mm sieve. Particle size was guaranteed to be 100% smaller than 2 mm through manual bench sieving. To generate the samples (which will be posteriorly sent to acid digestion and thermal treatment), a homogenization step was performed. Samples were prepared in bench quartering equipment (also called sample splitter) until resulting in samples with a mass around 3–5 g."
+    },
+    {
+      "id": "Ebb52b171e4",
+      "kind": "source",
+      "section_name": "Acidic digestion",
+      "text": "For each group of components (eight groups), 9 samples were collected for acid digestion. This number of samples (nine) may assure more reliable data and minimize standard deviation. Digestions were performed with analytical grade aqua regia (3:1 chloride acid and nitric acid). In parallel, another set of digestions (in the same conditions) were performed using nitric acid due to possible precipitation of chlorides in aqua regia. The case of silver precipitation in Ag Cl(s) is well-described in literature [23, 24]."
+    },
+    {
+      "id": "E44507b14f6",
+      "kind": "source",
+      "section_name": "Acidic digestion",
+      "text": "The parameters for acidic digestions were: 20 mL of solution per gram of solids, at 80 ^∘C, under agitation speed of 300 rpm, for 2 h. Reactors (schlenk flasks) coupled with allihn condensers were used to avoid solvent losses. After the established time, samples were filtrated and diluted in volumetric flasks, and the liquors analyzed by ICP-OES."
+    },
+    {
+      "id": "Ece54af1135",
+      "kind": "source",
+      "section_name": "Thermal treatment",
+      "text": "It is usual to perform a thermal treatment (also called loss on ignition) on e-waste to evaporate volatile compounds, and consider this fraction as an approximation of polymers [25, 26]. Three samples of each of the eight groups were submitted to thermal treatment (collected as described in \"Economic potential\"). The samples were initially dried on a stove at 100 ºC, for 2 h, to eliminate moisture. After mass measuring, the samples were placed in alumina crucibles and arrayed in a mufle furnace at 550 ^∘C for 80 min. After cooling to room temperature, the resultant samples were dried again, in the same conditions, and had their mass measured."
+    },
+    {
+      "id": "Ec348f5f5aa",
+      "kind": "source",
+      "section_name": "Thermal treatment",
+      "text": "The temperature and time (550 ^ o C and 80 min) were previously settled by weighing a mixture of 1 g of each group of components (8 g in total) in a porcelain crucible, and testing several temperatures (400 ^∘C, 450 ^∘C, 500 ^∘C"
+    },
+    {
+      "id": "Ea8b3e44522",
+      "kind": "source",
+      "section_name": "Thermal treatment",
+      "text": "550 ºC, 600 ºC, and 700 ^∘C) during 1 h. This procedure was performed to establish the weight loss at each interval of temperature. After defining the optimal temperature, the ideal time was tested by fixing the temperature at 550 ^∘C and varying the reaction time between 20 and 120 min in 20 min intervals. In each interval, the sample mass was measured to verify additional losses. The higher loss of mass was reached at 80 min. With higher temperatures and times, gains of mass were detected possibly due to an excessive oxidation of the metallic fraction."
+    },
+    {
+      "id": "E6653621322",
+      "kind": "source",
+      "section_name": "FTIR analysis",
+      "text": "Additionally, samples of the casings were collected to carry out Fourier-Transform Infrared Spectroscopy (FTIR) analyses. Through these experiments, the main polymers of the casings can be identified. Two samples of each group (manufacturing year before and after 2015) were collected from the milled material and inserted in tablets of KBr. The wavelength analyzed was from 400 to 4000 cm−1, in reflectance system, with precision of 4 cm−1."
+    },
+    {
+      "id": "Ecc317c2d32",
+      "kind": "source",
+      "section_name": "Determination of target components and materials",
+      "text": "To guide research studies on the field of e-waste recycling, it is important to indicate objective parameters to support the targets’ definition. Some studies already tried to evaluate materials by similar parameters as the proposed in this study, and served as inspiration to the development of this methodology. The parameter of economic importance is common in the evaluation of priority materials for recycling, such as in the study of Cenci et al. [27]. Mancini et al. [28] proposed a method to evaluate criticality in life cycle analysis (LCA) studies, in which parameters of scarcity, supply risk, economic importance, and environmental relevance are evaluated. Ortego et al. [29] proposed a strategic metal index composed of supply risk, demand and resources parameters to identify weak spots in the supply chain of the automobilist industry."
+    },
+    {
+      "id": "Eb611f26974",
+      "kind": "source",
+      "section_name": "Determination of target components and materials",
+      "text": "The following parameters (see \"Mass fraction\", \"Economic potential\", \"Scarcity\", and \"Environmental burden as global warming potential\" sections) were evaluated for each chemical element of the smartphones and their components. Such framework and its interpretation can be applied to any residue in recycling studies."
+    },
+    {
+      "id": "E40e80b3cd0",
+      "kind": "source",
+      "section_name": "Mass fraction",
+      "text": "Recycling plays an important role in minimizing the quantity of disposed waste. At this point, it is considered that materials with higher mass fraction are important targets for recycling because they represent significant mass and volume for recovery, avoiding the need for other EoL disposal methods, such as landfilling, which is considered less eco-friendly [2]."
+    },
+    {
+      "id": "E2bfd7fc696",
+      "kind": "source",
+      "section_name": "Mass fraction",
+      "text": "The mass fraction of components and materials is given directly as a result of the characterization step. Materials with the highest mass fraction over the entire smartphones and components must be considered as targets."
+    },
+    {
+      "id": "E62ba82d209",
+      "kind": "source",
+      "section_name": "Economic potential",
+      "text": "The recovery of value-added materials is crucial for the sustenance and expansion of recycling initiatives. The economic potential parameter is considered as the market value of the materials, related to the quantity present in entire smartphones and components. Components and materials with the highest economic relevance must be considered as targets."
+    },
+    {
+      "id": "E9acefbc5bc",
+      "kind": "source",
+      "section_name": "Economic potential",
+      "text": "The mass fraction of each material is multiplied by the market value, resulting in the economic value (EV) of each material (_ m) of the components. To better visualize the data, the values are presented in the base of 1.000 kg of smartphones or components, as shown in Eq. 1."
+    },
+    {
+      "id": "E0e47b35de7",
+      "kind": "source",
+      "section_name": "Economic potential",
+      "text": "EVm = 1.000 kg * Mass Fractionm ((%) / (100)) * Market Valuem ((USD) / (kg)) (Eq. 1)"
+    },
+    {
+      "id": "E302bc61b9f",
+      "kind": "source",
+      "section_name": "Economic potential",
+      "text": "The market values were collected on the Argus Media Group website [30], which is a company focused on the market of commodities, between the days of August 17th and 18th, 2021. The website did not contain information about the elements Cr, Ga, Mg, Nb, Nd, Pr, Ta, Tb, V, W, and Zr, then a special report with values for these elements was provided by the company (report date of August 20th, 2020) [31]. Additionally, for the elements Dy, Li, Mo, V, and Zr, the values were only given in oxides (Dy2O3 Li2CO3, MoO3, V2O5 and ZrO, respectively), and a mass conversion step was necessary to adequate the values to an elementary base. For all the other elements, the values consider materials with 99% purity."
+    },
+    {
+      "id": "E1e4ab7d831",
+      "kind": "source",
+      "section_name": "Scarcity",
+      "text": "To evaluate the scarcity of a material and its pertinence to recovery, an equation (Eq. 2) was idealized to reproduce criteria of raw material scarcity, market scarcity (related to supply risk), and significance into the scrap. Materials with higher values of scarcity for recycling (SRm) must be considered for recycling in order to minimize their risk and maximize the strategic relevance of the routes."
+    },
+    {
+      "id": "E6890ad9769",
+      "kind": "source",
+      "section_name": "Scarcity",
+      "text": "The variables alpha, beta, and γ are weights that can be determined for each equation criteria according to the circumstances of the study. In this study, the authors adopted all the weights equal to 1. However, other values of weights can be used according to different necessities. For example, in the study of Mancini et al. [28], the authors applied exponents 3 and 6 to emphasize the differences among elements. The first term ^66 10 ^4 ^, has only the function of numeric scale to better visualize the results."
+    },
+    {
+      "id": "Ea59f6e881e",
+      "kind": "source",
+      "section_name": "Scarcity",
+      "text": "The first term of the equation aims to quantify the fraction of the available mineral resources that are demanded for future applications. The higher the fraction, the higher the risk of scarcity. The variable “demand” must include all sectors, in a cumulative period of time. Data of future demand were collected in the study of Valero et al. [32] and Ortego et al. [29], which comprehended the period of 2016–2050. The variable “mineral resources” was opted instead of “mineral reserves” because the values are more stable over time and are not subject to variables such as market prices [29]. Values of mineral resources were collected in the study of Ortego et al. [29]."
+    },
+    {
+      "id": "Ec286ae3f9c",
+      "kind": "source",
+      "section_name": "Scarcity",
+      "text": "The supply risk of a material is the most dificult variable to be determined. Supply risk is not a risk associated with natural scarcity (as evaluated in the first term of the equation), but a risk of market supply, which is subject to geopolitical conditions that vary across regions and over time. Unfortunately, a quantitative determination of supply risks is rare for most countries, and, in the ideal situation, each region must have its own values. For this reason, the authors opted to use the values determined for the European Union, available in a report constructed by the European Commission [33]. In the case of no data available for a given region, the authors suggest, after the application of values from other locations, the verification of government lists of strategic materials as a binary criterion (yes or not) to include each material as a target. The quantitative criterion of supply risk used in the study (European Commission [33]) includes the following factors: material substitution index, recycling rate, global supply concentration, supplier country governance, import reliance, trade restrictions, and bottlenecks of the supply chain."
+    },
+    {
+      "id": "E352f01efe5",
+      "kind": "source",
+      "section_name": "Scarcity",
+      "text": "The third part of the equation (mass fraction over demand) aims to prioritize the most significant materials in terms of quantity of potential recovery from the scrap, and their demand (the same as the first term). It indirectly evaluates a proportion between the demand of a material and how much could be supplied by the recycling of the scrap. This term is important to exclude materials which their recovery would be insignificant in face of the demand, and those which the trivial mass"
+    },
+    {
+      "id": "E04f966e399",
+      "kind": "source",
+      "section_name": "Scarcity",
+      "text": "SRm = 10 ^4 * ((Demandm (ktons)) / (Mineral Resourcesm (ktons))) ^alpha * (Supply Riskm) ^beta * ((Mass Fractionm (%)) / (Demandm (ktons))) ^gamma (Eq. 2)"
+    },
+    {
+      "id": "E34c2b124af",
+      "kind": "source",
+      "section_name": "Scarcity",
+      "text": "fraction could hinder the recycling route. A term with mass fraction into the scarcity parameter is also important to maximize the recovery of strategic resources from the scraps."
+    },
+    {
+      "id": "E44f8f99f6a",
+      "kind": "source",
+      "section_name": "Environmental burden as global warming potential",
+      "text": "As recycling has an evident environmental appeal, a criterion for selecting environmental relevant materials is wanted. Each material has an environmental burden (E Bm) associated with it, which is generated through its entire life cycle (usually called “from cradle to grave” impacts, and normally quantified by life cycle analysis (LCA) tools) [34]. Recycling initiatives can potentially minimize the environmental burden of a given material by substituting the processes used in the primary ores treatment (mining, refining, and production of the crude material, usually called “from cradle to gate”) for the process applied to the secondary ores treatment (which can be very variable) [35, 36]. Thus, materials that contain a high environmental burden associated with the cradle to gate approach are especially wanted for recycling processes. Considering the steps after “gate” into the quantification of the environmental burden would not be appropriated because recycled materials can be applied in the production of any consumer good, and the impacts of these steps themselves would remain the same despite of the origin of the resources (primary or secondary sources)."
+    },
+    {
+      "id": "Ecbb8a462d6",
+      "kind": "source",
+      "section_name": "Environmental burden as global warming potential",
+      "text": "To indirect evaluate the environmental burden associated with the smartphone’s materials in the cradle to gate approach, Eq. 3 is proposed. The environmental impact is multiplied by the mass fraction of the material into the components. In this study, values of global warming potential (GWP) are utilized (data collected in the study of Nuss and Eckelman [34], and presented in the unit of kg CO2 eq per kg of material) due to its particular importance on current global climate changes, and is often proposed as a major indicator [37]. Other types of environmental impact categories could also be evaluated, such as land use, acidification, and ecotoxicity."
+    },
+    {
+      "id": "Ee7e9458468",
+      "kind": "source",
+      "section_name": "Environmental burden as global warming potential",
+      "text": "Regarding climate changes impacts, current tendencies in environmental management and the emerging of the carbon market are leading companies to invest in some measures to compensate the emissions of CO2 eq [38]. Actions of carbon capture, utilization and storage (CCUS) are being applied through the process chains of the companies and can be considered into the equation when pertinent (a CCUS factor as a third term, varying from 0 to 1). In this study, a value of 1 (none CCUS action) is considered."
+    },
+    {
+      "id": "E9f14e6f4a2",
+      "kind": "source",
+      "section_name": "Environmental burden as global warming potential",
+      "text": "EB (GWP)m = GWPm ((kgCO2 eq) / (kg)) * Mass Fractionm (%) * CCUS (Eq. 3)"
+    },
+    {
+      "id": "E07caf30192",
+      "kind": "source",
+      "section_name": "Characterization",
+      "text": "As aforementioned, 30 smartphones were collected and divided into two groups according to their manufacturing years (before and after 2015). Devices were manually separated into four components (casing, PCB, screen, and battery), with individual measurements of their mass. A list with information about the brand, model, manufacturing year, and mass of the components, for each device, is provided in supplementary material. Figure 1 shows two examples of devices dismantled into four components."
+    },
+    {
+      "id": "Ec15f0da2b6",
+      "kind": "source",
+      "section_name": "Characterization",
+      "text": "In Fig. 1, batteries and PCBs are positioned upper in the image, and casings and screens lower, to the left and right, respectively. Some points are important to discuss about Fig. 1. The component called “screen” is not composed only by the display of the smartphones. It includes metallic and polymeric pieces and some complex electronic parts. Similarly, the component called “casing” is not only composed of polymeric pieces, including some complex electronic parts and metallic pieces. Indeed, as can be seen in Fig. 1, circulated by red squares, the casing component includes magnets, which remained joined to the component when separating the parts. It is important to note that, in a recycling route that applies manual dismantling as the first step, magnets can be lost if the casings are wasted."
+    },
+    {
+      "id": "E32a49a5d95",
+      "kind": "source",
+      "section_name": "Characterization",
+      "text": "Through manual separation, it was possible to identify some design differences between the two groups of manufacturing years. The group of smartphones manufactured after 2015 is relatively harder to be dismantled. There are more pieces of structural protection and screws, and, in some cases, there is no access to the interior of the device (battery cavity) through a back cover (which is common for the devices manufactured before 2015). These design characteristics can significantly hinder the recyclability of the devices in routes that apply manual dismantling, leading to mass losses and wasting of valuables parts. To open such devices, it would be necessary to use special tools that are time costly or crushing/milling the entire device (limiting the possibilities of a recycling route that aims to separate smartphones into different components). Additionally, these limitations are in disagreement with current initiatives of eco-design and some modern legislation, which endorse the need for accessibility to repair, to change pieces, and to dismantle for recycling [2, 39]. Such findings about the tendency of devices to be harder to dismantling were already explored by Tansel [40]. On the other hand, it is possible to cite the brand Fairphone as an example of the application of eco-design strategies, leading to devices that permit an easy repair and change of components (such as broken screens and inefficient batteries), and facilitate the EoL management for recycling [39, 41]. Anyway, it is possible to infer that recycling routes that minimize the necessity of manual dismantling are particularly pertinent to be established."
+    },
+    {
+      "id": "E374937c5e5",
+      "kind": "source",
+      "section_name": "Metallic and polymeric fraction",
+      "text": "The values of Table 1 were compared with the twosample hypothesis testing (t-test, 95% confidence interval) to find statistical similarities and differences between the groups. It was not found significant statistical differences between the groups of smartphones with manufacturing years before and after 2015. Exception for the metallic fraction of PCBs. Data indicate that PCBs from newer smartphones contain higher concentrations of metals (null hypothesis rejected in the t-test: p < 0.05), while the concentration of ¨others¨ decreased, and polymers kept equal. Through a visual analysis, this difference may be due to a technological modification in the manufacturing processes, which decreased the use of ceramic structural materials (for example, fiberglass) and polymers adhered on the PCBs."
+    },
+    {
+      "id": "E0d2e520294",
+      "kind": "source",
+      "section_name": "Metallic and polymeric fraction",
+      "text": "To complement the characterization of the polymeric fraction, FTIR analyses were performed in the two groups of casings (before and after 2015). The resultant spectra and their interpretation are provided in supplementary material. In summary, the spectra of the two groups are similar, indicating the presence of similar polymers in the two groups of casings. Interpretation indicated the presence of polycarbonate and acrylonitrile butadiene styrene (ABS). Indeed, the spectra database of the FTIR equipment shows 75–80% of similarity with polycarbonate (this information is not quantitative). The presence of polycarbonate and ABS is in accordance with the literature about smartphones and mobile phones in general [4, 42–44]. The knowledge of the type of polymers is important to preview possible recycling opportunities for polymers (such as pyrolysis, chemical recycling, incineration, and others)."
+    },
+    {
+      "id": "E2e8c1afec2",
+      "kind": "source",
+      "section_name": "Metallic and polymeric fraction",
+      "text": "[TABLE:TABLE_Assessment of Smartphones’ Components and Materials for a Recycling Perspective- Tendencies of Composition and Target Elements_0001]"
+    },
+    {
+      "id": "Ee18dc79a4d",
+      "kind": "source",
+      "section_name": "Metallic and polymeric fraction",
+      "text": "entary characterization involved those d have mass, economic, or criticality 50 elements were analyzed. In Tab the elementary characterization are s nts are included and separated by the uring years before (Bef) and after (Aft) omponents was already shown in Table nts shown in Table 2, As, Bi, Cd, Ce, E Lu, Pt, Rh, Ru, Sc, Se, Sm, Ta, Tl, Tm, characterized and had their concentrati limit of quantification (LOQ) for all co the focus of the discussion are the d"
+    },
+    {
+      "id": "Ec6efdd647b",
+      "kind": "source",
+      "section_name": "Metallic and polymeric fraction",
+      "text": "he two groups of smartphones. For co ple t-tests were applied. In casi tions of Al, Au, Co, Cr, Cu, Fe, Mg b, Tb, eV were found to be statisticall the groups. Considering elements ly important for recycling routes, the con reased significantly from the older sm wer (6–19%), while the quantity of Fe. These differences can be due to the re pieces with aluminum ones, in fun cal protection, heat dissipation, an. Regarding minor elements, emphasis i ase in the concentration of Au, Nd, and artphones (Nd and Pr are related to"
+    },
+    {
+      "id": "Eae347c29a4",
+      "kind": "source",
+      "section_name": "Metallic and polymeric fraction",
+      "text": "ns the concentrations of Al Au Cr,,,Mn, Nd, Ni, Pb, Pr, Sb, Tb, V, W, and ly different. The tendencies for the ele d, Pr, and Tb remained similar to the ca studies, it is important to highlight th ncentration of Cu and the absence of P nes (Pb is related to soldering, conside cted by many international regulation the concentrations of Al, Au, Ba, Co, C nd Zn were statistically different. Partic tion of Al decreased in newer batteri ated to a more efficient use of it in the For the main elements of the cathodes argets for recycling routes: Co, Li, M concentrations of Co and Li slightly oncentration of Mn slightly decreased ntrations of Co, Cu, Cr, Dy, Fe, Ga, M, Sb, Sr, V, and Zn were statistically dif tals Fe, Cu, Ni, Zn, and Cr presented s the total metallic fraction (Table 1 ments, emphasis is given to the decre tions of Nd, Pr, and Dy (related to mag bsence of Pb in the n"
+    },
+    {
+      "id": "E2c2523b87a",
+      "kind": "source",
+      "section_name": "Metallic and polymeric fraction",
+      "text": "composition of entire smartpho tions of Al, Au, Co, Cr, Dy, Fe, Ge, Li Pr, Sb, Tb, V, W, Yb, and Zn were st Highlights for the increases in the conc 9–15.5%), Li (0.6–0.9%), and Co (4 eases of Au (1524–740 ppm), Cr (2.1 ppm), Nd (0.19–0.12%), and Pr (478– ments, considered critical by some int had a decrease in concentrations, such as b, as a toxic element, had an importan This decrease of concentration of min [ and critical elements) is a tendency, nce with other recent literature"
+    },
+    {
+      "id": "E17f4420508",
+      "kind": "source",
+      "section_name": "Metallic and polymeric fraction",
+      "text": "point, the differences between sma ured before and after 2015 are cle at there are relevant composition varia onsequence of technology evolution, a nes can better represent the flow of mate d long term for recycling. Hereinafter, th consider smartphones manufactured af"
+    },
+    {
+      "id": "E5fa798fbf1",
+      "kind": "source",
+      "section_name": "Metallic and polymeric fraction",
+      "text": "ort for the decision of target co ents, it is essential to discuss the co phones in their relative distribution nts. Table 3 shows the total compo( nes newer) and the distribution, in p ng all compone"
+    },
+    {
+      "id": "Ed01a9ee93f",
+      "kind": "source",
+      "section_name": "Metallic and polymeric fraction",
+      "text": "mple, the amount of Ag (61 ppm) in the PCBs. Table 3 is important t onents that may be a focus of recycl g a given element. For example, conside it is not necessary to process PCBs, as o l Al is present in PCBs, and for Ga rec essary to process casings and ba"
+    },
+    {
+      "id": "E28a682683c",
+      "kind": "source",
+      "section_name": "Metallic and polymeric fraction",
+      "text": "ortant to highlight some interesting s ibution of Au, Pd and magnet-related d) presented high fractions in the cas cause casings contain some complex h as magnets, cameras, and speakers that nto the component when dismantling th orces the importance of characterization d the distribution of the material into th ple, recyclers that manually segregate th t process them for metals recovery, co ately, 32% of the Au, 67% of the Nd, a udies that only consider the metals reco n waste, approximately, 62% of the Au, of the Ni, 48% of the Cr, 84% of the Pd f the S,"
+    },
+    {
+      "id": "E354d071790",
+      "kind": "source",
+      "section_name": "on of target components and m",
+      "text": "characterization results, a methodolo of target components and materials for. The methodology, as described in \"Dete omponents and materials\" section, can"
+    },
+    {
+      "id": "E6e6b2245d3",
+      "kind": "source",
+      "section_name": "on of target components and m",
+      "text": "[TABLE:TABLE_Assessment of Smartphones’ Components and Materials for a Recycling Perspective- Tendencies of Composition and Target Elements_0002]"
+    },
+    {
+      "id": "E5e5e1040ee",
+      "kind": "source",
+      "section_name": "on of target components and m",
+      "text": "[TABLE:TABLE_Assessment of Smartphones’ Components and Materials for a Recycling Perspective- Tendencies of Composition and Target Elements_0003]"
+    },
+    {
+      "id": "E60f5c9b04a",
+      "kind": "source",
+      "section_name": "on of target components and m",
+      "text": "to any residue. Polymers, which compose an important mass fraction of smartphones (Table 1), can considered for recycling using mechanical, chemical, or thermal techniques [47]. Thus, the analysis of targets is focused on metals."
+    },
+    {
+      "id": "E25849b0f3b",
+      "kind": "source",
+      "section_name": "Mass fraction",
+      "text": "The definition of target components and materials by the parameter of mass fraction is a direct interpretation of the characterization results. The following discussion is based on the information provided in Tables 2 and 3."
+    },
+    {
+      "id": "Ed5cde76cf2",
+      "kind": "source",
+      "section_name": "Mass fraction",
+      "text": "In the component casings and screens, Al is the most significant element (more than 50%). In batteries, Co is the element with the highest mass fraction, which corresponds to 46.1% of the total metals. Also considering the Al of the batteries, the amount of Al is increased to 72.5% of the total metals. In PCBs, Cu is the main element (54%). Additionally, Cu is the third element, in mass relevance, for casings, screens, and batteries. Besides Cu, Co, and Al, Fe is also relevant, as the second most significant for casings, screens, and PCBs. However, as aforementioned, Fe concentration is considerably decreasing over time; thereby it is not pertinent to classify Fe as a target for recovery. Anyway, for recycling routes that aim to maximize mass recovery, the separation of ferrous materials is indicated as pertinent. Indeed, many recycling routes apply magnetic separation steps to select such pieces [48]."
+    },
+    {
+      "id": "E13d14e5f88",
+      "kind": "source",
+      "section_name": "Mass fraction",
+      "text": "Considering the mass distribution into components (Table 3), there is a similarity among all components concerning the significant presence of Al and Cu (exception for the relatively low concentration of Al in PCBs, with 1.41%). A distinction can be noted for Co, which is present, in significant concentrations, only in batteries."
+    },
+    {
+      "id": "E5fc881c497",
+      "kind": "source",
+      "section_name": "Economic potential",
+      "text": "The analysis of the economic potential took into account the market value and the mass fraction of the materials (Eq. 1). Complete results of EV (economic values) are shown in Supplementary Material for each element and component. A summary of the results is shown in Fig. 2, in the base of 1000 kg for each component and entire devices."
+    },
+    {
+      "id": "Ee51af1a7ad",
+      "kind": "source",
+      "section_name": "Economic potential",
+      "text": "For the EV of entire smartphones, Au represents 59% of the total economic potential and is two times higher than the second most valuable material (Pd) (USD 42,415.02 and USD 23,247.13, respectively). In general, Au and Pd are the most valuable elements for both the components casings, screens, and PCBs. In batteries, Co is the element with the highest EV (78% of the total EV of the component), and represents an exception in relation to Au and Pd. Batteries are the only component with a significant presence of Co and no contribution of Au and Pd for the economic potential (Table 3 and Fig. 2). To summarize, priority should be given to Au in all components (after Au, priority to Pd), with an exception for batteries, which have priority for Co."
+    },
+    {
+      "id": "E070330707b",
+      "kind": "source",
+      "section_name": "Economic potential",
+      "text": "Analyzing other materials (values can be checked in Supplementary Material), the low relevance of the element Ag draws attention, as it is commonly defined as a target for recycling routes due to its market value. In addition to the elements Au and Pd, the elements Cu, Li, Al, Ni, and Sn are indicated to recycling routes that aim to maximize economic recovery. The summation of the values indicates that 1000 kg of smartphones potentially contains USD 72,202.79 in metals. The most valuable components are PCBs and casings, and the least valuable component is batteries. As discussed for the mass fraction, casings contain significant concentrations of valuable elements, and may not be wasted. By segregating and not processing the casings, 30.6% of the total economic potential is wasted. And, only considering PCBs, 51.6% of the total economic potential would be wasted."
+    },
+    {
+      "id": "Ed7ca7ef780",
+      "kind": "source",
+      "section_name": "Scarcity",
+      "text": "In Supplementary Material, the complete resultant values of SRs, from Eq. 2, are provided. Figure 3 shows a summary of results for each component and entire devices."
+    },
+    {
+      "id": "E6de72a144e",
+      "kind": "source",
+      "section_name": "Scarcity",
+      "text": "Pd has the highest values of SR for entire smartphones and for the components PCBs, screens and casings (the recovery of Pd represents 66% of the total scarcity index). For batteries, Co has the highest SR value. As Co was already defined as a target through the parameters of mass fraction and economic potential, it is pertinent to include Li as a target for batteries (second material in economic potential and scarcity). To summarize, batteries are the component with distinct targets again (Co and Li), and Pd is defined as target for the other components. For routes that aim to maximize the recovery of scarcity, Au and magnets (elements Nd, Pr and Dy) are also indicated."
+    },
+    {
+      "id": "Eababddafca",
+      "kind": "source",
+      "section_name": "Scarcity",
+      "text": "Analyzing the summation of SRs, casings and PCBs are the components with the highest scarcity index. This is due to the high concentration of Au and Pd. In the case of casings, these elements remain adhered to the electronic parts when dismantling the devices (Fig. 1). By recovering Au, Pd, Co, and Li, 90.2% of the total scarcity index is addressed."
+    },
+    {
+      "id": "Efa8db932e7",
+      "kind": "source",
+      "section_name": "Environmental burden as global warming potential",
+      "text": "Materials with high EB(GWP) in the cradle to gate approach should be considered for recycling to especially minimize the need of primary processing treatment. The complete results of Eq. 3 are provided in Supplementary Material. A summary for the main elements for each component and entire devices is shown in Fig. 4. It is important to highlight that the resultant values from Eq. 3 do not represent real absolute values of emissions per component and elements, and are only applicable to relative comparisons."
+    },
+    {
+      "id": "Efd93eaad1e",
+      "kind": "source",
+      "section_name": "Environmental burden as global warming potential",
+      "text": "The elements Au, Pd, and Al (71%, 9.7 and 8.9%, respectively, for entire devices) had the highest absolute values among all elements. In general, the precious metals group (PMG) present higher environmental impact indexes than other groups of metals for many categories [34]."
+    },
+    {
+      "id": "Ee2347dbee7",
+      "kind": "source",
+      "section_name": "Environmental burden as global warming potential",
+      "text": "Au is the most influent for screens, casings, and PCBs. The exception is batteries, where Au is absent, and the most influent elements are Co and Al, with 54.5 and 30.8% of the total, respectively. Taking into account only metals in the cradle to gate steps, PCBs are the component with the highest value of GWP, and batteries the lowest. For example, PCBs has GWP value 7.9 times higher than batteries."
+    },
+    {
+      "id": "E5c00891811",
+      "kind": "source",
+      "section_name": "Final interpretation on target components and materials",
+      "text": "According to the results and discussions presented in the above sections, it is pertinent to propose two recycling routes: the first with treatment of entire devices, and the second with distinct flows for batteries and the other components separated as the first step of the recycling route. For casings, screens, and PCBs, Cu, Al, Au, and Pd are the main target elements. For batteries, Cu, Al, Co, and Li are the main targets. As discussed, other elements can be included in the recycling routes to maximize recovery rates, with emphasis on Nd, which is relevant for scarcity reasons, Sn and Ni for economic reasons, and Fe for the mass relevance. Figure 5 summarizes the definition of target components and materials. The main point to be highlighted for both routes is that screens and casings could be processed together with PCBs to avoid wasting of relevant materials, and batteries need a diferentiated approach because they have distinct target materials."
+    },
+    {
+      "id": "E297096e13c",
+      "kind": "source",
+      "section_name": "Final interpretation on target components and materials",
+      "text": "A route for entire smartphones (route 1) is recommended because, as verified in \"Characterization\" section, the current devices’ designs are obstructing an efficient manual dismantling process by recyclers. A route for entire smartphones means a route that avoid initial steps of manual segregation of components, being the entire smartphone directly processed by means of mechanical, hydro or pyro techniques. This approach is a gap in literature and may generate interesting results. The importance of considering all components, and minimizing initial steps of manua treatment is to prevent material losses and facilitating the work of small and medium recyclers worldwide that allocate a lot of manpower to perform this activity."
+    },
+    {
+      "id": "E1c7e8b6628",
+      "kind": "source",
+      "section_name": "Final interpretation on target components and materials",
+      "text": "A route manually separating batteries from the other components from the beginning, and jointly processing casings, PCBs, and screens is indicated to maximize the recovery of the target elements in the terms of this study (route 2). An exclusive recycling route for batteries must be considered as they have distinct targets materials for both criteria of mass fraction, economic potential, scarcity, and environmental burden, and an exclusive route for them may be important to maximize and prioritize the recovery of these targets (Co and Li). For the other components (casings, PCBs, and screens), similar target materials were defined, and, in the point of view of the analysis proposed in this study, they must be processed together to avoid material losses."
+    },
+    {
+      "id": "E31a1657176",
+      "kind": "source",
+      "section_name": "Final interpretation on target components and materials",
+      "text": "It is important to note that, for real processes, the recovery of an element is limited by the recycling techniques selected and thermodynamic features involved (this limitation is a challenge mainly for the route 1). Taken into consideration that Cu, Li, Au, Pd, Al, and Co are targets for recovery, it is also essential to select recycling strategies that ideally promote the valorization of all of them. The study of Nakajima et al. [49] explored the distribution of the elements in the smelting process of metallic materials (main recycling strategies worldwide considering e-waste) and presented limitations, impurities, and losses for each case. For example, if entire smartphone scrap is directly sent for the copper smelting process, Cu, Au and Pd can be adequately valorized. However, Al, Li, and Co would be lost in the slag, thus requiring pretreatment steps to separate them before the smelting process or considering other recycling strategies. It implies that the separation of components/materials (particularly the batteries/Li and Co) is essential to promote an adequate valorization of the residues even after processing entire smartphones in route 1."
+    },
+    {
+      "id": "E1d71216e22",
+      "kind": "source",
+      "section_name": "Final interpretation on target components and materials",
+      "text": "Finally, trough the recovery of the target elements, there would be a potential benefit of USD 71,383.78 from 1000 kg of smartphones (98.9% of the total economic potential). The recovery of scarce metals could reach the SR value of 11.537, which means 90.2% of the total scarcity evaluated by this methodology. Regarding the EB (GWP), the recovery of the target metals addresses 96.7% of total impact. These target elements represent 72.9% of the total mass of metals, and, incrementing a possible recycling of polymers, 62.4% of the total mass of the smartphones could be addressed."
+    },
+    {
+      "id": "E75c3d16018",
+      "kind": "source",
+      "section_name": "Conclusions",
+      "text": "Particularly for the characterization, at the date of realization, this study was the second more comprehensive in the number of elements, the most representative in the number of devices and samples, and the first to characterize separately all components. In terms of objectives, the work undertaken has contributed to filling gaps in the literature concerning the determination of the composition of smartphones, encompassing their various components and trends. It serves as a source of relevant and reliable information for recyclers and researchers. The comprehensive characterization has also facilitated the development of a supportive methodology for identifying the key elements for recovery. As the composition of REEE varies over time (being a limitation), it is suggested that similar studies be undertaken to keep the data and conclusions up-to-date."
+    },
+    {
+      "id": "E26a7e05e5f",
+      "kind": "source",
+      "section_name": "Conclusions",
+      "text": "In the manual dismantling of devices, it was noted that newer devices are harder to dismantle, as there is no access to the interior of the devices. The design of the newer devices is not in agreement with the current ecodesign recommendations to facilitate the replacement of components and recycling processes. Eco-design initiatives urges to be indeed applied by the manufacturers and future studies in this regard are suggested. About the elementary composition, although the limitation of only two groups of different manufacturing years were tested, significant and consolidated variations were found, such as the increase in the concentration of Al, and the decrease in the concentrations of some precious and critical metals (Au, Nd, Pr, V…), which are in agreement with previous literature. As an environmentally positive point, the elements Pb and PMG were found to significantly decrease over time. Screens, PCBs, and batteries of newer devices had concentrations of Pb below the LOQ in their composition."
+    },
+    {
+      "id": "E7931ae51e6",
+      "kind": "source",
+      "section_name": "Conclusions",
+      "text": "These variations of composition over time may impose regular updates to real recycling routes (including in the choice of materials they recover) to remain up to date in their processes and with adequate efficiencies. The methodology for definition of target components and materials, resulted in the selection of Cu, Al, Au, Li, Co, and Pd as the main targets. The definition included important parameters, namely mass fraction, economic potential, scarcity, and environmental burden, in a way to possibly the maximization of the recovery of these parameters. Circular economy seeks optimization in resource usage, with reduced dependence on primary raw materials, and all the proposed parameters are important to be taken into account. With a focus on scarcity and environmental burden parameters, our society should explore alternative and renewable sources of materials to minimize the environmental impact throughout the products life cycle. Recycling materials considered scarce and with a significant environmental footprint is crucial in this regard. It is important to mention that this methodology can be applied for any residue and is flexible to specific circumstances and contexts, being an opportunity for future studies. As a limitation, this definition depends on input data that are dificult to evaluate and access, and not available worldwide (for example, supply risk indexes for different regions and reliable data on environmental burden). In the end, two recycling routes are suggested for future studies: the first with entire smartphones (without initial dismantling), and the second divided into two flows, only separating batteries (because of the different target materials: Li and Co)."
+    },
+    {
+      "id": "Ed5c9b1637f",
+      "kind": "source",
+      "section_name": "Conclusions",
+      "text": "Supplementary Information The online version contains supplementary material available at https://doi.org/10.1007/s10163-024-01896-9."
+    },
+    {
+      "id": "E0c4f57a2be",
+      "kind": "source",
+      "section_name": "Conclusions",
+      "text": "Acknowledgements This research is supported by the CAPES— Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (88887.501183/2020-00 and PROBRAL 88887.643712/2021-00) and the others Brazilian government agencies CNPq, Finep and Fapergs."
+    },
+    {
+      "id": "E91d65ae3c9",
+      "kind": "source",
+      "section_name": "Declarations",
+      "text": "Conflict of interest None."
+    }
+  ]
+}

@@ -337,12 +337,18 @@
         "scope_subject_text": "lithium iron phosphate battery",
         "scope_label": "lithium iron phosphate battery",
         "evidence_ids": [
-          "E3e3bd7a3d7"
+          "E665d272b71"
         ],
-        "evidence_span": "The process of the mechanical treatment of spent lithium iron phosphate batteries primarily includes discharging, disassembly, crushing and sorting (Veit et al., 2002).",
-        "population_granularity": "batch",
-        "sample_type": "lithium iron phosphate battery",
-        "scope_description": "Spent lithium iron phosphate batteries subjected to mechanical treatment including discharging, disassembly, crushing and sorting.",
+        "evidence_span": "The sample used here is a lithium iron phosphate power battery crushed using the production line in HeFei GuoXuan High-Tech Power Energy CO. Ltd.",
+        "evidence": [
+          {
+            "evidence_id": "E665d272b71",
+            "quote": "The sample used here is a lithium iron phosphate power battery crushed using the production line in HeFei GuoXuan High-Tech Power Energy CO. Ltd."
+          }
+        ],
+        "population_granularity": "instance",
+        "sample_type": "lithium iron phosphate power battery",
+        "scope_description": "A single lithium iron phosphate power battery sample crushed using the production line at HeFei GuoXuan High-Tech Power Energy CO. Ltd.",
         "sample_size": null
       },
       {
@@ -352,12 +358,75 @@
         "scope_subject_text": "power battery",
         "scope_label": "power battery",
         "evidence_ids": [
-          "E86a60b1508"
+          "E665d272b71",
+          "E665d272b71"
         ],
-        "evidence_span": "Economic profit and eco-pressure are the primary motivations to recycle waste lithium iron phosphate power batteries; it is thus necessary to consider energy consumption during the recycling process, which includes discharge, disassembly, crushing and pneumatic separation.",
+        "evidence_span": "The power battery consists of positive electrode, negative electrode, electrolyte, separator and sealed shell.",
+        "evidence": [
+          {
+            "evidence_id": "E665d272b71",
+            "quote": "The power battery consists of positive electrode, negative electrode, electrolyte, separator and sealed shell."
+          },
+          {
+            "evidence_id": "E665d272b71",
+            "quote": "The sample used here is a lithium iron phosphate power battery crushed using the production line in HeFei GuoXuan High-Tech Power Energy CO. Ltd."
+          }
+        ],
         "population_granularity": "batch",
         "sample_type": "power battery",
-        "scope_description": "Waste lithium iron phosphate power batteries recycled for economic profit and eco-pressure, with recycling including discharge, disassembly, crushing and pneumatic separation.",
+        "scope_description": "Power batteries in general, described as consisting of positive electrode, negative electrode, electrolyte, separator and sealed shell; the study's sample is a lithium iron phosphate power battery.",
+        "sample_size": null
+      },
+      {
+        "root_entity_ids": [
+          "Product_lithium_iron_power_battery"
+        ],
+        "scope_subject_text": "lithium iron power battery",
+        "scope_label": "lithium iron power battery",
+        "evidence_ids": [
+          "Ec80a7c059f",
+          "E665d272b71"
+        ],
+        "evidence_span": "the pneumatic separation of crushed fragments of spent lithium iron power batteries depends only on the thickness",
+        "evidence": [
+          {
+            "evidence_id": "Ec80a7c059f",
+            "quote": "the pneumatic separation of crushed fragments of spent lithium iron power batteries depends only on the thickness"
+          },
+          {
+            "evidence_id": "E665d272b71",
+            "quote": "The sample used here is a lithium iron phosphate power battery crushed using the production line in HeFei GuoXuan High-Tech Power Energy CO. Ltd."
+          }
+        ],
+        "population_granularity": "batch",
+        "sample_type": "spent lithium iron power battery",
+        "scope_description": "Spent lithium iron power batteries whose crushed fragments are subjected to pneumatic separation; the study's sample is a lithium iron phosphate power battery.",
+        "sample_size": null
+      },
+      {
+        "root_entity_ids": [
+          "Product_crushed_product"
+        ],
+        "scope_subject_text": "crushed product",
+        "scope_label": "crushed product",
+        "evidence_ids": [
+          "Ef4c4da93c8",
+          "E665d272b71"
+        ],
+        "evidence_span": "The copper and aluminum foil current collectors after crushing had particle sizes ranging from 3 to 15 mm.",
+        "evidence": [
+          {
+            "evidence_id": "Ef4c4da93c8",
+            "quote": "The copper and aluminum foil current collectors after crushing had particle sizes ranging from 3 to 15 mm."
+          },
+          {
+            "evidence_id": "E665d272b71",
+            "quote": "The sample used here is a lithium iron phosphate power battery crushed using the production line in HeFei GuoXuan High-Tech Power Energy CO. Ltd."
+          }
+        ],
+        "population_granularity": "batch",
+        "sample_type": "crushed battery core product",
+        "scope_description": "Crushed products from the core of the sampled lithium iron phosphate power battery, with copper and aluminum foil current collectors having particle sizes of 3–15 mm.",
         "sample_size": null
       },
       {
@@ -367,43 +436,61 @@
         "scope_subject_text": "pneumatic separation of crushed battery core product",
         "scope_label": "pneumatic separation of crushed battery core product",
         "evidence_ids": [
-          "E9447aa0ae7"
+          "E0a32c256a7",
+          "E8c72132def"
         ],
-        "evidence_span": "Crushed lithium iron phosphate power battery core products (copper and aluminum foil current collectors with particle sizes 3–15 mm, dissociated electrode powders) are fed into a pneumatic separation system where airflow velocity and inclination angle separate materials based on aerodynamic drag and gravity; the process is modeled with horizontal and vertical motion equations accounting for drag force, buoyancy, additional mass force, Saffman lift, Basset force, Magnus force, and pressure gradient force, with particle-wall and particle-particle interactions neglected.",
+        "evidence_span": "here a vertical pneumatic separator was used for the experiment, of which the airflow velocity ranged from 1.4 to 30 m/s and its incremental regulation 0.1–0.3 m/s.",
+        "evidence": [
+          {
+            "evidence_id": "E0a32c256a7",
+            "quote": "here a vertical pneumatic separator was used for the experiment, of which the airflow velocity ranged from 1.4 to 30 m/s and its incremental regulation 0.1–0.3 m/s."
+          },
+          {
+            "evidence_id": "E8c72132def",
+            "quote": "The goal of this paper is to evaluate the dynamic behavior of the flake crushed fragments using pneumatic separation, to create a mathematical model for pneumatic separation, and to determine the optimal airflow velocity for pneumatic separation of the copper and aluminum fragments from spent lithium iron phosphate batteries."
+          }
+        ],
         "method_family": "pneumatic separation"
       }
     ],
     "scope_audit": {
-      "evidence_record_count": 3,
+      "evidence_record_count": 123,
       "rejected_definition_count": 0,
+      "unscoped_candidate_count": 0,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
     "scope_assertions": [
       {
-        "id": "scope-assertion:398799c21438672a",
+        "id": "scope-assertion:d5501b609b32aeba",
         "micrograph_id": "Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries",
         "root_entity_ids": [
           "Product_lithium_iron_phosphate_battery"
         ],
+        "requested_root_entity_ids": [
+          "Product_lithium_iron_phosphate_battery"
+        ],
         "scope_kind": "declared_population",
         "facets": {
-          "population_granularity": "batch",
-          "sample_type": "lithium iron phosphate battery"
+          "population_granularity": "instance",
+          "sample_type": "lithium iron phosphate power battery"
         },
-        "scope_description": "Spent lithium iron phosphate batteries subjected to mechanical treatment including discharging, disassembly, crushing and sorting.",
+        "scope_description": "A single lithium iron phosphate power battery sample crushed using the production line at HeFei GuoXuan High-Tech Power Energy CO. Ltd.",
         "sample_size": null,
-        "evidence_span": "The process of the mechanical treatment of spent lithium iron phosphate batteries primarily includes discharging, disassembly, crushing and sorting (Veit et al., 2002).",
+        "evidence_span": "The sample used here is a lithium iron phosphate power battery crushed using the production line in HeFei GuoXuan High-Tech Power Energy CO. Ltd.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:398799c21438672a:evidence",
+          "scope:scope-assertion:d5501b609b32aeba:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_lithium_iron_phosphate_battery:entity"
         ]
       },
       {
-        "id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-assertion:36299ae91e0b4ee2",
         "micrograph_id": "Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries",
         "root_entity_ids": [
+          "Product_power_battery"
+        ],
+        "requested_root_entity_ids": [
           "Product_power_battery"
         ],
         "scope_kind": "declared_population",
@@ -411,39 +498,88 @@
           "population_granularity": "batch",
           "sample_type": "power battery"
         },
-        "scope_description": "Waste lithium iron phosphate power batteries recycled for economic profit and eco-pressure, with recycling including discharge, disassembly, crushing and pneumatic separation.",
+        "scope_description": "Power batteries in general, described as consisting of positive electrode, negative electrode, electrolyte, separator and sealed shell; the study's sample is a lithium iron phosphate power battery.",
         "sample_size": null,
-        "evidence_span": "Economic profit and eco-pressure are the primary motivations to recycle waste lithium iron phosphate power batteries; it is thus necessary to consider energy consumption during the recycling process, which includes discharge, disassembly, crushing and pneumatic separation.",
+        "evidence_span": "The power battery consists of positive electrode, negative electrode, electrolyte, separator and sealed shell.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity"
         ]
       },
       {
-        "id": "scope-assertion:70aa5c7b8e0089db",
+        "id": "scope-assertion:5cb69d1d2993a135",
         "micrograph_id": "Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries",
         "root_entity_ids": [
+          "Product_lithium_iron_power_battery"
+        ],
+        "requested_root_entity_ids": [
+          "Product_lithium_iron_power_battery"
+        ],
+        "scope_kind": "declared_population",
+        "facets": {
+          "population_granularity": "batch",
+          "sample_type": "spent lithium iron power battery"
+        },
+        "scope_description": "Spent lithium iron power batteries whose crushed fragments are subjected to pneumatic separation; the study's sample is a lithium iron phosphate power battery.",
+        "sample_size": null,
+        "evidence_span": "the pneumatic separation of crushed fragments of spent lithium iron power batteries depends only on the thickness",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:5cb69d1d2993a135:evidence",
+          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_lithium_iron_power_battery:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:6cc28a82bcfecb6c",
+        "micrograph_id": "Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries",
+        "root_entity_ids": [
+          "Product_crushed_product"
+        ],
+        "requested_root_entity_ids": [
+          "Product_crushed_product"
+        ],
+        "scope_kind": "declared_population",
+        "facets": {
+          "population_granularity": "batch",
+          "sample_type": "crushed battery core product"
+        },
+        "scope_description": "Crushed products from the core of the sampled lithium iron phosphate power battery, with copper and aluminum foil current collectors having particle sizes of 3–15 mm.",
+        "sample_size": null,
+        "evidence_span": "The copper and aluminum foil current collectors after crushing had particle sizes ranging from 3 to 15 mm.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:6cc28a82bcfecb6c:evidence",
+          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_crushed_product:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:3a0491a33aec0b21",
+        "micrograph_id": "Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries",
+        "root_entity_ids": [
+          "Process_pneumatic_separation_of_crushed_battery_core_product"
+        ],
+        "requested_root_entity_ids": [
           "Process_pneumatic_separation_of_crushed_battery_core_product"
         ],
         "scope_kind": "process_method_family",
         "facets": {
           "method_family": "pneumatic separation"
         },
-        "scope_description": "Crushed lithium iron phosphate power battery core products (copper and aluminum foil current collectors with particle sizes 3–15 mm, dissociated electrode powders) are fed into a pneumatic separation system where airflow velocity and inclination angle separate materials based on aerodynamic drag and gravity; the process is modeled with horizontal and vertical motion equations accounting for drag force, buoyancy, additional mass force, Saffman lift, Basset force, Magnus force, and pressure gradient force, with particle-wall and particle-particle interactions neglected.",
+        "scope_description": "here a vertical pneumatic separator was used for the experiment, of which the airflow velocity ranged from 1.4 to 30 m/s and its incremental regulation 0.1–0.3 m/s.",
         "sample_size": null,
-        "evidence_span": "Crushed lithium iron phosphate power battery core products (copper and aluminum foil current collectors with particle sizes 3–15 mm, dissociated electrode powders) are fed into a pneumatic separation system where airflow velocity and inclination angle separate materials based on aerodynamic drag and gravity; the process is modeled with horizontal and vertical motion equations accounting for drag force, buoyancy, additional mass force, Saffman lift, Basset force, Magnus force, and pressure gradient force, with particle-wall and particle-particle interactions neglected.",
+        "evidence_span": "here a vertical pneumatic separator was used for the experiment, of which the airflow velocity ranged from 1.4 to 30 m/s and its incremental regulation 0.1–0.3 m/s.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Process_pneumatic_separation_of_crushed_battery_core_product:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:eeb18f5841a0b0a5",
-        "scope_assertion_id": "scope-assertion:398799c21438672a",
+        "id": "scope-path:a1d197d58e1379c3",
+        "scope_assertion_id": "scope-assertion:d5501b609b32aeba",
         "statement_relation_id": "REL_Product_lithium_iron_phosphate_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
         "root_entity_id": "Product_lithium_iron_phosphate_battery",
         "entity_path": [
@@ -452,13 +588,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:398799c21438672a:evidence",
+          "scope:scope-assertion:d5501b609b32aeba:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_lithium_iron_phosphate_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
         ]
       },
       {
-        "id": "scope-path:73faf42d78908110",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:369fc465c3e0bfd8",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Product_power_battery_CONTAINS_Component_positive_electrode",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -467,13 +603,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_positive_electrode"
         ]
       },
       {
-        "id": "scope-path:5bcf1a427a30c89c",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:56cae1c8d6cc31a5",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Product_power_battery_CONTAINS_Component_negative_electrode",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -482,13 +618,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_negative_electrode"
         ]
       },
       {
-        "id": "scope-path:6c668f5eecb6bc86",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:f49fb15a20dc7420",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Product_power_battery_CONTAINS_Component_electrolyte",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -497,13 +633,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_electrolyte"
         ]
       },
       {
-        "id": "scope-path:47d3bc1c8b0580cc",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:97df86afb79f2656",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Product_power_battery_CONTAINS_Component_separator",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -512,13 +648,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_separator"
         ]
       },
       {
-        "id": "scope-path:cdd71f88568ed973",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:15f6827da7696d35",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Product_power_battery_CONTAINS_Component_sealed_shell",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -527,13 +663,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_sealed_shell"
         ]
       },
       {
-        "id": "scope-path:0f9f63486a3edc85",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:73da376c0e518d60",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Component_positive_electrode_CONTAINS_Material_lithium_manganate",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -545,14 +681,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_positive_electrode_CONTAINS_Material_lithium_manganate",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_positive_electrode"
         ]
       },
       {
-        "id": "scope-path:a156a1a0945745a5",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:26aafe137b93ec26",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Component_positive_electrode_CONTAINS_Material_lithium_cobalt_acid",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -564,14 +700,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_positive_electrode_CONTAINS_Material_lithium_cobalt_acid",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_positive_electrode"
         ]
       },
       {
-        "id": "scope-path:cef031e57002eb4c",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:3ccb779020c76626",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Component_positive_electrode_CONTAINS_Material_lithium_iron_phosphate",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -583,14 +719,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_positive_electrode_CONTAINS_Material_lithium_iron_phosphate",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_positive_electrode"
         ]
       },
       {
-        "id": "scope-path:285fe9809afbf201",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:e3458e85add11a89",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Component_positive_electrode_CONTAINS_Material_three_element_system",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -602,14 +738,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_positive_electrode_CONTAINS_Material_three_element_system",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_positive_electrode"
         ]
       },
       {
-        "id": "scope-path:d4a327a32e72cab7",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:372e388fc57ff711",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Component_positive_electrode_CONTAINS_Component_aluminum_foil",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -621,14 +757,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_positive_electrode_CONTAINS_Component_aluminum_foil",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_positive_electrode"
         ]
       },
       {
-        "id": "scope-path:e84b8d009d7080dd",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:30ad846005c09983",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Component_positive_electrode_CONTAINS_Material_PVDF",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -640,14 +776,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_positive_electrode_CONTAINS_Material_PVDF",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_positive_electrode"
         ]
       },
       {
-        "id": "scope-path:9b4fa5c36b6d6061",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:c53366ff24241ebd",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Component_negative_electrode_CONTAINS_Material_carbonbased",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -659,14 +795,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_negative_electrode_CONTAINS_Material_carbonbased",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_negative_electrode"
         ]
       },
       {
-        "id": "scope-path:b83a9864e5cc7f41",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:873f5f1c4204f979",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Component_negative_electrode_CONTAINS_Material_tin_based",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -678,14 +814,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_negative_electrode_CONTAINS_Material_tin_based",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_negative_electrode"
         ]
       },
       {
-        "id": "scope-path:00a9737d96553c14",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:79e4a5407f0c4b5d",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Component_negative_electrode_CONTAINS_Material_silicon_based",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -697,14 +833,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_negative_electrode_CONTAINS_Material_silicon_based",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_negative_electrode"
         ]
       },
       {
-        "id": "scope-path:a79d9a5c76842ae7",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:cda08529c997c18f",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Component_negative_electrode_CONTAINS_Material_lithium_titanate",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -716,14 +852,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_negative_electrode_CONTAINS_Material_lithium_titanate",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_negative_electrode"
         ]
       },
       {
-        "id": "scope-path:abea6ba9e9ca0fda",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:4e339775207a0b77",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Component_negative_electrode_CONTAINS_Component_copper_foil",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -735,14 +871,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_negative_electrode_CONTAINS_Component_copper_foil",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_negative_electrode"
         ]
       },
       {
-        "id": "scope-path:1fdb06ab0ee78c80",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:9c895abdad464ceb",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Component_electrolyte_CONTAINS_Material_LiFL6",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -754,14 +890,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_electrolyte_CONTAINS_Material_LiFL6",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_electrolyte"
         ]
       },
       {
-        "id": "scope-path:e3ccfa1516aa25e2",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:1efc9ae4e56e1731",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Component_separator_CONTAINS_Material_polyethylene",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -773,14 +909,14 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_separator_CONTAINS_Material_polyethylene",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_separator"
         ]
       },
       {
-        "id": "scope-path:07c0f998c9b7a8f5",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:e95dae6f4f62a322",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Product_power_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -789,13 +925,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
         ]
       },
       {
-        "id": "scope-path:ef43b5147a473f03",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:5ab1b2d9b77dac28",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Component_copper_foil_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -809,15 +945,15 @@
         ],
         "propagation_kind": "contains_path",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_copper_foil_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_negative_electrode_CONTAINS_Component_copper_foil",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_negative_electrode"
         ]
       },
       {
-        "id": "scope-path:6181afc79899de87",
-        "scope_assertion_id": "scope-assertion:7d6da1309b9df103",
+        "id": "scope-path:feed0371cb18f6bf",
+        "scope_assertion_id": "scope-assertion:36299ae91e0b4ee2",
         "statement_relation_id": "REL_Product_power_battery_CONTAINS_Component_battery_module",
         "root_entity_id": "Product_power_battery",
         "entity_path": [
@@ -826,43 +962,58 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_battery_module"
         ]
       },
       {
-        "id": "scope-path:19845c022221d20c",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
-        "statement_relation_id": "REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_lanthanide_metal_sulfate",
-        "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
+        "id": "scope-path:aed85eb3c231bf42",
+        "scope_assertion_id": "scope-assertion:5cb69d1d2993a135",
+        "statement_relation_id": "REL_Product_lithium_iron_power_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
+        "root_entity_id": "Product_lithium_iron_power_battery",
         "entity_path": [
-          "Process_pneumatic_separation_of_crushed_battery_core_product"
+          "Product_lithium_iron_power_battery"
         ],
         "containment_relation_path": [],
-        "propagation_kind": "process_scope",
+        "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
-          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_lanthanide_metal_sulfate"
+          "scope:scope-assertion:5cb69d1d2993a135:evidence",
+          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_lithium_iron_power_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
         ]
       },
       {
-        "id": "scope-path:d55be7c3797d94e0",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
-        "statement_relation_id": "REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_cerium_sulfate",
-        "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
+        "id": "scope-path:5a1adb861d083f3c",
+        "scope_assertion_id": "scope-assertion:6cc28a82bcfecb6c",
+        "statement_relation_id": "REL_Product_crushed_product_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
+        "root_entity_id": "Product_crushed_product",
         "entity_path": [
-          "Process_pneumatic_separation_of_crushed_battery_core_product"
+          "Product_crushed_product"
         ],
         "containment_relation_path": [],
-        "propagation_kind": "process_scope",
+        "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
-          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_cerium_sulfate"
+          "scope:scope-assertion:6cc28a82bcfecb6c:evidence",
+          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_crushed_product_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
         ]
       },
       {
-        "id": "scope-path:b2cace734303d07f",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
+        "id": "scope-path:5a1adb861d083f3c",
+        "scope_assertion_id": "scope-assertion:6cc28a82bcfecb6c",
+        "statement_relation_id": "REL_Product_crushed_product_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
+        "root_entity_id": "Product_crushed_product",
+        "entity_path": [
+          "Product_crushed_product"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:6cc28a82bcfecb6c:evidence",
+          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_crushed_product_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
+        ]
+      },
+      {
+        "id": "scope-path:237733f1db0fafc5",
+        "scope_assertion_id": "scope-assertion:3a0491a33aec0b21",
         "statement_relation_id": "REL_Product_power_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
         "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
         "entity_path": [
@@ -871,13 +1022,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
         ]
       },
       {
-        "id": "scope-path:bd6db9266b439c59",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
+        "id": "scope-path:de3a386e7db73132",
+        "scope_assertion_id": "scope-assertion:3a0491a33aec0b21",
         "statement_relation_id": "REL_Component_copper_foil_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
         "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
         "entity_path": [
@@ -886,13 +1037,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_copper_foil_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
         ]
       },
       {
-        "id": "scope-path:212611b9273b6bab",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
+        "id": "scope-path:c8428c303eeecf71",
+        "scope_assertion_id": "scope-assertion:3a0491a33aec0b21",
         "statement_relation_id": "REL_Product_lithium_iron_power_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
         "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
         "entity_path": [
@@ -901,13 +1052,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_lithium_iron_power_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
         ]
       },
       {
-        "id": "scope-path:31540c9e034a0f86",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
+        "id": "scope-path:a91a4cdde302a978",
+        "scope_assertion_id": "scope-assertion:3a0491a33aec0b21",
         "statement_relation_id": "REL_Product_lithium_iron_phosphate_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
         "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
         "entity_path": [
@@ -916,73 +1067,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_lithium_iron_phosphate_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
         ]
       },
       {
-        "id": "scope-path:a83d8f7136216ada",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
-        "statement_relation_id": "REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Al",
-        "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
-        "entity_path": [
-          "Process_pneumatic_separation_of_crushed_battery_core_product"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
-          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Al"
-        ]
-      },
-      {
-        "id": "scope-path:6571629192a35929",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
-        "statement_relation_id": "REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Cu",
-        "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
-        "entity_path": [
-          "Process_pneumatic_separation_of_crushed_battery_core_product"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
-          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Cu"
-        ]
-      },
-      {
-        "id": "scope-path:6571629192a35929",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
-        "statement_relation_id": "REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Cu",
-        "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
-        "entity_path": [
-          "Process_pneumatic_separation_of_crushed_battery_core_product"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
-          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Cu"
-        ]
-      },
-      {
-        "id": "scope-path:a83d8f7136216ada",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
-        "statement_relation_id": "REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Al",
-        "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
-        "entity_path": [
-          "Process_pneumatic_separation_of_crushed_battery_core_product"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
-          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Al"
-        ]
-      },
-      {
-        "id": "scope-path:bfb2f4a390af109d",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
+        "id": "scope-path:8aaf8bfc5f31a203",
+        "scope_assertion_id": "scope-assertion:3a0491a33aec0b21",
         "statement_relation_id": "REL_Product_crushed_product_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
         "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
         "entity_path": [
@@ -991,43 +1082,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_crushed_product_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
         ]
       },
       {
-        "id": "scope-path:a83d8f7136216ada",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
-        "statement_relation_id": "REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Al",
-        "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
-        "entity_path": [
-          "Process_pneumatic_separation_of_crushed_battery_core_product"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
-          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Al"
-        ]
-      },
-      {
-        "id": "scope-path:6571629192a35929",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
-        "statement_relation_id": "REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Cu",
-        "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
-        "entity_path": [
-          "Process_pneumatic_separation_of_crushed_battery_core_product"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
-          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Cu"
-        ]
-      },
-      {
-        "id": "scope-path:22000623a9b99540",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
+        "id": "scope-path:a8b69d6d1b72568e",
+        "scope_assertion_id": "scope-assertion:3a0491a33aec0b21",
         "statement_relation_id": "REL_Material_Cu_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
         "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
         "entity_path": [
@@ -1036,13 +1097,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Material_Cu_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
         ]
       },
       {
-        "id": "scope-path:0a4fc14401e6ba47",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
+        "id": "scope-path:3ff90783bc67c939",
+        "scope_assertion_id": "scope-assertion:3a0491a33aec0b21",
         "statement_relation_id": "REL_Material_Al_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
         "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
         "entity_path": [
@@ -1051,13 +1112,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Material_Al_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
         ]
       },
       {
-        "id": "scope-path:bfb2f4a390af109d",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
+        "id": "scope-path:8aaf8bfc5f31a203",
+        "scope_assertion_id": "scope-assertion:3a0491a33aec0b21",
         "statement_relation_id": "REL_Product_crushed_product_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
         "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
         "entity_path": [
@@ -1066,13 +1127,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_crushed_product_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
         ]
       },
       {
-        "id": "scope-path:a83d8f7136216ada",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
+        "id": "scope-path:e8f94c98177688ee",
+        "scope_assertion_id": "scope-assertion:3a0491a33aec0b21",
         "statement_relation_id": "REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Al",
         "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
         "entity_path": [
@@ -1081,13 +1142,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Al"
         ]
       },
       {
-        "id": "scope-path:6571629192a35929",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
+        "id": "scope-path:99ffa5d77ecee302",
+        "scope_assertion_id": "scope-assertion:3a0491a33aec0b21",
         "statement_relation_id": "REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Cu",
         "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
         "entity_path": [
@@ -1096,13 +1157,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Cu"
         ]
       },
       {
-        "id": "scope-path:22000623a9b99540",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
+        "id": "scope-path:a8b69d6d1b72568e",
+        "scope_assertion_id": "scope-assertion:3a0491a33aec0b21",
         "statement_relation_id": "REL_Material_Cu_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
         "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
         "entity_path": [
@@ -1111,13 +1172,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Material_Cu_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
         ]
       },
       {
-        "id": "scope-path:0a4fc14401e6ba47",
-        "scope_assertion_id": "scope-assertion:70aa5c7b8e0089db",
+        "id": "scope-path:3ff90783bc67c939",
+        "scope_assertion_id": "scope-assertion:3a0491a33aec0b21",
         "statement_relation_id": "REL_Material_Al_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
         "root_entity_id": "Process_pneumatic_separation_of_crushed_battery_core_product",
         "entity_path": [
@@ -1126,7 +1187,7 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Material_Al_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product"
         ]
       }
@@ -9257,13 +9318,13 @@
           "Component_positive_electrode"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:73faf42d78908110"
+          "scope-path:369fc465c3e0bfd8"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_positive_electrode",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:e6be42d09b40f824",
@@ -9282,13 +9343,13 @@
           "Component_negative_electrode"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:5bcf1a427a30c89c"
+          "scope-path:56cae1c8d6cc31a5"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_negative_electrode",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:3c399f99adca64be",
@@ -9307,13 +9368,13 @@
           "Component_electrolyte"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:6c668f5eecb6bc86"
+          "scope-path:f49fb15a20dc7420"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_electrolyte",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:54029b7c96c900e2",
@@ -9332,13 +9393,13 @@
           "Component_separator"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:47d3bc1c8b0580cc"
+          "scope-path:97df86afb79f2656"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_separator",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:f0fa16122d2e4d46",
@@ -9357,13 +9418,13 @@
           "Component_sealed_shell"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cdd71f88568ed973"
+          "scope-path:15f6827da7696d35"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_sealed_shell",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:f15d86be6da524ef",
@@ -9382,13 +9443,13 @@
           "Material_lithium_manganate"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:0f9f63486a3edc85"
+          "scope-path:73da376c0e518d60"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_positive_electrode_CONTAINS_Material_lithium_manganate",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_positive_electrode",
@@ -9408,13 +9469,13 @@
           "Material_lithium_cobalt_acid"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:a156a1a0945745a5"
+          "scope-path:26aafe137b93ec26"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_positive_electrode_CONTAINS_Material_lithium_cobalt_acid",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_positive_electrode",
@@ -9434,13 +9495,13 @@
           "Material_lithium_iron_phosphate"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cef031e57002eb4c"
+          "scope-path:3ccb779020c76626"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_positive_electrode_CONTAINS_Material_lithium_iron_phosphate",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_positive_electrode",
@@ -9460,13 +9521,13 @@
           "Material_three_element_system"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:285fe9809afbf201"
+          "scope-path:e3458e85add11a89"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_positive_electrode_CONTAINS_Material_three_element_system",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_positive_electrode",
@@ -9486,13 +9547,13 @@
           "Component_aluminum_foil"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:d4a327a32e72cab7"
+          "scope-path:372e388fc57ff711"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_positive_electrode_CONTAINS_Component_aluminum_foil",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_positive_electrode",
@@ -9512,13 +9573,13 @@
           "Material_PVDF"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e84b8d009d7080dd"
+          "scope-path:30ad846005c09983"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_positive_electrode_CONTAINS_Material_PVDF",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_positive_electrode",
@@ -9538,13 +9599,13 @@
           "Material_carbonbased"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:9b4fa5c36b6d6061"
+          "scope-path:c53366ff24241ebd"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_negative_electrode_CONTAINS_Material_carbonbased",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_negative_electrode",
@@ -9564,13 +9625,13 @@
           "Material_tin_based"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:b83a9864e5cc7f41"
+          "scope-path:873f5f1c4204f979"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_negative_electrode_CONTAINS_Material_tin_based",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_negative_electrode",
@@ -9590,13 +9651,13 @@
           "Material_silicon_based"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:00a9737d96553c14"
+          "scope-path:79e4a5407f0c4b5d"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_negative_electrode_CONTAINS_Material_silicon_based",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_negative_electrode",
@@ -9616,13 +9677,13 @@
           "Material_lithium_titanate"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:a79d9a5c76842ae7"
+          "scope-path:cda08529c997c18f"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_negative_electrode_CONTAINS_Material_lithium_titanate",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_negative_electrode",
@@ -9642,13 +9703,13 @@
           "Component_copper_foil"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:abea6ba9e9ca0fda"
+          "scope-path:4e339775207a0b77"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_negative_electrode_CONTAINS_Component_copper_foil",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_negative_electrode",
@@ -9668,13 +9729,13 @@
           "Material_LiFL6"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:1fdb06ab0ee78c80"
+          "scope-path:9c895abdad464ceb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_electrolyte_CONTAINS_Material_LiFL6",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_electrolyte",
@@ -9694,13 +9755,13 @@
           "Material_polyethylene"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e3ccfa1516aa25e2"
+          "scope-path:1efc9ae4e56e1731"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_separator_CONTAINS_Material_polyethylene",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_separator",
@@ -9720,16 +9781,16 @@
           "Process_pneumatic_separation_of_crushed_battery_core_product"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:70aa5c7b8e0089db",
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2",
+          "scope-assertion:3a0491a33aec0b21"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:07c0f998c9b7a8f5",
-          "scope-path:b2cace734303d07f"
+          "scope-path:237733f1db0fafc5",
+          "scope-path:e95dae6f4f62a322"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Process_pneumatic_separation_of_crushed_battery_core_product:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
@@ -9749,16 +9810,16 @@
           "Process_pneumatic_separation_of_crushed_battery_core_product"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:70aa5c7b8e0089db",
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2",
+          "scope-assertion:3a0491a33aec0b21"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:bd6db9266b439c59",
-          "scope-path:ef43b5147a473f03"
+          "scope-path:5ab1b2d9b77dac28",
+          "scope-path:de3a386e7db73132"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Process_pneumatic_separation_of_crushed_battery_core_product:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Component_copper_foil_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
@@ -9780,14 +9841,18 @@
           "Process_pneumatic_separation_of_crushed_battery_core_product"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:70aa5c7b8e0089db"
+          "scope-assertion:3a0491a33aec0b21",
+          "scope-assertion:5cb69d1d2993a135"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:212611b9273b6bab"
+          "scope-path:aed85eb3c231bf42",
+          "scope-path:c8428c303eeecf71"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
+          "scope:scope-assertion:5cb69d1d2993a135:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Process_pneumatic_separation_of_crushed_battery_core_product:entity",
+          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_lithium_iron_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_lithium_iron_power_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:f2136f6fe9d796f8",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:f2136f6fe9d796f8:evidence"
@@ -9805,16 +9870,16 @@
           "Process_pneumatic_separation_of_crushed_battery_core_product"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:398799c21438672a",
-          "scope-assertion:70aa5c7b8e0089db"
+          "scope-assertion:3a0491a33aec0b21",
+          "scope-assertion:d5501b609b32aeba"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:31540c9e034a0f86",
-          "scope-path:eeb18f5841a0b0a5"
+          "scope-path:a1d197d58e1379c3",
+          "scope-path:a91a4cdde302a978"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:398799c21438672a:evidence",
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
+          "scope:scope-assertion:d5501b609b32aeba:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Process_pneumatic_separation_of_crushed_battery_core_product:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_lithium_iron_phosphate_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_lithium_iron_phosphate_battery_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
@@ -9834,14 +9899,18 @@
           "Process_pneumatic_separation_of_crushed_battery_core_product"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:70aa5c7b8e0089db"
+          "scope-assertion:3a0491a33aec0b21",
+          "scope-assertion:6cc28a82bcfecb6c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:bfb2f4a390af109d"
+          "scope-path:5a1adb861d083f3c",
+          "scope-path:8aaf8bfc5f31a203"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
+          "scope:scope-assertion:6cc28a82bcfecb6c:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Process_pneumatic_separation_of_crushed_battery_core_product:entity",
+          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_crushed_product:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_crushed_product_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:521139bf276b6057",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:521139bf276b6057:evidence"
@@ -9859,13 +9928,13 @@
           "Process_pneumatic_separation_of_crushed_battery_core_product"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:70aa5c7b8e0089db"
+          "scope-assertion:3a0491a33aec0b21"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:22000623a9b99540"
+          "scope-path:a8b69d6d1b72568e"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Process_pneumatic_separation_of_crushed_battery_core_product:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Material_Cu_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:e94cd8dead17bc92",
@@ -9884,13 +9953,13 @@
           "Process_pneumatic_separation_of_crushed_battery_core_product"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:70aa5c7b8e0089db"
+          "scope-assertion:3a0491a33aec0b21"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:0a4fc14401e6ba47"
+          "scope-path:3ff90783bc67c939"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Process_pneumatic_separation_of_crushed_battery_core_product:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Material_Al_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:e1d4a47efbba71f6",
@@ -9909,14 +9978,18 @@
           "Process_pneumatic_separation_of_crushed_battery_core_product"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:70aa5c7b8e0089db"
+          "scope-assertion:3a0491a33aec0b21",
+          "scope-assertion:6cc28a82bcfecb6c"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:bfb2f4a390af109d"
+          "scope-path:5a1adb861d083f3c",
+          "scope-path:8aaf8bfc5f31a203"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
+          "scope:scope-assertion:6cc28a82bcfecb6c:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Process_pneumatic_separation_of_crushed_battery_core_product:entity",
+          "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_crushed_product:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_crushed_product_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:13a7afcc079e86d5",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:13a7afcc079e86d5:evidence"
@@ -9934,13 +10007,13 @@
           "Material_Al"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:70aa5c7b8e0089db"
+          "scope-assertion:3a0491a33aec0b21"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:a83d8f7136216ada"
+          "scope-path:e8f94c98177688ee"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Process_pneumatic_separation_of_crushed_battery_core_product:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Al",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:9099e7ca80f143c8",
@@ -9959,13 +10032,13 @@
           "Material_Cu"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:70aa5c7b8e0089db"
+          "scope-assertion:3a0491a33aec0b21"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:6571629192a35929"
+          "scope-path:99ffa5d77ecee302"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Process_pneumatic_separation_of_crushed_battery_core_product:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Process_pneumatic_separation_of_crushed_battery_core_product_HAS_OUTPUT_Material_Cu",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:b51567f0d914d84e",
@@ -9984,13 +10057,13 @@
           "Component_battery_module"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7d6da1309b9df103"
+          "scope-assertion:36299ae91e0b4ee2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:6181afc79899de87"
+          "scope-path:feed0371cb18f6bf"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7d6da1309b9df103:evidence",
+          "scope:scope-assertion:36299ae91e0b4ee2:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Product_power_battery:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Product_power_battery_CONTAINS_Component_battery_module",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:b46b3bb5a20482cc",
@@ -10009,13 +10082,13 @@
           "Process_pneumatic_separation_of_crushed_battery_core_product"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:70aa5c7b8e0089db"
+          "scope-assertion:3a0491a33aec0b21"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:22000623a9b99540"
+          "scope-path:a8b69d6d1b72568e"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Process_pneumatic_separation_of_crushed_battery_core_product:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Material_Cu_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:132dbaf46655a219",
@@ -10034,13 +10107,13 @@
           "Process_pneumatic_separation_of_crushed_battery_core_product"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:70aa5c7b8e0089db"
+          "scope-assertion:3a0491a33aec0b21"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:0a4fc14401e6ba47"
+          "scope-path:3ff90783bc67c939"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:70aa5c7b8e0089db:evidence",
+          "scope:scope-assertion:3a0491a33aec0b21:evidence",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:Process_pneumatic_separation_of_crushed_battery_core_product:entity",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:REL_Material_Al_PROCESSED_BY_Process_pneumatic_separation_of_crushed_battery_core_product",
           "source:Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries:relation:statement:119f8aa6f557034a",
@@ -14027,6 +14100,7 @@
       "document_evidence_builder": 0.061,
       "scope_llm": 1.538,
       "final_triples_export": 0.005
-    }
+    },
+    "scope_unscoped_candidates": []
   }
 }

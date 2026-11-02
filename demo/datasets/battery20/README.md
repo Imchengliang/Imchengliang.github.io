@@ -2,9 +2,11 @@
 
 ## Current published selection — 2 November 2026
 
-The active local and online demo contains **20 papers and 12 catalog records**, retaining only catalogs with existing direct paper-entity connections: nine model alignments and three weaker variant links. The other five catalogs and their 28 exclusive nodes / 23 internal edges are absent from this published selection. No paper data, Scope record, observation or extraction archive was changed; no extraction or alignment API was called.
+The active local and online demo contains **20 papers and 12 catalog records**, retaining only catalogs with existing direct paper-entity connections: nine model alignments and three weaker variant links. The other five catalogs and their 28 exclusive nodes / 23 internal edges are absent from this published selection. That catalog-selection step changed no paper data or extraction output. The subsequent Scope-only refresh updates sample and method annotations while preserving entities, scientific relations and observations.
 
-Active selection and catalog receipts are in `updates/connected-catalogs-20261102/`; the original 20+17 selection and earlier fusion files remain historical archives. The current projection has **469 nodes, 442 core entities, 1,564 displayed relations and 1,073 quantitative observations**. All six guides / 51 stops and paper evidence anchors remain applicable. Sections describing earlier builds below retain their historical counts.
+Current Scope inputs, selection, fusion graph and verification are in `updates/scope-refresh-20261102/`. Catalog selection receipts remain in `updates/connected-catalogs-20261102/`; the original 20+17 selection and earlier fusion files remain historical archives. The current projection has **474 nodes, 442 core entities, 1,784 displayed relations and 1,073 quantitative observations**. All six guides / 51 stops and paper evidence anchors remain applicable. Sections describing earlier builds below retain their historical counts.
+
+The Scope refresh contains **64 sample scopes, 62 method scopes and nine explicitly unscoped candidates**. It used 25 Scope API calls including pilot/debugging calls, and zero calls to other extraction Agents. The 20 final-result payloads were compared after removing only Scope and its derived statement-association fields; all remaining content is identical.
 
 Status of the original build: **built and validated as of 30 October 2026**. The original selection receipt remains unchanged; see `build_report.json` for completion and integrity checks.
 

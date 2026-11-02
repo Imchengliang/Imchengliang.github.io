@@ -1,17 +1,49 @@
 [
   {
     "root_entity_ids": [
-      "Component_organic_film"
+      "Component_lithium_ion_battery"
     ],
-    "scope_subject_text": "organic film",
-    "scope_label": "organic film",
+    "scope_subject_text": "lithium-ion battery",
+    "scope_label": "lithium-ion battery",
     "evidence_ids": [
-      "E94c42bdc7d"
+      "E60feed8255"
     ],
-    "evidence_span": "In order to understand the occurrence state of organic films on the surface of LiCoO2 and graphite during mechanical grinding, FE-EPMA was used to analyze the element distribution on the particle surface.",
+    "evidence_span": "100 pieces of spent LIBs with the same type were discharged completely in 5 wt% sodium chloride solution for 48 h and dried naturally for 24 h afterwards. All batteries were manually disassembled into metallic shell, cathode strips, anode strips and organic separators.",
+    "evidence": [
+      {
+        "evidence_id": "E60feed8255",
+        "quote": "100 pieces of spent LIBs with the same type were discharged completely in 5 wt% sodium chloride solution for 48 h and dried naturally for 24 h afterwards. All batteries were manually disassembled into metallic shell, cathode strips, anode strips and organic separators."
+      }
+    ],
     "population_granularity": "batch",
-    "sample_type": "organic film",
-    "scope_description": "Organic film coating the surfaces of LiCoO2 and graphite particles, analyzed by FE-EPMA to understand its occurrence state during mechanical grinding.",
+    "sample_type": "spent lithium-ion batteries",
+    "scope_description": "100 pieces of spent LIBs of the same type, discharged in 5 wt% sodium chloride solution, dried, and manually disassembled into shells, cathode strips, anode strips and separators.",
+    "sample_size": null
+  },
+  {
+    "root_entity_ids": [
+      "Component_electrode"
+    ],
+    "scope_subject_text": "electrode",
+    "scope_label": "electrode",
+    "evidence_ids": [
+      "E60feed8255",
+      "E60feed8255"
+    ],
+    "evidence_span": "Then the cathode strips and anode strips were placed in the impact crusher with the number ratio 1:1. After crushing and screening, the fine powder under 0.074 mm was mixed electrode materials (LiCoO2 and graphite).",
+    "evidence": [
+      {
+        "evidence_id": "E60feed8255",
+        "quote": "Then the cathode strips and anode strips were placed in the impact crusher with the number ratio 1:1. After crushing and screening, the fine powder under 0.074 mm was mixed electrode materials (LiCoO2 and graphite)."
+      },
+      {
+        "evidence_id": "E60feed8255",
+        "quote": "Results indicated that LiCoO2 accounted for 66.75% of the mixed electrode powder."
+      }
+    ],
+    "population_granularity": "batch",
+    "sample_type": "mixed electrode powder",
+    "scope_description": "Mixed electrode powder (LiCoO2 and graphite) obtained by crushing and screening the cathode and anode strips at a 1:1 number ratio, with the fraction under 0.074 mm used; LiCoO2 content 66.75%.",
     "sample_size": null
   },
   {
@@ -21,9 +53,15 @@
     "scope_subject_text": "grinding flotation",
     "scope_label": "grinding flotation",
     "evidence_ids": [
-      "Ea7a11243b5"
+      "E804a309613"
     ],
-    "evidence_span": "Then the cathode strips and anode strips were placed in the impact crusher with the number ratio 1:1.",
+    "evidence_span": "Grinding flotation experiments were carried out in standard Hardgrove apparatus and lab-scale flotation machine. First, 40 g of mixed electrode powder together with steel balls were sealed in the grinding chamber. The grinding times were 2.5 min, 5 min, 10 min, 20 min and 30 min, respectively. Then, the grinding productions were subjected to reverse flotation with the same experimental conditions.",
+    "evidence": [
+      {
+        "evidence_id": "E804a309613",
+        "quote": "Grinding flotation experiments were carried out in standard Hardgrove apparatus and lab-scale flotation machine. First, 40 g of mixed electrode powder together with steel balls were sealed in the grinding chamber. The grinding times were 2.5 min, 5 min, 10 min, 20 min and 30 min, respectively. Then, the grinding productions were subjected to reverse flotation with the same experimental conditions."
+      }
+    ],
     "method_family": "grinding flotation"
   }
 ]

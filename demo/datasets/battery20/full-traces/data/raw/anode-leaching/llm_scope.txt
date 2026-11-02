@@ -1,14 +1,113 @@
 [
   {
     "root_entity_ids": [
+      "Product_lithium_ion_battery"
+    ],
+    "scope_subject_text": "lithium-ion battery",
+    "scope_label": "lithium-ion battery",
+    "evidence_ids": [
+      "E13544eabca",
+      "E7042c39b47"
+    ],
+    "evidence_span": "The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd.",
+    "evidence": [
+      {
+        "evidence_id": "E13544eabca",
+        "quote": "The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd."
+      },
+      {
+        "evidence_id": "E7042c39b47",
+        "quote": "The spent LIBs were discharged firstly to prevent the dangers of short-circuits and spontaneous combustion. Then they were dismantled manually to different parts: cathode, anode, organic separator and the plastic case. With aid of scraper and tweezers, active materials were separated from the anode."
+      }
+    ],
+    "population_granularity": "batch",
+    "sample_type": "spent lithium-ion battery",
+    "scope_description": "Spent lithium-ion batteries produced by Sony Ericsson Mobile Communications (China) Co., Ltd., discharged, manually dismantled, and their anode active material separated and calcined for the study.",
+    "sample_size": null
+  },
+  {
+    "root_entity_ids": [
+      "Component_anode_active_material"
+    ],
+    "scope_subject_text": "anode active material",
+    "scope_label": "anode active material",
+    "evidence_ids": [
+      "E7042c39b47",
+      "E13544eabca"
+    ],
+    "evidence_span": "With aid of scraper and tweezers, active materials were separated from the anode. These partitioned black active materials were placed in a furnace and calcined at 500 ^∘C for one hour to remove the organic components.",
+    "evidence": [
+      {
+        "evidence_id": "E7042c39b47",
+        "quote": "With aid of scraper and tweezers, active materials were separated from the anode. These partitioned black active materials were placed in a furnace and calcined at 500 ^∘C for one hour to remove the organic components."
+      },
+      {
+        "evidence_id": "E13544eabca",
+        "quote": "The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd."
+      }
+    ],
+    "population_granularity": "batch",
+    "sample_type": "anode active material from spent lithium-ion batteries",
+    "scope_description": "Anode active material separated from the spent Sony Ericsson LIBs, calcined at 500 °C for one hour to remove organic components before leaching.",
+    "sample_size": null
+  },
+  {
+    "root_entity_ids": [
       "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder"
     ],
     "scope_subject_text": "reductive hydrochloric acid leaching of calcined powder",
     "scope_label": "reductive hydrochloric acid leaching of calcined powder",
     "evidence_ids": [
-      "E323714adbe"
+      "E595b35ad9a"
     ],
-    "evidence_span": "The powder samples used in this study are from the spent LIBs produced by Sony Ericsson Mobile Communications (China) Co., Ltd.",
-    "method_family": "reductive hydrochloric acid leaching"
+    "evidence_span": "In this study, hydrochloric acid was taken as leachate to recycle lithium from the calcined powder materials. To increase the leaching efficiency, reductive leaching was carried out with H2O2 as the reducing agent.",
+    "evidence": [
+      {
+        "evidence_id": "E595b35ad9a",
+        "quote": "In this study, hydrochloric acid was taken as leachate to recycle lithium from the calcined powder materials. To increase the leaching efficiency, reductive leaching was carried out with H2O2 as the reducing agent."
+      }
+    ],
+    "method_family": "reductive acid leaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_reviewed_c2ca1a770bfa07"
+    ],
+    "scope_subject_text": "deionized water leaching of calcined anode powder",
+    "scope_label": "deionized water leaching of calcined anode powder",
+    "evidence_ids": [
+      "E6c185ce685"
+    ],
+    "evidence_span": "Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water.",
+    "evidence": [
+      {
+        "evidence_id": "E6c185ce685",
+        "quote": "Because some of them are water-soluble, such as ROCO2 Li CH3OLi Li2O,, in the experiment performed it has a high leaching efficiency of lithium (84%) only in deionized water."
+      }
+    ],
+    "method_family": "water leaching"
+  },
+  {
+    "root_entity_ids": [
+      "Process_reviewed_8daa8098cc6a94"
+    ],
+    "scope_subject_text": "hydrochloric acid leaching of calcined anode powder without H2O2",
+    "scope_label": "hydrochloric acid leaching of calcined anode powder without H2O2",
+    "evidence_ids": [
+      "Eb01c0ea70f",
+      "E6c185ce685"
+    ],
+    "evidence_span": "Being a solid–liquid reaction, the leaching process was mainly influenced by the concentration of hydrochloric acid, _ H Cl - H2O2 volume ratio, solid–liquid ratio, leaching time, and temperature and agitation rate.",
+    "evidence": [
+      {
+        "evidence_id": "Eb01c0ea70f",
+        "quote": "Being a solid–liquid reaction, the leaching process was mainly influenced by the concentration of hydrochloric acid, _ H Cl - H2O2 volume ratio, solid–liquid ratio, leaching time, and temperature and agitation rate."
+      },
+      {
+        "evidence_id": "E6c185ce685",
+        "quote": "While others are almost insoluble in water and inlaid in the anode active materials, such as ROCO Li, LiF, and they will occur decomposition reaction in HCl solution."
+      }
+    ],
+    "method_family": "acid leaching"
   }
 ]

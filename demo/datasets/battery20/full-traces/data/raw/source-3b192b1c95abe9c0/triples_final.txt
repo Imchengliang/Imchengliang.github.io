@@ -328,30 +328,60 @@
     "scope": [
       {
         "root_entity_ids": [
+          "Product_lithium_ion_battery"
+        ],
+        "scope_subject_text": "lithium ion battery",
+        "scope_label": "lithium ion battery",
+        "evidence_ids": [
+          "E673e567b8f",
+          "E36e831038c",
+          "Eab06362431"
+        ],
+        "evidence_span": "a novel recycling technology to regenerate LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 as usable cathode material from exhausted LIBs was developed",
+        "evidence": [
+          {
+            "evidence_id": "E673e567b8f",
+            "quote": "a novel recycling technology to regenerate LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 as usable cathode material from exhausted LIBs was developed"
+          },
+          {
+            "evidence_id": "E36e831038c",
+            "quote": "this paper aimed at developing a novel recycling process applicable to a mixture of spent Li-ion batteries"
+          },
+          {
+            "evidence_id": "Eab06362431",
+            "quote": "It is applied to preparation of a regenerated solution with enriched transition metal ions from spent lithiumion batteries."
+          }
+        ],
+        "population_granularity": "batch",
+        "sample_type": "spent lithium-ion batteries",
+        "scope_description": "Spent lithium-ion batteries (LIBs) used as the feedstock for the recycling/regeneration study; the paper describes them as exhausted LIBs and mixed battery waste treated by the proposed route.",
+        "sample_size": null
+      },
+      {
+        "root_entity_ids": [
           "Component_cathode"
         ],
         "scope_subject_text": "cathode",
         "scope_label": "cathode",
         "evidence_ids": [
-          "E11f2c1be1e"
+          "Eb812a68c54",
+          "Eab06362431"
         ],
-        "evidence_span": "For Lee [7], LiCoO2 was separated from spent electrodes in a single synthetic step using hydrothermal method without any scraping procedure, and the renovated LiCoO2 cathode material was obtained simultaneously.",
+        "evidence_span": "The cathode active material of Li (Ni1 / 3 Co1 / 3 Mn1 / 3) O2 with satisfactory electrochemical performance was successfully regenerated from the leaching liquor of spent lithium-ion batteries",
+        "evidence": [
+          {
+            "evidence_id": "Eb812a68c54",
+            "quote": "The cathode active material of Li (Ni1 / 3 Co1 / 3 Mn1 / 3) O2 with satisfactory electrochemical performance was successfully regenerated from the leaching liquor of spent lithium-ion batteries"
+          },
+          {
+            "evidence_id": "Eab06362431",
+            "quote": "Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 (x = 0, 0.01, 0.025, 0.05) cathode materials were synthesized by doping method. Magnesium was added during co-precipitation process followed by high temperature sintering using the recovered metal sulfate salts of NiSO4, CoSO4, and MnSO4 as staring materials."
+          }
+        ],
         "population_granularity": "batch",
-        "sample_type": "cathode",
-        "scope_description": "Cathode material separated from spent electrodes in a single synthetic step using hydrothermal method without scraping procedure.",
+        "sample_type": "cathode active material from spent lithium-ion batteries",
+        "scope_description": "Cathode active material recovered from spent LIBs and regenerated as LiNi1/3Co1/3Mn1/3O2, including Mg-doped Li[(Ni1/3Co1/3Mn1/3)1-xMgx]O2 (x = 0, 0.01, 0.025, 0.05) prepared from the recovered metal sulfate salts.",
         "sample_size": null
-      },
-      {
-        "root_entity_ids": [
-          "Process_lithium_ion_battery"
-        ],
-        "scope_subject_text": "lithium ion battery",
-        "scope_label": "lithium ion battery",
-        "evidence_ids": [
-          "E0a82ee494f"
-        ],
-        "evidence_span": "Based on the novel recycling technology, Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 (0 ≤x ≤0.05) cathode materials are achieved from spent LIB.",
-        "method_family": "recycling"
       },
       {
         "root_entity_ids": [
@@ -360,22 +390,16 @@
         "scope_subject_text": "secondary alkaline leaching",
         "scope_label": "secondary alkaline leaching",
         "evidence_ids": [
-          "E3460fc0b87"
+          "Eab06362431"
         ],
         "evidence_span": "Recycling process consists of thermal treatment, crushing, ball milling, sieving, secondary alkaline leaching, secondary acid leaching and purification.",
+        "evidence": [
+          {
+            "evidence_id": "Eab06362431",
+            "quote": "Recycling process consists of thermal treatment, crushing, ball milling, sieving, secondary alkaline leaching, secondary acid leaching and purification."
+          }
+        ],
         "method_family": "alkaline leaching"
-      },
-      {
-        "root_entity_ids": [
-          "Process_solid_state_calcination"
-        ],
-        "scope_subject_text": "solid-state calcination",
-        "scope_label": "solid-state calcination",
-        "evidence_ids": [
-          "E52066c6214"
-        ],
-        "evidence_span": "LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 cathode material is prepared from purified solution by controlled crystallization followed by solid-state calcinations.",
-        "method_family": "solid-state calcination"
       },
       {
         "root_entity_ids": [
@@ -384,94 +408,16 @@
         "scope_subject_text": "secondary acid leaching",
         "scope_label": "secondary acid leaching",
         "evidence_ids": [
-          "E5904a66210"
+          "Eab06362431"
         ],
         "evidence_span": "Recycling process consists of thermal treatment, crushing, ball milling, sieving, secondary alkaline leaching, secondary acid leaching and purification.",
+        "evidence": [
+          {
+            "evidence_id": "Eab06362431",
+            "quote": "Recycling process consists of thermal treatment, crushing, ball milling, sieving, secondary alkaline leaching, secondary acid leaching and purification."
+          }
+        ],
         "method_family": "acid leaching"
-      },
-      {
-        "root_entity_ids": [
-          "Process_controlled_crystallization"
-        ],
-        "scope_subject_text": "controlled crystallization",
-        "scope_label": "controlled crystallization",
-        "evidence_ids": [
-          "E5973c95d12"
-        ],
-        "evidence_span": "Controlled crystallization is used to prepare LiNi1/3Co1/3Mn1/3O2 cathode material from the purified solution, followed by solid-state calcinations.",
-        "method_family": "crystallization"
-      },
-      {
-        "root_entity_ids": [
-          "Process_scrubbing"
-        ],
-        "scope_subject_text": "scrubbing",
-        "scope_label": "scrubbing",
-        "evidence_ids": [
-          "E72b1720dfb"
-        ],
-        "evidence_span": "Scrubbing is performed as part of the organic solvent extraction procedure to recover NiSO4, CoSO4, and MnSO4 one by one.",
-        "method_family": "solvent extraction"
-      },
-      {
-        "root_entity_ids": [
-          "Process_co_precipitation"
-        ],
-        "scope_subject_text": "co-precipitation",
-        "scope_label": "co-precipitation",
-        "evidence_ids": [
-          "E7a9b5c5765"
-        ],
-        "evidence_span": "Co-precipitation is used to synthesize Li[(Ni1/3Co1/3Mn1/3)1-xMgx]O2 (x = 0, 0.01, 0.025, 0.05) cathode materials by doping with magnesium.",
-        "method_family": "co-precipitation"
-      },
-      {
-        "root_entity_ids": [
-          "Process_organic_solvent_extraction"
-        ],
-        "scope_subject_text": "organic solvent extraction",
-        "scope_label": "organic solvent extraction",
-        "evidence_ids": [
-          "E9639a02d22"
-        ],
-        "evidence_span": "Organic solvent extraction is used to recover NiSO4, CoSO4, and MnSO4 one by one from the purified leaching liquor, followed by corresponding scrubbing and stripping procedures.",
-        "method_family": "solvent extraction"
-      },
-      {
-        "root_entity_ids": [
-          "Process_stripping"
-        ],
-        "scope_subject_text": "stripping",
-        "scope_label": "stripping",
-        "evidence_ids": [
-          "Ec05d9f54d4"
-        ],
-        "evidence_span": "Stripping is performed as part of the organic solvent extraction procedure to recover NiSO4, CoSO4, and MnSO4 one by one.",
-        "method_family": "solvent extraction"
-      },
-      {
-        "root_entity_ids": [
-          "Process_NaF_deposition"
-        ],
-        "scope_subject_text": "NaF deposition",
-        "scope_label": "NaF deposition",
-        "evidence_ids": [
-          "Ec17d5409b4"
-        ],
-        "evidence_span": "If the concentration of magnesium ion remained in the leachate exceeds the limitation of national standard, NaF deposition method is used to remove the Mg ^2+ ion.",
-        "method_family": "deposition"
-      },
-      {
-        "root_entity_ids": [
-          "Process_cathode_active_material"
-        ],
-        "scope_subject_text": "cathode active material",
-        "scope_label": "cathode active material",
-        "evidence_ids": [
-          "Ee03e9e0bb6"
-        ],
-        "evidence_span": "1: preliminary treatment of batteries, followed by leaching with alkaline and sulfuric acid solution respectively, metal separation by liquid–liquid extraction and chemical deposition method and synthesis ofcathode active materials.",
-        "method_family": "synthesis"
       },
       {
         "root_entity_ids": [
@@ -480,10 +426,142 @@
         "scope_subject_text": "purification",
         "scope_label": "purification",
         "evidence_ids": [
-          "Ee52dc7c129"
+          "Eab06362431"
         ],
         "evidence_span": "Recycling process consists of thermal treatment, crushing, ball milling, sieving, secondary alkaline leaching, secondary acid leaching and purification.",
+        "evidence": [
+          {
+            "evidence_id": "Eab06362431",
+            "quote": "Recycling process consists of thermal treatment, crushing, ball milling, sieving, secondary alkaline leaching, secondary acid leaching and purification."
+          }
+        ],
         "method_family": "purification"
+      },
+      {
+        "root_entity_ids": [
+          "Process_organic_solvent_extraction"
+        ],
+        "scope_subject_text": "organic solvent extraction",
+        "scope_label": "organic solvent extraction",
+        "evidence_ids": [
+          "Eab06362431"
+        ],
+        "evidence_span": "Compound of NiSO4, CoSO4,, and MnSO4 is recovered one by one as the final products by organic solvent extraction and corresponding scrubbing and stripping procedures.",
+        "evidence": [
+          {
+            "evidence_id": "Eab06362431",
+            "quote": "Compound of NiSO4, CoSO4,, and MnSO4 is recovered one by one as the final products by organic solvent extraction and corresponding scrubbing and stripping procedures."
+          }
+        ],
+        "method_family": "solvent extraction"
+      },
+      {
+        "root_entity_ids": [
+          "Process_scrubbing"
+        ],
+        "scope_subject_text": "scrubbing",
+        "scope_label": "scrubbing",
+        "evidence_ids": [
+          "Eab06362431"
+        ],
+        "evidence_span": "Compound of NiSO4, CoSO4,, and MnSO4 is recovered one by one as the final products by organic solvent extraction and corresponding scrubbing and stripping procedures.",
+        "evidence": [
+          {
+            "evidence_id": "Eab06362431",
+            "quote": "Compound of NiSO4, CoSO4,, and MnSO4 is recovered one by one as the final products by organic solvent extraction and corresponding scrubbing and stripping procedures."
+          }
+        ],
+        "method_family": "scrubbing"
+      },
+      {
+        "root_entity_ids": [
+          "Process_stripping"
+        ],
+        "scope_subject_text": "stripping",
+        "scope_label": "stripping",
+        "evidence_ids": [
+          "Eab06362431"
+        ],
+        "evidence_span": "Compound of NiSO4, CoSO4,, and MnSO4 is recovered one by one as the final products by organic solvent extraction and corresponding scrubbing and stripping procedures.",
+        "evidence": [
+          {
+            "evidence_id": "Eab06362431",
+            "quote": "Compound of NiSO4, CoSO4,, and MnSO4 is recovered one by one as the final products by organic solvent extraction and corresponding scrubbing and stripping procedures."
+          }
+        ],
+        "method_family": "stripping"
+      },
+      {
+        "root_entity_ids": [
+          "Process_NaF_deposition"
+        ],
+        "scope_subject_text": "NaF deposition",
+        "scope_label": "NaF deposition",
+        "evidence_ids": [
+          "Eab06362431"
+        ],
+        "evidence_span": "If the concentration of magnesium ion remained in the leachate exceeds the limitation of national standard, NaF deposition method is used to remove the Mg ^2+ ion.",
+        "evidence": [
+          {
+            "evidence_id": "Eab06362431",
+            "quote": "If the concentration of magnesium ion remained in the leachate exceeds the limitation of national standard, NaF deposition method is used to remove the Mg ^2+ ion."
+          }
+        ],
+        "method_family": "chemical precipitation"
+      },
+      {
+        "root_entity_ids": [
+          "Process_controlled_crystallization"
+        ],
+        "scope_subject_text": "controlled crystallization",
+        "scope_label": "controlled crystallization",
+        "evidence_ids": [
+          "Eab06362431"
+        ],
+        "evidence_span": "LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 cathode material is prepared from purified solution by controlled crystallization followed by solid-state calcinations.",
+        "evidence": [
+          {
+            "evidence_id": "Eab06362431",
+            "quote": "LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 cathode material is prepared from purified solution by controlled crystallization followed by solid-state calcinations."
+          }
+        ],
+        "method_family": "crystallization"
+      },
+      {
+        "root_entity_ids": [
+          "Process_solid_state_calcination"
+        ],
+        "scope_subject_text": "solid-state calcination",
+        "scope_label": "solid-state calcination",
+        "evidence_ids": [
+          "Eab06362431"
+        ],
+        "evidence_span": "LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 cathode material is prepared from purified solution by controlled crystallization followed by solid-state calcinations.",
+        "evidence": [
+          {
+            "evidence_id": "Eab06362431",
+            "quote": "LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 cathode material is prepared from purified solution by controlled crystallization followed by solid-state calcinations."
+          }
+        ],
+        "method_family": "solid-state calcination"
+      },
+      {
+        "root_entity_ids": [
+          "Process_co_precipitation"
+        ],
+        "scope_subject_text": "co-precipitation",
+        "scope_label": "co-precipitation",
+        "evidence_ids": [
+          "Eab06362431"
+        ],
+        "evidence_span": "Magnesium was added during co-precipitation process followed by high temperature sintering using the recovered metal sulfate salts of NiSO4, CoSO4, and MnSO4 as staring materials.",
+        "evidence": [
+          {
+            "evidence_id": "Eab06362431",
+            "quote": "Magnesium was added during co-precipitation process followed by high temperature sintering using the recovered metal sulfate salts of NiSO4, CoSO4, and MnSO4 as staring materials."
+          }
+        ],
+        "method_family": "co-precipitation"
       },
       {
         "root_entity_ids": [
@@ -492,62 +570,79 @@
         "scope_subject_text": "high temperature sintering",
         "scope_label": "high temperature sintering",
         "evidence_ids": [
-          "Ef6ab756582"
+          "Eab06362431"
         ],
         "evidence_span": "Magnesium was added during co-precipitation process followed by high temperature sintering using the recovered metal sulfate salts of NiSO4, CoSO4, and MnSO4 as staring materials.",
-        "method_family": "sintering"
+        "evidence": [
+          {
+            "evidence_id": "Eab06362431",
+            "quote": "Magnesium was added during co-precipitation process followed by high temperature sintering using the recovered metal sulfate salts of NiSO4, CoSO4, and MnSO4 as staring materials."
+          }
+        ],
+        "method_family": "high-temperature sintering"
       }
     ],
     "scope_audit": {
-      "evidence_record_count": 18,
-      "rejected_definition_count": 7,
+      "evidence_record_count": 47,
+      "rejected_definition_count": 0,
+      "unscoped_candidate_count": 0,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
     "scope_assertions": [
       {
-        "id": "scope-assertion:c1aa607a85c152fe",
+        "id": "scope-assertion:2ea988b95136e550",
         "micrograph_id": "text",
         "root_entity_ids": [
+          "Product_lithium_ion_battery"
+        ],
+        "requested_root_entity_ids": [
+          "Product_lithium_ion_battery"
+        ],
+        "scope_kind": "declared_population",
+        "facets": {
+          "population_granularity": "batch",
+          "sample_type": "spent lithium-ion batteries"
+        },
+        "scope_description": "Spent lithium-ion batteries (LIBs) used as the feedstock for the recycling/regeneration study; the paper describes them as exhausted LIBs and mixed battery waste treated by the proposed route.",
+        "sample_size": null,
+        "evidence_span": "a novel recycling technology to regenerate LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 as usable cathode material from exhausted LIBs was developed",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:Product_lithium_ion_battery:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:4ecb008e5d11eced",
+        "micrograph_id": "text",
+        "root_entity_ids": [
+          "Component_cathode"
+        ],
+        "requested_root_entity_ids": [
           "Component_cathode"
         ],
         "scope_kind": "declared_population",
         "facets": {
           "population_granularity": "batch",
-          "sample_type": "cathode"
+          "sample_type": "cathode active material from spent lithium-ion batteries"
         },
-        "scope_description": "Cathode material separated from spent electrodes in a single synthetic step using hydrothermal method without scraping procedure.",
+        "scope_description": "Cathode active material recovered from spent LIBs and regenerated as LiNi1/3Co1/3Mn1/3O2, including Mg-doped Li[(Ni1/3Co1/3Mn1/3)1-xMgx]O2 (x = 0, 0.01, 0.025, 0.05) prepared from the recovered metal sulfate salts.",
         "sample_size": null,
-        "evidence_span": "For Lee [7], LiCoO2 was separated from spent electrodes in a single synthetic step using hydrothermal method without any scraping procedure, and the renovated LiCoO2 cathode material was obtained simultaneously.",
+        "evidence_span": "The cathode active material of Li (Ni1 / 3 Co1 / 3 Mn1 / 3) O2 with satisfactory electrochemical performance was successfully regenerated from the leaching liquor of spent lithium-ion batteries",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:c1aa607a85c152fe:evidence",
+          "scope:scope-assertion:4ecb008e5d11eced:evidence",
           "source:text:Component_cathode:entity"
         ]
       },
       {
-        "id": "scope-assertion:09082439e7858f50",
+        "id": "scope-assertion:2cb15dc31efe2830",
         "micrograph_id": "text",
         "root_entity_ids": [
-          "Process_lithium_ion_battery"
+          "Process_secondary_alkaline_leaching"
         ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "recycling"
-        },
-        "scope_description": "Based on the novel recycling technology, Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 (0 ≤x ≤0.05) cathode materials are achieved from spent LIB.",
-        "sample_size": null,
-        "evidence_span": "Based on the novel recycling technology, Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 (0 ≤x ≤0.05) cathode materials are achieved from spent LIB.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:09082439e7858f50:evidence",
-          "source:text:Process_lithium_ion_battery:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:01d5a4d892329e2c",
-        "micrograph_id": "text",
-        "root_entity_ids": [
+        "requested_root_entity_ids": [
           "Process_secondary_alkaline_leaching"
         ],
         "scope_kind": "process_method_family",
@@ -559,33 +654,17 @@
         "evidence_span": "Recycling process consists of thermal treatment, crushing, ball milling, sieving, secondary alkaline leaching, secondary acid leaching and purification.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:01d5a4d892329e2c:evidence",
+          "scope:scope-assertion:2cb15dc31efe2830:evidence",
           "source:text:Process_secondary_alkaline_leaching:entity"
         ]
       },
       {
-        "id": "scope-assertion:2b2daf0c83d99a10",
+        "id": "scope-assertion:0d0635428a66cf4b",
         "micrograph_id": "text",
         "root_entity_ids": [
-          "Process_solid_state_calcination"
+          "Process_secondary_acid_leaching"
         ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "solid-state calcination"
-        },
-        "scope_description": "LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 cathode material is prepared from purified solution by controlled crystallization followed by solid-state calcinations.",
-        "sample_size": null,
-        "evidence_span": "LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 cathode material is prepared from purified solution by controlled crystallization followed by solid-state calcinations.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:2b2daf0c83d99a10:evidence",
-          "source:text:Process_solid_state_calcination:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:7546624f7d42154f",
-        "micrograph_id": "text",
-        "root_entity_ids": [
+        "requested_root_entity_ids": [
           "Process_secondary_acid_leaching"
         ],
         "scope_kind": "process_method_family",
@@ -597,147 +676,17 @@
         "evidence_span": "Recycling process consists of thermal treatment, crushing, ball milling, sieving, secondary alkaline leaching, secondary acid leaching and purification.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:7546624f7d42154f:evidence",
+          "scope:scope-assertion:0d0635428a66cf4b:evidence",
           "source:text:Process_secondary_acid_leaching:entity"
         ]
       },
       {
-        "id": "scope-assertion:04eac552af31f938",
+        "id": "scope-assertion:9b6e79e74ef7aad6",
         "micrograph_id": "text",
         "root_entity_ids": [
-          "Process_controlled_crystallization"
+          "Process_purification"
         ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "crystallization"
-        },
-        "scope_description": "Controlled crystallization is used to prepare LiNi1/3Co1/3Mn1/3O2 cathode material from the purified solution, followed by solid-state calcinations.",
-        "sample_size": null,
-        "evidence_span": "Controlled crystallization is used to prepare LiNi1/3Co1/3Mn1/3O2 cathode material from the purified solution, followed by solid-state calcinations.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:04eac552af31f938:evidence",
-          "source:text:Process_controlled_crystallization:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:d3626b815601cfcb",
-        "micrograph_id": "text",
-        "root_entity_ids": [
-          "Process_scrubbing"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "solvent extraction"
-        },
-        "scope_description": "Scrubbing is performed as part of the organic solvent extraction procedure to recover NiSO4, CoSO4, and MnSO4 one by one.",
-        "sample_size": null,
-        "evidence_span": "Scrubbing is performed as part of the organic solvent extraction procedure to recover NiSO4, CoSO4, and MnSO4 one by one.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:d3626b815601cfcb:evidence",
-          "source:text:Process_scrubbing:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:8bab8d28855b6252",
-        "micrograph_id": "text",
-        "root_entity_ids": [
-          "Process_co_precipitation"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "co-precipitation"
-        },
-        "scope_description": "Co-precipitation is used to synthesize Li[(Ni1/3Co1/3Mn1/3)1-xMgx]O2 (x = 0, 0.01, 0.025, 0.05) cathode materials by doping with magnesium.",
-        "sample_size": null,
-        "evidence_span": "Co-precipitation is used to synthesize Li[(Ni1/3Co1/3Mn1/3)1-xMgx]O2 (x = 0, 0.01, 0.025, 0.05) cathode materials by doping with magnesium.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:8bab8d28855b6252:evidence",
-          "source:text:Process_co_precipitation:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:b1bb35d579dfeb2c",
-        "micrograph_id": "text",
-        "root_entity_ids": [
-          "Process_organic_solvent_extraction"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "solvent extraction"
-        },
-        "scope_description": "Organic solvent extraction is used to recover NiSO4, CoSO4, and MnSO4 one by one from the purified leaching liquor, followed by corresponding scrubbing and stripping procedures.",
-        "sample_size": null,
-        "evidence_span": "Organic solvent extraction is used to recover NiSO4, CoSO4, and MnSO4 one by one from the purified leaching liquor, followed by corresponding scrubbing and stripping procedures.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:b1bb35d579dfeb2c:evidence",
-          "source:text:Process_organic_solvent_extraction:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:6ee0d604d000c034",
-        "micrograph_id": "text",
-        "root_entity_ids": [
-          "Process_stripping"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "solvent extraction"
-        },
-        "scope_description": "Stripping is performed as part of the organic solvent extraction procedure to recover NiSO4, CoSO4, and MnSO4 one by one.",
-        "sample_size": null,
-        "evidence_span": "Stripping is performed as part of the organic solvent extraction procedure to recover NiSO4, CoSO4, and MnSO4 one by one.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:6ee0d604d000c034:evidence",
-          "source:text:Process_stripping:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:c9fb435144713247",
-        "micrograph_id": "text",
-        "root_entity_ids": [
-          "Process_NaF_deposition"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "deposition"
-        },
-        "scope_description": "If the concentration of magnesium ion remained in the leachate exceeds the limitation of national standard, NaF deposition method is used to remove the Mg ^2+ ion.",
-        "sample_size": null,
-        "evidence_span": "If the concentration of magnesium ion remained in the leachate exceeds the limitation of national standard, NaF deposition method is used to remove the Mg ^2+ ion.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:c9fb435144713247:evidence",
-          "source:text:Process_NaF_deposition:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:8ed2baf7933ef96e",
-        "micrograph_id": "text",
-        "root_entity_ids": [
-          "Process_cathode_active_material"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "synthesis"
-        },
-        "scope_description": "1: preliminary treatment of batteries, followed by leaching with alkaline and sulfuric acid solution respectively, metal separation by liquid–liquid extraction and chemical deposition method and synthesis ofcathode active materials.",
-        "sample_size": null,
-        "evidence_span": "1: preliminary treatment of batteries, followed by leaching with alkaline and sulfuric acid solution respectively, metal separation by liquid–liquid extraction and chemical deposition method and synthesis ofcathode active materials.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:8ed2baf7933ef96e:evidence",
-          "source:text:Process_cathode_active_material:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:2fe62deec3defe0f",
-        "micrograph_id": "text",
-        "root_entity_ids": [
+        "requested_root_entity_ids": [
           "Process_purification"
         ],
         "scope_kind": "process_method_family",
@@ -749,34 +698,356 @@
         "evidence_span": "Recycling process consists of thermal treatment, crushing, ball milling, sieving, secondary alkaline leaching, secondary acid leaching and purification.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:2fe62deec3defe0f:evidence",
+          "scope:scope-assertion:9b6e79e74ef7aad6:evidence",
           "source:text:Process_purification:entity"
         ]
       },
       {
-        "id": "scope-assertion:297f3485146858e1",
+        "id": "scope-assertion:5e4b678b92b60b6a",
         "micrograph_id": "text",
         "root_entity_ids": [
-          "Process_high_temperature_sintering"
+          "Process_organic_solvent_extraction"
+        ],
+        "requested_root_entity_ids": [
+          "Process_organic_solvent_extraction"
         ],
         "scope_kind": "process_method_family",
         "facets": {
-          "method_family": "sintering"
+          "method_family": "solvent extraction"
+        },
+        "scope_description": "Compound of NiSO4, CoSO4,, and MnSO4 is recovered one by one as the final products by organic solvent extraction and corresponding scrubbing and stripping procedures.",
+        "sample_size": null,
+        "evidence_span": "Compound of NiSO4, CoSO4,, and MnSO4 is recovered one by one as the final products by organic solvent extraction and corresponding scrubbing and stripping procedures.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:5e4b678b92b60b6a:evidence",
+          "source:text:Process_organic_solvent_extraction:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:bc0d5eeebeb75e5b",
+        "micrograph_id": "text",
+        "root_entity_ids": [
+          "Process_scrubbing"
+        ],
+        "requested_root_entity_ids": [
+          "Process_scrubbing"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "scrubbing"
+        },
+        "scope_description": "Compound of NiSO4, CoSO4,, and MnSO4 is recovered one by one as the final products by organic solvent extraction and corresponding scrubbing and stripping procedures.",
+        "sample_size": null,
+        "evidence_span": "Compound of NiSO4, CoSO4,, and MnSO4 is recovered one by one as the final products by organic solvent extraction and corresponding scrubbing and stripping procedures.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:bc0d5eeebeb75e5b:evidence",
+          "source:text:Process_scrubbing:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:8990e83431e09883",
+        "micrograph_id": "text",
+        "root_entity_ids": [
+          "Process_stripping"
+        ],
+        "requested_root_entity_ids": [
+          "Process_stripping"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "stripping"
+        },
+        "scope_description": "Compound of NiSO4, CoSO4,, and MnSO4 is recovered one by one as the final products by organic solvent extraction and corresponding scrubbing and stripping procedures.",
+        "sample_size": null,
+        "evidence_span": "Compound of NiSO4, CoSO4,, and MnSO4 is recovered one by one as the final products by organic solvent extraction and corresponding scrubbing and stripping procedures.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:8990e83431e09883:evidence",
+          "source:text:Process_stripping:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:e220411d3d223911",
+        "micrograph_id": "text",
+        "root_entity_ids": [
+          "Process_NaF_deposition"
+        ],
+        "requested_root_entity_ids": [
+          "Process_NaF_deposition"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "chemical precipitation"
+        },
+        "scope_description": "If the concentration of magnesium ion remained in the leachate exceeds the limitation of national standard, NaF deposition method is used to remove the Mg ^2+ ion.",
+        "sample_size": null,
+        "evidence_span": "If the concentration of magnesium ion remained in the leachate exceeds the limitation of national standard, NaF deposition method is used to remove the Mg ^2+ ion.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:e220411d3d223911:evidence",
+          "source:text:Process_NaF_deposition:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:e8459a4506fc6de8",
+        "micrograph_id": "text",
+        "root_entity_ids": [
+          "Process_controlled_crystallization"
+        ],
+        "requested_root_entity_ids": [
+          "Process_controlled_crystallization"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "crystallization"
+        },
+        "scope_description": "LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 cathode material is prepared from purified solution by controlled crystallization followed by solid-state calcinations.",
+        "sample_size": null,
+        "evidence_span": "LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 cathode material is prepared from purified solution by controlled crystallization followed by solid-state calcinations.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:e8459a4506fc6de8:evidence",
+          "source:text:Process_controlled_crystallization:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:16e7794957b073c2",
+        "micrograph_id": "text",
+        "root_entity_ids": [
+          "Process_solid_state_calcination"
+        ],
+        "requested_root_entity_ids": [
+          "Process_solid_state_calcination"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "solid-state calcination"
+        },
+        "scope_description": "LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 cathode material is prepared from purified solution by controlled crystallization followed by solid-state calcinations.",
+        "sample_size": null,
+        "evidence_span": "LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 cathode material is prepared from purified solution by controlled crystallization followed by solid-state calcinations.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:16e7794957b073c2:evidence",
+          "source:text:Process_solid_state_calcination:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:ad084c49324c1605",
+        "micrograph_id": "text",
+        "root_entity_ids": [
+          "Process_co_precipitation"
+        ],
+        "requested_root_entity_ids": [
+          "Process_co_precipitation"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "co-precipitation"
         },
         "scope_description": "Magnesium was added during co-precipitation process followed by high temperature sintering using the recovered metal sulfate salts of NiSO4, CoSO4, and MnSO4 as staring materials.",
         "sample_size": null,
         "evidence_span": "Magnesium was added during co-precipitation process followed by high temperature sintering using the recovered metal sulfate salts of NiSO4, CoSO4, and MnSO4 as staring materials.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:297f3485146858e1:evidence",
+          "scope:scope-assertion:ad084c49324c1605:evidence",
+          "source:text:Process_co_precipitation:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:fe6eb3c1a7158060",
+        "micrograph_id": "text",
+        "root_entity_ids": [
+          "Process_high_temperature_sintering"
+        ],
+        "requested_root_entity_ids": [
+          "Process_high_temperature_sintering"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "high-temperature sintering"
+        },
+        "scope_description": "Magnesium was added during co-precipitation process followed by high temperature sintering using the recovered metal sulfate salts of NiSO4, CoSO4, and MnSO4 as staring materials.",
+        "sample_size": null,
+        "evidence_span": "Magnesium was added during co-precipitation process followed by high temperature sintering using the recovered metal sulfate salts of NiSO4, CoSO4, and MnSO4 as staring materials.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:fe6eb3c1a7158060:evidence",
           "source:text:Process_high_temperature_sintering:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:2ba2d679e17a5991",
-        "scope_assertion_id": "scope-assertion:c1aa607a85c152fe",
+        "id": "scope-path:6ce5fbd3b6075854",
+        "scope_assertion_id": "scope-assertion:2ea988b95136e550",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Co",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:f10ec694aea77bcf",
+        "scope_assertion_id": "scope-assertion:2ea988b95136e550",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Li",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Li"
+        ]
+      },
+      {
+        "id": "scope-path:47fe6f0a505fd277",
+        "scope_assertion_id": "scope-assertion:2ea988b95136e550",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Cu",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Cu"
+        ]
+      },
+      {
+        "id": "scope-path:0d055a4126689471",
+        "scope_assertion_id": "scope-assertion:2ea988b95136e550",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Al",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Al"
+        ]
+      },
+      {
+        "id": "scope-path:04214d4788603132",
+        "scope_assertion_id": "scope-assertion:2ea988b95136e550",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Fe",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Fe"
+        ]
+      },
+      {
+        "id": "scope-path:4c3e9a158325cef6",
+        "scope_assertion_id": "scope-assertion:2ea988b95136e550",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Ca",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Ca"
+        ]
+      },
+      {
+        "id": "scope-path:bde35adbade42c76",
+        "scope_assertion_id": "scope-assertion:2ea988b95136e550",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Mn",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Mn"
+        ]
+      },
+      {
+        "id": "scope-path:5fefa4aa8fd455dc",
+        "scope_assertion_id": "scope-assertion:2ea988b95136e550",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Ni",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Ni"
+        ]
+      },
+      {
+        "id": "scope-path:c4ff7eacb15fb6f5",
+        "scope_assertion_id": "scope-assertion:2ea988b95136e550",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_secondary_alkaline_leaching",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_secondary_alkaline_leaching"
+        ]
+      },
+      {
+        "id": "scope-path:f220fa09abb2d0a5",
+        "scope_assertion_id": "scope-assertion:2ea988b95136e550",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_secondary_acid_leaching",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_secondary_acid_leaching"
+        ]
+      },
+      {
+        "id": "scope-path:5fe24e624bf68ff7",
+        "scope_assertion_id": "scope-assertion:2ea988b95136e550",
+        "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_purification",
+        "root_entity_id": "Product_lithium_ion_battery",
+        "entity_path": [
+          "Product_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_purification"
+        ]
+      },
+      {
+        "id": "scope-path:b0e961532c2e027e",
+        "scope_assertion_id": "scope-assertion:4ecb008e5d11eced",
         "statement_relation_id": "REL_Component_cathode_CONTAINS_Material_acetylene_black",
         "root_entity_id": "Component_cathode",
         "entity_path": [
@@ -785,13 +1056,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:c1aa607a85c152fe:evidence",
+          "scope:scope-assertion:4ecb008e5d11eced:evidence",
           "source:text:relation:REL_Component_cathode_CONTAINS_Material_acetylene_black"
         ]
       },
       {
-        "id": "scope-path:e22ebc5d51a537ad",
-        "scope_assertion_id": "scope-assertion:c1aa607a85c152fe",
+        "id": "scope-path:cbbf6971e26bad8d",
+        "scope_assertion_id": "scope-assertion:4ecb008e5d11eced",
         "statement_relation_id": "REL_Component_cathode_CONTAINS_Material_PTFE",
         "root_entity_id": "Component_cathode",
         "entity_path": [
@@ -800,28 +1071,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:c1aa607a85c152fe:evidence",
+          "scope:scope-assertion:4ecb008e5d11eced:evidence",
           "source:text:relation:REL_Component_cathode_CONTAINS_Material_PTFE"
         ]
       },
       {
-        "id": "scope-path:4d0d91c5cac5d16e",
-        "scope_assertion_id": "scope-assertion:c1aa607a85c152fe",
-        "statement_relation_id": "REL_Component_cathode_CONTAINS_Material_alpha_NaFeO2",
-        "root_entity_id": "Component_cathode",
-        "entity_path": [
-          "Component_cathode"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:c1aa607a85c152fe:evidence",
-          "source:text:relation:REL_Component_cathode_CONTAINS_Material_alpha_NaFeO2"
-        ]
-      },
-      {
-        "id": "scope-path:d590adf11817f05c",
-        "scope_assertion_id": "scope-assertion:01d5a4d892329e2c",
+        "id": "scope-path:de5f85be3b2070c6",
+        "scope_assertion_id": "scope-assertion:2cb15dc31efe2830",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_secondary_alkaline_leaching",
         "root_entity_id": "Process_secondary_alkaline_leaching",
         "entity_path": [
@@ -830,28 +1086,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:01d5a4d892329e2c:evidence",
+          "scope:scope-assertion:2cb15dc31efe2830:evidence",
           "source:text:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_secondary_alkaline_leaching"
         ]
       },
       {
-        "id": "scope-path:81f25cdfaa101464",
-        "scope_assertion_id": "scope-assertion:2b2daf0c83d99a10",
-        "statement_relation_id": "REL_Material_Li_Ni1_3Co1_3Mn1_3_O2_PROCESSED_BY_Process_solid_state_calcination",
-        "root_entity_id": "Process_solid_state_calcination",
-        "entity_path": [
-          "Process_solid_state_calcination"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:2b2daf0c83d99a10:evidence",
-          "source:text:relation:REL_Material_Li_Ni1_3Co1_3Mn1_3_O2_PROCESSED_BY_Process_solid_state_calcination"
-        ]
-      },
-      {
-        "id": "scope-path:ee92a830c573cd62",
-        "scope_assertion_id": "scope-assertion:7546624f7d42154f",
+        "id": "scope-path:ca670903dbcd1bed",
+        "scope_assertion_id": "scope-assertion:0d0635428a66cf4b",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_secondary_acid_leaching",
         "root_entity_id": "Process_secondary_acid_leaching",
         "entity_path": [
@@ -860,88 +1101,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:7546624f7d42154f:evidence",
+          "scope:scope-assertion:0d0635428a66cf4b:evidence",
           "source:text:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_secondary_acid_leaching"
         ]
       },
       {
-        "id": "scope-path:2a28302cefe5b7da",
-        "scope_assertion_id": "scope-assertion:8bab8d28855b6252",
-        "statement_relation_id": "REL_Material_Li__Ni1_3Co1_3Mn1_3_1_xMgx_O2_PROCESSED_BY_Process_co_precipitation",
-        "root_entity_id": "Process_co_precipitation",
-        "entity_path": [
-          "Process_co_precipitation"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:8bab8d28855b6252:evidence",
-          "source:text:relation:REL_Material_Li__Ni1_3Co1_3Mn1_3_1_xMgx_O2_PROCESSED_BY_Process_co_precipitation"
-        ]
-      },
-      {
-        "id": "scope-path:2a8f156582047fff",
-        "scope_assertion_id": "scope-assertion:b1bb35d579dfeb2c",
-        "statement_relation_id": "REL_Material_NiSO4_PROCESSED_BY_Process_organic_solvent_extraction",
-        "root_entity_id": "Process_organic_solvent_extraction",
-        "entity_path": [
-          "Process_organic_solvent_extraction"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:b1bb35d579dfeb2c:evidence",
-          "source:text:relation:REL_Material_NiSO4_PROCESSED_BY_Process_organic_solvent_extraction"
-        ]
-      },
-      {
-        "id": "scope-path:3536bf02ac11737f",
-        "scope_assertion_id": "scope-assertion:b1bb35d579dfeb2c",
-        "statement_relation_id": "REL_Material_CoSO4_PROCESSED_BY_Process_organic_solvent_extraction",
-        "root_entity_id": "Process_organic_solvent_extraction",
-        "entity_path": [
-          "Process_organic_solvent_extraction"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:b1bb35d579dfeb2c:evidence",
-          "source:text:relation:REL_Material_CoSO4_PROCESSED_BY_Process_organic_solvent_extraction"
-        ]
-      },
-      {
-        "id": "scope-path:6cc117f8e5268b78",
-        "scope_assertion_id": "scope-assertion:b1bb35d579dfeb2c",
-        "statement_relation_id": "REL_Material_MnSO4_PROCESSED_BY_Process_organic_solvent_extraction",
-        "root_entity_id": "Process_organic_solvent_extraction",
-        "entity_path": [
-          "Process_organic_solvent_extraction"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:b1bb35d579dfeb2c:evidence",
-          "source:text:relation:REL_Material_MnSO4_PROCESSED_BY_Process_organic_solvent_extraction"
-        ]
-      },
-      {
-        "id": "scope-path:687c395181e2ead1",
-        "scope_assertion_id": "scope-assertion:c9fb435144713247",
-        "statement_relation_id": "REL_Material_Mg_PROCESSED_BY_Process_NaF_deposition",
-        "root_entity_id": "Process_NaF_deposition",
-        "entity_path": [
-          "Process_NaF_deposition"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:c9fb435144713247:evidence",
-          "source:text:relation:REL_Material_Mg_PROCESSED_BY_Process_NaF_deposition"
-        ]
-      },
-      {
-        "id": "scope-path:bc39f6c73c41591f",
-        "scope_assertion_id": "scope-assertion:2fe62deec3defe0f",
+        "id": "scope-path:72129b638fecbbe1",
+        "scope_assertion_id": "scope-assertion:9b6e79e74ef7aad6",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_purification",
         "root_entity_id": "Process_purification",
         "entity_path": [
@@ -950,13 +1116,148 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:2fe62deec3defe0f:evidence",
+          "scope:scope-assertion:9b6e79e74ef7aad6:evidence",
           "source:text:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_purification"
         ]
       },
       {
-        "id": "scope-path:0643fe1223266985",
-        "scope_assertion_id": "scope-assertion:297f3485146858e1",
+        "id": "scope-path:9a88d69e6d568c2c",
+        "scope_assertion_id": "scope-assertion:5e4b678b92b60b6a",
+        "statement_relation_id": "REL_Material_NiSO4_PROCESSED_BY_Process_organic_solvent_extraction",
+        "root_entity_id": "Process_organic_solvent_extraction",
+        "entity_path": [
+          "Process_organic_solvent_extraction"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:5e4b678b92b60b6a:evidence",
+          "source:text:relation:REL_Material_NiSO4_PROCESSED_BY_Process_organic_solvent_extraction"
+        ]
+      },
+      {
+        "id": "scope-path:12530c01ebbfd137",
+        "scope_assertion_id": "scope-assertion:5e4b678b92b60b6a",
+        "statement_relation_id": "REL_Material_CoSO4_PROCESSED_BY_Process_organic_solvent_extraction",
+        "root_entity_id": "Process_organic_solvent_extraction",
+        "entity_path": [
+          "Process_organic_solvent_extraction"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:5e4b678b92b60b6a:evidence",
+          "source:text:relation:REL_Material_CoSO4_PROCESSED_BY_Process_organic_solvent_extraction"
+        ]
+      },
+      {
+        "id": "scope-path:4ec44d7409ea2920",
+        "scope_assertion_id": "scope-assertion:5e4b678b92b60b6a",
+        "statement_relation_id": "REL_Material_MnSO4_PROCESSED_BY_Process_organic_solvent_extraction",
+        "root_entity_id": "Process_organic_solvent_extraction",
+        "entity_path": [
+          "Process_organic_solvent_extraction"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:5e4b678b92b60b6a:evidence",
+          "source:text:relation:REL_Material_MnSO4_PROCESSED_BY_Process_organic_solvent_extraction"
+        ]
+      },
+      {
+        "id": "scope-path:0da9cf2461d0a9ab",
+        "scope_assertion_id": "scope-assertion:5e4b678b92b60b6a",
+        "statement_relation_id": "REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_NiSO4",
+        "root_entity_id": "Process_organic_solvent_extraction",
+        "entity_path": [
+          "Process_organic_solvent_extraction"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:5e4b678b92b60b6a:evidence",
+          "source:text:relation:REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_NiSO4"
+        ]
+      },
+      {
+        "id": "scope-path:5e915f0319779c39",
+        "scope_assertion_id": "scope-assertion:5e4b678b92b60b6a",
+        "statement_relation_id": "REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_CoSO4",
+        "root_entity_id": "Process_organic_solvent_extraction",
+        "entity_path": [
+          "Process_organic_solvent_extraction"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:5e4b678b92b60b6a:evidence",
+          "source:text:relation:REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_CoSO4"
+        ]
+      },
+      {
+        "id": "scope-path:0fbebc964f74fe40",
+        "scope_assertion_id": "scope-assertion:5e4b678b92b60b6a",
+        "statement_relation_id": "REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_MnSO4",
+        "root_entity_id": "Process_organic_solvent_extraction",
+        "entity_path": [
+          "Process_organic_solvent_extraction"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:5e4b678b92b60b6a:evidence",
+          "source:text:relation:REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_MnSO4"
+        ]
+      },
+      {
+        "id": "scope-path:43245d4cadff8c19",
+        "scope_assertion_id": "scope-assertion:e220411d3d223911",
+        "statement_relation_id": "REL_Material_Mg_PROCESSED_BY_Process_NaF_deposition",
+        "root_entity_id": "Process_NaF_deposition",
+        "entity_path": [
+          "Process_NaF_deposition"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:e220411d3d223911:evidence",
+          "source:text:relation:REL_Material_Mg_PROCESSED_BY_Process_NaF_deposition"
+        ]
+      },
+      {
+        "id": "scope-path:af165dd64bd5d2e8",
+        "scope_assertion_id": "scope-assertion:16e7794957b073c2",
+        "statement_relation_id": "REL_Material_Li_Ni1_3Co1_3Mn1_3_O2_PROCESSED_BY_Process_solid_state_calcination",
+        "root_entity_id": "Process_solid_state_calcination",
+        "entity_path": [
+          "Process_solid_state_calcination"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:16e7794957b073c2:evidence",
+          "source:text:relation:REL_Material_Li_Ni1_3Co1_3Mn1_3_O2_PROCESSED_BY_Process_solid_state_calcination"
+        ]
+      },
+      {
+        "id": "scope-path:922450e788de47eb",
+        "scope_assertion_id": "scope-assertion:ad084c49324c1605",
+        "statement_relation_id": "REL_Material_Li__Ni1_3Co1_3Mn1_3_1_xMgx_O2_PROCESSED_BY_Process_co_precipitation",
+        "root_entity_id": "Process_co_precipitation",
+        "entity_path": [
+          "Process_co_precipitation"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:ad084c49324c1605:evidence",
+          "source:text:relation:REL_Material_Li__Ni1_3Co1_3Mn1_3_1_xMgx_O2_PROCESSED_BY_Process_co_precipitation"
+        ]
+      },
+      {
+        "id": "scope-path:38c2dbece915cf14",
+        "scope_assertion_id": "scope-assertion:fe6eb3c1a7158060",
         "statement_relation_id": "REL_Material_Li__Ni1_3Co1_3Mn1_3_1_xMgx_O2_PROCESSED_BY_Process_high_temperature_sintering",
         "root_entity_id": "Process_high_temperature_sintering",
         "entity_path": [
@@ -965,7 +1266,7 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:297f3485146858e1:evidence",
+          "scope:scope-assertion:fe6eb3c1a7158060:evidence",
           "source:text:relation:REL_Material_Li__Ni1_3Co1_3Mn1_3_1_xMgx_O2_PROCESSED_BY_Process_high_temperature_sintering"
         ]
       }
@@ -8424,9 +8725,16 @@
           "Product_lithium_ion_battery",
           "Material_Co"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:2ea988b95136e550"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:6ce5fbd3b6075854"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:Product_lithium_ion_battery:entity",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Co",
           "source:text:relation:statement:ac5cfdf6e4be73cb",
           "source:text:relation:statement:ac5cfdf6e4be73cb:evidence"
         ]
@@ -8442,9 +8750,16 @@
           "Product_lithium_ion_battery",
           "Material_Li"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:2ea988b95136e550"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:f10ec694aea77bcf"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:Product_lithium_ion_battery:entity",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Li",
           "source:text:relation:statement:28c096513397d7ba",
           "source:text:relation:statement:28c096513397d7ba:evidence"
         ]
@@ -8460,9 +8775,16 @@
           "Product_lithium_ion_battery",
           "Material_Cu"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:2ea988b95136e550"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:47fe6f0a505fd277"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:Product_lithium_ion_battery:entity",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Cu",
           "source:text:relation:statement:b3dc647023225509",
           "source:text:relation:statement:b3dc647023225509:evidence"
         ]
@@ -8478,9 +8800,16 @@
           "Product_lithium_ion_battery",
           "Material_Al"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:2ea988b95136e550"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:0d055a4126689471"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:Product_lithium_ion_battery:entity",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Al",
           "source:text:relation:statement:ede424b1946e1af8",
           "source:text:relation:statement:ede424b1946e1af8:evidence"
         ]
@@ -8496,9 +8825,16 @@
           "Product_lithium_ion_battery",
           "Material_Fe"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:2ea988b95136e550"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:04214d4788603132"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:Product_lithium_ion_battery:entity",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Fe",
           "source:text:relation:statement:94cc0306976a3139",
           "source:text:relation:statement:94cc0306976a3139:evidence"
         ]
@@ -8514,9 +8850,16 @@
           "Product_lithium_ion_battery",
           "Material_Ca"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:2ea988b95136e550"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:4c3e9a158325cef6"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:Product_lithium_ion_battery:entity",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Ca",
           "source:text:relation:statement:461c674dddfd33b7",
           "source:text:relation:statement:461c674dddfd33b7:evidence"
         ]
@@ -8532,9 +8875,16 @@
           "Product_lithium_ion_battery",
           "Material_Mn"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:2ea988b95136e550"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:bde35adbade42c76"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:Product_lithium_ion_battery:entity",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Mn",
           "source:text:relation:statement:4cbb130c7b5d9315",
           "source:text:relation:statement:4cbb130c7b5d9315:evidence"
         ]
@@ -8550,9 +8900,16 @@
           "Product_lithium_ion_battery",
           "Material_Ni"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:2ea988b95136e550"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:5fefa4aa8fd455dc"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "source:text:Product_lithium_ion_battery:entity",
+          "source:text:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Ni",
           "source:text:relation:statement:38009cbb9b000422",
           "source:text:relation:statement:38009cbb9b000422:evidence"
         ]
@@ -8569,14 +8926,18 @@
           "Process_secondary_alkaline_leaching"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:01d5a4d892329e2c"
+          "scope-assertion:2cb15dc31efe2830",
+          "scope-assertion:2ea988b95136e550"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:d590adf11817f05c"
+          "scope-path:c4ff7eacb15fb6f5",
+          "scope-path:de5f85be3b2070c6"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:01d5a4d892329e2c:evidence",
+          "scope:scope-assertion:2cb15dc31efe2830:evidence",
+          "scope:scope-assertion:2ea988b95136e550:evidence",
           "source:text:Process_secondary_alkaline_leaching:entity",
+          "source:text:Product_lithium_ion_battery:entity",
           "source:text:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_secondary_alkaline_leaching",
           "source:text:relation:statement:af933f109e7fced2",
           "source:text:relation:statement:af933f109e7fced2:evidence"
@@ -8594,14 +8955,18 @@
           "Process_secondary_acid_leaching"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7546624f7d42154f"
+          "scope-assertion:0d0635428a66cf4b",
+          "scope-assertion:2ea988b95136e550"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:ee92a830c573cd62"
+          "scope-path:ca670903dbcd1bed",
+          "scope-path:f220fa09abb2d0a5"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7546624f7d42154f:evidence",
+          "scope:scope-assertion:0d0635428a66cf4b:evidence",
+          "scope:scope-assertion:2ea988b95136e550:evidence",
           "source:text:Process_secondary_acid_leaching:entity",
+          "source:text:Product_lithium_ion_battery:entity",
           "source:text:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_secondary_acid_leaching",
           "source:text:relation:statement:367976ef0f4eca4a",
           "source:text:relation:statement:367976ef0f4eca4a:evidence"
@@ -8619,14 +8984,18 @@
           "Process_purification"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:2fe62deec3defe0f"
+          "scope-assertion:2ea988b95136e550",
+          "scope-assertion:9b6e79e74ef7aad6"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:bc39f6c73c41591f"
+          "scope-path:5fe24e624bf68ff7",
+          "scope-path:72129b638fecbbe1"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:2fe62deec3defe0f:evidence",
+          "scope:scope-assertion:2ea988b95136e550:evidence",
+          "scope:scope-assertion:9b6e79e74ef7aad6:evidence",
           "source:text:Process_purification:entity",
+          "source:text:Product_lithium_ion_battery:entity",
           "source:text:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_purification",
           "source:text:relation:statement:953bea8281e60e8e",
           "source:text:relation:statement:953bea8281e60e8e:evidence"
@@ -8644,13 +9013,13 @@
           "Process_organic_solvent_extraction"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:b1bb35d579dfeb2c"
+          "scope-assertion:5e4b678b92b60b6a"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:2a8f156582047fff"
+          "scope-path:9a88d69e6d568c2c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:b1bb35d579dfeb2c:evidence",
+          "scope:scope-assertion:5e4b678b92b60b6a:evidence",
           "source:text:Process_organic_solvent_extraction:entity",
           "source:text:relation:REL_Material_NiSO4_PROCESSED_BY_Process_organic_solvent_extraction",
           "source:text:relation:statement:05a273f76703bfce",
@@ -8669,13 +9038,13 @@
           "Process_organic_solvent_extraction"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:b1bb35d579dfeb2c"
+          "scope-assertion:5e4b678b92b60b6a"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:3536bf02ac11737f"
+          "scope-path:12530c01ebbfd137"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:b1bb35d579dfeb2c:evidence",
+          "scope:scope-assertion:5e4b678b92b60b6a:evidence",
           "source:text:Process_organic_solvent_extraction:entity",
           "source:text:relation:REL_Material_CoSO4_PROCESSED_BY_Process_organic_solvent_extraction",
           "source:text:relation:statement:50a48aacba3207b1",
@@ -8694,13 +9063,13 @@
           "Process_organic_solvent_extraction"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:b1bb35d579dfeb2c"
+          "scope-assertion:5e4b678b92b60b6a"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:6cc117f8e5268b78"
+          "scope-path:4ec44d7409ea2920"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:b1bb35d579dfeb2c:evidence",
+          "scope:scope-assertion:5e4b678b92b60b6a:evidence",
           "source:text:Process_organic_solvent_extraction:entity",
           "source:text:relation:REL_Material_MnSO4_PROCESSED_BY_Process_organic_solvent_extraction",
           "source:text:relation:statement:250bf5b89d7fbf75",
@@ -8719,13 +9088,13 @@
           "Process_NaF_deposition"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c9fb435144713247"
+          "scope-assertion:e220411d3d223911"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:687c395181e2ead1"
+          "scope-path:43245d4cadff8c19"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c9fb435144713247:evidence",
+          "scope:scope-assertion:e220411d3d223911:evidence",
           "source:text:Process_NaF_deposition:entity",
           "source:text:relation:REL_Material_Mg_PROCESSED_BY_Process_NaF_deposition",
           "source:text:relation:statement:8f1dd651b7eb1a29",
@@ -8744,13 +9113,13 @@
           "Process_solid_state_calcination"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:2b2daf0c83d99a10"
+          "scope-assertion:16e7794957b073c2"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:81f25cdfaa101464"
+          "scope-path:af165dd64bd5d2e8"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:2b2daf0c83d99a10:evidence",
+          "scope:scope-assertion:16e7794957b073c2:evidence",
           "source:text:Process_solid_state_calcination:entity",
           "source:text:relation:REL_Material_Li_Ni1_3Co1_3Mn1_3_O2_PROCESSED_BY_Process_solid_state_calcination",
           "source:text:relation:statement:5bce5d75aa7e6fe4",
@@ -8769,13 +9138,13 @@
           "Process_co_precipitation"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:8bab8d28855b6252"
+          "scope-assertion:ad084c49324c1605"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:2a28302cefe5b7da"
+          "scope-path:922450e788de47eb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:8bab8d28855b6252:evidence",
+          "scope:scope-assertion:ad084c49324c1605:evidence",
           "source:text:Process_co_precipitation:entity",
           "source:text:relation:REL_Material_Li__Ni1_3Co1_3Mn1_3_1_xMgx_O2_PROCESSED_BY_Process_co_precipitation",
           "source:text:relation:statement:cb2bb4ae64f99cf2",
@@ -8794,13 +9163,13 @@
           "Process_high_temperature_sintering"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:297f3485146858e1"
+          "scope-assertion:fe6eb3c1a7158060"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:0643fe1223266985"
+          "scope-path:38c2dbece915cf14"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:297f3485146858e1:evidence",
+          "scope:scope-assertion:fe6eb3c1a7158060:evidence",
           "source:text:Process_high_temperature_sintering:entity",
           "source:text:relation:REL_Material_Li__Ni1_3Co1_3Mn1_3_1_xMgx_O2_PROCESSED_BY_Process_high_temperature_sintering",
           "source:text:relation:statement:6bd32d80737a79c2",
@@ -8837,13 +9206,13 @@
           "Material_acetylene_black"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c1aa607a85c152fe"
+          "scope-assertion:4ecb008e5d11eced"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:2ba2d679e17a5991"
+          "scope-path:b0e961532c2e027e"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c1aa607a85c152fe:evidence",
+          "scope:scope-assertion:4ecb008e5d11eced:evidence",
           "source:text:Component_cathode:entity",
           "source:text:relation:REL_Component_cathode_CONTAINS_Material_acetylene_black",
           "source:text:relation:statement:60a6eb69c1769917",
@@ -8862,13 +9231,13 @@
           "Material_PTFE"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:c1aa607a85c152fe"
+          "scope-assertion:4ecb008e5d11eced"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e22ebc5d51a537ad"
+          "scope-path:cbbf6971e26bad8d"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:c1aa607a85c152fe:evidence",
+          "scope:scope-assertion:4ecb008e5d11eced:evidence",
           "source:text:Component_cathode:entity",
           "source:text:relation:REL_Component_cathode_CONTAINS_Material_PTFE",
           "source:text:relation:statement:3074cad3228cd577",
@@ -8894,109 +9263,12 @@
         ]
       },
       {
-        "id": "local-unit:c5811886d80026b4",
-        "micrograph_id": "text",
-        "statement_id": "statement:0835e2e02bc80a41",
-        "statement_relation_id": "REL_Material__Ni1_3Co1_3Mn1_3_CO3_CONTAINS_Material_water",
-        "source_relation_id": "REL_Material__Ni1_3Co1_3Mn1_3_CO3_CONTAINS_Material_water",
-        "source_relation_index": 22,
-        "entity_ids": [
-          "Material__Ni1_3Co1_3Mn1_3_CO3",
-          "Material_water"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:text:relation:statement:0835e2e02bc80a41",
-          "source:text:relation:statement:0835e2e02bc80a41:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:d9188928603dbd53",
-        "micrograph_id": "text",
-        "statement_id": "statement:927063acca0fd4e8",
-        "statement_relation_id": "REL_Material__Ni1_3Co1_3Mn1_3_CO3_CONTAINS_Material_CO2",
-        "source_relation_id": "REL_Material__Ni1_3Co1_3Mn1_3_CO3_CONTAINS_Material_CO2",
-        "source_relation_index": 23,
-        "entity_ids": [
-          "Material__Ni1_3Co1_3Mn1_3_CO3",
-          "Material_CO2"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:text:relation:statement:927063acca0fd4e8",
-          "source:text:relation:statement:927063acca0fd4e8:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:91f5384d789bbc75",
-        "micrograph_id": "text",
-        "statement_id": "statement:28bffd76f2b968b9",
-        "statement_relation_id": "REL_Material__Ni1_3Co1_3Mn1_3_CO3_CONTAINS_Material_structural_water",
-        "source_relation_id": "REL_Material__Ni1_3Co1_3Mn1_3_CO3_CONTAINS_Material_structural_water",
-        "source_relation_index": 24,
-        "entity_ids": [
-          "Material__Ni1_3Co1_3Mn1_3_CO3",
-          "Material_structural_water"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:text:relation:statement:28bffd76f2b968b9",
-          "source:text:relation:statement:28bffd76f2b968b9:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:08b1a6323b481121",
-        "micrograph_id": "text",
-        "statement_id": "statement:7208177031fe12de",
-        "statement_relation_id": "REL_Component_cathode_CONTAINS_Material_alpha_NaFeO2",
-        "source_relation_id": "REL_Component_cathode_CONTAINS_Material_alpha_NaFeO2",
-        "source_relation_index": 25,
-        "entity_ids": [
-          "Component_cathode",
-          "Material_alpha_NaFeO2"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:c1aa607a85c152fe"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:4d0d91c5cac5d16e"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:c1aa607a85c152fe:evidence",
-          "source:text:Component_cathode:entity",
-          "source:text:relation:REL_Component_cathode_CONTAINS_Material_alpha_NaFeO2",
-          "source:text:relation:statement:7208177031fe12de",
-          "source:text:relation:statement:7208177031fe12de:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:a66cf2632b1b7773",
-        "micrograph_id": "text",
-        "statement_id": "statement:c8a16ca29ff4b3cc",
-        "statement_relation_id": "REL_Material_Li__Ni1_3Co1_3Mn1_3_1_xMgx_O2_CONTAINS_Material_alpha_NaFeO2",
-        "source_relation_id": "REL_Material_Li__Ni1_3Co1_3Mn1_3_1_xMgx_O2_CONTAINS_Material_alpha_NaFeO2",
-        "source_relation_index": 26,
-        "entity_ids": [
-          "Material_Li__Ni1_3Co1_3Mn1_3_1_xMgx_O2",
-          "Material_alpha_NaFeO2"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:text:relation:statement:c8a16ca29ff4b3cc",
-          "source:text:relation:statement:c8a16ca29ff4b3cc:evidence"
-        ]
-      },
-      {
         "id": "local-unit:d27f5c741ebb677c",
         "micrograph_id": "text",
         "statement_id": "statement:14223bc5ed1dc099",
         "statement_relation_id": "REL_Material_Li__Ni1_3Co1_3Mn1_3_1_xMgx_O2_CONTAINS_Material_Mg",
         "source_relation_id": "REL_Material_Li__Ni1_3Co1_3Mn1_3_1_xMgx_O2_CONTAINS_Material_Mg",
-        "source_relation_index": 27,
+        "source_relation_index": 22,
         "entity_ids": [
           "Material_Li__Ni1_3Co1_3Mn1_3_1_xMgx_O2",
           "Material_Mg"
@@ -9014,7 +9286,7 @@
         "statement_id": "statement:0d0a787ebbfb6d3b",
         "statement_relation_id": "REL_Material_Li_Ni1_3Co1_3Mn1_3_O2_CONTAINS_Material_Mg",
         "source_relation_id": "REL_Material_Li_Ni1_3Co1_3Mn1_3_O2_CONTAINS_Material_Mg",
-        "source_relation_index": 28,
+        "source_relation_index": 23,
         "entity_ids": [
           "Material_Li_Ni1_3Co1_3Mn1_3_O2",
           "Material_Mg"
@@ -9032,7 +9304,7 @@
         "statement_id": "statement:aee55601ab027d35",
         "statement_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Ni",
         "source_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Ni",
-        "source_relation_index": 29,
+        "source_relation_index": 24,
         "entity_ids": [
           "Material_Secondary_leaching_liquid",
           "Material_Ni"
@@ -9050,7 +9322,7 @@
         "statement_id": "statement:7be225965971bd0c",
         "statement_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Co",
         "source_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Co",
-        "source_relation_index": 30,
+        "source_relation_index": 25,
         "entity_ids": [
           "Material_Secondary_leaching_liquid",
           "Material_Co"
@@ -9068,7 +9340,7 @@
         "statement_id": "statement:d93a5085ced119f4",
         "statement_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Mn",
         "source_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Mn",
-        "source_relation_index": 31,
+        "source_relation_index": 26,
         "entity_ids": [
           "Material_Secondary_leaching_liquid",
           "Material_Mn"
@@ -9086,7 +9358,7 @@
         "statement_id": "statement:83d5f2378f651ed7",
         "statement_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Al",
         "source_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Al",
-        "source_relation_index": 32,
+        "source_relation_index": 27,
         "entity_ids": [
           "Material_Secondary_leaching_liquid",
           "Material_Al"
@@ -9104,7 +9376,7 @@
         "statement_id": "statement:8a7fbc65de86eb89",
         "statement_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Li",
         "source_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Li",
-        "source_relation_index": 33,
+        "source_relation_index": 28,
         "entity_ids": [
           "Material_Secondary_leaching_liquid",
           "Material_Li"
@@ -9122,7 +9394,7 @@
         "statement_id": "statement:a040718a97abaa48",
         "statement_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Cu",
         "source_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Cu",
-        "source_relation_index": 34,
+        "source_relation_index": 29,
         "entity_ids": [
           "Material_Secondary_leaching_liquid",
           "Material_Cu"
@@ -9140,7 +9412,7 @@
         "statement_id": "statement:3acabd9ff07a98ea",
         "statement_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Fe",
         "source_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Fe",
-        "source_relation_index": 35,
+        "source_relation_index": 30,
         "entity_ids": [
           "Material_Secondary_leaching_liquid",
           "Material_Fe"
@@ -9158,7 +9430,7 @@
         "statement_id": "statement:7e4e27d53e5f78fe",
         "statement_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Zn",
         "source_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Zn",
-        "source_relation_index": 36,
+        "source_relation_index": 31,
         "entity_ids": [
           "Material_Secondary_leaching_liquid",
           "Material_Zn"
@@ -9176,7 +9448,7 @@
         "statement_id": "statement:a6aa82364975479e",
         "statement_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Mg",
         "source_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Mg",
-        "source_relation_index": 37,
+        "source_relation_index": 32,
         "entity_ids": [
           "Material_Secondary_leaching_liquid",
           "Material_Mg"
@@ -9194,7 +9466,7 @@
         "statement_id": "statement:c170cb25054be6f3",
         "statement_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Ca",
         "source_relation_id": "REL_Material_Secondary_leaching_liquid_CONTAINS_Material_Ca",
-        "source_relation_index": 38,
+        "source_relation_index": 33,
         "entity_ids": [
           "Material_Secondary_leaching_liquid",
           "Material_Ca"
@@ -9212,7 +9484,7 @@
         "statement_id": "statement:c5dcbe00e10cf885",
         "statement_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Ni",
         "source_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Ni",
-        "source_relation_index": 39,
+        "source_relation_index": 34,
         "entity_ids": [
           "Material_Purified_solution",
           "Material_Ni"
@@ -9230,7 +9502,7 @@
         "statement_id": "statement:45250a7dfdcc8d9f",
         "statement_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Co",
         "source_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Co",
-        "source_relation_index": 40,
+        "source_relation_index": 35,
         "entity_ids": [
           "Material_Purified_solution",
           "Material_Co"
@@ -9248,7 +9520,7 @@
         "statement_id": "statement:8274b674bd44c395",
         "statement_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Mn",
         "source_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Mn",
-        "source_relation_index": 41,
+        "source_relation_index": 36,
         "entity_ids": [
           "Material_Purified_solution",
           "Material_Mn"
@@ -9266,7 +9538,7 @@
         "statement_id": "statement:747167d7b4e92e05",
         "statement_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Al",
         "source_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Al",
-        "source_relation_index": 42,
+        "source_relation_index": 37,
         "entity_ids": [
           "Material_Purified_solution",
           "Material_Al"
@@ -9284,7 +9556,7 @@
         "statement_id": "statement:42b7067c610ffc09",
         "statement_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Li",
         "source_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Li",
-        "source_relation_index": 43,
+        "source_relation_index": 38,
         "entity_ids": [
           "Material_Purified_solution",
           "Material_Li"
@@ -9302,7 +9574,7 @@
         "statement_id": "statement:cc963ebaffd2cca1",
         "statement_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Cu",
         "source_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Cu",
-        "source_relation_index": 44,
+        "source_relation_index": 39,
         "entity_ids": [
           "Material_Purified_solution",
           "Material_Cu"
@@ -9320,7 +9592,7 @@
         "statement_id": "statement:6b51445ba7bb3451",
         "statement_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Fe",
         "source_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Fe",
-        "source_relation_index": 45,
+        "source_relation_index": 40,
         "entity_ids": [
           "Material_Purified_solution",
           "Material_Fe"
@@ -9338,7 +9610,7 @@
         "statement_id": "statement:92588c11f98bb88d",
         "statement_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Zn",
         "source_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Zn",
-        "source_relation_index": 46,
+        "source_relation_index": 41,
         "entity_ids": [
           "Material_Purified_solution",
           "Material_Zn"
@@ -9356,7 +9628,7 @@
         "statement_id": "statement:56f833321b9b05cd",
         "statement_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Mg",
         "source_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Mg",
-        "source_relation_index": 47,
+        "source_relation_index": 42,
         "entity_ids": [
           "Material_Purified_solution",
           "Material_Mg"
@@ -9374,7 +9646,7 @@
         "statement_id": "statement:7a906dd7c3e43c52",
         "statement_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Ca",
         "source_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Ca",
-        "source_relation_index": 48,
+        "source_relation_index": 43,
         "entity_ids": [
           "Material_Purified_solution",
           "Material_Ca"
@@ -9392,7 +9664,7 @@
         "statement_id": "statement:6651ff12f4a2c475",
         "statement_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Na",
         "source_relation_id": "REL_Material_Purified_solution_CONTAINS_Material_Na",
-        "source_relation_index": 49,
+        "source_relation_index": 44,
         "entity_ids": [
           "Material_Purified_solution",
           "Material_Na"
@@ -9410,7 +9682,7 @@
         "statement_id": "statement:90e96ec61ea61e3e",
         "statement_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Ni",
         "source_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Ni",
-        "source_relation_index": 50,
+        "source_relation_index": 45,
         "entity_ids": [
           "Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample",
           "Material_Ni"
@@ -9428,7 +9700,7 @@
         "statement_id": "statement:273561176c89b829",
         "statement_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Co",
         "source_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Co",
-        "source_relation_index": 51,
+        "source_relation_index": 46,
         "entity_ids": [
           "Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample",
           "Material_Co"
@@ -9446,7 +9718,7 @@
         "statement_id": "statement:0c6993f0793cf999",
         "statement_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Mn",
         "source_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Mn",
-        "source_relation_index": 52,
+        "source_relation_index": 47,
         "entity_ids": [
           "Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample",
           "Material_Mn"
@@ -9464,7 +9736,7 @@
         "statement_id": "statement:c9f531e884097ccf",
         "statement_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Li",
         "source_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Li",
-        "source_relation_index": 53,
+        "source_relation_index": 48,
         "entity_ids": [
           "Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample",
           "Material_Li"
@@ -9482,7 +9754,7 @@
         "statement_id": "statement:a37de8cfe9446ecd",
         "statement_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Cu",
         "source_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Cu",
-        "source_relation_index": 54,
+        "source_relation_index": 49,
         "entity_ids": [
           "Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample",
           "Material_Cu"
@@ -9500,7 +9772,7 @@
         "statement_id": "statement:d8c0f01fed03bb7a",
         "statement_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Al",
         "source_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Al",
-        "source_relation_index": 55,
+        "source_relation_index": 50,
         "entity_ids": [
           "Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample",
           "Material_Al"
@@ -9518,7 +9790,7 @@
         "statement_id": "statement:df59d56c25947d44",
         "statement_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Ca",
         "source_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Ca",
-        "source_relation_index": 56,
+        "source_relation_index": 51,
         "entity_ids": [
           "Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample",
           "Material_Ca"
@@ -9536,7 +9808,7 @@
         "statement_id": "statement:a05ccaa5c130be0c",
         "statement_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Fe",
         "source_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Fe",
-        "source_relation_index": 57,
+        "source_relation_index": 52,
         "entity_ids": [
           "Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample",
           "Material_Fe"
@@ -9554,7 +9826,7 @@
         "statement_id": "statement:a4963cb1ae547f85",
         "statement_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Mg",
         "source_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Mg",
-        "source_relation_index": 58,
+        "source_relation_index": 53,
         "entity_ids": [
           "Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample",
           "Material_Mg"
@@ -9572,7 +9844,7 @@
         "statement_id": "statement:86f948c84b437d00",
         "statement_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Zn",
         "source_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Zn",
-        "source_relation_index": 59,
+        "source_relation_index": 54,
         "entity_ids": [
           "Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample",
           "Material_Zn"
@@ -9590,7 +9862,7 @@
         "statement_id": "statement:5226637d274d03fd",
         "statement_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Na",
         "source_relation_id": "REL_Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample_CONTAINS_Material_Na",
-        "source_relation_index": 60,
+        "source_relation_index": 55,
         "entity_ids": [
           "Material_regenerated_Li_Ni1_3Co1_3Mn1_3_O2_sample",
           "Material_Na"
@@ -9600,6 +9872,81 @@
         "evidence_refs": [
           "source:text:relation:statement:5226637d274d03fd",
           "source:text:relation:statement:5226637d274d03fd:evidence"
+        ]
+      },
+      {
+        "id": "local-unit:1c3bce2df032a032",
+        "micrograph_id": "text",
+        "statement_id": "statement:04febc50c14b69d2",
+        "statement_relation_id": "REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_NiSO4",
+        "source_relation_id": "REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_NiSO4",
+        "source_relation_index": 56,
+        "entity_ids": [
+          "Process_organic_solvent_extraction",
+          "Material_NiSO4"
+        ],
+        "scope_assertion_ids": [
+          "scope-assertion:5e4b678b92b60b6a"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:0da9cf2461d0a9ab"
+        ],
+        "evidence_refs": [
+          "scope:scope-assertion:5e4b678b92b60b6a:evidence",
+          "source:text:Process_organic_solvent_extraction:entity",
+          "source:text:relation:REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_NiSO4",
+          "source:text:relation:statement:04febc50c14b69d2",
+          "source:text:relation:statement:04febc50c14b69d2:evidence"
+        ]
+      },
+      {
+        "id": "local-unit:4eca638331218417",
+        "micrograph_id": "text",
+        "statement_id": "statement:3d7db0c5ea91e83a",
+        "statement_relation_id": "REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_CoSO4",
+        "source_relation_id": "REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_CoSO4",
+        "source_relation_index": 57,
+        "entity_ids": [
+          "Process_organic_solvent_extraction",
+          "Material_CoSO4"
+        ],
+        "scope_assertion_ids": [
+          "scope-assertion:5e4b678b92b60b6a"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:5e915f0319779c39"
+        ],
+        "evidence_refs": [
+          "scope:scope-assertion:5e4b678b92b60b6a:evidence",
+          "source:text:Process_organic_solvent_extraction:entity",
+          "source:text:relation:REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_CoSO4",
+          "source:text:relation:statement:3d7db0c5ea91e83a",
+          "source:text:relation:statement:3d7db0c5ea91e83a:evidence"
+        ]
+      },
+      {
+        "id": "local-unit:c1192f1410adef22",
+        "micrograph_id": "text",
+        "statement_id": "statement:57fa8edd1d4a1bdf",
+        "statement_relation_id": "REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_MnSO4",
+        "source_relation_id": "REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_MnSO4",
+        "source_relation_index": 58,
+        "entity_ids": [
+          "Process_organic_solvent_extraction",
+          "Material_MnSO4"
+        ],
+        "scope_assertion_ids": [
+          "scope-assertion:5e4b678b92b60b6a"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:0fbebc964f74fe40"
+        ],
+        "evidence_refs": [
+          "scope:scope-assertion:5e4b678b92b60b6a:evidence",
+          "source:text:Process_organic_solvent_extraction:entity",
+          "source:text:relation:REL_Process_organic_solvent_extraction_HAS_OUTPUT_Material_MnSO4",
+          "source:text:relation:statement:57fa8edd1d4a1bdf",
+          "source:text:relation:statement:57fa8edd1d4a1bdf:evidence"
         ]
       }
     ],
@@ -15611,6 +15958,7 @@
       "measurement_evidence_records": 3,
       "receipt": "measurement_semantics_revision.json",
       "original_stages_preserved": true
-    }
+    },
+    "scope_unscoped_candidates": []
   }
 }

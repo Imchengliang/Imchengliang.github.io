@@ -1,0 +1,253 @@
+Annotate study scope for the supplied final graph candidates using the source
+passages. Candidate names, aliases and context summaries help identify objects;
+they are not source evidence. Copy candidate IDs and passage IDs exactly.
+
+1. For each Product/Component candidate that represents this study's sampled
+   device, component or population, return one population scope. Use `instance`
+   for an individually identified model/sample and `batch` for an unspecified
+   population. Summarize only sample facts stated by this paper (source, brand,
+   collection, selection, etc.). Distinguish the initial sample from processed
+   fractions, residues, reagents, characterization media and table aggregates.
+   A shared sample declaration can support multiple named models. Do not invent
+   missing provenance. A root in graph topology is only a candidate, not proof
+   that it is an independently sampled population.
+2. For each Process candidate, return its broad parent method as `method_family`.
+   Use a short method noun phrase, without parenthetical alternatives or settings.
+   It can be a semantic generalization, not a verbatim substring of the name.
+   Cite an actual passage describing that method or its application. A sample
+   origin, culture adaptation or measurement sentence alone does not establish
+   a treatment method. Shared procedures may support multiple treatment arms;
+   do not replace a control with another arm's method.
+3. Use section and surrounding context to distinguish this study from cited
+   work and background. Choose the evidence yourself; no passage is preverified
+   as current-study evidence. Context summaries never qualify as quotations.
+4. Every candidate must have a scope or an `unscoped_candidates` entry explaining
+   why it is not a study subject or lacks sufficient source evidence. Do not
+   force a scope just to meet coverage. Cite relevant evidence for exclusions
+   when available. Never silently omit a candidate.
+5. Each scope needs exact source quotations in `evidence`. Put the quotation
+   most directly supporting its scope first, then any additional support for
+   summary details. Keep sample-origin and method evidence distinct. Return
+   one scope per selected candidate and JSON only:
+{
+  "population_scopes": [{
+    "root_entity_id": "component_id", "granularity": "batch",
+    "sample_type": "lithium-ion battery",
+    "scope_summary": "Study batteries supplied by the company named in the source.",
+    "evidence": [{"evidence_id": "E1", "quote": "Exact sample-source quotation."}]
+  }],
+  "process_scopes": [{
+    "root_entity_id": "process_id", "method_family": "acid leaching",
+    "evidence": [{"evidence_id": "E2", "quote": "Exact method quotation."}]
+  }],
+  "unscoped_candidates": [{
+    "root_entity_id": "other_id", "reason": "Why a study scope cannot be assigned.",
+    "evidence": [{"evidence_id": "E3", "quote": "Relevant source quotation."}]
+  }]
+}
+
+## Product/Component candidates
+- Product_lithium_ion_battery | Component | lithium-ion battery
+  Aliases: lithium-ion battery; lithium ion battery; spent LIBs; LIBs; Spent LIBs; lithium-ion batteries; Lithium-ion batteries
+
+## Process candidates
+- Process_acidic_leaching_of_cathode | Process | acidic leaching of cathode
+  Aliases: acidic leaching of cathode scrap; acidic leaching of cathode
+  Context summary (not evidence): Cathode scrap (10 mm pieces, dried at 60 °C for 24 h) was leached in a 50 mL sealed reactor placed in a temperature-controlled shaking bath with 25 mL of acidic solution. Leaching conditions including acid species (12 organic/inorganic acids), acid concentration, reductant content, and pH were examined. Samples were taken at t ≤ 5 min and analyzed by ICP-OES to determine leaching speed and recovery rate of Co, Li, and Al.
+- Process_leaching_with_Hydrochloric_acid | Process | leaching with Hydrochloric acid
+  Aliases: leaching with Hydrochloric acid
+- Process_leaching_with_Sulfuric_acid | Process | leaching with Sulfuric acid
+  Aliases: leaching with Sulfuric acid
+- Process_leaching_with_Nitric_acid | Process | leaching with Nitric acid
+  Aliases: leaching with Nitric acid
+- Process_leaching_with_Maleic_acid | Process | leaching with Maleic acid
+  Aliases: leaching with Maleic acid
+- Process_leaching_with_Citric_acid | Process | leaching with Citric acid
+  Aliases: leaching with Citric acid
+- Process_leaching_with_Succinic_acid | Process | leaching with Succinic acid
+  Aliases: leaching with Succinic acid
+- Process_leaching_with_Ascorbic_acid | Process | leaching with Ascorbic acid
+  Aliases: leaching with Ascorbic acid
+- Process_leaching_with_Tartaric_acid | Process | leaching with Tartaric acid
+  Aliases: leaching with Tartaric acid
+- Process_leaching_with_Iminodiacetic_acid | Process | leaching with Iminodiacetic acid
+  Aliases: leaching with Iminodiacetic acid
+- Process_leaching_with_Aspartic_acid | Process | leaching with Aspartic acid
+  Aliases: leaching with Aspartic acid
+- Process_leaching_with_DL_malic_acid | Process | leaching with DL-malic acid
+  Aliases: leaching with DL-malic acid
+
+## Source passages
+[Ea7b5a1c047] section=Comprehensive evaluation on effective leaching of critical metals from spent lithium-ion batteries
+Wenfang Gao a,b, Chenming Liu a, Hongbin Cao a,b, Xiaohong Zheng a, Xiao Lin a,b, Haijuan Wang c, Yi Zhang a,b, Zhi Sun a,b,⇑
+
+[E85a39810c6] section=ABSTRACT
+Recovery of metals from spent lithium-ion batteries (LIBs) has attracted worldwide attention because of issues from both environmental impacts and resource supply. Leaching, for instance using an acidic solution, is a critical step for effective recovery of metals from spent LIBs. To achieve both high leaching efficiency and selectivity of the targeted metals, improved understanding on the interactive features of the materials and leaching solutions is highly required. However, such understanding is still limited at least caused by the variation on physiochemical properties of different leaching solutions. In this research, a comprehensive investigation and evaluation on the leaching process using acidic solutions to recycle spent LIBs is carried out. Through analyzing two important parameters, i.e. leaching speed and recovery rate of the corresponding metals. the effects of hydrogen ion concentration, acid species and concentration on these two parameters were evaluated. It was found that a leachant with organic acids may leach Co and Li from the cathode scrap and leave Al foil as metallic form with high leaching selectivity, while that with inorganic acids typically leach all metals into the solution. Inconsistency between the leaching selectivity and efficiency during spent LIBs recycling is frequently noticed. In order to achieve an optimal status with both high leaching selectivity and efficiency (especially at high solid-to-liquid ratios), it is important to manipulate the average leaching speed and recovery rate of metals to optimize the leaching conditions. Subsequently, it is found that the leaching speed is significantly dependent on the hydrogen ion concentration and the capability of releasing hydrogen ions of the acidic leachant during leaching. With this research, it is expected to improve understanding on controlling the physiochemical properties of a leaching solution and to potentially design processes for spent LIBs recycling with high industrial viability.
+
+[E4001cf5e1a] section=ABSTRACT
+ 2018 Elsevier Ltd. All rights reserved.
+
+[E97cc7ce234] section=1. Introduction
+Lithium-ion batteries (LIBs) are currently used as electric power sources in portable electronic products such as mobile phones, laptops, cameras (He et al., 2017) and electric vehicles because of their high energy density, long cycling life and low self-discharge rate (Zeng et al., 2015a). According to the perspective of global vehicle market, the sales of the electric battery vehicle is expected to increase from 5 million in 2015 to about 180 million in 2045 (Li et al., 2017). With a relatively short life span of about 3–8 years, a large number of spent LIBs have already been generated for about 200 million tons in 2017 and it will be nearly 400 million tons in 2020 (Gu et al., 2017). Spent LIBs have caught much attention because of the possibility of recovering valuable resources such as lithium, nickel, cobalt and aluminum and they are also considered as potential environmental contaminants due to the content of heavy metals and fluoride-bearing electrolyte (Gao et al., 2017). Regulations (in Asia countries, European Union, North America or Channel Islands) have defined the requirements to reduce the contaminants during recycling of spent LIBs (Joulie et al., 2017). The recycling of spent LIBs is of great importance for the environment and ensuring the safe supply of corresponding resources.
+
+[E7337da872a] section=1. Introduction
+Hydrometallurgy, pyrometallurgy and biometallurgy are three typical recycling technologies for spent LIBs recycling. In a pyrometallurgy process, plastic housings, conductive agents, binders and organic electrolytes are burnt off to facilitate the subsequent recovery of valuable metals (Nayaka et al., 2015). However, the disadvantages, such as high capital cost, emission of hazardous gas (HF), dusts and consumption of intensive energy, limit the application of pyrometallurgy (Joulie et al., 2017). Biometallurgy is a very promising technology for its low cost and modest apparatus requirement, but the poor adaptability and rigorous leaching conditions reduce its applicability (Liu et al., 2013). Therefore, with effective metal recovery and relatively low energy consumption, hydrometallurgy has been paid significant attention. In a typical hydrometallurgical recycling process, the leaching process with acidic solution is essential to effectively recover metals from cathode scrap, which is considered as the most important fraction of a LIB (because of the content of cathode materials and high purity aluminum foil) (Gaines, 2014). Before 2005, LiCoO2 was the main cathode material with 94% of the market share in 2015 (He et al., 2017). Although different cathode materials such as LiMnO2, LiFePO, LiNi0. 33 Co0. 33 Mn0. 33 O2 and LiNi0. 8 Co0. 15 Al0. 05 O2 are available in the market, their recovery are mainly focused on cobalt-containing spent LIBs (Gao et al., 2018; Lv et al., 2018) especially on LiCoO (Table S2). Only a few reports are available for the recycling of LiFePO4 using hydrometallurgy (Huang et al., 2016; Yang et al., 2017; Zheng et al., 2016). The leaching of cobalt-containing cathode materials often use inorganic acids (e.g., H SO (Sa et al., 2015; Zou et al., 2013), HCl (Guo et al., 2015; Shuva and Kurny, 2013) and HNO3) or organic acids (e.g., citric acid (Yao et al., 2015), DL-malic acid (Li et al., 2010; Yao et al., 2016) and oxalic acid (Sun and Qiu, 2012)) as leachant. To increase the leaching efficiency, reductants (e.g., H2O2 (Gratz et al., 2014; Li et al., 2015), glucose (Chen et al., 2016) and NaHSO (Meshram et al., 2015)) are often introduced to reduce the metal ions from high valances (e.g., Co^3+, Mn4+) to lower valence ions (e. g., Co ^2+, Mn ^2+) which are more stable in the solution. Some natural substances can also act as leachant (e.g., citrus fruit juice (Pant and Dolker, 2017)) or reductant (e.g., phytolacca and tea waste (Chen et al., 2015)) to reduce environmental pollution and improve recycling efficiency.
+
+[E611265960b] section=1. Introduction
+Before investigating the leaching process, the understanding on the interactive features between the materials and solutions is the foundation to achieve both high leaching efficiency and selectivity of the targeted metals. For example, besides acting as the leachant, oxalic acid can precipitate Co (Zeng et al., 2015b), citric acid can present as a chelating reagent to re-synthesis cathode materials (Yao et al., 2015), and formic acid can selectively recover Al foil and reduce the addition of reductants (Gao et al., 2017). However, variations on the physiochemical properties of different acidic solutions are readily bringing difficulties to design the best leachant for spent LIBs recycling. At the same time, in previous studies, it is always necessary to explore the optimal conditions such as acid concentration, solid to liquid (S/L) ratio, reductant content and reaction temperature to achieve high leaching efficiency. The analysis and evaluation of different acid leaching conditions for spent LIBs recovery are seldom carried out, and to achieve both high leaching efficiency and selectivity of the targeted metals has been difficult. Three aspects, i.e. the interactive features of materials and acidic solutions, the variation on physiochemical properties of leaching solutions and the affection of leaching parameters, are therefore critical to be considered to have a systematic and comprehensive evaluation on effective acid leaching process during metal recovery from spent LIBs.
+
+[E433701bd07] section=1. Introduction
+In this study, a comprehensive investigation and evaluation on the leaching processes with acidic solutions for recovery of metals from spent LIBs (LiCoO2 was used for simplification) was carried out. Among different leaching parameters (e.g., acid species and concentrations, S/L ratios, reductant species and concentrations, leaching times, temperatures, leaching speed and recovery rate), the recovery rate is an important parameter to evaluate the viability of a leaching process, and the leaching speed is an important parameter to analyze the leaching kinetics or effectiveness of a leaching process. Through defining and analyzing these two parameters, the effects of hydrogen ion concentrations, acid species and concentrations on these two parameters were evaluated. In a typical leaching process, inconsistency between the leaching selectivity and efficiency was frequently noticed. Furthermore, the decisive factors of the leaching speed and recovery rate were identified by analyzing the leaching parameters. On one hand, 12 acidic solutions were used to understand the leaching behavior of cathode scrap from spent LIBs and to find out the correlation between the leaching speed and recovery rate of the corresponding metals. On the other hand, it is noticed that the conditions to ensure both high leaching efficiency and leaching selectivity can be achieved by optimized process design. Completion of these objectives will be expected to attain preliminary correlations to control the physiochemical properties of leaching solution and to potentially design process at both lab-scale and industrial levels.
+
+[E12c9888083] section=2.1. Materials and reagents
+The cathode scrap, which are the cathodes used for manufacturing lithium-ion battery, was supplied by a local recycling company (Huayou Cobalt, China). Before leaching, the cathode scrap was cut into pieces with the size of 10 mm and dried at 60 ^∘𝖢 for 24 h. To determine the composition, the cathode scrap was dissolved with aqua regia solution (HNO3HCl = 1: 3, v / v) and sulfuric acid one after another. All chemical reagents were of analytical grade and all solutions were prepared with ultrapure water (Millipore Milli-Q). The leaching reagents are organic/inorganic acidic solutions (12 kinds of acids in Table S3) under certain concentrations, and the reductant is introduced to the reagents according to the leaching process.
+
+[E6c685106d5] section=2.2. Leaching process of cathode scrap
+The cathode scrap was leached in a 50 mL sealed reactor which was placed in a temperature controlled shaking bath. The acidic solution was added to the reactor with a volume of 25 mL. The leaching conditions including acid species, acid concentration, reductant content and pH of the leaching solution were examined. Samples were taken out at leaching time of t (t ≤5 min) and identified by ICP-OES (ICP-OES, iCAP 6300, Radial, Thermo Scientific) to find the local leaching parameters for leaching speeds. After leaching, the residues (undissolved organic binder and conductive reagent) and Al foil were vacuum filtered immediately. The leachate was analyzed by ICP-OES to get the local leaching parameters of metals for recovery rate. The leaching speed and recovery rate are determined according to
+
+[E19c79571e5] section=2.2. Leaching process of cathode scrap
+g = (C1 (M) x V) / (m (M) x t) x100 % (Eq. 1)
+
+[Ecf6e8b81cf] section=2.2. Leaching process of cathode scrap
+h = (C2 (M) x V) / (m (M)) x100 % (Eq. 2)
+
+[Eff45ee84ba] section=2.2. Leaching process of cathode scrap
+where g (wt%/min) is the leaching speed of metal M (M = Co, Li, Al) h (wt%) is the recovery rate of metal M (M = Co, Li, Al), t (min, ≤5) is the leaching time, C1 (M, g / L) is the concentration of metal M in the sample at t min, C (M, g/L) is the concentration of metal M in the leachate, V (L) is the volume of the leachant, m (M, g) is the mass of metal M in the cathode scrap.
+
+[Ec9b195ec1f] section=2.3. Characterization
+The crystal structures of cathode scrap were examined by X-ray diffractometer (X’pert PRO, PANalytical) with Cu Ka radiation. The concentrations of Al, Co and Li in leaching solutions were measured by inductively coupled plasma optical emission spectrometer (ICP-OES). The morphology was observed by a mineral liberation analyzer (MLA 250, FEI) which contains an energy dispersive spectrometer (EDS, EDAX GenesisSiLi) and a scanning electron micrometer (SEM, Quanta 250).
+
+[E9acc8afff8] section=3. Results and discussion
+The mass fractions of the cathode scrap are shown in Table S1. The X-ray diffraction pattern of the cathode scrap (Fig. S1) shows that LiCoO2 is the major phases while TiO only appeared with the amount lower than 5 wt%. TiO2, sometimes being coated on the cathode materials, is to reduce electrode dissolution in the electrolyte (Fergus, 2010). Since only a very small amount of titanium existed in the cathode scrap and TiO2 can hardly leached out under acidic solution, the influence of TiO2 on the leaching of other metals has not been observed.
+
+[Ed88641b6a7] section=3.1. Understanding the importance of different leaching parameters
+To understand the importance of different parameters, the leaching parameters for LiCoO2 leaching processes were summarized in Table S2. The influence level was defined as a variable to evaluate the importance of different leaching parameters. A higher influence level means the parameter is more important for the leaching process and vice versa. The influence levels of the leaching parameters can be found in the supplementary materials, and the order from high to low is as follows: the acid species and concentration, leaching time, reductant species and concentration, S/L ratio, reaction temperature, stirring speed (Fig. S2).
+
+[E0ac00894d8] section=3.1. Understanding the importance of different leaching parameters
+The summary of the chemical properties of different acids were concluded in Table S3. To clearly explain the results in the following figures, the acids were numbered by serial number from A to L (Table S3). The existing acids in the leaching processes of LiCoO for spent LIBs are divided into inorganic acids (acid A to C) and organic acids (acid D to L). Among the mineral acids, sulfuric acid (acid B) is frequently used for the recycling of spent LIBs. For organic acids, citric acid (acid E) is the most frequently used organic acid.
+
+[E1ebf73b853] section=3.1. Understanding the importance of different leaching parameters
+Based on Table S2 where the leaching results are similar (Li > 95% and Co > 90%), the relationship between S/L ratio and the concentration of acid is presented in Fig. 1. The black points represent the concentrations and the corresponding S / L ratios, while the regions of the different colors are the range covered by the black points of the corresponding acid leaching process. It can be confirmed from Fig. 1 that the leaching processes of inorganic acids are mostly concentrated at 3–6 mol/L with S/L ratios higher than 50 g/L (mostly 100 g/L). For organic acid leaching process, acid concentrations are generally only 1–2 mol/L, the treatments of cathode scrap are carried out with S / L ratio lower than 50 g/L, and the cathode material treatment capacity of unit volume of organic acid solution is much less than that of the inorganic acid solution. The distinction of the organic and inorganic acids is mainly because of the different pKa values, the organic acids have higher pKa values which make the ionization of hydrogen ion more difficult than inorganic acids. Therefore, the organic acid can be considered as a kind of buffering solution which can also realize the leaching efficiency but the treatment capacity is lower than inorganic acid because of the ionization balance of H+.
+
+[E75d97340d5] section=3.1. Understanding the importance of different leaching parameters
+From the perspective of industry, the inorganic acids act as leaching acid with the concentration of 1.5 mol/L–3 mol/L while the S/L ratios are from 100 g/L to 200 g/L (Yu et al., 2016). As shown in Fig. 1, sulfuric acid is the only available acid for industrial application. Although the other inorganic acids are also explored in the industry recycling processes, they are not widely used due to the high treatment cost, severe equipment corrosion, and the emission of waste gas (e.g., Cl ) and waste water. For organic acids, their low S / L ratio is one of the drawbacks for further implementation into industry which will highly increase the emission of waste water and the cost.
+
+[E87bdcc0dfd] section=3.1. Understanding the importance of different leaching parameters
+Since Co^3+ in LiCoO2 needs to be converted to C0 ^2+, reductants are necessary for almost all acid leaching processes, except for acids with reducibility, such as HCl and ascorbic acid. Among the most used reductants (e.g., H2O2 (Zou et al., 2013), glucose (Chen et al., 2016), Na2S2O3 (Zhang et al., 2015) and NaHSO3 ( (Pagnanelli et al., 2014)), H2O2 attends 80% of the leaching process as reductant because it will not introduce any anion or cation into the solution. The main concentration of H2O2 is 1–6 vol% in leaching processes.
+
+[E34673f293d] section=3.1. Understanding the importance of different leaching parameters
+3.2. Effect ofacid species on leaching processes (both the efficiency and selectivity)
+
+[E2a498c8b1b] section=3.1. Understanding the importance of different leaching parameters
+Considering 12 kinds of acids, the effects of acid species on the recovery rates and leaching speeds were systematically investigated. The leaching temperature was the average temperature of 80 ^∘C, the S/L ratio, the leaching time, the concentration of acid and reductant were in strict accordance with the parameters in Table S2. Because of the formation of cobalt oxalate, the leaching with oxalic acid was not considered. Aspartic acid and iminodiacetic acid under the corresponding parameters have a very low solubility which lead to a lot of solid existed in their leachant and leachate, so the reference of these two acids are not apparent although some of their leaching speeds or recovery rates were in the curve trend of figures. The leaching speeds obtained in the experiments are presented in Fig. 2 where the acids are arranged with the increase of proton activity. The pH of leachant and the ultimate recovery rates of metals are given in Table 1.
+
+[E6977f97a3e] section=3.1. Understanding the importance of different leaching parameters
+[TABLE:TABLE_Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries_0001]
+
+[E47943005e0] section=3.1. Understanding the importance of different leaching parameters
+According to Fig. 2, the leaching speeds of inorganic acids are generally higher than that of organic acids. At the same time, the leaching speeds of Li and Co decrease with increasing of the initial pH of the leachants. For the leaching of Al, hydrochloric acid (acid A) is the only acid which can leach Al faster than Li and Co because it may easily form a complex [ AlCl6 ] ^3- with Al (FOLEY, 1986). Compared with inorganic acid leaching processes, the leaching speeds of Al in organic acids are usually low (<5 wt%/min).
+
+[E0f2c5ba5dd] section=3.1. Understanding the importance of different leaching parameters
+Under optimized leaching conditions, the recovery rates of lithium and cobalt can all be improved to be above 90% for both inorganic and organic acids. The main difference is noticed that the pH of the leachants with inorganic acid (Table 1) are lower than 1 while the pH of the leachants with organic acid are higher than 1. However, the recovery rate for aluminum with organic acids can be lower than 15 wt% while Al can dissolve completely in inorganic acids under current leaching conditions. Therefore, the leaching process with organic acids can selectively recover the aluminum foil by leaching cathode material to leachate, while that with inorganic acids leach all metals into the leachate.
+
+[E87cd80b9a3] section=3.1. Understanding the importance of different leaching parameters
+Because of the ionization equilibrium of organic acids, the recovery rate (h) is not linearly increasing with the acid concentration. Similarly, for the different acid leaching processes (Table S2 and Table 1), the recovery rate (h) is also highly dependent on the physiochemical properties of the acids for leaching.
+
+[E7d98f7ef80] section=3.3. Effect of reductant on the leaching process with the same acid concentration
+Under the same acid concentration, the effect of reductant on the leaching speed and recovery rate of metals were explored. The experimental conditions were as follows: acid concentration of 1 mol/L, leaching temperature of 80 ^∘C and S / L ratio of 20 g/L. In the experiment with reductant, the concentration of H2O2 was 4 vol%. Similar to the previous section, the leaching parameters of oxalic acid, iminodiacetic acid and aspartic acid are omitted while the leaching processes of the other nine acids were compared.
+
+[E50082125a6] section=3.3. Effect of reductant on the leaching process with the same acid concentration
+The pKa1 and pH of each acid under the concentration of 1 mol/ L are listed in Table 2, where the pH almost increases with the increase of the corresponding pKa1.
+
+[E3ee3dd601b] section=3.3.1. Leaching without the addition of reductant
+In the absence of reductants, the leaching speeds obtained in the experiments are given in Fig. 3. It can be noticed that the leaching speed decreases obviously with the increase of pH. Due to the self-reducibility, the leaching speed of ascorbic acid (acid G) is higher than other organic acids and it therefore does not follow the trend of other acidic leaching processes.
+
+[E578323d0d1] section=3.3.1. Leaching without the addition of reductant
+The ultimate recovery rates under the same acid concentration in the absence of reductants were summarized in Table 3. For the leaching of Al, the leachant with inorganic acids can leach Al, Co and Li and the recovery rates of Al reaches nearly 100 wt%. In the cases of organic acids, the Co and Li can be selectively leached with the recovery rate of Al less than 20 wt%. For the leaching of Li and Co, the recovery rate decrease with the increase of pH. The recov-
+
+[E1806ca4c6e] section=3.3.1. Leaching without the addition of reductant
+[TABLE:TABLE_Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries_0002]
+
+[Eec22b99823] section=3.3.1. Leaching without the addition of reductant
+[TABLE:TABLE_Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries_0003]
+
+[Ebd66f19830] section=3.3.1. Leaching without the addition of reductant
+[TABLE:TABLE_Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries_0004]
+
+[E71ef31c316] section=3.3.1. Leaching without the addition of reductant
+ery rate of Li is higher than Co for the same acid leaching process because the leaching of Co is limited by the absence of the reductant. The molar percentage of Li ^+ in leachate (Li ^+ + Co ^2+ + Al ^3+) was listed in Table 4. Because of the self-reducibility of ascorbic acid, the recovery rates of Li and Co in ascorbic acid leaching process reach 99.98 wt% and 99.12 wt% which is the best leaching efficiency in the 9 acid leaching processes. At the same time, the recovery rate of Al is controlled within 10 wt% so that selective separating Al foil can be achieved.
+
+[Ebe71625f61] section=3.3.2. Leaching with the addition of reductant
+With the addition of reductant, the leaching speed and recovery rate under the same acid concentration were presented in Fig. 4 and Table 5, respectively.
+
+[Efc06d53e0d] section=3.3.2. Leaching with the addition of reductant
+As described in Fig. 4, the leaching speeds of the leachant with inorganic acids are significantly higher than those of organic acids. For the inorganic or organic acid leaching processes, there are no obvious change of leaching speeds with the increase of solution pH, indicating that the addition of reductant makes the leaching speed high enough to ensure effective leaching. Compared with the leaching processes without reductants, the leaching speed of ascorbic acid (acid G) decreases in the leaching with H O. Redox reaction between hydrogen peroxide and ascorbic acid is observed that the reducibility of the leachant is subsequently reduced. The oxidative degradation of ascorbic acid by hydrogen peroxide has been deeply studied in the early researches (C.Deutsch, 1998; Udenfriend et al., 1954).
+
+[Eecdfd1882b] section=3.3.2. Leaching with the addition of reductant
+[TABLE:TABLE_Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries_0005]
+
+[E98bcd7f7b9] section=3.3.2. Leaching with the addition of reductant
+Similar to the leaching processes without reductants, the leaching processes with inorganic acids do not have selectivity, as summarized in Table 5. The leachant with organic acids can selectively leach Co and Li while the recovery rate of Al is lower than 12 wt%. Except the recovery rates of cobalt in tartaric acid and ascorbic acid leaching processes, the recovery rates of cobalt and lithium in each acid leaching process are higher than 99 wt%, proving that the addition of reductant can completely leaching cobalt and lithium. Since H2O2 reacts with ascorbic acid, the recovery rate of cobalt in the ascorbic acid leaching process is lower than the recovery rate in other acid leaching processes. In the tartaric acid leaching process, the lower recovery rate of Co was caused by the precipitation of cobalt, which is similar to the formic acid and/or oxalate leaching process (Gao et al., 2017; Zeng et al., 2015b). The morphology of the pink precipitation was observed by a mineral liberation analyzer (Figs. S3 and S4).
+
+[E4fa09247b9] section=3.4. Effect of reductant on the leaching process with the same hydrogen ion concentration
+With the same hydrogen ion concentration (pH), the leaching speed and recovery rate of each acid leaching process were investigated. The hydrogen ion (proton) is as same as hydronium ion, and it is used in this research for simplification (Udenfriend et al., 1954). The leaching conditions were as follows: pH of acidic solution was 2, reaction temperature was 80 ^∘C, S/L ratio was 20 g/L. The experiments were divided into the leaching with and without reductant to explore the affection of reductant to the leaching process. In the leaching with reductant, H2O2 content was 4 vol%. The leaching parameters of iminodiacetic acid and aspartic acid were omitted (for the same reason as former sections) and the leaching behavior of the other acids were compared.
+
+[E356c4bd43d] section=3.4. Effect of reductant on the leaching process with the same hydrogen ion concentration
+[TABLE:TABLE_Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries_0006]
+
+[E588482893f] section=3.4.1. Leaching without the addition of reductant
+The leaching speeds and the recovery rates of the leaching processes using either inorganic acid or organic acid as leachant without reductant are plotted in Fig. 5 where the acid distribution is in the order of increasing pKa1 under the same pH. The leaching speed and recovery rate of ascorbic acid are higher than other acids because of its reducibility. Though ascorbic acid has almost the highest pKa1, ascorbic acid can completely leach Co and Li and the recovery rate of Al is only 4.75 wt%. In view of the initial pH, the leaching speeds of other acids are similar except ascorbic acid, indicating that the initial leaching speed is determined by the initial hydrogen ion concentration and capability of releasing hydrogen ion. The recovery rates increase clearly with the pKa1 of acids. Since the ability of releasing hydrogen ion for organic acids are lower than inorganic acids, the total hydrogen ion (including the released and unreleased hydrogen ions) in the leachants with organic acids are higher than that with inorganic acids at the same pH, leading to the recovery rates of organic acids higher than inorganic acids.
+
+[E06281a7aad] section=3.4.2. Leaching with the addition of reductant
+For the leaching processes of LiCoO in appearance of H2O2 under the same pH (Fig. 6), the leaching speeds and recovery rates with inorganic acids are lower than that with organic acids. Based on the higher ability of releasing hydrogen ion for the inorganic acids, the total reactive hydrogen ions in inorganic acidic solutions at the same pH are lower than those in organic acidic solutions, which lead to lower leaching speeds and recovery rates for inorganic acidic solutions. The acidic solutions, with a higher pKa1 usually achieve a higher recovery rate of metal values. Compared with the leaching processes without H2O2, the leaching speed and recovery rate of the same acid increases in a certain range after the addition of H2O2, indicating that the addition of the reductant promotes the leaching of Co and Li. But for ascorbic acid, the addition of the reductant to the ascorbic acidic solution shows a counteracting effect which is detrimental to the ascorbic acid leaching process of LiCoO2 (see Fig. 7.)
+
+[E115c34af93] section=3.5. Discussion
+Based on the above experiments and analysis, the preliminary correlations, which can control the physiochemical properties of a leaching solutions to tentatively design processes to achieve different purposes of the cathode scrap leaching processes, can be discussed as follows:
+
+[E789cb8f353] section=3.5. Discussion
+(a) To achieve high leaching selectivity and efficiency, the organic acids can be chosen as leachant. If the reductive organic acid, such as ascorbic acid, is chosen as the leaching acid, reductant is then not necessary.
+
+[E4daf617e39] section=3.5. Discussion
+(b) To leach the metals with high leaching efficiency and S/L ratio without considering selectivity, inorganic acids are better than organic acids for the recovery of cathode scrap from spent LIBs. HCl can leach the cathode scrap without the addition of reductants. Other inorganic acids can also leach the cathode scrap with the addition of reductant under the conditions as follows: S/L ratio of 100 g/L, acid concentration of 2–4 mol/L at 60 - 90 ^∘C for 60 min. Decomposition of H2O2 needs to be paid attention that the leaching temperature shall be well controlled. Although organic acids can help to decrease the decomposition rate of H2O2, its decomposition may be still severe due to the fluctuation of temperature and catalytic effects of the transition metal oxides. Other reductants (e.g., glucose (Chen et al., 2016), Ν _ d2 S2O3 (Zhang et al., 2015) and NaHSO (Pagnanelli et al., 2014)) can also be used in the high temperature leaching processes.
+
+[Ee81b5a9f4c] section=3.5. Discussion
+(c) For the industrial application, the high leaching selectivity, efficiency and high S/L ratio are important to decrease the cost of the spent LIBs recovery. For the organic acids, higher leaching selectivity and efficiency can be achieved but the treatment capacity is too low to be promoted. The inorganic acid leaching processes have higher leaching efficiency and S/L ratio, while the low selectivity has added the difficulty to the subsequent recovery steps. To solve this problem, the organic acid leaching process and inorganic acid leaching process can be combined to simplify the spent LIBs recovery process, and this strategy has been realized for industrial application in a local recycling company. As a pretreatment process, the organic acid leaching process can separate the Al foil from cathode materials and other metals are almost not leached. The recovery rate after the pretreatment process was shown in Table S4. The Al foil was only dissolved 10.09 wt% and the purity of Al foil was 99.94 wt% (Table S5, Fig. S5). Subsequently, the cathode materials can be leached out by inorganic acids with high S/L ratio and efficiency. The organic acid can be recirculated by distillation process. Therefore, the leaching process can reach a high industrial viability with proper process design.
+
+[Eaf63214a9b] section=3.5. Discussion
+In the organic acidic solution, hydrogen ion is sustainable released with pH > 1 and pKa1 < 1. However, the inorganic acid can leach all the metals out with pH < 1 and p Ka1 > 1. The reasons of leaching selectivity in organic acidic solution can be as follows: since the anion radius of organic acids is larger than inorganic acids, the ionization of organic acid is usually more difficult than inorganic acid, resulting in lower ionization capacities and lower H ^+ amounts for organic acidic solution. At the same time, the Al foil is usually formed by a thin layer of Al2O3,, which passives it, the lower amount of H+ in the organic acidic solution cannot react effectively with the Al foil in cathode scrap while the high mount of H+ in inorganic acidic solution can easily react with the passivation layer. Finally, covalent bonds (e.g., carboxyl groups, carbonyl groups, hydroxyl groups) in organic acids are much more complicated than inorganic acids which affect the properties of organic acids and result in different leaching efficiencies.
+
+[E358b141c3a] section=3.6. Waste management of spent lithium-ion batteries
+Spent LIBs are a significant waste stream which requires adequate management (Bahaloo-Horeh and Mousavi, 2017). The management of spent LIBs has been debated around the world, including international organizations, governments, academic, industry and non-governmental organizations.
+
+[E042d631540] section=3.6. Waste management of spent lithium-ion batteries
+Since it is both a local and global issue, several studies has been focused on the management of spent LIBs using the managerial tools such as life cycle assessment (LCA) (Liang et al., 2017), material flow analysis (MFA) (Sommer et al., 2015) and extended producer responsibility (RPR) (Bertuol et al., 2016). Zackrisson et al. (Zackrisson et al., 2010) optimize the design of lithium-ion batteries using LCA methods for plug-in hybrid electric vehicles. Speirs et al. (Speirs et al., 2014) evaluated the future of lithium availability for electric vehicle batteries under the MFA method.
+
+[E99c9330c8c] section=3.6. Waste management of spent lithium-ion batteries
+The life of LIBs, similar as electronic equipment, contains product life cycle (selling, storage at home, use, reuse, giving, export) and product end-of-life (recycling, landfilling, incineration) (Tanskanen, 2013). Recovery of the valuable metals is the preferred rout for the waste LIBs where landfilling and incineration should be avoided as far as possible for a sustainable environment and society. Strict global regulations have been developed on management of spent LIBs. For example, Japan Portable Rechargeable Battery Recycling Centre (JBRC) requires the relevant producers to collect and recycle rechargeable batteries (Terazono et al., 2015). The US Environmental Protection Agency considers all spent batteries as hazardous waste (Zand and Abduli, 2008). EU legislation (Directive 2006/66/EC) restrict that at least of 50% of the average weight of spent batteries should be recycled into materials for their primary application or for other applications besides energy recovery battery by 2011 (Dewulf et al., 2010). Similar legislation for spent LIBs of e-waste is either in force at different stages in Canada, China, South Africa, Mexico and so on.
+
+[Eb94e25d779] section=3.6. Waste management of spent lithium-ion batteries
+After collection of the spent LIBs, the recycling processes should be carried out to recover the valuable metals. The recycling method mainly include hydrometallurgy, pyrometallurgy and biometallurgy which have been used in industrial technologies throughout the world (Lv et al., 2018). In LithoRec process, which combines similar mechanical and hydrometallurgical methods, is very useful and effective for the mixed recovered spent LIBs (Kwade and Diekmann, 2018). In Umicore process, the spent batteries are smelted with flux to form a metal phase containing most of the Co. Ni and partial Fe to be refined and a slag phase containing Li and small amount of other metals to be further recovered (Gao et al., 2017; Marinos, 2014).
+
+[E38896df1b0] section=3.6. Waste management of spent lithium-ion batteries
+All in all, the management of spent LIBs need enhancing producer responsibility, increasing publicity, raising of public awareness, developing green public transport, and improving the inspection of the recycling companies (Bahaloo-Horeh and Mousavi, 2017; Sun et al., 2017). The researchers, governments, producers, recyclers and publics should have the responsibility for the management of spent LIBs.
+
+[E30f3428e86] section=4. Conclusions
+Comprehensive investigation and evaluation of the recovery process of LiC ρ̅ _ 0 02 from the cathode scrap of spent lithium-ion batteries were examined based on the analyzing of the two important parameters i.e. leaching speed and recovery rate of the corresponding metals. The conclusion can be drawn as follows:
+
+[Ec9f113630a] section=4. Conclusions
+The influence level of each leaching parameter is investigated and the order from high to low are the acid species and concentration, leaching time, reductant species and content, S/L ratio, reaction temperature and stirring speed.
+
+[E224dd56d73] section=4. Conclusions
+The leachant with organic acid can selectively leach out Li and Co except Al by controlling the recovery rate of Al below 15 wt% to recover full Al foil, while that with inorganic acids usually leach all metals into the solution with high leaching efficiency.
+
+[E16b11ffd02] section=4. Conclusions
+Without H O, hydrochloric acid has the best leaching efficiency to leaching out metals. In organic acid leaching without H2O2, the leaching of ascorbic acid achieved the purpose of selectively separating aluminum foil.
+
+[Ef0aa58f3a5] section=4. Conclusions
+The initial hydrogen ion concentration and the capacity of releasing hydrogen ions of the acidic acid determines the initial leaching speed, while the total hydrogen ion (including the released and unreleased hydrogen ions) of acidic solution determines the recovery rate.
+
+[E83fcbc6809] section=4. Conclusions
+The preliminary principles to controlling the physiochemical properties of leaching solutions were expected to design process with different purposes (e.g., high selectivity and efficiency, high efficiency and S/L ratio except selectivity, high industrial viability) of the spent lithium-ion battery recovering process.
+
+[Ec1ac98000b] section=4. Conclusions
+At last, the management of spent LIBs need enhancing producer responsibility, increasing publicity, raising of public awareness, developing green public transport, and improving the inspection of the recycling companies.

@@ -6,15 +6,23 @@
     "scope_subject_text": "lithium-ion battery",
     "scope_label": "lithium-ion battery",
     "evidence_ids": [
-      "E3226c3f679",
-      "E998e946f25",
-      "Eadc95ec56c",
-      "Eb6338ce809"
+      "E7680074a20",
+      "E49cb17f2b4"
     ],
-    "evidence_span": "200 g of spent LIBs powder was added.",
+    "evidence_span": "The spent LIBs powder was obtained from a recycling company in Zhejiang, China. The powder is a retired ternary lithium-ion battery that has been processed through “discharge-disassembly-crushingscreening” and other processes to form a black powder.",
+    "evidence": [
+      {
+        "evidence_id": "E7680074a20",
+        "quote": "The spent LIBs powder was obtained from a recycling company in Zhejiang, China. The powder is a retired ternary lithium-ion battery that has been processed through “discharge-disassembly-crushingscreening” and other processes to form a black powder."
+      },
+      {
+        "evidence_id": "E49cb17f2b4",
+        "quote": "Its diffraction peaks were indexed to carbon and LNCM (LiNi _ x Co _ y Mn _ z O _ 2) as the major phase"
+      }
+    ],
     "population_granularity": "batch",
-    "sample_type": "lithium-ion battery",
-    "scope_description": "Spent LIBs powder obtained from a recycling company in Zhejiang, China, processed through discharge-disassembly-crushing-screening to form a black powder from retired ternary lithium-ion batteries.",
+    "sample_type": "spent lithium-ion battery powder",
+    "scope_description": "Spent LIBs powder obtained from a recycling company in Zhejiang, China, derived from a retired ternary lithium-ion battery processed by discharge-disassembly-crushing-screening into black powder.",
     "sample_size": null
   },
   {
@@ -24,9 +32,20 @@
     "scope_subject_text": "glycine leaching of spent LIBs powder",
     "scope_label": "glycine leaching of spent LIBs powder",
     "evidence_ids": [
-      "E11d0d1b5b9"
+      "Ed0957d1ec4",
+      "E8e3f68ee27"
     ],
-    "evidence_span": "After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed.",
-    "method_family": "glycine leaching"
+    "evidence_span": "After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed. After the reaction time, the beaker was removed and left to cool to room temperature. Then, the leachate and leach residue were separated by vacuum filtration, and the metal content of the leach solution was measured.",
+    "evidence": [
+      {
+        "evidence_id": "Ed0957d1ec4",
+        "quote": "After the solution reached the required values and stabilized at the specified temperature, 20 g of spent LIBs powder was added, and the reaction was timed. After the reaction time, the beaker was removed and left to cool to room temperature. Then, the leachate and leach residue were separated by vacuum filtration, and the metal content of the leach solution was measured."
+      },
+      {
+        "evidence_id": "E8e3f68ee27",
+        "quote": "Glycine solutions of different concentrations were used as leaching agents, in which Gly− is the ligand. Hydrogen peroxide (30%) was used as a reducing agent."
+      }
+    ],
+    "method_family": "alkaline glycinate leaching"
   }
 ]

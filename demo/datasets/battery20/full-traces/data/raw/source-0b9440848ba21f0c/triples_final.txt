@@ -406,17 +406,49 @@
     "scope": [
       {
         "root_entity_ids": [
-          "Component_organic_film"
+          "Component_lithium_ion_battery"
         ],
-        "scope_subject_text": "organic film",
-        "scope_label": "organic film",
+        "scope_subject_text": "lithium-ion battery",
+        "scope_label": "lithium-ion battery",
         "evidence_ids": [
-          "E94c42bdc7d"
+          "E60feed8255"
         ],
-        "evidence_span": "In order to understand the occurrence state of organic films on the surface of LiCoO2 and graphite during mechanical grinding, FE-EPMA was used to analyze the element distribution on the particle surface.",
+        "evidence_span": "100 pieces of spent LIBs with the same type were discharged completely in 5 wt% sodium chloride solution for 48 h and dried naturally for 24 h afterwards. All batteries were manually disassembled into metallic shell, cathode strips, anode strips and organic separators.",
+        "evidence": [
+          {
+            "evidence_id": "E60feed8255",
+            "quote": "100 pieces of spent LIBs with the same type were discharged completely in 5 wt% sodium chloride solution for 48 h and dried naturally for 24 h afterwards. All batteries were manually disassembled into metallic shell, cathode strips, anode strips and organic separators."
+          }
+        ],
         "population_granularity": "batch",
-        "sample_type": "organic film",
-        "scope_description": "Organic film coating the surfaces of LiCoO2 and graphite particles, analyzed by FE-EPMA to understand its occurrence state during mechanical grinding.",
+        "sample_type": "spent lithium-ion batteries",
+        "scope_description": "100 pieces of spent LIBs of the same type, discharged in 5 wt% sodium chloride solution, dried, and manually disassembled into shells, cathode strips, anode strips and separators.",
+        "sample_size": null
+      },
+      {
+        "root_entity_ids": [
+          "Component_electrode"
+        ],
+        "scope_subject_text": "electrode",
+        "scope_label": "electrode",
+        "evidence_ids": [
+          "E60feed8255",
+          "E60feed8255"
+        ],
+        "evidence_span": "Then the cathode strips and anode strips were placed in the impact crusher with the number ratio 1:1. After crushing and screening, the fine powder under 0.074 mm was mixed electrode materials (LiCoO2 and graphite).",
+        "evidence": [
+          {
+            "evidence_id": "E60feed8255",
+            "quote": "Then the cathode strips and anode strips were placed in the impact crusher with the number ratio 1:1. After crushing and screening, the fine powder under 0.074 mm was mixed electrode materials (LiCoO2 and graphite)."
+          },
+          {
+            "evidence_id": "E60feed8255",
+            "quote": "Results indicated that LiCoO2 accounted for 66.75% of the mixed electrode powder."
+          }
+        ],
+        "population_granularity": "batch",
+        "sample_type": "mixed electrode powder",
+        "scope_description": "Mixed electrode powder (LiCoO2 and graphite) obtained by crushing and screening the cathode and anode strips at a 1:1 number ratio, with the fraction under 0.074 mm used; LiCoO2 content 66.75%.",
         "sample_size": null
       },
       {
@@ -426,87 +458,250 @@
         "scope_subject_text": "grinding flotation",
         "scope_label": "grinding flotation",
         "evidence_ids": [
-          "Ea7a11243b5"
+          "E804a309613"
         ],
-        "evidence_span": "Then the cathode strips and anode strips were placed in the impact crusher with the number ratio 1:1.",
+        "evidence_span": "Grinding flotation experiments were carried out in standard Hardgrove apparatus and lab-scale flotation machine. First, 40 g of mixed electrode powder together with steel balls were sealed in the grinding chamber. The grinding times were 2.5 min, 5 min, 10 min, 20 min and 30 min, respectively. Then, the grinding productions were subjected to reverse flotation with the same experimental conditions.",
+        "evidence": [
+          {
+            "evidence_id": "E804a309613",
+            "quote": "Grinding flotation experiments were carried out in standard Hardgrove apparatus and lab-scale flotation machine. First, 40 g of mixed electrode powder together with steel balls were sealed in the grinding chamber. The grinding times were 2.5 min, 5 min, 10 min, 20 min and 30 min, respectively. Then, the grinding productions were subjected to reverse flotation with the same experimental conditions."
+          }
+        ],
         "method_family": "grinding flotation"
       }
     ],
     "scope_assertions": [
       {
-        "id": "scope-assertion:4202a9c537511067",
+        "id": "scope-assertion:b2980a572fcec7cd",
         "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
         "root_entity_ids": [
-          "Component_organic_film"
+          "Component_lithium_ion_battery"
+        ],
+        "requested_root_entity_ids": [
+          "Component_lithium_ion_battery"
         ],
         "scope_kind": "declared_population",
         "facets": {
           "population_granularity": "batch",
-          "sample_type": "organic film"
+          "sample_type": "spent lithium-ion batteries"
         },
-        "scope_description": "Organic film coating the surfaces of LiCoO2 and graphite particles, analyzed by FE-EPMA to understand its occurrence state during mechanical grinding.",
+        "scope_description": "100 pieces of spent LIBs of the same type, discharged in 5 wt% sodium chloride solution, dried, and manually disassembled into shells, cathode strips, anode strips and separators.",
         "sample_size": null,
-        "evidence_span": "In order to understand the occurrence state of organic films on the surface of LiCoO2 and graphite during mechanical grinding, FE-EPMA was used to analyze the element distribution on the particle surface.",
+        "evidence_span": "100 pieces of spent LIBs with the same type were discharged completely in 5 wt% sodium chloride solution for 48 h and dried naturally for 24 h afterwards. All batteries were manually disassembled into metallic shell, cathode strips, anode strips and organic separators.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:4202a9c537511067:evidence",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_organic_film:entity"
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_lithium_ion_battery:entity"
         ]
       },
       {
-        "id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-assertion:45c188d59913e414",
         "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
         "root_entity_ids": [
+          "Component_electrode"
+        ],
+        "requested_root_entity_ids": [
+          "Component_electrode"
+        ],
+        "scope_kind": "declared_population",
+        "facets": {
+          "population_granularity": "batch",
+          "sample_type": "mixed electrode powder"
+        },
+        "scope_description": "Mixed electrode powder (LiCoO2 and graphite) obtained by crushing and screening the cathode and anode strips at a 1:1 number ratio, with the fraction under 0.074 mm used; LiCoO2 content 66.75%.",
+        "sample_size": null,
+        "evidence_span": "Then the cathode strips and anode strips were placed in the impact crusher with the number ratio 1:1. After crushing and screening, the fine powder under 0.074 mm was mixed electrode materials (LiCoO2 and graphite).",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:45c188d59913e414:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_electrode:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:39985a7f1983d33f",
+        "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
+        "root_entity_ids": [
+          "Process_grinding_flotation"
+        ],
+        "requested_root_entity_ids": [
           "Process_grinding_flotation"
         ],
         "scope_kind": "process_method_family",
         "facets": {
           "method_family": "grinding flotation"
         },
-        "scope_description": "Then the cathode strips and anode strips were placed in the impact crusher with the number ratio 1:1.",
+        "scope_description": "Grinding flotation experiments were carried out in standard Hardgrove apparatus and lab-scale flotation machine. First, 40 g of mixed electrode powder together with steel balls were sealed in the grinding chamber. The grinding times were 2.5 min, 5 min, 10 min, 20 min and 30 min, respectively. Then, the grinding productions were subjected to reverse flotation with the same experimental conditions.",
         "sample_size": null,
-        "evidence_span": "Then the cathode strips and anode strips were placed in the impact crusher with the number ratio 1:1.",
+        "evidence_span": "Grinding flotation experiments were carried out in standard Hardgrove apparatus and lab-scale flotation machine. First, 40 g of mixed electrode powder together with steel balls were sealed in the grinding chamber. The grinding times were 2.5 min, 5 min, 10 min, 20 min and 30 min, respectively. Then, the grinding productions were subjected to reverse flotation with the same experimental conditions.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:f956682876ab82eb",
-        "scope_assertion_id": "scope-assertion:4202a9c537511067",
-        "statement_relation_id": "REL_Component_organic_film_CONTAINS_Material_PVDF",
-        "root_entity_id": "Component_organic_film",
+        "id": "scope-path:1182931c8cafdd16",
+        "scope_assertion_id": "scope-assertion:b2980a572fcec7cd",
+        "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Component_metallic_shell",
+        "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
-          "Component_organic_film"
+          "Component_lithium_ion_battery"
         ],
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:4202a9c537511067:evidence",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_organic_film_CONTAINS_Material_PVDF"
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_metallic_shell"
         ]
       },
       {
-        "id": "scope-path:513c758993fc71d4",
-        "scope_assertion_id": "scope-assertion:4202a9c537511067",
-        "statement_relation_id": "REL_Component_organic_film_CONTAINS_Material_F",
-        "root_entity_id": "Component_organic_film",
+        "id": "scope-path:4cb0193e5326ba0c",
+        "scope_assertion_id": "scope-assertion:b2980a572fcec7cd",
+        "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Component_cathode_strip",
+        "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
-          "Component_organic_film"
+          "Component_lithium_ion_battery"
         ],
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:4202a9c537511067:evidence",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_organic_film_CONTAINS_Material_F"
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_cathode_strip"
         ]
       },
       {
-        "id": "scope-path:fea7c80f7f814c5e",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:9a2cb76db3073354",
+        "scope_assertion_id": "scope-assertion:b2980a572fcec7cd",
+        "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Component_anode_strip",
+        "root_entity_id": "Component_lithium_ion_battery",
+        "entity_path": [
+          "Component_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_anode_strip"
+        ]
+      },
+      {
+        "id": "scope-path:ec7293faf319ad7a",
+        "scope_assertion_id": "scope-assertion:b2980a572fcec7cd",
+        "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Component_organic_separator",
+        "root_entity_id": "Component_lithium_ion_battery",
+        "entity_path": [
+          "Component_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_organic_separator"
+        ]
+      },
+      {
+        "id": "scope-path:0cc52f181783e25f",
+        "scope_assertion_id": "scope-assertion:b2980a572fcec7cd",
+        "statement_relation_id": "REL_Component_cathode_strip_PROCESSED_BY_Process_grinding_flotation",
+        "root_entity_id": "Component_lithium_ion_battery",
+        "entity_path": [
+          "Component_lithium_ion_battery",
+          "Component_cathode_strip"
+        ],
+        "containment_relation_path": [
+          "REL_Component_lithium_ion_battery_CONTAINS_Component_cathode_strip"
+        ],
+        "propagation_kind": "contains_path",
+        "evidence_refs": [
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_cathode_strip_PROCESSED_BY_Process_grinding_flotation",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_cathode_strip"
+        ]
+      },
+      {
+        "id": "scope-path:1b0098e399b3a2cc",
+        "scope_assertion_id": "scope-assertion:b2980a572fcec7cd",
+        "statement_relation_id": "REL_Component_anode_strip_PROCESSED_BY_Process_grinding_flotation",
+        "root_entity_id": "Component_lithium_ion_battery",
+        "entity_path": [
+          "Component_lithium_ion_battery",
+          "Component_anode_strip"
+        ],
+        "containment_relation_path": [
+          "REL_Component_lithium_ion_battery_CONTAINS_Component_anode_strip"
+        ],
+        "propagation_kind": "contains_path",
+        "evidence_refs": [
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_anode_strip_PROCESSED_BY_Process_grinding_flotation",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_anode_strip"
+        ]
+      },
+      {
+        "id": "scope-path:aa57b852192ee754",
+        "scope_assertion_id": "scope-assertion:b2980a572fcec7cd",
+        "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_LiCoO2",
+        "root_entity_id": "Component_lithium_ion_battery",
+        "entity_path": [
+          "Component_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_LiCoO2"
+        ]
+      },
+      {
+        "id": "scope-path:6fdd292fc21a7481",
+        "scope_assertion_id": "scope-assertion:b2980a572fcec7cd",
+        "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_graphite",
+        "root_entity_id": "Component_lithium_ion_battery",
+        "entity_path": [
+          "Component_lithium_ion_battery"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_graphite"
+        ]
+      },
+      {
+        "id": "scope-path:754591ca163065e2",
+        "scope_assertion_id": "scope-assertion:45c188d59913e414",
+        "statement_relation_id": "REL_Component_electrode_PROCESSED_BY_Process_grinding_flotation",
+        "root_entity_id": "Component_electrode",
+        "entity_path": [
+          "Component_electrode"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:45c188d59913e414:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_electrode_PROCESSED_BY_Process_grinding_flotation"
+        ]
+      },
+      {
+        "id": "scope-path:57e7a895d40f0bdf",
+        "scope_assertion_id": "scope-assertion:45c188d59913e414",
+        "statement_relation_id": "REL_Component_electrode_CONTAINS_Material_LiCoO2",
+        "root_entity_id": "Component_electrode",
+        "entity_path": [
+          "Component_electrode"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "root_entity",
+        "evidence_refs": [
+          "scope:scope-assertion:45c188d59913e414:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_electrode_CONTAINS_Material_LiCoO2"
+        ]
+      },
+      {
+        "id": "scope-path:60d844ab70cbebf3",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Component_cathode_strip_PROCESSED_BY_Process_grinding_flotation",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -515,13 +710,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_cathode_strip_PROCESSED_BY_Process_grinding_flotation"
         ]
       },
       {
-        "id": "scope-path:3497f0bb97cc04a5",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:fd29a3e1f4aab23a",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Component_anode_strip_PROCESSED_BY_Process_grinding_flotation",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -530,13 +725,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_anode_strip_PROCESSED_BY_Process_grinding_flotation"
         ]
       },
       {
-        "id": "scope-path:be94bbbb01fa5acd",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:5442c652405c37d1",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Component_electrode_PROCESSED_BY_Process_grinding_flotation",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -545,13 +740,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_electrode_PROCESSED_BY_Process_grinding_flotation"
         ]
       },
       {
-        "id": "scope-path:cfa3bda0ed4cf155",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:31fe2cd8bcf866f4",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -560,13 +755,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:cfa3bda0ed4cf155",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:31fe2cd8bcf866f4",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -575,13 +770,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:cfa3bda0ed4cf155",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:31fe2cd8bcf866f4",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -590,13 +785,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:cfa3bda0ed4cf155",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:31fe2cd8bcf866f4",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -605,13 +800,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:cfa3bda0ed4cf155",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:31fe2cd8bcf866f4",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -620,13 +815,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:cfa3bda0ed4cf155",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:31fe2cd8bcf866f4",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -635,13 +830,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:5decfa637d6876c8",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:e9ed04dea2e8be2b",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -650,13 +845,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite"
         ]
       },
       {
-        "id": "scope-path:5decfa637d6876c8",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:e9ed04dea2e8be2b",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -665,13 +860,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite"
         ]
       },
       {
-        "id": "scope-path:cfa3bda0ed4cf155",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:31fe2cd8bcf866f4",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -680,13 +875,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:c1f9c3decbbf65ca",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:e7fff3ccfba2f268",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_grinding_flotation",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -695,43 +890,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_grinding_flotation"
         ]
       },
       {
-        "id": "scope-path:120170141f1b5719",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
-        "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_F",
-        "root_entity_id": "Process_grinding_flotation",
-        "entity_path": [
-          "Process_grinding_flotation"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_F"
-        ]
-      },
-      {
-        "id": "scope-path:aedf6ef5424481b8",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
-        "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite_carbon",
-        "root_entity_id": "Process_grinding_flotation",
-        "entity_path": [
-          "Process_grinding_flotation"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite_carbon"
-        ]
-      },
-      {
-        "id": "scope-path:5cfce586a384f9b8",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:fcad58d38f6c0206",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Material_LiCoO2_middling_PROCESSED_BY_Process_grinding_flotation",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -740,13 +905,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Material_LiCoO2_middling_PROCESSED_BY_Process_grinding_flotation"
         ]
       },
       {
-        "id": "scope-path:cdb54830e2d51a7c",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:fc6750eb10cbeeab",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Material_graphite_PROCESSED_BY_Process_grinding_flotation",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -755,13 +920,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Material_graphite_PROCESSED_BY_Process_grinding_flotation"
         ]
       },
       {
-        "id": "scope-path:c1f9c3decbbf65ca",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:e7fff3ccfba2f268",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_grinding_flotation",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -770,13 +935,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_grinding_flotation"
         ]
       },
       {
-        "id": "scope-path:cdb54830e2d51a7c",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:fc6750eb10cbeeab",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Material_graphite_PROCESSED_BY_Process_grinding_flotation",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -785,13 +950,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Material_graphite_PROCESSED_BY_Process_grinding_flotation"
         ]
       },
       {
-        "id": "scope-path:c1f9c3decbbf65ca",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:e7fff3ccfba2f268",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_grinding_flotation",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -800,13 +965,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_grinding_flotation"
         ]
       },
       {
-        "id": "scope-path:cfa3bda0ed4cf155",
-        "scope_assertion_id": "scope-assertion:9bec4d78f0162c13",
+        "id": "scope-path:31fe2cd8bcf866f4",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
         "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
         "root_entity_id": "Process_grinding_flotation",
         "entity_path": [
@@ -815,8 +980,23 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2"
+        ]
+      },
+      {
+        "id": "scope-path:b830433068abaf17",
+        "scope_assertion_id": "scope-assertion:39985a7f1983d33f",
+        "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite_flake",
+        "root_entity_id": "Process_grinding_flotation",
+        "entity_path": [
+          "Process_grinding_flotation"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite_flake"
         ]
       }
     ],
@@ -7528,9 +7708,16 @@
           "Component_lithium_ion_battery",
           "Component_metallic_shell"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:b2980a572fcec7cd"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:1182931c8cafdd16"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_lithium_ion_battery:entity",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_metallic_shell",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:0b3bb3cb03b9e9d2",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:0b3bb3cb03b9e9d2:evidence"
         ]
@@ -7546,9 +7733,16 @@
           "Component_lithium_ion_battery",
           "Component_cathode_strip"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:b2980a572fcec7cd"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:4cb0193e5326ba0c"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_lithium_ion_battery:entity",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_cathode_strip",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:79c393044f0b5764",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:79c393044f0b5764:evidence"
         ]
@@ -7564,9 +7758,16 @@
           "Component_lithium_ion_battery",
           "Component_anode_strip"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:b2980a572fcec7cd"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:9a2cb76db3073354"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_lithium_ion_battery:entity",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_anode_strip",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:720fe677e17e8e92",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:720fe677e17e8e92:evidence"
         ]
@@ -7582,9 +7783,16 @@
           "Component_lithium_ion_battery",
           "Component_organic_separator"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:b2980a572fcec7cd"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:ec7293faf319ad7a"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_lithium_ion_battery:entity",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_organic_separator",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:0b859d26dbaaa403",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:0b859d26dbaaa403:evidence"
         ]
@@ -7637,15 +7845,20 @@
           "Process_grinding_flotation"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f",
+          "scope-assertion:b2980a572fcec7cd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:fea7c80f7f814c5e"
+          "scope-path:0cc52f181783e25f",
+          "scope-path:60d844ab70cbebf3"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_lithium_ion_battery:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_cathode_strip_PROCESSED_BY_Process_grinding_flotation",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_cathode_strip",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:d302fa8b20ffd287",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:d302fa8b20ffd287:evidence"
         ]
@@ -7662,15 +7875,20 @@
           "Process_grinding_flotation"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f",
+          "scope-assertion:b2980a572fcec7cd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:3497f0bb97cc04a5"
+          "scope-path:1b0098e399b3a2cc",
+          "scope-path:fd29a3e1f4aab23a"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_lithium_ion_battery:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_anode_strip_PROCESSED_BY_Process_grinding_flotation",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_anode_strip",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:d1a732f8bf72dbd9",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:d1a732f8bf72dbd9:evidence"
         ]
@@ -7687,13 +7905,17 @@
           "Process_grinding_flotation"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f",
+          "scope-assertion:45c188d59913e414"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:be94bbbb01fa5acd"
+          "scope-path:5442c652405c37d1",
+          "scope-path:754591ca163065e2"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
+          "scope:scope-assertion:45c188d59913e414:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_electrode:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_electrode_PROCESSED_BY_Process_grinding_flotation",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:8f432669227b1365",
@@ -7711,9 +7933,16 @@
           "Component_electrode",
           "Material_LiCoO2"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:45c188d59913e414"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:57e7a895d40f0bdf"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:45c188d59913e414:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_electrode:entity",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_electrode_CONTAINS_Material_LiCoO2",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:c25cdc1081bbfb56",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:c25cdc1081bbfb56:evidence"
         ]
@@ -7730,13 +7959,13 @@
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cfa3bda0ed4cf155"
+          "scope-path:31fe2cd8bcf866f4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:6e1c13906bfc1edf",
@@ -7755,13 +7984,13 @@
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cfa3bda0ed4cf155"
+          "scope-path:31fe2cd8bcf866f4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:9a40e4e9ce260620",
@@ -7780,13 +8009,13 @@
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cfa3bda0ed4cf155"
+          "scope-path:31fe2cd8bcf866f4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:ad71312d0ec8b100",
@@ -7805,13 +8034,13 @@
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cfa3bda0ed4cf155"
+          "scope-path:31fe2cd8bcf866f4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:dc65aa8d7bdbb2d4",
@@ -7830,13 +8059,13 @@
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cfa3bda0ed4cf155"
+          "scope-path:31fe2cd8bcf866f4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:a5db0eff27ea55b1",
@@ -7855,13 +8084,13 @@
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cfa3bda0ed4cf155"
+          "scope-path:31fe2cd8bcf866f4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:ebe73dddbf50a670",
@@ -7880,13 +8109,13 @@
           "Material_graphite"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:5decfa637d6876c8"
+          "scope-path:e9ed04dea2e8be2b"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:3ef5a8ffa88ee7f5",
@@ -7905,13 +8134,13 @@
           "Material_graphite"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:5decfa637d6876c8"
+          "scope-path:e9ed04dea2e8be2b"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:6c0d06c07d3474f7",
@@ -7930,13 +8159,13 @@
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cfa3bda0ed4cf155"
+          "scope-path:31fe2cd8bcf866f4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:19f674f8917eda77",
@@ -8009,13 +8238,13 @@
           "Process_grinding_flotation"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:c1f9c3decbbf65ca"
+          "scope-path:e7fff3ccfba2f268"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_grinding_flotation",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:28ccba1086bf7a68",
@@ -8023,53 +8252,39 @@
         ]
       },
       {
-        "id": "local-unit:7d7972c2004e3ea0",
+        "id": "local-unit:7a666f0a43a22969",
         "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
-        "statement_id": "statement:8716ca1f661e3193",
-        "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_F",
-        "source_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_F",
+        "statement_id": "statement:604a87ae254d230d",
+        "statement_relation_id": "REL_reviewed_879b70961cbba6b1",
+        "source_relation_id": "REL_reviewed_879b70961cbba6b1",
         "source_relation_index": 23,
         "entity_ids": [
-          "Process_grinding_flotation",
+          "Material_LiCoO2",
           "Material_F"
         ],
-        "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:120170141f1b5719"
-        ],
+        "scope_assertion_ids": [],
+        "scope_propagation_path_ids": [],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_F",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:8716ca1f661e3193",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:8716ca1f661e3193:evidence"
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:604a87ae254d230d",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:604a87ae254d230d:evidence"
         ]
       },
       {
-        "id": "local-unit:69d2ad7ba4a7c0b1",
+        "id": "local-unit:5f676866043bfc07",
         "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
-        "statement_id": "statement:ad642fc3c40e282f",
-        "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite_carbon",
-        "source_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite_carbon",
+        "statement_id": "statement:f1ae3b80e499f9e3",
+        "statement_relation_id": "REL_reviewed_0bb648b35015d4dc",
+        "source_relation_id": "REL_reviewed_0bb648b35015d4dc",
         "source_relation_index": 24,
         "entity_ids": [
-          "Process_grinding_flotation",
+          "Material_LiCoO2",
           "Material_graphite_carbon"
         ],
-        "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:aedf6ef5424481b8"
-        ],
+        "scope_assertion_ids": [],
+        "scope_propagation_path_ids": [],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite_carbon",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:ad642fc3c40e282f",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:ad642fc3c40e282f:evidence"
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:f1ae3b80e499f9e3",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:f1ae3b80e499f9e3:evidence"
         ]
       },
       {
@@ -8120,13 +8335,13 @@
           "Process_grinding_flotation"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:5cfce586a384f9b8"
+          "scope-path:fcad58d38f6c0206"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Material_LiCoO2_middling_PROCESSED_BY_Process_grinding_flotation",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:67fe068cd9f6b51b",
@@ -8145,13 +8360,13 @@
           "Process_grinding_flotation"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cdb54830e2d51a7c"
+          "scope-path:fc6750eb10cbeeab"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Material_graphite_PROCESSED_BY_Process_grinding_flotation",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:adc0fa8b6111c5bf",
@@ -8169,16 +8384,9 @@
           "Component_organic_film",
           "Material_PVDF"
         ],
-        "scope_assertion_ids": [
-          "scope-assertion:4202a9c537511067"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:f956682876ab82eb"
-        ],
+        "scope_assertion_ids": [],
+        "scope_propagation_path_ids": [],
         "evidence_refs": [
-          "scope:scope-assertion:4202a9c537511067:evidence",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_organic_film:entity",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_organic_film_CONTAINS_Material_PVDF",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:05e42e74fbfbc83f",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:05e42e74fbfbc83f:evidence"
         ]
@@ -8194,16 +8402,9 @@
           "Component_organic_film",
           "Material_F"
         ],
-        "scope_assertion_ids": [
-          "scope-assertion:4202a9c537511067"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:513c758993fc71d4"
-        ],
+        "scope_assertion_ids": [],
+        "scope_propagation_path_ids": [],
         "evidence_refs": [
-          "scope:scope-assertion:4202a9c537511067:evidence",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_organic_film:entity",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_organic_film_CONTAINS_Material_F",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:d8eedb686ff9ce4d",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:d8eedb686ff9ce4d:evidence"
         ]
@@ -8220,13 +8421,13 @@
           "Process_grinding_flotation"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:c1f9c3decbbf65ca"
+          "scope-path:e7fff3ccfba2f268"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_grinding_flotation",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:01874a5965e4a4b4",
@@ -8245,13 +8446,13 @@
           "Process_grinding_flotation"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cdb54830e2d51a7c"
+          "scope-path:fc6750eb10cbeeab"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Material_graphite_PROCESSED_BY_Process_grinding_flotation",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:fb35722ebec0dda2",
@@ -8269,9 +8470,16 @@
           "Component_lithium_ion_battery",
           "Material_LiCoO2"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:b2980a572fcec7cd"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:aa57b852192ee754"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_lithium_ion_battery:entity",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_LiCoO2",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:ce7f12ed936fc829",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:ce7f12ed936fc829:evidence"
         ]
@@ -8287,9 +8495,16 @@
           "Component_lithium_ion_battery",
           "Material_graphite"
         ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
+        "scope_assertion_ids": [
+          "scope-assertion:b2980a572fcec7cd"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:6fdd292fc21a7481"
+        ],
         "evidence_refs": [
+          "scope:scope-assertion:b2980a572fcec7cd:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Component_lithium_ion_battery:entity",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_graphite",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:7ae866399af2e47e",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:7ae866399af2e47e:evidence"
         ]
@@ -8342,13 +8557,13 @@
           "Process_grinding_flotation"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:c1f9c3decbbf65ca"
+          "scope-path:e7fff3ccfba2f268"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_grinding_flotation",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:bfa40e0e56b42f36",
@@ -8367,143 +8582,17 @@
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:9bec4d78f0162c13"
+          "scope-assertion:39985a7f1983d33f"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:cfa3bda0ed4cf155"
+          "scope-path:31fe2cd8bcf866f4"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:9bec4d78f0162c13:evidence",
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_LiCoO2",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:10351916651b6a55",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:10351916651b6a55:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:9249d4cbe0d5b777",
-        "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
-        "statement_id": "statement:c1e9190178a38729",
-        "statement_relation_id": "REL_Material_graphite_HAS_OBSERVATION_Observation_Peak_BE",
-        "source_relation_id": "REL_Material_graphite_HAS_OBSERVATION_Observation_Peak_BE",
-        "source_relation_index": 39,
-        "entity_ids": [
-          "Material_graphite",
-          "Observation_Peak_BE"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:c1e9190178a38729",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:c1e9190178a38729:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:a36a385411e7059f",
-        "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
-        "statement_id": "statement:5c9c4ec2e5907129",
-        "statement_relation_id": "REL_Material_C_C_C_H_HAS_OBSERVATION_Observation_Peak_BE",
-        "source_relation_id": "REL_Material_C_C_C_H_HAS_OBSERVATION_Observation_Peak_BE",
-        "source_relation_index": 40,
-        "entity_ids": [
-          "Material_C_C_C_H",
-          "Observation_Peak_BE"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:5c9c4ec2e5907129",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:5c9c4ec2e5907129:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:f31f8018e24abccf",
-        "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
-        "statement_id": "statement:a423b0896ccd4853",
-        "statement_relation_id": "REL_Material___CF2CH2_n__C_O_HAS_OBSERVATION_Observation_Peak_BE",
-        "source_relation_id": "REL_Material___CF2CH2_n__C_O_HAS_OBSERVATION_Observation_Peak_BE",
-        "source_relation_index": 41,
-        "entity_ids": [
-          "Material___CF2CH2_n__C_O",
-          "Observation_Peak_BE"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:a423b0896ccd4853",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:a423b0896ccd4853:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:6e1ba3ff4b36d446",
-        "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
-        "statement_id": "statement:eb7929f1b31548ec",
-        "statement_relation_id": "REL_Material_O_C_O_HAS_OBSERVATION_Observation_Peak_BE",
-        "source_relation_id": "REL_Material_O_C_O_HAS_OBSERVATION_Observation_Peak_BE",
-        "source_relation_index": 42,
-        "entity_ids": [
-          "Material_O_C_O",
-          "Observation_Peak_BE"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:eb7929f1b31548ec",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:eb7929f1b31548ec:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:d1dc6722ae421579",
-        "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
-        "statement_id": "statement:17ab71022088d55b",
-        "statement_relation_id": "REL_Material_Co_HAS_OBSERVATION_Observation_Peak_BE",
-        "source_relation_id": "REL_Material_Co_HAS_OBSERVATION_Observation_Peak_BE",
-        "source_relation_index": 43,
-        "entity_ids": [
-          "Material_Co",
-          "Observation_Peak_BE"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:17ab71022088d55b",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:17ab71022088d55b:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:4ab6fa03a5a1fcd5",
-        "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
-        "statement_id": "statement:8aaaa644d17560a9",
-        "statement_relation_id": "REL_Material_O_COOR_HAS_OBSERVATION_Observation_Peak_BE",
-        "source_relation_id": "REL_Material_O_COOR_HAS_OBSERVATION_Observation_Peak_BE",
-        "source_relation_index": 44,
-        "entity_ids": [
-          "Material_O_COOR",
-          "Observation_Peak_BE"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:8aaaa644d17560a9",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:8aaaa644d17560a9:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:865b353780cb5452",
-        "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
-        "statement_id": "statement:d27726bf9ce1e097",
-        "statement_relation_id": "REL_Material___CF2CH2_n__HAS_OBSERVATION_Observation_Peak_BE",
-        "source_relation_id": "REL_Material___CF2CH2_n__HAS_OBSERVATION_Observation_Peak_BE",
-        "source_relation_index": 45,
-        "entity_ids": [
-          "Material___CF2CH2_n_",
-          "Observation_Peak_BE"
-        ],
-        "scope_assertion_ids": [],
-        "scope_propagation_path_ids": [],
-        "evidence_refs": [
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:d27726bf9ce1e097",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:d27726bf9ce1e097:evidence"
         ]
       },
       {
@@ -8512,7 +8601,7 @@
         "statement_id": "statement:df0343f7ab97ac77",
         "statement_relation_id": "REL_Material_Raw_materials_CONTAINS_Material_graphite",
         "source_relation_id": "REL_Material_Raw_materials_CONTAINS_Material_graphite",
-        "source_relation_index": 46,
+        "source_relation_index": 39,
         "entity_ids": [
           "Material_Raw_materials",
           "Material_graphite"
@@ -8530,7 +8619,7 @@
         "statement_id": "statement:e4f6148e06336b3c",
         "statement_relation_id": "REL_Material_Raw_materials_CONTAINS_Material_C_C_C_H",
         "source_relation_id": "REL_Material_Raw_materials_CONTAINS_Material_C_C_C_H",
-        "source_relation_index": 47,
+        "source_relation_index": 40,
         "entity_ids": [
           "Material_Raw_materials",
           "Material_C_C_C_H"
@@ -8548,7 +8637,7 @@
         "statement_id": "statement:39224aa03bef171b",
         "statement_relation_id": "REL_Material_Raw_materials_CONTAINS_Material___CF2CH2_n__C_O",
         "source_relation_id": "REL_Material_Raw_materials_CONTAINS_Material___CF2CH2_n__C_O",
-        "source_relation_index": 48,
+        "source_relation_index": 41,
         "entity_ids": [
           "Material_Raw_materials",
           "Material___CF2CH2_n__C_O"
@@ -8566,7 +8655,7 @@
         "statement_id": "statement:fd49b0a7a374fbd9",
         "statement_relation_id": "REL_Material_Raw_materials_CONTAINS_Material_O_C_O",
         "source_relation_id": "REL_Material_Raw_materials_CONTAINS_Material_O_C_O",
-        "source_relation_index": 49,
+        "source_relation_index": 42,
         "entity_ids": [
           "Material_Raw_materials",
           "Material_O_C_O"
@@ -8579,21 +8668,21 @@
         ]
       },
       {
-        "id": "local-unit:7b13c276263e35b6",
+        "id": "local-unit:f911dc6a1e77d72e",
         "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
-        "statement_id": "statement:102c76a0a1325eaf",
-        "statement_relation_id": "REL_Material_Raw_materials_CONTAINS_Material_Co",
-        "source_relation_id": "REL_Material_Raw_materials_CONTAINS_Material_Co",
-        "source_relation_index": 50,
+        "statement_id": "statement:11d3095a43b0fa0d",
+        "statement_relation_id": "REL_Material_Raw_materials_CONTAINS_Material_Co__identity_cca440e8",
+        "source_relation_id": "REL_Material_Raw_materials_CONTAINS_Material_Co__identity_cca440e8",
+        "source_relation_index": 43,
         "entity_ids": [
           "Material_Raw_materials",
-          "Material_Co"
+          "Material_C_O"
         ],
         "scope_assertion_ids": [],
         "scope_propagation_path_ids": [],
         "evidence_refs": [
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:102c76a0a1325eaf",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:102c76a0a1325eaf:evidence"
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:11d3095a43b0fa0d",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:11d3095a43b0fa0d:evidence"
         ]
       },
       {
@@ -8602,7 +8691,7 @@
         "statement_id": "statement:59f64e336e7b760c",
         "statement_relation_id": "REL_Material_Raw_materials_CONTAINS_Material_O_COOR",
         "source_relation_id": "REL_Material_Raw_materials_CONTAINS_Material_O_COOR",
-        "source_relation_index": 51,
+        "source_relation_index": 44,
         "entity_ids": [
           "Material_Raw_materials",
           "Material_O_COOR"
@@ -8620,7 +8709,7 @@
         "statement_id": "statement:d52154e8dfb7b8eb",
         "statement_relation_id": "REL_Material_Raw_materials_CONTAINS_Material___CF2CH2_n_",
         "source_relation_id": "REL_Material_Raw_materials_CONTAINS_Material___CF2CH2_n_",
-        "source_relation_index": 52,
+        "source_relation_index": 45,
         "entity_ids": [
           "Material_Raw_materials",
           "Material___CF2CH2_n_"
@@ -8638,7 +8727,7 @@
         "statement_id": "statement:85f790b286c2fa72",
         "statement_relation_id": "REL_Material_Grinding_products_CONTAINS_Material_graphite",
         "source_relation_id": "REL_Material_Grinding_products_CONTAINS_Material_graphite",
-        "source_relation_index": 53,
+        "source_relation_index": 46,
         "entity_ids": [
           "Material_Grinding_products",
           "Material_graphite"
@@ -8656,7 +8745,7 @@
         "statement_id": "statement:4dbf7cbc0eeaa20a",
         "statement_relation_id": "REL_Material_Grinding_products_CONTAINS_Material_C_C_C_H",
         "source_relation_id": "REL_Material_Grinding_products_CONTAINS_Material_C_C_C_H",
-        "source_relation_index": 54,
+        "source_relation_index": 47,
         "entity_ids": [
           "Material_Grinding_products",
           "Material_C_C_C_H"
@@ -8674,7 +8763,7 @@
         "statement_id": "statement:dae7f4a3184f4f1a",
         "statement_relation_id": "REL_Material_Grinding_products_CONTAINS_Material___CF2CH2_n__C_O",
         "source_relation_id": "REL_Material_Grinding_products_CONTAINS_Material___CF2CH2_n__C_O",
-        "source_relation_index": 55,
+        "source_relation_index": 48,
         "entity_ids": [
           "Material_Grinding_products",
           "Material___CF2CH2_n__C_O"
@@ -8692,7 +8781,7 @@
         "statement_id": "statement:c67a0008d098551d",
         "statement_relation_id": "REL_Material_Grinding_products_CONTAINS_Material_O_C_O",
         "source_relation_id": "REL_Material_Grinding_products_CONTAINS_Material_O_C_O",
-        "source_relation_index": 56,
+        "source_relation_index": 49,
         "entity_ids": [
           "Material_Grinding_products",
           "Material_O_C_O"
@@ -8705,21 +8794,21 @@
         ]
       },
       {
-        "id": "local-unit:fd48bd9184cae7a9",
+        "id": "local-unit:3c8c8e576063d99b",
         "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
-        "statement_id": "statement:63f0c8d65a75299a",
-        "statement_relation_id": "REL_Material_Grinding_products_CONTAINS_Material_Co",
-        "source_relation_id": "REL_Material_Grinding_products_CONTAINS_Material_Co",
-        "source_relation_index": 57,
+        "statement_id": "statement:c38becce783dc9c6",
+        "statement_relation_id": "REL_Material_Grinding_products_CONTAINS_Material_Co__identity_cca440e8",
+        "source_relation_id": "REL_Material_Grinding_products_CONTAINS_Material_Co__identity_cca440e8",
+        "source_relation_index": 50,
         "entity_ids": [
           "Material_Grinding_products",
-          "Material_Co"
+          "Material_C_O"
         ],
         "scope_assertion_ids": [],
         "scope_propagation_path_ids": [],
         "evidence_refs": [
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:63f0c8d65a75299a",
-          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:63f0c8d65a75299a:evidence"
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:c38becce783dc9c6",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:c38becce783dc9c6:evidence"
         ]
       },
       {
@@ -8728,7 +8817,7 @@
         "statement_id": "statement:3fc65812eb46ce3b",
         "statement_relation_id": "REL_Material_Grinding_products_CONTAINS_Material_O_COOR",
         "source_relation_id": "REL_Material_Grinding_products_CONTAINS_Material_O_COOR",
-        "source_relation_index": 58,
+        "source_relation_index": 51,
         "entity_ids": [
           "Material_Grinding_products",
           "Material_O_COOR"
@@ -8746,7 +8835,7 @@
         "statement_id": "statement:d571f192a7f20d0b",
         "statement_relation_id": "REL_Material_Grinding_products_CONTAINS_Material___CF2CH2_n_",
         "source_relation_id": "REL_Material_Grinding_products_CONTAINS_Material___CF2CH2_n_",
-        "source_relation_index": 59,
+        "source_relation_index": 52,
         "entity_ids": [
           "Material_Grinding_products",
           "Material___CF2CH2_n_"
@@ -8756,6 +8845,31 @@
         "evidence_refs": [
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:d571f192a7f20d0b",
           "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:d571f192a7f20d0b:evidence"
+        ]
+      },
+      {
+        "id": "local-unit:d8d5780cbdcda02b",
+        "micrograph_id": "A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation",
+        "statement_id": "statement:2097693723c240c3",
+        "statement_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite_flake",
+        "source_relation_id": "REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite_flake",
+        "source_relation_index": 53,
+        "entity_ids": [
+          "Process_grinding_flotation",
+          "Material_graphite_flake"
+        ],
+        "scope_assertion_ids": [
+          "scope-assertion:39985a7f1983d33f"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:b830433068abaf17"
+        ],
+        "evidence_refs": [
+          "scope:scope-assertion:39985a7f1983d33f:evidence",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:Process_grinding_flotation:entity",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:REL_Process_grinding_flotation_HAS_OUTPUT_Material_graphite_flake",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:2097693723c240c3",
+          "source:A_Promising_Physical_Method_for_Recovery_of_Licoo_2_and_Graphite_from_Spent_Lithium-Ion_Batteries_Grinding_Flotation:relation:statement:2097693723c240c3:evidence"
         ]
       }
     ],
@@ -20629,8 +20743,9 @@
       "final_triples_export": 0.016
     },
     "scope_audit": {
-      "evidence_record_count": 2,
+      "evidence_record_count": 28,
       "rejected_definition_count": 0,
+      "unscoped_candidate_count": 1,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
@@ -23509,6 +23624,18 @@
       "measurement_evidence_records": 0,
       "receipt": "measurement_semantics_revision.json",
       "original_stages_preserved": true
-    }
+    },
+    "scope_unscoped_candidates": [
+      {
+        "root_entity_id": "Component_organic_film",
+        "reason": "The organic film (PVDF-based coating) is a surface feature of the electrode particles characterized to explain the grinding mechanism, not an independently sampled device, component or population of this study.",
+        "evidence": [
+          {
+            "evidence_id": "E8a5b55370d",
+            "quote": "Since the fluorine element is a characteristic element in PVDF, which is the main component in organic film, and there is no fluorine on the initial surface of electrode material, then the F element distribution can be used to characterize the occurrence of organic film."
+          }
+        ]
+      }
+    ]
   }
 }

@@ -1514,60 +1514,41 @@
         "scope_subject_text": "lithium-ion battery",
         "scope_label": "lithium-ion battery",
         "evidence_ids": [
-          "E6ef36d3633"
+          "Ebae61844a0",
+          "E212ec7a9a6"
         ],
-        "evidence_span": "The spent lithium-ion batteries used in the experiments were provided by Youteli Co.",
+        "evidence_span": "The spent lithium-ion batteries used in the experiments were provided by Youteli Co. Ltd. in Jiangxi Province of China, which were manually separated into many portions: plastic shell, cathode material, anode material and aluminum foil. Then the cathode material was grinded into powder and sieved to 0.075 mm, oversize material was pulverized and added to the undersize fraction.",
+        "evidence": [
+          {
+            "evidence_id": "Ebae61844a0",
+            "quote": "The spent lithium-ion batteries used in the experiments were provided by Youteli Co. Ltd. in Jiangxi Province of China, which were manually separated into many portions: plastic shell, cathode material, anode material and aluminum foil. Then the cathode material was grinded into powder and sieved to 0.075 mm, oversize material was pulverized and added to the undersize fraction."
+          },
+          {
+            "evidence_id": "E212ec7a9a6",
+            "quote": "In each bioleaching experiment, the pulp density was kept at 1% (s/v) in 250 mL flasks with 200 mL medium while the volume fraction of inoculation was 5% (v / v)."
+          }
+        ],
         "population_granularity": "batch",
-        "sample_type": "lithium-ion battery",
-        "scope_description": "Spent lithium-ion batteries used in the experiments, provided by Youteli Co.",
+        "sample_type": "spent lithium-ion battery",
+        "scope_description": "Spent lithium-ion batteries supplied by Youteli Co. Ltd. (Jiangxi Province, China), manually separated and the cathode material ground and sieved to 0.075 mm for the bioleaching experiments.",
         "sample_size": null
       },
       {
         "root_entity_ids": [
-          "Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion"
+          "Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion"
         ],
-        "scope_subject_text": "A. ferrooxidans bioleaching with 0.50 g/L copper ion",
-        "scope_label": "A. ferrooxidans bioleaching with 0.50 g/L copper ion",
+        "scope_subject_text": "A. ferrooxidans bioleaching with 0.01 g/L copper ion",
+        "scope_label": "A. ferrooxidans bioleaching with 0.01 g/L copper ion",
         "evidence_ids": [
-          "E15df789221"
+          "E212ec7a9a6"
         ],
-        "evidence_span": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.50 g/L copper ion; Co concentration determined over 10 days.",
-        "method_family": "bioleaching"
-      },
-      {
-        "root_entity_ids": [
-          "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
+        "evidence_span": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "evidence": [
+          {
+            "evidence_id": "E212ec7a9a6",
+            "quote": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively."
+          }
         ],
-        "scope_subject_text": "A. ferrooxidans bioleaching with 1.0 g/L copper ion",
-        "scope_label": "A. ferrooxidans bioleaching with 1.0 g/L copper ion",
-        "evidence_ids": [
-          "E4bb7b21507"
-        ],
-        "evidence_span": "These cultures were also adapted to the catalytic ions of copper ion 10 g/L for a month.",
-        "method_family": "bioleaching"
-      },
-      {
-        "root_entity_ids": [
-          "Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion"
-        ],
-        "scope_subject_text": "A. ferrooxidans bioleaching with 0.25 g/L copper ion",
-        "scope_label": "A. ferrooxidans bioleaching with 0.25 g/L copper ion",
-        "evidence_ids": [
-          "E53c341c002"
-        ],
-        "evidence_span": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.25 g/L copper ion; Co concentration determined over 10 days.",
-        "method_family": "bioleaching"
-      },
-      {
-        "root_entity_ids": [
-          "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_"
-        ],
-        "scope_subject_text": "A. ferrooxidans bioleaching without copper ion (control)",
-        "scope_label": "A. ferrooxidans bioleaching without copper ion (control)",
-        "evidence_ids": [
-          "E9731bd8a79"
-        ],
-        "evidence_span": "Controlled bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days without added copper ion; Co concentration determined over 10 days.",
         "method_family": "bioleaching"
       },
       {
@@ -1577,33 +1558,51 @@
         "scope_subject_text": "A. ferrooxidans bioleaching with 0.1 g/L copper ion",
         "scope_label": "A. ferrooxidans bioleaching with 0.1 g/L copper ion",
         "evidence_ids": [
-          "Ea831c2b5e6"
+          "E212ec7a9a6"
         ],
-        "evidence_span": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.1 g/L copper ion; Co concentration determined over 10 days.",
+        "evidence_span": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "evidence": [
+          {
+            "evidence_id": "E212ec7a9a6",
+            "quote": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively."
+          }
+        ],
         "method_family": "bioleaching"
       },
       {
         "root_entity_ids": [
-          "Process_Cu"
+          "Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion"
         ],
-        "scope_subject_text": "Cu",
-        "scope_label": "Cu",
+        "scope_subject_text": "A. ferrooxidans bioleaching with 0.25 g/L copper ion",
+        "scope_label": "A. ferrooxidans bioleaching with 0.25 g/L copper ion",
         "evidence_ids": [
-          "Ebe14c8b027"
+          "E212ec7a9a6"
         ],
-        "evidence_span": "When the copper concentration was less than 0.75 g/L, the addition of copper ions in the bioleaching process caused a slight enhancement in bacterial growth.",
+        "evidence_span": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "evidence": [
+          {
+            "evidence_id": "E212ec7a9a6",
+            "quote": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively."
+          }
+        ],
         "method_family": "bioleaching"
       },
       {
         "root_entity_ids": [
-          "Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion"
+          "Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion"
         ],
-        "scope_subject_text": "A. ferrooxidans bioleaching with 0.01 g/L copper ion",
-        "scope_label": "A. ferrooxidans bioleaching with 0.01 g/L copper ion",
+        "scope_subject_text": "A. ferrooxidans bioleaching with 0.50 g/L copper ion",
+        "scope_label": "A. ferrooxidans bioleaching with 0.50 g/L copper ion",
         "evidence_ids": [
-          "Edc8ce657b8"
+          "E212ec7a9a6"
         ],
-        "evidence_span": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.01 g/L copper ion; Co concentration determined over 10 days.",
+        "evidence_span": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "evidence": [
+          {
+            "evidence_id": "E212ec7a9a6",
+            "quote": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively."
+          }
+        ],
         "method_family": "bioleaching"
       },
       {
@@ -1613,190 +1612,277 @@
         "scope_subject_text": "A. ferrooxidans bioleaching with 0.75 g/L copper ion",
         "scope_label": "A. ferrooxidans bioleaching with 0.75 g/L copper ion",
         "evidence_ids": [
-          "Ee0e33f5e8f"
+          "E212ec7a9a6"
         ],
-        "evidence_span": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.75 g/L copper ion; Co concentration determined over 10 days.",
+        "evidence_span": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "evidence": [
+          {
+            "evidence_id": "E212ec7a9a6",
+            "quote": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively."
+          }
+        ],
+        "method_family": "bioleaching"
+      },
+      {
+        "root_entity_ids": [
+          "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
+        ],
+        "scope_subject_text": "A. ferrooxidans bioleaching with 1.0 g/L copper ion",
+        "scope_label": "A. ferrooxidans bioleaching with 1.0 g/L copper ion",
+        "evidence_ids": [
+          "E212ec7a9a6"
+        ],
+        "evidence_span": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "evidence": [
+          {
+            "evidence_id": "E212ec7a9a6",
+            "quote": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively."
+          }
+        ],
+        "method_family": "bioleaching"
+      },
+      {
+        "root_entity_ids": [
+          "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_"
+        ],
+        "scope_subject_text": "A. ferrooxidans bioleaching without copper ion (control)",
+        "scope_label": "A. ferrooxidans bioleaching without copper ion (control)",
+        "evidence_ids": [
+          "E212ec7a9a6"
+        ],
+        "evidence_span": "A controlled experiment was performed in parallel without copper ion for comparison.",
+        "evidence": [
+          {
+            "evidence_id": "E212ec7a9a6",
+            "quote": "A controlled experiment was performed in parallel without copper ion for comparison."
+          }
+        ],
+        "method_family": "bioleaching"
+      },
+      {
+        "root_entity_ids": [
+          "Process_reviewed_5a8f38ab000de8"
+        ],
+        "scope_subject_text": "A. ferrooxidans bioleaching with 10 g/L copper ion",
+        "scope_label": "A. ferrooxidans bioleaching with 10 g/L copper ion",
+        "evidence_ids": [
+          "E212ec7a9a6"
+        ],
+        "evidence_span": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "evidence": [
+          {
+            "evidence_id": "E212ec7a9a6",
+            "quote": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively."
+          }
+        ],
         "method_family": "bioleaching"
       }
     ],
     "scope_assertions": [
       {
-        "id": "scope-assertion:426d2ac496e7a743",
+        "id": "scope-assertion:dc272e93b9dfae27",
         "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
         "root_entity_ids": [
+          "Component_lithium_ion_battery"
+        ],
+        "requested_root_entity_ids": [
           "Component_lithium_ion_battery"
         ],
         "scope_kind": "declared_population",
         "facets": {
           "population_granularity": "batch",
-          "sample_type": "lithium-ion battery"
+          "sample_type": "spent lithium-ion battery"
         },
-        "scope_description": "Spent lithium-ion batteries used in the experiments, provided by Youteli Co.",
+        "scope_description": "Spent lithium-ion batteries supplied by Youteli Co. Ltd. (Jiangxi Province, China), manually separated and the cathode material ground and sieved to 0.075 mm for the bioleaching experiments.",
         "sample_size": null,
-        "evidence_span": "The spent lithium-ion batteries used in the experiments were provided by Youteli Co.",
+        "evidence_span": "The spent lithium-ion batteries used in the experiments were provided by Youteli Co. Ltd. in Jiangxi Province of China, which were manually separated into many portions: plastic shell, cathode material, anode material and aluminum foil. Then the cathode material was grinded into powder and sieved to 0.075 mm, oversize material was pulverized and added to the undersize fraction.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
+          "scope:scope-assertion:dc272e93b9dfae27:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity"
         ]
       },
       {
-        "id": "scope-assertion:b9fd40c615ecf930",
+        "id": "scope-assertion:b0166df59102c023",
         "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
         "root_entity_ids": [
-          "Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion"
+          "Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion"
         ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "bioleaching"
-        },
-        "scope_description": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.50 g/L copper ion; Co concentration determined over 10 days.",
-        "sample_size": null,
-        "evidence_span": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.50 g/L copper ion; Co concentration determined over 10 days.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:b9fd40c615ecf930:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:7da44597c04c3b96",
-        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
-        "root_entity_ids": [
-          "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "bioleaching"
-        },
-        "scope_description": "These cultures were also adapted to the catalytic ions of copper ion 10 g/L for a month.",
-        "sample_size": null,
-        "evidence_span": "These cultures were also adapted to the catalytic ions of copper ion 10 g/L for a month.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:7da44597c04c3b96:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:3e49d00650c6a4a9",
-        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
-        "root_entity_ids": [
-          "Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "bioleaching"
-        },
-        "scope_description": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.25 g/L copper ion; Co concentration determined over 10 days.",
-        "sample_size": null,
-        "evidence_span": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.25 g/L copper ion; Co concentration determined over 10 days.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:3e49d00650c6a4a9:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:1ed6b7826761479a",
-        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
-        "root_entity_ids": [
-          "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "bioleaching"
-        },
-        "scope_description": "Controlled bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days without added copper ion; Co concentration determined over 10 days.",
-        "sample_size": null,
-        "evidence_span": "Controlled bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days without added copper ion; Co concentration determined over 10 days.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:1ed6b7826761479a:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_without_copper_ion__control_:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:182812bbbe3a9513",
-        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
-        "root_entity_ids": [
-          "Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "bioleaching"
-        },
-        "scope_description": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.1 g/L copper ion; Co concentration determined over 10 days.",
-        "sample_size": null,
-        "evidence_span": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.1 g/L copper ion; Co concentration determined over 10 days.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:182812bbbe3a9513:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:bc317e866deb6b15",
-        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
-        "root_entity_ids": [
-          "Process_Cu"
-        ],
-        "scope_kind": "process_method_family",
-        "facets": {
-          "method_family": "bioleaching"
-        },
-        "scope_description": "When the copper concentration was less than 0.75 g/L, the addition of copper ions in the bioleaching process caused a slight enhancement in bacterial growth.",
-        "sample_size": null,
-        "evidence_span": "When the copper concentration was less than 0.75 g/L, the addition of copper ions in the bioleaching process caused a slight enhancement in bacterial growth.",
-        "binding_status": "bound",
-        "evidence_refs": [
-          "scope:scope-assertion:bc317e866deb6b15:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_Cu:entity"
-        ]
-      },
-      {
-        "id": "scope-assertion:284b41bdc08b94c8",
-        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
-        "root_entity_ids": [
+        "requested_root_entity_ids": [
           "Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion"
         ],
         "scope_kind": "process_method_family",
         "facets": {
           "method_family": "bioleaching"
         },
-        "scope_description": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.01 g/L copper ion; Co concentration determined over 10 days.",
+        "scope_description": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
         "sample_size": null,
-        "evidence_span": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.01 g/L copper ion; Co concentration determined over 10 days.",
+        "evidence_span": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:284b41bdc08b94c8:evidence",
+          "scope:scope-assertion:b0166df59102c023:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion:entity"
         ]
       },
       {
-        "id": "scope-assertion:27082296d6d9a121",
+        "id": "scope-assertion:6578d7634e268dfd",
         "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
         "root_entity_ids": [
+          "Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion"
+        ],
+        "requested_root_entity_ids": [
+          "Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "bioleaching"
+        },
+        "scope_description": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "sample_size": null,
+        "evidence_span": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:6578d7634e268dfd:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:d4226758105d38e4",
+        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
+        "root_entity_ids": [
+          "Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion"
+        ],
+        "requested_root_entity_ids": [
+          "Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "bioleaching"
+        },
+        "scope_description": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "sample_size": null,
+        "evidence_span": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:d4226758105d38e4:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:241d9c955a7aa3ad",
+        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
+        "root_entity_ids": [
+          "Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion"
+        ],
+        "requested_root_entity_ids": [
+          "Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "bioleaching"
+        },
+        "scope_description": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "sample_size": null,
+        "evidence_span": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:241d9c955a7aa3ad:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:a320c5463937bf12",
+        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
+        "root_entity_ids": [
+          "Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion"
+        ],
+        "requested_root_entity_ids": [
           "Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion"
         ],
         "scope_kind": "process_method_family",
         "facets": {
           "method_family": "bioleaching"
         },
-        "scope_description": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.75 g/L copper ion; Co concentration determined over 10 days.",
+        "scope_description": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
         "sample_size": null,
-        "evidence_span": "Bioleaching of LiCoO2 with Acidithiobacillus ferrooxidans in 9K medium at 1% pulp density, 5% (v/v) inoculum, pH 2.0, 35°C, 160 rpm for 10 days; CuSO4·5H2O added simultaneously with LiCoO2 to give 0.75 g/L copper ion; Co concentration determined over 10 days.",
+        "evidence_span": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:27082296d6d9a121:evidence",
+          "scope:scope-assertion:a320c5463937bf12:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:aa0c8f98e6f1ad17",
+        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
+        "root_entity_ids": [
+          "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
+        ],
+        "requested_root_entity_ids": [
+          "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "bioleaching"
+        },
+        "scope_description": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "sample_size": null,
+        "evidence_span": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:aa0c8f98e6f1ad17:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:eaf526f3875102cd",
+        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
+        "root_entity_ids": [
+          "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_"
+        ],
+        "requested_root_entity_ids": [
+          "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "bioleaching"
+        },
+        "scope_description": "A controlled experiment was performed in parallel without copper ion for comparison.",
+        "sample_size": null,
+        "evidence_span": "A controlled experiment was performed in parallel without copper ion for comparison.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:eaf526f3875102cd:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_without_copper_ion__control_:entity"
+        ]
+      },
+      {
+        "id": "scope-assertion:fe46e627792c84f5",
+        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
+        "root_entity_ids": [
+          "Process_reviewed_5a8f38ab000de8"
+        ],
+        "requested_root_entity_ids": [
+          "Process_reviewed_5a8f38ab000de8"
+        ],
+        "scope_kind": "process_method_family",
+        "facets": {
+          "method_family": "bioleaching"
+        },
+        "scope_description": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "sample_size": null,
+        "evidence_span": "When the bacteria were cultured for about 2 days and in the log phases, the LiCoO2 and CuSO4 5 H2O were added into the process simultaneously, and the concentrations of copper ion were 0.01, 0.1, 0.25, 0.50, 0.75, 1.0 and 10 g/L, respectively.",
+        "binding_status": "bound",
+        "evidence_refs": [
+          "scope:scope-assertion:fe46e627792c84f5:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_reviewed_5a8f38ab000de8:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:e95c24d964e0a335",
-        "scope_assertion_id": "scope-assertion:426d2ac496e7a743",
+        "id": "scope-path:8289ecc2a1218f6b",
+        "scope_assertion_id": "scope-assertion:dc272e93b9dfae27",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Component_plastic_shell",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -1805,13 +1891,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
+          "scope:scope-assertion:dc272e93b9dfae27:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_plastic_shell"
         ]
       },
       {
-        "id": "scope-path:466956c959adf4d5",
-        "scope_assertion_id": "scope-assertion:426d2ac496e7a743",
+        "id": "scope-path:6c4b7db80b40e08a",
+        "scope_assertion_id": "scope-assertion:dc272e93b9dfae27",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Component_cathode_active_material",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -1820,13 +1906,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
+          "scope:scope-assertion:dc272e93b9dfae27:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_cathode_active_material"
         ]
       },
       {
-        "id": "scope-path:40650d637798d180",
-        "scope_assertion_id": "scope-assertion:426d2ac496e7a743",
+        "id": "scope-path:90914bdee1e38be0",
+        "scope_assertion_id": "scope-assertion:dc272e93b9dfae27",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Component_anode_material",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -1835,13 +1921,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
+          "scope:scope-assertion:dc272e93b9dfae27:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_anode_material"
         ]
       },
       {
-        "id": "scope-path:6d2d06ab2669b4b1",
-        "scope_assertion_id": "scope-assertion:426d2ac496e7a743",
+        "id": "scope-path:5a3152878af92f6c",
+        "scope_assertion_id": "scope-assertion:dc272e93b9dfae27",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Component_aluminum_foil",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -1850,28 +1936,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
+          "scope:scope-assertion:dc272e93b9dfae27:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_aluminum_foil"
         ]
       },
       {
-        "id": "scope-path:ffa5ced52edd99b2",
-        "scope_assertion_id": "scope-assertion:426d2ac496e7a743",
-        "statement_relation_id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
-        "root_entity_id": "Component_lithium_ion_battery",
-        "entity_path": [
-          "Component_lithium_ion_battery"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
-        ]
-      },
-      {
-        "id": "scope-path:d6b872e532389981",
-        "scope_assertion_id": "scope-assertion:426d2ac496e7a743",
+        "id": "scope-path:edded8fd75a77fce",
+        "scope_assertion_id": "scope-assertion:dc272e93b9dfae27",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_LiCoO2",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
@@ -1880,14 +1951,14 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
+          "scope:scope-assertion:dc272e93b9dfae27:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_LiCoO2"
         ]
       },
       {
-        "id": "scope-path:e375bcee011181b0",
-        "scope_assertion_id": "scope-assertion:426d2ac496e7a743",
-        "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_Co",
+        "id": "scope-path:048bcce18924fef4",
+        "scope_assertion_id": "scope-assertion:dc272e93b9dfae27",
+        "statement_relation_id": "REL_reviewed_input_Process_reviewed_5a8f38ab000de8",
         "root_entity_id": "Component_lithium_ion_battery",
         "entity_path": [
           "Component_lithium_ion_battery"
@@ -1895,148 +1966,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_Co"
+          "scope:scope-assertion:dc272e93b9dfae27:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_reviewed_input_Process_reviewed_5a8f38ab000de8"
         ]
       },
       {
-        "id": "scope-path:c950cc4a734f8e59",
-        "scope_assertion_id": "scope-assertion:b9fd40c615ecf930",
-        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion",
-        "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion",
-        "entity_path": [
-          "Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:b9fd40c615ecf930:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion"
-        ]
-      },
-      {
-        "id": "scope-path:ff9af806d07ed3e8",
-        "scope_assertion_id": "scope-assertion:7da44597c04c3b96",
-        "statement_relation_id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
-        "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
-        "entity_path": [
-          "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:7da44597c04c3b96:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
-        ]
-      },
-      {
-        "id": "scope-path:add65680ada88b23",
-        "scope_assertion_id": "scope-assertion:7da44597c04c3b96",
-        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
-        "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
-        "entity_path": [
-          "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:7da44597c04c3b96:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
-        ]
-      },
-      {
-        "id": "scope-path:466e9d5086452572",
-        "scope_assertion_id": "scope-assertion:7da44597c04c3b96",
-        "statement_relation_id": "REL_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion_HAS_OUTPUT_Material_Co",
-        "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
-        "entity_path": [
-          "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:7da44597c04c3b96:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion_HAS_OUTPUT_Material_Co"
-        ]
-      },
-      {
-        "id": "scope-path:93ceedc265412e8b",
-        "scope_assertion_id": "scope-assertion:3e49d00650c6a4a9",
-        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion",
-        "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion",
-        "entity_path": [
-          "Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:3e49d00650c6a4a9:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion"
-        ]
-      },
-      {
-        "id": "scope-path:98e72475457ce104",
-        "scope_assertion_id": "scope-assertion:1ed6b7826761479a",
-        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_without_copper_ion__control_",
-        "root_entity_id": "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_",
-        "entity_path": [
-          "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:1ed6b7826761479a:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_without_copper_ion__control_"
-        ]
-      },
-      {
-        "id": "scope-path:ebde53672e36e3fd",
-        "scope_assertion_id": "scope-assertion:1ed6b7826761479a",
-        "statement_relation_id": "REL_Process_A__ferrooxidans_bioleaching_without_copper_ion__control__HAS_OUTPUT_Material_Co",
-        "root_entity_id": "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_",
-        "entity_path": [
-          "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:1ed6b7826761479a:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_A__ferrooxidans_bioleaching_without_copper_ion__control__HAS_OUTPUT_Material_Co"
-        ]
-      },
-      {
-        "id": "scope-path:7aaf52780c7f6466",
-        "scope_assertion_id": "scope-assertion:182812bbbe3a9513",
-        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion",
-        "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion",
-        "entity_path": [
-          "Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:182812bbbe3a9513:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion"
-        ]
-      },
-      {
-        "id": "scope-path:93acad4ba10174bf",
-        "scope_assertion_id": "scope-assertion:182812bbbe3a9513",
-        "statement_relation_id": "REL_Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion_HAS_OUTPUT_Material_Co",
-        "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion",
-        "entity_path": [
-          "Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:182812bbbe3a9513:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion_HAS_OUTPUT_Material_Co"
-        ]
-      },
-      {
-        "id": "scope-path:47e9a307821e6d62",
-        "scope_assertion_id": "scope-assertion:284b41bdc08b94c8",
+        "id": "scope-path:73a89bbf036fdf8e",
+        "scope_assertion_id": "scope-assertion:b0166df59102c023",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion",
         "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion",
         "entity_path": [
@@ -2045,13 +1981,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:284b41bdc08b94c8:evidence",
+          "scope:scope-assertion:b0166df59102c023:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion"
         ]
       },
       {
-        "id": "scope-path:92f41580b816cfce",
-        "scope_assertion_id": "scope-assertion:284b41bdc08b94c8",
+        "id": "scope-path:97843ed97a121fd2",
+        "scope_assertion_id": "scope-assertion:b0166df59102c023",
         "statement_relation_id": "REL_Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion",
         "entity_path": [
@@ -2060,13 +1996,73 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:284b41bdc08b94c8:evidence",
+          "scope:scope-assertion:b0166df59102c023:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:2aff5c6bbd6980ab",
-        "scope_assertion_id": "scope-assertion:27082296d6d9a121",
+        "id": "scope-path:cd43c9b3318f4a70",
+        "scope_assertion_id": "scope-assertion:6578d7634e268dfd",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion",
+        "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion",
+        "entity_path": [
+          "Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:6578d7634e268dfd:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion"
+        ]
+      },
+      {
+        "id": "scope-path:e9e1d87bbe03db12",
+        "scope_assertion_id": "scope-assertion:6578d7634e268dfd",
+        "statement_relation_id": "REL_Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion_HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion",
+        "entity_path": [
+          "Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:6578d7634e268dfd:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:ebe2df633e201dd7",
+        "scope_assertion_id": "scope-assertion:d4226758105d38e4",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion",
+        "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion",
+        "entity_path": [
+          "Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:d4226758105d38e4:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion"
+        ]
+      },
+      {
+        "id": "scope-path:82cb9610db89d877",
+        "scope_assertion_id": "scope-assertion:241d9c955a7aa3ad",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion",
+        "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion",
+        "entity_path": [
+          "Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:241d9c955a7aa3ad:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion"
+        ]
+      },
+      {
+        "id": "scope-path:9852e41b7817ab58",
+        "scope_assertion_id": "scope-assertion:a320c5463937bf12",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion",
         "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion",
         "entity_path": [
@@ -2075,13 +2071,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:27082296d6d9a121:evidence",
+          "scope:scope-assertion:a320c5463937bf12:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion"
         ]
       },
       {
-        "id": "scope-path:04e2c74302bbdf97",
-        "scope_assertion_id": "scope-assertion:27082296d6d9a121",
+        "id": "scope-path:019097c73e1c43bd",
+        "scope_assertion_id": "scope-assertion:a320c5463937bf12",
         "statement_relation_id": "REL_Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion",
         "entity_path": [
@@ -2090,8 +2086,83 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:27082296d6d9a121:evidence",
+          "scope:scope-assertion:a320c5463937bf12:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion_HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:af694d16f577c6f2",
+        "scope_assertion_id": "scope-assertion:aa0c8f98e6f1ad17",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
+        "root_entity_id": "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
+        "entity_path": [
+          "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:aa0c8f98e6f1ad17:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
+        ]
+      },
+      {
+        "id": "scope-path:b038dd969fa4b34e",
+        "scope_assertion_id": "scope-assertion:eaf526f3875102cd",
+        "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_without_copper_ion__control_",
+        "root_entity_id": "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_",
+        "entity_path": [
+          "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:eaf526f3875102cd:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_without_copper_ion__control_"
+        ]
+      },
+      {
+        "id": "scope-path:dbbd66e11ff01243",
+        "scope_assertion_id": "scope-assertion:eaf526f3875102cd",
+        "statement_relation_id": "REL_Process_A__ferrooxidans_bioleaching_without_copper_ion__control__HAS_OUTPUT_Material_Co",
+        "root_entity_id": "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_",
+        "entity_path": [
+          "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:eaf526f3875102cd:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_A__ferrooxidans_bioleaching_without_copper_ion__control__HAS_OUTPUT_Material_Co"
+        ]
+      },
+      {
+        "id": "scope-path:f8884e97861b734d",
+        "scope_assertion_id": "scope-assertion:fe46e627792c84f5",
+        "statement_relation_id": "REL_reviewed_ca2b9ad47a5b8ec4",
+        "root_entity_id": "Process_reviewed_5a8f38ab000de8",
+        "entity_path": [
+          "Process_reviewed_5a8f38ab000de8"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:fe46e627792c84f5:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_reviewed_ca2b9ad47a5b8ec4"
+        ]
+      },
+      {
+        "id": "scope-path:ac7b14cb39b2801a",
+        "scope_assertion_id": "scope-assertion:fe46e627792c84f5",
+        "statement_relation_id": "REL_reviewed_input_Process_reviewed_5a8f38ab000de8",
+        "root_entity_id": "Process_reviewed_5a8f38ab000de8",
+        "entity_path": [
+          "Process_reviewed_5a8f38ab000de8"
+        ],
+        "containment_relation_path": [],
+        "propagation_kind": "process_scope",
+        "evidence_refs": [
+          "scope:scope-assertion:fe46e627792c84f5:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_reviewed_input_Process_reviewed_5a8f38ab000de8"
         ]
       }
     ],
@@ -13259,13 +13330,13 @@
           "Component_plastic_shell"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:426d2ac496e7a743"
+          "scope-assertion:dc272e93b9dfae27"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:e95c24d964e0a335"
+          "scope-path:8289ecc2a1218f6b"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
+          "scope:scope-assertion:dc272e93b9dfae27:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_plastic_shell",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:a0ca4b3cc10f6960",
@@ -13284,13 +13355,13 @@
           "Component_cathode_active_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:426d2ac496e7a743"
+          "scope-assertion:dc272e93b9dfae27"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:466956c959adf4d5"
+          "scope-path:6c4b7db80b40e08a"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
+          "scope:scope-assertion:dc272e93b9dfae27:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_cathode_active_material",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:c3844b1c5932b6c2",
@@ -13309,13 +13380,13 @@
           "Component_anode_material"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:426d2ac496e7a743"
+          "scope-assertion:dc272e93b9dfae27"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:40650d637798d180"
+          "scope-path:90914bdee1e38be0"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
+          "scope:scope-assertion:dc272e93b9dfae27:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_anode_material",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:adec1e573421c994",
@@ -13334,46 +13405,17 @@
           "Component_aluminum_foil"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:426d2ac496e7a743"
+          "scope-assertion:dc272e93b9dfae27"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:6d2d06ab2669b4b1"
+          "scope-path:5a3152878af92f6c"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
+          "scope:scope-assertion:dc272e93b9dfae27:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Component_aluminum_foil",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:f4c8946aaf7d381b",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:f4c8946aaf7d381b:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:005593ec7c49b72f",
-        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:783cd1cfa18935a9",
-        "statement_relation_id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
-        "source_relation_id": "REL_Component_lithium_ion_battery_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
-        "source_relation_index": 4,
-        "entity_ids": [
-          "Component_lithium_ion_battery",
-          "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:426d2ac496e7a743",
-          "scope-assertion:7da44597c04c3b96"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:ff9af806d07ed3e8",
-          "scope-path:ffa5ced52edd99b2"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
-          "scope:scope-assertion:7da44597c04c3b96:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion:entity",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:783cd1cfa18935a9",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:783cd1cfa18935a9:evidence"
         ]
       },
       {
@@ -13382,19 +13424,19 @@
         "statement_id": "statement:67ef929e6fa43a70",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion",
         "source_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion",
-        "source_relation_index": 5,
+        "source_relation_index": 4,
         "entity_ids": [
           "Material_LiCoO2",
           "Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:284b41bdc08b94c8"
+          "scope-assertion:b0166df59102c023"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:47e9a307821e6d62"
+          "scope-path:73a89bbf036fdf8e"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:284b41bdc08b94c8:evidence",
+          "scope:scope-assertion:b0166df59102c023:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:67ef929e6fa43a70",
@@ -13407,19 +13449,19 @@
         "statement_id": "statement:fd877aab5dec8305",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion",
         "source_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion",
-        "source_relation_index": 6,
+        "source_relation_index": 5,
         "entity_ids": [
           "Material_LiCoO2",
           "Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:182812bbbe3a9513"
+          "scope-assertion:6578d7634e268dfd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:7aaf52780c7f6466"
+          "scope-path:cd43c9b3318f4a70"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:182812bbbe3a9513:evidence",
+          "scope:scope-assertion:6578d7634e268dfd:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:fd877aab5dec8305",
@@ -13432,19 +13474,19 @@
         "statement_id": "statement:25e89526829d8223",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion",
         "source_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion",
-        "source_relation_index": 7,
+        "source_relation_index": 6,
         "entity_ids": [
           "Material_LiCoO2",
           "Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:3e49d00650c6a4a9"
+          "scope-assertion:d4226758105d38e4"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:93ceedc265412e8b"
+          "scope-path:ebe2df633e201dd7"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:3e49d00650c6a4a9:evidence",
+          "scope:scope-assertion:d4226758105d38e4:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:25e89526829d8223",
@@ -13457,19 +13499,19 @@
         "statement_id": "statement:cdeac1f34df195c5",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion",
         "source_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion",
-        "source_relation_index": 8,
+        "source_relation_index": 7,
         "entity_ids": [
           "Material_LiCoO2",
           "Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:b9fd40c615ecf930"
+          "scope-assertion:241d9c955a7aa3ad"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:c950cc4a734f8e59"
+          "scope-path:82cb9610db89d877"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:b9fd40c615ecf930:evidence",
+          "scope:scope-assertion:241d9c955a7aa3ad:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:cdeac1f34df195c5",
@@ -13482,19 +13524,19 @@
         "statement_id": "statement:d896f158cb4dbc29",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion",
         "source_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion",
-        "source_relation_index": 9,
+        "source_relation_index": 8,
         "entity_ids": [
           "Material_LiCoO2",
           "Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:27082296d6d9a121"
+          "scope-assertion:a320c5463937bf12"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:2aff5c6bbd6980ab"
+          "scope-path:9852e41b7817ab58"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:27082296d6d9a121:evidence",
+          "scope:scope-assertion:a320c5463937bf12:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:d896f158cb4dbc29",
@@ -13507,19 +13549,19 @@
         "statement_id": "statement:a1dd7257e253dfa1",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
         "source_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
-        "source_relation_index": 10,
+        "source_relation_index": 9,
         "entity_ids": [
           "Material_LiCoO2",
           "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7da44597c04c3b96"
+          "scope-assertion:aa0c8f98e6f1ad17"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:add65680ada88b23"
+          "scope-path:af694d16f577c6f2"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7da44597c04c3b96:evidence",
+          "scope:scope-assertion:aa0c8f98e6f1ad17:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:a1dd7257e253dfa1",
@@ -13532,19 +13574,19 @@
         "statement_id": "statement:06794effc632f838",
         "statement_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_without_copper_ion__control_",
         "source_relation_id": "REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_without_copper_ion__control_",
-        "source_relation_index": 11,
+        "source_relation_index": 10,
         "entity_ids": [
           "Material_LiCoO2",
           "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1ed6b7826761479a"
+          "scope-assertion:eaf526f3875102cd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:98e72475457ce104"
+          "scope-path:b038dd969fa4b34e"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1ed6b7826761479a:evidence",
+          "scope:scope-assertion:eaf526f3875102cd:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_without_copper_ion__control_:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Material_LiCoO2_PROCESSED_BY_Process_A__ferrooxidans_bioleaching_without_copper_ion__control_",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:06794effc632f838",
@@ -13557,7 +13599,7 @@
         "statement_id": "statement:70c985a645f1862d",
         "statement_relation_id": "REL_Material_CuSO4_5_H2O_CONTAINS_Material_Cu",
         "source_relation_id": "REL_Material_CuSO4_5_H2O_CONTAINS_Material_Cu",
-        "source_relation_index": 12,
+        "source_relation_index": 11,
         "entity_ids": [
           "Material_CuSO4_5_H2O",
           "Material_Cu"
@@ -13575,19 +13617,19 @@
         "statement_id": "statement:5715d90df5366fa9",
         "statement_relation_id": "REL_Process_A__ferrooxidans_bioleaching_without_copper_ion__control__HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_A__ferrooxidans_bioleaching_without_copper_ion__control__HAS_OUTPUT_Material_Co",
-        "source_relation_index": 13,
+        "source_relation_index": 12,
         "entity_ids": [
           "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1ed6b7826761479a"
+          "scope-assertion:eaf526f3875102cd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:ebde53672e36e3fd"
+          "scope-path:dbbd66e11ff01243"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1ed6b7826761479a:evidence",
+          "scope:scope-assertion:eaf526f3875102cd:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_without_copper_ion__control_:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_A__ferrooxidans_bioleaching_without_copper_ion__control__HAS_OUTPUT_Material_Co",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:5715d90df5366fa9",
@@ -13600,19 +13642,19 @@
         "statement_id": "statement:45400cae46f91b7c",
         "statement_relation_id": "REL_Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 14,
+        "source_relation_index": 13,
         "entity_ids": [
           "Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:27082296d6d9a121"
+          "scope-assertion:a320c5463937bf12"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:04e2c74302bbdf97"
+          "scope-path:019097c73e1c43bd"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:27082296d6d9a121:evidence",
+          "scope:scope-assertion:a320c5463937bf12:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion_HAS_OUTPUT_Material_Co",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:45400cae46f91b7c",
@@ -13625,19 +13667,19 @@
         "statement_id": "statement:38b1a563d8b0b6cc",
         "statement_relation_id": "REL_Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 15,
+        "source_relation_index": 14,
         "entity_ids": [
           "Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:284b41bdc08b94c8"
+          "scope-assertion:b0166df59102c023"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:92f41580b816cfce"
+          "scope-path:97843ed97a121fd2"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:284b41bdc08b94c8:evidence",
+          "scope:scope-assertion:b0166df59102c023:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion_HAS_OUTPUT_Material_Co",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:38b1a563d8b0b6cc",
@@ -13650,19 +13692,19 @@
         "statement_id": "statement:d2cdfdfa40a286ed",
         "statement_relation_id": "REL_Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 16,
+        "source_relation_index": 15,
         "entity_ids": [
           "Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:182812bbbe3a9513"
+          "scope-assertion:6578d7634e268dfd"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:93acad4ba10174bf"
+          "scope-path:e9e1d87bbe03db12"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:182812bbbe3a9513:evidence",
+          "scope:scope-assertion:6578d7634e268dfd:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion_HAS_OUTPUT_Material_Co",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:d2cdfdfa40a286ed",
@@ -13670,28 +13712,28 @@
         ]
       },
       {
-        "id": "local-unit:1ca0cf752e3668b9",
+        "id": "local-unit:f2a298f951f984b0",
         "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:5fd4c580bfc44337",
-        "statement_relation_id": "REL_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion_HAS_OUTPUT_Material_Co",
-        "source_relation_id": "REL_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 17,
+        "statement_id": "statement:a31084993954d32a",
+        "statement_relation_id": "REL_reviewed_ca2b9ad47a5b8ec4",
+        "source_relation_id": "REL_reviewed_ca2b9ad47a5b8ec4",
+        "source_relation_index": 16,
         "entity_ids": [
-          "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
+          "Process_reviewed_5a8f38ab000de8",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:7da44597c04c3b96"
+          "scope-assertion:fe46e627792c84f5"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:466e9d5086452572"
+          "scope-path:f8884e97861b734d"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:7da44597c04c3b96:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion:entity",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion_HAS_OUTPUT_Material_Co",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:5fd4c580bfc44337",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:5fd4c580bfc44337:evidence"
+          "scope:scope-assertion:fe46e627792c84f5:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_reviewed_5a8f38ab000de8:entity",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_reviewed_ca2b9ad47a5b8ec4",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:a31084993954d32a",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:a31084993954d32a:evidence"
         ]
       },
       {
@@ -13700,48 +13742,23 @@
         "statement_id": "statement:33842a789b07fb2f",
         "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_LiCoO2",
         "source_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_LiCoO2",
-        "source_relation_index": 18,
+        "source_relation_index": 17,
         "entity_ids": [
           "Component_lithium_ion_battery",
           "Material_LiCoO2"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:426d2ac496e7a743"
+          "scope-assertion:dc272e93b9dfae27"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:d6b872e532389981"
+          "scope-path:edded8fd75a77fce"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
+          "scope:scope-assertion:dc272e93b9dfae27:evidence",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_LiCoO2",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:33842a789b07fb2f",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:33842a789b07fb2f:evidence"
-        ]
-      },
-      {
-        "id": "local-unit:1587cfceea213a1a",
-        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
-        "statement_id": "statement:d7bdbf4ad2773c11",
-        "statement_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_Co",
-        "source_relation_id": "REL_Component_lithium_ion_battery_CONTAINS_Material_Co",
-        "source_relation_index": 19,
-        "entity_ids": [
-          "Component_lithium_ion_battery",
-          "Material_Co"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:426d2ac496e7a743"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:e375bcee011181b0"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:426d2ac496e7a743:evidence",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_Component_lithium_ion_battery_CONTAINS_Material_Co",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:d7bdbf4ad2773c11",
-          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:d7bdbf4ad2773c11:evidence"
         ]
       },
       {
@@ -13750,7 +13767,7 @@
         "statement_id": "statement:f4137a4691135fec",
         "statement_relation_id": "REL_Material_cathode_active_material_CONTAINS_Material_Li",
         "source_relation_id": "REL_Material_cathode_active_material_CONTAINS_Material_Li",
-        "source_relation_index": 20,
+        "source_relation_index": 18,
         "entity_ids": [
           "Material_cathode_active_material",
           "Material_Li"
@@ -13768,7 +13785,7 @@
         "statement_id": "statement:378628a33bb0e195",
         "statement_relation_id": "REL_Material_cathode_active_material_CONTAINS_Material_Co",
         "source_relation_id": "REL_Material_cathode_active_material_CONTAINS_Material_Co",
-        "source_relation_index": 21,
+        "source_relation_index": 19,
         "entity_ids": [
           "Material_cathode_active_material",
           "Material_Co"
@@ -13786,7 +13803,7 @@
         "statement_id": "statement:80fbb47bd876c69d",
         "statement_relation_id": "REL_Material_cathode_active_material_CONTAINS_Material_Mn",
         "source_relation_id": "REL_Material_cathode_active_material_CONTAINS_Material_Mn",
-        "source_relation_index": 22,
+        "source_relation_index": 20,
         "entity_ids": [
           "Material_cathode_active_material",
           "Material_Mn"
@@ -13804,7 +13821,7 @@
         "statement_id": "statement:494d78a0d1a3ee49",
         "statement_relation_id": "REL_Material_cathode_active_material_CONTAINS_Material_Ki",
         "source_relation_id": "REL_Material_cathode_active_material_CONTAINS_Material_Ki",
-        "source_relation_index": 23,
+        "source_relation_index": 21,
         "entity_ids": [
           "Material_cathode_active_material",
           "Material_Ki"
@@ -13822,7 +13839,7 @@
         "statement_id": "statement:afb574e9cd9aa155",
         "statement_relation_id": "REL_Material_cathode_active_material_CONTAINS_Material_Fe",
         "source_relation_id": "REL_Material_cathode_active_material_CONTAINS_Material_Fe",
-        "source_relation_index": 24,
+        "source_relation_index": 22,
         "entity_ids": [
           "Material_cathode_active_material",
           "Material_Fe"
@@ -13840,7 +13857,7 @@
         "statement_id": "statement:cc3026a82d399df4",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Co",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Co",
-        "source_relation_index": 25,
+        "source_relation_index": 23,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Co"
@@ -13858,7 +13875,7 @@
         "statement_id": "statement:3ca7cd491db2ceea",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_O",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_O",
-        "source_relation_index": 26,
+        "source_relation_index": 24,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_O"
@@ -13876,7 +13893,7 @@
         "statement_id": "statement:b8ebb7a610884416",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_S",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_S",
-        "source_relation_index": 27,
+        "source_relation_index": 25,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_S"
@@ -13894,7 +13911,7 @@
         "statement_id": "statement:0d8a1614b2829cee",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Fe",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Fe",
-        "source_relation_index": 28,
+        "source_relation_index": 26,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Fe"
@@ -13912,7 +13929,7 @@
         "statement_id": "statement:f0f07eacdfcb7a2c",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Cu",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Cu",
-        "source_relation_index": 29,
+        "source_relation_index": 27,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Cu"
@@ -13930,7 +13947,7 @@
         "statement_id": "statement:da4d5981fec7d369",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Co",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Co",
-        "source_relation_index": 30,
+        "source_relation_index": 28,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Co"
@@ -13948,7 +13965,7 @@
         "statement_id": "statement:15ef82ee4c19812a",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_O",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_O",
-        "source_relation_index": 31,
+        "source_relation_index": 29,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_O"
@@ -13966,7 +13983,7 @@
         "statement_id": "statement:3d12cb0c962c07f0",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_S",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_S",
-        "source_relation_index": 32,
+        "source_relation_index": 30,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_S"
@@ -13984,7 +14001,7 @@
         "statement_id": "statement:3aa837c8e97f1801",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Fe",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Fe",
-        "source_relation_index": 33,
+        "source_relation_index": 31,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Fe"
@@ -14002,7 +14019,7 @@
         "statement_id": "statement:13fe5f296741f3f9",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Cu",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Cu",
-        "source_relation_index": 34,
+        "source_relation_index": 32,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Cu"
@@ -14020,7 +14037,7 @@
         "statement_id": "statement:94668d136093b0bc",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Co",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Co",
-        "source_relation_index": 35,
+        "source_relation_index": 33,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Co"
@@ -14038,7 +14055,7 @@
         "statement_id": "statement:e6975564b55a3c57",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_O",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_O",
-        "source_relation_index": 36,
+        "source_relation_index": 34,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_O"
@@ -14056,7 +14073,7 @@
         "statement_id": "statement:453d50cd39027bf7",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_S",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_S",
-        "source_relation_index": 37,
+        "source_relation_index": 35,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_S"
@@ -14074,7 +14091,7 @@
         "statement_id": "statement:3325063caea46121",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Fe",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Fe",
-        "source_relation_index": 38,
+        "source_relation_index": 36,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Fe"
@@ -14092,7 +14109,7 @@
         "statement_id": "statement:8eecdcab15af248c",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Cu",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Cu",
-        "source_relation_index": 39,
+        "source_relation_index": 37,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Cu"
@@ -14110,7 +14127,7 @@
         "statement_id": "statement:230953928b7fb7a2",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Co",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Co",
-        "source_relation_index": 40,
+        "source_relation_index": 38,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Co"
@@ -14128,7 +14145,7 @@
         "statement_id": "statement:1b901014b6fe9d2c",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_O",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_O",
-        "source_relation_index": 41,
+        "source_relation_index": 39,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_O"
@@ -14146,7 +14163,7 @@
         "statement_id": "statement:8d2c2a88891ea475",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_S",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_S",
-        "source_relation_index": 42,
+        "source_relation_index": 40,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_S"
@@ -14164,7 +14181,7 @@
         "statement_id": "statement:d1132fb5252b06bf",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Fe",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Fe",
-        "source_relation_index": 43,
+        "source_relation_index": 41,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Fe"
@@ -14182,7 +14199,7 @@
         "statement_id": "statement:0d8f9186707e7d51",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Cu",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Cu",
-        "source_relation_index": 44,
+        "source_relation_index": 42,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Cu"
@@ -14200,7 +14217,7 @@
         "statement_id": "statement:8ba42c625531d885",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Co",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Co",
-        "source_relation_index": 45,
+        "source_relation_index": 43,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Co"
@@ -14218,7 +14235,7 @@
         "statement_id": "statement:185d65b90425cbba",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_O",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_O",
-        "source_relation_index": 46,
+        "source_relation_index": 44,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_O"
@@ -14236,7 +14253,7 @@
         "statement_id": "statement:f45886b24ebea424",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_S",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_S",
-        "source_relation_index": 47,
+        "source_relation_index": 45,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_S"
@@ -14254,7 +14271,7 @@
         "statement_id": "statement:1629b7b6c224bba8",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Fe",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Fe",
-        "source_relation_index": 48,
+        "source_relation_index": 46,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Fe"
@@ -14272,7 +14289,7 @@
         "statement_id": "statement:13a5c21f6e7b8d83",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Cu",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Cu",
-        "source_relation_index": 49,
+        "source_relation_index": 47,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Cu"
@@ -14290,7 +14307,7 @@
         "statement_id": "statement:e467b319c9c6de97",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Co",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Co",
-        "source_relation_index": 50,
+        "source_relation_index": 48,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Co"
@@ -14308,7 +14325,7 @@
         "statement_id": "statement:9097916fb8059aa4",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_O",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_O",
-        "source_relation_index": 51,
+        "source_relation_index": 49,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_O"
@@ -14326,7 +14343,7 @@
         "statement_id": "statement:ef916f42a3db7f37",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_S",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_S",
-        "source_relation_index": 52,
+        "source_relation_index": 50,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_S"
@@ -14344,7 +14361,7 @@
         "statement_id": "statement:8821f3415202ea92",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Fe",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Fe",
-        "source_relation_index": 53,
+        "source_relation_index": 51,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Fe"
@@ -14362,7 +14379,7 @@
         "statement_id": "statement:47107991ca3bfdbd",
         "statement_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Cu",
         "source_relation_id": "REL_Material_residual_sediment_CONTAINS_Material_Cu",
-        "source_relation_index": 54,
+        "source_relation_index": 52,
         "entity_ids": [
           "Material_residual_sediment",
           "Material_Cu"
@@ -14372,6 +14389,35 @@
         "evidence_refs": [
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:47107991ca3bfdbd",
           "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:47107991ca3bfdbd:evidence"
+        ]
+      },
+      {
+        "id": "local-unit:6f1617009d09e8c3",
+        "micrograph_id": "A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries",
+        "statement_id": "statement:6a343341495a3886",
+        "statement_relation_id": "REL_reviewed_input_Process_reviewed_5a8f38ab000de8",
+        "source_relation_id": "REL_reviewed_input_Process_reviewed_5a8f38ab000de8",
+        "source_relation_index": 53,
+        "entity_ids": [
+          "Component_lithium_ion_battery",
+          "Process_reviewed_5a8f38ab000de8"
+        ],
+        "scope_assertion_ids": [
+          "scope-assertion:dc272e93b9dfae27",
+          "scope-assertion:fe46e627792c84f5"
+        ],
+        "scope_propagation_path_ids": [
+          "scope-path:048bcce18924fef4",
+          "scope-path:ac7b14cb39b2801a"
+        ],
+        "evidence_refs": [
+          "scope:scope-assertion:dc272e93b9dfae27:evidence",
+          "scope:scope-assertion:fe46e627792c84f5:evidence",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Component_lithium_ion_battery:entity",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:Process_reviewed_5a8f38ab000de8:entity",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:REL_reviewed_input_Process_reviewed_5a8f38ab000de8",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:6a343341495a3886",
+          "source:A_Copper-Catalyzed_Bioleaching_Process_for_Enhancement_of_Cobalt_Dissolution_from_Spent_Lithium-Ion_Batteries:relation:statement:6a343341495a3886:evidence"
         ]
       }
     ],
@@ -34057,8 +34103,9 @@
       "final_triples_export": 0.022
     },
     "scope_audit": {
-      "evidence_record_count": 11,
-      "rejected_definition_count": 4,
+      "evidence_record_count": 38,
+      "rejected_definition_count": 0,
+      "unscoped_candidate_count": 0,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
@@ -39131,6 +39178,7 @@
       "reviewed_records": 31,
       "state_qualified_residue_observations": 30,
       "transformation_evidence_records": 0
-    }
+    },
+    "scope_unscoped_candidates": []
   }
 }

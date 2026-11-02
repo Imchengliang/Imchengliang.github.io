@@ -1378,14 +1378,23 @@
         "scope_subject_text": "lithium ion battery",
         "scope_label": "lithium ion battery",
         "evidence_ids": [
-          "E3530a24522",
-          "E6374fb89cf",
-          "Ef1ef1b5f9a"
+          "E6fd1e3d56a",
+          "E92ca22ee79"
         ],
-        "evidence_span": "In the past studies, Acidithiobacillus ferrooxidans only as IOB was used for leaching spent LIBs (Mishra et al., 2008a; Zeng et al., 2012).",
+        "evidence_span": "The spent LIBs were manually dismantled into different portions including plastic shell, cathode, anode, aluminum foil and so on. Then the separated active cathode and anode containing dense Co and Li were mixed, ground by milling and sieved to obtain a mesh size of less than 200 lm (Mishra et al., 2008a). The resulting powder, used for bioleaching experiments, was digested by HF - HNO _ 3 –HCl method (USEPA, 1996) to determine the content of Co at 358 mg g ^-1 and Li at 45 mg g ^-1 using AAS.",
+        "evidence": [
+          {
+            "evidence_id": "E6fd1e3d56a",
+            "quote": "The spent LIBs were manually dismantled into different portions including plastic shell, cathode, anode, aluminum foil and so on. Then the separated active cathode and anode containing dense Co and Li were mixed, ground by milling and sieved to obtain a mesh size of less than 200 lm (Mishra et al., 2008a). The resulting powder, used for bioleaching experiments, was digested by HF - HNO _ 3 –HCl method (USEPA, 1996) to determine the content of Co at 358 mg g ^-1 and Li at 45 mg g ^-1 using AAS."
+          },
+          {
+            "evidence_id": "E92ca22ee79",
+            "quote": "In this work, bioleaching behavior of the spent LIBs at pulp densities ranging from 1% to 4% was investigated and process controls to improve bioleaching performance at pulp density of 2% were explored."
+          }
+        ],
         "population_granularity": "batch",
-        "sample_type": "lithium ion battery",
-        "scope_description": "Spent lithium ion batteries (LIBs) used as the study sample; LIB powder was added to media at a final concentration of 2% (w/v) for bioleaching.",
+        "sample_type": "spent lithium-ion battery",
+        "scope_description": "Spent LIBs manually dismantled into plastic shell, cathode, anode, aluminum foil, etc.; the separated active cathode and anode containing Co and Li were mixed, milled and sieved to <200 µm powder used for bioleaching, with Co at 358 mg/g and Li at 45 mg/g.",
         "sample_size": null
       },
       {
@@ -1395,63 +1404,76 @@
         "scope_subject_text": "bioleaching of Co and Li from spent LIB powder",
         "scope_label": "bioleaching of Co and Li from spent LIB powder",
         "evidence_ids": [
-          "E9c8dad21a7"
+          "Ed7a423d1fc"
         ],
-        "evidence_span": "Bioleaching of Co and Li from spent LIB powder using a mixed culture of SOB (Alicyclobacillus sp.) and IOB (Sulfobacillus sp.) acclimated for 30 d with 0.25–1.0% (w/v) LIB powder.",
+        "evidence_span": "Bioleaching experiments were conducted according to the previous paper (Xin et al., 2009). Unless specifically stated, bioleaching media containing 4.0 g L ^-1 of mixed energy matters (sulfur and pyrite) was inoculated respectively with SOB and IOB as the mixed culture, followed by incubation at 30 \u0003C until the pH value dropped to ca 1.0 and the ORP value rose to ca 450 mV. At that time, the spent LIB powder was added into the media to a final concentration of 2% to initiate the bioleaching after its pH value was adjusted precisely to pH 1.0.",
+        "evidence": [
+          {
+            "evidence_id": "Ed7a423d1fc",
+            "quote": "Bioleaching experiments were conducted according to the previous paper (Xin et al., 2009). Unless specifically stated, bioleaching media containing 4.0 g L ^-1 of mixed energy matters (sulfur and pyrite) was inoculated respectively with SOB and IOB as the mixed culture, followed by incubation at 30 \u0003C until the pH value dropped to ca 1.0 and the ORP value rose to ca 450 mV. At that time, the spent LIB powder was added into the media to a final concentration of 2% to initiate the bioleaching after its pH value was adjusted precisely to pH 1.0."
+          }
+        ],
         "method_family": "bioleaching"
       }
     ],
     "scope_audit": {
-      "evidence_record_count": 4,
+      "evidence_record_count": 49,
       "rejected_definition_count": 0,
+      "unscoped_candidate_count": 0,
       "raw_response_path": "llm_scope_raw.txt",
       "rejected_definitions_path": "llm_scope_rejected.txt"
     },
     "scope_assertions": [
       {
-        "id": "scope-assertion:1b2be3dcf9cbf542",
+        "id": "scope-assertion:a4df6f5cbcbf7812",
         "micrograph_id": "Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti",
         "root_entity_ids": [
+          "Product_lithium_ion_battery"
+        ],
+        "requested_root_entity_ids": [
           "Product_lithium_ion_battery"
         ],
         "scope_kind": "declared_population",
         "facets": {
           "population_granularity": "batch",
-          "sample_type": "lithium ion battery"
+          "sample_type": "spent lithium-ion battery"
         },
-        "scope_description": "Spent lithium ion batteries (LIBs) used as the study sample; LIB powder was added to media at a final concentration of 2% (w/v) for bioleaching.",
+        "scope_description": "Spent LIBs manually dismantled into plastic shell, cathode, anode, aluminum foil, etc.; the separated active cathode and anode containing Co and Li were mixed, milled and sieved to <200 µm powder used for bioleaching, with Co at 358 mg/g and Li at 45 mg/g.",
         "sample_size": null,
-        "evidence_span": "In the past studies, Acidithiobacillus ferrooxidans only as IOB was used for leaching spent LIBs (Mishra et al., 2008a; Zeng et al., 2012).",
+        "evidence_span": "The spent LIBs were manually dismantled into different portions including plastic shell, cathode, anode, aluminum foil and so on. Then the separated active cathode and anode containing dense Co and Li were mixed, ground by milling and sieved to obtain a mesh size of less than 200 lm (Mishra et al., 2008a). The resulting powder, used for bioleaching experiments, was digested by HF - HNO _ 3 –HCl method (USEPA, 1996) to determine the content of Co at 358 mg g ^-1 and Li at 45 mg g ^-1 using AAS.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Product_lithium_ion_battery:entity"
         ]
       },
       {
-        "id": "scope-assertion:876de52e958b182d",
+        "id": "scope-assertion:27ef0e1f89fbe983",
         "micrograph_id": "Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti",
         "root_entity_ids": [
+          "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
+        ],
+        "requested_root_entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ],
         "scope_kind": "process_method_family",
         "facets": {
           "method_family": "bioleaching"
         },
-        "scope_description": "Bioleaching of Co and Li from spent LIB powder using a mixed culture of SOB (Alicyclobacillus sp.) and IOB (Sulfobacillus sp.) acclimated for 30 d with 0.25–1.0% (w/v) LIB powder.",
+        "scope_description": "Bioleaching experiments were conducted according to the previous paper (Xin et al., 2009). Unless specifically stated, bioleaching media containing 4.0 g L ^-1 of mixed energy matters (sulfur and pyrite) was inoculated respectively with SOB and IOB as the mixed culture, followed by incubation at 30 \u0003C until the pH value dropped to ca 1.0 and the ORP value rose to ca 450 mV. At that time, the spent LIB powder was added into the media to a final concentration of 2% to initiate the bioleaching after its pH value was adjusted precisely to pH 1.0.",
         "sample_size": null,
-        "evidence_span": "Bioleaching of Co and Li from spent LIB powder using a mixed culture of SOB (Alicyclobacillus sp.) and IOB (Sulfobacillus sp.) acclimated for 30 d with 0.25–1.0% (w/v) LIB powder.",
+        "evidence_span": "Bioleaching experiments were conducted according to the previous paper (Xin et al., 2009). Unless specifically stated, bioleaching media containing 4.0 g L ^-1 of mixed energy matters (sulfur and pyrite) was inoculated respectively with SOB and IOB as the mixed culture, followed by incubation at 30 \u0003C until the pH value dropped to ca 1.0 and the ORP value rose to ca 450 mV. At that time, the spent LIB powder was added into the media to a final concentration of 2% to initiate the bioleaching after its pH value was adjusted precisely to pH 1.0.",
         "binding_status": "bound",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity"
         ]
       }
     ],
     "scope_propagation_paths": [
       {
-        "id": "scope-path:411472e08e242dbe",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
+        "id": "scope-path:25ee4b212b194c66",
+        "scope_assertion_id": "scope-assertion:a4df6f5cbcbf7812",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Component_plastic_shell",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -1460,13 +1482,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_plastic_shell"
         ]
       },
       {
-        "id": "scope-path:8887d7e761c3d112",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
+        "id": "scope-path:eaa24978a796ce03",
+        "scope_assertion_id": "scope-assertion:a4df6f5cbcbf7812",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Component_cathode",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -1475,13 +1497,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode"
         ]
       },
       {
-        "id": "scope-path:6dadb4916c932a06",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
+        "id": "scope-path:b20a8977be8f8eb7",
+        "scope_assertion_id": "scope-assertion:a4df6f5cbcbf7812",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Component_anode",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -1490,13 +1512,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode"
         ]
       },
       {
-        "id": "scope-path:8accc0d4fb8fe87a",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
+        "id": "scope-path:9d2e31083b802ffa",
+        "scope_assertion_id": "scope-assertion:a4df6f5cbcbf7812",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Component_aluminum_foil",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -1505,13 +1527,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_aluminum_foil"
         ]
       },
       {
-        "id": "scope-path:a95f0231508edeaf",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
+        "id": "scope-path:7de1ea773713f411",
+        "scope_assertion_id": "scope-assertion:a4df6f5cbcbf7812",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Co",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -1520,13 +1542,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Co"
         ]
       },
       {
-        "id": "scope-path:b0baf96880d6729f",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
+        "id": "scope-path:91c3db590e696c08",
+        "scope_assertion_id": "scope-assertion:a4df6f5cbcbf7812",
         "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_Li",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -1535,13 +1557,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Li"
         ]
       },
       {
-        "id": "scope-path:5848bc2b9e556557",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
+        "id": "scope-path:a6b5ba874f94adb5",
+        "scope_assertion_id": "scope-assertion:a4df6f5cbcbf7812",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -1550,13 +1572,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ]
       },
       {
-        "id": "scope-path:5848bc2b9e556557",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
+        "id": "scope-path:a6b5ba874f94adb5",
+        "scope_assertion_id": "scope-assertion:a4df6f5cbcbf7812",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -1565,13 +1587,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ]
       },
       {
-        "id": "scope-path:5848bc2b9e556557",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
+        "id": "scope-path:a6b5ba874f94adb5",
+        "scope_assertion_id": "scope-assertion:a4df6f5cbcbf7812",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -1580,43 +1602,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ]
       },
       {
-        "id": "scope-path:15df3dcf657e6261",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
-        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_LiCoO2",
-        "root_entity_id": "Product_lithium_ion_battery",
-        "entity_path": [
-          "Product_lithium_ion_battery"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_LiCoO2"
-        ]
-      },
-      {
-        "id": "scope-path:1a1ff5c0fe59adb3",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
-        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_electrolyte",
-        "root_entity_id": "Product_lithium_ion_battery",
-        "entity_path": [
-          "Product_lithium_ion_battery"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_electrolyte"
-        ]
-      },
-      {
-        "id": "scope-path:5848bc2b9e556557",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
+        "id": "scope-path:a6b5ba874f94adb5",
+        "scope_assertion_id": "scope-assertion:a4df6f5cbcbf7812",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -1625,13 +1617,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ]
       },
       {
-        "id": "scope-path:5848bc2b9e556557",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
+        "id": "scope-path:a6b5ba874f94adb5",
+        "scope_assertion_id": "scope-assertion:a4df6f5cbcbf7812",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -1640,13 +1632,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ]
       },
       {
-        "id": "scope-path:5848bc2b9e556557",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
+        "id": "scope-path:a6b5ba874f94adb5",
+        "scope_assertion_id": "scope-assertion:a4df6f5cbcbf7812",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "root_entity_id": "Product_lithium_ion_battery",
         "entity_path": [
@@ -1655,43 +1647,13 @@
         "containment_relation_path": [],
         "propagation_kind": "root_entity",
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ]
       },
       {
-        "id": "scope-path:5848bc2b9e556557",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
-        "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
-        "root_entity_id": "Product_lithium_ion_battery",
-        "entity_path": [
-          "Product_lithium_ion_battery"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
-        ]
-      },
-      {
-        "id": "scope-path:e453caf7288997d5",
-        "scope_assertion_id": "scope-assertion:1b2be3dcf9cbf542",
-        "statement_relation_id": "REL_Product_lithium_ion_battery_CONTAINS_Material_LiCoO",
-        "root_entity_id": "Product_lithium_ion_battery",
-        "entity_path": [
-          "Product_lithium_ion_battery"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "root_entity",
-        "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_LiCoO"
-        ]
-      },
-      {
-        "id": "scope-path:3eebeab6ab035c0c",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:bf913a27c711be57",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1700,13 +1662,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ]
       },
       {
-        "id": "scope-path:3eebeab6ab035c0c",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:bf913a27c711be57",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1715,13 +1677,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ]
       },
       {
-        "id": "scope-path:3eebeab6ab035c0c",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:bf913a27c711be57",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1730,28 +1692,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ]
       },
       {
-        "id": "scope-path:3eebeab6ab035c0c",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
-        "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
-        "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
-        "entity_path": [
-          "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
-        ],
-        "containment_relation_path": [],
-        "propagation_kind": "process_scope",
-        "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
-        ]
-      },
-      {
-        "id": "scope-path:f79ffda2c5d14f4a",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:e75bc91b60264a0f",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1760,13 +1707,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:a3af26a31390e20a",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:12f26029d96c7abb",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1775,13 +1722,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:a3af26a31390e20a",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:12f26029d96c7abb",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1790,13 +1737,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:f79ffda2c5d14f4a",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:e75bc91b60264a0f",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1805,13 +1752,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:3eebeab6ab035c0c",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:bf913a27c711be57",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1820,13 +1767,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ]
       },
       {
-        "id": "scope-path:a3af26a31390e20a",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:12f26029d96c7abb",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1835,13 +1782,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:f79ffda2c5d14f4a",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:e75bc91b60264a0f",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1850,13 +1797,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:3eebeab6ab035c0c",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:bf913a27c711be57",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1865,13 +1812,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ]
       },
       {
-        "id": "scope-path:a3af26a31390e20a",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:12f26029d96c7abb",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1880,13 +1827,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:f79ffda2c5d14f4a",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:e75bc91b60264a0f",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1895,13 +1842,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:a3af26a31390e20a",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:12f26029d96c7abb",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1910,13 +1857,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:f79ffda2c5d14f4a",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:e75bc91b60264a0f",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1925,13 +1872,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:a3af26a31390e20a",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:12f26029d96c7abb",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1940,13 +1887,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:f79ffda2c5d14f4a",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:e75bc91b60264a0f",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1955,13 +1902,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co"
         ]
       },
       {
-        "id": "scope-path:3eebeab6ab035c0c",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:bf913a27c711be57",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1970,13 +1917,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ]
       },
       {
-        "id": "scope-path:a3af26a31390e20a",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:12f26029d96c7abb",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -1985,13 +1932,13 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li"
         ]
       },
       {
-        "id": "scope-path:f79ffda2c5d14f4a",
-        "scope_assertion_id": "scope-assertion:876de52e958b182d",
+        "id": "scope-path:e75bc91b60264a0f",
+        "scope_assertion_id": "scope-assertion:27ef0e1f89fbe983",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
         "root_entity_id": "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "entity_path": [
@@ -2000,7 +1947,7 @@
         "containment_relation_path": [],
         "propagation_kind": "process_scope",
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co"
         ]
       }
@@ -7231,13 +7178,13 @@
           "Component_plastic_shell"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1b2be3dcf9cbf542"
+          "scope-assertion:a4df6f5cbcbf7812"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:411472e08e242dbe"
+          "scope-path:25ee4b212b194c66"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Product_lithium_ion_battery:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_plastic_shell",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:66e4b228f930a720",
@@ -7256,13 +7203,13 @@
           "Component_cathode"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1b2be3dcf9cbf542"
+          "scope-assertion:a4df6f5cbcbf7812"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:8887d7e761c3d112"
+          "scope-path:eaa24978a796ce03"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Product_lithium_ion_battery:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_cathode",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:65c988b8748e271a",
@@ -7281,13 +7228,13 @@
           "Component_anode"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1b2be3dcf9cbf542"
+          "scope-assertion:a4df6f5cbcbf7812"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:6dadb4916c932a06"
+          "scope-path:b20a8977be8f8eb7"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Product_lithium_ion_battery:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_anode",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:2e00b2b0c6f48868",
@@ -7306,13 +7253,13 @@
           "Component_aluminum_foil"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1b2be3dcf9cbf542"
+          "scope-assertion:a4df6f5cbcbf7812"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:8accc0d4fb8fe87a"
+          "scope-path:9d2e31083b802ffa"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Product_lithium_ion_battery:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Component_aluminum_foil",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:ac814804f46d3103",
@@ -7331,13 +7278,13 @@
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1b2be3dcf9cbf542"
+          "scope-assertion:a4df6f5cbcbf7812"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:a95f0231508edeaf"
+          "scope-path:7de1ea773713f411"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Product_lithium_ion_battery:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Co",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:8cf0d583b12776d0",
@@ -7356,13 +7303,13 @@
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1b2be3dcf9cbf542"
+          "scope-assertion:a4df6f5cbcbf7812"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:b0baf96880d6729f"
+          "scope-path:91c3db590e696c08"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Product_lithium_ion_battery:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_CONTAINS_Material_Li",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:cee61a880a125006",
@@ -7381,16 +7328,16 @@
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1b2be3dcf9cbf542",
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983",
+          "scope-assertion:a4df6f5cbcbf7812"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:3eebeab6ab035c0c",
-          "scope-path:5848bc2b9e556557"
+          "scope-path:a6b5ba874f94adb5",
+          "scope-path:bf913a27c711be57"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Product_lithium_ion_battery:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
@@ -7410,16 +7357,16 @@
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1b2be3dcf9cbf542",
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983",
+          "scope-assertion:a4df6f5cbcbf7812"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:3eebeab6ab035c0c",
-          "scope-path:5848bc2b9e556557"
+          "scope-path:a6b5ba874f94adb5",
+          "scope-path:bf913a27c711be57"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Product_lithium_ion_battery:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
@@ -7439,16 +7386,16 @@
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1b2be3dcf9cbf542",
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983",
+          "scope-assertion:a4df6f5cbcbf7812"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:3eebeab6ab035c0c",
-          "scope-path:5848bc2b9e556557"
+          "scope-path:a6b5ba874f94adb5",
+          "scope-path:bf913a27c711be57"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Product_lithium_ion_battery:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
@@ -7457,53 +7404,24 @@
         ]
       },
       {
-        "id": "local-unit:d3bd9cb036d7984d",
-        "micrograph_id": "Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti",
-        "statement_id": "statement:935fd3e7f21062f1",
-        "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
-        "source_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
-        "source_relation_index": 9,
-        "entity_ids": [
-          "Product_lithium_ion_battery",
-          "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
-        ],
-        "scope_assertion_ids": [
-          "scope-assertion:1b2be3dcf9cbf542",
-          "scope-assertion:876de52e958b182d"
-        ],
-        "scope_propagation_path_ids": [
-          "scope-path:3eebeab6ab035c0c",
-          "scope-path:5848bc2b9e556557"
-        ],
-        "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
-          "scope:scope-assertion:876de52e958b182d:evidence",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Product_lithium_ion_battery:entity",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:935fd3e7f21062f1",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:935fd3e7f21062f1:evidence"
-        ]
-      },
-      {
         "id": "local-unit:947ecb5fde13ae89",
         "micrograph_id": "Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti",
         "statement_id": "statement:58045d3cd0753972",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 10,
+        "source_relation_index": 9,
         "entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:f79ffda2c5d14f4a"
+          "scope-path:e75bc91b60264a0f"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:58045d3cd0753972",
@@ -7516,19 +7434,19 @@
         "statement_id": "statement:80bd05430e6d92e0",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 11,
+        "source_relation_index": 10,
         "entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:a3af26a31390e20a"
+          "scope-path:12f26029d96c7abb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:80bd05430e6d92e0",
@@ -7541,19 +7459,19 @@
         "statement_id": "statement:a9b07221cae6e1b6",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 12,
+        "source_relation_index": 11,
         "entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:a3af26a31390e20a"
+          "scope-path:12f26029d96c7abb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:a9b07221cae6e1b6",
@@ -7566,19 +7484,19 @@
         "statement_id": "statement:099f2150723516a2",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 13,
+        "source_relation_index": 12,
         "entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:f79ffda2c5d14f4a"
+          "scope-path:e75bc91b60264a0f"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:099f2150723516a2",
@@ -7586,32 +7504,32 @@
         ]
       },
       {
-        "id": "local-unit:0031c6e2380b4339",
+        "id": "local-unit:d3bd9cb036d7984d",
         "micrograph_id": "Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti",
-        "statement_id": "statement:b9d9cb2e09a7b2ea",
+        "statement_id": "statement:935fd3e7f21062f1",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "source_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
-        "source_relation_index": 14,
+        "source_relation_index": 13,
         "entity_ids": [
           "Product_lithium_ion_battery",
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1b2be3dcf9cbf542",
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983",
+          "scope-assertion:a4df6f5cbcbf7812"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:3eebeab6ab035c0c",
-          "scope-path:5848bc2b9e556557"
+          "scope-path:a6b5ba874f94adb5",
+          "scope-path:bf913a27c711be57"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Product_lithium_ion_battery:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:b9d9cb2e09a7b2ea",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:b9d9cb2e09a7b2ea:evidence"
+          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:935fd3e7f21062f1",
+          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:935fd3e7f21062f1:evidence"
         ]
       },
       {
@@ -7620,19 +7538,19 @@
         "statement_id": "statement:54c834cc82a7bf2f",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 15,
+        "source_relation_index": 14,
         "entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:a3af26a31390e20a"
+          "scope-path:12f26029d96c7abb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:54c834cc82a7bf2f",
@@ -7645,19 +7563,19 @@
         "statement_id": "statement:217d5d9d7fe7b1da",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 16,
+        "source_relation_index": 15,
         "entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:f79ffda2c5d14f4a"
+          "scope-path:e75bc91b60264a0f"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:217d5d9d7fe7b1da",
@@ -7665,32 +7583,32 @@
         ]
       },
       {
-        "id": "local-unit:2bc1ddbc7d94c84a",
+        "id": "local-unit:0031c6e2380b4339",
         "micrograph_id": "Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti",
-        "statement_id": "statement:b0fe3531dc00010b",
+        "statement_id": "statement:b9d9cb2e09a7b2ea",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "source_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
-        "source_relation_index": 17,
+        "source_relation_index": 16,
         "entity_ids": [
           "Product_lithium_ion_battery",
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1b2be3dcf9cbf542",
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983",
+          "scope-assertion:a4df6f5cbcbf7812"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:3eebeab6ab035c0c",
-          "scope-path:5848bc2b9e556557"
+          "scope-path:a6b5ba874f94adb5",
+          "scope-path:bf913a27c711be57"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Product_lithium_ion_battery:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:b0fe3531dc00010b",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:b0fe3531dc00010b:evidence"
+          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:b9d9cb2e09a7b2ea",
+          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:b9d9cb2e09a7b2ea:evidence"
         ]
       },
       {
@@ -7699,19 +7617,19 @@
         "statement_id": "statement:5d60f86579ed5d46",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 18,
+        "source_relation_index": 17,
         "entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:a3af26a31390e20a"
+          "scope-path:12f26029d96c7abb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:5d60f86579ed5d46",
@@ -7724,19 +7642,19 @@
         "statement_id": "statement:6223f620266792b8",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 19,
+        "source_relation_index": 18,
         "entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:f79ffda2c5d14f4a"
+          "scope-path:e75bc91b60264a0f"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:6223f620266792b8",
@@ -7749,19 +7667,19 @@
         "statement_id": "statement:6187d97533af1d06",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 20,
+        "source_relation_index": 19,
         "entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:a3af26a31390e20a"
+          "scope-path:12f26029d96c7abb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:6187d97533af1d06",
@@ -7774,19 +7692,19 @@
         "statement_id": "statement:966a7e52076a7a77",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 21,
+        "source_relation_index": 20,
         "entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:f79ffda2c5d14f4a"
+          "scope-path:e75bc91b60264a0f"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:966a7e52076a7a77",
@@ -7799,19 +7717,19 @@
         "statement_id": "statement:dd17481e1104795e",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 22,
+        "source_relation_index": 21,
         "entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:a3af26a31390e20a"
+          "scope-path:12f26029d96c7abb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:dd17481e1104795e",
@@ -7824,19 +7742,19 @@
         "statement_id": "statement:fd64dab7ecc7ea82",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 23,
+        "source_relation_index": 22,
         "entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:f79ffda2c5d14f4a"
+          "scope-path:e75bc91b60264a0f"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:fd64dab7ecc7ea82",
@@ -7844,32 +7762,32 @@
         ]
       },
       {
-        "id": "local-unit:71612a4da740e1c0",
+        "id": "local-unit:2bc1ddbc7d94c84a",
         "micrograph_id": "Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti",
-        "statement_id": "statement:bccb98f99298000c",
+        "statement_id": "statement:b0fe3531dc00010b",
         "statement_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
         "source_relation_id": "REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
-        "source_relation_index": 24,
+        "source_relation_index": 23,
         "entity_ids": [
           "Product_lithium_ion_battery",
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:1b2be3dcf9cbf542",
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983",
+          "scope-assertion:a4df6f5cbcbf7812"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:3eebeab6ab035c0c",
-          "scope-path:5848bc2b9e556557"
+          "scope-path:a6b5ba874f94adb5",
+          "scope-path:bf913a27c711be57"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:1b2be3dcf9cbf542:evidence",
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
+          "scope:scope-assertion:a4df6f5cbcbf7812:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Product_lithium_ion_battery:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Product_lithium_ion_battery_PROCESSED_BY_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:bccb98f99298000c",
-          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:bccb98f99298000c:evidence"
+          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:b0fe3531dc00010b",
+          "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:b0fe3531dc00010b:evidence"
         ]
       },
       {
@@ -7878,19 +7796,19 @@
         "statement_id": "statement:9d4efaee9569ae12",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
         "source_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
-        "source_relation_index": 25,
+        "source_relation_index": 24,
         "entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
           "Material_Li"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:a3af26a31390e20a"
+          "scope-path:12f26029d96c7abb"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Li",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:9d4efaee9569ae12",
@@ -7903,19 +7821,19 @@
         "statement_id": "statement:88924c5f9d3eca24",
         "statement_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
         "source_relation_id": "REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
-        "source_relation_index": 26,
+        "source_relation_index": 25,
         "entity_ids": [
           "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder",
           "Material_Co"
         ],
         "scope_assertion_ids": [
-          "scope-assertion:876de52e958b182d"
+          "scope-assertion:27ef0e1f89fbe983"
         ],
         "scope_propagation_path_ids": [
-          "scope-path:f79ffda2c5d14f4a"
+          "scope-path:e75bc91b60264a0f"
         ],
         "evidence_refs": [
-          "scope:scope-assertion:876de52e958b182d:evidence",
+          "scope:scope-assertion:27ef0e1f89fbe983:evidence",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder:entity",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:REL_Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder_HAS_OUTPUT_Material_Co",
           "source:Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti:relation:statement:88924c5f9d3eca24",
@@ -12022,6 +11940,7 @@
       "reviewed_records": 1,
       "operation_evidence_records": 1,
       "added_processes": 0
-    }
+    },
+    "scope_unscoped_candidates": []
   }
 }

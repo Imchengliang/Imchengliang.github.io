@@ -58,6 +58,8 @@ The demo has three tabs:
 | **Extraction trace** | Inspect a paper's source text, tables and archived extraction outputs |
 | **Paper** | Open the original publication pages and the GSMArena source |
 
+The current snapshot contains 442 core entities, 1,784 displayed relations and 1,073 numerical observations. Scope records describe 64 study samples or populations and the method families of all 62 Processes. These annotations help locate and compare evidence; they do not merge samples or make their measurements interchangeable.
+
 The application reads saved files. Browsing does not call an extraction API, run the agents again, edit the research graph or calculate new measurements.
 
 ## 3. A quick first visit
