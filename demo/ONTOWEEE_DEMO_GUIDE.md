@@ -273,7 +273,7 @@ This map explains stage roles. It does not prove that the displayed historical f
 
 A stage can legitimately have empty or rejected outputs. A revision can be enabled but skipped, with no model calls or committed operations. Read the recorded status rather than assuming that a visible revision stage repaired a problem.
 
-The Process page also shows a **Final Process inventory**, separate from the **Original Process Agent archive**. It lists every Process in that paper's published graph, its matching original discovery name or recorded alias, and available table or revision sources. **Processes recorded in revisions** appears in Revision / Postprocessing when applicable. Reviewed updates to existing discoveries are distinguished from later additions. Source-file links, available evidence location and **View in graph** connect each final identity to its records.
+The **Process** page lists the Processes represented in the selected paper’s graph, followed by their experimental Settings. Use **Locate text evidence** or **Find related text (summary)** to inspect the source, and **View in graph** to open a Process in the graph. The main view focuses on the results rather than comparing original discoveries with later updates. Detailed provenance remains available in record JSON and the collapsed **Data files** downloads.
 
 The comparison uses archived IDs, registered aliases, table entities and explicit revision records. It does not treat a Process content card or a Setting as another Process, infer an undocumented producer from name similarity, or rewrite the original agent output. Original discoveries without a final counterpart are listed explicitly; absence alone is not presented as a documented removal reason.
 

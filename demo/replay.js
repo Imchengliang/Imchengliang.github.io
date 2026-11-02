@@ -47,7 +47,7 @@ const Replay = (() => {
   }
   function lazyJSON(raw,metadata={}) {
     const details=document.createElement('details'),summary=document.createElement('summary');
-    summary.textContent='View original record JSON';details.append(summary);
+    summary.textContent='View record JSON';details.append(summary);
     details.addEventListener('toggle',()=>{
       if(details.open&&!details.querySelector('pre')) {details.insertAdjacentHTML('beforeend',detailFields(metadata));const pre=document.createElement('pre');pre.textContent=JSON.stringify(raw,null,2);details.append(pre);}
     });
@@ -91,8 +91,7 @@ const Replay = (() => {
         detailFields({Sample:record.sample,Treatment:record.treatment,Equipment:record.equipment,'Process agents':record.process_agents,Aliases:[...(record.aliases||[]),...(record.synonyms||[])]});
       if(record.condition_keys?.length)body+='<table class="condition-table"><thead><tr><th>Condition</th><th>Value</th><th>Unit</th></tr></thead><tbody>'+record.condition_keys.map(c=>`<tr><td>${esc(c.key)}</td><td>${esc(text(c.value))}</td><td>${esc(c.unit)}</td></tr>`).join('')+'</tbody></table>';
     }else if(item.kind==='published_process') {
-      body=badges(['Final graph Process',record.origin])+detailFields({'Original discovery':record.discovery_names,'Source marker':record.source_mark,'Table references':record.table_ids})+
-        paragraph(record.content);
+      body=badges(['Process'])+paragraph(record.content);
     }else if(item.kind==='gate') {
       const decision=record.decision||{};title=tableTitle(tableId);
       body=badges([decision.decision,decision.table_role])+detailFields({Source:decision.causal_role?.source_object,Quantity:decision.causal_role?.measured_quantity,'Evidence role':decision.causal_role?.evidence_role})+paragraph(decision.ir_instruction);
@@ -142,7 +141,6 @@ const Replay = (() => {
       button.onclick=()=>actions.locate({...locationRecord,location_query:quote||summary,location_is_summary:!!summary,table_id:tableId});buttons.append(button);
     }
     if(item.kind==='final'||item.kind==='published_process') {const button=document.createElement('button');button.textContent='View in graph';button.onclick=()=>actions.graph(record);buttons.append(button);}
-    for(const file of record.source_files||[]){const link=document.createElement('a');link.href=file.url;link.download=file.name;link.textContent=file.name+' ↗';buttons.append(link);}
     card.append(buttons);
     if(item.kind==='table') {
       const output=record.extraction||{};

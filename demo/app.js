@@ -410,7 +410,7 @@ async function loadCase(id){
     if(state.case.source_only){state.stage='final';walkthrough?.reset();}
     else if($('#case-select').value!==id){$('#case-select').value=id;walkthrough?.reset();}
     state.cellIndex=Replay.cellIndex(state.case);$('#case-title').textContent=state.case.paper;
-    $('.replay-note').textContent=state.case.source_only?'Source evidence only · Final relations and source text / tables are available for this paper. Intermediate stages are not bundled. The six case studies remain available in the sidebar.':'Archived replay · Browse actual stage outputs. Files may have been updated at different times and do not necessarily represent a single continuous run.';
+    $('.replay-note').textContent=state.case.source_only?'Explore this paper’s final relations and source evidence.':'Explore processes, entities and relations, and trace their supporting text and tables.';
     const item=state.case;
     renderCaseSelection();
     $('#stages').innerHTML=processMap(item);
@@ -469,7 +469,6 @@ function renderSource(){
   if(!state.case)return;
   $('#text-tab').classList.toggle('active',state.sourceTab==='text');$('#tables-tab').classList.toggle('active',state.sourceTab==='tables');
   const container=$('#source-content');container.replaceChildren();
-  const note=document.createElement('p');note.className='source-note';note.textContent=state.case.source_note;container.append(note);
   const label=$('#source-match-label');label.hidden=true;
   if(state.sourceTab==='text'){
     const pre=document.createElement('div');pre.className='prose';const source=state.case.text,result=Replay.locateText(source,state.evidence);
@@ -565,35 +564,36 @@ function selectStage(id){
   if(tab){state.sourceTab=tab;renderSource();}
   renderStage();
 }
-function renderProcessInventory(container,stage){
+function renderProcessInventory(container){
   const inventory=state.case.process_inventory;if(!inventory)return;
-  const rows=stage==='revision'?inventory.final.filter(r=>r.revision_recorded):inventory.final;
-  if(stage==='revision'&&!rows.length)return;
+  const rows=inventory.final.map(data=>({kind:'published_process',data,raw:data}));
+  const settings=(inventory.settings||[]).map(data=>({kind:'process',data:{...data,phase:'Setting'},raw:data}));
   const query=$('#record-search').value.toLowerCase();
-  const shown=rows.filter(row=>!query||JSON.stringify(row).toLowerCase().includes(query));
-  const section=document.createElement('section');section.className='process-inventory';
-  section.innerHTML=stage==='revision'?`<h3>Processes recorded in revisions · ${rows.length}</h3><p>These final identities appear in separate review artifacts. A Process already present in discovery is distinguished from a later addition. Offline reviewed corrections are distinct from the original automatic revision run and its execution status.</p>`:
-    `<h3>Final Process inventory · ${inventory.final_count}</h3><p>${inventory.discovered_count} original Process Agent discoveries; ${inventory.final_count} Processes in the published graph. Content records and Settings are not separate Processes. Entries below show final identities and their recorded sources; they are not additional original agent outputs.</p>`;
-  for(const data of shown)section.append(Replay.render({kind:'published_process',data,raw:data},{locate:locateRecord,graph:graphRecord}));
-  if(stage==='process'&&inventory.not_in_final.length){
-    const note=document.createElement('p');note.className='notice';
-    note.textContent='Original discoveries not represented in the final graph: '+inventory.not_in_final.map(r=>r.name).join('; ')+'. Absence alone does not establish the removal reason; inspect Revision / Postprocessing.';section.append(note);
+  let shown=0;
+  for(const [label,items] of [['Processes',rows],['Experimental settings',settings]]){
+    if(!items.length)continue;
+    const section=document.createElement('section');section.className='process-inventory';
+    section.innerHTML=`<h3>${label} · ${items.length}</h3>`;
+    for(const item of items.filter(item=>!query||JSON.stringify(item.data).toLowerCase().includes(query))){
+      section.append(Replay.render(item,{locate:locateRecord,graph:graphRecord}));shown++;
+    }
+    container.append(section);
   }
-  container.append(section);
-  const heading=document.createElement('h3');heading.textContent=stage==='revision'?'Original revision archive':'Original Process Agent archive';container.append(heading);
+  $('#record-count').textContent=`${shown} / ${rows.length+settings.length} cards`;
+  return true;
 }
 function renderStage(){
   if(!state.case)return;
   const stage=state.case.stages.find(s=>s.id===state.stage)||state.case.stages[0];
   $('#stages').querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.stage===stage.id));
   renderTrace();
-  $('#stage-heading').innerHTML=`<strong>${esc(stage.label)}</strong><span class="muted">${stage.id==='process'?'ORIGINAL ARCHIVE + FINAL INVENTORY':'ARCHIVED OUTPUT'}</span>`+stageFlow(stage.id);
+  $('#stage-heading').innerHTML=`<strong>${esc(stage.label)}</strong>`+stageFlow(stage.id);
   const container=$('#stage-records');container.replaceChildren();
-  const note=document.createElement('div');note.className='stage-note';note.textContent=stage.note;container.append(note);
+  const downloads=document.createElement('details');downloads.innerHTML='<summary>Data files</summary>';
+  const note=document.createElement('div');note.className='stage-note';note.textContent=stage.note;downloads.append(note);
   const files=document.createElement('div');files.className='file-links';
-  stage.files.forEach(file=>{const link=document.createElement('a');link.href=file.url;link.download=file.name;link.textContent=file.name+' ↗';link.title='SHA-256: '+file.sha256;files.append(link);});container.append(files);
-  const times=document.createElement('div');times.className='file-time';times.textContent=stage.files.map(f=>`${f.name}: ${new Date(f.modified).toLocaleString('en-GB')}`).join(' · ');container.append(times);
-  if(['process','revision'].includes(stage.id))renderProcessInventory(container,stage.id);
+  stage.files.forEach(file=>{const link=document.createElement('a');link.href=file.url;link.download=file.name;link.textContent=file.name+' ↗';link.title='SHA-256: '+file.sha256;files.append(link);});downloads.append(files);
+  const times=document.createElement('div');times.className='file-time';times.textContent=stage.files.map(f=>`${f.name}: ${new Date(f.modified).toLocaleString('en-GB')}`).join(' · ');downloads.append(times);container.append(downloads);
   renderCellResults(container);
   const spotlight=state.spotlight?.case===state.case.id?state.spotlight.target:null;
   const cellTarget=state.cellLookup?.active;
@@ -602,6 +602,7 @@ function renderStage(){
     const match=Replay.render(located,{locate:locateRecord,graph:graphRecord});match.id=cellTarget?'cell-target':spotlight?'walkthrough-target':'trace-target';match.classList.add('trace-highlight');
     const tag=document.createElement('div');tag.className='trace-match-label';tag.textContent=cellTarget?'CELL EXTRACTION':spotlight?'WALKTHROUGH EVIDENCE':'LOCATED ARCHIVED RECORD';match.prepend(tag);container.append(match);
   }
+  if(stage.id==='process'&&renderProcessInventory(container))return;
   const entries=Replay.entries(stage),query=$('#record-search').value.toLowerCase();
   const items=entries.filter(item=>!query||(item.kind+' '+(item.title||'')+' '+(item.section||'')+' '+JSON.stringify(item.data)).toLowerCase().includes(query));$('#record-count').textContent=`${items.length} / ${entries.length} cards`;
   const summary=document.createElement('p');summary.className='stage-summary';
@@ -687,7 +688,7 @@ start();
 const STAGE_FLOW={
   gate:['Table and caption','Recorded role decision','Extract or skip'],
   table:['Archived semantic IR','Execution and verification','Emitted or rejected table facts'],
-  process:['Source text','Recorded Process discovery','Processes, descriptions, Settings'],
+  process:['Source text and tables','Identify processes and conditions','Processes, descriptions, Settings'],
   entity:['Text chunk','Archived entity extraction','Entities with aliases'],
   relation:['Source sentence and available context','Archived candidate','Endpoints and measurement, or unresolved request'],
   revision:['Unresolved requests','Recorded operation and status','Committed output or unresolved state'],
@@ -702,11 +703,12 @@ function processMap(item){
   if(item.source_only)return '<button data-stage="final" class="pm-node pm-final active"><b>Final relations</b><small>Source-only archive · no intermediate stages</small></button>';
   const by=Object.fromEntries(item.stages.map(s=>[s.id,s]));
   const node=id=>{const s=by[id];if(!s)return '<span class="pm-missing">—</span>';
-    return `<button data-stage="${s.id}" class="pm-node pm-${s.id} ${s.id===state.stage?'active':''}"><b>${esc(s.label)}</b><small>${s.records.length} archived record${s.records.length===1?'':'s'}</small></button>`;};
+    const count=id==='process'&&item.process_inventory?`${item.process_inventory.final_count} Processes`:`${s.records.length} records`;
+    return `<button data-stage="${s.id}" class="pm-node pm-${s.id} ${s.id===state.stage?'active':''}"><b>${esc(s.label)}</b><small>${count}</small></button>`;};
   return `<div class="pm">
     <div class="pm-lane"><span class="pm-lane-label">1 · Parallel planning</span>${node('gate')}${node('process')}${node('entity')}<span class="pm-hint">Gate / IR planning, Process and Entity run in parallel.</span></div>
     <div class="pm-lane"><span class="pm-lane-label">2 · Grounded extraction</span>${node('table')}${node('relation')}<span class="pm-hint">Table execution and Relation extraction use the available entity / Process context.</span></div>
     <div class="pm-merge"><span class="pm-lane-label">3 · Document completion</span><div class="pm-completion-chain"><span class="pm-node pm-static"><b>Document merge</b><small>Stable entity IDs</small></span><i class="pm-arrow pm-optional" title="Revision may be skipped"></i>${node('revision')}<i class="pm-arrow"></i>${node('scope')}<i class="pm-arrow"></i>${node('final')}</div></div>
   </div>
-  <div class="pm-legend"><span><i class="pm-l-concept"></i>Current pipeline dependencies</span><span><i class="pm-l-optional"></i>Revision may be skipped</span><span><i class="pm-l-confirmed"></i>Record links require archived IDs or anchors</span><span class="pm-l-note">Guides inspect selected stages in dependency order, not a verified continuous historical run. Stage files may date from different updates.</span></div>`;
+  <div class="pm-legend"><span><i class="pm-l-concept"></i>Pipeline dependencies</span><span><i class="pm-l-optional"></i>Optional revision</span><span><i class="pm-l-confirmed"></i>Linked source evidence</span></div>`;
 }
