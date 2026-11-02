@@ -1,9 +1,9 @@
 {
   "dataset_id": "battery20",
-  "selection_manifest": "datasets/battery20/manifest.json",
-  "fusion_file": "demo/ontoweee/datasets/battery20/updates/battery-types-20261101/fusion/fused_graph.ttl",
-  "fusion_sha256": "283369f05c6733e264e97ef9479bf8887faeb7708418bcffe13778d464625261",
-  "catalog_sha256": "836b3e56ae68a9c909d605f70ffcd45092aaef8f044edc85f76365fb5567fccd",
+  "selection_manifest": "datasets/battery20/updates/connected-catalogs-20261102/selection.json",
+  "fusion_file": "demo/ontoweee/datasets/battery20/updates/connected-catalogs-20261102/fusion/fused_graph.ttl",
+  "fusion_sha256": "047d12478d34715162e27214ed87b157707deecf9d21d4cc911c54ca14c0d01b",
+  "catalog_sha256": "098982160fcd42ff9ad49bb1a47bd8644f1f7bb9f84596caef3b07028dce6fa2",
   "inputs": [
     {
       "paper": "A Combined Recovery Process of Metals in Spent Lithium-Ion Batteries",
@@ -146,7 +146,7 @@
       "sha256": "4e3506827295457cd3a54fa529f1a5e4331f30beacee3c220411bbbbc1ee5c13"
     }
   ],
-  "source_count": 37,
+  "source_count": 32,
   "case_files": [
     {
       "path": "demo/ontoweee/datasets/battery20/inputs/Bioleaching of Valuable Metals from Spent Lithium-Ion Mobile Phone Batteries Using Aspergillus Niger/source/text.md",
@@ -2025,7 +2025,7 @@
   ],
   "extraction_api_calls": 0,
   "manifest_url": "datasets/battery20/full-traces/data/manifest.json",
-  "fusion_update": "Registered battery type normalization; source samples, all relations, scopes and measurements preserved.",
+  "fusion_update": "Retain only catalog sources with existing paper-entity connections; all 20 paper archives and their observations remain unchanged.",
   "corrections_manifest": "datasets/battery20/updates/numeric-attribution-20261101/corrections.json",
   "correction_history": [
     "datasets/battery20/updates/material-identity-20261101/corrections.json",
@@ -2037,5 +2037,7 @@
     "datasets/battery20/updates/numeric-attribution-20261101/corrections.json"
   ],
   "publication_cleanup": "datasets/battery20/updates/orphan-cleanup-20261101/cleanup.json",
-  "type_normalization_manifest": "datasets/battery20/updates/battery-types-20261101/normalization.json"
+  "type_normalization_manifest": "datasets/battery20/updates/battery-types-20261101/normalization.json",
+  "catalog_file": "datasets/battery20/updates/connected-catalogs-20261102/catalog.json",
+  "catalog_selection_manifest": "datasets/battery20/updates/connected-catalogs-20261102/selection-receipt.json"
 }
