@@ -5,6 +5,33 @@
   "catalog_records": 12,
   "guides": 6,
   "archived_downloads": 290,
+  "bytes": 96124545,
+  "extraction_api_calls": 25,
+  "process_inventory": {
+    "papers": 20,
+    "published_processes": 62
+  },
+  "scope_api_calls": 25,
+  "other_extraction_api_calls": 0,
+  "scope_refresh": {
+    "papers": 20,
+    "catalog_records": 12,
+    "population_scopes": 64,
+    "process_scopes": 62,
+    "unscoped_candidates": 9,
+    "scope_api_calls": 25,
+    "other_extraction_api_calls": 0,
+    "core_entities": 442,
+    "scientific_edges": 1416,
+    "observations": 1073,
+    "scientific_edge_records_unchanged": true,
+    "non_scope_final_payloads_unchanged": true,
+    "original_input_hashes_verified": 20,
+    "original_non_scope_stage_downloads_unchanged": 190,
+    "nodes": 474,
+    "edges": 1784,
+    "scope_source_code_sha256": "27259af79c5a2c7e4aa0a2fe2bf3bcb20c2525f19feab953098f21df5e17585d"
+  },
   "files": [
     {
       "path": "ONTOWEEE_DEMO_GUIDE.md",
@@ -13,8 +40,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 64096,
-      "sha256": "8c48a25b9d570cfa619e88807195b058b206026795da7dd2cf265d0f35880e10"
+      "bytes": 69164,
+      "sha256": "3498a6a53a01394fe8a9cbce345081e8452116163f3ec2001e708ac1b9217411"
     },
     {
       "path": "datasets/battery20/README.md",
@@ -23,8 +50,8 @@
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/anode-leaching.json",
-      "bytes": 317987,
-      "sha256": "897388ff5e4d539f722bb74a1de5cd860bd618b6480dab9e269356876137bece"
+      "bytes": 319143,
+      "sha256": "b3089efa075a26810a7072fa263c3b7eb1f3b4463827301beca4b935f87156de"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/battery-bioleaching.json",
@@ -123,13 +150,13 @@
     },
     {
       "path": "datasets/battery20/full-traces/data/graph.json",
-      "bytes": 3658165,
-      "sha256": "78ad0bd703d99449273b4dc1a59ecf55e786ad0ae1656260bb13316589de16fb"
+      "bytes": 3734598,
+      "sha256": "9cadfb8b0bad0e9f086423200df866a24aafe24b8758ecd64ded47dcb2039a12"
     },
     {
       "path": "datasets/battery20/full-traces/data/manifest.json",
-      "bytes": 135773,
-      "sha256": "afd52dd0e1ada00396c3f4f35e59d5422647fa22677e509d139ab41e946b2256"
+      "bytes": 137534,
+      "sha256": "b073ac056c05ec72cfab710bedd69a3b798c7088908e52446f3f7de753cb0887"
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/anode-leaching/experiment_binding_revision.json",
@@ -203,8 +230,8 @@
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/anode-leaching/triples_final.txt",
-      "bytes": 602328,
-      "sha256": "838d4ce4c824a28a6dd6bb46c0dc06a6cba15d9123a3eda431e193c22fa4f391"
+      "bytes": 649175,
+      "sha256": "804a3311dd8258444d4c94114d89f025ee1c504d7081544158df93227c747875"
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/battery-bioleaching/experiment_binding_revision.json",
@@ -1582,6 +1609,11 @@
       "sha256": "5db41cb195f1e83fda24e2e9c13233a23bbd58b17427cabad5ee07cec9692f70"
     },
     {
+      "path": "datasets/battery20/full-traces/index.html",
+      "bytes": 12920,
+      "sha256": "833b25067bb76b324565513c2cb3d3cdda13523ae2e629623dd2b25af2809fc8"
+    },
+    {
       "path": "datasets/battery20/papers.json",
       "bytes": 6211,
       "sha256": "e61db01c045880e7bbce22e2a3f59297ec6b44d73cc7756bc10bc97ae5f6214d"
@@ -1642,6 +1674,11 @@
       "sha256": "f3bd7b73b342d5cddb273b4f808be88eed281aed0ccd88ce309c244fe5e0b270"
     },
     {
+      "path": "datasets/battery20/updates/process-details-20261103/verification.json",
+      "bytes": 390,
+      "sha256": "377001b5ded85617a5d3af79ad28079262b698338c3463b2b9b0ebef621980f2"
+    },
+    {
       "path": "datasets/battery20/updates/sample-state-20261101/corrections.json",
       "bytes": 342010,
       "sha256": "8505d1e5c2841756c51863e8fe196034378a4871f732622a829e552d6a21aaea"
@@ -1665,6 +1702,21 @@
       "path": "datasets/battery20/updates/table-conditions-20261101/corrections.json",
       "bytes": 2494,
       "sha256": "2c0d58e512b2cbbfa781cf861e1252071037fcffe7d566d55b9a6ddc239e0930"
+    },
+    {
+      "path": "datasets/battery20/updates/text-entity-alignment-20261103/fusion/fused_graph.ttl",
+      "bytes": 3077934,
+      "sha256": "6885b7e21688cb2cdb910c2ed3ec3a440b3ab21d4f268692e143080b142a761f"
+    },
+    {
+      "path": "datasets/battery20/updates/text-entity-alignment-20261103/selection.json",
+      "bytes": 89137,
+      "sha256": "a3bdfbdbdd585c32632ae96ffb10fb9c69365e30e13d303bbf0deb69d08df3ea"
+    },
+    {
+      "path": "datasets/battery20/updates/text-entity-alignment-20261103/verification.json",
+      "bytes": 814,
+      "sha256": "619d4993e0b002608cf603f4a902904fb4d534452ec43d4c2f494b3a941a13ba"
     },
     {
       "path": "datasets/battery20/walkthrough-anode.json",
@@ -1703,13 +1755,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 8190,
-      "sha256": "21b3c6e84b15c7d232ebfc44f6f75986c397245d356c3a827786f4fb6764111b"
+      "bytes": 12894,
+      "sha256": "978fe15c6c523379a118ed2f86d09cbc1e7d24d4ed48df6fc4a978a3c50da8f6"
     },
     {
       "path": "redesign.css",
-      "bytes": 9335,
-      "sha256": "bb2c7933766e3954addab284faf29fad4e730761748553a2147c6e2f2bce397d"
+      "bytes": 13802,
+      "sha256": "672f7647dd40503f277ab9a19e445616157b328120fee3e0db3c33ec4a9b9293"
     },
     {
       "path": "replay.js",
@@ -1753,8 +1805,8 @@
     },
     {
       "path": "walkthrough.js",
-      "bytes": 6411,
-      "sha256": "80f66f2254c325685337bc0d2b215ee86307a6aea717ea510a2015000b07bfe4"
+      "bytes": 6431,
+      "sha256": "544de085e883f94b751b4c0523956105027be0038d34e93ded6ffb1797139385"
     },
     {
       "path": "walkthrough.json",
@@ -1762,31 +1814,48 @@
       "sha256": "229de819ab3449e3ce85cb5786c9f9af06fbca95e4e9371cd4c5dcf02078128d"
     }
   ],
-  "bytes": 92802894,
-  "extraction_api_calls": 25,
-  "process_inventory": {
-    "papers": 20,
-    "published_processes": 62
+  "release_date": "2026-11-03",
+  "graph_sha256": "9cadfb8b0bad0e9f086423200df866a24aafe24b8758ecd64ded47dcb2039a12",
+  "process_details": {
+    "processes": 62,
+    "with_overview": 51,
+    "with_reagents": 36,
+    "with_equipment": 31,
+    "settings_in_frozen_results": 48,
+    "settings_with_unique_process": 47,
+    "scientific_and_fusion_edges_unchanged": true,
+    "extraction_api_calls": 0,
+    "fusion_ttl_unchanged": true,
+    "tests": {
+      "python": 5,
+      "demo_test_files": 22
+    },
+    "hcl_process_evidence_exact_match_verified": true
   },
-  "scope_api_calls": 25,
-  "other_extraction_api_calls": 0,
-  "scope_refresh": {
-    "papers": 20,
-    "catalog_records": 12,
-    "population_scopes": 64,
-    "process_scopes": 62,
-    "unscoped_candidates": 9,
-    "scope_api_calls": 25,
+  "entity_alignment": {
+    "passed": true,
+    "paper": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
+    "mapping": {
+      "Material_active_material": "Component_anode_active_material"
+    },
+    "original_inputs_verified": 20,
+    "other_papers_reused": 19,
+    "alignment_api_calls": 1,
     "other_extraction_api_calls": 0,
-    "core_entities": 442,
-    "scientific_edges": 1416,
-    "observations": 1073,
-    "scientific_edge_records_unchanged": true,
-    "non_scope_final_payloads_unchanged": true,
-    "original_input_hashes_verified": 20,
-    "original_non_scope_stage_downloads_unchanged": 190,
-    "nodes": 474,
-    "edges": 1784,
-    "scope_source_code_sha256": "27259af79c5a2c7e4aa0a2fe2bf3bcb20c2525f19feab953098f21df5e17585d"
-  }
+    "redirected_existing_relations": 1,
+    "measurement_values_units_cells_evidence_unchanged": true,
+    "unrelated_scientific_edges_unchanged": 1415,
+    "scientific_edges_before": 1416,
+    "scientific_edges_after": 1416,
+    "observations_before": 1078,
+    "observations_after": 1078,
+    "nodes_before": 473,
+    "nodes_after": 473,
+    "frozen_cross_source_links_and_records_unchanged": true,
+    "tests": {
+      "python_passed": 37,
+      "demo_test_files_passed": 22
+    }
+  },
+  "release_extraction_api_calls": 0
 }

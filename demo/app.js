@@ -97,6 +97,7 @@ function setView(view,loadDefault=true){
   document.querySelectorAll('[data-view]').forEach(button=>button.classList.toggle('active',button.dataset.view===view));
   $('#fusion-view').hidden=view!=='fusion'; $('#replay-view').hidden=view!=='replay';
   if($('#papers-view'))$('#papers-view').hidden=view!=='papers';
+  if($('#about-view'))$('#about-view').hidden=view!=='about';
   $('#fusion-controls').hidden=view!=='fusion'; $('#case-on-graph').hidden=view!=='replay';
   $('#case-controls').hidden=view!=='replay';
   walkthrough?.viewChanged(view);
@@ -253,12 +254,73 @@ function paint(){
   }ctx.globalAlpha=1;
   if(!state.shownNodes.length){ctx.fillStyle='#68817e';ctx.font='14px sans-serif';ctx.fillText('No entities match. Clear the focus or adjust the filters.',25,height/2);}
 }
+function contextSummary(value){
+  const summary=text(value).trim();if(!summary)return '';
+  return summary.length>220?`<details class="context-summary"><summary><span>${esc(summary)}</span><small class="context-more">Read more</small><small class="context-less">Read less</small></summary></details>`:`<p class="sample-context">${esc(summary)}</p>`;
+}
+function processDetailsCard(node){
+  const process=node.process;if(node.type!=='Process'||!process)return '';
+  const overview=process.overview?`<section class="node-scope"><h4>Method overview</h4>${contextSummary(process.overview)}</section>`:'';
+  const resources=fields({Reagents:process.reagents,Equipment:process.equipment});
+  const settings=(process.settings||[]).map(setting=>{
+    const conditions=setting.condition_summary?contextSummary(setting.condition_summary):
+      (setting.condition_keys||[]).map(c=>fields({[String(c.key).replaceAll('_',' ')]:[text(c.value),c.unit].filter(Boolean).join(' ')})).join('');
+    return `<details class="process-setting"><summary>${esc(setting.name||'Experimental setting')}</summary>${fields({Sample:setting.sample,Treatment:setting.treatment})}${conditions}</details>`;
+  }).join('');
+  return overview+(resources?`<section class="node-scope">${resources}</section>`:'')+
+    (settings?`<section class="node-scope"><h4>Experimental settings · ${process.settings.length}</h4><p class="muted">Conditions vary by experiment. Open a result for its exact conditions.</p>${settings}</section>`:'');
+}
+function nodeScopeCards(node){
+  return (node.scopes||[]).map((scope,index)=>{
+    const method=node.type==='Process'&&text(scope.methodFamily);
+    const sample=['Product','Component'].includes(node.type)&&(text(scope.sampleType)||text(scope.populationGranularity));
+    if(!method&&!sample)return '';
+    const body=method?`<p class="method-family">${esc(method)}</p>`:
+      `${fields({Type:scope.sampleType,Granularity:scope.populationGranularity,'Sample size':scope.sampleSize})}${contextSummary(scope.scopeDescription||scope.description)}`;
+    const available=state.data.cases.some(item=>item.paper===node.source);
+    return `<section class="node-scope"><h4>${method?'Method family':'Study sample'}</h4>${body}${available?`<button class="scope-evidence" data-scope-index="${index}">View ${method?'method':'sample'} evidence →</button>`:''}</section>`;
+  }).join('');
+}
+async function openScopeEvidence(node,scope){
+  const item=state.data.cases.find(item=>item.paper===node.source);if(!item)return;
+  await openReplay(item.id);
+  if(state.case?.paper!==node.source)return;
+  const records=state.case.stages.find(stage=>stage.id==='scope')?.records||[];
+  const matches=records.filter(record=>(record.root_entity_ids||[]).some(id=>state.case.entity_map[id]===node.id)&&
+    (text(scope.methodFamily)?record.method_family===text(scope.methodFamily):!record.method_family)&&
+    (!list(scope.evidenceSpan).length||list(scope.evidenceSpan).includes(record.evidence_span)));
+  state.stage='scope';state.sourceTab='text';
+  if(matches.length===1){
+    const record=matches[0];
+    state.spotlight={case:state.case.id,target:{stage:'scope',kind:'scope',data:record,raw:record},label:scope.methodFamily?'METHOD EVIDENCE':'SAMPLE EVIDENCE'};
+    locateRecord(record);
+  }else notify('No unique Scope record matches this entity. Browse the paper’s Scope records.');
+  renderStage();scrollOutputTo('#walkthrough-target');
+}
+async function openProcessEvidence(node){
+  const item=state.data.cases.find(item=>item.paper===node.source);if(!item)return;
+  await openReplay(item.id);if(state.case?.paper!==node.source)return;
+  state.stage='process';state.sourceTab='text';
+  const matches=(state.case.process_inventory?.final||[]).filter(record=>record.node_id===node.id);
+  if(matches.length===1){
+    const record=matches[0];
+    state.spotlight={case:state.case.id,target:{stage:'process',kind:'published_process',data:record,raw:record},label:'PROCESS EVIDENCE'};
+    const quotes=[record.evidence_span,...(state.case.stages.find(stage=>stage.id==='scope')?.records||[])
+      .filter(scope=>(scope.root_entity_ids||[]).some(id=>state.case.entity_map[id]===node.id)).map(scope=>scope.evidence_span)];
+    const quote=quotes.find(value=>value&&state.case.text.includes(value));
+    locateRecord(quote?{evidence_span:quote}:record);
+  }
+  renderStage();scrollOutputTo('#walkthrough-target');
+}
 function selectNode(id){
   if(displayNode(id)?.group){selectGroup(id);return;}
   const node=state.nodes.get(id);if(!node)return;state.selected={kind:'node',id};state.navPath=state.hierarchyData.path(id);updateNavigation();draw();
   const connections=state.shownEdges.filter(e=>e.source===id||e.target===id);
   const classification=state.hierarchyData.classifications.get(id);
-  $('#inspector').innerHTML=`<span class="tag">${esc(node.type)}${isCatalog(node)?' · CATALOG':''}</span><h3>${esc(node.label)}</h3><p>${esc(sourceName(node.source))}</p><div class="button-row"><button id="expand-node">Expand neighborhood</button><button id="node-replay">Open paper replay</button></div>${fields(node.attrs)}${node.scopes.length?'<h4>Scope · '+node.scopes.length+'</h4>'+node.scopes.map(s=>`<div class="observation">${fields(s)}</div>`).join(''):''}<h4>Relations in this view · ${connections.length}</h4><div id="connections"></div><details><summary>Node IRI</summary><p class="edge-key">${esc(id)}</p></details>`;
+  const scopeCards=nodeScopeCards(node);
+  const attributes=Object.fromEntries(Object.entries(node.attrs||{}).filter(([key])=>!['label','description','canonicalType'].includes(key)).map(([key,value])=>[key.replace(/([a-z])([A-Z])/g,'$1 $2').replace(/^./,c=>c.toUpperCase()),value]));
+  const description=scopeCards?'':contextSummary(node.attrs?.description);
+  $('#inspector').innerHTML=`<span class="tag">${esc(node.type)}${isCatalog(node)?' · CATALOG':''}</span><h3>${esc(node.label)}</h3><p>${esc(sourceName(node.source))}</p><div class="button-row"><button id="expand-node">Expand neighborhood</button><button id="node-replay">${node.type==='Process'?'View process evidence':'Open paper replay'}</button></div>${description}${fields(attributes)}${scopeCards}${processDetailsCard(node)}<h4>Relations in this view · ${connections.length}</h4><div id="connections"></div>${jsonDetails(node)}`;
   if(classification){
     const note=document.createElement('p');note.className='notice';
     note.textContent=`Display group: ${classification.label}. ${classification.basis}; matched “${classification.matchedLabel}”. Vocabulary source: “${state.nodes.get(classification.declaredBy).label}” (${sourceName(state.nodes.get(classification.declaredBy).source)}). This is browsing only: no entity equivalence, sample membership or inherited experimental conditions are asserted; entities and measurements remain separate.`;
@@ -266,7 +328,8 @@ function selectNode(id){
   }
   $('#expand-node').onclick=()=>focusNode(id);
   const match=state.data.cases.find(c=>c.paper===node.source);$('#node-replay').hidden=!match;
-  $('#node-replay').onclick=()=>openReplay(match.id);
+  $('#node-replay').onclick=()=>node.type==='Process'?openProcessEvidence(node):openReplay(match.id);
+  $('#inspector').querySelectorAll('.scope-evidence').forEach(button=>{button.onclick=()=>openScopeEvidence(node,node.scopes[Number(button.dataset.scopeIndex)]);});
   for(const edge of connections){const button=document.createElement('button');button.className='connection';
       button.innerHTML=`${esc(relationName(edge))} <small>${esc(displayNode(edge.source===id?edge.target:edge.source).label)} · ${edge.members?edge.members.length+' underlying relations':edge.records.length+' evidence / observation records'}</small>`;
     button.onclick=()=>selectEdge(edge.id);$('#connections').append(button);}
@@ -600,7 +663,7 @@ function renderStage(){
   const located=cellTarget||spotlight||state.trace?.active;
   if(located?.stage===stage.id&&!$('#record-search').value){
     const match=Replay.render(located,{locate:locateRecord,graph:graphRecord});match.id=cellTarget?'cell-target':spotlight?'walkthrough-target':'trace-target';match.classList.add('trace-highlight');
-    const tag=document.createElement('div');tag.className='trace-match-label';tag.textContent=cellTarget?'CELL EXTRACTION':spotlight?'WALKTHROUGH EVIDENCE':'LOCATED ARCHIVED RECORD';match.prepend(tag);container.append(match);
+    const tag=document.createElement('div');tag.className='trace-match-label';tag.textContent=cellTarget?'CELL EXTRACTION':spotlight?(state.spotlight.label||'WALKTHROUGH EVIDENCE'):'LOCATED ARCHIVED RECORD';match.prepend(tag);container.append(match);
   }
   if(stage.id==='process'&&renderProcessInventory(container))return;
   const entries=Replay.entries(stage),query=$('#record-search').value.toLowerCase();
@@ -632,6 +695,7 @@ function configureDataset(){
   const catalogs=state.data.sources.filter(source=>source.kind==='catalog').length;
   $('#source-filter').options[0].textContent=`All ${papers+catalogs} sources`;
   $('#snapshot-counts').textContent=`${papers} papers · ${catalogs} catalog records`;
+  if($('#about-dataset'))$('#about-dataset').textContent=`${papers} papers + ${catalogs} product catalog records`;
   $('#snapshot-manifest').href=state.data.snapshot.manifest_url||'data/manifest.json';
 }
 async function start(){

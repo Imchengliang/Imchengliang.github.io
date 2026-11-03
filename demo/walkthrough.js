@@ -30,7 +30,7 @@ const Walkthrough = (() => {
     panel.innerHTML='<div class="walkthrough-heading"><span id="walkthrough-progress-label" class="eyebrow"></span><button id="walkthrough-exit">Exit walkthrough</button></div><h2 id="walkthrough-title"></h2><p id="walkthrough-question"></p><div class="walkthrough-copy"><p><b>What to inspect</b><span id="walkthrough-look"></span></p><p><b>Limitation</b><span id="walkthrough-boundary"></span></p></div><p id="walkthrough-error" role="status" hidden></p><progress id="walkthrough-progress" aria-label="Walkthrough progress"></progress><div class="walkthrough-navigation"><button id="walkthrough-previous">← Previous</button><span>Explore freely. Reopen step returns to its archived target.</span><button id="walkthrough-reopen">Reopen step</button><button id="walkthrough-next">Next →</button></div>';
     const $=selector=>panel.querySelector(selector);
     function render() {
-      panel.hidden=!active||view==='papers';start.disabled=busy||!picker.selectedOptions[0]?.dataset.guide;start.textContent=guide?'Restart walkthrough':'Start walkthrough';
+      panel.hidden=!active||!['fusion','replay'].includes(view);start.disabled=busy||!picker.selectedOptions[0]?.dataset.guide;start.textContent=guide?'Restart walkthrough':'Start walkthrough';
       back.hidden=!active||view!=='fusion'||!guide?.steps[index]?.stage;
       back.disabled=busy;back.textContent=`← Return to step ${index+1}`;
       document.querySelector('#walkthrough-summary').textContent=picker.selectedOptions[0]?.dataset.summary||'';
