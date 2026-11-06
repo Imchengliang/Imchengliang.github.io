@@ -1,0 +1,52 @@
+/* Industry-facing queries over reviewed frozen records. */
+.shell:has(#overview-view:not([hidden])){grid-template-columns:minmax(0,1fr)}
+.shell:has(#overview-view:not([hidden]))>.sidebar{display:none}
+#overview-view{max-width:1440px;margin:auto;padding:28px 36px 48px}
+#battery-overview [hidden]{display:none!important}
+.battery-heading{display:flex;justify-content:space-between;align-items:center;gap:32px;margin-bottom:24px}
+.battery-heading h2{font-size:34px;line-height:1.2;margin:10px 0}
+.battery-heading p{max-width:670px;line-height:1.65;color:var(--muted);margin:0}
+.battery-query-panel{padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.battery-query-form label{display:grid;gap:7px;font-size:12px;color:var(--muted);margin:0}
+.battery-query-form select,.battery-query-form input{width:100%;min-width:0;margin:0;font-size:13px}
+.battery-reset{justify-self:start;height:38px;font-size:12px}
+.battery-results{margin-top:28px}
+.battery-results-heading{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.battery-results-heading h3{font-size:21px;margin:0}
+.battery-results-note{font-size:13px;line-height:1.65;color:var(--muted);margin:12px 0 20px;max-width:1000px}
+.battery-table-scroll{overflow:auto;max-height:650px;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+.battery-table-scroll table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed;min-width:870px}
+.battery-table-scroll td,.battery-table-scroll th{white-space:normal}
+.battery-table-scroll th{position:sticky;top:0;z-index:1;text-align:left;background:#edf4f3;padding:13px 14px;font-size:11px;text-transform:uppercase;letter-spacing:.3px;color:var(--muted)}
+.battery-table-scroll td{vertical-align:top;border-top:1px solid var(--line);padding:15px 14px;line-height:1.6;overflow-wrap:anywhere}
+.battery-table-scroll td small{display:block;color:var(--muted);font-size:11px;line-height:1.6;margin-top:5px}
+.battery-table-scroll details{margin-top:6px;font-size:12px}
+.battery-table-scroll summary{cursor:pointer;color:var(--teal)}
+.battery-table-scroll details p{max-height:180px;overflow:auto}
+.battery-paper{font-size:11px;color:var(--muted);display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.battery-row-actions{display:flex;gap:6px;margin-top:8px}
+.battery-row-actions button{font-size:11px;padding:5px 9px}
+.battery-empty{padding:32px;background:var(--surface);border:1px dashed var(--line);border-radius:8px}
+.battery-empty h4{margin:0 0 8px}
+.battery-empty p{color:var(--muted);font-size:13px;margin:0}
+.battery-audit{margin-top:32px;border-top:1px solid var(--line);padding-top:20px}
+.battery-audit>summary{cursor:pointer;font-size:14px;color:var(--teal)}
+.battery-audit>p{font-size:13px;color:var(--muted);line-height:1.7}
+.battery-audit-table .battery-table-scroll{max-height:550px}
+.battery-audit-table td{font-size:12px}
+.battery-query-form{display:block}
+.battery-switch{display:flex;gap:4px;flex-wrap:wrap}
+.battery-switch button{font-size:13px;padding:9px 16px;border-color:transparent;background:transparent}
+.battery-switch button.active{background:var(--teal-bg);border-color:var(--teal);color:var(--teal)}
+.battery-query-panel>.battery-switch{margin-bottom:22px}
+.battery-primary-filters{display:grid;grid-template-columns:minmax(180px,2fr) minmax(160px,1fr) auto auto;gap:14px;align-items:end}
+.battery-primary-filters>button{height:38px;font-size:12px}
+.battery-advanced{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.battery-active-filters{font-size:12px;color:var(--muted);line-height:1.7;margin:16px 0 0}
+.battery-summary-settings{margin-top:20px;border-top:1px solid var(--line);padding-top:16px}
+.battery-summary-settings>summary{font-size:13px;cursor:pointer;color:var(--teal)}
+.battery-summary-settings>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.battery-summary-settings>p{font-size:12px;color:var(--muted);line-height:1.6}
+.battery-result-count{display:block;font-size:12px;color:var(--muted);margin-top:7px}
+@media(max-width:1000px){.battery-advanced{grid-template-columns:repeat(2,minmax(0,1fr))}.battery-results-heading{align-items:flex-start;flex-direction:column}}
+@media(max-width:700px){header{flex-wrap:wrap;height:auto!important;gap:10px;padding:14px 18px!important}header nav{flex-wrap:wrap;gap:3px}header .tab{padding:8px 10px;font-size:12px}#overview-view{padding:22px 16px}.battery-heading h2{font-size:28px}.battery-primary-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.battery-primary-filters>button{justify-self:start}.battery-advanced,.battery-summary-settings>div{grid-template-columns:1fr}.battery-query-panel{padding:16px}.battery-switch button{padding:9px 12px}}

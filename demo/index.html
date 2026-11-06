@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OntoWEEE</title><link rel="stylesheet" href="style.css?v=record-hierarchy"><link rel="stylesheet" href="redesign.css?v=process-details-20261103"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <title>OntoWEEE</title><link rel="stylesheet" href="style.css?v=record-hierarchy"><link rel="stylesheet" href="redesign.css?v=process-details-20261103"><link rel="stylesheet" href="battery-overview.css?v=battery-browser-20261106"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
 </head>
-<body data-graph="datasets/battery20/full-traces/data/graph.json" data-papers="datasets/battery20/papers.json">
+<body data-overview="datasets/battery20/overview/data.json" data-graph="datasets/battery20/full-traces/data/graph.json" data-papers="datasets/battery20/papers.json">
   <header>
     <a class="brand" href="index.html"><span class="brand-mark">O<span>•</span></span><span>OntoWEEE</span></a>
-    <nav aria-label="Main views"><button class="tab active" data-view="fusion">Knowledge graph</button><button class="tab" data-view="replay">Extraction trace</button><button class="tab" data-view="papers">Paper</button><button class="tab" data-view="about">About</button></nav>
+    <nav aria-label="Main views"><button class="tab active" data-view="overview">Battery overview</button><button class="tab" data-view="fusion">Knowledge graph</button><button class="tab" data-view="replay">Extraction trace</button><button class="tab" data-view="papers">Paper</button><button class="tab" data-view="about">About</button></nav>
   </header>
   <div class="shell">
     <aside class="sidebar">
@@ -35,7 +35,8 @@
     </aside>
     <main>
       <section id="walkthrough-panel" class="walkthrough-panel" aria-label="Current walkthrough step" hidden></section>
-      <section id="fusion-view" class="view">
+      <section id="overview-view" class="view" aria-label="Battery feedstock overview"><div id="battery-overview">Loading reviewed feedstocks…</div></section>
+      <section id="fusion-view" class="view" hidden>
         <div class="view-header"><div><div class="eyebrow">01 / KNOWLEDGE GRAPH</div><h2>Fused graph</h2></div><button id="walkthrough-return" hidden>← Return to walkthrough step</button><span id="visible-stats" class="muted"></span></div>
         <div class="graph-layout">
           <div class="graph-pane"><div class="graph-navigation"><button id="graph-back" disabled>← Back</button><nav id="graph-path" aria-label="Graph location"></nav></div><canvas id="graph" tabindex="0" aria-label="Fused graph: drag a node to move it and its attached edges; drag empty space to pan; scroll to zoom; click to inspect. Entity search is also available in the sidebar."></canvas><div class="graph-tools"><button id="zoom-in" aria-label="Zoom in">＋</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit">Fit view</button><button id="clear-focus">Clear focus</button></div><div class="graph-legend" aria-label="Graph legend"><span><i class="lg-circle"></i>Paper-derived entity</span><span><i class="lg-square"></i>Catalog record</span><span><i class="lg-line"></i>Extracted relation</span><span><i class="lg-dash"></i>Cross-source fusion link</span><span><i class="lg-group">n</i>Display group (not an entity)</span></div><div id="graph-caption" class="graph-caption"></div><div id="graph-tooltip" role="tooltip" hidden></div><div class="graph-hint">Drag a node to move it · Drag empty space to pan · Scroll to zoom · Double-click to expand</div></div>
@@ -122,6 +123,6 @@
       <div id="status" role="status">Loading frozen graph…</div>
     </main>
   </div>
-  <script src="hierarchy.js?v=component-name-groups-20261101"></script><script src="replay.js?v=scope-refresh-20261102"></script><script src="trace.js?v=multi-quote-anchors"></script><script src="walkthrough.js?v=about-20261103"></script><script src="app.js?v=process-details-20261103"></script>
+  <script src="hierarchy.js?v=component-name-groups-20261101"></script><script src="replay.js?v=scope-refresh-20261102"></script><script src="trace.js?v=multi-quote-anchors"></script><script src="walkthrough.js?v=about-20261103"></script><script src="battery-overview.js?v=battery-browser-20261106"></script><script src="battery-static.js?v=battery-browser-20261106"></script><script src="app.js?v=battery-browser-20261106"></script>
 </body>
 </html>

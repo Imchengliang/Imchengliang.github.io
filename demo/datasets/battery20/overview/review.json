@@ -1,0 +1,1044 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-04",
+  "classification_basis": "Source passages and frozen final records, reviewed at sample-group level.",
+  "chemistries": {
+    "lco": "LiCoO2-related (LCO)",
+    "nmc": "Ternary / NMC",
+    "lfp": "Lithium iron phosphate (LFP)",
+    "mixed-li-ion": "Mixed lithium-ion chemistries",
+    "li-ion-unspecified": "Lithium-ion, chemistry unspecified",
+    "mixed-chemistry": "Mixed battery chemistries",
+    "chemistry-unspecified": "Battery chemistry unspecified",
+    "ni-cd": "Nickel-cadmium (Ni-Cd)",
+    "ni-mh": "Nickel-metal hydride (Ni-MH)"
+  },
+  "streams": {
+    "whole": "Whole batteries",
+    "cathode": "Cathode feedstocks",
+    "anode": "Anode feedstocks",
+    "mixed-electrodes": "Mixed electrode materials",
+    "separated-fractions": "Separated material fractions",
+    "intermediates": "Recycling intermediates"
+  },
+  "origins": {
+    "recycling-company": "Recycling company",
+    "manufacturing-scrap": "Manufacturing scrap",
+    "end-of-life-phones": "End-of-life mobile phones",
+    "spent-batteries": "Spent batteries",
+    "collection-boxes": "Collection boxes",
+    "power-battery": "Power battery",
+    "consumer-electronics": "Consumer electronics",
+    "battery-recycling": "Battery recycling"
+  },
+  "studies": [
+    {
+      "case_id": "source-98d7e11c7ecce524",
+      "paper": "A Combined Recovery Process of Metals in Spent Lithium-Ion Batteries",
+      "input_sha256": "f9e141c47f82b215669d93779243eb9804eb927dd2c73590169666a712e211f5",
+      "text_sha256": "d4f3b47ea7958e2b131731a55ed2d91b3470ba065860e34b2b79f961c12498bc",
+      "profiles": [
+        {
+          "id": "source-98d7e11c7ecce524/whole",
+          "label": "Whole spent lithium-ion batteries",
+          "chemistry": "lco",
+          "stream": "whole",
+          "origin": "recycling-company",
+          "state": "Dismantled for whole-battery analysis",
+          "entity_ids": [
+            "Component_lithium_ion_battery"
+          ],
+          "composition": [
+            {
+              "subject_ids": [
+                "Component_lithium_ion_battery"
+              ],
+              "basis": "mass"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "note": "",
+          "evidence": [
+            "The spent LIBs used in this study were provided by TES-AMM Co. Ltd. LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively. The components of LIBs were separated and measured in the laboratory as follows. First, the crust was removed with pincers and saws. Then, all of the parts were put into hydrochloric acid, heated and agitated at 90 -C for 4 h, dissolving all of the metals. The concentrations of different metals were measured with an inductive coupled plasma atomic emission spectrometer (ICP-AES). Finally, the content of each metal in the battery was calculated. The results indicated that Co accounted for 16% and Li, Cu, Al, Fe accounted for 2%, 10%, 3%, and 19% of the mass, respectively."
+          ],
+          "method_families": {
+            "Process_chemical_precipitation_for_Co_and_Li_recovery": "Precipitation"
+          }
+        },
+        {
+          "id": "source-98d7e11c7ecce524/electrodes",
+          "label": "Recovered mixed electrode fraction",
+          "chemistry": "lco",
+          "stream": "mixed-electrodes",
+          "origin": "recycling-company",
+          "state": "Crushed, ultrasonically washed and screened",
+          "entity_ids": [
+            "Component_electrode"
+          ],
+          "composition": [
+            {
+              "subject_ids": [
+                "Component_electrode"
+              ],
+              "elements": [
+                "Co"
+              ],
+              "basis": "mass"
+            }
+          ],
+          "process_ids": [
+            "Process_hydrochloric_acid_leaching_of_recovered_electrodes",
+            "Process_chemical_precipitation_for_Co_and_Li_recovery"
+          ],
+          "method_family": "Acid leaching",
+          "note": "The reported 2% impurity total is excluded from individual Al, Fe and Cu contents.",
+          "evidence": [
+            "This work proposes a new process of recovering Co from spent Li-ion batteries (LIBs) by a combination of crushing, ultrasonic washing, acid leaching and precipitation, in which ultrasonic washing was used for the first time as an alternative process to improve the recovery efficiency of Co and reduce energy consumption and pollution. Spent LIBs were crushed with a 12 mm aperture screen, and the undersize products were put into an ultrasonic washing container to separate electrode materials from their support substrate. The washed materials were filtered through a 2 mm aperture screen to get underflow products, namely recovered electrodes. Ninety two percent of the Co was transferred to the recovered electrodes where Co accounted for 28% of the mass and impurities, including Al, Fe, and Cu, accounted for 2%. The valuable materials left in 2–12 mm products, including Cu, Al, and Fe, were presented as thin sheets, and could be easily separated. The recovered electrodes were leached with 4.0 M HCl for 2.0 h, at 80 ^∘C, along with concurrent agitation. Ninety seven percent of the Li and 99% of the Co in recovered electrodes could be dissolved. The impurities could be removed at pH 4.5–6.0 with little loss of Co by chemical precipitation. This process is feasible for recycling spent LIBs in scale-up."
+          ],
+          "method_families": {
+            "Process_chemical_precipitation_for_Co_and_Li_recovery": "Precipitation"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "phones",
+      "paper": "A Comprehensive Characterization of End-of-Life Mobile Phones for Secondary Material Resources Identification",
+      "input_sha256": "334d967c792c7bb0529662add6c435444649a5219b198f90987e0c32d360dbcb",
+      "text_sha256": "4cfa28e6bd345b15e77a56359c43bfcaa3b6e7e5f046ec74642071b2cfdb5c28",
+      "profiles": [
+        {
+          "id": "phones/phone-batteries",
+          "label": "Batteries dismantled from 20 phone models",
+          "chemistry": "mixed-chemistry",
+          "stream": "whole",
+          "origin": "end-of-life-phones",
+          "state": "Manually dismantled",
+          "entity_ids": [
+            "Component_battery",
+            "Component_lithium_ion_battery",
+            "Component_nickel_metal_hydride_battery"
+          ],
+          "composition": [],
+          "process_ids": [],
+          "method_family": null,
+          "note": "The study reports battery mass shares in phones. Its elemental table concerns electronic parts.",
+          "evidence": [
+            "All the batteries were Li-ion, with the exception of the sample n. 20 which was a Ni-MH."
+          ],
+          "method_families": {}
+        }
+      ]
+    },
+    {
+      "case_id": "source-117f295827b35c8c",
+      "paper": "A Copper-Catalyzed Bioleaching Process for Enhancement of Cobalt Dissolution from Spent Lithium-Ion Batteries",
+      "input_sha256": "c1ac1952bf74a2c96eaad85b903b4d4b5f94abfc64eebad6cddcd83fefdf2ff2",
+      "text_sha256": "275cd352e9935ba9da6d3cde530459ee772b858c267c10e1b37620c4397216d5",
+      "profiles": [
+        {
+          "id": "source-117f295827b35c8c/cathode",
+          "label": "Ground cathode powder",
+          "chemistry": "li-ion-unspecified",
+          "stream": "cathode",
+          "origin": "recycling-company",
+          "state": "Ground and sieved to 0.075 mm",
+          "entity_ids": [
+            "Component_cathode_active_material"
+          ],
+          "composition": [
+            {
+              "element_axis": "column",
+              "basis": "unspecified",
+              "columns": [
+                1,
+                2,
+                3,
+                5
+              ],
+              "table_id": "TABLE_A Copper-Catalyzed Bioleaching Process for Enhancement of Cobalt Dissolution from Spent Lithium-Ion Batteries_0001"
+            }
+          ],
+          "process_ids": [
+            "Process_A__ferrooxidans_bioleaching_with_0_01_g_L_copper_ion",
+            "Process_A__ferrooxidans_bioleaching_with_0_1_g_L_copper_ion",
+            "Process_A__ferrooxidans_bioleaching_with_0_25_g_L_copper_ion",
+            "Process_A__ferrooxidans_bioleaching_with_0_50_g_L_copper_ion",
+            "Process_A__ferrooxidans_bioleaching_with_0_75_g_L_copper_ion",
+            "Process_A__ferrooxidans_bioleaching_with_1_0_g_L_copper_ion",
+            "Process_A__ferrooxidans_bioleaching_without_copper_ion__control_",
+            "Process_reviewed_5a8f38ab000de8"
+          ],
+          "method_family": "Bioleaching",
+          "note": "EDX percentages have an unspecified mass/atomic basis. The Ki header is unresolved. Sediment compositions are post-treatment records.",
+          "evidence": [
+            "The spent lithium-ion batteries used in the experiments were provided by Youteli Co. Ltd. in Jiangxi Province of China, which were manually separated into many portions: plastic shell, cathode material, anode material and aluminum foil. Then the cathode material was grinded into powder and sieved to 0.075 mm, oversize material was pulverized and added to the undersize fraction. EDX analysis ofthe powder was carried out, and chemical compositions were shown in Table 1."
+          ],
+          "method_families": {}
+        }
+      ]
+    },
+    {
+      "case_id": "source-0b9440848ba21f0c",
+      "paper": "A Promising Physical Method for Recovery of Licoo 2 and Graphite from Spent Lithium-Ion Batteries Grinding Flotation",
+      "input_sha256": "399515c4601e18277033425076364e2dbb9897e9bc1105f89fceaed25e41b4c7",
+      "text_sha256": "7d90b14493d95251d9bc3168111cbbc581eedf5ede40177a0d7bdb25882a5a49",
+      "profiles": [
+        {
+          "id": "source-0b9440848ba21f0c/electrodes",
+          "label": "LiCoO2 / graphite electrode powder",
+          "chemistry": "lco",
+          "stream": "mixed-electrodes",
+          "origin": "spent-batteries",
+          "state": "Crushed and screened below 0.074 mm",
+          "entity_ids": [
+            "Component_electrode",
+            "Material_mixed_electrode_material"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_grinding_flotation"
+          ],
+          "method_family": "Flotation",
+          "note": "66.75% describes LiCoO2 compound content. XPS surface percentages are excluded from elemental mass summaries.",
+          "evidence": [
+            "In order to avoid short-circuit and self-ignition, 100 pieces of spent LIBs with the same type were discharged completely in 5 wt% sodium chloride solution for 48 h and dried naturally for 24 h afterwards. All batteries were manually disassembled into metallic shell, cathode strips, anode strips and organic separators. Then the cathode strips and anode strips were placed in the impact crusher with the number ratio 1:1. After crushing and screening, the fine powder under 0.074 mm was mixed electrode materials (LiCoO2 and graphite). The content of LiCoO2 in mixed electrode powder was measured by the combination of X-ray fluorescence (XRF, Bruker S8 Tiger, Germany) and X-ray diffraction (XRD, Bruker D8 Advance, Germany). Results indicated that LiCoO2 accounted for 66.75% of the mixed electrode powder."
+          ],
+          "method_families": {}
+        }
+      ]
+    },
+    {
+      "case_id": "smartphones",
+      "paper": "Assessment of Smartphones’ Components and Materials for a Recycling Perspective- Tendencies of Composition and Target Elements",
+      "input_sha256": "6acd541c4bc23b29c0a7cff37558ce21dc93c112835ed83b67583e5323cac5b9",
+      "text_sha256": "d6cc4f900510f51e1a402bd0cf48f35267033418b7f24b7244ab78aad29b5e01",
+      "profiles": [
+        {
+          "id": "smartphones/before",
+          "label": "Phone batteries manufactured before 2015",
+          "chemistry": "chemistry-unspecified",
+          "stream": "whole",
+          "origin": "end-of-life-phones",
+          "state": "Separated batteries, before-2015 cohort",
+          "entity_ids": [
+            "Component_battery"
+          ],
+          "composition": [
+            {
+              "element_axis": "row",
+              "basis": "mass",
+              "columns": [
+                7
+              ],
+              "assay": "Elemental analysis, before 2015",
+              "table_id": "TABLE_Assessment of Smartphones’ Components and Materials for a Recycling Perspective- Tendencies of Composition and Target Elements_0002"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "note": "",
+          "evidence": [
+            "EoL smartphones were directly collected from users, through announcements on social media. To improve representativeness, a well distribution of manufacturing years, variety of brands, and devices in good conditions were prioritized: devices from nine different brands were collected, and no model was repeated."
+          ],
+          "method_families": {}
+        },
+        {
+          "id": "smartphones/after",
+          "label": "Phone batteries manufactured after 2015",
+          "chemistry": "chemistry-unspecified",
+          "stream": "whole",
+          "origin": "end-of-life-phones",
+          "state": "Separated batteries, after-2015 cohort",
+          "entity_ids": [
+            "Component_battery"
+          ],
+          "composition": [
+            {
+              "element_axis": "row",
+              "basis": "mass",
+              "columns": [
+                8
+              ],
+              "assay": "Elemental analysis, after 2015",
+              "table_id": "TABLE_Assessment of Smartphones’ Components and Materials for a Recycling Perspective- Tendencies of Composition and Target Elements_0002"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "note": "Table 3 distributes each element among phone components. Those shares are excluded from battery concentration summaries.",
+          "evidence": [
+            "EoL smartphones were directly collected from users, through announcements on social media. To improve representativeness, a well distribution of manufacturing years, variety of brands, and devices in good conditions were prioritized: devices from nine different brands were collected, and no model was repeated."
+          ],
+          "method_families": {}
+        }
+      ]
+    },
+    {
+      "case_id": "battery-bioleaching",
+      "paper": "Bioleaching of Valuable Metals from Spent Lithium-Ion Mobile Phone Batteries Using Aspergillus Niger",
+      "input_sha256": "596f86d596f43f6b6a13e4353914b200ceacfb3d1d0dd7eabc5f6cab5841f63f",
+      "text_sha256": "7aba32aaa79ebdfc59ee83e2171a1866203689249dcbcdaaa4b9293e0d2e9dbf",
+      "profiles": [
+        {
+          "id": "battery-bioleaching/powder",
+          "label": "Mixed cathode and anode powder",
+          "chemistry": "mixed-li-ion",
+          "stream": "mixed-electrodes",
+          "origin": "end-of-life-phones",
+          "state": "Dried, crushed, milled and sieved below 75 µm",
+          "entity_ids": [
+            "Component_powder",
+            "Component_battery_battery_powder",
+            "Component_lithium_ion_battery"
+          ],
+          "composition": [
+            {
+              "element_axis": "row",
+              "basis": "mass",
+              "columns": [
+                1
+              ],
+              "assay": "XRF",
+              "table_id": "TABLE_Bioleaching of Valuable Metals from Spent Lithium-Ion Mobile Phone Batteries Using Aspergillus Niger_0001"
+            },
+            {
+              "element_axis": "row",
+              "basis": "mass",
+              "columns": [
+                2
+              ],
+              "assay": "Acid digestion / ICP-OES",
+              "table_id": "TABLE_Bioleaching of Valuable Metals from Spent Lithium-Ion Mobile Phone Batteries Using Aspergillus Niger_0001"
+            }
+          ],
+          "process_ids": [
+            "Process_one_step_bioleaching",
+            "Process_two_step_bioleaching",
+            "Process_spent_medium_bioleaching",
+            "Process_chemical_leaching",
+            "Process_control_bioleaching"
+          ],
+          "method_family": "Bioleaching",
+          "note": "XRF and digestion are assays of the same sample group.",
+          "evidence": [
+            "Spent mobile phone batteries were collected from mobile phone markets. All batteries were Li-ion made from different manufacturers with different sizes and types of cathode. At first, all spent batteries were discharged to avoid self-ignition and shortcircuiting. Spent batteries were then dismantled and separated manually into cathodes, anodes, plastic separators and metal cases. Afterwards, the classified portions were weighed. Next, cathodes and anodes were dried at 60 ^∘𝖢 for 24 h to remove moisture. After drying, the classified cathodes and anodes were once again weighed so as to calculate the percentage of battery components. The average percentage of different parts of batteries is shown in Fig. 1.",
+            "The metal composition of LIB powder was determined by both chemical digestion and submitting to X-ray fluorescence (XRF) and subsequent analysis with XRF analyzer (PW2404, Philips, Netherland). In chemical digestion, the metal contents were determined using four acids, namely HCl, HNO, HClO and HF. At first, 0.5 g of powder was subjected to 5 mL HNO3 in a Teflon beaker and heated to 150 \u0005C for 0.5 h. After cooling,10 mL mixture of HClO4 and HF in a ratio of 1:6 was added and heated to 200 ^∘𝖢. After cooling, 20 mL 1:1 HCl was added and heated again for 0.5 h on a hot plate. When the digest was cooled, it was filtered and made up to 200 mL with deionized water, the final dilution factor being 400. Subsequently, the solution was analyzed through the use of an inductively coupled plasma optical emission spectrometer (ICP-OES) (Vistapro, Varian, Australia). In addition, a control sample was prepared, whose metal concentration was subtracted from the main sample in the calculations. The results are shown in Table 1."
+          ],
+          "method_families": {
+            "Process_chemical_leaching": "Acid leaching",
+            "Process_control_bioleaching": "Abiotic control"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "source-9f8e67169119c4a8",
+      "paper": "Chemical Characterisation of Spent Rechargeable Batteries",
+      "input_sha256": "2b1b8548a298f2202641ae8ba84a2a49b0aa2b75d0007a917f9870837fcf7e17",
+      "text_sha256": "54e8243ab24f3d627c112e4a0291ab29aa7fde6472e603ab91412cc88bf4973c",
+      "profiles": [
+        {
+          "id": "source-9f8e67169119c4a8/fraction-1",
+          "label": "Ni-Cd ferrous fraction",
+          "chemistry": "ni-cd",
+          "stream": "separated-fractions",
+          "origin": "collection-boxes",
+          "state": "Milled and separated by particle size",
+          "entity_ids": [
+            "Component_Iron__Ni_Cd_"
+          ],
+          "composition": [
+            {
+              "element_axis": "row",
+              "basis": "mass",
+              "columns": [
+                1
+              ],
+              "assay": "Fraction elemental analysis",
+              "table_id": "TABLE_Chemical Characterisation of Spent Rechargeable Batteries_0002"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "note": "Table 3 reports leachate release in mg/kg and is excluded from feedstock composition.",
+          "evidence": [
+            "Each selected battery type was fed into a continuous milling machine for size reduction, and a fractionation process was then applied, separating the materials in a coarse fraction >3 mm (including the plastic of external shell, residual plastic pieces and felt and cardboard from internal battery protection), and a fine fraction <3 mm (mainly made up of metallic powder deriving from electrodes).",
+            "In the laboratory, after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries, all samples were divided through a suitable sieve into two further size fractions: U < 1 mm and 1 mm < U < 3 mm. In this way, a possible difference in metal concentration in the various fractions was investigated."
+          ],
+          "method_families": {}
+        },
+        {
+          "id": "source-9f8e67169119c4a8/fraction-2",
+          "label": "Ni-Cd fraction below 1 mm",
+          "chemistry": "ni-cd",
+          "stream": "separated-fractions",
+          "origin": "collection-boxes",
+          "state": "Milled and separated by particle size",
+          "entity_ids": [
+            "Component__1_mm__Ni_Cd_"
+          ],
+          "composition": [
+            {
+              "element_axis": "row",
+              "basis": "mass",
+              "columns": [
+                2
+              ],
+              "assay": "Fraction elemental analysis",
+              "table_id": "TABLE_Chemical Characterisation of Spent Rechargeable Batteries_0002"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "note": "Table 3 reports leachate release in mg/kg and is excluded from feedstock composition.",
+          "evidence": [
+            "Each selected battery type was fed into a continuous milling machine for size reduction, and a fractionation process was then applied, separating the materials in a coarse fraction >3 mm (including the plastic of external shell, residual plastic pieces and felt and cardboard from internal battery protection), and a fine fraction <3 mm (mainly made up of metallic powder deriving from electrodes).",
+            "In the laboratory, after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries, all samples were divided through a suitable sieve into two further size fractions: U < 1 mm and 1 mm < U < 3 mm. In this way, a possible difference in metal concentration in the various fractions was investigated."
+          ],
+          "method_families": {}
+        },
+        {
+          "id": "source-9f8e67169119c4a8/fraction-3",
+          "label": "Ni-Cd fraction 1–3 mm",
+          "chemistry": "ni-cd",
+          "stream": "separated-fractions",
+          "origin": "collection-boxes",
+          "state": "Milled and separated by particle size",
+          "entity_ids": [
+            "Component_1_3_mm__Ni_Cd_"
+          ],
+          "composition": [
+            {
+              "element_axis": "row",
+              "basis": "mass",
+              "columns": [
+                3
+              ],
+              "assay": "Fraction elemental analysis",
+              "table_id": "TABLE_Chemical Characterisation of Spent Rechargeable Batteries_0002"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "note": "Table 3 reports leachate release in mg/kg and is excluded from feedstock composition.",
+          "evidence": [
+            "Each selected battery type was fed into a continuous milling machine for size reduction, and a fractionation process was then applied, separating the materials in a coarse fraction >3 mm (including the plastic of external shell, residual plastic pieces and felt and cardboard from internal battery protection), and a fine fraction <3 mm (mainly made up of metallic powder deriving from electrodes).",
+            "In the laboratory, after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries, all samples were divided through a suitable sieve into two further size fractions: U < 1 mm and 1 mm < U < 3 mm. In this way, a possible difference in metal concentration in the various fractions was investigated."
+          ],
+          "method_families": {}
+        },
+        {
+          "id": "source-9f8e67169119c4a8/fraction-4",
+          "label": "Ni-MH fraction below 1 mm",
+          "chemistry": "ni-mh",
+          "stream": "separated-fractions",
+          "origin": "collection-boxes",
+          "state": "Milled and separated by particle size",
+          "entity_ids": [
+            "Component__1_mm__Ni_MH_"
+          ],
+          "composition": [
+            {
+              "element_axis": "row",
+              "basis": "mass",
+              "columns": [
+                4
+              ],
+              "assay": "Fraction elemental analysis",
+              "table_id": "TABLE_Chemical Characterisation of Spent Rechargeable Batteries_0002"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "note": "Table 3 reports leachate release in mg/kg and is excluded from feedstock composition.",
+          "evidence": [
+            "Each selected battery type was fed into a continuous milling machine for size reduction, and a fractionation process was then applied, separating the materials in a coarse fraction >3 mm (including the plastic of external shell, residual plastic pieces and felt and cardboard from internal battery protection), and a fine fraction <3 mm (mainly made up of metallic powder deriving from electrodes).",
+            "In the laboratory, after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries, all samples were divided through a suitable sieve into two further size fractions: U < 1 mm and 1 mm < U < 3 mm. In this way, a possible difference in metal concentration in the various fractions was investigated."
+          ],
+          "method_families": {}
+        },
+        {
+          "id": "source-9f8e67169119c4a8/fraction-5",
+          "label": "Ni-MH fraction 1–3 mm",
+          "chemistry": "ni-mh",
+          "stream": "separated-fractions",
+          "origin": "collection-boxes",
+          "state": "Milled and separated by particle size",
+          "entity_ids": [
+            "Component_1_3_mm__Ni_MH_"
+          ],
+          "composition": [
+            {
+              "element_axis": "row",
+              "basis": "mass",
+              "columns": [
+                5
+              ],
+              "assay": "Fraction elemental analysis",
+              "table_id": "TABLE_Chemical Characterisation of Spent Rechargeable Batteries_0002"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "note": "Table 3 reports leachate release in mg/kg and is excluded from feedstock composition.",
+          "evidence": [
+            "Each selected battery type was fed into a continuous milling machine for size reduction, and a fractionation process was then applied, separating the materials in a coarse fraction >3 mm (including the plastic of external shell, residual plastic pieces and felt and cardboard from internal battery protection), and a fine fraction <3 mm (mainly made up of metallic powder deriving from electrodes).",
+            "In the laboratory, after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries, all samples were divided through a suitable sieve into two further size fractions: U < 1 mm and 1 mm < U < 3 mm. In this way, a possible difference in metal concentration in the various fractions was investigated."
+          ],
+          "method_families": {}
+        },
+        {
+          "id": "source-9f8e67169119c4a8/fraction-6",
+          "label": "Li-ion fraction below 1 mm",
+          "chemistry": "li-ion-unspecified",
+          "stream": "separated-fractions",
+          "origin": "collection-boxes",
+          "state": "Milled and separated by particle size",
+          "entity_ids": [
+            "Component__1_mm__Li_ion_"
+          ],
+          "composition": [
+            {
+              "element_axis": "row",
+              "basis": "mass",
+              "columns": [
+                6
+              ],
+              "assay": "Fraction elemental analysis",
+              "table_id": "TABLE_Chemical Characterisation of Spent Rechargeable Batteries_0002"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "note": "Table 3 reports leachate release in mg/kg and is excluded from feedstock composition.",
+          "evidence": [
+            "Each selected battery type was fed into a continuous milling machine for size reduction, and a fractionation process was then applied, separating the materials in a coarse fraction >3 mm (including the plastic of external shell, residual plastic pieces and felt and cardboard from internal battery protection), and a fine fraction <3 mm (mainly made up of metallic powder deriving from electrodes).",
+            "In the laboratory, after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries, all samples were divided through a suitable sieve into two further size fractions: U < 1 mm and 1 mm < U < 3 mm. In this way, a possible difference in metal concentration in the various fractions was investigated."
+          ],
+          "method_families": {}
+        },
+        {
+          "id": "source-9f8e67169119c4a8/fraction-7",
+          "label": "Li-ion fraction 1–3 mm",
+          "chemistry": "li-ion-unspecified",
+          "stream": "separated-fractions",
+          "origin": "collection-boxes",
+          "state": "Milled and separated by particle size",
+          "entity_ids": [
+            "Component_1_3_mm__Li_ion_"
+          ],
+          "composition": [
+            {
+              "element_axis": "row",
+              "basis": "mass",
+              "columns": [
+                7
+              ],
+              "assay": "Fraction elemental analysis",
+              "table_id": "TABLE_Chemical Characterisation of Spent Rechargeable Batteries_0002"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "note": "Table 3 reports leachate release in mg/kg and is excluded from feedstock composition.",
+          "evidence": [
+            "Each selected battery type was fed into a continuous milling machine for size reduction, and a fractionation process was then applied, separating the materials in a coarse fraction >3 mm (including the plastic of external shell, residual plastic pieces and felt and cardboard from internal battery protection), and a fine fraction <3 mm (mainly made up of metallic powder deriving from electrodes).",
+            "In the laboratory, after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries, all samples were divided through a suitable sieve into two further size fractions: U < 1 mm and 1 mm < U < 3 mm. In this way, a possible difference in metal concentration in the various fractions was investigated."
+          ],
+          "method_families": {}
+        }
+      ]
+    },
+    {
+      "case_id": "source-e9148efa492030e9",
+      "paper": "Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries",
+      "input_sha256": "67ce01612f814330aa9d6f72dda76a2dfb7090d25b269d5baa63b0543dd589f0",
+      "text_sha256": "6631dea706ed9641fd8c878b65a95a56028de8cb090200881d47fddcc2a4c775",
+      "profiles": [
+        {
+          "id": "source-e9148efa492030e9/cathode",
+          "label": "LiCoO2 cathode production scrap",
+          "chemistry": "lco",
+          "stream": "cathode",
+          "origin": "manufacturing-scrap",
+          "state": "Cut and dried cathode scrap",
+          "entity_ids": [
+            "Component_cathode"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_acidic_leaching_of_cathode",
+            "Process_leaching_with_Hydrochloric_acid",
+            "Process_leaching_with_Sulfuric_acid",
+            "Process_leaching_with_Nitric_acid",
+            "Process_leaching_with_Maleic_acid",
+            "Process_leaching_with_Citric_acid",
+            "Process_leaching_with_Succinic_acid",
+            "Process_leaching_with_Ascorbic_acid",
+            "Process_leaching_with_Tartaric_acid",
+            "Process_leaching_with_Iminodiacetic_acid",
+            "Process_leaching_with_Aspartic_acid",
+            "Process_leaching_with_DL_malic_acid"
+          ],
+          "method_family": "Acid leaching",
+          "note": "Frozen TiO=5 wt.% has no validated elemental mass-composition basis for this overview.",
+          "evidence": [
+            "The cathode scrap, which are the cathodes used for manufacturing lithium-ion battery, was supplied by a local recycling company (Huayou Cobalt, China). Before leaching, the cathode scrap was cut into pieces with the size of 10 mm and dried at 60 ^∘𝖢 for 24 h. To determine the composition, the cathode scrap was dissolved with aqua regia solution (HNO3HCl = 1: 3, v / v) and sulfuric acid one after another. All chemical reagents were of analytical grade and all solutions were prepared with ultrapure water (Millipore Milli-Q). The leaching reagents are organic/inorganic acidic solutions (12 kinds of acids in Table S3) under certain concentrations, and the reductant is introduced to the reagents according to the leaching process.",
+            "In this study, a comprehensive investigation and evaluation on the leaching processes with acidic solutions for recovery of metals from spent LIBs (LiCoO2 was used for simplification) was carried out. Among different leaching parameters (e.g., acid species and concentrations, S/L ratios, reductant species and concentrations, leaching times, temperatures, leaching speed and recovery rate), the recovery rate is an important parameter to evaluate the viability of a leaching process, and the leaching speed is an important parameter to analyze the leaching kinetics or effectiveness of a leaching process. Through defining and analyzing these two parameters, the effects of hydrogen ion concentrations, acid species and concentrations on these two parameters were evaluated. In a typical leaching process, inconsistency between the leaching selectivity and efficiency was frequently noticed. Furthermore, the decisive factors of the leaching speed and recovery rate were identified by analyzing the leaching parameters. On one hand, 12 acidic solutions were used to understand the leaching behavior of cathode scrap from spent LIBs and to find out the correlation between the leaching speed and recovery rate of the corresponding metals. On the other hand, it is noticed that the conditions to ensure both high leaching efficiency and leaching selectivity can be achieved by optimized process design. Completion of these objectives will be expected to attain preliminary correlations to control the physiochemical properties of leaching solution and to potentially design process at both lab-scale and industrial levels."
+          ],
+          "method_families": {}
+        }
+      ]
+    },
+    {
+      "case_id": "source-9f53ac139b934276",
+      "paper": "Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries",
+      "input_sha256": "63b55bfa5bc67c56617edb2cf9c8fb349f86fc6b69406d5b1477b010a1610ef3",
+      "text_sha256": "107a5586973485c5298f6c4c20027ce8cbc89b0958fc3dbcf98484ed9849e924",
+      "profiles": [
+        {
+          "id": "source-9f53ac139b934276/films",
+          "label": "Cathode and anode films from phone batteries",
+          "chemistry": "li-ion-unspecified",
+          "stream": "mixed-electrodes",
+          "origin": "end-of-life-phones",
+          "state": "Separated electrode films",
+          "entity_ids": [
+            "Component_cathode",
+            "Component_anode"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_metal_leaching_from_cathode_and_anode_film_using_citrus_pseudolimon_juice"
+          ],
+          "method_family": "Organic-acid leaching",
+          "note": "The title mentions NMC while the sample description reports mixed brands and LiCoO2 diffraction. A specific NMC feed chemistry is left unassigned. Literature-comparison results are excluded.",
+          "evidence": [
+            "For the metal recovery from waste LIBs of mobile phones (collected from the local scrap market) these were discharge first and then dismantled to separate the cathode and anode film (Scheme 1). Hill lemon, galgal (Citrus pseudolimon Tanaka), a cheap fruit commonly present in a Himachal Pradesh with good quantity, is used for the present study as CJ material. Galgal is light yellow, conical ovate with prominent ridges and smooth surface fruit growing in subhumid-subtropical areas in the upper Shivalik ranges of Himachal Pradesh. It is a member of the citrus family, and due to heavy pulp it has some limited applications. The average fruit weight was around 400–500 g with diameter 10–11.5 cm. The total acid concentration in the CJ was measured by alkaline titration method (Manly et al., 1972) and was found 52,600 mg/L. Individual acid concentration was measured by using reverse phase HPLC, using 250 mm 4.6 mm i.d., 5 lm particle Hypersil Gold aQ Analytical Column. The detector was set at λ= 254 nm for ascorbic acid and k = 214 nm for the other organic acids. The concentration of citric acid, malic acid, and ascorbic acid present in above CJ were 50,300, 1500 and 230 mg/L, respectively. Commonly present flavonoids in CJ were quercetin, myricitin, rutin, tangeritin, naringin and hesperidin (Okwu, 2008).",
+            "A typical X-ray diffractogram of cathodes of spent Li-ion batteries before and after treatment was shown in Fig. 1. LiCoO2, Co3O4, Al and carbon were found in the cathode samples as compared with previous reports and JCPDS standards (Freitas et al., 2010)."
+          ],
+          "method_families": {}
+        }
+      ]
+    },
+    {
+      "case_id": "source-088b0419b6777442",
+      "paper": "Heat Treatment of Licoo2 Recovered from Cathode Scraps with Solvent Method",
+      "input_sha256": "a88071f520e8a167ea5b9bad97ae6ce4e1923046f634f0137f5314a0d558d356",
+      "text_sha256": "3212c1efd96e901d823cb5338e01d76a9054c3a3183c47d3c1d4041ab4e2d3fe",
+      "profiles": [
+        {
+          "id": "source-088b0419b6777442/scrap",
+          "label": "LiCoO2 cathode manufacturing scrap",
+          "chemistry": "lco",
+          "stream": "cathode",
+          "origin": "manufacturing-scrap",
+          "state": "Solvent-separated cathode scrap",
+          "entity_ids": [
+            "Component_cathode_scrap"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_solvent_method_for_scrap_material_recovery"
+          ],
+          "method_family": "Solvent separation",
+          "note": "Slurry, recovered active material and fabricated test electrodes have different composition bases. No elemental feedstock fractions are available in the frozen output. Electrochemical cycling is a product performance test and is excluded from treatment queries.",
+          "evidence": [
+            "According to the datas provided by the Tianjin Lishen Battery Joint-Stock Co., Ltd., the slurry for cathode scraps consisted of 93.5 wt.% active materials, 4 wt.% acetylene black and 2.5 wt.% PVDF, so the composition of recovered the scrap materials included 95.9% wt.% active materials and 4.1 wt.% acetylene black (Assume that PVDF had been completely removed)."
+          ],
+          "method_families": {}
+        },
+        {
+          "id": "source-088b0419b6777442/foil-mixture",
+          "label": "Impure Al foil mixture after solvent separation",
+          "chemistry": "lco",
+          "stream": "separated-fractions",
+          "origin": "manufacturing-scrap",
+          "state": "Al foil with retained active material and acetylene black",
+          "entity_ids": [
+            "Component_Al_foil"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_NaOH_dissolution_of_Al_foil_mixtures"
+          ],
+          "method_family": "Alkaline leaching",
+          "method_families": {},
+          "note": "This is the downstream foil mixture from solvent separation. NaOH dissolution is linked to that mixture as its experimental input.",
+          "evidence": [
+            "In order to investigate the recovery rate of scrap materials, 200 g LiCoO2 scraps were recovered with the above solvent method. After the recovery, 145.82 g scrap materials (active material, acetylene black) and 41.86 g impure Al foil mixtures (Al foil, active material, acetylene black) were directly obtained through the first separation. Then, after the second step, 21.60 g scrap materials (active material, acetylene black) were collected from 41.86 g impure Al foil mixtures after dissolving Al foil mixtures with excessive NaOH solution. From Fig. 8, there is no Al (OH)3 impurity in 21.60 g scrap materials. So the recovery rate of scrap materials is 145.82/ (145.82 + 21.60) ^* 100 % = 87.10 %, and the purity of Al foil mixtures is (41.86 - 21.60) / 41.86 ^∗100 % = 48.40 %"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "anode-leaching",
+      "paper": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
+      "input_sha256": "804a3311dd8258444d4c94114d89f025ee1c504d7081544158df93227c747875",
+      "text_sha256": "25deb3bcc917184035db9d5e096c0dc1ca69165f51a3a50f924a27d35a878da0",
+      "profiles": [
+        {
+          "id": "anode-leaching/anode",
+          "label": "Calcined anode active material",
+          "chemistry": "li-ion-unspecified",
+          "stream": "anode",
+          "origin": "spent-batteries",
+          "state": "Separated and calcined anode material",
+          "entity_ids": [
+            "Component_anode_active_material"
+          ],
+          "composition": [
+            {
+              "element_axis": "column",
+              "basis": "mass",
+              "columns": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "assay": "ICP-AES",
+              "table_id": "TABLE_Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)_0001"
+            }
+          ],
+          "process_ids": [
+            "Process_reductive_hydrochloric_acid_leaching_of_calcined_powder",
+            "Process_reviewed_c2ca1a770bfa07",
+            "Process_reviewed_8daa8098cc6a94"
+          ],
+          "method_family": "Acid leaching",
+          "note": "The source gives 500 °C in preparation and 600 °C in characterization. This overview retains the broader calcined state.",
+          "evidence": [
+            "Procedures of the present work are illustrated in Fig. 1 (a) and (b). The spent LIBs were discharged firstly to prevent the dangers of short-circuits and spontaneous combustion. Then they were dismantled manually to different parts: cathode, anode, organic separator and the plastic case. With aid of scraper and tweezers, active materials were separated from the anode. These partitioned black active materials were placed in a furnace and calcined at 500 ^∘C for one hour to remove the organic components.",
+            "Table 1 shows the metal compositions of the anode active materials. From the table, it can be noted that except tiny amounts of Co, Ni and Fe, the main metals contained in the powder materials are Cu and Li. Especially Li, its content is 30.07 mg/g, much higher than that of the environmental standards. The high content of lithium maybe come from two aspects."
+          ],
+          "method_families": {
+            "Process_reviewed_c2ca1a770bfa07": "Water leaching"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "source-b54b7c6d06066264",
+      "paper": "Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries",
+      "input_sha256": "0a5e50ba762d219fcf288bab197a4cc07223f7b6a2a6b94a0c3b95267ab09b6c",
+      "text_sha256": "d6bcce862d933f3c11e1d9c3985613298e2ffd3d3e95fc089c4557df029fcc3d",
+      "profiles": [
+        {
+          "id": "source-b54b7c6d06066264/fragments",
+          "label": "Crushed LiFePO4 battery-core fragments",
+          "chemistry": "lfp",
+          "stream": "mixed-electrodes",
+          "origin": "power-battery",
+          "state": "Crushed cell-core fragments",
+          "entity_ids": [
+            "Product_crushed_product",
+            "Product_lithium_iron_phosphate_battery"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_pneumatic_separation_of_crushed_battery_core_product"
+          ],
+          "method_family": "Physical separation",
+          "note": "Al=96% and Cu=97% are product metal fractions. Component masses in kg have no validated whole-sample mass denominator.",
+          "evidence": [
+            "The power battery consists of positive electrode, negative electrode, electrolyte, separator and sealed shell. The cathode materials such as lithium manganate, lithium cobalt acid, lithium iron phosphate and three-element system are bonded together to the aluminum foil using binder PVDF, and the negative electrode is formed by bonding a negative electrode material such as carbonbased, tin-based or silicon-based material, or lithium titanate to the copper foil. The electrolyte is mostly made of LiFL6 and organic solvent. The membrane material is mainly polyethylene (PE) or polypropylene (PP) and is used to prevent the electrons passing through the anode and cathode, allowing lithium ions to pass through. The sealed shell protects core and carries electrolyte, and is made of plastic, steel or aluminum alloy. Presently, most power lithium batteries have aluminum shells. The sample used here is a lithium iron phosphate power battery crushed using the production line in HeFei GuoXuan High-Tech Power Energy CO. Ltd. The crushed products of the core breakage are shown in Figure 1. The physical properties are listed in Table 1. The recycling system based on pneumatic separation is presented in Figure 2, and a flow chart of the recycling process is illustrated in Figure 3."
+          ],
+          "method_families": {}
+        }
+      ]
+    },
+    {
+      "case_id": "source-db98ee012648b4f7",
+      "paper": "Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and its Thermodynamics and Kineti",
+      "input_sha256": "664d861d0a71e6313485fb93ae011f3b7d5de38d15d2ca9edf4068bac22153b4",
+      "text_sha256": "f03c79e34ca81c3bc3d778e47fc31790871a572470fa307644c29378aa36ab5c",
+      "profiles": [
+        {
+          "id": "source-db98ee012648b4f7/powder",
+          "label": "Mixed cathode and anode powder",
+          "chemistry": "li-ion-unspecified",
+          "stream": "mixed-electrodes",
+          "origin": "spent-batteries",
+          "state": "Mixed, milled and sieved below 200 µm",
+          "entity_ids": [
+            "Product_lithium_ion_battery",
+            "Component_cathode",
+            "Component_anode"
+          ],
+          "composition": [
+            {
+              "subject_ids": [
+                "Product_lithium_ion_battery"
+              ],
+              "basis": "mass"
+            }
+          ],
+          "process_ids": [
+            "Process_bioleaching_of_Co_and_Li_from_spent_LIB_powder"
+          ],
+          "method_family": "Bioleaching",
+          "note": "",
+          "evidence": [
+            "The spent LIBs were manually dismantled into different portions including plastic shell, cathode, anode, aluminum foil and so on. Then the separated active cathode and anode containing dense Co and Li were mixed, ground by milling and sieved to obtain a mesh size of less than 200 lm (Mishra et al., 2008a). The resulting powder, used for bioleaching experiments, was digested by HF - HNO _ 3 –HCl method (USEPA, 1996) to determine the content of Co at 358 mg g ^-1 and Li at 45 mg g ^-1 using AAS."
+          ],
+          "method_families": {}
+        }
+      ]
+    },
+    {
+      "case_id": "flotation",
+      "paper": "Pyrolysis-Ultrasonic-Assisted Flotation Technology for Recovering Graphite and Licoosub2sub from Spent Lithium-Ion Batteries",
+      "input_sha256": "2c40a59ba358417d7453d9348fc560b17fe8af26279e9b7557fba760e499d526",
+      "text_sha256": "410c903f092a3e0f1e2c5761d8ccd2d4a76e2bbadda6a64e61b5561f7e0beafa",
+      "profiles": [
+        {
+          "id": "flotation/mixture",
+          "label": "LiCoO2 / graphite electrode mixture",
+          "chemistry": "lco",
+          "stream": "mixed-electrodes",
+          "origin": "end-of-life-phones",
+          "state": "Raw, pyrolyzed and ultrasound-pretreated electrode mixtures",
+          "entity_ids": [
+            "Component_electrode_material"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_flotation_of_raw_electrode_material_mixture",
+            "Process_flotation_of_pyrolytic_electrode_material_mixture",
+            "Process_flotation_of_pyrolysis_ultrasonic_pretreated_electrode_material_mixture"
+          ],
+          "method_family": "Flotation",
+          "note": "Surface XPS and thermal products are excluded from bulk elemental feedstock composition.",
+          "evidence": [
+            "Sample Preparation. Spent LIBs from waste mobile phones were collected and pretreated following the procedure shown in Figure 1. They were first discharged with 5 wt % NaCl solution for 48 h and then naturally air-dried. To obtain pure cathode and anode materials, a manual dismantling process instead of mechanical crushing was conducted, and then, the cathode and anode were obtained from this process, respectively. Electrode materials were obtained by combining the crushing and sieving process. In order to prevent the overcrushing of aluminum and copper foils, the crushing time is controlled at 25 s. Previous studies have demonstrated that electrode materials are mainly concentrated in fine size fraction. Therefore, the 0.075 mm size screen hole was used to obtain electrode materials with fine size in this study. Three kinds of samples were prepared including cathode materials (LiCoO ), anode materials (graphite), and an electrode material mixture (LiCoO and graphite). As a result, the cathode material and anode material are obtained to, respectively, analyze their physicochemical properties and pyrolysis characteristics. Electrode material mixtures will be processed by pyrolysis or pyrolysis− ultrasound and then used for flotation."
+          ],
+          "method_families": {}
+        }
+      ]
+    },
+    {
+      "case_id": "source-bec5c4afbdc9c450",
+      "paper": "Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent",
+      "input_sha256": "c606f8e82ad2c1577a82acff98cf407fe1b310adb5530cb82e63ce5ef4a26a73",
+      "text_sha256": "e12d9140c8092c06054aebef9719a54b5a1c6910fcb1c9815db6f59d73bc0ec9",
+      "profiles": [
+        {
+          "id": "source-bec5c4afbdc9c450/cathode",
+          "label": "Separated LiCoO2 cathode material",
+          "chemistry": "lco",
+          "stream": "cathode",
+          "origin": "end-of-life-phones",
+          "state": "NMP-separated, calcined and ground cathode",
+          "entity_ids": [
+            "Component_cathode_material",
+            "Material_LiCoO"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_LiCoO2_dissolution_in_glycine_and_ascorbic_acid"
+          ],
+          "method_family": "Organic-acid leaching",
+          "note": "Residual carbon and literature review tables are excluded from feedstock metal mass summaries.",
+          "evidence": [
+            "The spent LIBs ofBL-5CA (Nokia mobile) series used in this work were collected in the local market. The cathode material was separated from aluminum foil by using concentrated N-methyl pyrrolidone (NMP). The leaching reagents used in this work consisted of glycine and ascorbic acid which were mild organic acids. The reagents used in this study were analytical grade, and all the solutions were prepared with known concentrations in distilled water.",
+            "Fig. 2 shows the XRD patterns of spent LiCoO2 cathode material after calcinations and grinding. From XRD data, the crystalline LiCoO2 phase was clearly identified as rock–salt structured [20] and the main compositions of this spent cathode material are LiCoO2 and CoO. In general, the CoO present in the cathode material results from the transformation of LiCoO [29]. Fig. 3 shows SEM/EDX images of the spent LiCoO2 cathode material and the particles were irregularly agglomerated with approximate 5 - 10 μ m diameters. EDXA analysis shows the presence of Co (except Li which cannot be detected by EDXA). SEM/EDX analysis confirms the residual carbon present along with this cathode material due to organic burn off. The source for such carbon might be from the acetylene black used to make sure the electronic conductivity in the cathodes."
+          ],
+          "method_families": {}
+        }
+      ]
+    },
+    {
+      "case_id": "source-3bb6879d7ff610d4",
+      "paper": "Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using Scplscp-Tartaric Acid as a Leachant",
+      "input_sha256": "50c5a1430854a6cd9525a23cd8e9e0721859608b4775d6fd8405bce7c4f2b0ce",
+      "text_sha256": "9d44ce632c3fdd5a00a1ad929fb802c2dd16df4d399171d92b26d736a3ae3fbc",
+      "profiles": [
+        {
+          "id": "source-3bb6879d7ff610d4/cathode",
+          "label": "Cathodic material from mixed consumer LIBs",
+          "chemistry": "mixed-li-ion",
+          "stream": "cathode",
+          "origin": "consumer-electronics",
+          "state": "Ultrasonically separated cathodic material",
+          "entity_ids": [
+            "Component_cathodic_material"
+          ],
+          "composition": [
+            {
+              "subject_ids": [
+                "Component_cathodic_material"
+              ],
+              "basis": "mass"
+            }
+          ],
+          "process_ids": [
+            "Process_L_tartaric_acid_leaching"
+          ],
+          "method_family": "Organic-acid leaching",
+          "note": "",
+          "evidence": [
+            "Materials and Reagents. Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study. The total weight of the samples was 1 kg. Aqua regia (volume ratio of HCl to H V̅O3 = 3: 1) was used to dissolve the cathodic materials fully in order to analyze their metal contents. L-Tartaric acid was employed as the leachant and hydrogen peroxide (H2O2) as the reductant. All the solutions were prepared in deionized water, and all the reagents were of analytical grade.",
+            "NCM materials of varying proportions have similar XRD patterns. Moreover, the intensity of peaks in the residues after leaching is clearly weaker than that in the cathodic materials. The content of the metals present in the cathodic materials is shown in Table S1. The metals in the cathodic materials included Li (6.28 wt%), Ni (11.85 wt%), Co (35.52 wt%), Mn (8.15 wt%), and Al (0.11 wt%). The existence of a slight amount of Al is from the already decayed cathode, which was easily shredded during the ultrasonic cleaning."
+          ],
+          "method_families": {}
+        }
+      ]
+    },
+    {
+      "case_id": "source-e7db048327a675c7",
+      "paper": "Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes",
+      "input_sha256": "1d917cab9aad5d083026dc1a47ab5fdcd7282d3a2ad9d6e0e704d0116916496b",
+      "text_sha256": "7ad8a3785a39108af67c4682268ef67764f2248244c53cce616c7496be4425cf",
+      "profiles": [
+        {
+          "id": "source-e7db048327a675c7/cathode",
+          "label": "Calcined LiCoO2 cathodic active material",
+          "chemistry": "lco",
+          "stream": "cathode",
+          "origin": "spent-batteries",
+          "state": "Thermally separated, calcined and milled",
+          "entity_ids": [
+            "Component_cathode"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_LiCoO2_leaching_in_nitric_acid_solution"
+          ],
+          "method_family": "Acid leaching",
+          "note": "Table 1 gives typical whole-battery constituent fractions, including LiCoO2 and Cu/Al mixtures. These are excluded from elemental feedstock mass fractions.",
+          "evidence": [
+            "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, calcination steps (Lee and Rhee, 2002). First, LIB samples were thermally treated in a muffle furnace at 150 ^∘C for 1 h. Then, the samples were disassembled with a highspeed shredder. Separated segments were simultaneously classified into the range 1–10 mm in size. Second, thermal treatment was performed in a furnace, and electrode materials were separated from the current collectors by vibrating screening. Next, cathodic active material, LiCoO2 was obtained by burning carbon and binder off in the temperature range 700– 900 ^∘C for 1 h. Fig. 2 shows XRD patterns of calcined cathodic active material at temperature of 700– 900 ^∘C.. The diffractogram indicates that the carbon and binder were burnt off by calcining above 800 ^∘C.. The cathodic active material was ground in a ball mill and dried in an oven at 60 ^∘C for 48 h. The mean particle size was about 15 Am, as shown in Fig. 3 (Lee and Rhee, 2002)."
+          ],
+          "method_families": {}
+        }
+      ]
+    },
+    {
+      "case_id": "source-bfd8d51d466137b4",
+      "paper": "Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System",
+      "input_sha256": "52bc1f7309e7d74ad4ba9204e42edc1b4ac161fc2ccb1b8fe7f28ad4c8e9dee5",
+      "text_sha256": "df5cf04e9fd66c16b4e48402016ddddcf1b3e2c8490bb0cef9bb418228a61ebe",
+      "profiles": [
+        {
+          "id": "source-bfd8d51d466137b4/black-powder",
+          "label": "Ternary lithium-ion battery black powder",
+          "chemistry": "nmc",
+          "stream": "mixed-electrodes",
+          "origin": "recycling-company",
+          "state": "Discharged, dismantled, crushed and screened",
+          "entity_ids": [
+            "Product_lithium_ion_battery"
+          ],
+          "composition": [
+            {
+              "element_axis": "column",
+              "basis": "mass",
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "assay": "Feed powder elemental analysis",
+              "table_id": "TABLE_Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System_0001"
+            }
+          ],
+          "process_ids": [
+            "Process_glycine_leaching_of_spent_LIBs_powder"
+          ],
+          "method_family": "Alkaline leaching",
+          "note": "",
+          "evidence": [
+            "The spent LIBs powder was obtained from a recycling company in Zhejiang, China. The powder is a retired ternary lithium-ion battery that has been processed through “discharge-disassembly-crushingscreening” and other processes to form a black powder. The metal contents of the powders are shown in Table 1.",
+            "The spent LIBs powder was analyzed separately by X-ray diffraction (XRD, D/MAX-C). Its diffraction peaks were indexed to carbon and LNCM (LiNi _ x Co _ y Mn _ z O _ 2) as the major phase (Figure 1)."
+          ],
+          "method_families": {}
+        }
+      ]
+    },
+    {
+      "case_id": "source-3b192b1c95abe9c0",
+      "paper": "Synthesis and Performance of Li[(ni13co13mn13)1−mg ]o2 Prepared from Spent Lithium Ion Batteries",
+      "input_sha256": "e8bd161b752431a6ede1ab297003f1e7f581c28c284e9c456167fb34ff99d1bd",
+      "text_sha256": "e9a364d3a2a42a46ffbbff2d1bade423b2df2535f5ddbc5ade5f1af821f77c94",
+      "profiles": [
+        {
+          "id": "source-3b192b1c95abe9c0/intermediate",
+          "label": "Battery-derived leachate and recovered salts",
+          "chemistry": "li-ion-unspecified",
+          "stream": "intermediates",
+          "origin": "battery-recycling",
+          "state": "Secondary leaching, solution purification and regeneration",
+          "entity_ids": [
+            "Product_lithium_ion_battery"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_secondary_alkaline_leaching",
+            "Process_secondary_acid_leaching",
+            "Process_purification",
+            "Process_organic_solvent_extraction",
+            "Process_scrubbing",
+            "Process_stripping",
+            "Process_NaF_deposition",
+            "Process_controlled_crystallization",
+            "Process_solid_state_calcination",
+            "Process_co_precipitation",
+            "Process_high_temperature_sintering"
+          ],
+          "method_family": "Purification and regeneration",
+          "note": "Solution concentrations and regenerated cathode composition are retained in trace. Regenerated NMC chemistry is not assigned to the original feed.",
+          "evidence": [
+            "Recycling process consists of thermal treatment, crushing, ball milling, sieving, secondary alkaline leaching, secondary acid leaching and purification. It is applied to preparation of a regenerated solution with enriched transition metal ions from spent lithiumion batteries. There are three approaches proposed to deal with the purified leaching liquor. Compound of NiSO4, CoSO4,, and MnSO4 is recovered one by one as the final products by organic solvent extraction and corresponding scrubbing and stripping procedures. If the concentration of magnesium ion remained in the leachate exceeds the limitation of national standard, NaF deposition method is used to remove the Mg ^2+ ion. While there is small amount of Mg ^2+ ions present in the leaching solution, complete elimination of Mg ^2+ could be avoided if the cathode materials with low content of Mg is acceptable. LiNi1 / 3 Co1 / 3 Mn1 / 3 O2 cathode material is prepared from purified solution by controlled crystallization followed by solid-state calcinations. On the purpose of determining the fate of magnesium ions in the leaching liquid, Li [ (Ni1 / 3 Co1 / 3 Mn1 / 3)1-x Mgx ] O2 (x = 0, 0.01, 0.025, 0.05) cathode materials were synthesized by doping method. Magnesium was added during co-precipitation process followed by high temperature sintering using the recovered metal sulfate salts of NiSO4, CoSO4, and MnSO4 as staring materials. The Mg content is set at Mg / (Ni + Co + Mn) ofmolar ratios 0%, 1%, 2.5%, 5% by controlling the amount of MgSO4."
+          ],
+          "method_families": {
+            "Process_secondary_acid_leaching": "Acid leaching",
+            "Process_secondary_alkaline_leaching": "Alkaline leaching",
+            "Process_organic_solvent_extraction": "Solvent separation",
+            "Process_solid_state_calcination": "Thermal treatment",
+            "Process_high_temperature_sintering": "Thermal treatment"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "ultrasound",
+      "paper": "Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries",
+      "input_sha256": "5db41cb195f1e83fda24e2e9c13233a23bbd58b17427cabad5ee07cec9692f70",
+      "text_sha256": "ed36a87f3a72749118115d28cabc87c4977f6f4a5cb07133f947a13d399aa1ad",
+      "profiles": [
+        {
+          "id": "ultrasound/cathode",
+          "label": "Calcined cathode active material",
+          "chemistry": "lco",
+          "stream": "cathode",
+          "origin": "spent-batteries",
+          "state": "NMP-separated and calcined at 700 °C",
+          "entity_ids": [
+            "Component_cathode"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_ultrasound_assisted_leaching_of_Co_and_Li_from_calcined_cathode_material",
+            "Process_conventional_leaching_of_Co_and_Li_from_calcined_cathode_material"
+          ],
+          "method_family": "Acid leaching",
+          "note": "",
+          "evidence": [
+            "The spent LIBs used in this work were kindly donated to us by Tianjin Lishen Battery Joint Stock Co. Ltd.. N-Methyl-2-pyrrolidone (NMP, supplied by Damao Chemical Reagent Factory, China) was used to separate the cathode materials from the aluminum foil. Sulfuric acid (H2SO4 supplied by Tianjin Fengchuan Chemical Reagent Technologies Co., Ltd., China) was used as the leaching agent. Hydrogen peroxide (H2O2,, supplied by Sinopharm Chemical Reagent Co., Ltd., China) was used as reducing agent. All reagents were of analytical grade and used without further purification.",
+            "The XRD patterns of the raw materials and the leaching residues for conventional leaching and ultrasound-assisted leaching under the optimum conditions, respectively, were presented in between conventional leaching and ultrasound-assisted leaching. The main composition was lithium cobalt oxide, which is the same as raw materials. However, the intensity of peaks for LiCoO2 in diffractogram decreased significantly after the ultrasound-assisted leaching and the conventional leaching. This is mainly due to the incomplete reaction of LiCoO2 and the acid [29]."
+          ],
+          "method_families": {}
+        }
+      ]
+    }
+  ]
+}

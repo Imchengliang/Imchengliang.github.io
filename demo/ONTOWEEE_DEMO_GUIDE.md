@@ -1,6 +1,6 @@
 # OntoWEEE: System Overview and Demo User Guide
 
-This guide describes the current battery-focused OntoWEEE demo and its controls. It covers the snapshot available on **2 November 2026**, rather than the earlier 40-paper demo.
+This guide describes the current battery-focused OntoWEEE demo and its controls. It covers the snapshot available on **6 November 2026**, rather than the earlier 40-paper demo.
 
 - **Interactive demo:** [imchengliang.top/demo/](https://imchengliang.top/demo/)
 - **Short project introduction:** [OntoWEEE on the Research page](https://imchengliang.top/research/ontoweee/)
@@ -50,21 +50,29 @@ In the current published snapshot, the registered battery types are classified a
 
 ## 2. What does the current demo contain?
 
-The demo has three tabs:
+The demo has five tabs:
 
 | Tab | What it is for |
 |---|---|
+| **Battery overview** | Filter reviewed feedstocks, inspect composition and compare reported treatment results |
 | **Knowledge graph** | Explore entities, relations, measurements and cross-source connections |
 | **Extraction trace** | Inspect a paper's source text, tables and archived extraction outputs |
 | **Paper** | Open the original publication pages and the GSMArena source |
+| **About** | Read a short introduction to the purpose and evidence-based use of the demo |
 
 The current snapshot contains 442 core entities, 1,784 displayed relations and 1,073 numerical observations. Scope records describe 64 study samples or populations and the method families of all 62 Processes. These annotations help locate and compare evidence; they do not merge samples or make their measurements interchangeable.
 
-The application reads saved files. Browsing does not call an extraction API, run the agents again, edit the research graph or calculate new measurements.
+The application reads saved files. Browsing does not call an extraction API, run the agents again or edit the research graph. Statistical summaries calculate descriptive values from existing measurements and retain links to their source records.
 
 ## 3. A quick first visit
 
-For a short introduction, follow this route:
+The first page is **Battery overview**. Choose a Feedstock group and a Target, such as **Anode feedstocks** and **Li**. In **Composition**, inspect reported elemental mass contents. Switch to **Treatment routes** to see studied methods. **More filters** exposes chemistry, source, content thresholds and experimental constraints. Recovery, temperature, time, concentration and reagent-absence filters apply to the same observation. A blank temperature field imposes no temperature requirement.
+
+**Records** shows the individual evidence. **Statistical summary** shows mean, median, range and sample SD, with **Records used** links. In **Summary settings**, choose the same sample and measurement context or a broader descriptive comparison, and reported measurements or equal study weights. A single statistical unit has no sample SD. Qualified bounds are retained in Records and excluded from these scalar summaries. Grouping by material stream, chemistry and method is descriptive; differences in preparation and conditions still require review.
+
+On the published site, the first nonempty statistical summary loads Python, pandas and NumPy into a browser worker. This needs an internet connection; subsequent calculations reuse that runtime while the page remains open. Selected records stay in the browser. The local API and the published browser use the same Python statistics code. Dataset coverage and review decisions are available in the collapsed panel below the results.
+
+For a graph-focused introduction, follow this route:
 
 1. Open **Knowledge graph** and expand **Component**.
 2. Open the **lithium-ion battery** group. Its members remain separate paper-specific samples.

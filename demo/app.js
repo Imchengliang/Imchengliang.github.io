@@ -98,6 +98,7 @@ function setView(view,loadDefault=true){
   $('#fusion-view').hidden=view!=='fusion'; $('#replay-view').hidden=view!=='replay';
   if($('#papers-view'))$('#papers-view').hidden=view!=='papers';
   if($('#about-view'))$('#about-view').hidden=view!=='about';
+  if($('#overview-view'))$('#overview-view').hidden=view!=='overview';
   $('#fusion-controls').hidden=view!=='fusion'; $('#case-on-graph').hidden=view!=='replay';
   $('#case-controls').hidden=view!=='replay';
   walkthrough?.viewChanged(view);
@@ -621,6 +622,19 @@ function graphRecord(record){
   const edge=state.shownEdges.find(e=>e.source===node&&e.target===target&&e.predicate===predicates[record.predicate]);
   if(edge){const matches=edge.records.filter(candidate=>Trace.graphMatches(state.case,edge,candidate,record));selectEdge(edge.id,matches.length===1?matches[0]:null);}
 }
+async function openOverviewRecord(row,destination){
+  if(destination==='source'&&row.process_id)return openProcessEvidence(state.nodes.get(row.node_id));
+  await openReplay(row.case_id,row.evidence?.[0]||'');
+  if(state.case?.id!==row.case_id)throw Error('Reopen this result to continue.');
+  if(Number.isInteger(row.final_index)){
+    const record=state.case.stages.find(stage=>stage.id==='final').records[row.final_index];
+    if(record?.id!==row.relation_id)throw Error('The overview and frozen archive versions differ.');
+    if(destination==='graph'){graphRecord(record);return;}
+    state.spotlight={case:state.case.id,target:{stage:'final',kind:'final',data:record,raw:record},label:'OVERVIEW SOURCE'};
+    locateRecord(record);
+  }else if(destination==='graph'){graphRecord({node_id:row.node_id});return;}
+  state.stage='final';renderStage();scrollOutputTo('#walkthrough-target');
+}
 function selectStage(id){
   state.stage=id;$('#record-search').value='';
   const tab={gate:'tables',table:'tables',process:'text',entity:'text',relation:'text'}[id];
@@ -744,6 +758,21 @@ async function start(){
     });
     $('#case-select').disabled=false;$('#case-browse').disabled=false;renderCaseSelection();
     window.addEventListener('resize',resize);new ResizeObserver(resize).observe(canvas.parentElement);updateGraph();resize();notify('');
+    if(document.body.dataset.overview){
+      const overview=await fetchJSON(document.body.dataset.overview);
+      const actions={open:openOverviewRecord,error:error=>notify(error.message)};
+      if(document.body.dataset.analysis)actions.query=async parameters=>{
+        const response=await fetch(document.body.dataset.analysis,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(parameters)});
+        if(!response.headers.get('Content-Type')?.includes('application/json'))throw Error('The analysis API is unavailable. Start the local demo with server.py.');
+        const result=await response.json();if(!response.ok)throw Error(result.error||'Analysis request failed');return result;
+      };
+      else {
+        const records=await fetchJSON('datasets/battery20/overview/analysis-records.json');
+        actions.query=BatteryStatic.create({...overview,...records});
+      }
+      BatteryOverview.mount($('#battery-overview'),overview,actions);
+      setView('overview',false);
+    }
   }catch(error){notify('Loading failed: '+error.message+'. Open this page through the local HTTP server.');console.error(error);}
 }
 start();

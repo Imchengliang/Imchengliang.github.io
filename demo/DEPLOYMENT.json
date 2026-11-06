@@ -5,7 +5,7 @@
   "catalog_records": 12,
   "guides": 6,
   "archived_downloads": 290,
-  "bytes": 96124545,
+  "bytes": 97218165,
   "extraction_api_calls": 25,
   "process_inventory": {
     "papers": 20,
@@ -35,13 +35,38 @@
   "files": [
     {
       "path": "ONTOWEEE_DEMO_GUIDE.md",
-      "bytes": 31763,
-      "sha256": "2df74455432bcd993b59b12103f3adeb92f0099e21e294ea183dba87eb100bb5"
+      "bytes": 33550,
+      "sha256": "d382af333a5a292ae6a29ad9b6ec57a2874fecfd5c0d4fa208469311f00a83ec"
     },
     {
       "path": "app.js",
-      "bytes": 69164,
-      "sha256": "3498a6a53a01394fe8a9cbce345081e8452116163f3ec2001e708ac1b9217411"
+      "bytes": 71145,
+      "sha256": "a76aea853821401e222e87c49c8f2a0d87dc3256cdb1e6f9acb0a6327026e8fe"
+    },
+    {
+      "path": "battery-overview.css",
+      "bytes": 4868,
+      "sha256": "619cbd862d5376ac038de80fa7966535d5c6c6f9d85e5d009377378a789a993a"
+    },
+    {
+      "path": "battery-overview.js",
+      "bytes": 23460,
+      "sha256": "c74682d0df52963dbdd8e03ee5b85556d720841dc13e7c9d4b44630722576941"
+    },
+    {
+      "path": "battery-static.js",
+      "bytes": 1740,
+      "sha256": "43bb6b9d8495717ca66d1833d707a44fbc1d731750346ac442ea092433423706"
+    },
+    {
+      "path": "battery-statistics-worker.mjs",
+      "bytes": 1540,
+      "sha256": "4d45b8b62dfb1359cb1b9a80bcb2ce193e8ff6c6e1f3beda6a3b7fb23b46c6af"
+    },
+    {
+      "path": "battery_statistics.py",
+      "bytes": 3725,
+      "sha256": "459a552cc887a36aa90e6408bccd5c61f69b865c35f10cc5d03e3a4bcfd9099e"
     },
     {
       "path": "datasets/battery20/README.md",
@@ -1610,8 +1635,28 @@
     },
     {
       "path": "datasets/battery20/full-traces/index.html",
-      "bytes": 12920,
-      "sha256": "833b25067bb76b324565513c2cb3d3cdda13523ae2e629623dd2b25af2809fc8"
+      "bytes": 13424,
+      "sha256": "864dcf94e2114b3920d22ca4d25451ee5f58010a9b3cb41e077951798145bd82"
+    },
+    {
+      "path": "datasets/battery20/overview/REVIEW.md",
+      "bytes": 18923,
+      "sha256": "bf16f7937b61ea686ce553dcc281da8e1d60050410910c459d39b458a212806e"
+    },
+    {
+      "path": "datasets/battery20/overview/analysis-records.json",
+      "bytes": 484799,
+      "sha256": "9af5673f597f31c80298d78bdba16c25a47cbaac6dbadfa1edf0ce76063ce9d3"
+    },
+    {
+      "path": "datasets/battery20/overview/data.json",
+      "bytes": 484277,
+      "sha256": "43a3233aa8b0260b611a9f7eaca18152f35b1421a2af1026ca7160098c90bc05"
+    },
+    {
+      "path": "datasets/battery20/overview/review.json",
+      "bytes": 65512,
+      "sha256": "3fded65ee4bc8d86235babb61db65c79fb5355d44073fe9905588ffc6c9bdc80"
     },
     {
       "path": "datasets/battery20/papers.json",
@@ -1755,8 +1800,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12894,
-      "sha256": "978fe15c6c523379a118ed2f86d09cbc1e7d24d4ed48df6fc4a978a3c50da8f6"
+      "bytes": 13398,
+      "sha256": "72546ca5dc3d0179e357185840104ddd9d8a33076f3a6523602d864076539d9c"
     },
     {
       "path": "redesign.css",
@@ -1814,7 +1859,7 @@
       "sha256": "229de819ab3449e3ce85cb5786c9f9af06fbca95e4e9371cd4c5dcf02078128d"
     }
   ],
-  "release_date": "2026-11-03",
+  "release_date": "2026-11-06",
   "graph_sha256": "9cadfb8b0bad0e9f086423200df866a24aafe24b8758ecd64ded47dcb2039a12",
   "process_details": {
     "processes": 62,
@@ -1857,5 +1902,14 @@
       "demo_test_files_passed": 22
     }
   },
-  "release_extraction_api_calls": 0
+  "release_extraction_api_calls": 0,
+  "overview": {
+    "execution": "Browser snapshot filters and Pyodide Python statistics",
+    "pyodide": "314.0.7",
+    "profiles": 29,
+    "composition_records": 151,
+    "treatments": 56,
+    "result_records": 244,
+    "python_statistics_sha256": "459a552cc887a36aa90e6408bccd5c61f69b865c35f10cc5d03e3a4bcfd9099e"
+  }
 }
