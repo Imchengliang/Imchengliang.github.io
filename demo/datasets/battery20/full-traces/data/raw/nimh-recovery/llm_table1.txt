@@ -1,0 +1,1612 @@
+[
+  {
+    "chunk_id": "Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries__table__TABLE_Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries_0001",
+    "table_id": "TABLE_Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries_0001",
+    "llm_raw_response": "## TABLE_ROLE_GATE_RESPONSE\n{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"target_composition\",\"confidence\":0.95,\"causal_role\":{\"source_object\":\"Ni-MH battery electrodes\",\"transformation\":\"dismantling/electrode material determination\",\"measured_object\":\"positive and negative electrode materials\",\"measured_quantity\":\"metal content (wt. %)\",\"evidence_role\":\"target_composition\"},\"region_roles\":[{\"row_range\":[1,11],\"role\":\"target_measurement\",\"reason\":\"Rows list metals and their wt.% in positive and negative electrodes, i.e., target composition of WEEE battery components.\"}],\"extract_row_ranges\":[[1,11]],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Chemical components of electrodes of Ni-MH batteries (w t. %)\",\"judgment\":\"supports_extract\",\"reason\":\"Caption explicitly reports target metal composition of battery electrodes.\"},{\"step\":\"table_reference\",\"evidence\":\"The results are given in Table 1.\",\"judgment\":\"supports_extract\",\"reason\":\"Reference frames table as results of electrode material determination.\"}],\"allowed_fact_types\":[\"metal mass fraction in positive electrode\",\"metal mass fraction in negative electrode\",\"electrode material composition\"],\"excluded_fact_types\":[\"economic value\",\"process parameters\",\"literature summary\"],\"ir_instruction\":\"Extract metal wt.% values for positive and negative Ni-MH battery electrodes as target composition facts.\",\"uncertainty\":\"\"}}\n\n## SEMANTIC_IR_RESPONSE\n{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"target_composition\",\n      \"reason\": \"Table reports metal mass fractions (wt.%) in positive and negative Ni-MH battery electrodes, matching allowed target composition facts.\",\n      \"confidence\": 0.95\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 1,\n        \"raw_header\": \"Positive electrode\",\n        \"entity_text\": \"Positive electrode\",\n        \"entity_type\": \"Component\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"Negative electrode\",\n        \"entity_text\": \"Negative electrode\",\n        \"entity_type\": \"Component\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 11]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [1, 2]\n          }\n        },\n        \"bind\": {\n          \"container\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type_from\": \"column.semantic.entity_type\"\n          },\n          \"constituent\": {\n            \"from\": \"row[0]\",\n            \"type\": \"Material\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"container\",\n          \"predicate\": \"CONTAINS\",\n          \"target\": \"constituent\",\n          \"property\": \"mass_fraction\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": []\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"Each non-empty metal cell in the positive or negative electrode column is emitted as a CONTAINS fact: the electrode component contains the metal material with the reported wt.% value. The unit '%' is taken from the column semantic unit_text.\",\n      \"uncertainties\": [\n        \"The caption says 'w t. %' but the visible unit mention is '%'; the unit is preserved as '%'.\",\n        \"Empty cells for Ce, Pr, and Sm in the positive electrode column are skipped because they have no numeric value.\"\n      ]\n    }\n  }\n}",
+    "llm_gate_response": "{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"target_composition\",\"confidence\":0.95,\"causal_role\":{\"source_object\":\"Ni-MH battery electrodes\",\"transformation\":\"dismantling/electrode material determination\",\"measured_object\":\"positive and negative electrode materials\",\"measured_quantity\":\"metal content (wt. %)\",\"evidence_role\":\"target_composition\"},\"region_roles\":[{\"row_range\":[1,11],\"role\":\"target_measurement\",\"reason\":\"Rows list metals and their wt.% in positive and negative electrodes, i.e., target composition of WEEE battery components.\"}],\"extract_row_ranges\":[[1,11]],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Chemical components of electrodes of Ni-MH batteries (w t. %)\",\"judgment\":\"supports_extract\",\"reason\":\"Caption explicitly reports target metal composition of battery electrodes.\"},{\"step\":\"table_reference\",\"evidence\":\"The results are given in Table 1.\",\"judgment\":\"supports_extract\",\"reason\":\"Reference frames table as results of electrode material determination.\"}],\"allowed_fact_types\":[\"metal mass fraction in positive electrode\",\"metal mass fraction in negative electrode\",\"electrode material composition\"],\"excluded_fact_types\":[\"economic value\",\"process parameters\",\"literature summary\"],\"ir_instruction\":\"Extract metal wt.% values for positive and negative Ni-MH battery electrodes as target composition facts.\",\"uncertainty\":\"\"}}",
+    "llm_ir_response": "{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"target_composition\",\n      \"reason\": \"Table reports metal mass fractions (wt.%) in positive and negative Ni-MH battery electrodes, matching allowed target composition facts.\",\n      \"confidence\": 0.95\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 1,\n        \"raw_header\": \"Positive electrode\",\n        \"entity_text\": \"Positive electrode\",\n        \"entity_type\": \"Component\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"Negative electrode\",\n        \"entity_text\": \"Negative electrode\",\n        \"entity_type\": \"Component\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 11]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [1, 2]\n          }\n        },\n        \"bind\": {\n          \"container\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type_from\": \"column.semantic.entity_type\"\n          },\n          \"constituent\": {\n            \"from\": \"row[0]\",\n            \"type\": \"Material\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"container\",\n          \"predicate\": \"CONTAINS\",\n          \"target\": \"constituent\",\n          \"property\": \"mass_fraction\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": []\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"Each non-empty metal cell in the positive or negative electrode column is emitted as a CONTAINS fact: the electrode component contains the metal material with the reported wt.% value. The unit '%' is taken from the column semantic unit_text.\",\n      \"uncertainties\": [\n        \"The caption says 'w t. %' but the visible unit mention is '%'; the unit is preserved as '%'.\",\n        \"Empty cells for Ce, Pr, and Sm in the positive electrode column are skipped because they have no numeric value.\"\n      ]\n    }\n  }\n}",
+    "table_role_decision": {
+      "decision": "extract",
+      "table_role": "target_composition",
+      "confidence": 0.95,
+      "causal_role": {
+        "source_object": "Ni-MH battery electrodes",
+        "transformation": "dismantling/electrode material determination",
+        "measured_object": "positive and negative electrode materials",
+        "measured_quantity": "metal content (wt. %)",
+        "evidence_role": "target_composition"
+      },
+      "region_roles": [
+        {
+          "row_range": [
+            1,
+            11
+          ],
+          "role": "target_measurement",
+          "reason": "Rows list metals and their wt.% in positive and negative electrodes, i.e., target composition of WEEE battery components."
+        }
+      ],
+      "extract_row_ranges": [
+        [
+          1,
+          11
+        ]
+      ],
+      "caption_sufficient": true,
+      "evidence_steps": [
+        {
+          "step": "caption",
+          "evidence": "Chemical components of electrodes of Ni-MH batteries (w t. %)",
+          "judgment": "supports_extract",
+          "reason": "Caption explicitly reports target metal composition of battery electrodes."
+        },
+        {
+          "step": "table_reference",
+          "evidence": "The results are given in Table 1.",
+          "judgment": "supports_extract",
+          "reason": "Reference frames table as results of electrode material determination."
+        }
+      ],
+      "allowed_fact_types": [
+        "metal mass fraction in positive electrode",
+        "metal mass fraction in negative electrode",
+        "electrode material composition"
+      ],
+      "excluded_fact_types": [
+        "economic value",
+        "process parameters",
+        "literature summary"
+      ],
+      "ir_instruction": "Extract metal wt.% values for positive and negative Ni-MH battery electrodes as target composition facts.",
+      "uncertainty": ""
+    },
+    "llm_interpretation": {
+      "semantic_ir": {
+        "extractability": {
+          "decision": "extract",
+          "table_role": "target_composition",
+          "reason": "Table reports metal mass fractions (wt.%) in positive and negative Ni-MH battery electrodes, matching allowed target composition facts.",
+          "confidence": 0.95
+        },
+        "column_semantics": [
+          {
+            "column": 1,
+            "raw_header": "Positive electrode",
+            "entity_text": "Positive electrode",
+            "entity_type": "Component",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.95
+          },
+          {
+            "column": 2,
+            "raw_header": "Negative electrode",
+            "entity_text": "Negative electrode",
+            "entity_type": "Component",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.95
+          }
+        ],
+        "program": [
+          {
+            "step_id": "step_1",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  1,
+                  11
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  1,
+                  2
+                ]
+              }
+            },
+            "bind": {
+              "container": {
+                "from": "column.semantic.entity_text",
+                "type_from": "column.semantic.entity_type"
+              },
+              "constituent": {
+                "from": "row[0]",
+                "type": "Material"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column.semantic.unit_text"
+              }
+            },
+            "emit": {
+              "source": "container",
+              "predicate": "CONTAINS",
+              "target": "constituent",
+              "property": "mass_fraction",
+              "value": "value",
+              "unit": "unit",
+              "conditions": []
+            }
+          }
+        ],
+        "context_program": [],
+        "rationale": {
+          "binding_summary": "Each non-empty metal cell in the positive or negative electrode column is emitted as a CONTAINS fact: the electrode component contains the metal material with the reported wt.% value. The unit '%' is taken from the column semantic unit_text.",
+          "uncertainties": [
+            "The caption says 'w t. %' but the visible unit mention is '%'; the unit is preserved as '%'.",
+            "Empty cells for Ce, Pr, and Sm in the positive electrode column are skipped because they have no numeric value."
+          ]
+        }
+      }
+    },
+    "semantic_ir": {
+      "extractability": {
+        "decision": "extract",
+        "table_role": "target_composition",
+        "reason": "Table reports metal mass fractions (wt.%) in positive and negative Ni-MH battery electrodes, matching allowed target composition facts.",
+        "confidence": 0.95,
+        "gate_decision": "extract",
+        "gate_table_role": "target_composition"
+      },
+      "column_semantics": [
+        {
+          "column": 1,
+          "raw_header": "Positive electrode",
+          "entity_text": "Positive electrode",
+          "entity_type": "Component",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.95
+        },
+        {
+          "column": 2,
+          "raw_header": "Negative electrode",
+          "entity_text": "Negative electrode",
+          "entity_type": "Component",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.95
+        }
+      ],
+      "program": [
+        {
+          "step_id": "step_1",
+          "op": "foreach_cell",
+          "select": {
+            "rows": {
+              "selector": "row_ranges",
+              "row_ranges": [
+                [
+                  1,
+                  11
+                ]
+              ]
+            },
+            "cols": {
+              "selector": "columns",
+              "columns": [
+                1,
+                2
+              ]
+            }
+          },
+          "bind": {
+            "container": {
+              "from": "column.semantic.entity_text",
+              "type_from": "column.semantic.entity_type"
+            },
+            "constituent": {
+              "from": "row[0]",
+              "type": "Material"
+            },
+            "value": {
+              "from": "cell",
+              "parser": "number"
+            },
+            "unit": {
+              "from": "column.semantic.unit_text"
+            }
+          },
+          "emit": {
+            "source": "container",
+            "predicate": "CONTAINS",
+            "target": "constituent",
+            "property": "mass_fraction",
+            "value": "value",
+            "unit": "unit",
+            "conditions": []
+          }
+        }
+      ],
+      "context_program": [],
+      "rationale": {
+        "binding_summary": "Each non-empty metal cell in the positive or negative electrode column is emitted as a CONTAINS fact: the electrode component contains the metal material with the reported wt.% value. The unit '%' is taken from the column semantic unit_text.",
+        "uncertainties": [
+          "The caption says 'w t. %' but the visible unit mention is '%'; the unit is preserved as '%'.",
+          "Empty cells for Ce, Pr, and Sm in the positive electrode column are skipped because they have no numeric value."
+        ]
+      },
+      "table_id": "TABLE_Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries_0001"
+    },
+    "table_structure": {
+      "table_id": "TABLE_Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries_0001",
+      "extraction_mode": "semantic_ir",
+      "table_role": "target_composition",
+      "extractability": {
+        "decision": "extract",
+        "table_role": "target_composition",
+        "reason": "Table reports metal mass fractions (wt.%) in positive and negative Ni-MH battery electrodes, matching allowed target composition facts.",
+        "confidence": 0.95,
+        "gate_decision": "extract",
+        "gate_table_role": "target_composition"
+      },
+      "layout": null
+    },
+    "verification_report": {
+      "status": "repaired",
+      "skip_reason": null,
+      "cell_grounded_relations": 17,
+      "entity_count": 13,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "unsupported_templates": [],
+      "domain_range_rejections": [],
+      "aggregate_row_diagnostics": [],
+      "unresolved_endpoint_types": [],
+      "unresolved_type_facts": [],
+      "semantic_gate": [],
+      "slot_binding_conflicts": [
+        {
+          "status": "slot_binding_conflict",
+          "check_type": "endpoint_condition_role_conflict",
+          "severity": "error",
+          "template_id": "step_1",
+          "location": "target",
+          "reason": "A row source is used to construct an endpoint and is absent from, or reused by, its conditions."
+        }
+      ],
+      "layout_program_mismatches": [],
+      "checked_templates": 1,
+      "schema_audit": {
+        "valid": true,
+        "would_reject": false,
+        "error_count": 0,
+        "errors": []
+      },
+      "process_identity_bindings": {
+        "bound": [],
+        "unresolved": []
+      },
+      "result_repair_scope": {
+        "relation_ids": [
+          "table_ir_rel_001",
+          "table_ir_rel_002",
+          "table_ir_rel_003",
+          "table_ir_rel_004",
+          "table_ir_rel_005",
+          "table_ir_rel_006",
+          "table_ir_rel_007",
+          "table_ir_rel_008",
+          "table_ir_rel_009",
+          "table_ir_rel_010",
+          "table_ir_rel_011",
+          "table_ir_rel_012",
+          "table_ir_rel_013",
+          "table_ir_rel_014",
+          "table_ir_rel_015",
+          "table_ir_rel_016",
+          "table_ir_rel_017"
+        ],
+        "value_cells": [
+          {
+            "row_idx": 1,
+            "column_idx": 1
+          },
+          {
+            "row_idx": 1,
+            "column_idx": 2
+          },
+          {
+            "row_idx": 2,
+            "column_idx": 1
+          },
+          {
+            "row_idx": 2,
+            "column_idx": 2
+          },
+          {
+            "row_idx": 3,
+            "column_idx": 1
+          },
+          {
+            "row_idx": 3,
+            "column_idx": 2
+          },
+          {
+            "row_idx": 4,
+            "column_idx": 1
+          },
+          {
+            "row_idx": 4,
+            "column_idx": 2
+          },
+          {
+            "row_idx": 5,
+            "column_idx": 1
+          },
+          {
+            "row_idx": 5,
+            "column_idx": 2
+          },
+          {
+            "row_idx": 6,
+            "column_idx": 1
+          },
+          {
+            "row_idx": 6,
+            "column_idx": 2
+          },
+          {
+            "row_idx": 7,
+            "column_idx": 2
+          },
+          {
+            "row_idx": 8,
+            "column_idx": 2
+          },
+          {
+            "row_idx": 9,
+            "column_idx": 2
+          },
+          {
+            "row_idx": 10,
+            "column_idx": 2
+          },
+          {
+            "row_idx": 11,
+            "column_idx": 2
+          }
+        ],
+        "diagnostics": [
+          {
+            "status": "slot_binding_conflict",
+            "check_type": "endpoint_condition_role_conflict",
+            "severity": "error",
+            "template_id": "step_1",
+            "location": "target",
+            "reason": "A row source is used to construct an endpoint and is absent from, or reused by, its conditions."
+          },
+          {
+            "status": "slot_binding_conflict",
+            "check_type": "endpoint_condition_role_conflict",
+            "severity": "error",
+            "template_id": "step_1",
+            "location": "target",
+            "reason": "A row source is used to construct an endpoint and is absent from, or reused by, its conditions."
+          },
+          {
+            "status": "slot_binding_conflict",
+            "check_type": "endpoint_condition_role_conflict",
+            "severity": "error",
+            "template_id": "step_1",
+            "location": "target",
+            "reason": "A row source is used to construct an endpoint and is absent from, or reused by, its conditions."
+          },
+          {
+            "status": "slot_binding_conflict",
+            "check_type": "endpoint_condition_role_conflict",
+            "severity": "error",
+            "template_id": "step_1",
+            "location": "target",
+            "reason": "A row source is used to construct an endpoint and is absent from, or reused by, its conditions."
+          },
+          {
+            "status": "slot_binding_conflict",
+            "check_type": "endpoint_condition_role_conflict",
+            "severity": "error",
+            "template_id": "step_1",
+            "location": "target",
+            "reason": "A row source is used to construct an endpoint and is absent from, or reused by, its conditions."
+          },
+          {
+            "status": "slot_binding_conflict",
+            "check_type": "endpoint_condition_role_conflict",
+            "severity": "error",
+            "template_id": "step_1",
+            "location": "target",
+            "reason": "A row source is used to construct an endpoint and is absent from, or reused by, its conditions."
+          },
+          {
+            "status": "slot_binding_conflict",
+            "check_type": "endpoint_condition_role_conflict",
+            "severity": "error",
+            "template_id": "step_1",
+            "location": "target",
+            "reason": "A row source is used to construct an endpoint and is absent from, or reused by, its conditions."
+          },
+          {
+            "status": "slot_binding_conflict",
+            "check_type": "endpoint_condition_role_conflict",
+            "severity": "error",
+            "template_id": "step_1",
+            "location": "target",
+            "reason": "A row source is used to construct an endpoint and is absent from, or reused by, its conditions."
+          },
+          {
+            "status": "slot_binding_conflict",
+            "check_type": "endpoint_condition_role_conflict",
+            "severity": "error",
+            "template_id": "step_1",
+            "location": "target",
+            "reason": "A row source is used to construct an endpoint and is absent from, or reused by, its conditions."
+          },
+          {
+            "status": "slot_binding_conflict",
+            "check_type": "endpoint_condition_role_conflict",
+            "severity": "error",
+            "template_id": "step_1",
+            "location": "target",
+            "reason": "A row source is used to construct an endpoint and is absent from, or reused by, its conditions."
+          },
+          {
+            "status": "slot_binding_conflict",
+            "check_type": "endpoint_condition_role_conflict",
+            "severity": "error",
+            "template_id": "step_1",
+            "location": "target",
+            "reason": "A row source is used to construct an endpoint and is absent from, or reused by, its conditions."
+          },
+          {
+            "status": "slot_binding_conflict",
+            "check_type": "endpoint_condition_role_conflict",
+            "severity": "error",
+            "template_id": "step_1",
+            "location": "target",
+            "reason": "A row source is used to construct an endpoint and is absent from, or reused by, its conditions."
+          }
+        ]
+      },
+      "direct_repair_replaced_relation_ids": [
+        "table_ir_rel_001",
+        "table_ir_rel_002",
+        "table_ir_rel_003",
+        "table_ir_rel_004",
+        "table_ir_rel_005",
+        "table_ir_rel_006",
+        "table_ir_rel_007",
+        "table_ir_rel_008",
+        "table_ir_rel_009",
+        "table_ir_rel_010",
+        "table_ir_rel_011",
+        "table_ir_rel_012",
+        "table_ir_rel_013",
+        "table_ir_rel_014",
+        "table_ir_rel_015",
+        "table_ir_rel_016",
+        "table_ir_rel_017"
+      ],
+      "direct_repair_added_relation_count": 17
+    },
+    "execution_trace": [
+      {
+        "template_id": "step_1",
+        "op": "foreach_cell",
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "columns": [
+          1,
+          2
+        ],
+        "emitted": 17,
+        "skipped": 5
+      }
+    ],
+    "failed_rewrite_verification_report": null,
+    "failed_rewrite_execution_trace": null,
+    "table_cache_key": "a77b42fb9fb1b14c2ab4b31bec9f4eb6ae1ec6dc4907670b07946b94c827d2cb",
+    "table_cache_version": {
+      "format_version": 1,
+      "table_code_sha256": "4a22f4dde5201514bf22f7719494eab1968ac45306c22a597fb96b6e5153ba10",
+      "table_file_sha256": {
+        "__init__.py": "859afd37280303ac79ea652fcd1c347db6f6e9a7427d1bf201341ff92fdbb9f3",
+        "artifact_cache.py": "dae107568c3be648794486b4140f41386af8bd9d77b261dcf82505cef6e977aa",
+        "contract.py": "d537d95059e8a540b82872ffebe956d5e8fd43081e1ca630aa34b5a16359092a",
+        "cross_table_reference_resolver.py": "c8662723efd6e0597158b5afca516f88149abcf4a39feaf38ddd7488b2b389d7",
+        "extraction_agent.py": "3591d71d4074f2d4431a79d3b9eb2a039f5c43cf152a34df1316be746f14c450",
+        "ir/__init__.py": "388534b9fb9c0b6eae80334aef2e8eae376c73fca9ab48e74ddf4299bf50e425",
+        "ir/common.py": "562218bc179c5b27cc043f264b440886103fae4c45964fd7c171e9d1983deb23",
+        "ir/context.py": "885b13c1bc0b1e48ad2e1eee5f466979adc657d6fc13abacf7b2330948999eea",
+        "ir/core.py": "cff62003caca13eaaf0abdd93828b601a5201f512fabfb630e07ac64bbf2758c",
+        "ir/executor.py": "03e3cb0f7d24ba0eec5e576c04c4a3701280af27809b9f1d92e8a5afaf9f42d1",
+        "ir/parsing.py": "3e5727a88792518d25f4772fa526f0eb0361cbd05b4aaf03b4076178dd950159",
+        "ir/policy.py": "c2ef18469dc2d402825a1559a860901927666dcc1fd1e80e3ec82669bb40d307",
+        "ir/runtime.py": "67a3294a052d291532c51b06595f799ee7dd191ba6f923f3235296815eeb5d9d",
+        "ir/schema.py": "0d9c6415cc080f7f1ee4ea0b0260ba8211b5caa1f7d4c0aaf99fd426f25142f2",
+        "ir/selectors.py": "81b5606cc71f3ca6f4eaf848083e8d4b194b1c5a53f1cdf2832e439df6a456f1",
+        "ir/value_resolver.py": "feebb6a908f79b9c5975cc6cf7c657847522208a38d003f3b9cba9d8577864d8",
+        "ir/verifier.py": "9375cb15633663e724752b433288e99bb5d6d04956db9e59607a65c1181fbccb",
+        "reference_info.py": "301f9975a4ad539253ec368f68cabc4039e6d0d4ce7187abbeaf8ca1a306a531",
+        "repair/__init__.py": "05a749a9dd4f2c77ca79cd7b0cc2e00a8eae16d11cdf8f43ff26cd26e05639b9",
+        "repair/applier.py": "cf3af090627b411cbfdb354d3a89f5206a1fa14d04fbbe1f95d8ddd138e78842",
+        "repair/local.py": "f5d94287673530f100c594b123765b99178a12a62dbc9f0e8f1fbcc58fb059bb",
+        "repair/prompt.py": "4ff5b44701be422848a76a934171d48600a46921af1cadce22070143e06a13ce",
+        "repair/schema.py": "bc5069df92508097d6fad6435fec7be2079075e46a80ee8c92145bd26511df26",
+        "role_gate.py": "fc71db600c1d820e1c1f4898cb2341cbce76b5eb9984d07c600b0c63f226d769"
+      }
+    }
+  },
+  {
+    "chunk_id": "Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries__table__TABLE_Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries_0002",
+    "table_id": "TABLE_Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries_0002",
+    "llm_raw_response": "## TABLE_ROLE_GATE_RESPONSE\n{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"recovery_result\",\"confidence\":0.95,\"causal_role\":{\"source_object\":\"scrap (WEEE)\",\"transformation\":\"leaching with 3 M HCl at 95 °C for 3 h\",\"measured_object\":\"leach liquor\",\"measured_quantity\":\"percent recovery (leaching efficiency) of Ni, Co, Fe, Zn, Al, Mn, RE\",\"evidence_role\":\"treatment_outcome\"},\"region_roles\":[{\"row_range\":[1,3],\"role\":\"target_measurement\",\"reason\":\"Each row reports leaching efficiencies of target metals in leach liquor as a function of scrap weight, a post-treatment outcome.\"}],\"extract_row_ranges\":[[1,3]],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"The effect of weight of scrap on the leaching of metals\",\"judgment\":\"supports_extract\",\"reason\":\"Reports leaching outcome of metals from scrap.\"},{\"step\":\"table_reference\",\"evidence\":\"percent recovery of metals in the leach liquor\",\"judgment\":\"supports_extract\",\"reason\":\"Explicitly frames values as recovery of target metals after treatment.\"},{\"step\":\"headers\",\"evidence\":\"Leaching efficiencies (%) for Ni, Co, Fe, Zn, Al, Mn, RE\",\"judgment\":\"supports_extract\",\"reason\":\"Measured quantities are target metal leaching efficiencies.\"}],\"allowed_fact_types\":[\"leaching efficiency/recovery percentage of target metals (Ni, Co, Fe, Zn, Al, Mn, RE) from WEEE scrap after leaching\",\"effect of scrap weight on metal leaching efficiency\"],\"excluded_fact_types\":[\"leaching conditions as standalone facts (lixiviant, temperature, time) unless tied to a measured outcome\",\"economic value or price data\"],\"ir_instruction\":\"Extract rows as treatment outcomes: for each scrap weight, record leaching efficiency percentages for Ni, Co, Fe, Zn, Al, Mn, and RE as recovery results of the leaching treatment.\",\"uncertainty\":\"\"}}\n\n## SEMANTIC_IR_RESPONSE\n{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"recovery_result\",\n      \"reason\": \"Table reports leaching efficiency percentages of target metals from WEEE scrap after leaching, a treatment outcome.\",\n      \"confidence\": 0.95\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 0,\n        \"raw_header\": \"Weight of scrap (g) (Leaching efficiencies (%))\",\n        \"entity_text\": \"Weight of scrap\",\n        \"entity_type\": \"Observation\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"g\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 1,\n        \"raw_header\": \"Ni (Leaching efficiencies (%))\",\n        \"entity_text\": \"Ni\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"Co (Leaching efficiencies (%))\",\n        \"entity_text\": \"Co\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 3,\n        \"raw_header\": \"Fe (Leaching efficiencies (%))\",\n        \"entity_text\": \"Fe\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 4,\n        \"raw_header\": \"Zn (Leaching efficiencies (%))\",\n        \"entity_text\": \"Zn\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 5,\n        \"raw_header\": \"Al (Leaching efficiencies (%))\",\n        \"entity_text\": \"Al\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 6,\n        \"raw_header\": \"Mn (Leaching efficiencies (%))\",\n        \"entity_text\": \"Mn\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 7,\n        \"raw_header\": \"RE (Leaching efficiencies (%))\",\n        \"entity_text\": \"RE\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 3]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [1, 2, 3, 4, 5, 6, 7]\n          }\n        },\n        \"bind\": {\n          \"process\": {\n            \"from\": \"literal\",\n            \"literal\": \"leaching\",\n            \"type\": \"Process\"\n          },\n          \"material\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type_from\": \"column.semantic.entity_type\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"process\",\n          \"predicate\": \"HAS_OUTPUT\",\n          \"target\": \"material\",\n          \"property\": \"leaching efficiency\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": []\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"For each data row (scrap weight) and each metal column (Ni, Co, Fe, Zn, Al, Mn, RE), emit a HAS_OUTPUT fact from the leaching process to the metal material with the cell value as leaching efficiency percentage.\",\n      \"uncertainties\": [\n        \"Column 0 'Weight of scrap' is treated as an observation of the input scrap weight, not as a material or process endpoint; it is not used in the emitted facts.\",\n        \"The process is inferred as 'leaching' from the table caption and reference sentence; no explicit process column exists.\"\n      ]\n    }\n  }\n}",
+    "llm_gate_response": "{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"recovery_result\",\"confidence\":0.95,\"causal_role\":{\"source_object\":\"scrap (WEEE)\",\"transformation\":\"leaching with 3 M HCl at 95 °C for 3 h\",\"measured_object\":\"leach liquor\",\"measured_quantity\":\"percent recovery (leaching efficiency) of Ni, Co, Fe, Zn, Al, Mn, RE\",\"evidence_role\":\"treatment_outcome\"},\"region_roles\":[{\"row_range\":[1,3],\"role\":\"target_measurement\",\"reason\":\"Each row reports leaching efficiencies of target metals in leach liquor as a function of scrap weight, a post-treatment outcome.\"}],\"extract_row_ranges\":[[1,3]],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"The effect of weight of scrap on the leaching of metals\",\"judgment\":\"supports_extract\",\"reason\":\"Reports leaching outcome of metals from scrap.\"},{\"step\":\"table_reference\",\"evidence\":\"percent recovery of metals in the leach liquor\",\"judgment\":\"supports_extract\",\"reason\":\"Explicitly frames values as recovery of target metals after treatment.\"},{\"step\":\"headers\",\"evidence\":\"Leaching efficiencies (%) for Ni, Co, Fe, Zn, Al, Mn, RE\",\"judgment\":\"supports_extract\",\"reason\":\"Measured quantities are target metal leaching efficiencies.\"}],\"allowed_fact_types\":[\"leaching efficiency/recovery percentage of target metals (Ni, Co, Fe, Zn, Al, Mn, RE) from WEEE scrap after leaching\",\"effect of scrap weight on metal leaching efficiency\"],\"excluded_fact_types\":[\"leaching conditions as standalone facts (lixiviant, temperature, time) unless tied to a measured outcome\",\"economic value or price data\"],\"ir_instruction\":\"Extract rows as treatment outcomes: for each scrap weight, record leaching efficiency percentages for Ni, Co, Fe, Zn, Al, Mn, and RE as recovery results of the leaching treatment.\",\"uncertainty\":\"\"}}",
+    "llm_ir_response": "{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"recovery_result\",\n      \"reason\": \"Table reports leaching efficiency percentages of target metals from WEEE scrap after leaching, a treatment outcome.\",\n      \"confidence\": 0.95\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 0,\n        \"raw_header\": \"Weight of scrap (g) (Leaching efficiencies (%))\",\n        \"entity_text\": \"Weight of scrap\",\n        \"entity_type\": \"Observation\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"g\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 1,\n        \"raw_header\": \"Ni (Leaching efficiencies (%))\",\n        \"entity_text\": \"Ni\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"Co (Leaching efficiencies (%))\",\n        \"entity_text\": \"Co\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 3,\n        \"raw_header\": \"Fe (Leaching efficiencies (%))\",\n        \"entity_text\": \"Fe\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 4,\n        \"raw_header\": \"Zn (Leaching efficiencies (%))\",\n        \"entity_text\": \"Zn\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 5,\n        \"raw_header\": \"Al (Leaching efficiencies (%))\",\n        \"entity_text\": \"Al\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 6,\n        \"raw_header\": \"Mn (Leaching efficiencies (%))\",\n        \"entity_text\": \"Mn\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      },\n      {\n        \"column\": 7,\n        \"raw_header\": \"RE (Leaching efficiencies (%))\",\n        \"entity_text\": \"RE\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.95\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 3]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [1, 2, 3, 4, 5, 6, 7]\n          }\n        },\n        \"bind\": {\n          \"process\": {\n            \"from\": \"literal\",\n            \"literal\": \"leaching\",\n            \"type\": \"Process\"\n          },\n          \"material\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type_from\": \"column.semantic.entity_type\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"process\",\n          \"predicate\": \"HAS_OUTPUT\",\n          \"target\": \"material\",\n          \"property\": \"leaching efficiency\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": []\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"For each data row (scrap weight) and each metal column (Ni, Co, Fe, Zn, Al, Mn, RE), emit a HAS_OUTPUT fact from the leaching process to the metal material with the cell value as leaching efficiency percentage.\",\n      \"uncertainties\": [\n        \"Column 0 'Weight of scrap' is treated as an observation of the input scrap weight, not as a material or process endpoint; it is not used in the emitted facts.\",\n        \"The process is inferred as 'leaching' from the table caption and reference sentence; no explicit process column exists.\"\n      ]\n    }\n  }\n}",
+    "table_role_decision": {
+      "decision": "extract",
+      "table_role": "recovery_result",
+      "confidence": 0.95,
+      "causal_role": {
+        "source_object": "scrap (WEEE)",
+        "transformation": "leaching with 3 M HCl at 95 °C for 3 h",
+        "measured_object": "leach liquor",
+        "measured_quantity": "percent recovery (leaching efficiency) of Ni, Co, Fe, Zn, Al, Mn, RE",
+        "evidence_role": "treatment_outcome"
+      },
+      "region_roles": [
+        {
+          "row_range": [
+            1,
+            3
+          ],
+          "role": "target_measurement",
+          "reason": "Each row reports leaching efficiencies of target metals in leach liquor as a function of scrap weight, a post-treatment outcome."
+        }
+      ],
+      "extract_row_ranges": [
+        [
+          1,
+          3
+        ]
+      ],
+      "caption_sufficient": true,
+      "evidence_steps": [
+        {
+          "step": "caption",
+          "evidence": "The effect of weight of scrap on the leaching of metals",
+          "judgment": "supports_extract",
+          "reason": "Reports leaching outcome of metals from scrap."
+        },
+        {
+          "step": "table_reference",
+          "evidence": "percent recovery of metals in the leach liquor",
+          "judgment": "supports_extract",
+          "reason": "Explicitly frames values as recovery of target metals after treatment."
+        },
+        {
+          "step": "headers",
+          "evidence": "Leaching efficiencies (%) for Ni, Co, Fe, Zn, Al, Mn, RE",
+          "judgment": "supports_extract",
+          "reason": "Measured quantities are target metal leaching efficiencies."
+        }
+      ],
+      "allowed_fact_types": [
+        "leaching efficiency/recovery percentage of target metals (Ni, Co, Fe, Zn, Al, Mn, RE) from WEEE scrap after leaching",
+        "effect of scrap weight on metal leaching efficiency"
+      ],
+      "excluded_fact_types": [
+        "leaching conditions as standalone facts (lixiviant, temperature, time) unless tied to a measured outcome",
+        "economic value or price data"
+      ],
+      "ir_instruction": "Extract rows as treatment outcomes: for each scrap weight, record leaching efficiency percentages for Ni, Co, Fe, Zn, Al, Mn, and RE as recovery results of the leaching treatment.",
+      "uncertainty": ""
+    },
+    "llm_interpretation": {
+      "semantic_ir": {
+        "extractability": {
+          "decision": "extract",
+          "table_role": "recovery_result",
+          "reason": "Table reports leaching efficiency percentages of target metals from WEEE scrap after leaching, a treatment outcome.",
+          "confidence": 0.95
+        },
+        "column_semantics": [
+          {
+            "column": 0,
+            "raw_header": "Weight of scrap (g) (Leaching efficiencies (%))",
+            "entity_text": "Weight of scrap",
+            "entity_type": "Observation",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "g",
+            "measure_text": "",
+            "confidence": 0.9
+          },
+          {
+            "column": 1,
+            "raw_header": "Ni (Leaching efficiencies (%))",
+            "entity_text": "Ni",
+            "entity_type": "Material",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.95
+          },
+          {
+            "column": 2,
+            "raw_header": "Co (Leaching efficiencies (%))",
+            "entity_text": "Co",
+            "entity_type": "Material",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.95
+          },
+          {
+            "column": 3,
+            "raw_header": "Fe (Leaching efficiencies (%))",
+            "entity_text": "Fe",
+            "entity_type": "Material",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.95
+          },
+          {
+            "column": 4,
+            "raw_header": "Zn (Leaching efficiencies (%))",
+            "entity_text": "Zn",
+            "entity_type": "Material",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.95
+          },
+          {
+            "column": 5,
+            "raw_header": "Al (Leaching efficiencies (%))",
+            "entity_text": "Al",
+            "entity_type": "Material",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.95
+          },
+          {
+            "column": 6,
+            "raw_header": "Mn (Leaching efficiencies (%))",
+            "entity_text": "Mn",
+            "entity_type": "Material",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.95
+          },
+          {
+            "column": 7,
+            "raw_header": "RE (Leaching efficiencies (%))",
+            "entity_text": "RE",
+            "entity_type": "Material",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "%",
+            "measure_text": "",
+            "confidence": 0.95
+          }
+        ],
+        "program": [
+          {
+            "step_id": "step_1",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  1,
+                  3
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ]
+              }
+            },
+            "bind": {
+              "process": {
+                "from": "literal",
+                "literal": "leaching",
+                "type": "Process"
+              },
+              "material": {
+                "from": "column.semantic.entity_text",
+                "type_from": "column.semantic.entity_type"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column.semantic.unit_text"
+              }
+            },
+            "emit": {
+              "source": "process",
+              "predicate": "HAS_OUTPUT",
+              "target": "material",
+              "property": "leaching efficiency",
+              "value": "value",
+              "unit": "unit",
+              "conditions": []
+            }
+          }
+        ],
+        "context_program": [],
+        "rationale": {
+          "binding_summary": "For each data row (scrap weight) and each metal column (Ni, Co, Fe, Zn, Al, Mn, RE), emit a HAS_OUTPUT fact from the leaching process to the metal material with the cell value as leaching efficiency percentage.",
+          "uncertainties": [
+            "Column 0 'Weight of scrap' is treated as an observation of the input scrap weight, not as a material or process endpoint; it is not used in the emitted facts.",
+            "The process is inferred as 'leaching' from the table caption and reference sentence; no explicit process column exists."
+          ]
+        }
+      }
+    },
+    "semantic_ir": {
+      "extractability": {
+        "decision": "extract",
+        "table_role": "recovery_result",
+        "reason": "Table reports leaching efficiency percentages of target metals from WEEE scrap after leaching, a treatment outcome.",
+        "confidence": 0.95,
+        "gate_decision": "extract",
+        "gate_table_role": "recovery_result"
+      },
+      "column_semantics": [
+        {
+          "column": 0,
+          "raw_header": "Weight of scrap (g) (Leaching efficiencies (%))",
+          "entity_text": "Weight of scrap",
+          "entity_type": "Observation",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "g",
+          "measure_text": "",
+          "confidence": 0.9
+        },
+        {
+          "column": 1,
+          "raw_header": "Ni (Leaching efficiencies (%))",
+          "entity_text": "Ni",
+          "entity_type": "Material",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.95
+        },
+        {
+          "column": 2,
+          "raw_header": "Co (Leaching efficiencies (%))",
+          "entity_text": "Co",
+          "entity_type": "Material",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.95
+        },
+        {
+          "column": 3,
+          "raw_header": "Fe (Leaching efficiencies (%))",
+          "entity_text": "Fe",
+          "entity_type": "Material",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.95
+        },
+        {
+          "column": 4,
+          "raw_header": "Zn (Leaching efficiencies (%))",
+          "entity_text": "Zn",
+          "entity_type": "Material",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.95
+        },
+        {
+          "column": 5,
+          "raw_header": "Al (Leaching efficiencies (%))",
+          "entity_text": "Al",
+          "entity_type": "Material",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.95
+        },
+        {
+          "column": 6,
+          "raw_header": "Mn (Leaching efficiencies (%))",
+          "entity_text": "Mn",
+          "entity_type": "Material",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.95
+        },
+        {
+          "column": 7,
+          "raw_header": "RE (Leaching efficiencies (%))",
+          "entity_text": "RE",
+          "entity_type": "Material",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "%",
+          "measure_text": "",
+          "confidence": 0.95
+        }
+      ],
+      "program": [
+        {
+          "step_id": "step_1",
+          "op": "foreach_cell",
+          "select": {
+            "rows": {
+              "selector": "row_ranges",
+              "row_ranges": [
+                [
+                  1,
+                  3
+                ]
+              ]
+            },
+            "cols": {
+              "selector": "columns",
+              "columns": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            }
+          },
+          "bind": {
+            "process": {
+              "from": "literal",
+              "literal": "leaching",
+              "type": "Process"
+            },
+            "material": {
+              "from": "column.semantic.entity_text",
+              "type_from": "column.semantic.entity_type"
+            },
+            "value": {
+              "from": "cell",
+              "parser": "number"
+            },
+            "unit": {
+              "from": "column.semantic.unit_text"
+            }
+          },
+          "emit": {
+            "source": "process",
+            "predicate": "HAS_OUTPUT",
+            "target": "material",
+            "property": "leaching efficiency",
+            "value": "value",
+            "unit": "unit",
+            "conditions": []
+          }
+        }
+      ],
+      "context_program": [],
+      "rationale": {
+        "binding_summary": "For each data row (scrap weight) and each metal column (Ni, Co, Fe, Zn, Al, Mn, RE), emit a HAS_OUTPUT fact from the leaching process to the metal material with the cell value as leaching efficiency percentage.",
+        "uncertainties": [
+          "Column 0 'Weight of scrap' is treated as an observation of the input scrap weight, not as a material or process endpoint; it is not used in the emitted facts.",
+          "The process is inferred as 'leaching' from the table caption and reference sentence; no explicit process column exists."
+        ]
+      },
+      "table_id": "TABLE_Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries_0002"
+    },
+    "table_structure": {
+      "table_id": "TABLE_Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries_0002",
+      "extraction_mode": "semantic_ir",
+      "table_role": "recovery_result",
+      "extractability": {
+        "decision": "extract",
+        "table_role": "recovery_result",
+        "reason": "Table reports leaching efficiency percentages of target metals from WEEE scrap after leaching, a treatment outcome.",
+        "confidence": 0.95,
+        "gate_decision": "extract",
+        "gate_table_role": "recovery_result"
+      },
+      "layout": null
+    },
+    "verification_report": {
+      "status": "passed",
+      "skip_reason": null,
+      "cell_grounded_relations": 21,
+      "entity_count": 8,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "unsupported_templates": [],
+      "domain_range_rejections": [],
+      "aggregate_row_diagnostics": [],
+      "unresolved_endpoint_types": [],
+      "unresolved_type_facts": [],
+      "semantic_gate": [],
+      "slot_binding_conflicts": [],
+      "layout_program_mismatches": [],
+      "checked_templates": 1,
+      "schema_audit": {
+        "valid": true,
+        "would_reject": false,
+        "error_count": 0,
+        "errors": []
+      },
+      "process_identity_bindings": {
+        "bound": [],
+        "unresolved": []
+      }
+    },
+    "execution_trace": [
+      {
+        "template_id": "step_1",
+        "op": "foreach_cell",
+        "rows": [
+          1,
+          2,
+          3
+        ],
+        "columns": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "emitted": 21,
+        "skipped": 0
+      }
+    ],
+    "failed_rewrite_verification_report": null,
+    "failed_rewrite_execution_trace": null,
+    "table_cache_key": "d84d8971fac1031b960aeeed4c6927657b12d241ac3bd35c17dd98edb0536f9d",
+    "table_cache_version": {
+      "format_version": 1,
+      "table_code_sha256": "4a22f4dde5201514bf22f7719494eab1968ac45306c22a597fb96b6e5153ba10",
+      "table_file_sha256": {
+        "__init__.py": "859afd37280303ac79ea652fcd1c347db6f6e9a7427d1bf201341ff92fdbb9f3",
+        "artifact_cache.py": "dae107568c3be648794486b4140f41386af8bd9d77b261dcf82505cef6e977aa",
+        "contract.py": "d537d95059e8a540b82872ffebe956d5e8fd43081e1ca630aa34b5a16359092a",
+        "cross_table_reference_resolver.py": "c8662723efd6e0597158b5afca516f88149abcf4a39feaf38ddd7488b2b389d7",
+        "extraction_agent.py": "3591d71d4074f2d4431a79d3b9eb2a039f5c43cf152a34df1316be746f14c450",
+        "ir/__init__.py": "388534b9fb9c0b6eae80334aef2e8eae376c73fca9ab48e74ddf4299bf50e425",
+        "ir/common.py": "562218bc179c5b27cc043f264b440886103fae4c45964fd7c171e9d1983deb23",
+        "ir/context.py": "885b13c1bc0b1e48ad2e1eee5f466979adc657d6fc13abacf7b2330948999eea",
+        "ir/core.py": "cff62003caca13eaaf0abdd93828b601a5201f512fabfb630e07ac64bbf2758c",
+        "ir/executor.py": "03e3cb0f7d24ba0eec5e576c04c4a3701280af27809b9f1d92e8a5afaf9f42d1",
+        "ir/parsing.py": "3e5727a88792518d25f4772fa526f0eb0361cbd05b4aaf03b4076178dd950159",
+        "ir/policy.py": "c2ef18469dc2d402825a1559a860901927666dcc1fd1e80e3ec82669bb40d307",
+        "ir/runtime.py": "67a3294a052d291532c51b06595f799ee7dd191ba6f923f3235296815eeb5d9d",
+        "ir/schema.py": "0d9c6415cc080f7f1ee4ea0b0260ba8211b5caa1f7d4c0aaf99fd426f25142f2",
+        "ir/selectors.py": "81b5606cc71f3ca6f4eaf848083e8d4b194b1c5a53f1cdf2832e439df6a456f1",
+        "ir/value_resolver.py": "feebb6a908f79b9c5975cc6cf7c657847522208a38d003f3b9cba9d8577864d8",
+        "ir/verifier.py": "9375cb15633663e724752b433288e99bb5d6d04956db9e59607a65c1181fbccb",
+        "reference_info.py": "301f9975a4ad539253ec368f68cabc4039e6d0d4ce7187abbeaf8ca1a306a531",
+        "repair/__init__.py": "05a749a9dd4f2c77ca79cd7b0cc2e00a8eae16d11cdf8f43ff26cd26e05639b9",
+        "repair/applier.py": "cf3af090627b411cbfdb354d3a89f5206a1fa14d04fbbe1f95d8ddd138e78842",
+        "repair/local.py": "f5d94287673530f100c594b123765b99178a12a62dbc9f0e8f1fbcc58fb059bb",
+        "repair/prompt.py": "4ff5b44701be422848a76a934171d48600a46921af1cadce22070143e06a13ce",
+        "repair/schema.py": "bc5069df92508097d6fad6435fec7be2079075e46a80ee8c92145bd26511df26",
+        "role_gate.py": "fc71db600c1d820e1c1f4898cb2341cbce76b5eb9984d07c600b0c63f226d769"
+      }
+    }
+  },
+  {
+    "chunk_id": "Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries__table__TABLE_Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries_0003",
+    "table_id": "TABLE_Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries_0003",
+    "llm_raw_response": "## TABLE_ROLE_GATE_RESPONSE\n{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"recovery_result\",\"confidence\":0.9,\"causal_role\":{\"source_object\":\"D2EHPA organic phase loaded with metal ions (RE, Mn, Zn, Al, Fe)\",\"transformation\":\"stripping with hydrochloric acid at varying [HCl] and O:A phase ratio\",\"measured_object\":\"aqueous stripping solution / stripped metal ions\",\"measured_quantity\":\"stripping yields of metals (%)\",\"evidence_role\":\"treatment_outcome\"},\"region_roles\":[{\"row_range\":[1,8],\"role\":\"target_measurement\",\"reason\":\"Each row reports stripping yields (%) of target metals (RE, Mn, Zn, Al, Fe) as a function of HCl concentration and O:A ratio, quantifying recovery of metals from the organic phase.\"}],\"extract_row_ranges\":[[1,8]],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Effect of hydrochloric acid concentration and O:A phase ratio on stripping of metal ions from the D2EHPA organic phase\",\"judgment\":\"supports_extract\",\"reason\":\"Reports treatment outcome: stripping yields of metals caused by acid stripping of loaded organic phase.\"},{\"step\":\"headers\",\"evidence\":\"Stripping yields of metals (%) for RE, Mn, Zn, Al, Fe\",\"judgment\":\"supports_extract\",\"reason\":\"Measured quantity is recovery yield of target metals, a target-bearing treatment outcome.\"},{\"step\":\"row_preview\",\"evidence\":\"Rows show numeric stripping yields (e.g., 97.3, 100, 96.4) under varying [HCl] and O:A ratio\",\"judgment\":\"supports_extract\",\"reason\":\"Concrete post-treatment recovery measurements of target metals.\"}],\"allowed_fact_types\":[\"stripping yield of rare earth elements\",\"stripping yield of Mn\",\"stripping yield of Zn\",\"stripping yield of Al\",\"stripping yield of Fe\",\"effect of HCl concentration on metal stripping yield\",\"effect of O:A phase ratio on metal stripping yield\"],\"excluded_fact_types\":[\"economic value\",\"literature summary\",\"method validation\",\"process input composition\"],\"ir_instruction\":\"Extract stripping yield (%) for each metal (RE, Mn, Zn, Al, Fe) as a function of [HCl] and O:A ratio; treat yields as recovery results of the stripping treatment.\",\"uncertainty\":\"None significant; caption and headers clearly indicate post-treatment recovery yields of target metals.\"}}\n\n## SEMANTIC_IR_RESPONSE\n{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"recovery_result\",\n      \"reason\": \"Table reports stripping yields (%) of RE, Mn, Zn, Al, and Fe from a loaded D2EHPA organic phase as a function of HCl concentration and O:A phase ratio, which are material-specific process outcomes.\",\n      \"confidence\": 0.9\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 0,\n        \"raw_header\": \"[HCl], M\",\n        \"entity_text\": \"HCl concentration\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"HCl concentration\",\n        \"condition_raw_text\": \"[HCl], M\",\n        \"unit_text\": \"M\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 1,\n        \"raw_header\": \"O:A ratio\",\n        \"entity_text\": \"O:A ratio\",\n        \"entity_type\": \"Observation\",\n        \"condition_text\": \"O:A ratio\",\n        \"condition_raw_text\": \"O:A ratio\",\n        \"unit_text\": \"\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"RE (Stripping yields of metals (%))\",\n        \"entity_text\": \"RE\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"Stripping yields of metals\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 3,\n        \"raw_header\": \"Mn (Stripping yields of metals (%))\",\n        \"entity_text\": \"Mn\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"Stripping yields of metals\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 4,\n        \"raw_header\": \"Zn (Stripping yields of metals (%))\",\n        \"entity_text\": \"Zn\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"Stripping yields of metals\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 5,\n        \"raw_header\": \"Al (Stripping yields of metals (%))\",\n        \"entity_text\": \"Al\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"Stripping yields of metals\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 6,\n        \"raw_header\": \"Fe (Stripping yields of metals (%))\",\n        \"entity_text\": \"Fe\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"Stripping yields of metals\",\n        \"confidence\": 0.9\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 8]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [2, 3, 4, 5, 6]\n          }\n        },\n        \"bind\": {\n          \"process\": {\n            \"from\": \"literal\",\n            \"literal\": \"stripping\",\n            \"type\": \"Process\"\n          },\n          \"material\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type_from\": \"column.semantic.entity_type\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"hcl_conc\": {\n            \"name\": \"hcl_conc\",\n            \"from\": \"row[0]\"\n          },\n          \"oa_ratio\": {\n            \"name\": \"oa_ratio\",\n            \"from\": \"row[1]\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"process\",\n          \"predicate\": \"HAS_OUTPUT\",\n          \"target\": \"material\",\n          \"property\": \"stripping yield\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"hcl_conc\", \"oa_ratio\"]\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"Each data cell in columns 2-6 reports the stripping yield (%) of a metal (RE, Mn, Zn, Al, Fe) from a loaded D2EHPA organic phase. The process is 'stripping', the target material is the column header entity, the value is the cell number, and the unit is '%' from the column header. HCl concentration (row[0]) and O:A ratio (row[1]) are bound as conditions.\",\n      \"uncertainties\": [\n        \"The exact chemical form of RE is not specified; treated as a generic rare earth material.\",\n        \"HCl concentration and O:A ratio are experimental conditions rather than entities in the KG, so they are attached as conditions on the HAS_OUTPUT fact.\"\n      ]\n    }\n  }\n}",
+    "llm_gate_response": "{\"table_role_decision\":{\"decision\":\"extract\",\"table_role\":\"recovery_result\",\"confidence\":0.9,\"causal_role\":{\"source_object\":\"D2EHPA organic phase loaded with metal ions (RE, Mn, Zn, Al, Fe)\",\"transformation\":\"stripping with hydrochloric acid at varying [HCl] and O:A phase ratio\",\"measured_object\":\"aqueous stripping solution / stripped metal ions\",\"measured_quantity\":\"stripping yields of metals (%)\",\"evidence_role\":\"treatment_outcome\"},\"region_roles\":[{\"row_range\":[1,8],\"role\":\"target_measurement\",\"reason\":\"Each row reports stripping yields (%) of target metals (RE, Mn, Zn, Al, Fe) as a function of HCl concentration and O:A ratio, quantifying recovery of metals from the organic phase.\"}],\"extract_row_ranges\":[[1,8]],\"caption_sufficient\":true,\"evidence_steps\":[{\"step\":\"caption\",\"evidence\":\"Effect of hydrochloric acid concentration and O:A phase ratio on stripping of metal ions from the D2EHPA organic phase\",\"judgment\":\"supports_extract\",\"reason\":\"Reports treatment outcome: stripping yields of metals caused by acid stripping of loaded organic phase.\"},{\"step\":\"headers\",\"evidence\":\"Stripping yields of metals (%) for RE, Mn, Zn, Al, Fe\",\"judgment\":\"supports_extract\",\"reason\":\"Measured quantity is recovery yield of target metals, a target-bearing treatment outcome.\"},{\"step\":\"row_preview\",\"evidence\":\"Rows show numeric stripping yields (e.g., 97.3, 100, 96.4) under varying [HCl] and O:A ratio\",\"judgment\":\"supports_extract\",\"reason\":\"Concrete post-treatment recovery measurements of target metals.\"}],\"allowed_fact_types\":[\"stripping yield of rare earth elements\",\"stripping yield of Mn\",\"stripping yield of Zn\",\"stripping yield of Al\",\"stripping yield of Fe\",\"effect of HCl concentration on metal stripping yield\",\"effect of O:A phase ratio on metal stripping yield\"],\"excluded_fact_types\":[\"economic value\",\"literature summary\",\"method validation\",\"process input composition\"],\"ir_instruction\":\"Extract stripping yield (%) for each metal (RE, Mn, Zn, Al, Fe) as a function of [HCl] and O:A ratio; treat yields as recovery results of the stripping treatment.\",\"uncertainty\":\"None significant; caption and headers clearly indicate post-treatment recovery yields of target metals.\"}}",
+    "llm_ir_response": "{\n  \"semantic_ir\": {\n    \"extractability\": {\n      \"decision\": \"extract\",\n      \"table_role\": \"recovery_result\",\n      \"reason\": \"Table reports stripping yields (%) of RE, Mn, Zn, Al, and Fe from a loaded D2EHPA organic phase as a function of HCl concentration and O:A phase ratio, which are material-specific process outcomes.\",\n      \"confidence\": 0.9\n    },\n    \"column_semantics\": [\n      {\n        \"column\": 0,\n        \"raw_header\": \"[HCl], M\",\n        \"entity_text\": \"HCl concentration\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"HCl concentration\",\n        \"condition_raw_text\": \"[HCl], M\",\n        \"unit_text\": \"M\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 1,\n        \"raw_header\": \"O:A ratio\",\n        \"entity_text\": \"O:A ratio\",\n        \"entity_type\": \"Observation\",\n        \"condition_text\": \"O:A ratio\",\n        \"condition_raw_text\": \"O:A ratio\",\n        \"unit_text\": \"\",\n        \"measure_text\": \"\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 2,\n        \"raw_header\": \"RE (Stripping yields of metals (%))\",\n        \"entity_text\": \"RE\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"Stripping yields of metals\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 3,\n        \"raw_header\": \"Mn (Stripping yields of metals (%))\",\n        \"entity_text\": \"Mn\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"Stripping yields of metals\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 4,\n        \"raw_header\": \"Zn (Stripping yields of metals (%))\",\n        \"entity_text\": \"Zn\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"Stripping yields of metals\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 5,\n        \"raw_header\": \"Al (Stripping yields of metals (%))\",\n        \"entity_text\": \"Al\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"Stripping yields of metals\",\n        \"confidence\": 0.9\n      },\n      {\n        \"column\": 6,\n        \"raw_header\": \"Fe (Stripping yields of metals (%))\",\n        \"entity_text\": \"Fe\",\n        \"entity_type\": \"Material\",\n        \"condition_text\": \"\",\n        \"condition_raw_text\": \"\",\n        \"unit_text\": \"%\",\n        \"measure_text\": \"Stripping yields of metals\",\n        \"confidence\": 0.9\n      }\n    ],\n    \"program\": [\n      {\n        \"step_id\": \"step_1\",\n        \"op\": \"foreach_cell\",\n        \"select\": {\n          \"rows\": {\n            \"selector\": \"row_range\",\n            \"row_range\": [1, 8]\n          },\n          \"cols\": {\n            \"selector\": \"columns\",\n            \"columns\": [2, 3, 4, 5, 6]\n          }\n        },\n        \"bind\": {\n          \"process\": {\n            \"from\": \"literal\",\n            \"literal\": \"stripping\",\n            \"type\": \"Process\"\n          },\n          \"material\": {\n            \"from\": \"column.semantic.entity_text\",\n            \"type_from\": \"column.semantic.entity_type\"\n          },\n          \"value\": {\n            \"from\": \"cell\",\n            \"parser\": \"number\"\n          },\n          \"unit\": {\n            \"from\": \"column.semantic.unit_text\"\n          },\n          \"hcl_conc\": {\n            \"name\": \"hcl_conc\",\n            \"from\": \"row[0]\"\n          },\n          \"oa_ratio\": {\n            \"name\": \"oa_ratio\",\n            \"from\": \"row[1]\"\n          }\n        },\n        \"emit\": {\n          \"source\": \"process\",\n          \"predicate\": \"HAS_OUTPUT\",\n          \"target\": \"material\",\n          \"property\": \"stripping yield\",\n          \"value\": \"value\",\n          \"unit\": \"unit\",\n          \"conditions\": [\"hcl_conc\", \"oa_ratio\"]\n        }\n      }\n    ],\n    \"context_program\": [],\n    \"rationale\": {\n      \"binding_summary\": \"Each data cell in columns 2-6 reports the stripping yield (%) of a metal (RE, Mn, Zn, Al, Fe) from a loaded D2EHPA organic phase. The process is 'stripping', the target material is the column header entity, the value is the cell number, and the unit is '%' from the column header. HCl concentration (row[0]) and O:A ratio (row[1]) are bound as conditions.\",\n      \"uncertainties\": [\n        \"The exact chemical form of RE is not specified; treated as a generic rare earth material.\",\n        \"HCl concentration and O:A ratio are experimental conditions rather than entities in the KG, so they are attached as conditions on the HAS_OUTPUT fact.\"\n      ]\n    }\n  }\n}",
+    "table_role_decision": {
+      "decision": "extract",
+      "table_role": "recovery_result",
+      "confidence": 0.9,
+      "causal_role": {
+        "source_object": "D2EHPA organic phase loaded with metal ions (RE, Mn, Zn, Al, Fe)",
+        "transformation": "stripping with hydrochloric acid at varying [HCl] and O:A phase ratio",
+        "measured_object": "aqueous stripping solution / stripped metal ions",
+        "measured_quantity": "stripping yields of metals (%)",
+        "evidence_role": "treatment_outcome"
+      },
+      "region_roles": [
+        {
+          "row_range": [
+            1,
+            8
+          ],
+          "role": "target_measurement",
+          "reason": "Each row reports stripping yields (%) of target metals (RE, Mn, Zn, Al, Fe) as a function of HCl concentration and O:A ratio, quantifying recovery of metals from the organic phase."
+        }
+      ],
+      "extract_row_ranges": [
+        [
+          1,
+          8
+        ]
+      ],
+      "caption_sufficient": true,
+      "evidence_steps": [
+        {
+          "step": "caption",
+          "evidence": "Effect of hydrochloric acid concentration and O:A phase ratio on stripping of metal ions from the D2EHPA organic phase",
+          "judgment": "supports_extract",
+          "reason": "Reports treatment outcome: stripping yields of metals caused by acid stripping of loaded organic phase."
+        },
+        {
+          "step": "headers",
+          "evidence": "Stripping yields of metals (%) for RE, Mn, Zn, Al, Fe",
+          "judgment": "supports_extract",
+          "reason": "Measured quantity is recovery yield of target metals, a target-bearing treatment outcome."
+        },
+        {
+          "step": "row_preview",
+          "evidence": "Rows show numeric stripping yields (e.g., 97.3, 100, 96.4) under varying [HCl] and O:A ratio",
+          "judgment": "supports_extract",
+          "reason": "Concrete post-treatment recovery measurements of target metals."
+        }
+      ],
+      "allowed_fact_types": [
+        "stripping yield of rare earth elements",
+        "stripping yield of Mn",
+        "stripping yield of Zn",
+        "stripping yield of Al",
+        "stripping yield of Fe",
+        "effect of HCl concentration on metal stripping yield",
+        "effect of O:A phase ratio on metal stripping yield"
+      ],
+      "excluded_fact_types": [
+        "economic value",
+        "literature summary",
+        "method validation",
+        "process input composition"
+      ],
+      "ir_instruction": "Extract stripping yield (%) for each metal (RE, Mn, Zn, Al, Fe) as a function of [HCl] and O:A ratio; treat yields as recovery results of the stripping treatment.",
+      "uncertainty": "None significant; caption and headers clearly indicate post-treatment recovery yields of target metals."
+    },
+    "llm_interpretation": {
+      "semantic_ir": {
+        "extractability": {
+          "decision": "extract",
+          "table_role": "recovery_result",
+          "reason": "Table reports stripping yields (%) of RE, Mn, Zn, Al, and Fe from a loaded D2EHPA organic phase as a function of HCl concentration and O:A phase ratio, which are material-specific process outcomes.",
+          "confidence": 0.9
+        },
+        "column_semantics": [
+          {
+            "column": 0,
+            "raw_header": "[HCl], M",
+            "entity_text": "HCl concentration",
+            "entity_type": "Material",
+            "condition_text": "HCl concentration",
+            "condition_raw_text": "[HCl], M",
+            "unit_text": "M",
+            "measure_text": "",
+            "confidence": 0.9
+          },
+          {
+            "column": 1,
+            "raw_header": "O:A ratio",
+            "entity_text": "O:A ratio",
+            "entity_type": "Observation",
+            "condition_text": "O:A ratio",
+            "condition_raw_text": "O:A ratio",
+            "unit_text": "",
+            "measure_text": "",
+            "confidence": 0.9
+          },
+          {
+            "column": 2,
+            "raw_header": "RE (Stripping yields of metals (%))",
+            "entity_text": "RE",
+            "entity_type": "Material",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "%",
+            "measure_text": "Stripping yields of metals",
+            "confidence": 0.9
+          },
+          {
+            "column": 3,
+            "raw_header": "Mn (Stripping yields of metals (%))",
+            "entity_text": "Mn",
+            "entity_type": "Material",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "%",
+            "measure_text": "Stripping yields of metals",
+            "confidence": 0.9
+          },
+          {
+            "column": 4,
+            "raw_header": "Zn (Stripping yields of metals (%))",
+            "entity_text": "Zn",
+            "entity_type": "Material",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "%",
+            "measure_text": "Stripping yields of metals",
+            "confidence": 0.9
+          },
+          {
+            "column": 5,
+            "raw_header": "Al (Stripping yields of metals (%))",
+            "entity_text": "Al",
+            "entity_type": "Material",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "%",
+            "measure_text": "Stripping yields of metals",
+            "confidence": 0.9
+          },
+          {
+            "column": 6,
+            "raw_header": "Fe (Stripping yields of metals (%))",
+            "entity_text": "Fe",
+            "entity_type": "Material",
+            "condition_text": "",
+            "condition_raw_text": "",
+            "unit_text": "%",
+            "measure_text": "Stripping yields of metals",
+            "confidence": 0.9
+          }
+        ],
+        "program": [
+          {
+            "step_id": "step_1",
+            "op": "foreach_cell",
+            "select": {
+              "rows": {
+                "selector": "row_range",
+                "row_range": [
+                  1,
+                  8
+                ]
+              },
+              "cols": {
+                "selector": "columns",
+                "columns": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ]
+              }
+            },
+            "bind": {
+              "process": {
+                "from": "literal",
+                "literal": "stripping",
+                "type": "Process"
+              },
+              "material": {
+                "from": "column.semantic.entity_text",
+                "type_from": "column.semantic.entity_type"
+              },
+              "value": {
+                "from": "cell",
+                "parser": "number"
+              },
+              "unit": {
+                "from": "column.semantic.unit_text"
+              },
+              "hcl_conc": {
+                "name": "hcl_conc",
+                "from": "row[0]"
+              },
+              "oa_ratio": {
+                "name": "oa_ratio",
+                "from": "row[1]"
+              }
+            },
+            "emit": {
+              "source": "process",
+              "predicate": "HAS_OUTPUT",
+              "target": "material",
+              "property": "stripping yield",
+              "value": "value",
+              "unit": "unit",
+              "conditions": [
+                "hcl_conc",
+                "oa_ratio"
+              ]
+            }
+          }
+        ],
+        "context_program": [],
+        "rationale": {
+          "binding_summary": "Each data cell in columns 2-6 reports the stripping yield (%) of a metal (RE, Mn, Zn, Al, Fe) from a loaded D2EHPA organic phase. The process is 'stripping', the target material is the column header entity, the value is the cell number, and the unit is '%' from the column header. HCl concentration (row[0]) and O:A ratio (row[1]) are bound as conditions.",
+          "uncertainties": [
+            "The exact chemical form of RE is not specified; treated as a generic rare earth material.",
+            "HCl concentration and O:A ratio are experimental conditions rather than entities in the KG, so they are attached as conditions on the HAS_OUTPUT fact."
+          ]
+        }
+      }
+    },
+    "semantic_ir": {
+      "extractability": {
+        "decision": "extract",
+        "table_role": "recovery_result",
+        "reason": "Table reports stripping yields (%) of RE, Mn, Zn, Al, and Fe from a loaded D2EHPA organic phase as a function of HCl concentration and O:A phase ratio, which are material-specific process outcomes.",
+        "confidence": 0.9,
+        "gate_decision": "extract",
+        "gate_table_role": "recovery_result"
+      },
+      "column_semantics": [
+        {
+          "column": 0,
+          "raw_header": "[HCl], M",
+          "entity_text": "HCl concentration",
+          "entity_type": "Material",
+          "condition_text": "HCl concentration",
+          "condition_raw_text": "[HCl], M",
+          "unit_text": "M",
+          "measure_text": "",
+          "confidence": 0.9
+        },
+        {
+          "column": 1,
+          "raw_header": "O:A ratio",
+          "entity_text": "O:A ratio",
+          "entity_type": "Observation",
+          "condition_text": "O:A ratio",
+          "condition_raw_text": "O:A ratio",
+          "unit_text": "",
+          "measure_text": "",
+          "confidence": 0.9
+        },
+        {
+          "column": 2,
+          "raw_header": "RE (Stripping yields of metals (%))",
+          "entity_text": "RE",
+          "entity_type": "Material",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "%",
+          "measure_text": "Stripping yields of metals",
+          "confidence": 0.9
+        },
+        {
+          "column": 3,
+          "raw_header": "Mn (Stripping yields of metals (%))",
+          "entity_text": "Mn",
+          "entity_type": "Material",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "%",
+          "measure_text": "Stripping yields of metals",
+          "confidence": 0.9
+        },
+        {
+          "column": 4,
+          "raw_header": "Zn (Stripping yields of metals (%))",
+          "entity_text": "Zn",
+          "entity_type": "Material",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "%",
+          "measure_text": "Stripping yields of metals",
+          "confidence": 0.9
+        },
+        {
+          "column": 5,
+          "raw_header": "Al (Stripping yields of metals (%))",
+          "entity_text": "Al",
+          "entity_type": "Material",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "%",
+          "measure_text": "Stripping yields of metals",
+          "confidence": 0.9
+        },
+        {
+          "column": 6,
+          "raw_header": "Fe (Stripping yields of metals (%))",
+          "entity_text": "Fe",
+          "entity_type": "Material",
+          "condition_text": "",
+          "condition_raw_text": "",
+          "unit_text": "%",
+          "measure_text": "Stripping yields of metals",
+          "confidence": 0.9
+        }
+      ],
+      "program": [
+        {
+          "step_id": "step_1",
+          "op": "foreach_cell",
+          "select": {
+            "rows": {
+              "selector": "row_ranges",
+              "row_ranges": [
+                [
+                  1,
+                  8
+                ]
+              ]
+            },
+            "cols": {
+              "selector": "columns",
+              "columns": [
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          },
+          "bind": {
+            "process": {
+              "from": "literal",
+              "literal": "stripping",
+              "type": "Process"
+            },
+            "material": {
+              "from": "column.semantic.entity_text",
+              "type_from": "column.semantic.entity_type"
+            },
+            "value": {
+              "from": "cell",
+              "parser": "number"
+            },
+            "unit": {
+              "from": "column.semantic.unit_text"
+            },
+            "hcl_conc": {
+              "name": "hcl_conc",
+              "from": "row[0]"
+            },
+            "oa_ratio": {
+              "name": "oa_ratio",
+              "from": "row[1]"
+            }
+          },
+          "emit": {
+            "source": "process",
+            "predicate": "HAS_OUTPUT",
+            "target": "material",
+            "property": "stripping yield",
+            "value": "value",
+            "unit": "unit",
+            "conditions": [
+              "hcl_conc",
+              "oa_ratio"
+            ]
+          }
+        }
+      ],
+      "context_program": [],
+      "rationale": {
+        "binding_summary": "Each data cell in columns 2-6 reports the stripping yield (%) of a metal (RE, Mn, Zn, Al, Fe) from a loaded D2EHPA organic phase. The process is 'stripping', the target material is the column header entity, the value is the cell number, and the unit is '%' from the column header. HCl concentration (row[0]) and O:A ratio (row[1]) are bound as conditions.",
+        "uncertainties": [
+          "The exact chemical form of RE is not specified; treated as a generic rare earth material.",
+          "HCl concentration and O:A ratio are experimental conditions rather than entities in the KG, so they are attached as conditions on the HAS_OUTPUT fact."
+        ]
+      },
+      "table_id": "TABLE_Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries_0003"
+    },
+    "table_structure": {
+      "table_id": "TABLE_Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries_0003",
+      "extraction_mode": "semantic_ir",
+      "table_role": "recovery_result",
+      "extractability": {
+        "decision": "extract",
+        "table_role": "recovery_result",
+        "reason": "Table reports stripping yields (%) of RE, Mn, Zn, Al, and Fe from a loaded D2EHPA organic phase as a function of HCl concentration and O:A phase ratio, which are material-specific process outcomes.",
+        "confidence": 0.9,
+        "gate_decision": "extract",
+        "gate_table_role": "recovery_result"
+      },
+      "layout": null
+    },
+    "verification_report": {
+      "status": "passed",
+      "skip_reason": null,
+      "cell_grounded_relations": 40,
+      "entity_count": 6,
+      "condition_count": 9,
+      "context_record_count": 0,
+      "unsupported_templates": [],
+      "domain_range_rejections": [],
+      "aggregate_row_diagnostics": [],
+      "unresolved_endpoint_types": [],
+      "unresolved_type_facts": [],
+      "semantic_gate": [],
+      "slot_binding_conflicts": [
+        {
+          "status": "slot_binding_conflict",
+          "check_type": "unbound_header_condition",
+          "severity": "warning",
+          "template_id": "step_1",
+          "column": 0,
+          "declared_text": "HCl concentration",
+          "reason": "column 0 declares condition_text='HCl concentration' but emit.conditions never binds column.semantic.condition_text"
+        },
+        {
+          "status": "slot_binding_conflict",
+          "check_type": "unbound_header_condition",
+          "severity": "warning",
+          "template_id": "step_1",
+          "column": 1,
+          "declared_text": "O:A ratio",
+          "reason": "column 1 declares condition_text='O:A ratio' but emit.conditions never binds column.semantic.condition_text"
+        },
+        {
+          "status": "slot_binding_conflict",
+          "check_type": "unbound_measure_basis",
+          "severity": "warning",
+          "template_id": "step_1",
+          "column": 2,
+          "declared_text": "Stripping yields of metals",
+          "reason": "column 2 declares measure_text='Stripping yields of metals' but emit.conditions never binds column.semantic.measure_text"
+        },
+        {
+          "status": "slot_binding_conflict",
+          "check_type": "unbound_measure_basis",
+          "severity": "warning",
+          "template_id": "step_1",
+          "column": 3,
+          "declared_text": "Stripping yields of metals",
+          "reason": "column 3 declares measure_text='Stripping yields of metals' but emit.conditions never binds column.semantic.measure_text"
+        },
+        {
+          "status": "slot_binding_conflict",
+          "check_type": "unbound_measure_basis",
+          "severity": "warning",
+          "template_id": "step_1",
+          "column": 4,
+          "declared_text": "Stripping yields of metals",
+          "reason": "column 4 declares measure_text='Stripping yields of metals' but emit.conditions never binds column.semantic.measure_text"
+        },
+        {
+          "status": "slot_binding_conflict",
+          "check_type": "unbound_measure_basis",
+          "severity": "warning",
+          "template_id": "step_1",
+          "column": 5,
+          "declared_text": "Stripping yields of metals",
+          "reason": "column 5 declares measure_text='Stripping yields of metals' but emit.conditions never binds column.semantic.measure_text"
+        },
+        {
+          "status": "slot_binding_conflict",
+          "check_type": "unbound_measure_basis",
+          "severity": "warning",
+          "template_id": "step_1",
+          "column": 6,
+          "declared_text": "Stripping yields of metals",
+          "reason": "column 6 declares measure_text='Stripping yields of metals' but emit.conditions never binds column.semantic.measure_text"
+        }
+      ],
+      "layout_program_mismatches": [],
+      "checked_templates": 1,
+      "schema_audit": {
+        "valid": true,
+        "would_reject": false,
+        "error_count": 0,
+        "errors": []
+      },
+      "process_identity_bindings": {
+        "bound": [],
+        "unresolved": []
+      }
+    },
+    "execution_trace": [
+      {
+        "template_id": "step_1",
+        "op": "foreach_cell",
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "columns": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "emitted": 40,
+        "skipped": 0
+      }
+    ],
+    "failed_rewrite_verification_report": null,
+    "failed_rewrite_execution_trace": null,
+    "table_cache_key": "867ed07223e9840dc6d76b3482930816aa50cd5e20d86273d10ba89b86260b71",
+    "table_cache_version": {
+      "format_version": 1,
+      "table_code_sha256": "4a22f4dde5201514bf22f7719494eab1968ac45306c22a597fb96b6e5153ba10",
+      "table_file_sha256": {
+        "__init__.py": "859afd37280303ac79ea652fcd1c347db6f6e9a7427d1bf201341ff92fdbb9f3",
+        "artifact_cache.py": "dae107568c3be648794486b4140f41386af8bd9d77b261dcf82505cef6e977aa",
+        "contract.py": "d537d95059e8a540b82872ffebe956d5e8fd43081e1ca630aa34b5a16359092a",
+        "cross_table_reference_resolver.py": "c8662723efd6e0597158b5afca516f88149abcf4a39feaf38ddd7488b2b389d7",
+        "extraction_agent.py": "3591d71d4074f2d4431a79d3b9eb2a039f5c43cf152a34df1316be746f14c450",
+        "ir/__init__.py": "388534b9fb9c0b6eae80334aef2e8eae376c73fca9ab48e74ddf4299bf50e425",
+        "ir/common.py": "562218bc179c5b27cc043f264b440886103fae4c45964fd7c171e9d1983deb23",
+        "ir/context.py": "885b13c1bc0b1e48ad2e1eee5f466979adc657d6fc13abacf7b2330948999eea",
+        "ir/core.py": "cff62003caca13eaaf0abdd93828b601a5201f512fabfb630e07ac64bbf2758c",
+        "ir/executor.py": "03e3cb0f7d24ba0eec5e576c04c4a3701280af27809b9f1d92e8a5afaf9f42d1",
+        "ir/parsing.py": "3e5727a88792518d25f4772fa526f0eb0361cbd05b4aaf03b4076178dd950159",
+        "ir/policy.py": "c2ef18469dc2d402825a1559a860901927666dcc1fd1e80e3ec82669bb40d307",
+        "ir/runtime.py": "67a3294a052d291532c51b06595f799ee7dd191ba6f923f3235296815eeb5d9d",
+        "ir/schema.py": "0d9c6415cc080f7f1ee4ea0b0260ba8211b5caa1f7d4c0aaf99fd426f25142f2",
+        "ir/selectors.py": "81b5606cc71f3ca6f4eaf848083e8d4b194b1c5a53f1cdf2832e439df6a456f1",
+        "ir/value_resolver.py": "feebb6a908f79b9c5975cc6cf7c657847522208a38d003f3b9cba9d8577864d8",
+        "ir/verifier.py": "9375cb15633663e724752b433288e99bb5d6d04956db9e59607a65c1181fbccb",
+        "reference_info.py": "301f9975a4ad539253ec368f68cabc4039e6d0d4ce7187abbeaf8ca1a306a531",
+        "repair/__init__.py": "05a749a9dd4f2c77ca79cd7b0cc2e00a8eae16d11cdf8f43ff26cd26e05639b9",
+        "repair/applier.py": "cf3af090627b411cbfdb354d3a89f5206a1fa14d04fbbe1f95d8ddd138e78842",
+        "repair/local.py": "f5d94287673530f100c594b123765b99178a12a62dbc9f0e8f1fbcc58fb059bb",
+        "repair/prompt.py": "4ff5b44701be422848a76a934171d48600a46921af1cadce22070143e06a13ce",
+        "repair/schema.py": "bc5069df92508097d6fad6435fec7be2079075e46a80ee8c92145bd26511df26",
+        "role_gate.py": "fc71db600c1d820e1c1f4898cb2341cbce76b5eb9984d07c600b0c63f226d769"
+      }
+    }
+  }
+]

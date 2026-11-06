@@ -1,187 +1,162 @@
 {
+  "release_date": "2026-11-06T11:39:35.654161+00:00",
   "source": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/demo/ontoweee",
   "target": "/Users/imchengliang/MyBlog/source/demo",
   "papers": 20,
   "catalog_records": 12,
-  "guides": 6,
-  "archived_downloads": 290,
-  "bytes": 97218165,
-  "extraction_api_calls": 25,
-  "process_inventory": {
-    "papers": 20,
-    "published_processes": 62
-  },
-  "scope_api_calls": 25,
-  "other_extraction_api_calls": 0,
-  "scope_refresh": {
-    "papers": 20,
-    "catalog_records": 12,
-    "population_scopes": 64,
-    "process_scopes": 62,
-    "unscoped_candidates": 9,
-    "scope_api_calls": 25,
-    "other_extraction_api_calls": 0,
-    "core_entities": 442,
-    "scientific_edges": 1416,
-    "observations": 1073,
-    "scientific_edge_records_unchanged": true,
-    "non_scope_final_payloads_unchanged": true,
-    "original_input_hashes_verified": 20,
-    "original_non_scope_stage_downloads_unchanged": 190,
-    "nodes": 474,
-    "edges": 1784,
-    "scope_source_code_sha256": "27259af79c5a2c7e4aa0a2fe2bf3bcb20c2525f19feab953098f21df5e17585d"
-  },
+  "complete_traces": 20,
+  "sample_profiles": 32,
+  "composition_records": 196,
+  "treatment_results": 386,
+  "graph_sha256": "c62cfa5358ce1b7ab0688c622b3d685a1f9dd0808712985060aa3e0fd9445dbc",
+  "analysis_data_sha256": "e16644c5bd35dff2727bc70e1db02e1bb1fe2ad9f27ba113589c42053dec317d",
+  "statistics": "Shared Python comparison/statistics in a Pyodide browser worker",
+  "release_extraction_api_calls": 0,
   "files": [
     {
       "path": "ONTOWEEE_DEMO_GUIDE.md",
-      "bytes": 33550,
-      "sha256": "d382af333a5a292ae6a29ad9b6ec57a2874fecfd5c0d4fa208469311f00a83ec"
+      "bytes": 34158,
+      "sha256": "06d352e8d828140c018e1b667e59d16d8113783b1d12c3eed902f96ab684cd66"
     },
     {
       "path": "app.js",
-      "bytes": 71145,
-      "sha256": "a76aea853821401e222e87c49c8f2a0d87dc3256cdb1e6f9acb0a6327026e8fe"
+      "bytes": 71229,
+      "sha256": "08e7b0312cd7e07e7e766cb19c9d76227e75211c7a8a77e9a8e3e3f5c0a4933f"
     },
     {
       "path": "battery-overview.css",
-      "bytes": 4868,
-      "sha256": "619cbd862d5376ac038de80fa7966535d5c6c6f9d85e5d009377378a789a993a"
+      "bytes": 5045,
+      "sha256": "14397b5a8028f5d6d1c31849552e0cc34d9c84ba7a844af6c18a77e44b930c10"
     },
     {
       "path": "battery-overview.js",
-      "bytes": 23460,
-      "sha256": "c74682d0df52963dbdd8e03ee5b85556d720841dc13e7c9d4b44630722576941"
+      "bytes": 25009,
+      "sha256": "8de1d87c3df0a7b6ace465cf7734b8bc8ec3e86231ddc2ee03ac7c5d5b6c7686"
     },
     {
       "path": "battery-static.js",
-      "bytes": 1740,
-      "sha256": "43bb6b9d8495717ca66d1833d707a44fbc1d731750346ac442ea092433423706"
+      "bytes": 1755,
+      "sha256": "3aae5f78fe01bbb6b436d5203c08398a5e4f23fe24a6f38d78c6b664ccd16f84"
     },
     {
       "path": "battery-statistics-worker.mjs",
-      "bytes": 1540,
-      "sha256": "4d45b8b62dfb1359cb1b9a80bcb2ce193e8ff6c6e1f3beda6a3b7fb23b46c6af"
+      "bytes": 1555,
+      "sha256": "f822f8c71370f034d916c5df5596315fbbbbc75dddd44f3d3348b3c964b6b362"
     },
     {
       "path": "battery_statistics.py",
-      "bytes": 3725,
-      "sha256": "459a552cc887a36aa90e6408bccd5c61f69b865c35f10cc5d03e3a4bcfd9099e"
-    },
-    {
-      "path": "datasets/battery20/README.md",
-      "bytes": 38231,
-      "sha256": "81c36d260f4979129d74cc1f811f0f13cda13b345699b73866b6836a669b45d3"
+      "bytes": 7508,
+      "sha256": "780db1ca31049ff5d90580dcfb3f8ee9ba6f8678d3a202c2d4a3d1936a380904"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/anode-leaching.json",
-      "bytes": 319143,
-      "sha256": "b3089efa075a26810a7072fa263c3b7eb1f3b4463827301beca4b935f87156de"
+      "bytes": 455998,
+      "sha256": "71357d2f4288d2cf1e36fc585b2a70f47f372a74491e7e8b9d72234fa9b36bfe"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/battery-bioleaching.json",
-      "bytes": 433810,
-      "sha256": "0bb285cdb7d38b3c9357623194e6abe4645905433f0906d10f53ce638cd96daa"
+      "bytes": 677131,
+      "sha256": "dd90ef750d203a0df96c674a7a1340cb4f7092b643c32b9eea5c5db86e86bd9a"
     },
     {
-      "path": "datasets/battery20/full-traces/data/cases/flotation.json",
-      "bytes": 445269,
-      "sha256": "54964d35cd8efbdef23489519443eb3120a366ae8cf3d4c9566aaf558000ba62"
+      "path": "datasets/battery20/full-traces/data/cases/lfp-ultrasound.json",
+      "bytes": 1080751,
+      "sha256": "1fbb27e26607f340cb4c7844c67c9d14e61e28e8120a881e19f5ced6d4ff3685"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/cases/nimh-recovery.json",
+      "bytes": 2942958,
+      "sha256": "50ca40fa47b5b03c054fdfbaa7ef686764fe4fabe375b4b519f6249e6bacd223"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/cases/nmc-lactic.json",
+      "bytes": 3812687,
+      "sha256": "fdd7b67893c79913257246e199ff39d87b34d285e29c4d9ec4763f3ffe3ae8d6"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/phones.json",
-      "bytes": 2306820,
-      "sha256": "9153e0b878a837d2a6bd6b6eb022cd1e9c19e8919915d0f527673897a3e0da87"
+      "bytes": 3843936,
+      "sha256": "77cdef2be274a847efdc940390e32d79b65f37fd8b45c3badf4c38c84ea386a0"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/smartphones.json",
-      "bytes": 2094267,
-      "sha256": "cf1dc1c17fd6d740e0aa9f8a15d36ab3d788f69018894f00205d9d616708f6c6"
+      "bytes": 3692907,
+      "sha256": "bb95511698655f62909eceb0ff64349595e79cdec9a0adb7929f23dc134a0c3a"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/source-088b0419b6777442.json",
-      "bytes": 198011,
-      "sha256": "77d93102ba92a8a90fa35b7e476f931b631169967d0b11d21154e2bd7d893bde"
+      "bytes": 290529,
+      "sha256": "d6157387ef6818aa69b795954f850bc42371b67d82b2523276eeb48869c07c4b"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/source-0b9440848ba21f0c.json",
-      "bytes": 266623,
-      "sha256": "678d8888d41c661d96aa718cb430b86c7d11c5d7e2786d4aa686c6e67b8a79ba"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/cases/source-117f295827b35c8c.json",
-      "bytes": 437510,
-      "sha256": "50f4513eb4793994065b240d839788381af470382e3631db08588eb76e2f6e73"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/cases/source-3b192b1c95abe9c0.json",
-      "bytes": 527155,
-      "sha256": "3b139b03ebe0fdb47b18707eb6a6bc878ba2976bc64a5df7a6056cae65570495"
+      "bytes": 405986,
+      "sha256": "818e7a20088fccc87cf28b7a29a47474233b382c28948c53bf14b4236397058f"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/source-3bb6879d7ff610d4.json",
-      "bytes": 327089,
-      "sha256": "05796a1f204a9a34e7766a72f6d9f67990694cbaf8871eefa957bff29b94e1cf"
+      "bytes": 474365,
+      "sha256": "00c32e852ac5b64d999be777cec8deae76319eab6503d012206d365908a3367b"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/source-98d7e11c7ecce524.json",
-      "bytes": 144234,
-      "sha256": "298eac1c67dfc012d8e47193f865f0a233b128f9b7e06117726d13740c5feba2"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/cases/source-9f53ac139b934276.json",
-      "bytes": 238353,
-      "sha256": "ab568cf600730c88b2a955d26e17cffb7505333c7b41cb2e0e51a2089aaeaf1f"
+      "bytes": 210592,
+      "sha256": "caf06b022834f84096366bd99c0f74cb1d4c304bc430fa3405b67e8d82dbab43"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/source-9f8e67169119c4a8.json",
-      "bytes": 792192,
-      "sha256": "b3849f1e6cd193dd0f6a91ebb1c7331a7394570abf6be44fb91d3ec59e1d0a4a"
+      "bytes": 1370939,
+      "sha256": "c3a102817ee003bdc448a40bb6231fa291159ca88734bffe38dbc553babc5e9d"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/source-b54b7c6d06066264.json",
-      "bytes": 641154,
-      "sha256": "5fbf8691ecc849225df092579b61bdd07d5482b1fc88993292efc573e9b5ac4d"
+      "bytes": 891803,
+      "sha256": "7f07028e8935cf90138a3b25d39b87a69e223a7610b2473378d323fe5a6340bf"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/source-bec5c4afbdc9c450.json",
-      "bytes": 308832,
-      "sha256": "2a36a34af5d70e19cb5ad28cb5860a6b4a1340003a1a87598c30c18148cd71c5"
+      "bytes": 450951,
+      "sha256": "63a41211ec17dc6f043d7ab71267d59d0a6000f8d8451e1a125c46de1cbc27b2"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/source-bfd8d51d466137b4.json",
-      "bytes": 478395,
-      "sha256": "087deec1b5136a5a06547f80b2b0dbd14d744ae333187141e76367237ad19e44"
+      "bytes": 712440,
+      "sha256": "c94a922381ef2ce5f5087a4f97ff2f7660d5d42b8574f9ef2c3a53e6c526c81c"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/source-db98ee012648b4f7.json",
-      "bytes": 491873,
-      "sha256": "4784dd639921cfda9600b4c5f6add48b4cb4f18503de190b43b46ad4581178b1"
+      "bytes": 658630,
+      "sha256": "f0ab7cea049a2ee129c51a7548f6132e0d62f0b6c2eba47a32e9d22a265180d4"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/source-e7db048327a675c7.json",
-      "bytes": 249911,
-      "sha256": "62083f47bcd7ec52355354bd8ef3da874cdb9d20113f8a786c89abb946f4a7d9"
+      "bytes": 363871,
+      "sha256": "07a2b8f0f1e2a823622a69e71ee01649a9c5d780394352c23204771ce53f4a76"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/source-e9148efa492030e9.json",
-      "bytes": 1230968,
-      "sha256": "4a92c05caf2b89a92982af1d834481cc39de432ea8ead59bdf583ae7b11a7372"
+      "bytes": 2070272,
+      "sha256": "b432a3fae98aba1b39da1426835b27a792c916532bc0b7d88f65e701560593e5"
     },
     {
       "path": "datasets/battery20/full-traces/data/cases/ultrasound.json",
-      "bytes": 589564,
-      "sha256": "9b57fce8eedf72da860562a4073579dc72f9aaa1bb5d2fd994d33eecc75b9903"
+      "bytes": 827783,
+      "sha256": "211c7215c1a83d23676648a181b8105d2264dd33d20bebcc4033d33909ba5ae8"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/cases/znmn-nicd-bioleaching.json",
+      "bytes": 958697,
+      "sha256": "9cbfdb460eb1a951109f5dcd6dbe4cd2f88a1aacb1a432921218297fe36aaa42"
     },
     {
       "path": "datasets/battery20/full-traces/data/graph.json",
-      "bytes": 3734598,
-      "sha256": "9cadfb8b0bad0e9f086423200df866a24aafe24b8758ecd64ded47dcb2039a12"
+      "bytes": 5460617,
+      "sha256": "c62cfa5358ce1b7ab0688c622b3d685a1f9dd0808712985060aa3e0fd9445dbc"
     },
     {
       "path": "datasets/battery20/full-traces/data/manifest.json",
-      "bytes": 137534,
-      "sha256": "b073ac056c05ec72cfab710bedd69a3b798c7088908e52446f3f7de753cb0887"
+      "bytes": 155517,
+      "sha256": "750334afde1682167e25b9563a186b91b5eef12e348d0b1ae0c39fa338a95266"
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/anode-leaching/experiment_binding_revision.json",
@@ -247,11 +222,6 @@
       "path": "datasets/battery20/full-traces/data/raw/anode-leaching/operation_evidence.json",
       "bytes": 3,
       "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/anode-leaching/prompt_scope.txt",
-      "bytes": 28924,
-      "sha256": "f8dc8ef518972807bbb49cc1a293b461eaab79e0d3ea116ad84c5faf4367842e"
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/anode-leaching/triples_final.txt",
@@ -324,94 +294,219 @@
       "sha256": "87559f9b778a4e244357c6f341332f2efe1787e3c6c90efc839c95f8930e43d7"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/battery-bioleaching/prompt_scope.txt",
-      "bytes": 46875,
-      "sha256": "0a6c1e84b55236eef3787d0eb7b3293801f5d394b923c724b2ce96a215cef7e7"
-    },
-    {
       "path": "datasets/battery20/full-traces/data/raw/battery-bioleaching/triples_final.txt",
       "bytes": 1654958,
       "sha256": "596f86d596f43f6b6a13e4353914b200ceacfb3d1d0dd7eabc5f6cab5841f63f"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/llm_entity.txt",
-      "bytes": 56513,
-      "sha256": "c2145a0c43becd21b6540c92cca226dce887e4941ae0f88340fc4d7e1da6cbb5"
+      "path": "datasets/battery20/full-traces/data/raw/lfp-ultrasound/cohort_review.json",
+      "bytes": 292934,
+      "sha256": "8b37c046b56af23aa42abb7af2ee9375dfbc72404e15784f6f53bdf79ffb8a91"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/llm_process1.txt",
-      "bytes": 5578,
-      "sha256": "0d49cef82d2922608d7fae5917059ab7e30c9a088d68f9a44f9155a26733a3ff"
+      "path": "datasets/battery20/full-traces/data/raw/lfp-ultrasound/llm_binding_resolution.txt",
+      "bytes": 252,
+      "sha256": "5c4379a45889a4ff24830ed6363b672e5394cdf4bf51424c6e2acfd30293e95e"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/llm_process2.txt",
+      "path": "datasets/battery20/full-traces/data/raw/lfp-ultrasound/llm_entity.txt",
+      "bytes": 116379,
+      "sha256": "650dfe7e7b4190f0bf5ea2cc8c91b3ff57d2b55db390074a979b474161a8699a"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/lfp-ultrasound/llm_process1.txt",
       "bytes": 1992,
-      "sha256": "726e3b822413ede58eb3ffec52e376d81f099303613d57f8449f806b1482869a"
+      "sha256": "03096370582aef41861fa33a79a095532490f9ca9dcf798b383b5006379ddd09"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/llm_process_revision.txt",
-      "bytes": 7226,
-      "sha256": "50a5cf2712ef8676d9173da655b3f93768dfe7706e5829b1fa413d8ab00bfa52"
+      "path": "datasets/battery20/full-traces/data/raw/lfp-ultrasound/llm_process2.txt",
+      "bytes": 1117,
+      "sha256": "0624bfd68dd41210b2e5ca42fb0a2d2ae5bd0a2a0fa2d2242ad60a5d9fd2fb6c"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/llm_process_settings.txt",
-      "bytes": 6446,
-      "sha256": "ee2692a4e35d4fb74f67e6b490076403f754be7fbcd8b5bd5f8956155f599049"
+      "path": "datasets/battery20/full-traces/data/raw/lfp-ultrasound/llm_process_revision.txt",
+      "bytes": 14185,
+      "sha256": "538a9d874d9637bbd9c5a236926b53da1ef509eb954d6d1aa4824e9c54a92dd7"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/llm_relation.txt",
-      "bytes": 84118,
-      "sha256": "a2f0aec9b910ac8f952a2602404c53d45fce7a2865db440e034061dd2e21d4fb"
+      "path": "datasets/battery20/full-traces/data/raw/lfp-ultrasound/llm_process_settings.txt",
+      "bytes": 2491,
+      "sha256": "fbd60f35568ee727173804d0db26941fab0785d7b6bd58511b293a273545d24b"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/llm_scope.txt",
-      "bytes": 5570,
-      "sha256": "98a4beaa7b1fb8349a5030aa35a9c60cadb3f3a66919656b37e4ce9ea20eca69"
+      "path": "datasets/battery20/full-traces/data/raw/lfp-ultrasound/llm_relation.txt",
+      "bytes": 248297,
+      "sha256": "f8a483bd15f42ccbb7ff7ca5e117caf15da2ee0548e1a366606733cf3343a23a"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/llm_scope_raw.txt",
-      "bytes": 40047,
-      "sha256": "1a2fcd2f13eaeb3d49d71784e8fa566a3fe3f4453e9817f2e8b35f14062e28ac"
+      "path": "datasets/battery20/full-traces/data/raw/lfp-ultrasound/llm_scope.txt",
+      "bytes": 5731,
+      "sha256": "3c98af5c91d4ba73330b3eb07b6b1ce764893113d171d9e19b48eff0e868779a"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/llm_scope_rejected.txt",
+      "path": "datasets/battery20/full-traces/data/raw/lfp-ultrasound/llm_scope_raw.txt",
+      "bytes": 8910,
+      "sha256": "75cd43fc255296502ab4afd12cbae3963756a738221f460a3d16e816faa69d6f"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/lfp-ultrasound/llm_scope_rejected.txt",
+      "bytes": 491,
+      "sha256": "b1e29ead6367aa1e0f0c9f08814cbc4301f0736c4a90acbfe11f72b18ed37d7d"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/lfp-ultrasound/llm_table1.txt",
+      "bytes": 25953,
+      "sha256": "fd629cecc091fa6dc55e4bc60a9d3c679ef53315368caf30264f18c7c2d2762e"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/lfp-ultrasound/llm_table2.txt",
+      "bytes": 24932,
+      "sha256": "aa5da2a8bb69bdc6d55f3d52c3f545c2ea1baa1622c2023bf65ac5e96b8b8b97"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/lfp-ultrasound/triples_final.txt",
+      "bytes": 1182565,
+      "sha256": "00f4e7f4a3ce4f51eff285adfd9c5ca7bd59141cf9c7c3a001bd02760b10fa26"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nimh-recovery/cohort_review.json",
+      "bytes": 868215,
+      "sha256": "5ac9d9e1429a1b95bf3a8942664e3c33b7830f5be8bb975e0867563394b3585e"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nimh-recovery/llm_binding_resolution.txt",
+      "bytes": 252,
+      "sha256": "5c4379a45889a4ff24830ed6363b672e5394cdf4bf51424c6e2acfd30293e95e"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nimh-recovery/llm_entity.txt",
+      "bytes": 235208,
+      "sha256": "92338014c2a2bd89731c86732c955e875057c1e2d69903ab580dd77fc491614d"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nimh-recovery/llm_process1.txt",
+      "bytes": 10706,
+      "sha256": "f24a72c45c0ff9c5e97294bad9fd802a32d8e54a965f19f62649f32c506c0c96"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nimh-recovery/llm_process2.txt",
+      "bytes": 3145,
+      "sha256": "2c7ad2b23ed192879e4ba4f8dc8bf45f1c3271b8fcf891224b2614ee89eac831"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nimh-recovery/llm_process_revision.txt",
+      "bytes": 60471,
+      "sha256": "a2ca0a23319e41daac02d08ab845050b8abbcea7ecadd550d90f5574c1ec6aee"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nimh-recovery/llm_process_settings.txt",
+      "bytes": 11679,
+      "sha256": "186d8dadc9e4e38f0444907314763f4c73fb4cd9885a2c5a09688e7ac6161c3d"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nimh-recovery/llm_relation.txt",
+      "bytes": 283194,
+      "sha256": "fedfd79dc6afd5aefa07fc7325fc6a1472fec3165492202fff8708ea68d25ad4"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nimh-recovery/llm_scope.txt",
+      "bytes": 27300,
+      "sha256": "edfc73fdba7ff536a18320f5810f42efd20f318d210750b1968a6b4dfb8e93ba"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nimh-recovery/llm_scope_raw.txt",
+      "bytes": 23798,
+      "sha256": "cd692fc0cf832b5ab1c760415a56d2729a552adfa67e849b73d9ad62d5c94495"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nimh-recovery/llm_scope_rejected.txt",
       "bytes": 2,
       "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/llm_table1.txt",
-      "bytes": 179789,
-      "sha256": "199fc1a7136f4864f01b8b4519968bab8fa8e747abf22a9e989ccfc2a424c08b"
+      "path": "datasets/battery20/full-traces/data/raw/nimh-recovery/llm_table1.txt",
+      "bytes": 97347,
+      "sha256": "580183a76a39f1bb02795da0378bdfc4f030734128a55a1e78a8f075521dc2f3"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/llm_table2.txt",
-      "bytes": 183981,
-      "sha256": "33fde6ec034d99ac1c03cf85919a273c86e38ec49aa328111820808427e90b53"
+      "path": "datasets/battery20/full-traces/data/raw/nimh-recovery/llm_table2.txt",
+      "bytes": 358135,
+      "sha256": "77ae64c26b78ad6211f71110c836d81b9206c06aa9540fd21551dc339a8e9e6c"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/material_identity_revision.json",
-      "bytes": 875,
-      "sha256": "187186ded9b68f6d364e3a1435d1f8634d20b66cbc0facd6e2ae0c6229d438a1"
+      "path": "datasets/battery20/full-traces/data/raw/nimh-recovery/triples_final.txt",
+      "bytes": 3372686,
+      "sha256": "f64c70a3efd20ae857bc72a3ced73e36b00f4a20eda2ee2fcd8640c3b771fb24"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/prompt_scope.txt",
-      "bytes": 31239,
-      "sha256": "57506e69178e0f05c1dc96cdb33781ba8bb4304a038552513cad28600cd662ea"
+      "path": "datasets/battery20/full-traces/data/raw/nmc-lactic/cohort_review.json",
+      "bytes": 1241711,
+      "sha256": "ef6dd50e9bdd24ac4691b95ce2b773c0a76ccc831ffd05481e3936eaf8afc784"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/sample_state_revision.json",
-      "bytes": 55689,
-      "sha256": "4a9614076f2c157690601cae0f9b880544ad34c9e91237db442234b39095243a"
+      "path": "datasets/battery20/full-traces/data/raw/nmc-lactic/llm_binding_resolution.txt",
+      "bytes": 252,
+      "sha256": "5c4379a45889a4ff24830ed6363b672e5394cdf4bf51424c6e2acfd30293e95e"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/transformation_evidence.json",
-      "bytes": 35673,
-      "sha256": "07c0f6ef67817066a231de5dba7ab1a058952e82d66b7fb1f0d6aa08fab7c02c"
+      "path": "datasets/battery20/full-traces/data/raw/nmc-lactic/llm_entity.txt",
+      "bytes": 120301,
+      "sha256": "08d4df2381f01515b706e13a33f3c0efecb2626daa76b769b92ac235dbe10ffa"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/flotation/triples_final.txt",
-      "bytes": 1305922,
-      "sha256": "2c40a59ba358417d7453d9348fc560b17fe8af26279e9b7557fba760e499d526"
+      "path": "datasets/battery20/full-traces/data/raw/nmc-lactic/llm_process1.txt",
+      "bytes": 6191,
+      "sha256": "a179d8afd00fa8109bed55de538a7fb6194bb2b282e5ec08de5496455d033464"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nmc-lactic/llm_process2.txt",
+      "bytes": 1832,
+      "sha256": "08faadfcd4c0a06d1477b60dea9d55e827e14ce2d498172f24a40292a56839d3"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nmc-lactic/llm_process_revision.txt",
+      "bytes": 223615,
+      "sha256": "c16889530cfbffc95548f203438493836d36c18a75fea728b0ad802f6f9125a8"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nmc-lactic/llm_process_settings.txt",
+      "bytes": 5636,
+      "sha256": "b6c1ed1c6ea36d5f0ee402eb13e9d30b70d3077a7e6a32923529c17879070ab1"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nmc-lactic/llm_relation.txt",
+      "bytes": 380991,
+      "sha256": "5bc5911f25cdd30e3c95664a10b0592cb8f4041da82eabdc53682d8debff8c70"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nmc-lactic/llm_scope.txt",
+      "bytes": 1682,
+      "sha256": "d8a3deed22d7212360cb9f672a71f31253280c5033e4e36be08b7519dc617555"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nmc-lactic/llm_scope_raw.txt",
+      "bytes": 12167,
+      "sha256": "ef94c2641d3294f29f2f5c4c39ba48e634f6c1dabd7da38c0f2fe776435f12dc"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nmc-lactic/llm_scope_rejected.txt",
+      "bytes": 687,
+      "sha256": "5ce082d39210ab61a19698dbe77d2bb5c3ceb955b584e5b34a0952de71f7d3a5"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nmc-lactic/llm_table1.txt",
+      "bytes": 93008,
+      "sha256": "4ab369b0a6bee40e29baf1c889c38052756c2916078a193d7c952941ae11ef51"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nmc-lactic/llm_table2.txt",
+      "bytes": 698246,
+      "sha256": "50832a205f68d1dd4ebe4934c2353b5225f429c31f2025c5719c783739a1eb97"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/nmc-lactic/triples_final.txt",
+      "bytes": 5035520,
+      "sha256": "d4367f4e1456a25f1306bf0f5b4d8e58595bbc164f047dc0ef2432927c556c8f"
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/phones/llm_entity.txt",
@@ -472,11 +567,6 @@
       "path": "datasets/battery20/full-traces/data/raw/phones/material_identity_revision.json",
       "bytes": 916,
       "sha256": "cf2277490d1dc4c0da396562d2ca47f2dde3a41c6f38d763b059c9218f336159"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/phones/prompt_scope.txt",
-      "bytes": 38388,
-      "sha256": "5b1dfaa648380bf3b35607ebd0090cc0fab8948f111b73ec290b8444eca4c2ae"
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/phones/triples_final.txt",
@@ -544,11 +634,6 @@
       "sha256": "076cb0b7365584b0e0d61c3cf392efccaf7f5bf34e94e1bc74f06b5fe497aee3"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/smartphones/prompt_scope.txt",
-      "bytes": 53135,
-      "sha256": "fd60ce333251b91cd9739a4fe521356ea4705e30b712bc4b359f17a3ee8ca576"
-    },
-    {
       "path": "datasets/battery20/full-traces/data/raw/smartphones/triples_final.txt",
       "bytes": 13783008,
       "sha256": "6acd541c4bc23b29c0a7cff37558ce21dc93c112835ed83b67583e5323cac5b9"
@@ -607,11 +692,6 @@
       "path": "datasets/battery20/full-traces/data/raw/source-088b0419b6777442/llm_table2.txt",
       "bytes": 48971,
       "sha256": "9d17b3dcb927777bed0a7a3e0020a9d9ad6112d53bf843b1b9ca1145305717eb"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-088b0419b6777442/prompt_scope.txt",
-      "bytes": 20189,
-      "sha256": "7a5af0b82635b45681471ff5f0c7a97248e0ff5ee43645f6041206b0c3f19a91"
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/source-088b0419b6777442/triples_final.txt",
@@ -684,169 +764,9 @@
       "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/source-0b9440848ba21f0c/prompt_scope.txt",
-      "bytes": 30899,
-      "sha256": "91070b80b2ae49cbe0ea2c80b324c441c4bd0afd57779ed10881900faa4b8af9"
-    },
-    {
       "path": "datasets/battery20/full-traces/data/raw/source-0b9440848ba21f0c/triples_final.txt",
       "bytes": 981594,
       "sha256": "399515c4601e18277033425076364e2dbb9897e9bc1105f89fceaed25e41b4c7"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/experiment_binding_revision.json",
-      "bytes": 16583,
-      "sha256": "64eb3d366545166062993e15b837f530e0c56e31ddbb417f73eb11e7477af894"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/llm_entity.txt",
-      "bytes": 38377,
-      "sha256": "d992802e884fb42ff983e2ccb0495444a2f2d11724ba877e1b5be5bc09c752db"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/llm_process1.txt",
-      "bytes": 12879,
-      "sha256": "59f0d3edabdd3989f0b28127556606a30a3185aec87c1c21e464391a4a7a2a83"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/llm_process2.txt",
-      "bytes": 5233,
-      "sha256": "29527a15e2c9e1ffe0642c5695cb50d6d84f6016fc1f2d4ac1e8dd8a5647d180"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/llm_process_revision.txt",
-      "bytes": 17679,
-      "sha256": "64ff1696db80137aa89c12c9f99595f387f49734f01ae0def6bf348fc5f19314"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/llm_process_settings.txt",
-      "bytes": 17480,
-      "sha256": "5c9b550d65fcd5db1382b807b676337217ec317a8793ed9450ab30a7621fdb13"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/llm_relation.txt",
-      "bytes": 68421,
-      "sha256": "e0aa51b00bd981de22c0793495ca156a687d00c2ce2f93a8973f40291eef5553"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/llm_scope.txt",
-      "bytes": 9036,
-      "sha256": "11ad28b3beb5939545bb8d0d70633e97b3944ba73b02d478fd513faef7137510"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/llm_scope_raw.txt",
-      "bytes": 42395,
-      "sha256": "a5d99d52467d71f0d52bca0f49bdd237706f42808675870b40b3f752eda48a07"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/llm_scope_rejected.txt",
-      "bytes": 2,
-      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/llm_table1.txt",
-      "bytes": 61763,
-      "sha256": "0e12be52fec03008f0c9f33bc8067b1a93ce054f816526721ecb3df7dd9788a8"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/llm_table2.txt",
-      "bytes": 265222,
-      "sha256": "a68dfc5951452a9896c0965b60bbf6a9c98c3b434344964b0168573cdc90eec5"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/operation_evidence.json",
-      "bytes": 3685,
-      "sha256": "b3b35aa32b599a5e8ac463e556321ecdb3de008aaea039b55891a27003809746"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/prompt_scope.txt",
-      "bytes": 30185,
-      "sha256": "8aaeea95b51c92b564e7fdebdd0f845694af0ee42740e4d22c9177d6351f88c2"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/sample_state_revision.json",
-      "bytes": 255190,
-      "sha256": "266ce385ba726e7274943b0c9efe1f5437e5104139a7a21eb279f80ecf73e4f4"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-117f295827b35c8c/triples_final.txt",
-      "bytes": 1612595,
-      "sha256": "c1ac1952bf74a2c96eaad85b903b4d4b5f94abfc64eebad6cddcd83fefdf2ff2"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/llm_entity.txt",
-      "bytes": 174617,
-      "sha256": "2a025acd8e07696a4ccebeab1738c8646af5cac239d1923d55a6377237f743e5"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/llm_process1.txt",
-      "bytes": 8188,
-      "sha256": "9da2ae07d5961f1df7ac3b2caf96bbecde826c26eb0650b8dc7f6e034cc28e7c"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/llm_process2.txt",
-      "bytes": 5047,
-      "sha256": "be57678b45dbe8a117ac5998e8ef68b48d2150e0335d26b889603b470aa4b6f8"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/llm_process_revision.txt",
-      "bytes": 12651,
-      "sha256": "762f4a784acb872bdc049a05a48b76896147990fa66f45df11d27449c030984e"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/llm_process_settings.txt",
-      "bytes": 2,
-      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/llm_relation.txt",
-      "bytes": 182800,
-      "sha256": "2f563449cb4039c5985b00842ab0ce5f5cc31cf8ae717e1b3994bd3ed09b1e41"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/llm_scope.txt",
-      "bytes": 10581,
-      "sha256": "b360981e1f89669aeca9515518485eb04e26b8218c562d4452cde792c5172c33"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/llm_scope_raw.txt",
-      "bytes": 57985,
-      "sha256": "71dce6188bb9239ca1d39e518bffe19225601c25a0f2159d6970f98d41ac44d9"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/llm_scope_rejected.txt",
-      "bytes": 2,
-      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/llm_table1.txt",
-      "bytes": 94532,
-      "sha256": "2f742d7abcdb86d7687daf7f82d791f6f279a48b3a1a6dc5b8032453b7cf0908"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/llm_table2.txt",
-      "bytes": 144404,
-      "sha256": "e703e8ccc47b5a3fb6bf7b34662c06b25fba0d374a5c8016d1bfe13eec1a6281"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/material_identity_revision.json",
-      "bytes": 3599,
-      "sha256": "8ffd4647c5cbced011383a3f29f497db31f31356c5654ad560bf711042a178f5"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/measurement_evidence.json",
-      "bytes": 9470,
-      "sha256": "cadfb6db0d4dd69bf956b5aecfdfc1dc1eee2a4d3b01d32ac9b877dd5398ac85"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/prompt_scope.txt",
-      "bytes": 42736,
-      "sha256": "1be02c284301c8ed3e8d054ceb207f9f2a222b78f108cd82d24630329908ea22"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3b192b1c95abe9c0/triples_final.txt",
-      "bytes": 667201,
-      "sha256": "e8bd161b752431a6ede1ab297003f1e7f581c28c284e9c456167fb34ff99d1bd"
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/source-3bb6879d7ff610d4/llm_entity.txt",
@@ -907,11 +827,6 @@
       "path": "datasets/battery20/full-traces/data/raw/source-3bb6879d7ff610d4/measurement_evidence.json",
       "bytes": 34785,
       "sha256": "e26fba23a945932f6cac3f867a5e2a683c14b3f3b609b68946b1c1579da3eeca"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-3bb6879d7ff610d4/prompt_scope.txt",
-      "bytes": 25489,
-      "sha256": "dd0dac670a3067367878ce582ddc4b53ba1702d1dad94b318c8b45a333b35115"
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/source-3bb6879d7ff610d4/triples_final.txt",
@@ -984,84 +899,9 @@
       "sha256": "dedbebbb09d99c310b0c504b82c793444f4c21b3b9cae2a5a6878e4b478e5f57"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/source-98d7e11c7ecce524/prompt_scope.txt",
-      "bytes": 20198,
-      "sha256": "09ae107b38a2f8900a1278614413c651757d26fcc1177a92b151d70b34a25daa"
-    },
-    {
       "path": "datasets/battery20/full-traces/data/raw/source-98d7e11c7ecce524/triples_final.txt",
       "bytes": 507184,
       "sha256": "f9e141c47f82b215669d93779243eb9804eb927dd2c73590169666a712e211f5"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f53ac139b934276/llm_entity.txt",
-      "bytes": 64512,
-      "sha256": "1b6a5d2abbd1c99d44874018cbdae045037bfe3a0ff5532743829c00c78929df"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f53ac139b934276/llm_process1.txt",
-      "bytes": 1864,
-      "sha256": "5cc2d5d19a2c3ccddcfbce27075586d74f6e03cabb175a3738ad96f048661d61"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f53ac139b934276/llm_process2.txt",
-      "bytes": 1000,
-      "sha256": "03532c3378c77daed03316f93ecb52c7e7d64ecdb2008254d19071d179623c5e"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f53ac139b934276/llm_process_revision.txt",
-      "bytes": 3189,
-      "sha256": "b96d08b6b2e880d9c21b1cbaf990ed13b8a4835807c9885125e0aad6b9f1bdbc"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f53ac139b934276/llm_process_settings.txt",
-      "bytes": 1648,
-      "sha256": "11f82ef18e3581ceb3f841c04f47ba37200ebe3dfd6f679709db1a4e30d5b83f"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f53ac139b934276/llm_relation.txt",
-      "bytes": 61762,
-      "sha256": "b659b287d0247b1d921d19bb1377ffcf48556719360d21663374e9e8e318c4a6"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f53ac139b934276/llm_scope.txt",
-      "bytes": 2634,
-      "sha256": "28ca509b9dfa4f403edc6bfde9c7e5a42333cc59e07427ffbb9fb1b9a479073c"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f53ac139b934276/llm_scope_raw.txt",
-      "bytes": 26981,
-      "sha256": "7bcd9e66eb727234ea704da1da57601973f53bdc4dc99674f8164d68e612aab7"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f53ac139b934276/llm_scope_rejected.txt",
-      "bytes": 2,
-      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f53ac139b934276/llm_table1.txt",
-      "bytes": 29168,
-      "sha256": "8223a34b8d8fd88a6acedd5b26e973dcfb31b450a25b3d3dab056f49d0582917"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f53ac139b934276/llm_table2.txt",
-      "bytes": 30512,
-      "sha256": "df571e20a2c4e040848d98e13de0f933ed7b3da25670931e1bdb1afd477cef91"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f53ac139b934276/measurement_evidence.json",
-      "bytes": 7015,
-      "sha256": "0747ba5665ec2362d41466d712b30c2028e3bffbf85f5c5c04fc7bdc971d950b"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f53ac139b934276/prompt_scope.txt",
-      "bytes": 22224,
-      "sha256": "2210766bafd781f573b6ed8380e43b4c16ede7e957ea8b621f3661f583475bb6"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f53ac139b934276/triples_final.txt",
-      "bytes": 369387,
-      "sha256": "63b55bfa5bc67c56617edb2cf9c8fb349f86fc6b69406d5b1477b010a1610ef3"
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/source-9f8e67169119c4a8/llm_entity.txt",
@@ -1117,11 +957,6 @@
       "path": "datasets/battery20/full-traces/data/raw/source-9f8e67169119c4a8/llm_table2.txt",
       "bytes": 522591,
       "sha256": "32509c19ac0b7468fbf1cdda9898231acfda7899af9ed130eee9853badfa7f57"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-9f8e67169119c4a8/prompt_scope.txt",
-      "bytes": 24614,
-      "sha256": "d84889a5c7dfc99af0e71f0aee34d04f4db8ee86ea43d7e9bd92be3b8eac8559"
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/source-9f8e67169119c4a8/triples_final.txt",
@@ -1184,11 +1019,6 @@
       "sha256": "2158d5d515f54b20809629bc948dc8b23f364c3f0c298c33156541fe0c3076b6"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/source-b54b7c6d06066264/prompt_scope.txt",
-      "bytes": 47007,
-      "sha256": "1724d69643018d9a38482cf3527ab24af0f47e4f72c5d912d44b5e5ac127f139"
-    },
-    {
       "path": "datasets/battery20/full-traces/data/raw/source-b54b7c6d06066264/triples_final.txt",
       "bytes": 822124,
       "sha256": "0a5e50ba762d219fcf288bab197a4cc07223f7b6a2a6b94a0c3b95267ab09b6c"
@@ -1247,11 +1077,6 @@
       "path": "datasets/battery20/full-traces/data/raw/source-bec5c4afbdc9c450/llm_table2.txt",
       "bytes": 16479,
       "sha256": "8d4697bbb365fc11047871289559c2e26ccbf8c58bc6c6339b187a8cbbd50e98"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-bec5c4afbdc9c450/prompt_scope.txt",
-      "bytes": 19100,
-      "sha256": "494898994dc37e5600db6bcc223223e5f8763088ee444e1ec68ca932d1ee0c32"
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/source-bec5c4afbdc9c450/triples_final.txt",
@@ -1317,11 +1142,6 @@
       "path": "datasets/battery20/full-traces/data/raw/source-bfd8d51d466137b4/measurement_evidence.json",
       "bytes": 22967,
       "sha256": "19ba5a17165d61cd2ff01bf5466b53acec5bc0134dcc66391f35b5d2ff01a965"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-bfd8d51d466137b4/prompt_scope.txt",
-      "bytes": 30455,
-      "sha256": "bd1d652c8afe31241f226ecdc098289c9a1fb53e8cd31064ce6f6286b85013cb"
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/source-bfd8d51d466137b4/triples_final.txt",
@@ -1394,11 +1214,6 @@
       "sha256": "ca2a296677abbb723489d7ad4452088d4e7468cf40ac07d64cb9b8a34acde8f7"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/source-db98ee012648b4f7/prompt_scope.txt",
-      "bytes": 29506,
-      "sha256": "d37d8b03394e041e33a3d523199ae7001e06ca34ad747e871ada0da3b2e04b08"
-    },
-    {
       "path": "datasets/battery20/full-traces/data/raw/source-db98ee012648b4f7/triples_final.txt",
       "bytes": 728974,
       "sha256": "664d861d0a71e6313485fb93ae011f3b7d5de38d15d2ca9edf4068bac22153b4"
@@ -1467,11 +1282,6 @@
       "path": "datasets/battery20/full-traces/data/raw/source-e7db048327a675c7/numeric_attribution_revision.json",
       "bytes": 16053,
       "sha256": "93624accd8ef7f35b3a1e053704f5a309545ea1a6e1bacf316633d238b0a1b83"
-    },
-    {
-      "path": "datasets/battery20/full-traces/data/raw/source-e7db048327a675c7/prompt_scope.txt",
-      "bytes": 13555,
-      "sha256": "0c404a9f7af7f04a4ecc6752349c51f059ef7af1385449cbdd43d5e9c9d7739b"
     },
     {
       "path": "datasets/battery20/full-traces/data/raw/source-e7db048327a675c7/qualitative_evidence.json",
@@ -1549,11 +1359,6 @@
       "sha256": "b02d38461f4ac26df71e5c243b6997a461f27a6c0d207062515b83236cc8ce1b"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/source-e9148efa492030e9/prompt_scope.txt",
-      "bytes": 44068,
-      "sha256": "605e9b50e1dd60774bf7bad69b5ab5a447513c3d167e0d3ece1a42654cc5262c"
-    },
-    {
       "path": "datasets/battery20/full-traces/data/raw/source-e9148efa492030e9/table_condition_revision.json",
       "bytes": 2494,
       "sha256": "2c0d58e512b2cbbfa781cf861e1252071037fcffe7d566d55b9a6ddc239e0930"
@@ -1624,174 +1429,194 @@
       "sha256": "494b1e5146f91177a0cab6c5f6153a738b7a4404898eec0dbbf98bb334dd1e0e"
     },
     {
-      "path": "datasets/battery20/full-traces/data/raw/ultrasound/prompt_scope.txt",
-      "bytes": 32454,
-      "sha256": "a6e6e15a509cbccebc37b6da0c976cbf5b2dfe22cb3b4d113ecafd9ed07e0946"
-    },
-    {
       "path": "datasets/battery20/full-traces/data/raw/ultrasound/triples_final.txt",
       "bytes": 1382363,
       "sha256": "5db41cb195f1e83fda24e2e9c13233a23bbd58b17427cabad5ee07cec9692f70"
     },
     {
+      "path": "datasets/battery20/full-traces/data/raw/znmn-nicd-bioleaching/cohort_review.json",
+      "bytes": 221211,
+      "sha256": "6b9e3bae442d5a4d5dfaef88781174c8d1c046ffd2a53cce5fca9545e77f25f8"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/znmn-nicd-bioleaching/llm_binding_resolution.txt",
+      "bytes": 252,
+      "sha256": "5c4379a45889a4ff24830ed6363b672e5394cdf4bf51424c6e2acfd30293e95e"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/znmn-nicd-bioleaching/llm_entity.txt",
+      "bytes": 75164,
+      "sha256": "88eec83bcb94e4781dc4428399a61fc9808500d3b599f7ce3da25c9d4a4d6cbc"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/znmn-nicd-bioleaching/llm_process1.txt",
+      "bytes": 3082,
+      "sha256": "a86aef928029cc36aadef60469e42a6292df41e23d927da824ba2cbf247f7c2f"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/znmn-nicd-bioleaching/llm_process2.txt",
+      "bytes": 1898,
+      "sha256": "726f65e444d7bf15a31670995d6e348b199690b7d78aefa8704d29739879be14"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/znmn-nicd-bioleaching/llm_process_revision.txt",
+      "bytes": 8371,
+      "sha256": "108e9432074225a26126d218128812a1bb41dab850e159935b815dc97d3decc9"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/znmn-nicd-bioleaching/llm_process_settings.txt",
+      "bytes": 3410,
+      "sha256": "64f0bea345e27e7e78e7a3a87962ab2cea59faa23eb2348e069d0744eaba2a86"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/znmn-nicd-bioleaching/llm_relation.txt",
+      "bytes": 130216,
+      "sha256": "adba8ff6679d8faf53baee1738a6da07bf55160183e445cee51f0fab45ebfc32"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/znmn-nicd-bioleaching/llm_scope.txt",
+      "bytes": 7053,
+      "sha256": "e5637b978f41e80550f195a515afc58dd092c66874b806ff0a4817af267ae05d"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/znmn-nicd-bioleaching/llm_scope_raw.txt",
+      "bytes": 18053,
+      "sha256": "825a83eb6da92e206a1ab1a0048c7a0073b332fe17399ebd74783e17b1c2aaf1"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/znmn-nicd-bioleaching/llm_scope_rejected.txt",
+      "bytes": 2967,
+      "sha256": "d41f6c05faa813eaa9f9b85e966deab987048983202e04b3b6816f8041ea1c20"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/znmn-nicd-bioleaching/llm_table1.txt",
+      "bytes": 69230,
+      "sha256": "ad39de0d824e389fd160d8436171eec93698cf19f3cf9ef03beb76a769acbaf8"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/znmn-nicd-bioleaching/llm_table2.txt",
+      "bytes": 83508,
+      "sha256": "1696bd376b78491a26b2a60b518f9c4969776a3a5d6b8668ed4b4bb5717c4a57"
+    },
+    {
+      "path": "datasets/battery20/full-traces/data/raw/znmn-nicd-bioleaching/triples_final.txt",
+      "bytes": 919631,
+      "sha256": "e6ee9eddef66e878505a5a0af51f7421dc1b289d6fee29677060e0d6a5ad0221"
+    },
+    {
       "path": "datasets/battery20/full-traces/index.html",
-      "bytes": 13424,
-      "sha256": "864dcf94e2114b3920d22ca4d25451ee5f58010a9b3cb41e077951798145bd82"
+      "bytes": 12080,
+      "sha256": "15accdb070d603e0d9bec1559a67d992f409f49cf45d91d1df702b315fb01ec9"
     },
     {
       "path": "datasets/battery20/overview/REVIEW.md",
-      "bytes": 18923,
-      "sha256": "bf16f7937b61ea686ce553dcc281da8e1d60050410910c459d39b458a212806e"
+      "bytes": 5438,
+      "sha256": "354c0aada78b7ef3da86d70bbbdd2800cbf3ed94f37d7a9656a7208afb7c7230"
+    },
+    {
+      "path": "datasets/battery20/overview/analysis-manifest.json",
+      "bytes": 932,
+      "sha256": "6e527f101cb9f72cc40621466ee9fbb9b5cf28f9abeb53bc57d61ef8cc1752fb"
     },
     {
       "path": "datasets/battery20/overview/analysis-records.json",
-      "bytes": 484799,
-      "sha256": "9af5673f597f31c80298d78bdba16c25a47cbaac6dbadfa1edf0ce76063ce9d3"
+      "bytes": 998718,
+      "sha256": "e15f07c59badeab1e17907eede89c4f583475acaf30a610461c15afc942e87e5"
+    },
+    {
+      "path": "datasets/battery20/overview/analysis.ttl",
+      "bytes": 2661579,
+      "sha256": "33152548d6d63fc0b0d47a9000d70d7d702324ac67cb0e877ec613367305fa4b"
     },
     {
       "path": "datasets/battery20/overview/data.json",
-      "bytes": 484277,
-      "sha256": "43a3233aa8b0260b611a9f7eaca18152f35b1421a2af1026ca7160098c90bc05"
+      "bytes": 988984,
+      "sha256": "e16644c5bd35dff2727bc70e1db02e1bb1fe2ad9f27ba113589c42053dec317d"
     },
     {
       "path": "datasets/battery20/overview/review.json",
-      "bytes": 65512,
-      "sha256": "3fded65ee4bc8d86235babb61db65c79fb5355d44073fe9905588ffc6c9bdc80"
+      "bytes": 120948,
+      "sha256": "729cbca7bd2285cd5c6858722846cdc4daa0dbcdbc55d0e3b5d7a8c1e413ebb3"
     },
     {
       "path": "datasets/battery20/papers.json",
-      "bytes": 6211,
-      "sha256": "e61db01c045880e7bbce22e2a3f59297ec6b44d73cc7756bc10bc97ae5f6214d"
+      "bytes": 6013,
+      "sha256": "f969a6e8dec25f896e1e3558a700916dd8172a61c87a7a25f5394c73fc70a535"
     },
     {
-      "path": "datasets/battery20/updates/battery-types-20261101/normalization.json",
-      "bytes": 13909,
-      "sha256": "86bfa170c2218640b55f314b25b45dc708227788360c1e71bfb2deeb2bb83142"
+      "path": "datasets/battery20/updates/cohort-refresh-20261106/README.md",
+      "bytes": 5204,
+      "sha256": "b7414eefe9679503c4ea15ff72b78180bc339b7b791fb9baf74c33285b26649a"
     },
     {
-      "path": "datasets/battery20/updates/connected-catalogs-20261102/catalog.json",
+      "path": "datasets/battery20/updates/cohort-refresh-20261106/catalog.json",
       "bytes": 10964,
       "sha256": "098982160fcd42ff9ad49bb1a47bd8644f1f7bb9f84596caef3b07028dce6fa2"
     },
     {
-      "path": "datasets/battery20/updates/connected-catalogs-20261102/fusion/fused_graph.ttl",
-      "bytes": 2684282,
-      "sha256": "047d12478d34715162e27214ed87b157707deecf9d21d4cc911c54ca14c0d01b"
+      "path": "datasets/battery20/updates/cohort-refresh-20261106/fusion/fused_graph.ttl",
+      "bytes": 3570568,
+      "sha256": "718ecb43412cb49f2790dbe23b053f10599ae4a22bd429739e70866e6436881a"
     },
     {
-      "path": "datasets/battery20/updates/connected-catalogs-20261102/selection-receipt.json",
-      "bytes": 3215,
-      "sha256": "44467889412142fd58bd9ded40d3ab002ffe953913fb5e83d7798b3ee04f6aba"
+      "path": "datasets/battery20/updates/cohort-refresh-20261106/replacements.json",
+      "bytes": 987,
+      "sha256": "59e5fa7e6698537a3801d7b33a5a0aeb277f681a9962e606afa637931a5d2d3e"
     },
     {
-      "path": "datasets/battery20/updates/connected-catalogs-20261102/selection.json",
-      "bytes": 68917,
-      "sha256": "0c8ae249c547232f8324aad5aaf1b15b3733b2d464883880a84014618d63b36b"
+      "path": "datasets/battery20/updates/cohort-refresh-20261106/selection.json",
+      "bytes": 91139,
+      "sha256": "fb8d54e7ff7391e9c175f1224c3ac318ae84bb8d094c8e57bf98ca04fa49db4d"
     },
     {
-      "path": "datasets/battery20/updates/experiment-binding-20261101/corrections.json",
-      "bytes": 71235,
-      "sha256": "6e2cfc212f04f49dec817fa93b404ce672941fc83b54c39ecbb37a65b5448587"
+      "path": "datasets/battery20/updates/cohort-refresh-20261106/verification.json",
+      "bytes": 293,
+      "sha256": "d05f6d8ba6a32e9962707fd021cf1f27482a3363f89a6062f0427cee7a846425"
     },
     {
-      "path": "datasets/battery20/updates/flattened-table-published-20261101/corrections.json",
-      "bytes": 40347,
-      "sha256": "d143fb08c071ba1ce9ffc050d54190c40d6f03da19906f89590e0737392a2e46"
-    },
-    {
-      "path": "datasets/battery20/updates/material-identity-20261101/corrections.json",
-      "bytes": 10363,
-      "sha256": "29f4a905f08fe603e2bbf95ec5b6829fd541779c8889049ba439366369be6175"
-    },
-    {
-      "path": "datasets/battery20/updates/measurement-semantics-20261101/corrections.json",
-      "bytes": 208424,
-      "sha256": "08af4b0b07bb09569c673255e72a59b9e7d64d4cb2912a1cd3fad6e2d5855bbb"
-    },
-    {
-      "path": "datasets/battery20/updates/numeric-attribution-20261101/corrections.json",
-      "bytes": 17789,
-      "sha256": "374c12b41a9f12cbd1153ca667a0f4af33b4671743eece9f0cc361c9cf57fe64"
-    },
-    {
-      "path": "datasets/battery20/updates/orphan-cleanup-20261101/cleanup.json",
-      "bytes": 8352,
-      "sha256": "f3bd7b73b342d5cddb273b4f808be88eed281aed0ccd88ce309c244fe5e0b270"
-    },
-    {
-      "path": "datasets/battery20/updates/process-details-20261103/verification.json",
-      "bytes": 390,
-      "sha256": "377001b5ded85617a5d3af79ad28079262b698338c3463b2b9b0ebef621980f2"
-    },
-    {
-      "path": "datasets/battery20/updates/sample-state-20261101/corrections.json",
-      "bytes": 342010,
-      "sha256": "8505d1e5c2841756c51863e8fe196034378a4871f732622a829e552d6a21aaea"
-    },
-    {
-      "path": "datasets/battery20/updates/scope-refresh-20261102/fusion/fused_graph.ttl",
-      "bytes": 3068443,
-      "sha256": "18f8e8b882c8325be48c660390b72165ecfe79097f4cb98f010d66c62a55be5a"
-    },
-    {
-      "path": "datasets/battery20/updates/scope-refresh-20261102/selection.json",
-      "bytes": 88853,
-      "sha256": "7c17b7bb74f45ce5693bd389ce59d3d54370b3cd43ecd3f66b3f5ca739f44d3e"
-    },
-    {
-      "path": "datasets/battery20/updates/scope-refresh-20261102/verification.json",
-      "bytes": 576,
-      "sha256": "ca970d08f688fa5ad7683e89f52eb3eaa500b6b622e9478b2a733f18f8154200"
-    },
-    {
-      "path": "datasets/battery20/updates/table-conditions-20261101/corrections.json",
-      "bytes": 2494,
-      "sha256": "2c0d58e512b2cbbfa781cf861e1252071037fcffe7d566d55b9a6ddc239e0930"
-    },
-    {
-      "path": "datasets/battery20/updates/text-entity-alignment-20261103/fusion/fused_graph.ttl",
-      "bytes": 3077934,
-      "sha256": "6885b7e21688cb2cdb910c2ed3ec3a440b3ab21d4f268692e143080b142a761f"
-    },
-    {
-      "path": "datasets/battery20/updates/text-entity-alignment-20261103/selection.json",
-      "bytes": 89137,
-      "sha256": "a3bdfbdbdd585c32632ae96ffb10fb9c69365e30e13d303bbf0deb69d08df3ea"
-    },
-    {
-      "path": "datasets/battery20/updates/text-entity-alignment-20261103/verification.json",
-      "bytes": 814,
-      "sha256": "619d4993e0b002608cf603f4a902904fb4d534452ec43d4c2f494b3a941a13ba"
-    },
-    {
-      "path": "datasets/battery20/walkthrough-anode.json",
+      "path": "datasets/battery20/updates/cohort-refresh-20261106/walkthrough-anode.json",
       "bytes": 4545,
       "sha256": "391c098378bf82246f3d95a5676f30991725425747036890fcfae2113bdc7fab"
     },
     {
-      "path": "datasets/battery20/walkthrough-bioleaching.json",
+      "path": "datasets/battery20/updates/cohort-refresh-20261106/walkthrough-bioleaching.json",
       "bytes": 5367,
       "sha256": "4c09ee106e19e5013e648ca7639d6f4a8fadef5ec038033c4e4e963cf756b979"
     },
     {
-      "path": "datasets/battery20/walkthrough-flotation.json",
-      "bytes": 5391,
-      "sha256": "da4a71ef5c0bdebcbc755c84d2b19494938aa481251422b16a35e55b68e3a147"
+      "path": "datasets/battery20/updates/cohort-refresh-20261106/walkthrough-lfp.json",
+      "bytes": 3371,
+      "sha256": "7dd0b24deaca74b77470db3c76beca708bf8a5fc95419d2b76e7b1759edc59c7"
     },
     {
-      "path": "datasets/battery20/walkthrough-phones.json",
+      "path": "datasets/battery20/updates/cohort-refresh-20261106/walkthrough-phones.json",
       "bytes": 4752,
       "sha256": "c90209cf83a1476cdc196af6d01566dbaddfd86048e47e68a0869724ddfbd26b"
     },
     {
-      "path": "datasets/battery20/walkthrough-smartphones.json",
+      "path": "datasets/battery20/updates/cohort-refresh-20261106/walkthrough-smartphones.json",
       "bytes": 4611,
       "sha256": "3b63e11ad71d8cd6d2d2ffcdc72e0e043f193b395e5eacb48b812af4c48cd034"
     },
     {
-      "path": "datasets/battery20/walkthrough-ultrasound.json",
+      "path": "datasets/battery20/updates/cohort-refresh-20261106/walkthrough-ultrasound.json",
       "bytes": 5191,
       "sha256": "ae2044a6acff04625e827a5f3ac08400c0bf84719571ec43a8ae4a0074afff83"
+    },
+    {
+      "path": "datasets/battery20/updates/comparison-review-20261106/README.md",
+      "bytes": 1401,
+      "sha256": "3098bf8b78bc1971529a2af4bcb334c00056cb926807b078ed4e6dd16056dbd9"
+    },
+    {
+      "path": "datasets/battery20/updates/comparison-review-20261106/classification-review.json",
+      "bytes": 11825,
+      "sha256": "365cbd55c190df0af030145550842444bba97417927672b2a3920a4437e62c96"
+    },
+    {
+      "path": "datasets/battery20/updates/comparison-review-20261106/verification.json",
+      "bytes": 826,
+      "sha256": "08c028b19a6992f5aea44af50f265ff801e6a5effe0ac9c6f65dcefd6f2397f7"
     },
     {
       "path": "hierarchy.js",
@@ -1800,8 +1625,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 13398,
-      "sha256": "72546ca5dc3d0179e357185840104ddd9d8a33076f3a6523602d864076539d9c"
+      "bytes": 12054,
+      "sha256": "c54f99325f57e70df696cc38535dd87e2c83ac125dd334a275db9850a8bef3dd"
     },
     {
       "path": "redesign.css",
@@ -1824,92 +1649,10 @@
       "sha256": "e156fbd59cd8474068ccfadec2b3269930aa791286a65c90cd6ec14c354e52bc"
     },
     {
-      "path": "walkthrough-bioleaching.json",
-      "bytes": 5367,
-      "sha256": "4c09ee106e19e5013e648ca7639d6f4a8fadef5ec038033c4e4e963cf756b979"
-    },
-    {
-      "path": "walkthrough-content.json",
-      "bytes": 5434,
-      "sha256": "5153c1fbe859d385be3d042e264d9739bae510f825c521a012a6c0fd4d7d4f23"
-    },
-    {
-      "path": "walkthrough-flotation.json",
-      "bytes": 5391,
-      "sha256": "da4a71ef5c0bdebcbc755c84d2b19494938aa481251422b16a35e55b68e3a147"
-    },
-    {
-      "path": "walkthrough-pcb-bioleaching.json",
-      "bytes": 6138,
-      "sha256": "4f4807fa05ed4f823b71fc40aaf8a34de0fe71a017db8c7f287d5d4c89840275"
-    },
-    {
-      "path": "walkthrough-smartphones.json",
-      "bytes": 4847,
-      "sha256": "2d6be93f6b7b5e28deb0a7e58d93137b4369dff6ce8805a35ee6a2f9209f1d8e"
-    },
-    {
       "path": "walkthrough.js",
       "bytes": 6431,
       "sha256": "544de085e883f94b751b4c0523956105027be0038d34e93ded6ffb1797139385"
-    },
-    {
-      "path": "walkthrough.json",
-      "bytes": 4682,
-      "sha256": "229de819ab3449e3ce85cb5786c9f9af06fbca95e4e9371cd4c5dcf02078128d"
     }
   ],
-  "release_date": "2026-11-06",
-  "graph_sha256": "9cadfb8b0bad0e9f086423200df866a24aafe24b8758ecd64ded47dcb2039a12",
-  "process_details": {
-    "processes": 62,
-    "with_overview": 51,
-    "with_reagents": 36,
-    "with_equipment": 31,
-    "settings_in_frozen_results": 48,
-    "settings_with_unique_process": 47,
-    "scientific_and_fusion_edges_unchanged": true,
-    "extraction_api_calls": 0,
-    "fusion_ttl_unchanged": true,
-    "tests": {
-      "python": 5,
-      "demo_test_files": 22
-    },
-    "hcl_process_evidence_exact_match_verified": true
-  },
-  "entity_alignment": {
-    "passed": true,
-    "paper": "Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (Hcl)",
-    "mapping": {
-      "Material_active_material": "Component_anode_active_material"
-    },
-    "original_inputs_verified": 20,
-    "other_papers_reused": 19,
-    "alignment_api_calls": 1,
-    "other_extraction_api_calls": 0,
-    "redirected_existing_relations": 1,
-    "measurement_values_units_cells_evidence_unchanged": true,
-    "unrelated_scientific_edges_unchanged": 1415,
-    "scientific_edges_before": 1416,
-    "scientific_edges_after": 1416,
-    "observations_before": 1078,
-    "observations_after": 1078,
-    "nodes_before": 473,
-    "nodes_after": 473,
-    "frozen_cross_source_links_and_records_unchanged": true,
-    "tests": {
-      "python_passed": 37,
-      "demo_test_files_passed": 22
-    }
-  },
-  "release_extraction_api_calls": 0,
-  "overview": {
-    "execution": "Browser snapshot filters and Pyodide Python statistics",
-    "pyodide": "314.0.7",
-    "profiles": 29,
-    "composition_records": 151,
-    "treatments": 56,
-    "result_records": 244,
-    "python_statistics_sha256": "459a552cc887a36aa90e6408bccd5c61f69b865c35f10cc5d03e3a4bcfd9099e"
-  }
+  "bytes": 119819600
 }

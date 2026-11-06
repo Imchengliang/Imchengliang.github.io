@@ -1,0 +1,272 @@
+{
+  "raw_response": {
+    "raw_response": "{\n  \"population_scopes\": [\n    {\n      \"root_entity_id\": \"Component_cathode_material\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"cathode material\",\n      \"scope_summary\": \"Spent cathode material from spent lithium-ion batteries; HNO3 was used to leach it completely to determine total Ni, Co, Mn, and Li contents for leaching efficiency calculations.\",\n      \"evidence_ids\": [\"E08ea8369e8\"]\n    },\n    {\n      \"root_entity_id\": \"Component_cathode_material\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"cathode material\",\n      \"scope_summary\": \"Spent cathode material separated from Al foil by dissolving the Al foil with low-concentration NaOH solution.\",\n      \"evidence_ids\": [\"E2c18a9dc24\"]\n    }\n  ],\n  \"process_scopes\": [\n    {\n      \"root_entity_id\": \"Process_XRD\",\n      \"method_family\": \"XRD\",\n      \"evidence_ids\": [\"E3934e73496\"]\n    },\n    {\n      \"root_entity_id\": \"Process_sol_gel_synthesis_of_R_NCM\",\n      \"method_family\": \"sol-gel synthesis\",\n      \"evidence_ids\": [\"E47943f631b\"]\n    },\n    {\n      \"root_entity_id\": \"Process_EIS\",\n      \"method_family\": \"EIS\",\n      \"evidence_ids\": [\"E6615d98527\"]\n    },\n    {\n      \"root_entity_id\": \"Process_sol_gel_synthesis_of_F_NCM\",\n      \"method_family\": \"sol-gel synthesis\",\n      \"evidence_ids\": [\"E7cfbac1a8f\"]\n    },\n    {\n      \"root_entity_id\": \"Process_lactic_acid_leaching\",\n      \"method_family\": \"acid leaching\",\n      \"evidence_ids\": [\"Ea08f3a60ad\"]\n    },\n    {\n      \"root_entity_id\": \"Process_charge_discharge_cycling\",\n      \"method_family\": \"charge/discharge cycling\",\n      \"evidence_ids\": [\"Eecc57de33b\"]\n    }\n  ]\n}",
+    "raw_payload": {
+      "population_scopes": [
+        {
+          "root_entity_id": "Component_cathode_material",
+          "granularity": "batch",
+          "sample_type": "cathode material",
+          "scope_summary": "Spent cathode material from spent lithium-ion batteries; HNO3 was used to leach it completely to determine total Ni, Co, Mn, and Li contents for leaching efficiency calculations.",
+          "evidence_ids": [
+            "E08ea8369e8"
+          ]
+        },
+        {
+          "root_entity_id": "Component_cathode_material",
+          "granularity": "batch",
+          "sample_type": "cathode material",
+          "scope_summary": "Spent cathode material separated from Al foil by dissolving the Al foil with low-concentration NaOH solution.",
+          "evidence_ids": [
+            "E2c18a9dc24"
+          ]
+        }
+      ],
+      "process_scopes": [
+        {
+          "root_entity_id": "Process_XRD",
+          "method_family": "XRD",
+          "evidence_ids": [
+            "E3934e73496"
+          ]
+        },
+        {
+          "root_entity_id": "Process_sol_gel_synthesis_of_R_NCM",
+          "method_family": "sol-gel synthesis",
+          "evidence_ids": [
+            "E47943f631b"
+          ]
+        },
+        {
+          "root_entity_id": "Process_EIS",
+          "method_family": "EIS",
+          "evidence_ids": [
+            "E6615d98527"
+          ]
+        },
+        {
+          "root_entity_id": "Process_sol_gel_synthesis_of_F_NCM",
+          "method_family": "sol-gel synthesis",
+          "evidence_ids": [
+            "E7cfbac1a8f"
+          ]
+        },
+        {
+          "root_entity_id": "Process_lactic_acid_leaching",
+          "method_family": "acid leaching",
+          "evidence_ids": [
+            "Ea08f3a60ad"
+          ]
+        },
+        {
+          "root_entity_id": "Process_charge_discharge_cycling",
+          "method_family": "charge/discharge cycling",
+          "evidence_ids": [
+            "Eecc57de33b"
+          ]
+        }
+      ]
+    },
+    "evidence_records": [
+      {
+        "id": "E08ea8369e8",
+        "text": "HNO3 was used to leach the spent cathode material completely so that the total contents of Ni, Co, Mn, and Li could be determined to calculate the leaching efficiency.",
+        "section_name": "■ EXPERIMENTAL SECTION",
+        "current_study_signal": "high",
+        "entity_ids": [
+          "Component_cathode_material"
+        ],
+        "entity_aliases": {
+          "Component_cathode_material": [
+            "cathode material"
+          ]
+        },
+        "entity_types": {
+          "Component_cathode_material": "Component"
+        },
+        "entity_names": {
+          "Component_cathode_material": "cathode material"
+        },
+        "entity_sample_identifiers": {}
+      },
+      {
+        "id": "E2c18a9dc24",
+        "text": "A low-concentration NaOH solution was used to dissolve Al foil to enable its separation from the cathode material.",
+        "section_name": "■ EXPERIMENTAL SECTION",
+        "current_study_signal": "high",
+        "entity_ids": [
+          "Component_cathode_material"
+        ],
+        "entity_aliases": {
+          "Component_cathode_material": [
+            "cathode material"
+          ]
+        },
+        "entity_types": {
+          "Component_cathode_material": "Component"
+        },
+        "entity_names": {
+          "Component_cathode_material": "cathode material"
+        },
+        "entity_sample_identifiers": {}
+      },
+      {
+        "id": "E3934e73496",
+        "text": "The ratio of the intensities of the (003) and (104) peaks of R-NCM (I003 / I104 = 1.469) is greater than that of F-NCM (I003 / I104 = 1.415), indicating low cation mixing and good ordering of the transition metal ions.",
+        "section_name": "unknown",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_XRD"
+        ],
+        "entity_aliases": {
+          "Process_XRD": [
+            "xrd"
+          ]
+        },
+        "entity_types": {
+          "Process_XRD": "Process"
+        },
+        "entity_names": {
+          "Process_XRD": "XRD"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_XRD": "The ratio of the intensities of the (003) and (104) peaks of R-NCM (I003 / I104 = 1.469) is greater than that of F-NCM (I003 / I104 = 1.415), indicating low cation mixing and good ordering of the transition metal ions."
+        }
+      },
+      {
+        "id": "E47943f631b",
+        "text": "Adjust leachate molar ratio Li:Ni:Co:Mn to 3.05:1:1:1 with acetates, stir 0.5 h at room temperature, adjust pH to 7 with NH3·H2O, heat at 80 °C to form sol, dry gel at 100 °C for 24 h, heat at 450 °C for 5 h, grind 0.5 h, calcine in air at 900 °C for 12 h, and grind to obtain R-NCM.",
+        "section_name": "unknown",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_sol_gel_synthesis_of_R_NCM"
+        ],
+        "entity_aliases": {
+          "Process_sol_gel_synthesis_of_R_NCM": [
+            "sol-gel synthesis of r-ncm"
+          ]
+        },
+        "entity_types": {
+          "Process_sol_gel_synthesis_of_R_NCM": "Process"
+        },
+        "entity_names": {
+          "Process_sol_gel_synthesis_of_R_NCM": "sol-gel synthesis of R-NCM"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_sol_gel_synthesis_of_R_NCM": "Adjust leachate molar ratio Li:Ni:Co:Mn to 3.05:1:1:1 with acetates, stir 0.5 h at room temperature, adjust pH to 7 with NH3·H2O, heat at 80 °C to form sol, dry gel at 100 °C for 24 h, heat at 450 °C for 5 h, grind 0.5 h, calcine in air at 900 °C for 12 h, and grind to obtain R-NCM."
+        }
+      },
+      {
+        "id": "E6615d98527",
+        "text": "The electrochemical reactions of the samples were further investigated based on the charge/discharge profiles for different cycles and EIS tests (Figure 10e,f).",
+        "section_name": "■ RESULTS AND DISCUSSION",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_EIS"
+        ],
+        "entity_aliases": {
+          "Process_EIS": [
+            "eis"
+          ]
+        },
+        "entity_types": {
+          "Process_EIS": "Process"
+        },
+        "entity_names": {
+          "Process_EIS": "EIS"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_EIS": "The electrochemical reactions of the samples were further investigated based on the charge/discharge profiles for different cycles and EIS tests (Figure 10e,f)."
+        }
+      },
+      {
+        "id": "E7cfbac1a8f",
+        "text": "Synthesize F-NCM by the same sol-gel method using stoichiometric amounts of CH3COOLi·2H2O, (CH3COO)2Ni·4H2O, (CH3COO)2Co·4H2O, and (CH3COO)2Mn·4H2O, with lactic acid as chelating agent.",
+        "section_name": "unknown",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_sol_gel_synthesis_of_F_NCM"
+        ],
+        "entity_aliases": {
+          "Process_sol_gel_synthesis_of_F_NCM": [
+            "sol-gel synthesis of f-ncm"
+          ]
+        },
+        "entity_types": {
+          "Process_sol_gel_synthesis_of_F_NCM": "Process"
+        },
+        "entity_names": {
+          "Process_sol_gel_synthesis_of_F_NCM": "sol-gel synthesis of F-NCM"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_sol_gel_synthesis_of_F_NCM": "Synthesize F-NCM by the same sol-gel method using stoichiometric amounts of CH3COOLi·2H2O, (CH3COO)2Ni·4H2O, (CH3COO)2Co·4H2O, and (CH3COO)2Mn·4H2O, with lactic acid as chelating agent."
+        }
+      },
+      {
+        "id": "Ea08f3a60ad",
+        "text": "All the metal-leaching tests were performed in a 100 mL three-necked, round-bottomed, thermostatic Pyrex reactor.",
+        "section_name": "■ EXPERIMENTAL SECTION",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_lactic_acid_leaching"
+        ],
+        "entity_aliases": {
+          "Process_lactic_acid_leaching": [
+            "lactic acid leaching"
+          ]
+        },
+        "entity_types": {
+          "Process_lactic_acid_leaching": "Process"
+        },
+        "entity_names": {
+          "Process_lactic_acid_leaching": "lactic acid leaching"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_lactic_acid_leaching": "Leach cathode powder in a 100 mL three-necked thermostatic reactor with lactic acid and H2O2 at 300 rpm; variables: lactic acid 0.25–2 mol/L, S/L ratio 10–40 g/L, temperature 40–90 °C, H2O2 0–3 vol%, time 10–60 min."
+        }
+      },
+      {
+        "id": "Eecc57de33b",
+        "text": "The rate capacities of the samples were investigated by charging the cells at 0.2 C and discharging them at various current rates (0.2−5 C).",
+        "section_name": "unknown",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_charge_discharge_cycling"
+        ],
+        "entity_aliases": {
+          "Process_charge_discharge_cycling": [
+            "charge/discharge cycling"
+          ]
+        },
+        "entity_types": {
+          "Process_charge_discharge_cycling": "Process"
+        },
+        "entity_names": {
+          "Process_charge_discharge_cycling": "charge/discharge cycling"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_charge_discharge_cycling": "The rate capacities of the samples were investigated by charging the cells at 0.2 C and discharging them at various current rates (0.2−5 C)."
+        }
+      }
+    ]
+  },
+  "evidence_records": [
+    {
+      "id": "source-1afe154de6b7",
+      "text": "HNO3 was used to leach the spent cathode material completely so that the total contents of Ni, Co, Mn, and Li could be determined to calculate the leaching efficiency.",
+      "kind": "source_passage"
+    },
+    {
+      "id": "source-9eae70dcf16a",
+      "text": "All the metal-leaching tests were performed in a 100 mL three-necked, round-bottomed, thermostatic Pyrex reactor.",
+      "kind": "source_passage"
+    }
+  ],
+  "reviewed_source_quotes": true
+}

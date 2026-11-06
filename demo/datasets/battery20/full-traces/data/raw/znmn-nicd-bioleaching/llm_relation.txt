@@ -1,0 +1,2322 @@
+[
+  {
+    "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_ABSTRACT_67ed4138",
+    "section_name": "ABSTRACT",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_1. Introduction_162e3b06",
+    "section_name": "1. Introduction",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_2.1. Fungal isolates and organic acid production_f673c386",
+    "section_name": "2.1. Fungal isolates and organic acid production",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_2.2.1. Preparation of spent batteries_c353be89",
+    "section_name": "2.2.1. Preparation of spent batteries",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 3,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_Zn_Mn_battery_CONTAINS_text_Material_electrode_powder",
+          "source_id": "text_Product_Zn_Mn_battery",
+          "source_name": "Zn–Mn battery",
+          "target_id": "text_Material_electrode_powder",
+          "target_name": "electrode powder",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "All dismantled materials were collected and safely discarded except for the electrode powder materials.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Zn–Mn battery",
+            "target_name": "electrode powder",
+            "evidence_span": "All dismantled materials were collected and safely discarded except for the electrode powder materials.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_electrode_powder_PROCESSED_BY_text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "source_id": "text_Material_electrode_powder",
+          "source_name": "electrode powder",
+          "target_id": "text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "target_name": "bioleaching of metals from spent Zn-Mn battery powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The powder was mixed, dried, ground by milling, and sieved to obtain a mesh size of less than 200 lm (Mishra et al., 2008).",
+          "properties": {
+            "source_sample": "powder",
+            "sample_state": "mixed, dried, ground, and sieved electrode powder",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "pretreatment",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "electrode powder",
+            "target_name": "bioleaching of metals from spent Zn-Mn battery powder",
+            "evidence_span": "The powder was mixed, dried, ground by milling, and sieved to obtain a mesh size of less than 200 lm (Mishra et al., 2008).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_electrode_powder_PROCESSED_BY_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_id": "text_Material_electrode_powder",
+          "source_name": "electrode powder",
+          "target_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "target_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The powder was mixed, dried, ground by milling, and sieved to obtain a mesh size of less than 200 lm (Mishra et al., 2008).",
+          "properties": {
+            "source_sample": "powder",
+            "sample_state": "mixed, dried, ground, and sieved electrode powder",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "pretreatment",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "electrode powder",
+            "target_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "evidence_span": "The powder was mixed, dried, ground by milling, and sieved to obtain a mesh size of less than 200 lm (Mishra et al., 2008).",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_2.2.2. Bioleaching_f33613bb",
+    "section_name": "2.2.2. Bioleaching",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 2,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Material_battery_powder_PROCESSED_BY_text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "source_id": "text_Material_battery_powder",
+          "source_name": "battery powder",
+          "target_id": "text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "target_name": "bioleaching of metals from spent Zn-Mn battery powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Bioleaching of metals from spent batteries was performed using a modified method described by Kartal et al. (2004).",
+          "properties": {
+            "source_sample": "powder",
+            "sample_state": "mixed, dried, ground, and sieved electrode powder",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "battery powder",
+            "target_name": "bioleaching of metals from spent Zn-Mn battery powder",
+            "evidence_span": "Bioleaching of metals from spent batteries was performed using a modified method described by Kartal et al. (2004).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Material_battery_powder_PROCESSED_BY_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_id": "text_Material_battery_powder",
+          "source_name": "battery powder",
+          "target_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "target_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Bioleaching of metals from spent batteries was performed using a modified method described by Kartal et al. (2004).",
+          "properties": {
+            "source_sample": "powder",
+            "sample_state": "mixed, dried, ground, and sieved electrode powder",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "battery powder",
+            "target_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "evidence_span": "Bioleaching of metals from spent batteries was performed using a modified method described by Kartal et al. (2004).",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_2.2.3. Metal elements analysis_58c67627",
+    "section_name": "2.2.3. Metal elements analysis",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 0,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [],
+      "discarded_pairs": [],
+      "deleted_relations": [
+        {
+          "reason": "incompatible source/target entity types for relation type",
+          "relation": {
+            "source_name": "Zn–Mn battery",
+            "target_name": "Zn",
+            "relation_type": "PROCESSED_BY",
+            "evidence_span": "From Zn–Mn batteries, residual Zn and Mn ions were analyzed using ICP-OES.",
+            "attributes": {
+              "source_sample": "supernatant sample",
+              "sample_state": "filtered and diluted supernatant from Zn–Mn battery leaching",
+              "study_scope": "current_study",
+              "graph_status": "evidence_only",
+              "process_role": "measurement",
+              "measurement_method": "ICP-OES"
+            }
+          },
+          "source_type": "Product",
+          "target_type": "Material",
+          "normalized_relation_type": "PROCESSED_BY"
+        },
+        {
+          "reason": "incompatible source/target entity types for relation type",
+          "relation": {
+            "source_name": "Zn–Mn battery",
+            "target_name": "Mn",
+            "relation_type": "PROCESSED_BY",
+            "evidence_span": "From Zn–Mn batteries, residual Zn and Mn ions were analyzed using ICP-OES.",
+            "attributes": {
+              "source_sample": "supernatant sample",
+              "sample_state": "filtered and diluted supernatant from Zn–Mn battery leaching",
+              "study_scope": "current_study",
+              "graph_status": "evidence_only",
+              "process_role": "measurement",
+              "measurement_method": "ICP-OES"
+            }
+          },
+          "source_type": "Product",
+          "target_type": "Material",
+          "normalized_relation_type": "PROCESSED_BY"
+        },
+        {
+          "reason": "incompatible source/target entity types for relation type",
+          "relation": {
+            "source_name": "Zn–Mn battery",
+            "target_name": "Ni",
+            "relation_type": "PROCESSED_BY",
+            "evidence_span": "Analysis of residual Ni, Cd, Co and Zn ions for Ni–Cd batteries was also performed.",
+            "attributes": {
+              "source_sample": "supernatant sample",
+              "sample_state": "filtered and diluted supernatant from Zn–Mn battery leaching",
+              "study_scope": "current_study",
+              "graph_status": "evidence_only",
+              "process_role": "measurement"
+            }
+          },
+          "source_type": "Product",
+          "target_type": "Material",
+          "normalized_relation_type": "PROCESSED_BY"
+        },
+        {
+          "reason": "incompatible source/target entity types for relation type",
+          "relation": {
+            "source_name": "Zn–Mn battery",
+            "target_name": "Cd",
+            "relation_type": "PROCESSED_BY",
+            "evidence_span": "Analysis of residual Ni, Cd, Co and Zn ions for Ni–Cd batteries was also performed.",
+            "attributes": {
+              "source_sample": "supernatant sample",
+              "sample_state": "filtered and diluted supernatant from Zn–Mn battery leaching",
+              "study_scope": "current_study",
+              "graph_status": "evidence_only",
+              "process_role": "measurement"
+            }
+          },
+          "source_type": "Product",
+          "target_type": "Material",
+          "normalized_relation_type": "PROCESSED_BY"
+        },
+        {
+          "reason": "incompatible source/target entity types for relation type",
+          "relation": {
+            "source_name": "Zn–Mn battery",
+            "target_name": "Co",
+            "relation_type": "PROCESSED_BY",
+            "evidence_span": "Analysis of residual Ni, Cd, Co and Zn ions for Ni–Cd batteries was also performed.",
+            "attributes": {
+              "source_sample": "supernatant sample",
+              "sample_state": "filtered and diluted supernatant from Zn–Mn battery leaching",
+              "study_scope": "current_study",
+              "graph_status": "evidence_only",
+              "process_role": "measurement"
+            }
+          },
+          "source_type": "Product",
+          "target_type": "Material",
+          "normalized_relation_type": "PROCESSED_BY"
+        },
+        {
+          "reason": "incompatible source/target entity types for relation type",
+          "relation": {
+            "source_name": "Zn–Mn battery",
+            "target_name": "Zn",
+            "relation_type": "PROCESSED_BY",
+            "evidence_span": "Analysis of residual Ni, Cd, Co and Zn ions for Ni–Cd batteries was also performed.",
+            "attributes": {
+              "source_sample": "supernatant sample",
+              "sample_state": "filtered and diluted supernatant from Zn–Mn battery leaching",
+              "study_scope": "current_study",
+              "graph_status": "evidence_only",
+              "process_role": "measurement"
+            }
+          },
+          "source_type": "Product",
+          "target_type": "Material",
+          "normalized_relation_type": "PROCESSED_BY"
+        }
+      ],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.1. Organic acid production by Aspergillus species_fcb0dcf0",
+    "section_name": "3.1. Organic acid production by Aspergillus species",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 2,
+      "condition_count": 0,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [],
+      "relations": [
+        {
+          "id": "REL_text_Product_niger_PROCESSED_BY_text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "source_id": "text_Product_niger",
+          "source_name": "niger",
+          "target_id": "text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "target_name": "bioleaching of metals from spent Zn-Mn battery powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "According to previous studies on bioleaching by fungal generated organic acids, oxalic acid and citric acid are expected to be effective leaching agents for recovery of metals from spent materials (Deng et al., 2013; Hassan et al., 2013).",
+          "properties": {
+            "study_scope": "background",
+            "graph_status": "evidence_only",
+            "process_role": "background",
+            "extra_qualifiers": "generic statement about fungal organic acids as leaching agents; no specific quantitative result",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "niger",
+            "target_name": "bioleaching of metals from spent Zn-Mn battery powder",
+            "evidence_span": "According to previous studies on bioleaching by fungal generated organic acids, oxalic acid and citric acid are expected to be effective leaching agents for recovery of metals from spent materials (Deng et al., 2013; Hassan et al., 2013).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_niger_PROCESSED_BY_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_id": "text_Product_niger",
+          "source_name": "niger",
+          "target_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "target_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "According to previous studies on bioleaching by fungal generated organic acids, oxalic acid and citric acid are expected to be effective leaching agents for recovery of metals from spent materials (Deng et al., 2013; Hassan et al., 2013).",
+          "properties": {
+            "study_scope": "background",
+            "graph_status": "evidence_only",
+            "process_role": "background",
+            "extra_qualifiers": "generic statement about fungal organic acids as leaching agents; no specific quantitative result",
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "niger",
+            "target_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "evidence_span": "According to previous studies on bioleaching by fungal generated organic acids, oxalic acid and citric acid are expected to be effective leaching agents for recovery of metals from spent materials (Deng et al., 2013; Hassan et al., 2013).",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.1. Zn–Mn battery_6ce0cbc8",
+    "section_name": "3.2.1. Zn–Mn battery",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 7,
+      "condition_count": 3,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_time_8_0_d",
+          "name": "time",
+          "type": "Time",
+          "value": 8.0,
+          "unit": "d",
+          "source": {
+            "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+            "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.1. Zn–Mn battery_6ce0cbc8",
+            "text": "## 3.2. Bioleaching of metals from spent battery materials\n## 3.2.1. Zn–Mn battery\nThe amount of metal removed from a spent Zn–Mn battery via bioleaching using both ME and sucrose media was analyzed over 8 days. After six days, the highest concentration of soluble Zn was obtained from A. niger KUC5254 in the ME medium (96% Zn removal), which had the lowest oxalic acid content (4.4 mM). The next highest was A. japonicus KUC5035, then A. versicolor KUC5201 and A. Tubingensis KUC5037 (Fig. 1). These data indicate that Zn was efficiently extracted when low amounts of oxalic acid were produced by an Aspergillus species. This result was consistent with previous studies (Sayer and Gadd, 1997; Sayilgan et al., 2010) that reported Zn formed an insoluble oxalate in the presence of oxalic acid via an intermediate solubilization process. The percent of manganese removed from spent Zn–Mn battery materials in ME media was more than 90% after 6 days by all species without any metal precipitation.\nIn sucrose media, a larger amount of both Zn and Mn were extracted than in ME media. This means that citric acid, which was the dominant organic acid in sucrose media, played a key role in Zn recovery. The amount of Zn extracted after 8 days by Aspergillus species was in the order of A. tubingensis KUC5037 (100%) > A. versicolor KUC5201 (90%) >japonicus KUC5035 (85%) (Fig. 2). In addition, more than 92% of Mn was removed by these three Aspergillus species after 8 days. It is interesting to note that A. japonicus KUC5035, which produced a noticeably low amount of citric acid (9.6 mM), showed a similar percentage of Zn and Mn removal while the other species produced more than 96.3 mM of citric acid. Only small amounts of citric acid, therefore, were needed to recover metals from spent Zn–Mn batteries, which could have economic implications.",
+            "parent_chunk_id": null,
+            "section_name": "3.2.1. Zn–Mn battery",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 11910,
+            "position_end": 13849,
+            "metadata": {
+              "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.1. Zn–Mn battery_6ce0cbc8",
+              "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+              "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species/text.md",
+              "section_name": "3.2.1. Zn–Mn battery",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 11910,
+              "position_end": 13849,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "merged_from": [
+                "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2. Bioleaching of metals from spent battery materials_d0fa6484"
+              ],
+              "sample_identifier_map": {
+                "a": {
+                  "identifier": "a",
+                  "canonical_name": "niger",
+                  "entity_type": "Product",
+                  "source_table_id": "TABLE_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_0003",
+                  "source_table_index": 2,
+                  "source_row_index": 6,
+                  "raw_cell": "A. niger"
+                }
+              }
+            }
+          },
+          "condition_type": "Time",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_medium_me_medium_after_six_days_lowest_oxalic_acid_content_4_4_mm",
+          "name": "medium",
+          "type": "medium",
+          "value": "ME medium, after six days, lowest oxalic acid content (4.4 mM)",
+          "unit": null,
+          "source": {
+            "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+            "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.1. Zn–Mn battery_6ce0cbc8",
+            "text": "## 3.2. Bioleaching of metals from spent battery materials\n## 3.2.1. Zn–Mn battery\nThe amount of metal removed from a spent Zn–Mn battery via bioleaching using both ME and sucrose media was analyzed over 8 days. After six days, the highest concentration of soluble Zn was obtained from A. niger KUC5254 in the ME medium (96% Zn removal), which had the lowest oxalic acid content (4.4 mM). The next highest was A. japonicus KUC5035, then A. versicolor KUC5201 and A. Tubingensis KUC5037 (Fig. 1). These data indicate that Zn was efficiently extracted when low amounts of oxalic acid were produced by an Aspergillus species. This result was consistent with previous studies (Sayer and Gadd, 1997; Sayilgan et al., 2010) that reported Zn formed an insoluble oxalate in the presence of oxalic acid via an intermediate solubilization process. The percent of manganese removed from spent Zn–Mn battery materials in ME media was more than 90% after 6 days by all species without any metal precipitation.\nIn sucrose media, a larger amount of both Zn and Mn were extracted than in ME media. This means that citric acid, which was the dominant organic acid in sucrose media, played a key role in Zn recovery. The amount of Zn extracted after 8 days by Aspergillus species was in the order of A. tubingensis KUC5037 (100%) > A. versicolor KUC5201 (90%) >japonicus KUC5035 (85%) (Fig. 2). In addition, more than 92% of Mn was removed by these three Aspergillus species after 8 days. It is interesting to note that A. japonicus KUC5035, which produced a noticeably low amount of citric acid (9.6 mM), showed a similar percentage of Zn and Mn removal while the other species produced more than 96.3 mM of citric acid. Only small amounts of citric acid, therefore, were needed to recover metals from spent Zn–Mn batteries, which could have economic implications.",
+            "parent_chunk_id": null,
+            "section_name": "3.2.1. Zn–Mn battery",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 11910,
+            "position_end": 13849,
+            "metadata": {
+              "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.1. Zn–Mn battery_6ce0cbc8",
+              "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+              "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species/text.md",
+              "section_name": "3.2.1. Zn–Mn battery",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 11910,
+              "position_end": 13849,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "merged_from": [
+                "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2. Bioleaching of metals from spent battery materials_d0fa6484"
+              ],
+              "sample_identifier_map": {
+                "a": {
+                  "identifier": "a",
+                  "canonical_name": "niger",
+                  "entity_type": "Product",
+                  "source_table_id": "TABLE_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_0003",
+                  "source_table_index": 2,
+                  "source_row_index": 6,
+                  "raw_cell": "A. niger"
+                }
+              }
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_time_6_0_d",
+          "name": "time",
+          "type": "Time",
+          "value": 6.0,
+          "unit": "d",
+          "source": {
+            "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+            "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.1. Zn–Mn battery_6ce0cbc8",
+            "text": "## 3.2. Bioleaching of metals from spent battery materials\n## 3.2.1. Zn–Mn battery\nThe amount of metal removed from a spent Zn–Mn battery via bioleaching using both ME and sucrose media was analyzed over 8 days. After six days, the highest concentration of soluble Zn was obtained from A. niger KUC5254 in the ME medium (96% Zn removal), which had the lowest oxalic acid content (4.4 mM). The next highest was A. japonicus KUC5035, then A. versicolor KUC5201 and A. Tubingensis KUC5037 (Fig. 1). These data indicate that Zn was efficiently extracted when low amounts of oxalic acid were produced by an Aspergillus species. This result was consistent with previous studies (Sayer and Gadd, 1997; Sayilgan et al., 2010) that reported Zn formed an insoluble oxalate in the presence of oxalic acid via an intermediate solubilization process. The percent of manganese removed from spent Zn–Mn battery materials in ME media was more than 90% after 6 days by all species without any metal precipitation.\nIn sucrose media, a larger amount of both Zn and Mn were extracted than in ME media. This means that citric acid, which was the dominant organic acid in sucrose media, played a key role in Zn recovery. The amount of Zn extracted after 8 days by Aspergillus species was in the order of A. tubingensis KUC5037 (100%) > A. versicolor KUC5201 (90%) >japonicus KUC5035 (85%) (Fig. 2). In addition, more than 92% of Mn was removed by these three Aspergillus species after 8 days. It is interesting to note that A. japonicus KUC5035, which produced a noticeably low amount of citric acid (9.6 mM), showed a similar percentage of Zn and Mn removal while the other species produced more than 96.3 mM of citric acid. Only small amounts of citric acid, therefore, were needed to recover metals from spent Zn–Mn batteries, which could have economic implications.",
+            "parent_chunk_id": null,
+            "section_name": "3.2.1. Zn–Mn battery",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 11910,
+            "position_end": 13849,
+            "metadata": {
+              "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.1. Zn–Mn battery_6ce0cbc8",
+              "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+              "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species/text.md",
+              "section_name": "3.2.1. Zn–Mn battery",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 11910,
+              "position_end": 13849,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "merged_from": [
+                "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2. Bioleaching of metals from spent battery materials_d0fa6484"
+              ],
+              "sample_identifier_map": {
+                "a": {
+                  "identifier": "a",
+                  "canonical_name": "niger",
+                  "entity_type": "Product",
+                  "source_table_id": "TABLE_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_0003",
+                  "source_table_index": 2,
+                  "source_row_index": 6,
+                  "raw_cell": "A. niger"
+                }
+              }
+            }
+          },
+          "condition_type": "Time",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_Zn_Mn_battery_PROCESSED_BY_text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "source_id": "text_Product_Zn_Mn_battery",
+          "source_name": "Zn–Mn battery",
+          "target_id": "text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "target_name": "bioleaching of metals from spent Zn-Mn battery powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The amount of metal removed from a spent Zn–Mn battery via bioleaching using both ME and sucrose media was analyzed over 8 days.",
+          "properties": {
+            "source_sample": "spent Zn–Mn battery materials",
+            "sample_state": "battery materials in spent state used as bioleaching substrate",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "using both ME and sucrose media, analyzed over 8 days",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 8.0,
+                "unit": "d",
+                "raw_text": "using both ME and sucrose media, analyzed over 8 days"
+              }
+            ],
+            "condition_labels": [
+              "using both ME and sucrose media, analyzed over 8 days"
+            ],
+            "condition": "using both ME and sucrose media, analyzed over 8 days",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_1_Zn_Mn_battery_6ce0cbc8__cond_time_8_0_d"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "Zn–Mn battery",
+            "target_name": "bioleaching of metals from spent Zn-Mn battery powder",
+            "evidence_span": "The amount of metal removed from a spent Zn–Mn battery via bioleaching using both ME and sucrose media was analyzed over 8 days.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder_HAS_OUTPUT_text_Material_Zn",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "source_name": "bioleaching of metals from spent Zn-Mn battery powder",
+          "target_id": "text_Material_Zn",
+          "target_name": "Zn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "After six days, the highest concentration of soluble Zn was obtained from A. niger KUC5254 in the ME medium (96% Zn removal), which had the lowest oxalic acid content (4.4 mM).",
+          "properties": {
+            "property": "removal",
+            "value": 96,
+            "unit": "%",
+            "source_sample": "spent Zn–Mn battery materials",
+            "sample_state": "battery materials in spent state used as bioleaching substrate",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "A. niger KUC5254",
+            "treatment_members": [
+              "A. niger KUC5254"
+            ],
+            "conditions": "ME medium, after six days, lowest oxalic acid content (4.4 mM)",
+            "condition_keys": [
+              {
+                "key": "medium",
+                "value": "ME medium, after six days, lowest oxalic acid content (4.4 mM)",
+                "unit": null,
+                "raw_text": "ME medium, after six days, lowest oxalic acid content (4.4 mM)"
+              }
+            ],
+            "condition_labels": [
+              "ME medium, after six days, lowest oxalic acid content (4.4 mM)"
+            ],
+            "condition": "ME medium, after six days, lowest oxalic acid content (4.4 mM)",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_1_Zn_Mn_battery_6ce0cbc8__cond_medium_me_medium_after_six_days_lowest_oxalic_acid_content_4_4_mm"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Zn-Mn battery powder",
+            "target_name": "Zn",
+            "evidence_span": "After six days, the highest concentration of soluble Zn was obtained from A. niger KUC5254 in the ME medium (96% Zn removal), which had the lowest oxalic acid content (4.4 mM).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder_HAS_OUTPUT_text_Material_Mn",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "source_name": "bioleaching of metals from spent Zn-Mn battery powder",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The percent of manganese removed from spent Zn–Mn battery materials in ME media was more than 90% after 6 days by all species without any metal precipitation.",
+          "properties": {
+            "property": "removal",
+            "value": ">90",
+            "unit": "%",
+            "source_sample": "spent Zn–Mn battery materials",
+            "sample_state": "battery materials in spent state used as bioleaching substrate",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "ME media, after 6 days, by all species, without any metal precipitation",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 6.0,
+                "unit": "d",
+                "raw_text": "ME media, after 6 days, by all species, without any metal precipitation"
+              }
+            ],
+            "condition_labels": [
+              "ME media, after 6 days, by all species, without any metal precipitation"
+            ],
+            "condition": "ME media, after 6 days, by all species, without any metal precipitation",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_1_Zn_Mn_battery_6ce0cbc8__cond_time_6_0_d"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Zn-Mn battery powder",
+            "target_name": "Mn",
+            "evidence_span": "The percent of manganese removed from spent Zn–Mn battery materials in ME media was more than 90% after 6 days by all species without any metal precipitation.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder_HAS_OUTPUT_text_Material_Zn",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "source_name": "bioleaching of metals from spent Zn-Mn battery powder",
+          "target_id": "text_Material_Zn",
+          "target_name": "Zn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The amount of Zn extracted after 8 days by Aspergillus species was in the order of A. tubingensis KUC5037 (100%) > A. versicolor KUC5201 (90%) >japonicus KUC5035 (85%) (Fig. 2).",
+          "properties": {
+            "property": "extraction",
+            "value": 100,
+            "unit": "%",
+            "source_sample": "spent Zn–Mn battery materials",
+            "sample_state": "battery materials in spent state used as bioleaching substrate",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "A. tubingensis KUC5037",
+            "treatment_members": [
+              "A. tubingensis KUC5037"
+            ],
+            "conditions": "sucrose media, after 8 days",
+            "property_raw": "extraction",
+            "measure_key": "extraction",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 8.0,
+                "unit": "d",
+                "raw_text": "sucrose media, after 8 days"
+              }
+            ],
+            "condition_labels": [
+              "sucrose media, after 8 days"
+            ],
+            "condition": "sucrose media, after 8 days",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_1_Zn_Mn_battery_6ce0cbc8__cond_time_8_0_d"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Zn-Mn battery powder",
+            "target_name": "Zn",
+            "evidence_span": "The amount of Zn extracted after 8 days by Aspergillus species was in the order of A. tubingensis KUC5037 (100%) > A. versicolor KUC5201 (90%) >japonicus KUC5035 (85%) (Fig. 2).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder_HAS_OUTPUT_text_Material_Zn",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "source_name": "bioleaching of metals from spent Zn-Mn battery powder",
+          "target_id": "text_Material_Zn",
+          "target_name": "Zn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The amount of Zn extracted after 8 days by Aspergillus species was in the order of A. tubingensis KUC5037 (100%) > A. versicolor KUC5201 (90%) >japonicus KUC5035 (85%) (Fig. 2).",
+          "properties": {
+            "property": "extraction",
+            "value": 90,
+            "unit": "%",
+            "source_sample": "spent Zn–Mn battery materials",
+            "sample_state": "battery materials in spent state used as bioleaching substrate",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "A. versicolor KUC5201",
+            "treatment_members": [
+              "A. versicolor KUC5201"
+            ],
+            "conditions": "sucrose media, after 8 days",
+            "property_raw": "extraction",
+            "measure_key": "extraction",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 8.0,
+                "unit": "d",
+                "raw_text": "sucrose media, after 8 days"
+              }
+            ],
+            "condition_labels": [
+              "sucrose media, after 8 days"
+            ],
+            "condition": "sucrose media, after 8 days",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_1_Zn_Mn_battery_6ce0cbc8__cond_time_8_0_d"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Zn-Mn battery powder",
+            "target_name": "Zn",
+            "evidence_span": "The amount of Zn extracted after 8 days by Aspergillus species was in the order of A. tubingensis KUC5037 (100%) > A. versicolor KUC5201 (90%) >japonicus KUC5035 (85%) (Fig. 2).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder_HAS_OUTPUT_text_Material_Zn",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "source_name": "bioleaching of metals from spent Zn-Mn battery powder",
+          "target_id": "text_Material_Zn",
+          "target_name": "Zn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "The amount of Zn extracted after 8 days by Aspergillus species was in the order of A. tubingensis KUC5037 (100%) > A. versicolor KUC5201 (90%) >japonicus KUC5035 (85%) (Fig. 2).",
+          "properties": {
+            "property": "extraction",
+            "value": 85,
+            "unit": "%",
+            "source_sample": "spent Zn–Mn battery materials",
+            "sample_state": "battery materials in spent state used as bioleaching substrate",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "A. japonicus KUC5035",
+            "treatment_members": [
+              "A. japonicus KUC5035"
+            ],
+            "conditions": "sucrose media, after 8 days",
+            "property_raw": "extraction",
+            "measure_key": "extraction",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 8.0,
+                "unit": "d",
+                "raw_text": "sucrose media, after 8 days"
+              }
+            ],
+            "condition_labels": [
+              "sucrose media, after 8 days"
+            ],
+            "condition": "sucrose media, after 8 days",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_1_Zn_Mn_battery_6ce0cbc8__cond_time_8_0_d"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Zn-Mn battery powder",
+            "target_name": "Zn",
+            "evidence_span": "The amount of Zn extracted after 8 days by Aspergillus species was in the order of A. tubingensis KUC5037 (100%) > A. versicolor KUC5201 (90%) >japonicus KUC5035 (85%) (Fig. 2).",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder_HAS_OUTPUT_text_Material_Mn",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "source_name": "bioleaching of metals from spent Zn-Mn battery powder",
+          "target_id": "text_Material_Mn",
+          "target_name": "Mn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "In addition, more than 92% of Mn was removed by these three Aspergillus species after 8 days.",
+          "properties": {
+            "property": "removal",
+            "value": ">92",
+            "unit": "%",
+            "source_sample": "spent Zn–Mn battery materials",
+            "sample_state": "battery materials in spent state used as bioleaching substrate",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "conditions": "sucrose media, after 8 days, by these three Aspergillus species",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 8.0,
+                "unit": "d",
+                "raw_text": "sucrose media, after 8 days, by these three Aspergillus species"
+              }
+            ],
+            "condition_labels": [
+              "sucrose media, after 8 days, by these three Aspergillus species"
+            ],
+            "condition": "sucrose media, after 8 days, by these three Aspergillus species",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_1_Zn_Mn_battery_6ce0cbc8__cond_time_8_0_d"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Zn-Mn battery powder",
+            "target_name": "Mn",
+            "evidence_span": "In addition, more than 92% of Mn was removed by these three Aspergillus species after 8 days.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.2. Ni–Cd battery_72d05ec0",
+    "section_name": "3.2.2. Ni–Cd battery",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 21,
+      "condition_count": 5,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_medium_me_and_sucrose_media",
+          "name": "medium",
+          "type": "medium",
+          "value": "ME and sucrose media",
+          "unit": null,
+          "source": {
+            "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+            "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.2. Ni–Cd battery_72d05ec0",
+            "text": "## 3.2.2. Ni–Cd battery\nThe percentage of metal removal from spent Ni–Cd batteries using ME and sucrose media is represented in Figs. 3 and 4. Ni–Cd batteries contain Ni, Cd, Co and Zn. In ME media, the bioleaching efficiency for all metals appeared to be very low for all Aspergillus species. Although A. niger KUC5254 was the best at metal removal, it only extracted 32, 33, 13 and 1% of Ni, Cd, Co and Zn, respectively. Similar results were obtained for Zn–Mn batteries. It seemed that larger quantities of oxalic acid inhibited the dissolution of metals due to a precipitation reaction between Ni, Cd, Co, Zn, and oxalic acid (Biswas et al. 2013). Consequently, A. niger KUC5254, which showed the lowest oxalic acid production (4.4 mM), produced the highest percentage of metal removal.\nExtracted amounts of Ni, Cd, Co and Zn were definitely higher in sucrose media than in ME media. It is interesting to note that A. versicolor KUC5201 showed the lowest metal removal rate despite having the highest production of organic acid (136 mM of citric acid and 17 mM of oxalic acid). As suggested in the previous paragraph, the most plausible explanation is that higher amounts of oxalic acid acts as an inhibitor for the reaction between citric acid and metals by forming a metal-oxalate precipitate (Biswas et al. 2013). In the case of A. niger KUC5254 and A. tubingensis KUC5037, more than 90% of Ni, Cd, and Zn was removed after 4 days, and the maximum amount of Co was extracted after just 2 days. Although A. japonicus KUC5035 produced much lower amounts of citric acid (9.6 mM), about 80% of Ni, Cd, and Zn, and 90% of Co were extracted by this species after 8 days. As a result, citric acid, which is produced in large quantities in sucrose media, was the best leaching agent in this study. Hence, the Aspergillus species, which generates citric acid, might be an alternative to commercial leaching agents (Nogueira and Delmas, 1999; Reddy et al., 2005).\nAmong the four metals present in Ni–Cd batteries, Cd is a well-known toxic heavy metal that is harmful to humans and the environment. Ni and Co, however, are classified as valuable metals because reserves are decreasing and trading prices are increasing. Therefore, metal recovery from spent Ni–Cd batteries is very important for environmental and economic reasons. To reuse metals extracted by leaching, it is necessary to recover metals ionized in the extraction solution. There have been numerous attempts to extract metals from various spent materials (Deng et al., 2013; Hassan et al., 2013), though studies on selective metal recovery are still limited. In view of these facts, Machado et al. (2011) conducted research on selective recovery of metals using a combined electrochemical and chemical process. With this process, Cr (95%), Cu (98%), Ni (88%) and Zn (83%) were successfully recovered.\nConsidering the potential for reusability of resources and environmental impact issues, more research is needed for development of these concepts.",
+            "parent_chunk_id": null,
+            "section_name": "3.2.2. Ni–Cd battery",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 13849,
+            "position_end": 16951,
+            "metadata": {
+              "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.2. Ni–Cd battery_72d05ec0",
+              "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+              "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species/text.md",
+              "section_name": "3.2.2. Ni–Cd battery",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 13849,
+              "position_end": 16951,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "sample_identifier_map": {
+                "a": {
+                  "identifier": "a",
+                  "canonical_name": "niger",
+                  "entity_type": "Product",
+                  "source_table_id": "TABLE_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_0003",
+                  "source_table_index": 2,
+                  "source_row_index": 6,
+                  "raw_cell": "A. niger"
+                }
+              }
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_medium_me_media",
+          "name": "medium",
+          "type": "medium",
+          "value": "ME media",
+          "unit": null,
+          "source": {
+            "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+            "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.2. Ni–Cd battery_72d05ec0",
+            "text": "## 3.2.2. Ni–Cd battery\nThe percentage of metal removal from spent Ni–Cd batteries using ME and sucrose media is represented in Figs. 3 and 4. Ni–Cd batteries contain Ni, Cd, Co and Zn. In ME media, the bioleaching efficiency for all metals appeared to be very low for all Aspergillus species. Although A. niger KUC5254 was the best at metal removal, it only extracted 32, 33, 13 and 1% of Ni, Cd, Co and Zn, respectively. Similar results were obtained for Zn–Mn batteries. It seemed that larger quantities of oxalic acid inhibited the dissolution of metals due to a precipitation reaction between Ni, Cd, Co, Zn, and oxalic acid (Biswas et al. 2013). Consequently, A. niger KUC5254, which showed the lowest oxalic acid production (4.4 mM), produced the highest percentage of metal removal.\nExtracted amounts of Ni, Cd, Co and Zn were definitely higher in sucrose media than in ME media. It is interesting to note that A. versicolor KUC5201 showed the lowest metal removal rate despite having the highest production of organic acid (136 mM of citric acid and 17 mM of oxalic acid). As suggested in the previous paragraph, the most plausible explanation is that higher amounts of oxalic acid acts as an inhibitor for the reaction between citric acid and metals by forming a metal-oxalate precipitate (Biswas et al. 2013). In the case of A. niger KUC5254 and A. tubingensis KUC5037, more than 90% of Ni, Cd, and Zn was removed after 4 days, and the maximum amount of Co was extracted after just 2 days. Although A. japonicus KUC5035 produced much lower amounts of citric acid (9.6 mM), about 80% of Ni, Cd, and Zn, and 90% of Co were extracted by this species after 8 days. As a result, citric acid, which is produced in large quantities in sucrose media, was the best leaching agent in this study. Hence, the Aspergillus species, which generates citric acid, might be an alternative to commercial leaching agents (Nogueira and Delmas, 1999; Reddy et al., 2005).\nAmong the four metals present in Ni–Cd batteries, Cd is a well-known toxic heavy metal that is harmful to humans and the environment. Ni and Co, however, are classified as valuable metals because reserves are decreasing and trading prices are increasing. Therefore, metal recovery from spent Ni–Cd batteries is very important for environmental and economic reasons. To reuse metals extracted by leaching, it is necessary to recover metals ionized in the extraction solution. There have been numerous attempts to extract metals from various spent materials (Deng et al., 2013; Hassan et al., 2013), though studies on selective metal recovery are still limited. In view of these facts, Machado et al. (2011) conducted research on selective recovery of metals using a combined electrochemical and chemical process. With this process, Cr (95%), Cu (98%), Ni (88%) and Zn (83%) were successfully recovered.\nConsidering the potential for reusability of resources and environmental impact issues, more research is needed for development of these concepts.",
+            "parent_chunk_id": null,
+            "section_name": "3.2.2. Ni–Cd battery",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 13849,
+            "position_end": 16951,
+            "metadata": {
+              "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.2. Ni–Cd battery_72d05ec0",
+              "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+              "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species/text.md",
+              "section_name": "3.2.2. Ni–Cd battery",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 13849,
+              "position_end": 16951,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "sample_identifier_map": {
+                "a": {
+                  "identifier": "a",
+                  "canonical_name": "niger",
+                  "entity_type": "Product",
+                  "source_table_id": "TABLE_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_0003",
+                  "source_table_index": 2,
+                  "source_row_index": 6,
+                  "raw_cell": "A. niger"
+                }
+              }
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_time_4_0_d",
+          "name": "time",
+          "type": "Time",
+          "value": 4.0,
+          "unit": "d",
+          "source": {
+            "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+            "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.2. Ni–Cd battery_72d05ec0",
+            "text": "## 3.2.2. Ni–Cd battery\nThe percentage of metal removal from spent Ni–Cd batteries using ME and sucrose media is represented in Figs. 3 and 4. Ni–Cd batteries contain Ni, Cd, Co and Zn. In ME media, the bioleaching efficiency for all metals appeared to be very low for all Aspergillus species. Although A. niger KUC5254 was the best at metal removal, it only extracted 32, 33, 13 and 1% of Ni, Cd, Co and Zn, respectively. Similar results were obtained for Zn–Mn batteries. It seemed that larger quantities of oxalic acid inhibited the dissolution of metals due to a precipitation reaction between Ni, Cd, Co, Zn, and oxalic acid (Biswas et al. 2013). Consequently, A. niger KUC5254, which showed the lowest oxalic acid production (4.4 mM), produced the highest percentage of metal removal.\nExtracted amounts of Ni, Cd, Co and Zn were definitely higher in sucrose media than in ME media. It is interesting to note that A. versicolor KUC5201 showed the lowest metal removal rate despite having the highest production of organic acid (136 mM of citric acid and 17 mM of oxalic acid). As suggested in the previous paragraph, the most plausible explanation is that higher amounts of oxalic acid acts as an inhibitor for the reaction between citric acid and metals by forming a metal-oxalate precipitate (Biswas et al. 2013). In the case of A. niger KUC5254 and A. tubingensis KUC5037, more than 90% of Ni, Cd, and Zn was removed after 4 days, and the maximum amount of Co was extracted after just 2 days. Although A. japonicus KUC5035 produced much lower amounts of citric acid (9.6 mM), about 80% of Ni, Cd, and Zn, and 90% of Co were extracted by this species after 8 days. As a result, citric acid, which is produced in large quantities in sucrose media, was the best leaching agent in this study. Hence, the Aspergillus species, which generates citric acid, might be an alternative to commercial leaching agents (Nogueira and Delmas, 1999; Reddy et al., 2005).\nAmong the four metals present in Ni–Cd batteries, Cd is a well-known toxic heavy metal that is harmful to humans and the environment. Ni and Co, however, are classified as valuable metals because reserves are decreasing and trading prices are increasing. Therefore, metal recovery from spent Ni–Cd batteries is very important for environmental and economic reasons. To reuse metals extracted by leaching, it is necessary to recover metals ionized in the extraction solution. There have been numerous attempts to extract metals from various spent materials (Deng et al., 2013; Hassan et al., 2013), though studies on selective metal recovery are still limited. In view of these facts, Machado et al. (2011) conducted research on selective recovery of metals using a combined electrochemical and chemical process. With this process, Cr (95%), Cu (98%), Ni (88%) and Zn (83%) were successfully recovered.\nConsidering the potential for reusability of resources and environmental impact issues, more research is needed for development of these concepts.",
+            "parent_chunk_id": null,
+            "section_name": "3.2.2. Ni–Cd battery",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 13849,
+            "position_end": 16951,
+            "metadata": {
+              "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.2. Ni–Cd battery_72d05ec0",
+              "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+              "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species/text.md",
+              "section_name": "3.2.2. Ni–Cd battery",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 13849,
+              "position_end": 16951,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "sample_identifier_map": {
+                "a": {
+                  "identifier": "a",
+                  "canonical_name": "niger",
+                  "entity_type": "Product",
+                  "source_table_id": "TABLE_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_0003",
+                  "source_table_index": 2,
+                  "source_row_index": 6,
+                  "raw_cell": "A. niger"
+                }
+              }
+            }
+          },
+          "condition_type": "Time",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_time_2_0_d",
+          "name": "time",
+          "type": "Time",
+          "value": 2.0,
+          "unit": "d",
+          "source": {
+            "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+            "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.2. Ni–Cd battery_72d05ec0",
+            "text": "## 3.2.2. Ni–Cd battery\nThe percentage of metal removal from spent Ni–Cd batteries using ME and sucrose media is represented in Figs. 3 and 4. Ni–Cd batteries contain Ni, Cd, Co and Zn. In ME media, the bioleaching efficiency for all metals appeared to be very low for all Aspergillus species. Although A. niger KUC5254 was the best at metal removal, it only extracted 32, 33, 13 and 1% of Ni, Cd, Co and Zn, respectively. Similar results were obtained for Zn–Mn batteries. It seemed that larger quantities of oxalic acid inhibited the dissolution of metals due to a precipitation reaction between Ni, Cd, Co, Zn, and oxalic acid (Biswas et al. 2013). Consequently, A. niger KUC5254, which showed the lowest oxalic acid production (4.4 mM), produced the highest percentage of metal removal.\nExtracted amounts of Ni, Cd, Co and Zn were definitely higher in sucrose media than in ME media. It is interesting to note that A. versicolor KUC5201 showed the lowest metal removal rate despite having the highest production of organic acid (136 mM of citric acid and 17 mM of oxalic acid). As suggested in the previous paragraph, the most plausible explanation is that higher amounts of oxalic acid acts as an inhibitor for the reaction between citric acid and metals by forming a metal-oxalate precipitate (Biswas et al. 2013). In the case of A. niger KUC5254 and A. tubingensis KUC5037, more than 90% of Ni, Cd, and Zn was removed after 4 days, and the maximum amount of Co was extracted after just 2 days. Although A. japonicus KUC5035 produced much lower amounts of citric acid (9.6 mM), about 80% of Ni, Cd, and Zn, and 90% of Co were extracted by this species after 8 days. As a result, citric acid, which is produced in large quantities in sucrose media, was the best leaching agent in this study. Hence, the Aspergillus species, which generates citric acid, might be an alternative to commercial leaching agents (Nogueira and Delmas, 1999; Reddy et al., 2005).\nAmong the four metals present in Ni–Cd batteries, Cd is a well-known toxic heavy metal that is harmful to humans and the environment. Ni and Co, however, are classified as valuable metals because reserves are decreasing and trading prices are increasing. Therefore, metal recovery from spent Ni–Cd batteries is very important for environmental and economic reasons. To reuse metals extracted by leaching, it is necessary to recover metals ionized in the extraction solution. There have been numerous attempts to extract metals from various spent materials (Deng et al., 2013; Hassan et al., 2013), though studies on selective metal recovery are still limited. In view of these facts, Machado et al. (2011) conducted research on selective recovery of metals using a combined electrochemical and chemical process. With this process, Cr (95%), Cu (98%), Ni (88%) and Zn (83%) were successfully recovered.\nConsidering the potential for reusability of resources and environmental impact issues, more research is needed for development of these concepts.",
+            "parent_chunk_id": null,
+            "section_name": "3.2.2. Ni–Cd battery",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 13849,
+            "position_end": 16951,
+            "metadata": {
+              "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.2. Ni–Cd battery_72d05ec0",
+              "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+              "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species/text.md",
+              "section_name": "3.2.2. Ni–Cd battery",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 13849,
+              "position_end": 16951,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "sample_identifier_map": {
+                "a": {
+                  "identifier": "a",
+                  "canonical_name": "niger",
+                  "entity_type": "Product",
+                  "source_table_id": "TABLE_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_0003",
+                  "source_table_index": 2,
+                  "source_row_index": 6,
+                  "raw_cell": "A. niger"
+                }
+              }
+            }
+          },
+          "condition_type": "Time",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "cond_time_8_0_d",
+          "name": "time",
+          "type": "Time",
+          "value": 8.0,
+          "unit": "d",
+          "source": {
+            "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+            "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.2. Ni–Cd battery_72d05ec0",
+            "text": "## 3.2.2. Ni–Cd battery\nThe percentage of metal removal from spent Ni–Cd batteries using ME and sucrose media is represented in Figs. 3 and 4. Ni–Cd batteries contain Ni, Cd, Co and Zn. In ME media, the bioleaching efficiency for all metals appeared to be very low for all Aspergillus species. Although A. niger KUC5254 was the best at metal removal, it only extracted 32, 33, 13 and 1% of Ni, Cd, Co and Zn, respectively. Similar results were obtained for Zn–Mn batteries. It seemed that larger quantities of oxalic acid inhibited the dissolution of metals due to a precipitation reaction between Ni, Cd, Co, Zn, and oxalic acid (Biswas et al. 2013). Consequently, A. niger KUC5254, which showed the lowest oxalic acid production (4.4 mM), produced the highest percentage of metal removal.\nExtracted amounts of Ni, Cd, Co and Zn were definitely higher in sucrose media than in ME media. It is interesting to note that A. versicolor KUC5201 showed the lowest metal removal rate despite having the highest production of organic acid (136 mM of citric acid and 17 mM of oxalic acid). As suggested in the previous paragraph, the most plausible explanation is that higher amounts of oxalic acid acts as an inhibitor for the reaction between citric acid and metals by forming a metal-oxalate precipitate (Biswas et al. 2013). In the case of A. niger KUC5254 and A. tubingensis KUC5037, more than 90% of Ni, Cd, and Zn was removed after 4 days, and the maximum amount of Co was extracted after just 2 days. Although A. japonicus KUC5035 produced much lower amounts of citric acid (9.6 mM), about 80% of Ni, Cd, and Zn, and 90% of Co were extracted by this species after 8 days. As a result, citric acid, which is produced in large quantities in sucrose media, was the best leaching agent in this study. Hence, the Aspergillus species, which generates citric acid, might be an alternative to commercial leaching agents (Nogueira and Delmas, 1999; Reddy et al., 2005).\nAmong the four metals present in Ni–Cd batteries, Cd is a well-known toxic heavy metal that is harmful to humans and the environment. Ni and Co, however, are classified as valuable metals because reserves are decreasing and trading prices are increasing. Therefore, metal recovery from spent Ni–Cd batteries is very important for environmental and economic reasons. To reuse metals extracted by leaching, it is necessary to recover metals ionized in the extraction solution. There have been numerous attempts to extract metals from various spent materials (Deng et al., 2013; Hassan et al., 2013), though studies on selective metal recovery are still limited. In view of these facts, Machado et al. (2011) conducted research on selective recovery of metals using a combined electrochemical and chemical process. With this process, Cr (95%), Cu (98%), Ni (88%) and Zn (83%) were successfully recovered.\nConsidering the potential for reusability of resources and environmental impact issues, more research is needed for development of these concepts.",
+            "parent_chunk_id": null,
+            "section_name": "3.2.2. Ni–Cd battery",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 13849,
+            "position_end": 16951,
+            "metadata": {
+              "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.2.2. Ni–Cd battery_72d05ec0",
+              "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+              "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species/text.md",
+              "section_name": "3.2.2. Ni–Cd battery",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 13849,
+              "position_end": 16951,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "sample_identifier_map": {
+                "a": {
+                  "identifier": "a",
+                  "canonical_name": "niger",
+                  "entity_type": "Product",
+                  "source_table_id": "TABLE_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_0003",
+                  "source_table_index": 2,
+                  "source_row_index": 6,
+                  "raw_cell": "A. niger"
+                }
+              }
+            }
+          },
+          "condition_type": "Time",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_Zn_Mn_battery_CONTAINS_text_Material_Ni",
+          "source_id": "text_Product_Zn_Mn_battery",
+          "source_name": "Zn–Mn battery",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Ni–Cd batteries contain Ni, Cd, Co and Zn.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Zn–Mn battery",
+            "target_name": "Ni",
+            "evidence_span": "Ni–Cd batteries contain Ni, Cd, Co and Zn.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Zn_Mn_battery_CONTAINS_text_Material_Cd",
+          "source_id": "text_Product_Zn_Mn_battery",
+          "source_name": "Zn–Mn battery",
+          "target_id": "text_Material_Cd",
+          "target_name": "Cd",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Ni–Cd batteries contain Ni, Cd, Co and Zn.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Zn–Mn battery",
+            "target_name": "Cd",
+            "evidence_span": "Ni–Cd batteries contain Ni, Cd, Co and Zn.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Zn_Mn_battery_CONTAINS_text_Material_Co",
+          "source_id": "text_Product_Zn_Mn_battery",
+          "source_name": "Zn–Mn battery",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Ni–Cd batteries contain Ni, Cd, Co and Zn.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Zn–Mn battery",
+            "target_name": "Co",
+            "evidence_span": "Ni–Cd batteries contain Ni, Cd, Co and Zn.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Zn_Mn_battery_CONTAINS_text_Material_Zn",
+          "source_id": "text_Product_Zn_Mn_battery",
+          "source_name": "Zn–Mn battery",
+          "target_id": "text_Material_Zn",
+          "target_name": "Zn",
+          "relation_type": "CONTAINS",
+          "confidence": 0.8,
+          "evidence_span": "Ni–Cd batteries contain Ni, Cd, Co and Zn.",
+          "properties": {
+            "property": "composition",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "property_raw": "composition",
+            "measure_key": "composition",
+            "raw_relation_type": "CONTAINS",
+            "normalized_relation_type": "CONTAINS",
+            "normalized_from_raw": false,
+            "source_name": "Zn–Mn battery",
+            "target_name": "Zn",
+            "evidence_span": "Ni–Cd batteries contain Ni, Cd, Co and Zn.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Zn_Mn_battery_PROCESSED_BY_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_id": "text_Product_Zn_Mn_battery",
+          "source_name": "Zn–Mn battery",
+          "target_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "target_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "The percentage of metal removal from spent Ni–Cd batteries using ME and sucrose media is represented in Figs. 3 and 4.",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "conditions": "ME and sucrose media",
+            "condition_keys": [
+              {
+                "key": "medium",
+                "value": "ME and sucrose media",
+                "unit": null,
+                "raw_text": "ME and sucrose media"
+              }
+            ],
+            "condition_labels": [
+              "ME and sucrose media"
+            ],
+            "condition": "ME and sucrose media",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_2_Ni_Cd_battery_72d05ec0__cond_medium_me_and_sucrose_media"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "Zn–Mn battery",
+            "target_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "evidence_span": "The percentage of metal removal from spent Ni–Cd batteries using ME and sucrose media is represented in Figs. 3 and 4.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Although A. niger KUC5254 was the best at metal removal, it only extracted 32, 33, 13 and 1% of Ni, Cd, Co and Zn, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 32,
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "A. niger KUC5254",
+            "treatment_members": [
+              "A. niger KUC5254"
+            ],
+            "conditions": "ME media",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "medium",
+                "value": "ME media",
+                "unit": null,
+                "raw_text": "ME media"
+              }
+            ],
+            "condition_labels": [
+              "ME media"
+            ],
+            "condition": "ME media",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_2_Ni_Cd_battery_72d05ec0__cond_medium_me_media"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Ni",
+            "evidence_span": "Although A. niger KUC5254 was the best at metal removal, it only extracted 32, 33, 13 and 1% of Ni, Cd, Co and Zn, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Cd",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Cd",
+          "target_name": "Cd",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Although A. niger KUC5254 was the best at metal removal, it only extracted 32, 33, 13 and 1% of Ni, Cd, Co and Zn, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 33,
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "A. niger KUC5254",
+            "treatment_members": [
+              "A. niger KUC5254"
+            ],
+            "conditions": "ME media",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "medium",
+                "value": "ME media",
+                "unit": null,
+                "raw_text": "ME media"
+              }
+            ],
+            "condition_labels": [
+              "ME media"
+            ],
+            "condition": "ME media",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_2_Ni_Cd_battery_72d05ec0__cond_medium_me_media"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Cd",
+            "evidence_span": "Although A. niger KUC5254 was the best at metal removal, it only extracted 32, 33, 13 and 1% of Ni, Cd, Co and Zn, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Although A. niger KUC5254 was the best at metal removal, it only extracted 32, 33, 13 and 1% of Ni, Cd, Co and Zn, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 13,
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "A. niger KUC5254",
+            "treatment_members": [
+              "A. niger KUC5254"
+            ],
+            "conditions": "ME media",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "medium",
+                "value": "ME media",
+                "unit": null,
+                "raw_text": "ME media"
+              }
+            ],
+            "condition_labels": [
+              "ME media"
+            ],
+            "condition": "ME media",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_2_Ni_Cd_battery_72d05ec0__cond_medium_me_media"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Co",
+            "evidence_span": "Although A. niger KUC5254 was the best at metal removal, it only extracted 32, 33, 13 and 1% of Ni, Cd, Co and Zn, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Zn",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Zn",
+          "target_name": "Zn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Although A. niger KUC5254 was the best at metal removal, it only extracted 32, 33, 13 and 1% of Ni, Cd, Co and Zn, respectively.",
+          "properties": {
+            "property": "leaching",
+            "value": 1,
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "A. niger KUC5254",
+            "treatment_members": [
+              "A. niger KUC5254"
+            ],
+            "conditions": "ME media",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "medium",
+                "value": "ME media",
+                "unit": null,
+                "raw_text": "ME media"
+              }
+            ],
+            "condition_labels": [
+              "ME media"
+            ],
+            "condition": "ME media",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_2_Ni_Cd_battery_72d05ec0__cond_medium_me_media"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Zn",
+            "evidence_span": "Although A. niger KUC5254 was the best at metal removal, it only extracted 32, 33, 13 and 1% of Ni, Cd, Co and Zn, respectively.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "In the case of A. niger KUC5254 and A. tubingensis KUC5037, more than 90% of Ni, Cd, and Zn was removed after 4 days, and the maximum amount of Co was extracted after just 2 days.",
+          "properties": {
+            "property": "leaching",
+            "value": ">90",
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "A. niger KUC5254 and A. tubingensis KUC5037",
+            "treatment_members": [
+              "A. niger KUC5254",
+              "A. tubingensis KUC5037"
+            ],
+            "conditions": "sucrose media, after 4 days",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 4.0,
+                "unit": "d",
+                "raw_text": "sucrose media, after 4 days"
+              }
+            ],
+            "condition_labels": [
+              "sucrose media, after 4 days"
+            ],
+            "condition": "sucrose media, after 4 days",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_2_Ni_Cd_battery_72d05ec0__cond_time_4_0_d"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Ni",
+            "evidence_span": "In the case of A. niger KUC5254 and A. tubingensis KUC5037, more than 90% of Ni, Cd, and Zn was removed after 4 days, and the maximum amount of Co was extracted after just 2 days.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Cd",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Cd",
+          "target_name": "Cd",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "In the case of A. niger KUC5254 and A. tubingensis KUC5037, more than 90% of Ni, Cd, and Zn was removed after 4 days, and the maximum amount of Co was extracted after just 2 days.",
+          "properties": {
+            "property": "leaching",
+            "value": ">90",
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "A. niger KUC5254 and A. tubingensis KUC5037",
+            "treatment_members": [
+              "A. niger KUC5254",
+              "A. tubingensis KUC5037"
+            ],
+            "conditions": "sucrose media, after 4 days",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 4.0,
+                "unit": "d",
+                "raw_text": "sucrose media, after 4 days"
+              }
+            ],
+            "condition_labels": [
+              "sucrose media, after 4 days"
+            ],
+            "condition": "sucrose media, after 4 days",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_2_Ni_Cd_battery_72d05ec0__cond_time_4_0_d"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Cd",
+            "evidence_span": "In the case of A. niger KUC5254 and A. tubingensis KUC5037, more than 90% of Ni, Cd, and Zn was removed after 4 days, and the maximum amount of Co was extracted after just 2 days.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Zn",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Zn",
+          "target_name": "Zn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "In the case of A. niger KUC5254 and A. tubingensis KUC5037, more than 90% of Ni, Cd, and Zn was removed after 4 days, and the maximum amount of Co was extracted after just 2 days.",
+          "properties": {
+            "property": "leaching",
+            "value": ">90",
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "A. niger KUC5254 and A. tubingensis KUC5037",
+            "treatment_members": [
+              "A. niger KUC5254",
+              "A. tubingensis KUC5037"
+            ],
+            "conditions": "sucrose media, after 4 days",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 4.0,
+                "unit": "d",
+                "raw_text": "sucrose media, after 4 days"
+              }
+            ],
+            "condition_labels": [
+              "sucrose media, after 4 days"
+            ],
+            "condition": "sucrose media, after 4 days",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_2_Ni_Cd_battery_72d05ec0__cond_time_4_0_d"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Zn",
+            "evidence_span": "In the case of A. niger KUC5254 and A. tubingensis KUC5037, more than 90% of Ni, Cd, and Zn was removed after 4 days, and the maximum amount of Co was extracted after just 2 days.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "In the case of A. niger KUC5254 and A. tubingensis KUC5037, more than 90% of Ni, Cd, and Zn was removed after 4 days, and the maximum amount of Co was extracted after just 2 days.",
+          "properties": {
+            "property": "leaching",
+            "value": "maximum",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "A. niger KUC5254 and A. tubingensis KUC5037",
+            "treatment_members": [
+              "A. niger KUC5254",
+              "A. tubingensis KUC5037"
+            ],
+            "conditions": "sucrose media, after 2 days",
+            "study_scope": "current_study",
+            "graph_status": "evidence_only",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 2.0,
+                "unit": "d",
+                "raw_text": "sucrose media, after 2 days"
+              }
+            ],
+            "condition_labels": [
+              "sucrose media, after 2 days"
+            ],
+            "condition": "sucrose media, after 2 days",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_2_Ni_Cd_battery_72d05ec0__cond_time_2_0_d"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Co",
+            "evidence_span": "In the case of A. niger KUC5254 and A. tubingensis KUC5037, more than 90% of Ni, Cd, and Zn was removed after 4 days, and the maximum amount of Co was extracted after just 2 days.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Although A. japonicus KUC5035 produced much lower amounts of citric acid (9.6 mM), about 80% of Ni, Cd, and Zn, and 90% of Co were extracted by this species after 8 days.",
+          "properties": {
+            "property": "leaching",
+            "value": 80,
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "A. japonicus KUC5035",
+            "treatment_members": [
+              "A. japonicus KUC5035"
+            ],
+            "conditions": "sucrose media, after 8 days",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 8.0,
+                "unit": "d",
+                "raw_text": "sucrose media, after 8 days"
+              }
+            ],
+            "condition_labels": [
+              "sucrose media, after 8 days"
+            ],
+            "condition": "sucrose media, after 8 days",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_2_Ni_Cd_battery_72d05ec0__cond_time_8_0_d"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Ni",
+            "evidence_span": "Although A. japonicus KUC5035 produced much lower amounts of citric acid (9.6 mM), about 80% of Ni, Cd, and Zn, and 90% of Co were extracted by this species after 8 days.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Cd",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Cd",
+          "target_name": "Cd",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Although A. japonicus KUC5035 produced much lower amounts of citric acid (9.6 mM), about 80% of Ni, Cd, and Zn, and 90% of Co were extracted by this species after 8 days.",
+          "properties": {
+            "property": "leaching",
+            "value": 80,
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "A. japonicus KUC5035",
+            "treatment_members": [
+              "A. japonicus KUC5035"
+            ],
+            "conditions": "sucrose media, after 8 days",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 8.0,
+                "unit": "d",
+                "raw_text": "sucrose media, after 8 days"
+              }
+            ],
+            "condition_labels": [
+              "sucrose media, after 8 days"
+            ],
+            "condition": "sucrose media, after 8 days",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_2_Ni_Cd_battery_72d05ec0__cond_time_8_0_d"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Cd",
+            "evidence_span": "Although A. japonicus KUC5035 produced much lower amounts of citric acid (9.6 mM), about 80% of Ni, Cd, and Zn, and 90% of Co were extracted by this species after 8 days.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Zn",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Zn",
+          "target_name": "Zn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Although A. japonicus KUC5035 produced much lower amounts of citric acid (9.6 mM), about 80% of Ni, Cd, and Zn, and 90% of Co were extracted by this species after 8 days.",
+          "properties": {
+            "property": "leaching",
+            "value": 80,
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "A. japonicus KUC5035",
+            "treatment_members": [
+              "A. japonicus KUC5035"
+            ],
+            "conditions": "sucrose media, after 8 days",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 8.0,
+                "unit": "d",
+                "raw_text": "sucrose media, after 8 days"
+              }
+            ],
+            "condition_labels": [
+              "sucrose media, after 8 days"
+            ],
+            "condition": "sucrose media, after 8 days",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_2_Ni_Cd_battery_72d05ec0__cond_time_8_0_d"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Zn",
+            "evidence_span": "Although A. japonicus KUC5035 produced much lower amounts of citric acid (9.6 mM), about 80% of Ni, Cd, and Zn, and 90% of Co were extracted by this species after 8 days.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Co",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Co",
+          "target_name": "Co",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "Although A. japonicus KUC5035 produced much lower amounts of citric acid (9.6 mM), about 80% of Ni, Cd, and Zn, and 90% of Co were extracted by this species after 8 days.",
+          "properties": {
+            "property": "leaching",
+            "value": 90,
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "A. japonicus KUC5035",
+            "treatment_members": [
+              "A. japonicus KUC5035"
+            ],
+            "conditions": "sucrose media, after 8 days",
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "leaching_efficiency",
+            "measure_key": "leaching",
+            "condition_keys": [
+              {
+                "key": "time",
+                "value": 8.0,
+                "unit": "d",
+                "raw_text": "sucrose media, after 8 days"
+              }
+            ],
+            "condition_labels": [
+              "sucrose media, after 8 days"
+            ],
+            "condition": "sucrose media, after 8 days",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_2_2_Ni_Cd_battery_72d05ec0__cond_time_8_0_d"
+            ],
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Co",
+            "evidence_span": "Although A. japonicus KUC5035 produced much lower amounts of citric acid (9.6 mM), about 80% of Ni, Cd, and Zn, and 90% of Co were extracted by this species after 8 days.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Cr",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Cr",
+          "target_name": "Cr",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "With this process, Cr (95%), Cu (98%), Ni (88%) and Zn (83%) were successfully recovered.",
+          "properties": {
+            "property": "recovery",
+            "value": 95,
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "combined electrochemical and chemical process",
+            "treatment_members": [
+              "combined electrochemical and chemical process"
+            ],
+            "study_scope": "background",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Cr",
+            "evidence_span": "With this process, Cr (95%), Cu (98%), Ni (88%) and Zn (83%) were successfully recovered.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Cu",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Cu",
+          "target_name": "Cu",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "With this process, Cr (95%), Cu (98%), Ni (88%) and Zn (83%) were successfully recovered.",
+          "properties": {
+            "property": "recovery",
+            "value": 98,
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "combined electrochemical and chemical process",
+            "treatment_members": [
+              "combined electrochemical and chemical process"
+            ],
+            "study_scope": "background",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Cu",
+            "evidence_span": "With this process, Cr (95%), Cu (98%), Ni (88%) and Zn (83%) were successfully recovered.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Ni",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Ni",
+          "target_name": "Ni",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "With this process, Cr (95%), Cu (98%), Ni (88%) and Zn (83%) were successfully recovered.",
+          "properties": {
+            "property": "recovery",
+            "value": 88,
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "combined electrochemical and chemical process",
+            "treatment_members": [
+              "combined electrochemical and chemical process"
+            ],
+            "study_scope": "background",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Ni",
+            "evidence_span": "With this process, Cr (95%), Cu (98%), Ni (88%) and Zn (83%) were successfully recovered.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder_HAS_OUTPUT_text_Material_Zn",
+          "source_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "target_id": "text_Material_Zn",
+          "target_name": "Zn",
+          "relation_type": "HAS_OUTPUT",
+          "confidence": 0.8,
+          "evidence_span": "With this process, Cr (95%), Cu (98%), Ni (88%) and Zn (83%) were successfully recovered.",
+          "properties": {
+            "property": "recovery",
+            "value": 83,
+            "unit": "%",
+            "source_sample": "spent Ni–Cd batteries",
+            "sample_state": "spent (end-of-life) state",
+            "process_agent": "combined electrochemical and chemical process",
+            "treatment_members": [
+              "combined electrochemical and chemical process"
+            ],
+            "study_scope": "background",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "property_raw": "recovery",
+            "measure_key": "recovery",
+            "raw_relation_type": "HAS_OUTPUT",
+            "normalized_relation_type": "HAS_OUTPUT",
+            "normalized_from_raw": false,
+            "source_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "target_name": "Zn",
+            "evidence_span": "With this process, Cr (95%), Cu (98%), Ni (88%) and Zn (83%) were successfully recovered.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.3. Selection of useful fungal species_55fcaf25",
+    "section_name": "3.3. Selection of useful fungal species",
+    "page_number": 1,
+    "result": {
+      "status": null,
+      "error": null,
+      "failure_type": null,
+      "binding_mode": "joint",
+      "relation_count": 2,
+      "condition_count": 1,
+      "unresolved_binding_count": 0,
+      "unresolved_binding_requests": [],
+      "unresolved_process_result_count": 0,
+      "unresolved_process_result_requests": [],
+      "conditions": [
+        {
+          "id": "cond_medium_fungal_generated_citric_acid",
+          "name": "medium",
+          "type": "medium",
+          "value": "fungal generated citric acid",
+          "unit": null,
+          "source": {
+            "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+            "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.3. Selection of useful fungal species_55fcaf25",
+            "text": "## 3.3. Selection of useful fungal species\nIn the present study, we confirmed that citric acid, produced in sucrose media, is a suitable extracting agent for bioleaching of Zn–Mn or Ni–Cd batteries. Using fungal generated citric acid, A. tubingensis KUC 5037 demonstrated the highest bioleaching efficiency for Zn–Mn batteries. A. niger KUC5254 and A. tubingensis KUC5037 showed the highest percentage of metal removal from\nNi–Cd batteries. Among the Aspergillus species, section Nigri, including A. niger, A. tubingensis, and A. japonicus, are considered industrially important fungal taxa for producing useful metabolites but, unfortunately, also mycotoxins. Mycotoxins can limit the practical use of these fungi for toxicology reasons (Varga et al., 2003). All Aspergillus species used in this study are also known to secrete several toxic metabolites. One of the renowned mycotoxin, Ochratoxin A, is known to have nephrotoxic, nephrocarcinogenic, teratogenic and immunosuppressive effects (Serra et al., 2003). Some results have been recently published showing that the Aspergillus species produces ochratoxins. Storari et al. (2012), however, re-examined these claims and found that A. tubingensis did not produce ochratoxin A when grown on synthetic media. In this respect, finding from this study revealed that a non-ochratoxigenic species, A. tubingensis KUC5037, can remove similar quantities of metal as A. niger KUC5254. Thus, the discovery of the outstanding ability of A. tubingensis is of great significance for future work.",
+            "parent_chunk_id": null,
+            "section_name": "3.3. Selection of useful fungal species",
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 16951,
+            "position_end": 18491,
+            "metadata": {
+              "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_3.3. Selection of useful fungal species_55fcaf25",
+              "doc_id": "Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species",
+              "title": "Bioleaching of spent Zn–Mn or Ni–Cd batteries by Aspergillus species",
+              "source_path": "/Users/imchengliang/Downloads/PhD work/Code/Ontology_LLM/knowledge_extraction/weee_kg_system/data/all_batches/mineru/Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species/text.md",
+              "section_name": "3.3. Selection of useful fungal species",
+              "subsection_name": null,
+              "page_number": 1,
+              "position_start": 16951,
+              "position_end": 18491,
+              "parent_chunk_id": null,
+              "chunk_type": "text",
+              "sample_identifier_map": {
+                "a": {
+                  "identifier": "a",
+                  "canonical_name": "niger",
+                  "entity_type": "Product",
+                  "source_table_id": "TABLE_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_0003",
+                  "source_table_index": 2,
+                  "source_row_index": 6,
+                  "raw_cell": "A. niger"
+                }
+              }
+            }
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "relations": [
+        {
+          "id": "REL_text_Product_Zn_Mn_battery_PROCESSED_BY_text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "source_id": "text_Product_Zn_Mn_battery",
+          "source_name": "Zn–Mn battery",
+          "target_id": "text_Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "target_name": "bioleaching of metals from spent Zn-Mn battery powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "Using fungal generated citric acid, A. tubingensis KUC 5037 demonstrated the highest bioleaching efficiency for Zn–Mn batteries.",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "A. tubingensis KUC 5037",
+            "treatment_members": [
+              "A. tubingensis KUC 5037"
+            ],
+            "conditions": "fungal generated citric acid",
+            "condition_keys": [
+              {
+                "key": "medium",
+                "value": "fungal generated citric acid",
+                "unit": null,
+                "raw_text": "fungal generated citric acid"
+              }
+            ],
+            "condition_labels": [
+              "fungal generated citric acid"
+            ],
+            "condition": "fungal generated citric acid",
+            "condition_ids": [
+              "CHUNK_Bioleaching_of_Spent_Zn_mn_or_Ni_cd_Batteries_by_Aspergillus_Species_3_3_Selection_of_useful_fungal_species_55fcaf25__cond_medium_fungal_generated_citric_acid"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "Zn–Mn battery",
+            "target_name": "bioleaching of metals from spent Zn-Mn battery powder",
+            "evidence_span": "Using fungal generated citric acid, A. tubingensis KUC 5037 demonstrated the highest bioleaching efficiency for Zn–Mn batteries.",
+            "source": "text"
+          }
+        },
+        {
+          "id": "REL_text_Product_Zn_Mn_battery_PROCESSED_BY_text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "source_id": "text_Product_Zn_Mn_battery",
+          "source_name": "Zn–Mn battery",
+          "target_id": "text_Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "target_name": "bioleaching of metals from spent Ni-Cd battery powder",
+          "relation_type": "PROCESSED_BY",
+          "confidence": 0.8,
+          "evidence_span": "A. niger KUC5254 and A. tubingensis KUC5037 showed the highest percentage of metal removal from Ni–Cd batteries.",
+          "properties": {
+            "study_scope": "current_study",
+            "graph_status": "active",
+            "process_role": "main_process",
+            "process_agent": "A. niger KUC5254 and A. tubingensis KUC5037",
+            "treatment_members": [
+              "A. niger KUC5254",
+              "A. tubingensis KUC5037"
+            ],
+            "raw_relation_type": "PROCESSED_BY",
+            "normalized_relation_type": "PROCESSED_BY",
+            "normalized_from_raw": false,
+            "source_name": "Zn–Mn battery",
+            "target_name": "bioleaching of metals from spent Ni-Cd battery powder",
+            "evidence_span": "A. niger KUC5254 and A. tubingensis KUC5037 showed the highest percentage of metal removal from Ni–Cd batteries.",
+            "source": "text"
+          }
+        }
+      ],
+      "discarded_pairs": [],
+      "deleted_relations": [],
+      "failed_prompt": null,
+      "failed_prompt_chars": null,
+      "failed_prompt_lines": null,
+      "fallback_strategy": null,
+      "fallback_part_count": null,
+      "fallback_errors": null,
+      "fallback_prompts": null,
+      "original_error": null
+    }
+  },
+  {
+    "chunk_id": "CHUNK_Bioleaching of Spent Zn–mn or Ni–cd Batteries by Aspergillus Species_4. Conclusions_5e09ef4e",
+    "section_name": "4. Conclusions",
+    "page_number": 1,
+    "result": {
+      "relation_count": 0,
+      "relations": [],
+      "discarded_pairs": [],
+      "unresolved_binding_requests": [],
+      "unresolved_binding_count": 0
+    }
+  }
+]

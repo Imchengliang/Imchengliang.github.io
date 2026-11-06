@@ -1,0 +1,265 @@
+[
+  {
+    "id": "setting:Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries:hydrochloric-acid-leaching-conditions",
+    "name": "hydrochloric acid leaching conditions",
+    "stage_name": "hydrochloric acid leaching of battery scrap",
+    "stage_id": "stage:Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries:hydrochloric-acid-leaching-of-battery-scrap",
+    "sample": "battery scrap (1.25 g positive electrode materials and 1.83 g negative electrode materials)",
+    "sample_aliases": [
+      "battery scrap"
+    ],
+    "treatment": "HCl solution",
+    "treatment_members": [
+      "HCl"
+    ],
+    "treatment_aliases": [],
+    "aliases": [],
+    "condition_summary": "3.08 g battery scrap; 50 ml HCl solution; 100-ml beaker; electromagnetic stirring; ambient temperature; suitable concentrations; except for tests on effect of solid-to-liquid ratio",
+    "condition_keys": [
+      {
+        "key": "mass",
+        "value": 3.08,
+        "unit": "g",
+        "raw_text": "3.08 g battery scrap"
+      },
+      {
+        "key": "volume",
+        "value": 50.0,
+        "unit": "mL",
+        "raw_text": "50 ml HCl solution"
+      },
+      {
+        "key": "other",
+        "value": "100-ml beaker",
+        "unit": null,
+        "raw_text": "100-ml beaker"
+      },
+      {
+        "key": "other",
+        "value": "electromagnetic stirring",
+        "unit": null,
+        "raw_text": "electromagnetic stirring"
+      },
+      {
+        "key": "temperature",
+        "value": "ambient",
+        "unit": "°C",
+        "raw_text": "ambient temperature"
+      },
+      {
+        "key": "other",
+        "value": "suitable concentrations",
+        "unit": null,
+        "raw_text": "suitable concentrations"
+      },
+      {
+        "key": "other",
+        "value": "except for tests on effect of solid-to-liquid ratio",
+        "unit": null,
+        "raw_text": "except for tests on effect of solid-to-liquid ratio"
+      }
+    ],
+    "source": "process_pass",
+    "source_table_id": null,
+    "evidence_hint": "In each test, 3.08 g of battery scrap which consisted of 1.25 g of the positive electrode materials and 1.83 g of the negative electrode materials were leached in 50 ml of HCl solutions of suitable concentrations in a 100-ml beaker under electromagnetic stirring, except for the tests on the effect of solid-to-liquid ratio on the leaching of metals.",
+    "evidence": {}
+  },
+  {
+    "id": "setting:Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries:solvent-extraction-with-d2ehpa-conditions",
+    "name": "solvent extraction with D2EHPA conditions",
+    "stage_name": "solvent extraction with D2EHPA",
+    "stage_id": "stage:Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries:solvent-extraction-with-d2ehpa",
+    "sample": "aqueous phase from leaching",
+    "sample_aliases": [],
+    "treatment": "D2EHPA organic phase",
+    "treatment_members": [
+      "D2EHPA"
+    ],
+    "treatment_aliases": [],
+    "aliases": [],
+    "condition_summary": "batchwise; 50-ml centrifuge tube or 500-ml separatory funnel; ambient temperature (25 ± 0.5 °C); pH adjusted with concentrated NaOH; contact time 30 min for extraction and stripping equilibria except Al stripping ~60 min",
+    "condition_keys": [
+      {
+        "key": "other",
+        "value": "batchwise",
+        "unit": null,
+        "raw_text": "batchwise"
+      },
+      {
+        "key": "other",
+        "value": "50-ml centrifuge tube or 500-ml separatory funnel",
+        "unit": null,
+        "raw_text": "50-ml centrifuge tube or 500-ml separatory funnel"
+      },
+      {
+        "key": "temperature",
+        "value": 0.5,
+        "unit": "°C",
+        "raw_text": "ambient temperature (25 ± 0.5 °C)"
+      },
+      {
+        "key": "other",
+        "value": "pH adjusted with concentrated NaOH",
+        "unit": null,
+        "raw_text": "pH adjusted with concentrated NaOH"
+      },
+      {
+        "key": "time",
+        "value": 30.0,
+        "unit": "min",
+        "raw_text": "contact time 30 min for extraction and stripping equilibria except Al stripping ~60 min"
+      }
+    ],
+    "source": "process_pass",
+    "source_table_id": null,
+    "evidence_hint": "Extraction and stripping tests were carried out batchwise by contacting suitable volumes of the organic and aqueous phases in a 50-ml centrifuge tube or a 500-ml separatory funnel at ambient temperature (25 ± 0.5 °C). The pH was adjusted by the addition of a concentrated sodium hydroxide solution to the appropriate value. From preliminary extraction experiments with D2EHPA to investigate the influence of contact time, a 30-min period appeared to be sufficient to reach extraction and stripping equilibria of the metal ions, except for the stripping of aluminum, which required about 60 min to achieve equilibrium.",
+    "evidence": {}
+  },
+  {
+    "id": "setting:Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries:solvent-extraction-with-toa-conditions",
+    "name": "solvent extraction with TOA conditions",
+    "stage_name": "solvent extraction with TOA",
+    "stage_id": "stage:Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries:solvent-extraction-with-toa",
+    "sample": "aqueous phase from leaching",
+    "sample_aliases": [],
+    "treatment": "TOA organic phase",
+    "treatment_members": [
+      "TOA"
+    ],
+    "treatment_aliases": [],
+    "aliases": [],
+    "condition_summary": "batchwise; 50-ml centrifuge tube or 500-ml separatory funnel; ambient temperature (25 ± 0.5 °C); pH adjusted with concentrated NaOH; extraction equilibrium <5 min; stripping almost immediate",
+    "condition_keys": [
+      {
+        "key": "other",
+        "value": "batchwise",
+        "unit": null,
+        "raw_text": "batchwise"
+      },
+      {
+        "key": "other",
+        "value": "50-ml centrifuge tube or 500-ml separatory funnel",
+        "unit": null,
+        "raw_text": "50-ml centrifuge tube or 500-ml separatory funnel"
+      },
+      {
+        "key": "temperature",
+        "value": 0.5,
+        "unit": "°C",
+        "raw_text": "ambient temperature (25 ± 0.5 °C)"
+      },
+      {
+        "key": "other",
+        "value": "pH adjusted with concentrated NaOH",
+        "unit": null,
+        "raw_text": "pH adjusted with concentrated NaOH"
+      },
+      {
+        "key": "time",
+        "value": 5.0,
+        "unit": "min",
+        "raw_text": "extraction equilibrium <5 min"
+      },
+      {
+        "key": "other",
+        "value": "stripping almost immediate",
+        "unit": null,
+        "raw_text": "stripping almost immediate"
+      }
+    ],
+    "source": "process_pass",
+    "source_table_id": null,
+    "evidence_hint": "The extraction and stripping kinetics of cobalt with TOA were very rapid. The time for reaching extraction equilibrium was less than 5 min, while the stripping occurred almost immediately after the loaded organic phase was contacted with a stripping agent.",
+    "evidence": {}
+  },
+  {
+    "id": "setting:Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries:precipitation-of-rare-earths-conditions",
+    "name": "precipitation of rare earths conditions",
+    "stage_name": "precipitation of rare earths",
+    "stage_id": "stage:Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries:precipitation-of-rare-earths",
+    "sample": "strip liquor from D2EHPA extraction circuit",
+    "sample_aliases": [
+      "strip liquor"
+    ],
+    "treatment": "ammonia solution and oxalic acid",
+    "treatment_members": [
+      "ammonia",
+      "oxalic acid"
+    ],
+    "treatment_aliases": [],
+    "aliases": [],
+    "condition_summary": "pH 2–3 with concentrated ammonia; excess saturated oxalic acid ~2 mol per mol rare earths; heated and stirred ~1 h; filtered, washed with hot water, dried in air; calcined at 850–900 °C",
+    "condition_keys": [
+      {
+        "key": "ph",
+        "value": 2.0,
+        "unit": null,
+        "raw_text": "pH 2–3 with concentrated ammonia"
+      },
+      {
+        "key": "medium",
+        "value": "excess saturated oxalic acid ~2 mol per mol rare earths",
+        "unit": null,
+        "raw_text": "excess saturated oxalic acid ~2 mol per mol rare earths"
+      },
+      {
+        "key": "time",
+        "value": 1.0,
+        "unit": "h",
+        "raw_text": "heated and stirred ~1 h"
+      },
+      {
+        "key": "medium",
+        "value": "filtered, washed with hot water, dried in air",
+        "unit": null,
+        "raw_text": "filtered, washed with hot water, dried in air"
+      },
+      {
+        "key": "temperature",
+        "value": 900.0,
+        "unit": "°C",
+        "raw_text": "calcined at 850–900 °C"
+      }
+    ],
+    "source": "process_pass",
+    "source_table_id": null,
+    "evidence_hint": "The mixed rare earths were precipitated from the strip liquors of the extraction circuit with D2EHPA by the addition of concentrated ammonia solution until a pH 2–3 was reached, followed by an excess of saturated oxalic acid solution about 2 mol rmol of rare earths. The mixture was heated and stirred for ca. 1 h, and the precipitated rare earth oxalate was filtered, washed with hot water, and dried in air. The oxalate was calcined in a muffle furnace at 850 - 900 °C to convert it to a mixed rare earth oxide product.",
+    "evidence": {}
+  },
+  {
+    "id": "setting:Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries:precipitation-of-cobalt-and-nickel-conditions",
+    "name": "precipitation of cobalt and nickel conditions",
+    "stage_name": "precipitation of cobalt and nickel",
+    "stage_id": "stage:Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries:precipitation-of-cobalt-and-nickel",
+    "sample": "strip liquor and raffinate from TOA extraction circuit",
+    "sample_aliases": [
+      "strip liquor",
+      "raffinate"
+    ],
+    "treatment": "ammonium oxalate",
+    "treatment_members": [
+      "ammonium oxalate"
+    ],
+    "treatment_aliases": [],
+    "aliases": [],
+    "condition_summary": "addition of ammonium oxalate to corresponding solutions; precipitates dissolved with small amounts of concentrated NaOH and HCl and diluted with water for impurity analysis",
+    "condition_keys": [
+      {
+        "key": "other",
+        "value": "addition of ammonium oxalate to corresponding solutions",
+        "unit": null,
+        "raw_text": "addition of ammonium oxalate to corresponding solutions"
+      },
+      {
+        "key": "medium",
+        "value": "precipitates dissolved with small amounts of concentrated NaOH and HCl and diluted with water for impurity analysis",
+        "unit": null,
+        "raw_text": "precipitates dissolved with small amounts of concentrated NaOH and HCl and diluted with water for impurity analysis"
+      }
+    ],
+    "source": "process_pass",
+    "source_table_id": null,
+    "evidence_hint": "The cobalt and nickel were precipitated from the strip liquor and the raffinate from extraction circuit with TOA, respectively, by the addition of ammonium oxalate to the corresponding solutions. The precipitates were dissolved with small amounts of concentrated sodium hydroxide and hydrochloric acid solutions and diluted with water to determine the contents of impurity elements.",
+    "evidence": {}
+  }
+]

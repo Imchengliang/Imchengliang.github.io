@@ -1,0 +1,301 @@
+{
+  "raw_response": {
+    "raw_response": "{\n  \"population_scopes\": [\n    {\n      \"root_entity_id\": \"Product_nickel_metal_hydride_battery\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"nickel-metal hydride battery\",\n      \"scope_summary\": \"Nickel-metal hydride batteries used in the study; the batteries were cut in half longitudinally to separate the metallic cases from the internal battery rolls which consisted of the positive and negative electrodes plus a nylon separator.\",\n      \"evidence_ids\": [\"E778bc9d072\"]\n    },\n    {\n      \"root_entity_id\": \"Product_battery\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"battery\",\n      \"scope_summary\": \"Nickel-metal hydride batteries used in the study; the batteries were cut in half longitudinally to separate the metallic cases from the internal battery rolls which consisted of the positive and negative electrodes plus a nylon separator.\",\n      \"evidence_ids\": [\"E778bc9d072\"]\n    }\n  ],\n  \"process_scopes\": [\n    {\n      \"root_entity_id\": \"Process_precipitation_of_cobalt_and_nickel\",\n      \"method_family\": \"precipitation\",\n      \"evidence_ids\": [\"E00897cfdee\"]\n    },\n    {\n      \"root_entity_id\": \"Process_oxalate\",\n      \"method_family\": \"calcination\",\n      \"evidence_ids\": [\"E4cb815fb46\"]\n    },\n    {\n      \"root_entity_id\": \"Process_solvent_extraction_with_TOA\",\n      \"method_family\": \"solvent extraction\",\n      \"evidence_ids\": [\"E818bca295b\"]\n    },\n    {\n      \"root_entity_id\": \"Process_precipitation_of_rare_earth\",\n      \"method_family\": \"precipitation\",\n      \"evidence_ids\": [\"E98fcd1d509\"]\n    },\n    {\n      \"root_entity_id\": \"Process_solvent_extraction_with_D2EHPA\",\n      \"method_family\": \"solvent extraction\",\n      \"evidence_ids\": [\"Ecb907633e1\"]\n    },\n    {\n      \"root_entity_id\": \"Process_hydrochloric_acid_leaching_of_battery\",\n      \"method_family\": \"acid leaching\",\n      \"evidence_ids\": [\"Ed22457722b\"]\n    }\n  ]\n}",
+    "raw_payload": {
+      "population_scopes": [
+        {
+          "root_entity_id": "Product_nickel_metal_hydride_battery",
+          "granularity": "batch",
+          "sample_type": "nickel-metal hydride battery",
+          "scope_summary": "Nickel-metal hydride batteries used in the study; the batteries were cut in half longitudinally to separate the metallic cases from the internal battery rolls which consisted of the positive and negative electrodes plus a nylon separator.",
+          "evidence_ids": [
+            "E778bc9d072"
+          ]
+        },
+        {
+          "root_entity_id": "Product_battery",
+          "granularity": "batch",
+          "sample_type": "battery",
+          "scope_summary": "Nickel-metal hydride batteries used in the study; the batteries were cut in half longitudinally to separate the metallic cases from the internal battery rolls which consisted of the positive and negative electrodes plus a nylon separator.",
+          "evidence_ids": [
+            "E778bc9d072"
+          ]
+        }
+      ],
+      "process_scopes": [
+        {
+          "root_entity_id": "Process_precipitation_of_cobalt_and_nickel",
+          "method_family": "precipitation",
+          "evidence_ids": [
+            "E00897cfdee"
+          ]
+        },
+        {
+          "root_entity_id": "Process_oxalate",
+          "method_family": "calcination",
+          "evidence_ids": [
+            "E4cb815fb46"
+          ]
+        },
+        {
+          "root_entity_id": "Process_solvent_extraction_with_TOA",
+          "method_family": "solvent extraction",
+          "evidence_ids": [
+            "E818bca295b"
+          ]
+        },
+        {
+          "root_entity_id": "Process_precipitation_of_rare_earth",
+          "method_family": "precipitation",
+          "evidence_ids": [
+            "E98fcd1d509"
+          ]
+        },
+        {
+          "root_entity_id": "Process_solvent_extraction_with_D2EHPA",
+          "method_family": "solvent extraction",
+          "evidence_ids": [
+            "Ecb907633e1"
+          ]
+        },
+        {
+          "root_entity_id": "Process_hydrochloric_acid_leaching_of_battery",
+          "method_family": "acid leaching",
+          "evidence_ids": [
+            "Ed22457722b"
+          ]
+        }
+      ]
+    },
+    "evidence_records": [
+      {
+        "id": "E00897cfdee",
+        "text": "Precipitate cobalt from the TOA strip liquor and nickel from the TOA raffinate by adding ammonium oxalate to the corresponding solutions; dissolve the precipitates with small amounts of concentrated sodium hydroxide and hydrochloric acid solutions and dilute with water for impurity analysis.",
+        "section_name": "unknown",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_precipitation_of_cobalt_and_nickel"
+        ],
+        "entity_aliases": {
+          "Process_precipitation_of_cobalt_and_nickel": [
+            "precipitation of cobalt and nickel"
+          ]
+        },
+        "entity_types": {
+          "Process_precipitation_of_cobalt_and_nickel": "Process"
+        },
+        "entity_names": {
+          "Process_precipitation_of_cobalt_and_nickel": "precipitation of cobalt and nickel"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_precipitation_of_cobalt_and_nickel": "Precipitate cobalt from the TOA strip liquor and nickel from the TOA raffinate by adding ammonium oxalate to the corresponding solutions; dissolve the precipitates with small amounts of concentrated sodium hydroxide and hydrochloric acid solutions and dilute with water for impurity analysis."
+        }
+      },
+      {
+        "id": "E4cb815fb46",
+        "text": "Calcination of the oxalate gave a mixed rare earth oxide product containing 53.3% La2O3, 3.4% CeO2, 10.5% Pr6O11, 32.1% Nd2O3 and 0.8% Sm2O3.",
+        "section_name": "3.3.3. Stripping of rare earths",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_oxalate"
+        ],
+        "entity_aliases": {
+          "Process_oxalate": [
+            "oxalate"
+          ]
+        },
+        "entity_types": {
+          "Process_oxalate": "Process"
+        },
+        "entity_names": {
+          "Process_oxalate": "oxalate"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_oxalate": "Calcination of the oxalate gave a mixed rare earth oxide product containing 53.3% La2O3, 3.4% CeO2, 10.5% Pr6O11, 32.1% Nd2O3 and 0.8% Sm2O3."
+        }
+      },
+      {
+        "id": "E778bc9d072",
+        "text": "The nickel-metal hydride batteries were cut in half longitudinally to separate the metallic cases from the internal battery rolls which consisted of the positive and negative electrodes plus a nylon separator.",
+        "section_name": "2.2.1. Demolishment of batteries",
+        "current_study_signal": "high",
+        "entity_ids": [
+          "Product_nickel_metal_hydride_battery",
+          "Product_battery"
+        ],
+        "entity_aliases": {
+          "Product_nickel_metal_hydride_battery": [
+            "nickel-metal hydride batteries",
+            "nickel-metal hydride battery"
+          ],
+          "Product_battery": [
+            "cells",
+            "battery"
+          ]
+        },
+        "entity_types": {
+          "Product_nickel_metal_hydride_battery": "Product",
+          "Product_battery": "Product"
+        },
+        "entity_names": {
+          "Product_nickel_metal_hydride_battery": "nickel-metal hydride battery",
+          "Product_battery": "battery"
+        },
+        "entity_sample_identifiers": {}
+      },
+      {
+        "id": "E818bca295b",
+        "text": "Batchwise extraction and stripping tests by contacting suitable volumes of organic and aqueous phases in a 50-mL centrifuge tube or 500-mL separatory funnel at 25 ± 0.5 °C; adjust pH with concentrated NaOH; extraction equilibrium for cobalt reached in less than 5 min and stripping occurs almost immediately after contacting loaded organic phase with stripping agent.",
+        "section_name": "unknown",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_solvent_extraction_with_TOA"
+        ],
+        "entity_aliases": {
+          "Process_solvent_extraction_with_TOA": [
+            "solvent extraction with toa"
+          ]
+        },
+        "entity_types": {
+          "Process_solvent_extraction_with_TOA": "Process"
+        },
+        "entity_names": {
+          "Process_solvent_extraction_with_TOA": "solvent extraction with TOA"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_solvent_extraction_with_TOA": "Batchwise extraction and stripping tests by contacting suitable volumes of organic and aqueous phases in a 50-mL centrifuge tube or 500-mL separatory funnel at 25 ± 0.5 °C; adjust pH with concentrated NaOH; extraction equilibrium for cobalt reached in less than 5 min and stripping occurs almost immediately after contacting loaded organic phase with stripping agent."
+        }
+      },
+      {
+        "id": "E98fcd1d509",
+        "text": "Precipitate mixed rare earths from D2EHPA strip liquors by adding concentrated ammonia solution to pH 2–3, then adding excess saturated oxalic acid solution (about 2 mol per mol of rare earths); heat and stir for about 1 h; filter, wash with hot water, dry in air, and calcine the oxalate in a muffle furnace at 850–900 °C to convert to mixed rare earth oxide product.",
+        "section_name": "unknown",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_precipitation_of_rare_earth"
+        ],
+        "entity_aliases": {
+          "Process_precipitation_of_rare_earth": [
+            "precipitation of rare earths",
+            "precipitation of rare earth"
+          ]
+        },
+        "entity_types": {
+          "Process_precipitation_of_rare_earth": "Process"
+        },
+        "entity_names": {
+          "Process_precipitation_of_rare_earth": "precipitation of rare earth"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_precipitation_of_rare_earth": "Precipitate mixed rare earths from D2EHPA strip liquors by adding concentrated ammonia solution to pH 2–3, then adding excess saturated oxalic acid solution (about 2 mol per mol of rare earths); heat and stir for about 1 h; filter, wash with hot water, dry in air, and calcine the oxalate in a muffle furnace at 850–900 °C to convert to mixed rare earth oxide product."
+        }
+      },
+      {
+        "id": "Ecb907633e1",
+        "text": "Batchwise extraction and stripping tests by contacting suitable volumes of organic and aqueous phases in a 50-mL centrifuge tube or 500-mL separatory funnel at 25 ± 0.5 °C; adjust pH with concentrated NaOH; use 30-min contact time for extraction and stripping equilibria of metal ions, except stripping of aluminum requires about 60 min.",
+        "section_name": "unknown",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_solvent_extraction_with_D2EHPA"
+        ],
+        "entity_aliases": {
+          "Process_solvent_extraction_with_D2EHPA": [
+            "solvent extraction with d2ehpa"
+          ]
+        },
+        "entity_types": {
+          "Process_solvent_extraction_with_D2EHPA": "Process"
+        },
+        "entity_names": {
+          "Process_solvent_extraction_with_D2EHPA": "solvent extraction with D2EHPA"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_solvent_extraction_with_D2EHPA": "Batchwise extraction and stripping tests by contacting suitable volumes of organic and aqueous phases in a 50-mL centrifuge tube or 500-mL separatory funnel at 25 ± 0.5 °C; adjust pH with concentrated NaOH; use 30-min contact time for extraction and stripping equilibria of metal ions, except stripping of aluminum requires about 60 min."
+        }
+      },
+      {
+        "id": "Ed22457722b",
+        "text": "Leach 3.08 g of battery scrap (1.25 g positive electrode materials and 1.83 g negative electrode materials) in 50 mL of HCl solution of suitable concentration in a 100-mL beaker under electromagnetic stirring; after leaching, separate leach solution and insoluble residue by filtration.",
+        "section_name": "unknown",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_hydrochloric_acid_leaching_of_battery"
+        ],
+        "entity_aliases": {
+          "Process_hydrochloric_acid_leaching_of_battery": [
+            "hydrochloric acid leaching of battery scrap",
+            "hydrochloric acid leaching of battery"
+          ]
+        },
+        "entity_types": {
+          "Process_hydrochloric_acid_leaching_of_battery": "Process"
+        },
+        "entity_names": {
+          "Process_hydrochloric_acid_leaching_of_battery": "hydrochloric acid leaching of battery"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_hydrochloric_acid_leaching_of_battery": "Leach 3.08 g of battery scrap (1.25 g positive electrode materials and 1.83 g negative electrode materials) in 50 mL of HCl solution of suitable concentration in a 100-mL beaker under electromagnetic stirring; after leaching, separate leach solution and insoluble residue by filtration."
+        }
+      }
+    ]
+  },
+  "evidence_records": [
+    {
+      "id": "source-c23456c6a791",
+      "text": "The Ni-MH batteries used in this work were cylinder-shaped batteries TOSHIBAŽ TH-3A type. The commercial extractants employed, bis 2-ethylhexyl phosphoric acid. Ž. Ž. Ž. D2EHPA was kindly donated by Daihachi Chemical Industry and trioctylamine TOA was purchased from Aldrich Chemical Company Inc. These reagents were utilized without any further purification. The concentrations of the extractants in the organic solution were 25% by volume. The diluent was kerosene. 1-Dodecanol was used as third phase inhibitor in the TOA system, and its concentration was 15 vol.%. The organic solution of TOA was pre-equilibrated by contacting with twice volume of 2 M hydrochloric acid solution for 10 min before the extraction experiments. Other reagents were of analytical reagent grade quality.",
+      "kind": "source_passage"
+    },
+    {
+      "id": "source-55bad8fc8fd1",
+      "text": "The cobalt and nickel were precipitated from the strip liquor and the raffinate from extraction circuit with TOA, respectively, by the addition of ammonium oxalate to the corresponding solutions. The precipitates were dissolved with small amounts of concentrated sodium hydroxide and hydrochloric acid solutions and diluted with water to determine the contents of impurity elements.",
+      "kind": "source_passage"
+    },
+    {
+      "id": "source-c23456c6a791",
+      "text": "The Ni-MH batteries used in this work were cylinder-shaped batteries TOSHIBAŽ TH-3A type. The commercial extractants employed, bis 2-ethylhexyl phosphoric acid. Ž. Ž. Ž. D2EHPA was kindly donated by Daihachi Chemical Industry and trioctylamine TOA was purchased from Aldrich Chemical Company Inc. These reagents were utilized without any further purification. The concentrations of the extractants in the organic solution were 25% by volume. The diluent was kerosene. 1-Dodecanol was used as third phase inhibitor in the TOA system, and its concentration was 15 vol.%. The organic solution of TOA was pre-equilibrated by contacting with twice volume of 2 M hydrochloric acid solution for 10 min before the extraction experiments. Other reagents were of analytical reagent grade quality.",
+      "kind": "source_passage"
+    },
+    {
+      "id": "source-3b0a1e575eee",
+      "text": "A completely hydrometallurgical process has been developed for the recovery of metal values such as cobalt, nickel and rare earths from spent nickel-metal hydride Ni-MH secondaryŽ. batteries. Effects of hydrochloric acid concentration, temperature, reaction time and solid-to-liquid ratio on leaching of metals contained in the electrode materials of the batteries were studied. The optimal operating conditions were found to be 3 M HCl at a temperature of 95 ^ ∘C and a 3-h leach time, and it was possible to treat up to 5.5 g of scrap in 50 ml of acid solution where the recoveries 100% of cobalt, over 96% of nickel and 99% of rare earths were achieved. A typical chemical composition of the resulting leach liquor was approximately, in grams per liter, 23.4 Ni, 1.7 Co, 3.4 Fe, 0.72 Zn, 0.46 Al, 1.2 Mn, 4.2 La, 0.26 Ce, 0.82 Pr, 2.6 Nd and 0.074 Sm, as well as 50 Cl. The pH of the solution was around 1.2. The rare earth values can be readily recovered from the leach liquor by the use of a solvent extraction circuit with 25% bis 2-ethylhexylŽ. phosphoric acid D2EHPA in kerosene, in which a two-stage counter-current extraction at an O:A Ž. ratio of 3:1 at an equilibrium pH of 2.0, a single-stage cobalt scrubbing with 0.3 M hydrochloric acid at an O:A ratio of 22:1, and a stripping operation with 2.0 M hydrochloric acid in one contact at an O:A ratio of 5:1 are involved. A mixed rare earth oxide of over 99% purity was obtained by selective precipitation with oxalic acid, and calcination of the precipitate. The total yield of rare earths approached 98%. The cobalt and nickel in the raffinate are effectively separated by selective extraction of cobalt with 25% TOA in kerosene after concentration up to ClŽ w yxf220 g y1 l. Nearly complete recovery of cobalt can be achieved by using a three-stage counter-current.",
+      "kind": "source_passage"
+    },
+    {
+      "id": "source-3b0a1e575eee",
+      "text": "A completely hydrometallurgical process has been developed for the recovery of metal values such as cobalt, nickel and rare earths from spent nickel-metal hydride Ni-MH secondaryŽ. batteries. Effects of hydrochloric acid concentration, temperature, reaction time and solid-to-liquid ratio on leaching of metals contained in the electrode materials of the batteries were studied. The optimal operating conditions were found to be 3 M HCl at a temperature of 95 ^ ∘C and a 3-h leach time, and it was possible to treat up to 5.5 g of scrap in 50 ml of acid solution where the recoveries 100% of cobalt, over 96% of nickel and 99% of rare earths were achieved. A typical chemical composition of the resulting leach liquor was approximately, in grams per liter, 23.4 Ni, 1.7 Co, 3.4 Fe, 0.72 Zn, 0.46 Al, 1.2 Mn, 4.2 La, 0.26 Ce, 0.82 Pr, 2.6 Nd and 0.074 Sm, as well as 50 Cl. The pH of the solution was around 1.2. The rare earth values can be readily recovered from the leach liquor by the use of a solvent extraction circuit with 25% bis 2-ethylhexylŽ. phosphoric acid D2EHPA in kerosene, in which a two-stage counter-current extraction at an O:A Ž. ratio of 3:1 at an equilibrium pH of 2.0, a single-stage cobalt scrubbing with 0.3 M hydrochloric acid at an O:A ratio of 22:1, and a stripping operation with 2.0 M hydrochloric acid in one contact at an O:A ratio of 5:1 are involved. A mixed rare earth oxide of over 99% purity was obtained by selective precipitation with oxalic acid, and calcination of the precipitate. The total yield of rare earths approached 98%. The cobalt and nickel in the raffinate are effectively separated by selective extraction of cobalt with 25% TOA in kerosene after concentration up to ClŽ w yxf220 g y1 l. Nearly complete recovery of cobalt can be achieved by using a three-stage counter-current.",
+      "kind": "source_passage"
+    },
+    {
+      "id": "source-195049cfcd19",
+      "text": "Leach tests on cells were carried out using hydrochloric acid solution. In each test, 3.08 g of battery scrap which consisted of 1.25 g of the positive electrode materials and 1.83 g of the negative electrode materials were leached in 50 ml of HCl solutions of suitable concentrations in a 100-ml beaker under electromagnetic stirring, except for the tests on the effect of solid-to-liquid ratio on the leaching of metals. After leaching, the leach solution and insoluble residue were separated by filtration. The concentrations of each metal in the leach solutions were measured.",
+      "kind": "source_passage"
+    },
+    {
+      "id": "source-b4981f5fe053",
+      "text": "Table 3 gives the effect of hydrochloric acid concentration and of organic-to-aqueous ratio on the stripping of metal ions from the organic phase. It was found that the rare earths could be stripped readily using a hydrochloric acid solution of appropriate concentration ca. 1–3 M. The somewhat low recoveries of rare earths at low HClŽ. concentration or at high O:A ratio are due to the incomplete stripping of praseodymium and neodymium from the organic phase. As expected, these rare earths are extracted by D2EHPA more strongly than the lighter rare earths like lanthanum and cerium. Almost quantitative stripping could be accomplished with 2 M HCl solution in a single contact at an O:A ratio of 5:1, thereby giving rise to a strip liquor containing, in gl ^-1, 13.2: RE 0.27 Al, 1.13 Zn, 1.72 Mn, 0.016 Co and 0.02 Fe. Higher concentrations of rare earths could be obtained, if required, by use of a multi-stage counter-current stripping operation at a greater O:A ratio.",
+      "kind": "source_passage"
+    },
+    {
+      "id": "source-513ee040410d",
+      "text": "The nickel-metal hydride batteries were cut in half longitudinally to separate the metallic cases from the internal battery rolls which consisted of the positive and negative electrodes plus a nylon separator. The cells weighed an average of 24.8 g each and contained an AB5 - t y p e rare earth metal system negative electrode. The weight of theŽ. positive electrode in one cell was 7.27 g and that of the negative electrode was 10.57 g in which the alloy powder accounted for 87.6% and the metal-mesh 12.4%. The components of the active material on the positive electrode, the alloy powder and the metal-mesh on the negative electrode were determined separately by total dissolution with aqua regia.",
+      "kind": "source_passage"
+    },
+    {
+      "id": "source-513ee040410d",
+      "text": "The nickel-metal hydride batteries were cut in half longitudinally to separate the metallic cases from the internal battery rolls which consisted of the positive and negative electrodes plus a nylon separator. The cells weighed an average of 24.8 g each and contained an AB5 - t y p e rare earth metal system negative electrode. The weight of theŽ. positive electrode in one cell was 7.27 g and that of the negative electrode was 10.57 g in which the alloy powder accounted for 87.6% and the metal-mesh 12.4%. The components of the active material on the positive electrode, the alloy powder and the metal-mesh on the negative electrode were determined separately by total dissolution with aqua regia.",
+      "kind": "source_passage"
+    },
+    {
+      "id": "source-195049cfcd19",
+      "text": "Leach tests on cells were carried out using hydrochloric acid solution. In each test, 3.08 g of battery scrap which consisted of 1.25 g of the positive electrode materials and 1.83 g of the negative electrode materials were leached in 50 ml of HCl solutions of suitable concentrations in a 100-ml beaker under electromagnetic stirring, except for the tests on the effect of solid-to-liquid ratio on the leaching of metals. After leaching, the leach solution and insoluble residue were separated by filtration. The concentrations of each metal in the leach solutions were measured.",
+      "kind": "source_passage"
+    }
+  ],
+  "reviewed_source_quotes": true
+}

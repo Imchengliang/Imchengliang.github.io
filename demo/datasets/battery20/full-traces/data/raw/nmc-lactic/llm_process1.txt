@@ -1,0 +1,156 @@
+{
+  "process_stages": [
+    {
+      "name": "lactic acid leaching",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "The powder was leached with lactic acid and H2O2 to dissolve Ni, Co, Mn, and Li, and leaching efficiency was calculated."
+    },
+    {
+      "name": "sol-gel synthesis of R-NCM",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "The leachate was used to regenerate LiNi1/3Co1/3Mn1/3O2 (R-NCM) by sol-gel synthesis."
+    },
+    {
+      "name": "sol-gel synthesis of F-NCM",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": false,
+      "evidence_hint": "LiNi1/3Co1/3Mn1/3O2 (F-NCM) was synthesized by the same method using fresh stoichiometric acetates."
+    },
+    {
+      "name": "charge/discharge cycling",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": null,
+      "acts_on_weee": null,
+      "evidence_hint": "The rate capacities of the samples were investigated by charging the cells at 0.2 C and discharging them at various current rates (0.2−5 C)."
+    },
+    {
+      "name": "EIS",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": null,
+      "acts_on_weee": null,
+      "evidence_hint": "The electrochemical reactions of the samples were further investigated based on the charge/discharge profiles for different cycles and EIS tests (Figure 10e,f)."
+    },
+    {
+      "name": "XRD",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": null,
+      "acts_on_weee": null,
+      "evidence_hint": "The ratio of the intensities of the (003) and (104) peaks of R-NCM (I003 / I104 = 1.469) is greater than that of F-NCM (I003 / I104 = 1.415), indicating low cation mixing and good ordering of the transition metal ions."
+    }
+  ],
+  "experiment_settings": [
+    {
+      "name": "lactic acid leaching conditions",
+      "stage_name": "lactic acid leaching",
+      "sample": "cathode powder",
+      "sample_aliases": [],
+      "treatment": "lactic acid with H2O2",
+      "treatment_members": [
+        "lactic acid",
+        "H2O2"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "lactic acid concentration 0.25–2 mol/L; S/L ratio 10–40 g/L; temperature 40–90 °C; H2O2 0–3 vol%; reaction time 10–60 min; stirring at 300 rpm",
+      "evidence_hint": "The variables investigated were lactic acid concentration, S/L ratio, temperature, H2O2 volume percentage, and reaction time."
+    },
+    {
+      "name": "sol-gel synthesis of R-NCM conditions",
+      "stage_name": "sol-gel synthesis of R-NCM",
+      "sample": "leachate",
+      "sample_aliases": [],
+      "treatment": "sol-gel synthesis with chelating agent",
+      "treatment_members": [
+        "CH3COOLi·2H2O",
+        "(CH3COO)2Ni·4H2O",
+        "(CH3COO)2Co·4H2O",
+        "(CH3COO)2Mn·4H2O",
+        "NH3·H2O",
+        "lactic acid"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "molar ratio adjusted to 3.05:1:1:1; stirred at room temperature for 0.5 h; pH adjusted to 7 with NH3H2O; heated at 80 °C until transparent sol; dried at 100 °C for 24 h; heated at 450 °C for 5 h; ground for 0.5 h; calcined at 900 °C for 12 h in air",
+      "evidence_hint": "The leachate was used to regenerate R-NCM by adjusting molar ratios, gel formation, drying, and calcination."
+    },
+    {
+      "name": "sol-gel synthesis of F-NCM conditions",
+      "stage_name": "sol-gel synthesis of F-NCM",
+      "sample": "fresh precursor solution",
+      "sample_aliases": [],
+      "treatment": "sol-gel synthesis with chelating agent",
+      "treatment_members": [
+        "CH3COOLi·2H2O",
+        "(CH3COO)2Ni·4H2O",
+        "(CH3COO)2Co·4H2O",
+        "(CH3COO)2Mn·4H2O",
+        "lactic acid"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "same method as R-NCM synthesis",
+      "evidence_hint": "F-NCM was synthesized by the same method using stoichiometric amounts of fresh acetates."
+    }
+  ],
+  "process_targets": [
+    {
+      "name": "lactic acid leaching",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "The powder was leached with lactic acid and H2O2 to dissolve Ni, Co, Mn, and Li, and leaching efficiency was calculated."
+    },
+    {
+      "name": "sol-gel synthesis of R-NCM",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "The leachate was used to regenerate LiNi1/3Co1/3Mn1/3O2 (R-NCM) by sol-gel synthesis."
+    },
+    {
+      "name": "sol-gel synthesis of F-NCM",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": false,
+      "evidence_hint": "LiNi1/3Co1/3Mn1/3O2 (F-NCM) was synthesized by the same method using fresh stoichiometric acetates."
+    },
+    {
+      "name": "charge/discharge cycling",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": null,
+      "acts_on_weee": null,
+      "evidence_hint": "The rate capacities of the samples were investigated by charging the cells at 0.2 C and discharging them at various current rates (0.2−5 C)."
+    },
+    {
+      "name": "EIS",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": null,
+      "acts_on_weee": null,
+      "evidence_hint": "The electrochemical reactions of the samples were further investigated based on the charge/discharge profiles for different cycles and EIS tests (Figure 10e,f)."
+    },
+    {
+      "name": "XRD",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": null,
+      "acts_on_weee": null,
+      "evidence_hint": "The ratio of the intensities of the (003) and (104) peaks of R-NCM (I003 / I104 = 1.469) is greater than that of F-NCM (I003 / I104 = 1.415), indicating low cation mixing and good ordering of the transition metal ions."
+    }
+  ]
+}

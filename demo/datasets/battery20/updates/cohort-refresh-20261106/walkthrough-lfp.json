@@ -1,0 +1,80 @@
+{
+  "case": "lfp-ultrasound",
+  "title": "LFP cathode composition and ultrasonic reducing leaching",
+  "steps": [
+    {
+      "title": "Identify the measured cathode feed",
+      "question": "What does the composition table describe?",
+      "look": "The table reports ICP-OES mass fractions for prepared LFP cathode material.",
+      "boundary": "These are not whole-battery mass fractions.",
+      "stage": "gate",
+      "where": {
+        "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001"
+      }
+    },
+    {
+      "title": "Inspect the treatment method",
+      "question": "Which process treats the prepared cathode material?",
+      "look": "Sulfuric acid and glucose are used for reducing leaching, with conventional and ultrasonic conditions.",
+      "boundary": "Conditions distinguish observations within the reported method.",
+      "stage": "process",
+      "where": {
+        "name": "H2SO4 leaching with C6H12O6",
+        "phase": "Process discovery"
+      }
+    },
+    {
+      "title": "Read an elemental composition cell",
+      "question": "How much lithium was reported in this feed?",
+      "look": "The table reports Li at 4.36% by mass, alongside Fe, P and Al.",
+      "boundary": "Others is an aggregate, not an identified element.",
+      "stage": "table",
+      "where": {
+        "semantic_ir_and_verification.table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001"
+      }
+    },
+    {
+      "title": "Check the sample context",
+      "question": "What preparation defines this sample?",
+      "look": "Sample scope records cathode preparation, including the 450 °C, 2 h vacuum pyrolysis.",
+      "boundary": "Scope contextualizes the extracted sample; it does not create a recovery result.",
+      "stage": "scope",
+      "where": {
+        "scope_id": "scope-assertion:733ba36ad53963cb"
+      }
+    },
+    {
+      "title": "Check the method family",
+      "question": "How is the detailed method grouped?",
+      "look": "The leaching Process is grouped under acid leaching.",
+      "boundary": "A method family is a navigation category, not evidence that all its results are directly comparable.",
+      "stage": "scope",
+      "where": {
+        "method_family": "acid leaching"
+      }
+    },
+    {
+      "title": "Connect feedstock to treatment",
+      "question": "What is the direct treatment input?",
+      "look": "The prepared cathode material is connected to the leaching Process.",
+      "boundary": "A whole battery is not substituted for the experimentally prepared input.",
+      "stage": "final",
+      "where": {
+        "subject": "Component_cathode_material",
+        "predicate": "PROCESSED_BY",
+        "properties.condition": "ultrasonic-assisted conditions"
+      }
+    },
+    {
+      "title": "Inspect a measured output",
+      "question": "What result is associated with the reported ultrasonic conditions?",
+      "look": "Li and Fe leaching results retain their conditions. Kinetic activation energies are excluded from material outputs.",
+      "boundary": "Compare only observations with suitable sample and operating conditions.",
+      "stage": "final",
+      "where": {
+        "id": "REL_Process_H2SO4_leaching_with_C6H12O6_HAS_OUTPUT_Material_Li",
+        "properties.value": 96.53
+      }
+    }
+  ]
+}

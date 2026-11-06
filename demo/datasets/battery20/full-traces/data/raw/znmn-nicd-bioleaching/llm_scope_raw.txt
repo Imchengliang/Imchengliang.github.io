@@ -1,0 +1,409 @@
+{
+  "raw_response": {
+    "raw_response": "{\n  \"population_scopes\": [\n    {\n      \"root_entity_id\": \"Product_niger\",\n      \"granularity\": \"instance\",\n      \"sample_type\": \"fungal isolate\",\n      \"scope_summary\": \"Aspergillus niger KUC5254, one of six Aspergillus isolates obtained from the Korea University Culture collection (KUC).\",\n      \"evidence_ids\": [\"Ef00e8b87ef\", \"E0474dbdcf2\", \"E8f6be671ac\"]\n    },\n    {\n      \"root_entity_id\": \"Product_Zn_Mn_battery\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"Zn–Mn battery\",\n      \"scope_summary\": \"Spent Zn–Mn batteries supplied by the Korea Battery Recycling Association (Ansung, Korea).\",\n      \"evidence_ids\": [\"E8ab513378a\", \"Edca1c41182\"]\n    }\n  ],\n  \"process_scopes\": [\n    {\n      \"root_entity_id\": \"Process_Zn\",\n      \"method_family\": \"metal element analysis\",\n      \"evidence_ids\": [\"E1ce1aa04ed\"]\n    },\n    {\n      \"root_entity_id\": \"Process_Cd\",\n      \"method_family\": \"metal element analysis\",\n      \"evidence_ids\": [\"E2d3d407b95\"]\n    },\n    {\n      \"root_entity_id\": \"Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder\",\n      \"method_family\": \"bioleaching\",\n      \"evidence_ids\": [\"E5236a3d50e\"]\n    },\n    {\n      \"root_entity_id\": \"Process_Ni\",\n      \"method_family\": \"metal element analysis\",\n      \"evidence_ids\": [\"E6289e0cbbc\"]\n    },\n    {\n      \"root_entity_id\": \"Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder\",\n      \"method_family\": \"bioleaching\",\n      \"evidence_ids\": [\"E8bd7eaca90\"]\n    },\n    {\n      \"root_entity_id\": \"Process_Mn\",\n      \"method_family\": \"metal element analysis\",\n      \"evidence_ids\": [\"Eb7f2134e96\"]\n    },\n    {\n      \"root_entity_id\": \"Process_Co\",\n      \"method_family\": \"metal element analysis\",\n      \"evidence_ids\": [\"Ee8ea0600f8\"]\n    }\n  ]\n}",
+    "raw_payload": {
+      "population_scopes": [
+        {
+          "root_entity_id": "Product_niger",
+          "granularity": "instance",
+          "sample_type": "fungal isolate",
+          "scope_summary": "Aspergillus niger KUC5254, one of six Aspergillus isolates obtained from the Korea University Culture collection (KUC).",
+          "evidence_ids": [
+            "Ef00e8b87ef",
+            "E0474dbdcf2",
+            "E8f6be671ac"
+          ]
+        },
+        {
+          "root_entity_id": "Product_Zn_Mn_battery",
+          "granularity": "batch",
+          "sample_type": "Zn–Mn battery",
+          "scope_summary": "Spent Zn–Mn batteries supplied by the Korea Battery Recycling Association (Ansung, Korea).",
+          "evidence_ids": [
+            "E8ab513378a",
+            "Edca1c41182"
+          ]
+        }
+      ],
+      "process_scopes": [
+        {
+          "root_entity_id": "Process_Zn",
+          "method_family": "metal element analysis",
+          "evidence_ids": [
+            "E1ce1aa04ed"
+          ]
+        },
+        {
+          "root_entity_id": "Process_Cd",
+          "method_family": "metal element analysis",
+          "evidence_ids": [
+            "E2d3d407b95"
+          ]
+        },
+        {
+          "root_entity_id": "Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder",
+          "method_family": "bioleaching",
+          "evidence_ids": [
+            "E5236a3d50e"
+          ]
+        },
+        {
+          "root_entity_id": "Process_Ni",
+          "method_family": "metal element analysis",
+          "evidence_ids": [
+            "E6289e0cbbc"
+          ]
+        },
+        {
+          "root_entity_id": "Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder",
+          "method_family": "bioleaching",
+          "evidence_ids": [
+            "E8bd7eaca90"
+          ]
+        },
+        {
+          "root_entity_id": "Process_Mn",
+          "method_family": "metal element analysis",
+          "evidence_ids": [
+            "Eb7f2134e96"
+          ]
+        },
+        {
+          "root_entity_id": "Process_Co",
+          "method_family": "metal element analysis",
+          "evidence_ids": [
+            "Ee8ea0600f8"
+          ]
+        }
+      ]
+    },
+    "evidence_records": [
+      {
+        "id": "E0474dbdcf2",
+        "text": "Spores of the six different Aspergillus species were collected from 10-day-old cultures using a surfactant (0.02% Tween\u0003 80).",
+        "section_name": "2.1. Fungal isolates and organic acid production",
+        "current_study_signal": "high",
+        "entity_ids": [
+          "Product_niger"
+        ],
+        "entity_aliases": {
+          "Product_niger": [
+            "a",
+            "niger",
+            "a. niger kuc5254"
+          ]
+        },
+        "entity_types": {
+          "Product_niger": "Product"
+        },
+        "entity_names": {
+          "Product_niger": "niger"
+        },
+        "entity_sample_identifiers": {
+          "Product_niger": [
+            "a"
+          ]
+        }
+      },
+      {
+        "id": "E1ce1aa04ed",
+        "text": "From Zn–Mn batteries, residual Zn and Mn ions were analyzed using ICP-OES.",
+        "section_name": "2.2.3. Metal elements analysis",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_Zn"
+        ],
+        "entity_aliases": {
+          "Process_Zn": [
+            "zn"
+          ]
+        },
+        "entity_types": {
+          "Process_Zn": "Process"
+        },
+        "entity_names": {
+          "Process_Zn": "Zn"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_Zn": "From Zn–Mn batteries, residual Zn and Mn ions were analyzed using ICP-OES."
+        }
+      },
+      {
+        "id": "E2d3d407b95",
+        "text": "Analysis of residual Ni, Cd, Co and Zn ions for Ni–Cd batteries was also performed.",
+        "section_name": "2.2.3. Metal elements analysis",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_Cd"
+        ],
+        "entity_aliases": {
+          "Process_Cd": [
+            "cd"
+          ]
+        },
+        "entity_types": {
+          "Process_Cd": "Process"
+        },
+        "entity_names": {
+          "Process_Cd": "Cd"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_Cd": "Analysis of residual Ni, Cd, Co and Zn ions for Ni–Cd batteries was also performed."
+        }
+      },
+      {
+        "id": "E5236a3d50e",
+        "text": "Sterilized 0.1% w/v spent Ni-Cd battery powder was added to 100 mL of cell-free fermentation broth (from Aspergillus species precultured for 14 days in ME or sucrose media) in a 250 mL flask and incubated at 27 °C with rotary shaking at 150 rpm for 8 days; samples were taken every 2 days for pH and metal analysis.",
+        "section_name": "unknown",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder"
+        ],
+        "entity_aliases": {
+          "Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder": [
+            "bioleaching of metals from spent ni-cd battery powder"
+          ]
+        },
+        "entity_types": {
+          "Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder": "Process"
+        },
+        "entity_names": {
+          "Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder": "bioleaching of metals from spent Ni-Cd battery powder"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_bioleaching_of_metals_from_spent_Ni_Cd_battery_powder": "Sterilized 0.1% w/v spent Ni-Cd battery powder was added to 100 mL of cell-free fermentation broth (from Aspergillus species precultured for 14 days in ME or sucrose media) in a 250 mL flask and incubated at 27 °C with rotary shaking at 150 rpm for 8 days; samples were taken every 2 days for pH and metal analysis. Controls used ME and sucrose media without fungal inoculation."
+        }
+      },
+      {
+        "id": "E6289e0cbbc",
+        "text": "Analysis of residual Ni, Cd, Co and Zn ions for Ni–Cd batteries was also performed.",
+        "section_name": "2.2.3. Metal elements analysis",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_Ni"
+        ],
+        "entity_aliases": {
+          "Process_Ni": [
+            "ni"
+          ]
+        },
+        "entity_types": {
+          "Process_Ni": "Process"
+        },
+        "entity_names": {
+          "Process_Ni": "Ni"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_Ni": "Analysis of residual Ni, Cd, Co and Zn ions for Ni–Cd batteries was also performed."
+        }
+      },
+      {
+        "id": "E8ab513378a",
+        "text": "The spent Zn–Mn and Ni–Cd batteries were supplied by the Korea Battery Recycling Association (Ansung, Korea).",
+        "section_name": "2.2.1. Preparation of spent batteries",
+        "current_study_signal": "high",
+        "entity_ids": [
+          "Product_Zn_Mn_battery"
+        ],
+        "entity_aliases": {
+          "Product_Zn_Mn_battery": [
+            "spent zn–mn and ni–cd batteries",
+            "zn–mn battery",
+            "zn–mn batteries",
+            "ni–cd battery",
+            "ni–cd batteries",
+            "spent zn–mn battery",
+            "spent zn–mn batteries"
+          ]
+        },
+        "entity_types": {
+          "Product_Zn_Mn_battery": "Product"
+        },
+        "entity_names": {
+          "Product_Zn_Mn_battery": "Zn–Mn battery"
+        },
+        "entity_sample_identifiers": {}
+      },
+      {
+        "id": "E8bd7eaca90",
+        "text": "Sterilized 0.1% w/v spent Zn-Mn battery powder was added to 100 mL of cell-free fermentation broth (from Aspergillus species precultured for 14 days in ME or sucrose media) in a 250 mL flask and incubated at 27 °C with rotary shaking at 150 rpm for 8 days; samples were taken every 2 days for pH and metal analysis.",
+        "section_name": "unknown",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder"
+        ],
+        "entity_aliases": {
+          "Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder": [
+            "bioleaching of metals from spent zn-mn battery powder"
+          ]
+        },
+        "entity_types": {
+          "Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder": "Process"
+        },
+        "entity_names": {
+          "Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder": "bioleaching of metals from spent Zn-Mn battery powder"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_bioleaching_of_metals_from_spent_Zn_Mn_battery_powder": "Sterilized 0.1% w/v spent Zn-Mn battery powder was added to 100 mL of cell-free fermentation broth (from Aspergillus species precultured for 14 days in ME or sucrose media) in a 250 mL flask and incubated at 27 °C with rotary shaking at 150 rpm for 8 days; samples were taken every 2 days for pH and metal analysis. Controls used ME and sucrose media without fungal inoculation."
+        }
+      },
+      {
+        "id": "E8f6be671ac",
+        "text": "After six days, the highest concentration of soluble Zn was obtained from A. niger KUC5254 in the ME medium (96% Zn removal), which had the lowest oxalic acid content (4.4 mM).",
+        "section_name": "3.2.1. Zn–Mn battery",
+        "current_study_signal": "high",
+        "entity_ids": [
+          "Product_niger"
+        ],
+        "entity_aliases": {
+          "Product_niger": [
+            "a",
+            "niger",
+            "a. niger kuc5254"
+          ]
+        },
+        "entity_types": {
+          "Product_niger": "Product"
+        },
+        "entity_names": {
+          "Product_niger": "niger"
+        },
+        "entity_sample_identifiers": {
+          "Product_niger": [
+            "a"
+          ]
+        }
+      },
+      {
+        "id": "Eb7f2134e96",
+        "text": "From Zn–Mn batteries, residual Zn and Mn ions were analyzed using ICP-OES.",
+        "section_name": "2.2.3. Metal elements analysis",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_Mn"
+        ],
+        "entity_aliases": {
+          "Process_Mn": [
+            "mn"
+          ]
+        },
+        "entity_types": {
+          "Process_Mn": "Process"
+        },
+        "entity_names": {
+          "Process_Mn": "Mn"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_Mn": "From Zn–Mn batteries, residual Zn and Mn ions were analyzed using ICP-OES."
+        }
+      },
+      {
+        "id": "Edca1c41182",
+        "text": "Similar results were obtained for Zn–Mn batteries.",
+        "section_name": "3.2.2. Ni–Cd battery",
+        "current_study_signal": "high",
+        "entity_ids": [
+          "Product_Zn_Mn_battery"
+        ],
+        "entity_aliases": {
+          "Product_Zn_Mn_battery": [
+            "spent zn–mn and ni–cd batteries",
+            "zn–mn battery",
+            "zn–mn batteries",
+            "ni–cd battery",
+            "ni–cd batteries",
+            "spent zn–mn battery",
+            "spent zn–mn batteries"
+          ]
+        },
+        "entity_types": {
+          "Product_Zn_Mn_battery": "Product"
+        },
+        "entity_names": {
+          "Product_Zn_Mn_battery": "Zn–Mn battery"
+        },
+        "entity_sample_identifiers": {}
+      },
+      {
+        "id": "Ee8ea0600f8",
+        "text": "Analysis of residual Ni, Cd, Co and Zn ions for Ni–Cd batteries was also performed.",
+        "section_name": "2.2.3. Metal elements analysis",
+        "current_study_signal": "process_registry",
+        "entity_ids": [
+          "Process_Co"
+        ],
+        "entity_aliases": {
+          "Process_Co": [
+            "co"
+          ]
+        },
+        "entity_types": {
+          "Process_Co": "Process"
+        },
+        "entity_names": {
+          "Process_Co": "Co"
+        },
+        "entity_sample_identifiers": {},
+        "entity_provenance": {
+          "Process_Co": "Analysis of residual Ni, Cd, Co and Zn ions for Ni–Cd batteries was also performed."
+        }
+      },
+      {
+        "id": "Ef00e8b87ef",
+        "text": "A total of six isolates of Aspergillus species, A. fumigatus KUC1520, A. flavipes KUC5033, A.japonicus KUC5035, A. tubingensis KUC5037, A. versicolor KUC5201, and A. niger KUC5254, were obtained from the Korea University Culture collection (KUC).",
+        "section_name": "2.1. Fungal isolates and organic acid production",
+        "current_study_signal": "high",
+        "entity_ids": [
+          "Product_niger"
+        ],
+        "entity_aliases": {
+          "Product_niger": [
+            "a",
+            "niger",
+            "a. niger kuc5254"
+          ]
+        },
+        "entity_types": {
+          "Product_niger": "Product"
+        },
+        "entity_names": {
+          "Product_niger": "niger"
+        },
+        "entity_sample_identifiers": {
+          "Product_niger": [
+            "a"
+          ]
+        }
+      }
+    ]
+  },
+  "evidence_records": [
+    {
+      "id": "source-ce0725a9acee",
+      "text": "The spent Zn–Mn and Ni–Cd batteries were supplied by the Korea Battery Recycling Association (Ansung, Korea).",
+      "kind": "source_passage"
+    },
+    {
+      "id": "source-5dd5ba862745",
+      "text": "Bioleaching of metals from spent batteries was performed using a modified method described by Kartal et al. (2004). In this study, sterilized 0.1% w/v spent battery powder was placed in a 250 mL flask containing 100 mL of fermentation broth obtained by preculturing each strain for 14 days in ME and sucrose media as described in Section 2.1. Fungal mycelia were removed from the fermentation broth prior to placing the powder into the culture solution. The flasks were incubated at 27 ^∘𝖢 for 8 days with rotary shaking (150 rpm). Samples were then harvested every 2 days for measuring pH and percent of metal. ME and sucrose media without fungal inoculation were served as controls.",
+      "kind": "source_passage"
+    },
+    {
+      "id": "source-5dd5ba862745",
+      "text": "Bioleaching of metals from spent batteries was performed using a modified method described by Kartal et al. (2004). In this study, sterilized 0.1% w/v spent battery powder was placed in a 250 mL flask containing 100 mL of fermentation broth obtained by preculturing each strain for 14 days in ME and sucrose media as described in Section 2.1. Fungal mycelia were removed from the fermentation broth prior to placing the powder into the culture solution. The flasks were incubated at 27 ^∘𝖢 for 8 days with rotary shaking (150 rpm). Samples were then harvested every 2 days for measuring pH and percent of metal. ME and sucrose media without fungal inoculation were served as controls.",
+      "kind": "source_passage"
+    },
+    {
+      "id": "source-92e98bf7061a",
+      "text": "The percentage of metal removal from spent Ni–Cd batteries using ME and sucrose media is represented in Figs. 3 and 4. Ni–Cd batteries contain Ni, Cd, Co and Zn. In ME media, the bioleaching efficiency for all metals appeared to be very low for all Aspergillus species. Although A. niger KUC5254 was the best at metal removal, it only extracted 32, 33, 13 and 1% of Ni, Cd, Co and Zn, respectively. Similar results were obtained for Zn–Mn batteries. It seemed that larger quantities of oxalic acid inhibited the dissolution of metals due to a precipitation reaction between Ni, Cd, Co, Zn, and oxalic acid (Biswas et al. 2013). Consequently, A. niger KUC5254, which showed the lowest oxalic acid production (4.4 mM), produced the highest percentage of metal removal.",
+      "kind": "source_passage"
+    }
+  ],
+  "reviewed_source_quotes": true
+}

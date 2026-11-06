@@ -1,0 +1,681 @@
+[
+  {
+    "chunk_id": "Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching__table__TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+    "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+    "result": {
+      "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+      "entity_count": 6,
+      "relation_count": 5,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "entities": [
+        {
+          "id": "table_ir_ent_001",
+          "name": "cathode material",
+          "mention_text": "cathode material",
+          "type": "Component",
+          "source": "table:TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+          "synonyms": [
+            "cathode material",
+            "cathode",
+            "cathode materials"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "literal",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_002",
+          "name": "Lithium",
+          "mention_text": "Li",
+          "type": "Material",
+          "source": "table:TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+          "synonyms": [
+            "Li"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_003",
+          "name": "Iron",
+          "mention_text": "Fe",
+          "type": "Material",
+          "source": "table:TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+          "synonyms": [
+            "Fe"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 2
+          }
+        },
+        {
+          "id": "table_ir_ent_004",
+          "name": "Phosphorus",
+          "mention_text": "P",
+          "type": "Material",
+          "source": "table:TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+          "synonyms": [
+            "P"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 3
+          }
+        },
+        {
+          "id": "table_ir_ent_005",
+          "name": "Aluminum",
+          "mention_text": "Al",
+          "type": "Material",
+          "source": "table:TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+          "synonyms": [
+            "Al"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 4
+          }
+        },
+        {
+          "id": "table_ir_ent_006",
+          "name": "Others",
+          "mention_text": "Others",
+          "type": "Material",
+          "source": "table:TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 5
+          }
+        }
+      ],
+      "relations": [
+        {
+          "id": "table_ir_rel_001",
+          "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+          "table_title": "Table 1. ICP-OES analysis of cathode materials of spent LFP batteries (%mass fraction).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "cathode material",
+          "target_id": "table_ir_ent_002",
+          "target_name": "Lithium",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001 row 1, column 1 (Li): 4.36",
+          "attributes": {
+            "property": "mass fraction",
+            "template_id": "step_1",
+            "unit": "percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+            "row_idx": 1,
+            "col_idx": 1,
+            "row_label": "Contents",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Li",
+            "column_descriptor": {
+              "id": "c1",
+              "index": 1,
+              "flat_label": "Li",
+              "header_path": [
+                "Li"
+              ],
+              "header_leaf": "Li",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Li",
+                  "header_row": 0,
+                  "column": 1
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Li",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001 row 1, column 1 (Li): 4.36",
+            "value": "4.36",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "4.36",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                1,
+                1
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "source_sample": "cathode material of spent LFP batteries",
+            "sample_state": "cathode material of spent LFP batteries",
+            "endpoint_rebinding": "verified_table_container"
+          }
+        },
+        {
+          "id": "table_ir_rel_002",
+          "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+          "table_title": "Table 1. ICP-OES analysis of cathode materials of spent LFP batteries (%mass fraction).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "cathode material",
+          "target_id": "table_ir_ent_003",
+          "target_name": "Iron",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001 row 1, column 2 (Fe): 33.27",
+          "attributes": {
+            "property": "mass fraction",
+            "template_id": "step_1",
+            "unit": "percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+            "row_idx": 1,
+            "col_idx": 2,
+            "row_label": "Contents",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Fe",
+            "column_descriptor": {
+              "id": "c2",
+              "index": 2,
+              "flat_label": "Fe",
+              "header_path": [
+                "Fe"
+              ],
+              "header_leaf": "Fe",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Fe",
+                  "header_row": 0,
+                  "column": 2
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Fe",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001 row 1, column 2 (Fe): 33.27",
+            "value": "33.27",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "33.27",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                2,
+                2
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "source_sample": "cathode material of spent LFP batteries",
+            "sample_state": "cathode material of spent LFP batteries",
+            "endpoint_rebinding": "verified_table_container"
+          }
+        },
+        {
+          "id": "table_ir_rel_003",
+          "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+          "table_title": "Table 1. ICP-OES analysis of cathode materials of spent LFP batteries (%mass fraction).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "cathode material",
+          "target_id": "table_ir_ent_004",
+          "target_name": "Phosphorus",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001 row 1, column 3 (P): 18.45",
+          "attributes": {
+            "property": "mass fraction",
+            "template_id": "step_1",
+            "unit": "percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+            "row_idx": 1,
+            "col_idx": 3,
+            "row_label": "Contents",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "P",
+            "column_descriptor": {
+              "id": "c3",
+              "index": 3,
+              "flat_label": "P",
+              "header_path": [
+                "P"
+              ],
+              "header_leaf": "P",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "P",
+                  "header_row": 0,
+                  "column": 3
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "P",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001 row 1, column 3 (P): 18.45",
+            "value": "18.45",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "18.45",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                3,
+                3
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "source_sample": "cathode material of spent LFP batteries",
+            "sample_state": "cathode material of spent LFP batteries",
+            "endpoint_rebinding": "verified_table_container"
+          }
+        },
+        {
+          "id": "table_ir_rel_004",
+          "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+          "table_title": "Table 1. ICP-OES analysis of cathode materials of spent LFP batteries (%mass fraction).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "cathode material",
+          "target_id": "table_ir_ent_005",
+          "target_name": "Aluminum",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001 row 1, column 4 (Al): 0.067",
+          "attributes": {
+            "property": "mass fraction",
+            "template_id": "step_1",
+            "unit": "percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+            "row_idx": 1,
+            "col_idx": 4,
+            "row_label": "Contents",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Al",
+            "column_descriptor": {
+              "id": "c4",
+              "index": 4,
+              "flat_label": "Al",
+              "header_path": [
+                "Al"
+              ],
+              "header_leaf": "Al",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Al",
+                  "header_row": 0,
+                  "column": 4
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Al",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001 row 1, column 4 (Al): 0.067",
+            "value": "0.067",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "0.067",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                4,
+                4
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "source_sample": "cathode material of spent LFP batteries",
+            "sample_state": "cathode material of spent LFP batteries",
+            "endpoint_rebinding": "verified_table_container"
+          }
+        },
+        {
+          "id": "table_ir_rel_005",
+          "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+          "table_title": "Table 1. ICP-OES analysis of cathode materials of spent LFP batteries (%mass fraction).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "cathode material",
+          "target_id": "table_ir_ent_006",
+          "target_name": "Others",
+          "relation_type": "CONTAINS",
+          "evidence_span": "Table TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001 row 1, column 5 (Others): 43.853",
+          "attributes": {
+            "property": "mass fraction",
+            "template_id": "step_1",
+            "unit": "percent",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+            "row_idx": 1,
+            "col_idx": 5,
+            "row_label": "Contents",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Others",
+            "column_descriptor": {
+              "id": "c5",
+              "index": 5,
+              "flat_label": "Others",
+              "header_path": [
+                "Others"
+              ],
+              "header_leaf": "Others",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Others",
+                  "header_row": 0,
+                  "column": 5
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Others",
+                "entity_type": "Material"
+              }
+            },
+            "evidence_span": "Table TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001 row 1, column 5 (Others): 43.853",
+            "value": "43.853",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "43.853",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                5,
+                5
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            },
+            "source_sample": "cathode material of spent LFP batteries",
+            "sample_state": "cathode material of spent LFP batteries",
+            "endpoint_rebinding": "verified_table_container"
+          }
+        }
+      ],
+      "conditions": [],
+      "context_records": [],
+      "table_structure": {
+        "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+        "extraction_mode": "semantic_ir",
+        "table_role": "target_composition",
+        "extractability": {
+          "decision": "extract",
+          "table_role": "target_composition",
+          "reason": "Table reports elemental mass fractions of spent LFP battery cathode material, a WEEE-derived target composition.",
+          "confidence": 0.95,
+          "gate_decision": "extract",
+          "gate_table_role": "target_composition"
+        },
+        "layout": null
+      },
+      "source_table": {
+        "table_id": "TABLE_Recycling of Spent LiFePO 4 Batteries Using Ultrasonic-Assisted Reducing Leaching_0001",
+        "page_number": 5,
+        "caption": "Table 1. ICP-OES analysis of cathode materials of spent LFP batteries (%mass fraction).",
+        "section": "3.1. Conventional Reducing Acid Leaching",
+        "explicit_references": [
+          "Based on the elemental composition in Table 1 and the experimental conditions (L / S = 10 m L / g, solution volume = 45 mL), the molar ratio of glucose to Fe at 2 mol/L is approximately 3.4:1, confirming that glucose is present in significant excess relative to the iron content."
+        ],
+        "headers": [
+          "Composition",
+          "Li",
+          "Fe",
+          "P",
+          "Al",
+          "Others"
+        ],
+        "header_rows": [
+          [
+            "Composition",
+            "Li",
+            "Fe",
+            "P",
+            "Al",
+            "Others"
+          ]
+        ],
+        "column_descriptors": [
+          {
+            "id": "c0",
+            "index": 0,
+            "flat_label": "Composition",
+            "header_path": [
+              "Composition"
+            ],
+            "header_leaf": "Composition",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Composition",
+                "header_row": 0,
+                "column": 0
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c1",
+            "index": 1,
+            "flat_label": "Li",
+            "header_path": [
+              "Li"
+            ],
+            "header_leaf": "Li",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Li",
+                "header_row": 0,
+                "column": 1
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c2",
+            "index": 2,
+            "flat_label": "Fe",
+            "header_path": [
+              "Fe"
+            ],
+            "header_leaf": "Fe",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Fe",
+                "header_row": 0,
+                "column": 2
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c3",
+            "index": 3,
+            "flat_label": "P",
+            "header_path": [
+              "P"
+            ],
+            "header_leaf": "P",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "P",
+                "header_row": 0,
+                "column": 3
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c4",
+            "index": 4,
+            "flat_label": "Al",
+            "header_path": [
+              "Al"
+            ],
+            "header_leaf": "Al",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Al",
+                "header_row": 0,
+                "column": 4
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c5",
+            "index": 5,
+            "flat_label": "Others",
+            "header_path": [
+              "Others"
+            ],
+            "header_leaf": "Others",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Others",
+                "header_row": 0,
+                "column": 5
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          }
+        ],
+        "unit_scope_candidates": [],
+        "rows": [
+          [
+            "Contents",
+            "4.36",
+            "33.27",
+            "18.45",
+            "0.067",
+            "43.853"
+          ]
+        ],
+        "row_contexts": [],
+        "span_map": {},
+        "notes": [],
+        "raw_markdown": "| Composition | Li | Fe | P | Al | Others |\n| --- | --- | --- | --- | --- | --- |\n| Contents | 4.36 | 33.27 | 18.45 | 0.067 | 43.853 |",
+        "position_start": 16514,
+        "position_end": 16614,
+        "source": "mineru_content_list",
+        "source_kind": "standalone_table",
+        "layout_context": {
+          "previous_block_type": "text",
+          "next_block_type": "text",
+          "between_image_blocks": false
+        },
+        "raw_html": "<table><tr><td>Composition</td><td>Li</td><td>Fe</td><td>P</td><td>Al</td><td>Others</td></tr><tr><td>Contents</td><td>4.36</td><td>33.27</td><td>18.45</td><td>0.067</td><td>43.853</td></tr></table>",
+        "image_path": "images/c2d00569f52ee0dc105fb8adeda31962e858dfa3592a7ad352e02cb146bfcb74.jpg",
+        "bbox": [
+          275,
+          351,
+          939,
+          393
+        ],
+        "metadata": {
+          "table_reference_sentences": [
+            "Based on the elemental composition in Table 1 and the experimental conditions (L / S = 10 m L / g, solution volume = 45 mL), the molar ratio of glucose to Fe at 2 mol/L is approximately 3.4:1, confirming that glucose is present in significant excess relative to the iron content."
+          ]
+        },
+        "table_reference_sentences": [
+          "Based on the elemental composition in Table 1 and the experimental conditions (L / S = 10 m L / g, solution volume = 45 mL), the molar ratio of glucose to Fe at 2 mol/L is approximately 3.4:1, confirming that glucose is present in significant excess relative to the iron content."
+        ]
+      }
+    }
+  }
+]

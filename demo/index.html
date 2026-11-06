@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OntoWEEE</title><link rel="stylesheet" href="style.css?v=record-hierarchy"><link rel="stylesheet" href="redesign.css?v=process-details-20261103"><link rel="stylesheet" href="battery-overview.css?v=battery-browser-20261106"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <title>OntoWEEE</title><link rel="stylesheet" href="style.css?v=record-hierarchy"><link rel="stylesheet" href="redesign.css?v=process-details-20261103"><link rel="stylesheet" href="battery-overview.css?v=comparison-20261106"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
 </head>
-<body data-overview="datasets/battery20/overview/data.json" data-graph="datasets/battery20/full-traces/data/graph.json" data-papers="datasets/battery20/papers.json">
+<body data-overview="datasets/battery20/overview/data.json?v=e16644c5bd35" data-graph="datasets/battery20/full-traces/data/graph.json?v=e16644c5bd35" data-papers="datasets/battery20/papers.json?v=e16644c5bd35">
   <header>
     <a class="brand" href="index.html"><span class="brand-mark">O<span>•</span></span><span>OntoWEEE</span></a>
     <nav aria-label="Main views"><button class="tab active" data-view="overview">Battery overview</button><button class="tab" data-view="fusion">Knowledge graph</button><button class="tab" data-view="replay">Extraction trace</button><button class="tab" data-view="papers">Paper</button><button class="tab" data-view="about">About</button></nav>
@@ -24,20 +24,16 @@
       <section id="case-controls" class="walkthrough-entry" aria-label="Paper case studies" hidden>
         <div class="eyebrow">PAPER EXTRACTION TRACES</div>
         <label for="case-select">Paper case study</label>
-        <select id="case-select" disabled><option value="phones" data-guide="walkthrough.json" data-summary="Comprehensive phones · 8 steps">Comprehensive phones</option><option value="smartphones" data-guide="walkthrough-smartphones.json" data-summary="Smartphone Assessment · 8 steps">Smartphone Assessment</option><option value="battery-bioleaching" data-guide="walkthrough-bioleaching.json" data-summary="Battery bioleaching · 10 steps">Battery bioleaching</option><option value="pcb-bioleaching" data-guide="walkthrough-pcb-bioleaching.json" data-summary="PCB / goldfinger bioleaching · 10 steps">PCB / goldfinger bioleaching</option><option value="pcb-content" data-guide="walkthrough-content.json" data-summary="Content Evaluation · 10 steps">Content Evaluation</option><option value="flotation" data-guide="walkthrough-flotation.json" data-summary="Flotation failure · 9 steps">Flotation failure</option></select>
-        <p id="walkthrough-summary">Comprehensive phones · 8 steps</p>
-        <div class="case-actions"><button id="case-browse" disabled>Browse freely</button><button id="walkthrough-start" disabled>Start walkthrough</button></div>
-        <p id="walkthrough-result" role="status" hidden></p>
+        <select id="case-select" disabled></select>
         <div id="case-summary"></div><button id="case-on-graph" hidden>Locate paper in fused graph</button>
       </section>
       <div class="legend" id="legend"></div>
       <footer><a id="snapshot-manifest" href="datasets/battery20/full-traces/data/manifest.json" target="_blank" rel="noopener">Snapshot manifest ↗</a><span id="snapshot-counts">20 papers · 12 catalog records</span></footer>
     </aside>
     <main>
-      <section id="walkthrough-panel" class="walkthrough-panel" aria-label="Current walkthrough step" hidden></section>
       <section id="overview-view" class="view" aria-label="Battery feedstock overview"><div id="battery-overview">Loading reviewed feedstocks…</div></section>
       <section id="fusion-view" class="view" hidden>
-        <div class="view-header"><div><div class="eyebrow">01 / KNOWLEDGE GRAPH</div><h2>Fused graph</h2></div><button id="walkthrough-return" hidden>← Return to walkthrough step</button><span id="visible-stats" class="muted"></span></div>
+        <div class="view-header"><div><div class="eyebrow">01 / KNOWLEDGE GRAPH</div><h2>Fused graph</h2></div><span id="visible-stats" class="muted"></span></div>
         <div class="graph-layout">
           <div class="graph-pane"><div class="graph-navigation"><button id="graph-back" disabled>← Back</button><nav id="graph-path" aria-label="Graph location"></nav></div><canvas id="graph" tabindex="0" aria-label="Fused graph: drag a node to move it and its attached edges; drag empty space to pan; scroll to zoom; click to inspect. Entity search is also available in the sidebar."></canvas><div class="graph-tools"><button id="zoom-in" aria-label="Zoom in">＋</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit">Fit view</button><button id="clear-focus">Clear focus</button></div><div class="graph-legend" aria-label="Graph legend"><span><i class="lg-circle"></i>Paper-derived entity</span><span><i class="lg-square"></i>Catalog record</span><span><i class="lg-line"></i>Extracted relation</span><span><i class="lg-dash"></i>Cross-source fusion link</span><span><i class="lg-group">n</i>Display group (not an entity)</span></div><div id="graph-caption" class="graph-caption"></div><div id="graph-tooltip" role="tooltip" hidden></div><div class="graph-hint">Drag a node to move it · Drag empty space to pan · Scroll to zoom · Double-click to expand</div></div>
           <aside id="inspector" class="inspector" aria-label="Entity and relation details"></aside>
@@ -123,6 +119,6 @@
       <div id="status" role="status">Loading frozen graph…</div>
     </main>
   </div>
-  <script src="hierarchy.js?v=component-name-groups-20261101"></script><script src="replay.js?v=scope-refresh-20261102"></script><script src="trace.js?v=multi-quote-anchors"></script><script src="walkthrough.js?v=about-20261103"></script><script src="battery-overview.js?v=battery-browser-20261106"></script><script src="battery-static.js?v=battery-browser-20261106"></script><script src="app.js?v=battery-browser-20261106"></script>
+  <script src="hierarchy.js?v=component-name-groups-20261101"></script><script src="replay.js?v=scope-refresh-20261102"></script><script src="trace.js?v=multi-quote-anchors"></script><script src="walkthrough.js?v=about-20261103"></script><script src="battery-overview.js?v=comparison-20261106"></script><script src="battery-static.js?v=comparison-20261106"></script><script src="app.js?v=free-browse-20261106"></script>
 </body>
 </html>

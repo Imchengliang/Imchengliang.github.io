@@ -21,6 +21,7 @@ const BatteryOverview = (() => {
     const profiles = new Map(data.profiles.filter(profile =>
       (!filters.stream || profile.stream === filters.stream) &&
       (!filters.chemistry || profile.chemistry === filters.chemistry) &&
+      (!filters.material_class || profile.material_class === filters.material_class) &&
       (!filters.origin || profile.origin === filters.origin)
     ).map(profile => [profile.id, profile]));
     const methods = new Map(data.methods.filter(method => profiles.has(method.profile_id) &&
@@ -84,6 +85,7 @@ const BatteryOverview = (() => {
       : resultLimits ? 'performance' : reagent ? 'without'
       : mode === 'summary' || filters.time_condition || filters.concentration_condition ? 'compare' : 'routes';
     return {template, stream: filters.stream, chemistry: filters.chemistry, origin: filters.origin,
+      material_class: filters.material_class || '',
       target: filters.target, method: composition ? '' : filters.method,
       min_content: limit('min_content') ?? 0, min_result: limit('min_result') ?? 0,
       max_temperature: composition ? null : limit('max_temperature'),
@@ -96,11 +98,12 @@ const BatteryOverview = (() => {
   function mount(container, data, actions) {
     const profiles = new Map(data.profiles.map(profile => [profile.id, profile]));
     const methods = new Map(data.methods.map(method => [method.id, method]));
-    const defaults = {stream: '', target: '', chemistry: '', origin: '', method: '', min_content: '', min_result: '',
-      max_temperature: '', reagent: '', time_condition: '', concentration_condition: '', summary_level: 'sample', summary_basis: 'record'};
+    const defaults = {stream: '', target: '', chemistry: '', origin: '', material_class: '', method: '', min_content: '', min_result: '',
+      max_temperature: '', reagent: '', time_condition: '', concentration_condition: '', summary_level: 'context', summary_basis: 'study'};
     const controls = {...defaults};
     let workspace = 'composition', mode = 'records', advanced = false;
     const options = (values, title) => `<option value="">${escape(title)}</option>` + values.map(([value, label]) => `<option value="${escape(value)}">${escape(label)}</option>`).join('');
+    const available = (labels, field) => Object.entries(labels).filter(([value]) => data.profiles.some(profile => profile[field] === value));
     const field = (name, label, content, scope = '') => `<label${scope ? ` data-workspace="${scope}"` : ''}>${escape(label)}${content.replace('<select', `<select name="${name}"`).replace('<input', `<input name="${name}"`)}</label>`;
     const number = '<input type="number" min="0" max="100" step="0.1" placeholder="Any">';
     container.innerHTML = `
@@ -110,13 +113,14 @@ const BatteryOverview = (() => {
       <div class="battery-switch" aria-label="Workspace"><button type="button" data-workspace-tab="composition">Composition</button><button type="button" data-workspace-tab="treatments">Treatment routes</button></div>
       <form class="battery-query-form">
       <div class="battery-primary-filters">
-      ${field('stream', 'Feedstock', `<select>${options(Object.entries(data.streams), 'All feedstocks')}</select>`)}
+      ${field('stream', 'Feedstock', `<select>${options(available(data.streams, 'stream'), 'All feedstocks')}</select>`)}
       ${field('target', 'Target', '<select></select>')}
       <button type="button" class="battery-more" aria-expanded="false" aria-controls="battery-advanced">More filters</button>
       <button type="button" class="battery-reset">Reset</button></div>
       <div class="battery-advanced" id="battery-advanced" hidden>
-      ${field('chemistry', 'Battery chemistry', `<select>${options(Object.entries(data.chemistries), 'All chemistries')}</select>`)}
-      ${field('origin', 'Feedstock source', `<select>${options(Object.entries(data.origins), 'All sources')}</select>`)}
+      ${field('chemistry', 'Battery chemistry', `<select>${options(available(data.chemistries, 'chemistry'), 'All chemistries')}</select>`)}
+      ${field('material_class', 'Measured material', `<select>${options(available(data.material_classes, 'material_class'), 'All material forms')}</select>`)}
+      ${field('origin', 'Feedstock source', `<select>${options(available(data.origins, 'origin'), 'All sources')}</select>`)}
       ${field('min_content', 'Minimum content (wt%)', number, 'composition')}
       ${field('method', 'Treatment family', `<select>${options(unique(data.methods.map(method => method.family)).sort().map(family => [family, family]), 'All treatments')}</select>`, 'treatments')}
       ${field('min_result', 'Minimum recovery / extraction (%)', number, 'treatments')}
@@ -124,13 +128,9 @@ const BatteryOverview = (() => {
       ${['time', 'concentration'].map(key => field(key + '_condition', 'Reported ' + key + ' condition', `<select>${options(unique(data.results.flatMap(row => row[key + '_conditions'] || [])).sort().map(value => [value, value]), 'Any reported condition')}</select>`, 'treatments')).join('')}
       ${field('reagent', 'Reagent explicitly absent', '<input type="text" placeholder="e.g. H2O2" maxlength="60">', 'treatments')}
       </div><p class="battery-active-filters" hidden></p>
-      <details class="battery-summary-settings" hidden><summary>Summary settings</summary><div>
-      ${field('summary_level', 'Group records by', '<select><option value="sample">Same sample and measurement context</option><option value="context">Broader descriptive comparison</option></select>')}
-      ${field('summary_basis', 'Statistical unit', '<select><option value="record">Reported measurements</option><option value="study">One mean per study (equal weights)</option></select>')}
-      </div><p>Broader comparisons retain separate chemistry, target and measurement groups. Differences in preparation and conditions still need review.</p></details>
       </form></section>
       <section class="battery-results" aria-live="polite"><div class="battery-results-heading"><div><h3></h3><span class="battery-result-count"></span></div>
-      <div class="battery-switch" aria-label="Result view"><button type="button" data-mode="records">Records</button><button type="button" data-mode="summary">Statistical summary</button></div></div>
+      <div class="battery-switch" aria-label="Result view"><button type="button" data-mode="records">Records</button><button type="button" data-mode="summary">Compare & summarize</button></div></div>
       <p class="battery-results-note"></p><div class="battery-table"></div></section>
       <details class="battery-audit"><summary>Dataset coverage and source review</summary><p>${data.audit.length} studies · ${data.profiles.length} sample groups. Elemental mass-composition data from ${unique(data.compositions.map(row => row.paper)).length} studies. Sample groups retain their reviewed chemistry, preparation state and assay identities.</p>
       <div class="battery-audit-table"></div><p><a href="datasets/battery20/overview/review.json" target="_blank" rel="noopener">Reviewed sample classifications</a></p></details>`;
@@ -141,7 +141,7 @@ const BatteryOverview = (() => {
       return `<div class="battery-row-actions"><button type="button" data-action="graph" data-row="${escape(row.id)}">Graph</button><button type="button" data-action="source" data-row="${escape(row.id)}">Source</button></div>`;
     }
     function contributingRecords(summary, records) {
-      return `<details><summary>Records used (${summary.records})</summary>${summary.record_ids.map(id => {
+      return `<details><summary>Records used (${summary.record_ids.length})</summary>${summary.record_ids.map(id => {
         const row = records.get(id);
         return `<p>${escape(row.value)} ${escape(row.display_unit || row.unit)} · ${escape(row.paper)}</p><small>${escape(row.condition || row.assay || '')}</small>${actionButtons(row)}`;
       }).join('')}</details>`;
@@ -152,6 +152,27 @@ const BatteryOverview = (() => {
     }
     function paperCell(row) {
       return `<span class="battery-paper" title="${escape(row.paper)}">${escape(row.paper)}</span>${actionButtons(row)}`;
+    }
+    function comparisonRows(summary, contributing, composition) {
+      const unit = escape(summary.unit);
+      const statistics = summary.syntheses.length
+        ? summary.syntheses.map(synthesis => `<p>${count(synthesis.studies, 'study', 'studies')} · ${count(synthesis.sample_groups, 'sample group')}<br>Mean ${format(synthesis.mean)} ${unit} · Median ${format(synthesis.median)} ${unit}<br>SD ${format(synthesis.sd)} ${unit} (spread of publication-level means)</p>${contributingRecords(synthesis, contributing)}`).join('')
+        : `<p>${summary.pooling_issues.map(escape).join('. ')}.</p>`;
+      const heading = `<tr class="battery-comparison-group"><td colspan="4"><strong>${escape(data.chemistries[summary.chemistry])} · ${escape(summary.target)}</strong>
+        <small>${escape(summary.metric)}${summary.family ? ' · ' + escape(summary.family) : ''} · ${count(summary.studies, 'study', 'studies')} · ${count(summary.sample_groups, 'sample group')}${summary.records > 1 ? ' · Observed range ' + rangeText(summary) : ''}</small>
+        <details><summary>${summary.syntheses.length ? 'Comparable-study statistics' : 'Why values remain separate'}</summary>${statistics}</details></td></tr>`;
+      return [heading, ...summary.entries.map(entry => {
+        const records = entry.record_ids.map(id => contributing.get(id));
+        const first = records[0], profile = profiles.get(entry.profile_id);
+        const value = records.length === 1 ? `${escape(first.qualifier || '')}${format(composition ? first.wt_percent : first.value)} ${unit}` : rangeText({...entry, unit: summary.unit});
+        const basis = data.comparison_vocabularies;
+        const context = composition
+          ? `${escape(entry.assay)}<details><summary>Measurement basis</summary>${escape(basis.mass_denominator[entry.mass_denominator])}<br>${escape(basis.moisture_basis[entry.moisture_basis])}${entry.measurement_state_note ? '<p>' + escape(entry.measurement_state_note) + '</p>' : ''}</details>`
+          : `${escape(entry.method)}<small>${count(entry.conditions, 'condition description')}</small>`;
+        return `<tr><td><strong>${escape(data.material_classes[entry.material_class])}</strong><small>${escape(entry.label)}</small><small>${escape(profile.state)}</small></td>
+          <td><strong>${value}</strong>${records.length > 1 ? `<small>${count(records.length, 'reported value')} · descriptive range</small>` : ''}</td>
+          <td>${context}</td><td>${paperCell(first)}${contributingRecords(entry, contributing)}</td></tr>`;
+      })];
     }
     function table(headers, body) {
       return `<div class="battery-table-scroll"><table><thead><tr>${headers.map(header => `<th>${escape(header)}</th>`).join('')}</tr></thead><tbody>${body.join('')}</tbody></table></div>`;
@@ -167,7 +188,7 @@ const BatteryOverview = (() => {
         target.innerHTML = options(targets.map(value => [value, value]), 'All targets');
         target.dataset.workspace = workspace;
       }
-      for (const [name, value] of Object.entries(controls)) form.elements[name].value = value;
+      for (const [name, value] of Object.entries(controls)) if (form.elements[name]) form.elements[name].value = value;
       container.querySelectorAll('[data-workspace]').forEach(label => { label.hidden = label.dataset.workspace !== workspace; });
       container.querySelectorAll('[data-workspace-tab], [data-mode]').forEach(button => {
         const active = button.dataset.workspaceTab ? button.dataset.workspaceTab === workspace : button.dataset.mode === mode;
@@ -185,10 +206,9 @@ const BatteryOverview = (() => {
         const input = label.querySelector('select, input');
         return `${label.firstChild.textContent}: ${input.tagName === 'SELECT' ? input.selectedOptions[0].textContent : input.value}`;
       }).join(' · ');
-      container.querySelector('.battery-summary-settings').hidden = mode !== 'summary';
       const parameters = overviewParameters(controls, workspace, mode);
       const routes = parameters.template === 'routes';
-      container.querySelector('.battery-results-heading h3').textContent = composition ? 'Reported composition' : mode === 'summary' ? 'Treatment result summary' : routes ? 'Studied treatments' : 'Matching experiments';
+      container.querySelector('.battery-results-heading h3').textContent = mode === 'summary' ? (composition ? 'Compare measured feedstocks' : 'Compare treatment evidence') : composition ? 'Reported composition' : routes ? 'Studied treatments' : 'Matching experiments';
       const counter = container.querySelector('.battery-result-count');
       counter.textContent = 'Loading…';
       const output = container.querySelector('.battery-table');output.innerHTML = '';
@@ -207,16 +227,16 @@ const BatteryOverview = (() => {
       counter.textContent = `${count(rows.length, routes ? 'treatment' : 'record')} · ${count(unique(rows.map(row => row.paper)).length, 'study', 'studies')}`;
       let headers, body;
       if (mode === 'summary') {
-        container.querySelector('.battery-results-note').textContent = 'Descriptive summaries use unqualified values within the selected groups. SD shows spread, not uncertainty in a pooled estimate. Inspect contributing records before comparing studies.';
+        container.querySelector('.battery-results-note').textContent = 'Compare samples by battery chemistry and target. Ranges describe reported values, including differences in feedstock and conditions. Cross-study means are shown only for matching, sufficiently described measurement contexts; each publication receives equal weight.';
         const contributing = new Map(rows.map(row => [row.id, row]));
-        headers = ['Sample context', 'Target / measure', 'Mean / median', 'Range / SD', 'Coverage / evidence'];
-        body = response.statistics.map(summary => `<tr><td><strong>${escape(summary.label)}</strong><small>${escape(data.streams[summary.stream])} · ${escape(data.chemistries[summary.chemistry])}</small><small>${escape(summary.assay || summary.family)}</small></td><td>${escape(summary.target)}<small>${escape(summary.metric.replaceAll('_', ' '))}</small></td><td>Mean ${format(summary.mean)} ${escape(summary.unit)}<br>Median ${format(summary.median)} ${escape(summary.unit)}<small>${summary.summary_basis === 'study' ? 'Study means, equal weights' : 'Reported measurements'}</small></td><td>${rangeText(summary)}<small>SD ${summary.sd === null ? '— (one unit)' : format(summary.sd) + ' ' + escape(summary.unit)}</small></td><td>${count(summary.studies, 'study', 'studies')} · ${count(summary.sample_groups, 'sample group')}<small>${count(summary.statistical_units, 'statistical unit')} · ${count(summary.states, 'sample state')}${summary.conditions ? ' · ' + count(summary.conditions, 'condition description') : ''}</small>${contributingRecords(summary, contributing)}</td></tr>`);
+        headers = ['Measured material', 'Reported value / range', 'Measurement context', 'Source evidence'];
+        body = response.statistics.flatMap(summary => comparisonRows(summary, contributing, composition));
       } else if (composition) {
         container.querySelector('.battery-results-note').textContent = 'Contents are shown on the reviewed sample-mass basis. Expand measurement details for the original report and assay.';
         headers = ['Measured feedstock', 'Element', 'Content', 'Source'];
         body = rows.map(row => `<tr><td>${sampleCell(row)}</td><td>${escape(row.element)}</td><td><strong>${escape(row.qualifier || '')}${format(row.wt_percent)} wt%</strong><details><summary>Measurement details</summary>${escape(row.value)}${row.uncertainty ? ' ± ' + escape(row.uncertainty) : ''} ${escape(row.display_unit || row.unit)}<p>${escape(row.assay)}</p></details></td><td>${paperCell(row)}</td></tr>`);
       } else if (routes) {
-        container.querySelector('.battery-results-note').textContent = 'Treatments studied for these feedstocks. Add result filters to inspect matching experiments, or open Statistical summary to compare reported results.';
+        container.querySelector('.battery-results-note').textContent = 'Treatments studied for these feedstocks. Add result filters to inspect matching experiments, or open Compare & summarize to compare reported results.';
         headers = ['Study feedstock', 'Treatment', 'Reported targets', 'Source'];
         body = rows.map(row => `<tr><td>${sampleCell(row)}</td><td><strong>${escape(row.name)}</strong><small>${escape(row.family)}</small></td><td>${escape(unique(data.results.filter(result => result.method_id === row.id).map(result => result.material)).join(', ')) || 'See study'}</td><td>${paperCell(row)}</td></tr>`);
       } else {
@@ -229,7 +249,7 @@ const BatteryOverview = (() => {
       }
       const coverage = rows.length ? null : emptyCoverage(data, parameters);
       output.innerHTML = body.length ? table(headers, body) : `<div class="battery-empty"><h4>${rows.length ? 'No unqualified values for this summary.' : 'No reviewed records match these filters.'}</h4><p>${escape(coverage?.reason || 'Open Records to inspect the individual reported values.')}</p><div class="battery-row-actions">${coverage?.treatments ? `<button type="button" data-browse-treatments>Browse all ${coverage.treatments} treatments for this selection</button>` : ''}<button type="button" data-show-coverage>View source coverage</button></div></div>`;
-      const visibleProfiles = data.profiles.filter(profile => (!controls.stream || profile.stream === controls.stream) && (!controls.chemistry || profile.chemistry === controls.chemistry) && (!controls.origin || profile.origin === controls.origin));
+      const visibleProfiles = data.profiles.filter(profile => (!controls.stream || profile.stream === controls.stream) && (!controls.chemistry || profile.chemistry === controls.chemistry) && (!controls.origin || profile.origin === controls.origin) && (!controls.material_class || profile.material_class === controls.material_class));
       container.querySelector('.battery-audit-table').innerHTML = table(['Study', 'Reviewed sample groups', 'Elemental mass records', 'Review notes'], data.audit.filter(study => visibleProfiles.some(profile => profile.paper === study.paper)).map(study => `<tr><td>${escape(study.paper)}</td><td>${visibleProfiles.filter(profile => profile.paper === study.paper).map(profile => `${escape(profile.label)} ${actionButtons(profile)}`).join('<br>')}</td><td>${study.composition_records}</td><td>${study.review_notes.map(escape).join(' ') || 'Source passages and frozen sample identities reviewed.'}</td></tr>`));
     }
     form.addEventListener('change', () => {

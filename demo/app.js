@@ -734,11 +734,11 @@ async function start(){
     $('#search').oninput=searchNodes;$('#show-all').onclick=showAllEntities;
     $('#clear-focus').onclick=()=>{state.graphHistory=[];state.focus=null;state.navPath=[];updateGraph();};$('#fit').onclick=fitGraph;$('#zoom-in').onclick=()=>scale(1.3);$('#zoom-out').onclick=()=>scale(1/1.3);
     $('#case-select').onchange=()=>{state.request++;walkthrough?.reset();renderCaseSelection();if(state.view==='replay')openReplay($('#case-select').value);};
-    $('#case-browse').onclick=()=>{walkthrough?.reset();return openReplay($('#case-select').value);};
+    if($('#case-browse'))$('#case-browse').onclick=()=>{walkthrough?.reset();return openReplay($('#case-select').value);};
     $('#text-tab').onclick=()=>{state.sourceTab='text';renderSource();};$('#tables-tab').onclick=()=>{state.sourceTab='tables';renderSource();};$('#record-search').oninput=renderStage;
     $('#case-on-graph').onclick=()=>{setView('fusion');state.graphHistory=[];state.hierarchy=false;state.focus=null;state.navPath=[];$('#source-filter').value=state.data.cases.find(item=>item.id===$('#case-select').value).paper;$('#type-filter').value='';$('#relation-filter').value='';updateGraph();};
     $('#inspector').innerHTML=`<div class="eyebrow">TRACEABLE KNOWLEDGE</div><div class="intro-icon">⌘</div><h3>Four entry points.<br>Explore one level at a time.</h3><p>Select Product, Component, Process or Material. Expand a group to browse types and families, then individual entities.</p><h4>What is underneath?</h4><p>${entityCount} entities and ${state.data.edges.length} displayed relations. ${state.data.observations} quantitative observations remain available in relation details.</p><p>Top-level links summarize existing relations; they are not new KG assertions. Unclassified groups retain entities without a declared type or method family.</p>`;
-    walkthrough=Walkthrough.mount({
+    if($('#walkthrough-start'))walkthrough=Walkthrough.mount({
       graph:state.data,loadGuide:path=>fetchJSON(path),
       loadArchive:async id=>{if(!state.cache.has(id))state.cache.set(id,await fetchJSON(state.data.sources.find(source=>source.replay_id===id)?.replay_url||`data/cases/${id}.json`));return state.cache.get(id);},
       replay:async(archive,target)=>{
@@ -756,7 +756,7 @@ async function start(){
       },
       clear:()=>{state.spotlight=null;if(state.case)renderStage();},
     });
-    $('#case-select').disabled=false;$('#case-browse').disabled=false;renderCaseSelection();
+    $('#case-select').disabled=false;if($('#case-browse'))$('#case-browse').disabled=false;renderCaseSelection();
     window.addEventListener('resize',resize);new ResizeObserver(resize).observe(canvas.parentElement);updateGraph();resize();notify('');
     if(document.body.dataset.overview){
       const overview=await fetchJSON(document.body.dataset.overview);
@@ -767,7 +767,7 @@ async function start(){
         const result=await response.json();if(!response.ok)throw Error(result.error||'Analysis request failed');return result;
       };
       else {
-        const records=await fetchJSON('datasets/battery20/overview/analysis-records.json');
+        const records=await fetchJSON('datasets/battery20/overview/analysis-records.json?v=e16644c5bd35');
         actions.query=BatteryStatic.create({...overview,...records});
       }
       BatteryOverview.mount($('#battery-overview'),overview,actions);

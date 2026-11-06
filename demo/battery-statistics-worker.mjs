@@ -4,7 +4,7 @@ let runtime, queue = Promise.resolve();
 async function initialize() {
   const python = await loadPyodide();
   await python.loadPackage(['numpy', 'pandas']);
-  const response = await fetch(new URL('battery_statistics.py', import.meta.url));
+  const response = await fetch(new URL('battery_statistics.py?v=e16644c5bd35', import.meta.url));
   if (!response.ok) throw Error('Statistics code unavailable');
   await python.runPythonAsync(await response.text());
   return python;

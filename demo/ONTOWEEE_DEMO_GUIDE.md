@@ -60,7 +60,7 @@ The demo has five tabs:
 | **Paper** | Open the original publication pages and the GSMArena source |
 | **About** | Read a short introduction to the purpose and evidence-based use of the demo |
 
-The current snapshot contains 442 core entities, 1,784 displayed relations and 1,073 numerical observations. Scope records describe 64 study samples or populations and the method families of all 62 Processes. These annotations help locate and compare evidence; they do not merge samples or make their measurements interchangeable.
+The current local snapshot contains 431 core entities, 1,805 displayed relations and 1,351 quantitative observations. Scope records describe study samples or populations and Process method families. These annotations help locate and compare evidence; they do not merge samples or make their measurements interchangeable.
 
 The application reads saved files. Browsing does not call an extraction API, run the agents again or edit the research graph. Statistical summaries calculate descriptive values from existing measurements and retain links to their source records.
 
@@ -68,7 +68,9 @@ The application reads saved files. Browsing does not call an extraction API, run
 
 The first page is **Battery overview**. Choose a Feedstock group and a Target, such as **Anode feedstocks** and **Li**. In **Composition**, inspect reported elemental mass contents. Switch to **Treatment routes** to see studied methods. **More filters** exposes chemistry, source, content thresholds and experimental constraints. Recovery, temperature, time, concentration and reagent-absence filters apply to the same observation. A blank temperature field imposes no temperature requirement.
 
-**Records** shows the individual evidence. **Statistical summary** shows mean, median, range and sample SD, with **Records used** links. In **Summary settings**, choose the same sample and measurement context or a broader descriptive comparison, and reported measurements or equal study weights. A single statistical unit has no sample SD. Qualified bounds are retained in Records and excluded from these scalar summaries. Grouping by material stream, chemistry and method is descriptive; differences in preparation and conditions still require review.
+**Records** lists the individual observations. In the current local version, **Compare & summarize** places samples side by side under battery chemistry and target, with separate material forms, assays and original source links. A single observation shows its value; multiple observations show a descriptive range and their conditions. Different electrode fractions are not averaged into a whole-battery concentration. **More filters → Measured material** selects a specific material form.
+
+Cross-study mean, median and SD appear only for matching, sufficiently described contexts spanning multiple publications. The present dataset has no such eligible group. **Why values remain separate** explains missing bases, different material forms or unreviewed treatment conditions. Original uncertainty and qualified values remain available in the contributing records. The published interface follows the same comparison rules.
 
 On the published site, the first nonempty statistical summary loads Python, pandas and NumPy into a browser worker. This needs an internet connection; subsequent calculations reuse that runtime while the page remains open. Selected records stay in the browser. The local API and the published browser use the same Python statistics code. Dataset coverage and review decisions are available in the collapsed panel below the results.
 
@@ -336,7 +338,9 @@ Each stage provides links to its bundled files where available. Common filenames
 
 Use these downloads and complete record JSON to inspect details omitted from a card. The filename and stored file hash identify the artifact; a download is not a new extraction request.
 
-## 8. Guided walkthroughs
+## 8. Archived guided walkthroughs
+
+The current local Extraction trace opens a paper directly from the selector. Its Browse freely and Start walkthrough buttons have been removed. The guide files described below remain archived; they are not active controls in the current local page.
 
 Select the corresponding full paper title in Extraction trace to start one of these six guides:
 
@@ -347,7 +351,7 @@ Select the corresponding full paper title in Extraction trace to start one of th
 | Aspergillus niger battery bioleaching | 10 | Separate treatment routes, Settings and results with equal or similar values |
 | Ultrasound-assisted Co and Li leaching | 8 | Distinguish treatment and control routes, and separate kinetic parameters from recovery outcomes |
 | Anode hydrochloric acid leaching | 8 | Trace feed composition and treatment-specific lithium results with their conditions |
-| Pyrolysis–ultrasonic flotation | 9 | Examine a failed table channel alongside surviving text results and incomplete coverage |
+| LFP ultrasonic reducing leaching | 7 | Connect prepared cathode composition to observed leaching results and retain their conditions |
 
 Each step provides a question, **What to inspect**, and a **Limitation**. The guide selects an existing archived record or graph target; it does not run an agent or generate a replacement result.
 
@@ -384,14 +388,14 @@ Explain that model alignment connects descriptions while measurements remain att
 
 The guide separates the archived 100%, 100% and 95% Li results. Two equal 100% values remain different experimental observations.
 
-### Route C: Show an extraction limitation
+### Route C: Compare composition and treatment evidence
 
-1. Start the pyrolysis–ultrasonic flotation guide.
-2. Inspect the accepted table and its IR / Execution record.
-3. Examine the rejected output direction and failed table repair.
-4. Follow a surviving text result into the graph.
+1. Start the LFP ultrasonic reducing leaching guide.
+2. Inspect the cathode-composition table and its Li, Fe, P and Al records.
+3. Check sample and method scope, keeping the prepared cathode distinct from a whole battery.
+4. Follow the treatment input and a measured leaching result to its conditions and graph context.
 
-Explain that a text-derived result does not demonstrate successful extraction of the table or complete coverage of the paper. Table repair and document-level Process revision are separate mechanisms.
+Use Battery overview to explore this feedstock and compare suitable observations. Activation energies and aggregate Others values are excluded from recovery/composition summaries.
 
 ## 10. Interpreting the evidence
 
@@ -432,23 +436,23 @@ The Paper tab provides publication links. Its bibliography uses readable chemica
 
 1. A Combined Recovery Process of Metals in Spent Lithium-Ion Batteries
 2. A Comprehensive Characterization of End-of-Life Mobile Phones for Secondary Material Resources Identification
-3. A Copper-Catalyzed Bioleaching Process for Enhancement of Cobalt Dissolution from Spent Lithium-Ion Batteries
-4. A Promising Physical Method for Recovery of LiCoO₂ and Graphite from Spent Lithium-Ion Batteries: Grinding Flotation
-5. Assessment of Smartphones’ Components and Materials for a Recycling Perspective: Tendencies of Composition and Target Elements
+3. A Promising Physical Method for Recovery of LiCoO₂ and Graphite from Spent Lithium-Ion Batteries: Grinding Flotation
+4. Assessment of Smartphones’ Components and Materials for a Recycling Perspective: Tendencies of Composition and Target Elements
+5. Bioleaching of Spent Zn–Mn or Ni–Cd Batteries by Aspergillus Species
 6. Bioleaching of Valuable Metals from Spent Lithium-Ion Mobile Phone Batteries Using Aspergillus Niger
 7. Chemical Characterisation of Spent Rechargeable Batteries
 8. Comprehensive Evaluation on Effective Leaching of Critical Metals from Spent Lithium-Ion Batteries
-9. Green and Facile Method for the Recovery of Spent Lithium Nickel Manganese Cobalt Oxide (NMC) Based Lithium Ion Batteries
-10. Heat Treatment of LiCoO₂ Recovered from Cathode Scraps with Solvent Method
+9. Heat Treatment of LiCoO₂ Recovered from Cathode Scraps with Solvent Method
+10. Hydrometallurgical Process for Recovery of Metal Values from Spent Nickel-Metal Hydride Secondary Batteries
 11. Leaching Lithium from the Anode Electrode Materials of Spent Lithium-Ion Batteries by Hydrochloric Acid (HCl)
 12. Pneumatic Separation and Recycling of Anode and Cathode Materials from Spent Lithium Iron Phosphate Batteries
 13. Process Controls for Improving Bioleaching Performance of Both Li and Co from Spent Lithium Ion Batteries at High Pulp Density and Its Thermodynamics and Kinetics Exploration
-14. Pyrolysis-Ultrasonic-Assisted Flotation Technology for Recovering Graphite and LiCoO₂ from Spent Lithium-Ion Batteries
-15. Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent
-16. Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L-Tartaric Acid as a Leachant
+14. Recovery of Cobalt as Cobalt Oxalate from Spent Lithium Ion Batteries by Using Glycine as Leaching Agent
+15. Recovery of Lithium, Nickel, Cobalt, and Manganese from Spent Lithium-Ion Batteries Using L-Tartaric Acid as a Leachant
+16. Recycling of Spent LiFePO₄ Batteries Using Ultrasonic-Assisted Reducing Leaching
 17. Reductive Leaching of Cathodic Active Materials from Lithium Ion Battery Wastes
 18. Selective Leaching of Valuable Metal from Spent Lithium-Ion Batteries in the Alkaline Glycinate System
-19. Synthesis and Performance of Li[(Ni₁/₃Co₁/₃Mn₁/₃)₁₋ₓMgₓ]O₂ Prepared from Spent Lithium Ion Batteries
+19. Sustainable Recovery of Cathode Materials from Spent Lithium-Ion Batteries Using Lactic Acid Leaching System
 20. Ultrasound-Assisted Leaching of Cobalt and Lithium from Spent Lithium-Ion Batteries
 
 ## Appendix B. Product catalog records
