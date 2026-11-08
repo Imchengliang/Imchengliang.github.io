@@ -1,0 +1,603 @@
+{
+  "report": {
+    "llm_calls": 1,
+    "requested": 20,
+    "actionable": 20,
+    "resolved": 14,
+    "remaining_unresolved": 6,
+    "invalid_decisions": 6,
+    "apply_errors": [],
+    "aborted": false,
+    "error": null
+  },
+  "remaining_requests": [
+    {
+      "reason": "no single supported process binding",
+      "basis": "ambiguous_candidates",
+      "candidate_explanations": [
+        {
+          "source_id": "text_Process_thermal_treatment_of_mobile_phone_waste_in_a_bubbling_fluidized_bed",
+          "source_name": "thermal treatment of mobile phone waste in a bubbling fluidized bed",
+          "target_id": "text_Material_methane",
+          "target_name": "methane",
+          "score": 0.35,
+          "factors": {
+            "cooccurrence": 0.5,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        },
+        {
+          "source_id": "text_Process_belt_separator_separation_of_ground_non_magnetic_fraction",
+          "source_name": "belt separator separation of ground non-magnetic fraction",
+          "target_id": "text_Material_methane",
+          "target_name": "methane",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        },
+        {
+          "source_id": "text_Process_belt_type_1_disc_separation_of__1_mm_fraction",
+          "source_name": "belt type 1-disc separation of <1 mm fraction",
+          "target_id": "text_Material_methane",
+          "target_name": "methane",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        }
+      ],
+      "rejected_explanations": [],
+      "source_sample": "mobile phone cases",
+      "invalid_source_name": "mobile phone case",
+      "invalid_source_id": "text_Component_mobile_phone_case",
+      "target_name": "methane",
+      "target_id": "text_Material_methane",
+      "relation_type": "HAS_OUTPUT",
+      "evidence_span": "It was the thermal treatment of mobile phone cases that tended to produce the highest temporary increases in concentrates; these amounted to: 1000–1500 ppm for methane;",
+      "evidence_context": "It was the thermal treatment of mobile phone cases that tended to produce the highest temporary increases in concentrates; these amounted to: 1000–1500 ppm for methane;",
+      "relation_draft": {
+        "source_name": "mobile phone case",
+        "target_name": "methane",
+        "relation_type": "HAS_OUTPUT",
+        "evidence_span": "It was the thermal treatment of mobile phone cases that tended to produce the highest temporary increases in concentrates; these amounted to: 1000–1500 ppm for methane;",
+        "attributes": {
+          "property": "generated_concentration",
+          "value": 1500,
+          "unit": "ppm",
+          "secondary_value": 1000,
+          "secondary_unit": "ppm",
+          "source_sample": "mobile phone cases",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "conditions": "temporary concentration range",
+          "treatment_members": []
+        }
+      },
+      "group_key": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1::mobile phone cases::raw=temporary concentration range",
+      "request_id": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1::binding:cdcb7087f8f2809c",
+      "original_request_id": "binding:cdcb7087f8f2809c",
+      "chunk_id": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1",
+      "chunk_position": 16,
+      "candidate_settings": [],
+      "candidate_setting_ids": []
+    },
+    {
+      "reason": "no single supported process binding",
+      "basis": "ambiguous_candidates",
+      "candidate_explanations": [
+        {
+          "source_id": "text_Process_belt_separator_separation_of_ground_non_magnetic_fraction",
+          "source_name": "belt separator separation of ground non-magnetic fraction",
+          "target_id": "text_Material_ethane",
+          "target_name": "ethane",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        },
+        {
+          "source_id": "text_Process_belt_type_1_disc_separation_of__1_mm_fraction",
+          "source_name": "belt type 1-disc separation of <1 mm fraction",
+          "target_id": "text_Material_ethane",
+          "target_name": "ethane",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        },
+        {
+          "source_id": "text_Process_neodymium_magnet_separation_of__1_mm_fraction",
+          "source_name": "neodymium magnet separation of >1 mm fraction",
+          "target_id": "text_Material_ethane",
+          "target_name": "ethane",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        }
+      ],
+      "rejected_explanations": [],
+      "source_sample": "mobile phone cases",
+      "invalid_source_name": "mobile phone case",
+      "invalid_source_id": "text_Component_mobile_phone_case",
+      "target_name": "ethane",
+      "target_id": "text_Material_ethane",
+      "relation_type": "HAS_OUTPUT",
+      "evidence_span": "360–640 ppm for ethane;",
+      "evidence_context": "360–640 ppm for ethane;",
+      "relation_draft": {
+        "source_name": "mobile phone case",
+        "target_name": "ethane",
+        "relation_type": "HAS_OUTPUT",
+        "evidence_span": "360–640 ppm for ethane;",
+        "attributes": {
+          "property": "generated_concentration",
+          "value": 640,
+          "unit": "ppm",
+          "secondary_value": 360,
+          "secondary_unit": "ppm",
+          "source_sample": "mobile phone cases",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "conditions": "temporary concentration range",
+          "treatment_members": []
+        }
+      },
+      "group_key": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1::mobile phone cases::raw=temporary concentration range",
+      "request_id": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1::binding:969851a0bd86a70e",
+      "original_request_id": "binding:969851a0bd86a70e",
+      "chunk_id": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1",
+      "chunk_position": 16,
+      "candidate_settings": [],
+      "candidate_setting_ids": []
+    },
+    {
+      "reason": "no single supported process binding",
+      "basis": "ambiguous_candidates",
+      "candidate_explanations": [
+        {
+          "source_id": "text_Process_belt_separator_separation_of_ground_non_magnetic_fraction",
+          "source_name": "belt separator separation of ground non-magnetic fraction",
+          "target_id": "text_Material_acetylene",
+          "target_name": "acetylene",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        },
+        {
+          "source_id": "text_Process_belt_type_1_disc_separation_of__1_mm_fraction",
+          "source_name": "belt type 1-disc separation of <1 mm fraction",
+          "target_id": "text_Material_acetylene",
+          "target_name": "acetylene",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        },
+        {
+          "source_id": "text_Process_neodymium_magnet_separation_of__1_mm_fraction",
+          "source_name": "neodymium magnet separation of >1 mm fraction",
+          "target_id": "text_Material_acetylene",
+          "target_name": "acetylene",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        }
+      ],
+      "rejected_explanations": [],
+      "source_sample": "mobile phone cases",
+      "invalid_source_name": "mobile phone case",
+      "invalid_source_id": "text_Component_mobile_phone_case",
+      "target_name": "acetylene",
+      "target_id": "text_Material_acetylene",
+      "relation_type": "HAS_OUTPUT",
+      "evidence_span": "400–650 ppm for acetylene;",
+      "evidence_context": "400–650 ppm for acetylene;",
+      "relation_draft": {
+        "source_name": "mobile phone case",
+        "target_name": "acetylene",
+        "relation_type": "HAS_OUTPUT",
+        "evidence_span": "400–650 ppm for acetylene;",
+        "attributes": {
+          "property": "generated_concentration",
+          "value": 650,
+          "unit": "ppm",
+          "secondary_value": 400,
+          "secondary_unit": "ppm",
+          "source_sample": "mobile phone cases",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "conditions": "temporary concentration range",
+          "treatment_members": []
+        }
+      },
+      "group_key": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1::mobile phone cases::raw=temporary concentration range",
+      "request_id": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1::binding:91de12064693b7cf",
+      "original_request_id": "binding:91de12064693b7cf",
+      "chunk_id": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1",
+      "chunk_position": 16,
+      "candidate_settings": [],
+      "candidate_setting_ids": []
+    },
+    {
+      "reason": "no single supported process binding",
+      "basis": "ambiguous_candidates",
+      "candidate_explanations": [
+        {
+          "source_id": "text_Process_belt_separator_separation_of_ground_non_magnetic_fraction",
+          "source_name": "belt separator separation of ground non-magnetic fraction",
+          "target_id": "text_Material_ethylene",
+          "target_name": "ethylene",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        },
+        {
+          "source_id": "text_Process_belt_type_1_disc_separation_of__1_mm_fraction",
+          "source_name": "belt type 1-disc separation of <1 mm fraction",
+          "target_id": "text_Material_ethylene",
+          "target_name": "ethylene",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        },
+        {
+          "source_id": "text_Process_neodymium_magnet_separation_of__1_mm_fraction",
+          "source_name": "neodymium magnet separation of >1 mm fraction",
+          "target_id": "text_Material_ethylene",
+          "target_name": "ethylene",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        }
+      ],
+      "rejected_explanations": [],
+      "source_sample": "mobile phone cases",
+      "invalid_source_name": "mobile phone case",
+      "invalid_source_id": "text_Component_mobile_phone_case",
+      "target_name": "ethylene",
+      "target_id": "text_Material_ethylene",
+      "relation_type": "HAS_OUTPUT",
+      "evidence_span": "550–750 ppm for ethylene;",
+      "evidence_context": "550–750 ppm for ethylene;",
+      "relation_draft": {
+        "source_name": "mobile phone case",
+        "target_name": "ethylene",
+        "relation_type": "HAS_OUTPUT",
+        "evidence_span": "550–750 ppm for ethylene;",
+        "attributes": {
+          "property": "generated_concentration",
+          "value": 750,
+          "unit": "ppm",
+          "secondary_value": 550,
+          "secondary_unit": "ppm",
+          "source_sample": "mobile phone cases",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "conditions": "temporary concentration range",
+          "treatment_members": []
+        }
+      },
+      "group_key": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1::mobile phone cases::raw=temporary concentration range",
+      "request_id": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1::binding:4648e5a5a673603d",
+      "original_request_id": "binding:4648e5a5a673603d",
+      "chunk_id": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1",
+      "chunk_position": 16,
+      "candidate_settings": [],
+      "candidate_setting_ids": []
+    },
+    {
+      "reason": "no single supported process binding",
+      "basis": "ambiguous_candidates",
+      "candidate_explanations": [
+        {
+          "source_id": "text_Process_belt_separator_separation_of_ground_non_magnetic_fraction",
+          "source_name": "belt separator separation of ground non-magnetic fraction",
+          "target_id": "text_Material_naphthalene",
+          "target_name": "naphthalene",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        },
+        {
+          "source_id": "text_Process_belt_type_1_disc_separation_of__1_mm_fraction",
+          "source_name": "belt type 1-disc separation of <1 mm fraction",
+          "target_id": "text_Material_naphthalene",
+          "target_name": "naphthalene",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        },
+        {
+          "source_id": "text_Process_neodymium_magnet_separation_of__1_mm_fraction",
+          "source_name": "neodymium magnet separation of >1 mm fraction",
+          "target_id": "text_Material_naphthalene",
+          "target_name": "naphthalene",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        }
+      ],
+      "rejected_explanations": [],
+      "source_sample": "mobile phone cases",
+      "invalid_source_name": "mobile phone case",
+      "invalid_source_id": "text_Component_mobile_phone_case",
+      "target_name": "naphthalene",
+      "target_id": "text_Material_naphthalene",
+      "relation_type": "HAS_OUTPUT",
+      "evidence_span": "240–280 ppm for naphthalene;",
+      "evidence_context": "240–280 ppm for naphthalene;",
+      "relation_draft": {
+        "source_name": "mobile phone case",
+        "target_name": "naphthalene",
+        "relation_type": "HAS_OUTPUT",
+        "evidence_span": "240–280 ppm for naphthalene;",
+        "attributes": {
+          "property": "generated_concentration",
+          "value": 280,
+          "unit": "ppm",
+          "secondary_value": 240,
+          "secondary_unit": "ppm",
+          "source_sample": "mobile phone cases",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "conditions": "temporary concentration range",
+          "treatment_members": []
+        }
+      },
+      "group_key": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1::mobile phone cases::raw=temporary concentration range",
+      "request_id": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1::binding:16a25f101b7984fb",
+      "original_request_id": "binding:16a25f101b7984fb",
+      "chunk_id": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1",
+      "chunk_position": 16,
+      "candidate_settings": [],
+      "candidate_setting_ids": []
+    },
+    {
+      "reason": "no single supported process binding",
+      "basis": "ambiguous_candidates",
+      "candidate_explanations": [
+        {
+          "source_id": "text_Process_belt_separator_separation_of_ground_non_magnetic_fraction",
+          "source_name": "belt separator separation of ground non-magnetic fraction",
+          "target_id": "text_Material_benzene",
+          "target_name": "benzene",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        },
+        {
+          "source_id": "text_Process_belt_type_1_disc_separation_of__1_mm_fraction",
+          "source_name": "belt type 1-disc separation of <1 mm fraction",
+          "target_id": "text_Material_benzene",
+          "target_name": "benzene",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        },
+        {
+          "source_id": "text_Process_neodymium_magnet_separation_of__1_mm_fraction",
+          "source_name": "neodymium magnet separation of >1 mm fraction",
+          "target_id": "text_Material_benzene",
+          "target_name": "benzene",
+          "score": 0.15,
+          "factors": {
+            "cooccurrence": 0.0,
+            "identity_match": 0.0,
+            "measure_match": 0.0,
+            "scope_compatible": 1.0
+          },
+          "hard_violations": [],
+          "evidence": {
+            "source_sample": "mobile phone cases",
+            "measure_key": "concentration",
+            "has_value": true
+          }
+        }
+      ],
+      "rejected_explanations": [],
+      "source_sample": "mobile phone cases",
+      "invalid_source_name": "mobile phone case",
+      "invalid_source_id": "text_Component_mobile_phone_case",
+      "target_name": "benzene",
+      "target_id": "text_Material_benzene",
+      "relation_type": "HAS_OUTPUT",
+      "evidence_span": "860–1200 ppm for benzene.",
+      "evidence_context": "860–1200 ppm for benzene.",
+      "relation_draft": {
+        "source_name": "mobile phone case",
+        "target_name": "benzene",
+        "relation_type": "HAS_OUTPUT",
+        "evidence_span": "860–1200 ppm for benzene.",
+        "attributes": {
+          "property": "generated_concentration",
+          "value": 1200,
+          "unit": "ppm",
+          "secondary_value": 860,
+          "secondary_unit": "ppm",
+          "source_sample": "mobile phone cases",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "conditions": "temporary concentration range",
+          "treatment_members": []
+        }
+      },
+      "group_key": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1::mobile phone cases::raw=temporary concentration range",
+      "request_id": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1::binding:1da42aa41918c85e",
+      "original_request_id": "binding:1da42aa41918c85e",
+      "chunk_id": "CHUNK_High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials_3. Results and Discussion3. Results and Discussio_df85481c_sub1",
+      "chunk_position": 16,
+      "candidate_settings": [],
+      "candidate_setting_ids": []
+    }
+  ]
+}

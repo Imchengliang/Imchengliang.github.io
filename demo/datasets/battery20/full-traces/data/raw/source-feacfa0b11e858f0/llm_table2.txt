@@ -1,0 +1,3113 @@
+[
+  {
+    "chunk_id": "Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards__table__TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+    "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+    "result": {
+      "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+      "entity_count": 4,
+      "relation_count": 12,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "entities": [
+        {
+          "id": "table_ir_ent_001",
+          "name": "pyrolysis",
+          "mention_text": "pyrolysis",
+          "type": "Process",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "literal",
+            "column_idx": 4
+          }
+        },
+        {
+          "id": "table_ir_ent_002",
+          "name": "copper rich red fraction",
+          "mention_text": "Copper rich red Fraction",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "synonyms": [
+            "Copper rich red Fraction"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 4
+          }
+        },
+        {
+          "id": "table_ir_ent_003",
+          "name": "Lead/tin rich white Fraction",
+          "mention_text": "Lead/tin rich white Fraction",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 5
+          }
+        },
+        {
+          "id": "table_ir_ent_004",
+          "name": "Carbon rich Residue",
+          "mention_text": "Carbon rich Residue",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 6
+          }
+        }
+      ],
+      "relations": [
+        {
+          "id": "table_ir_rel_001",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "table_title": "Table 1 Pyrolysis yield of PCB boards after heat treatment in the horizontal resistance furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table. (Initial weight scaled to 0.1 kg).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "pyrolysis",
+          "target_id": "table_ir_ent_002",
+          "target_name": "copper rich red fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 1, column 4 (Copper rich red Fraction (10-3kg)): 25",
+          "attributes": {
+            "property": "weight",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+            "row_idx": 1,
+            "col_idx": 4,
+            "row_label": "1.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Copper rich red Fraction (10-3kg)",
+            "column_descriptor": {
+              "id": "c4",
+              "index": 4,
+              "flat_label": "Copper rich red Fraction (10-3kg)",
+              "header_path": [
+                "Copper rich red Fraction (10-3kg)"
+              ],
+              "header_leaf": "Copper rich red Fraction (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Copper rich red Fraction (10-3kg)",
+                  "header_row": 0,
+                  "column": 4
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Copper rich red Fraction",
+                "entity_type": "Material",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 1, column 4 (Copper rich red Fraction (10-3kg)): 25",
+            "value": "25",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "25",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                4,
+                4
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_002",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "table_title": "Table 1 Pyrolysis yield of PCB boards after heat treatment in the horizontal resistance furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table. (Initial weight scaled to 0.1 kg).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "pyrolysis",
+          "target_id": "table_ir_ent_003",
+          "target_name": "Lead/tin rich white Fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 1, column 5 (Lead/tin rich white Fraction (10-3kg)): 15",
+          "attributes": {
+            "property": "weight",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+            "row_idx": 1,
+            "col_idx": 5,
+            "row_label": "1.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Lead/tin rich white Fraction (10-3kg)",
+            "column_descriptor": {
+              "id": "c5",
+              "index": 5,
+              "flat_label": "Lead/tin rich white Fraction (10-3kg)",
+              "header_path": [
+                "Lead/tin rich white Fraction (10-3kg)"
+              ],
+              "header_leaf": "Lead/tin rich white Fraction (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Lead/tin rich white Fraction (10-3kg)",
+                  "header_row": 0,
+                  "column": 5
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Lead/tin rich white Fraction",
+                "entity_type": "Material",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 1, column 5 (Lead/tin rich white Fraction (10-3kg)): 15",
+            "value": "15",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "15",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                5,
+                5
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_003",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "table_title": "Table 1 Pyrolysis yield of PCB boards after heat treatment in the horizontal resistance furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table. (Initial weight scaled to 0.1 kg).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "pyrolysis",
+          "target_id": "table_ir_ent_004",
+          "target_name": "Carbon rich Residue",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 1, column 6 (Carbon rich Residue (10-3kg)): 40",
+          "attributes": {
+            "property": "weight",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+            "row_idx": 1,
+            "col_idx": 6,
+            "row_label": "1.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Carbon rich Residue (10-3kg)",
+            "column_descriptor": {
+              "id": "c6",
+              "index": 6,
+              "flat_label": "Carbon rich Residue (10-3kg)",
+              "header_path": [
+                "Carbon rich Residue (10-3kg)"
+              ],
+              "header_leaf": "Carbon rich Residue (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Carbon rich Residue (10-3kg)",
+                  "header_row": 0,
+                  "column": 6
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Carbon rich Residue",
+                "entity_type": "Material",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 1, column 6 (Carbon rich Residue (10-3kg)): 40",
+            "value": "40",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "40",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                6,
+                6
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_004",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "table_title": "Table 1 Pyrolysis yield of PCB boards after heat treatment in the horizontal resistance furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table. (Initial weight scaled to 0.1 kg).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "pyrolysis",
+          "target_id": "table_ir_ent_002",
+          "target_name": "copper rich red fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 2, column 4 (Copper rich red Fraction (10-3kg)): 13.5",
+          "attributes": {
+            "property": "weight",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+            "row_idx": 2,
+            "col_idx": 4,
+            "row_label": "2.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Copper rich red Fraction (10-3kg)",
+            "column_descriptor": {
+              "id": "c4",
+              "index": 4,
+              "flat_label": "Copper rich red Fraction (10-3kg)",
+              "header_path": [
+                "Copper rich red Fraction (10-3kg)"
+              ],
+              "header_leaf": "Copper rich red Fraction (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Copper rich red Fraction (10-3kg)",
+                  "header_row": 0,
+                  "column": 4
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Copper rich red Fraction",
+                "entity_type": "Material",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 2, column 4 (Copper rich red Fraction (10-3kg)): 13.5",
+            "value": "13.5",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "13.5",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+              "row_span": [
+                2,
+                2
+              ],
+              "col_span": [
+                4,
+                4
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_005",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "table_title": "Table 1 Pyrolysis yield of PCB boards after heat treatment in the horizontal resistance furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table. (Initial weight scaled to 0.1 kg).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "pyrolysis",
+          "target_id": "table_ir_ent_003",
+          "target_name": "Lead/tin rich white Fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 2, column 5 (Lead/tin rich white Fraction (10-3kg)): 13.5",
+          "attributes": {
+            "property": "weight",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+            "row_idx": 2,
+            "col_idx": 5,
+            "row_label": "2.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Lead/tin rich white Fraction (10-3kg)",
+            "column_descriptor": {
+              "id": "c5",
+              "index": 5,
+              "flat_label": "Lead/tin rich white Fraction (10-3kg)",
+              "header_path": [
+                "Lead/tin rich white Fraction (10-3kg)"
+              ],
+              "header_leaf": "Lead/tin rich white Fraction (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Lead/tin rich white Fraction (10-3kg)",
+                  "header_row": 0,
+                  "column": 5
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Lead/tin rich white Fraction",
+                "entity_type": "Material",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 2, column 5 (Lead/tin rich white Fraction (10-3kg)): 13.5",
+            "value": "13.5",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "13.5",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+              "row_span": [
+                2,
+                2
+              ],
+              "col_span": [
+                5,
+                5
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_006",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "table_title": "Table 1 Pyrolysis yield of PCB boards after heat treatment in the horizontal resistance furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table. (Initial weight scaled to 0.1 kg).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "pyrolysis",
+          "target_id": "table_ir_ent_004",
+          "target_name": "Carbon rich Residue",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 2, column 6 (Carbon rich Residue (10-3kg)): 46.5",
+          "attributes": {
+            "property": "weight",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+            "row_idx": 2,
+            "col_idx": 6,
+            "row_label": "2.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Carbon rich Residue (10-3kg)",
+            "column_descriptor": {
+              "id": "c6",
+              "index": 6,
+              "flat_label": "Carbon rich Residue (10-3kg)",
+              "header_path": [
+                "Carbon rich Residue (10-3kg)"
+              ],
+              "header_leaf": "Carbon rich Residue (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Carbon rich Residue (10-3kg)",
+                  "header_row": 0,
+                  "column": 6
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Carbon rich Residue",
+                "entity_type": "Material",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 2, column 6 (Carbon rich Residue (10-3kg)): 46.5",
+            "value": "46.5",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "46.5",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+              "row_span": [
+                2,
+                2
+              ],
+              "col_span": [
+                6,
+                6
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_007",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "table_title": "Table 1 Pyrolysis yield of PCB boards after heat treatment in the horizontal resistance furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table. (Initial weight scaled to 0.1 kg).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "pyrolysis",
+          "target_id": "table_ir_ent_002",
+          "target_name": "copper rich red fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 3, column 4 (Copper rich red Fraction (10-3kg)): 13.5",
+          "attributes": {
+            "property": "weight",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+            "row_idx": 3,
+            "col_idx": 4,
+            "row_label": "3.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Copper rich red Fraction (10-3kg)",
+            "column_descriptor": {
+              "id": "c4",
+              "index": 4,
+              "flat_label": "Copper rich red Fraction (10-3kg)",
+              "header_path": [
+                "Copper rich red Fraction (10-3kg)"
+              ],
+              "header_leaf": "Copper rich red Fraction (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Copper rich red Fraction (10-3kg)",
+                  "header_row": 0,
+                  "column": 4
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Copper rich red Fraction",
+                "entity_type": "Material",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 3, column 4 (Copper rich red Fraction (10-3kg)): 13.5",
+            "value": "13.5",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "13.5",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+              "row_span": [
+                3,
+                3
+              ],
+              "col_span": [
+                4,
+                4
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_008",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "table_title": "Table 1 Pyrolysis yield of PCB boards after heat treatment in the horizontal resistance furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table. (Initial weight scaled to 0.1 kg).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "pyrolysis",
+          "target_id": "table_ir_ent_003",
+          "target_name": "Lead/tin rich white Fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 3, column 5 (Lead/tin rich white Fraction (10-3kg)): 20",
+          "attributes": {
+            "property": "weight",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+            "row_idx": 3,
+            "col_idx": 5,
+            "row_label": "3.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Lead/tin rich white Fraction (10-3kg)",
+            "column_descriptor": {
+              "id": "c5",
+              "index": 5,
+              "flat_label": "Lead/tin rich white Fraction (10-3kg)",
+              "header_path": [
+                "Lead/tin rich white Fraction (10-3kg)"
+              ],
+              "header_leaf": "Lead/tin rich white Fraction (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Lead/tin rich white Fraction (10-3kg)",
+                  "header_row": 0,
+                  "column": 5
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Lead/tin rich white Fraction",
+                "entity_type": "Material",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 3, column 5 (Lead/tin rich white Fraction (10-3kg)): 20",
+            "value": "20",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "20",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+              "row_span": [
+                3,
+                3
+              ],
+              "col_span": [
+                5,
+                5
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_009",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "table_title": "Table 1 Pyrolysis yield of PCB boards after heat treatment in the horizontal resistance furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table. (Initial weight scaled to 0.1 kg).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "pyrolysis",
+          "target_id": "table_ir_ent_004",
+          "target_name": "Carbon rich Residue",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 3, column 6 (Carbon rich Residue (10-3kg)): 46.5",
+          "attributes": {
+            "property": "weight",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+            "row_idx": 3,
+            "col_idx": 6,
+            "row_label": "3.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Carbon rich Residue (10-3kg)",
+            "column_descriptor": {
+              "id": "c6",
+              "index": 6,
+              "flat_label": "Carbon rich Residue (10-3kg)",
+              "header_path": [
+                "Carbon rich Residue (10-3kg)"
+              ],
+              "header_leaf": "Carbon rich Residue (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Carbon rich Residue (10-3kg)",
+                  "header_row": 0,
+                  "column": 6
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Carbon rich Residue",
+                "entity_type": "Material",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 3, column 6 (Carbon rich Residue (10-3kg)): 46.5",
+            "value": "46.5",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "46.5",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+              "row_span": [
+                3,
+                3
+              ],
+              "col_span": [
+                6,
+                6
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_010",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "table_title": "Table 1 Pyrolysis yield of PCB boards after heat treatment in the horizontal resistance furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table. (Initial weight scaled to 0.1 kg).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "pyrolysis",
+          "target_id": "table_ir_ent_002",
+          "target_name": "copper rich red fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 4, column 4 (Copper rich red Fraction (10-3kg)): 17.5",
+          "attributes": {
+            "property": "weight",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+            "row_idx": 4,
+            "col_idx": 4,
+            "row_label": "4.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Copper rich red Fraction (10-3kg)",
+            "column_descriptor": {
+              "id": "c4",
+              "index": 4,
+              "flat_label": "Copper rich red Fraction (10-3kg)",
+              "header_path": [
+                "Copper rich red Fraction (10-3kg)"
+              ],
+              "header_leaf": "Copper rich red Fraction (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Copper rich red Fraction (10-3kg)",
+                  "header_row": 0,
+                  "column": 4
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Copper rich red Fraction",
+                "entity_type": "Material",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 4, column 4 (Copper rich red Fraction (10-3kg)): 17.5",
+            "value": "17.5",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "17.5",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+              "row_span": [
+                4,
+                4
+              ],
+              "col_span": [
+                4,
+                4
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_011",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "table_title": "Table 1 Pyrolysis yield of PCB boards after heat treatment in the horizontal resistance furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table. (Initial weight scaled to 0.1 kg).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "pyrolysis",
+          "target_id": "table_ir_ent_003",
+          "target_name": "Lead/tin rich white Fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 4, column 5 (Lead/tin rich white Fraction (10-3kg)): 20.0",
+          "attributes": {
+            "property": "weight",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+            "row_idx": 4,
+            "col_idx": 5,
+            "row_label": "4.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Lead/tin rich white Fraction (10-3kg)",
+            "column_descriptor": {
+              "id": "c5",
+              "index": 5,
+              "flat_label": "Lead/tin rich white Fraction (10-3kg)",
+              "header_path": [
+                "Lead/tin rich white Fraction (10-3kg)"
+              ],
+              "header_leaf": "Lead/tin rich white Fraction (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Lead/tin rich white Fraction (10-3kg)",
+                  "header_row": 0,
+                  "column": 5
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Lead/tin rich white Fraction",
+                "entity_type": "Material",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 4, column 5 (Lead/tin rich white Fraction (10-3kg)): 20.0",
+            "value": "20.0",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "20.0",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+              "row_span": [
+                4,
+                4
+              ],
+              "col_span": [
+                5,
+                5
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_012",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+          "table_title": "Table 1 Pyrolysis yield of PCB boards after heat treatment in the horizontal resistance furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table. (Initial weight scaled to 0.1 kg).",
+          "source_id": "table_ir_ent_001",
+          "source_name": "pyrolysis",
+          "target_id": "table_ir_ent_004",
+          "target_name": "Carbon rich Residue",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 4, column 6 (Carbon rich Residue (10-3kg)): 50",
+          "attributes": {
+            "property": "weight",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+            "row_idx": 4,
+            "col_idx": 6,
+            "row_label": "4.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Carbon rich Residue (10-3kg)",
+            "column_descriptor": {
+              "id": "c6",
+              "index": 6,
+              "flat_label": "Carbon rich Residue (10-3kg)",
+              "header_path": [
+                "Carbon rich Residue (10-3kg)"
+              ],
+              "header_leaf": "Carbon rich Residue (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Carbon rich Residue (10-3kg)",
+                  "header_row": 0,
+                  "column": 6
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Carbon rich Residue",
+                "entity_type": "Material",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001 row 4, column 6 (Carbon rich Residue (10-3kg)): 50",
+            "value": "50",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "50",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+              "row_span": [
+                4,
+                4
+              ],
+              "col_span": [
+                6,
+                6
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        }
+      ],
+      "conditions": [],
+      "context_records": [],
+      "table_structure": {
+        "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+        "extraction_mode": "semantic_ir",
+        "table_role": "recovery_result",
+        "extractability": {
+          "decision": "extract",
+          "table_role": "recovery_result",
+          "reason": "Table reports post-pyrolysis fraction weights for copper-rich red fraction, lead/tin-rich white fraction, and carbon-rich residue from different waste PCBs, which are treatment outcomes.",
+          "confidence": 0.9,
+          "gate_decision": "extract",
+          "gate_table_role": "recovery_result"
+        },
+        "layout": null
+      },
+      "source_table": {
+        "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0001",
+        "page_number": 4,
+        "caption": "Table 1 Pyrolysis yield of PCB boards after heat treatment in the horizontal resistance furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table. (Initial weight scaled to 0.1 kg).",
+        "section": "2.3. Characterization of pyrolysis residues",
+        "explicit_references": [],
+        "headers": [
+          "S. No.",
+          "Waste PCBs",
+          "Initial Weight (10-3kg)",
+          "Weight after pyrolysis (10-3kg)",
+          "Copper rich red Fraction (10-3kg)",
+          "Lead/tin rich white Fraction (10-3kg)",
+          "Carbon rich Residue (10-3kg)"
+        ],
+        "header_rows": [
+          [
+            "S. No.",
+            "Waste PCBs",
+            "Initial Weight (10-3kg)",
+            "Weight after pyrolysis (10-3kg)",
+            "Copper rich red Fraction (10-3kg)",
+            "Lead/tin rich white Fraction (10-3kg)",
+            "Carbon rich Residue (10-3kg)"
+          ]
+        ],
+        "column_descriptors": [
+          {
+            "id": "c0",
+            "index": 0,
+            "flat_label": "S. No.",
+            "header_path": [
+              "S. No."
+            ],
+            "header_leaf": "S. No.",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "S. No.",
+                "header_row": 0,
+                "column": 0
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c1",
+            "index": 1,
+            "flat_label": "Waste PCBs",
+            "header_path": [
+              "Waste PCBs"
+            ],
+            "header_leaf": "Waste PCBs",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Waste PCBs",
+                "header_row": 0,
+                "column": 1
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c2",
+            "index": 2,
+            "flat_label": "Initial Weight (10-3kg)",
+            "header_path": [
+              "Initial Weight (10-3kg)"
+            ],
+            "header_leaf": "Initial Weight (10-3kg)",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Initial Weight (10-3kg)",
+                "header_row": 0,
+                "column": 2
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c3",
+            "index": 3,
+            "flat_label": "Weight after pyrolysis (10-3kg)",
+            "header_path": [
+              "Weight after pyrolysis (10-3kg)"
+            ],
+            "header_leaf": "Weight after pyrolysis (10-3kg)",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Weight after pyrolysis (10-3kg)",
+                "header_row": 0,
+                "column": 3
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c4",
+            "index": 4,
+            "flat_label": "Copper rich red Fraction (10-3kg)",
+            "header_path": [
+              "Copper rich red Fraction (10-3kg)"
+            ],
+            "header_leaf": "Copper rich red Fraction (10-3kg)",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Copper rich red Fraction (10-3kg)",
+                "header_row": 0,
+                "column": 4
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c5",
+            "index": 5,
+            "flat_label": "Lead/tin rich white Fraction (10-3kg)",
+            "header_path": [
+              "Lead/tin rich white Fraction (10-3kg)"
+            ],
+            "header_leaf": "Lead/tin rich white Fraction (10-3kg)",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Lead/tin rich white Fraction (10-3kg)",
+                "header_row": 0,
+                "column": 5
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c6",
+            "index": 6,
+            "flat_label": "Carbon rich Residue (10-3kg)",
+            "header_path": [
+              "Carbon rich Residue (10-3kg)"
+            ],
+            "header_leaf": "Carbon rich Residue (10-3kg)",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Carbon rich Residue (10-3kg)",
+                "header_row": 0,
+                "column": 6
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          }
+        ],
+        "unit_scope_candidates": [],
+        "rows": [
+          [
+            "1.",
+            "Mobiles",
+            "100",
+            "80",
+            "25",
+            "15",
+            "40"
+          ],
+          [
+            "2.",
+            "Mother Boards",
+            "100",
+            "73.5",
+            "13.5",
+            "13.5",
+            "46.5"
+          ],
+          [
+            "3.",
+            "Power Supply",
+            "100",
+            "80.0",
+            "13.5",
+            "20",
+            "46.5"
+          ],
+          [
+            "4.",
+            "RAMs",
+            "100",
+            "87.5",
+            "17.5",
+            "20.0",
+            "50"
+          ]
+        ],
+        "row_contexts": [],
+        "notes": [],
+        "raw_markdown": "| S. No. | Waste PCBs | Initial Weight (10-3kg) | Weight after pyrolysis (10-3kg) | Copper rich red Fraction (10-3kg) | Lead/tin rich white Fraction (10-3kg) | Carbon rich Residue (10-3kg) |\n| --- | --- | --- | --- | --- | --- | --- |\n| 1. | Mobiles | 100 | 80 | 25 | 15 | 40 |\n| 2. | Mother Boards | 100 | 73.5 | 13.5 | 13.5 | 46.5 |\n| 3. | Power Supply | 100 | 80.0 | 13.5 | 20 | 46.5 |\n| 4. | RAMs | 100 | 87.5 | 17.5 | 20.0 | 50 |",
+        "position_start": 15608,
+        "position_end": 15729,
+        "source": "mineru_content_list",
+        "source_kind": "standalone_table",
+        "layout_context": {
+          "previous_block_type": "image",
+          "next_block_type": "table",
+          "between_image_blocks": false
+        },
+        "raw_html": "<table><tr><td>S. No.</td><td>Waste PCBs</td><td>Initial Weight (10-3kg)</td><td>Weight after pyrolysis (10-3kg)</td><td>Copper rich red Fraction (10-3kg)</td><td>Lead/tin rich white Fraction (10-3kg)</td><td>Carbon rich Residue (10-3kg)</td></tr><tr><td>1.</td><td>Mobiles</td><td>100</td><td>80</td><td>25</td><td>15</td><td>40</td></tr><tr><td>2.</td><td>Mother Boards</td><td>100</td><td>73.5</td><td>13.5</td><td>13.5</td><td>46.5</td></tr><tr><td>3.</td><td>Power Supply</td><td>100</td><td>80.0</td><td>13.5</td><td>20</td><td>46.5</td></tr><tr><td>4.</td><td>RAMs</td><td>100</td><td>87.5</td><td>17.5</td><td>20.0</td><td>50</td></tr></table>",
+        "image_path": "images/0887d7ef2a57b27837fb1df03b80ac6da62d5d671417af57f6492730de87ce19.jpg",
+        "bbox": [
+          70,
+          868,
+          944,
+          947
+        ],
+        "metadata": {
+          "table_reference_sentences": [
+            "The weight loss and yield of various fractions following pyrolysis in the horizontal resistance and plasma furnaces is presented in Tables 1 and 2 respectively."
+          ]
+        },
+        "table_reference_sentences": [
+          "The weight loss and yield of various fractions following pyrolysis in the horizontal resistance and plasma furnaces is presented in Tables 1 and 2 respectively."
+        ]
+      }
+    }
+  },
+  {
+    "chunk_id": "Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards__table__TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+    "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+    "result": {
+      "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+      "entity_count": 29,
+      "relation_count": 20,
+      "condition_count": 5,
+      "context_record_count": 0,
+      "entities": [
+        {
+          "id": "table_ir_ent_001",
+          "name": "Mobile",
+          "mention_text": "Mobiles",
+          "type": "Component",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [
+            "Mobiles"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "row[1]",
+            "column_idx": 2
+          }
+        },
+        {
+          "id": "table_ir_ent_002",
+          "name": "Initial Weight",
+          "mention_text": "Initial Weight",
+          "type": "Observation",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 2
+          }
+        },
+        {
+          "id": "table_ir_ent_003",
+          "name": "Mother Board",
+          "mention_text": "Mother Boards",
+          "type": "Component",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [
+            "Mother Boards"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "row[1]",
+            "column_idx": 2
+          }
+        },
+        {
+          "id": "table_ir_ent_004",
+          "name": "Power Supply",
+          "mention_text": "Power Supply",
+          "type": "Component",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "row[1]",
+            "column_idx": 2
+          }
+        },
+        {
+          "id": "table_ir_ent_005",
+          "name": "RAM",
+          "mention_text": "RAMs",
+          "type": "Component",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [
+            "RAMs"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "row[1]",
+            "column_idx": 2
+          }
+        },
+        {
+          "id": "table_ir_ent_006",
+          "name": "Weight pyrolysis",
+          "mention_text": "Weight after pyrolysis",
+          "type": "Observation",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [
+            "Weight after pyrolysis"
+          ],
+          "condition_ids": [
+            "table_ir_cond_temporal_modifier_after"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 3
+          }
+        },
+        {
+          "id": "table_ir_ent_007",
+          "name": "copper rich red fraction",
+          "mention_text": "Copper rich red Fraction",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [
+            "Copper rich red Fraction"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 4
+          }
+        },
+        {
+          "id": "table_ir_ent_008",
+          "name": "Lead/tin rich white Fraction",
+          "mention_text": "Lead/tin rich white Fraction",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 5
+          }
+        },
+        {
+          "id": "table_ir_ent_009",
+          "name": "Carbon rich Residue",
+          "mention_text": "Carbon rich Residue",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "column.semantic.entity_text",
+            "column_idx": 6
+          }
+        },
+        {
+          "id": "table_ir_ent_010",
+          "name": "Pyrolysis",
+          "mention_text": "Pyrolysis",
+          "type": "Process",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_mobiles"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 0
+          }
+        },
+        {
+          "id": "table_ir_ent_011",
+          "name": "Mobiles",
+          "mention_text": "Mobiles",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_mobiles"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 0
+          }
+        },
+        {
+          "id": "table_ir_ent_012",
+          "name": "Pyrolysis",
+          "mention_text": "Pyrolysis",
+          "type": "Process",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_mother_boards"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_013",
+          "name": "Mother Boards",
+          "mention_text": "Mother Boards",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_mother_boards"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_014",
+          "name": "Pyrolysis",
+          "mention_text": "Pyrolysis",
+          "type": "Process",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_power_supply"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 2
+          }
+        },
+        {
+          "id": "table_ir_ent_015",
+          "name": "Power Supply",
+          "mention_text": "Power Supply",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_power_supply"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 2
+          }
+        },
+        {
+          "id": "table_ir_ent_016",
+          "name": "Pyrolysis",
+          "mention_text": "Pyrolysis",
+          "type": "Process",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_rams"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 3
+          }
+        },
+        {
+          "id": "table_ir_ent_017",
+          "name": "RAMs",
+          "mention_text": "RAMs",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_rams"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 3
+          }
+        },
+        {
+          "id": "table_ir_ent_018",
+          "name": "copper rich red fraction",
+          "mention_text": "Copper rich red Fraction",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [
+            "Copper rich red Fraction"
+          ],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_mobiles"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 4
+          }
+        },
+        {
+          "id": "table_ir_ent_019",
+          "name": "copper rich red fraction",
+          "mention_text": "Copper rich red Fraction",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [
+            "Copper rich red Fraction"
+          ],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_mother_boards"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 5
+          }
+        },
+        {
+          "id": "table_ir_ent_020",
+          "name": "copper rich red fraction",
+          "mention_text": "Copper rich red Fraction",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [
+            "Copper rich red Fraction"
+          ],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_power_supply"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 6
+          }
+        },
+        {
+          "id": "table_ir_ent_021",
+          "name": "copper rich red fraction",
+          "mention_text": "Copper rich red Fraction",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [
+            "Copper rich red Fraction"
+          ],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_rams"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 7
+          }
+        },
+        {
+          "id": "table_ir_ent_022",
+          "name": "Lead/tin rich white Fraction",
+          "mention_text": "Lead/tin rich white Fraction",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_mobiles"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 8
+          }
+        },
+        {
+          "id": "table_ir_ent_023",
+          "name": "Lead/tin rich white Fraction",
+          "mention_text": "Lead/tin rich white Fraction",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_mother_boards"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 9
+          }
+        },
+        {
+          "id": "table_ir_ent_024",
+          "name": "Lead/tin rich white Fraction",
+          "mention_text": "Lead/tin rich white Fraction",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_power_supply"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 10
+          }
+        },
+        {
+          "id": "table_ir_ent_025",
+          "name": "Lead/tin rich white Fraction",
+          "mention_text": "Lead/tin rich white Fraction",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_rams"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 11
+          }
+        },
+        {
+          "id": "table_ir_ent_026",
+          "name": "Carbon rich Residue",
+          "mention_text": "Carbon rich Residue",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_mobiles"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 12
+          }
+        },
+        {
+          "id": "table_ir_ent_027",
+          "name": "Carbon rich Residue",
+          "mention_text": "Carbon rich Residue",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_mother_boards"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 13
+          }
+        },
+        {
+          "id": "table_ir_ent_028",
+          "name": "Carbon rich Residue",
+          "mention_text": "Carbon rich Residue",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_power_supply"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 14
+          }
+        },
+        {
+          "id": "table_ir_ent_029",
+          "name": "Carbon rich Residue",
+          "mention_text": "Carbon rich Residue",
+          "type": "Material",
+          "source": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "synonyms": [],
+          "condition_ids": [
+            "table_ir_cond_condition_1_waste_pcbs_rams"
+          ],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 15
+          }
+        }
+      ],
+      "relations": [
+        {
+          "id": "table_ir_rel_001",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_001",
+          "source_name": "Mobile",
+          "target_id": "table_ir_ent_002",
+          "target_name": "Initial Weight",
+          "relation_type": "HAS_OBSERVATION",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002 row 1, column 2 (Initial Weight (10-3kg)): 100",
+          "attributes": {
+            "property": "observation",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "row_idx": 1,
+            "col_idx": 2,
+            "row_label": "1.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Initial Weight (10-3kg)",
+            "column_descriptor": {
+              "id": "c2",
+              "index": 2,
+              "flat_label": "Initial Weight (10-3kg)",
+              "header_path": [
+                "Initial Weight (10-3kg)"
+              ],
+              "header_leaf": "Initial Weight (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Initial Weight (10-3kg)",
+                  "header_row": 0,
+                  "column": 2
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Initial Weight",
+                "entity_type": "Observation",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002 row 1, column 2 (Initial Weight (10-3kg)): 100",
+            "value": "100",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "100",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+              "row_span": [
+                1,
+                1
+              ],
+              "col_span": [
+                2,
+                2
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_002",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_003",
+          "source_name": "Mother Board",
+          "target_id": "table_ir_ent_002",
+          "target_name": "Initial Weight",
+          "relation_type": "HAS_OBSERVATION",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002 row 2, column 2 (Initial Weight (10-3kg)): 100",
+          "attributes": {
+            "property": "observation",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "row_idx": 2,
+            "col_idx": 2,
+            "row_label": "2.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Initial Weight (10-3kg)",
+            "column_descriptor": {
+              "id": "c2",
+              "index": 2,
+              "flat_label": "Initial Weight (10-3kg)",
+              "header_path": [
+                "Initial Weight (10-3kg)"
+              ],
+              "header_leaf": "Initial Weight (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Initial Weight (10-3kg)",
+                  "header_row": 0,
+                  "column": 2
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Initial Weight",
+                "entity_type": "Observation",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002 row 2, column 2 (Initial Weight (10-3kg)): 100",
+            "value": "100",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "100",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+              "row_span": [
+                2,
+                2
+              ],
+              "col_span": [
+                2,
+                2
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_003",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_004",
+          "source_name": "Power Supply",
+          "target_id": "table_ir_ent_002",
+          "target_name": "Initial Weight",
+          "relation_type": "HAS_OBSERVATION",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002 row 3, column 2 (Initial Weight (10-3kg)): 100",
+          "attributes": {
+            "property": "observation",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "row_idx": 3,
+            "col_idx": 2,
+            "row_label": "3.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Initial Weight (10-3kg)",
+            "column_descriptor": {
+              "id": "c2",
+              "index": 2,
+              "flat_label": "Initial Weight (10-3kg)",
+              "header_path": [
+                "Initial Weight (10-3kg)"
+              ],
+              "header_leaf": "Initial Weight (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Initial Weight (10-3kg)",
+                  "header_row": 0,
+                  "column": 2
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Initial Weight",
+                "entity_type": "Observation",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002 row 3, column 2 (Initial Weight (10-3kg)): 100",
+            "value": "100",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "100",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+              "row_span": [
+                3,
+                3
+              ],
+              "col_span": [
+                2,
+                2
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_rel_004",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_005",
+          "source_name": "RAM",
+          "target_id": "table_ir_ent_002",
+          "target_name": "Initial Weight",
+          "relation_type": "HAS_OBSERVATION",
+          "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002 row 4, column 2 (Initial Weight (10-3kg)): 100",
+          "attributes": {
+            "property": "observation",
+            "template_id": "step_1",
+            "unit": "10-3kg",
+            "condition_ids": [],
+            "condition_labels": [],
+            "condition_sources": [],
+            "condition_evidence": [],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "row_idx": 4,
+            "col_idx": 2,
+            "row_label": "4.",
+            "row_context": null,
+            "row_context_labels": [],
+            "row_context_groups": [],
+            "column_header": "Initial Weight (10-3kg)",
+            "column_descriptor": {
+              "id": "c2",
+              "index": 2,
+              "flat_label": "Initial Weight (10-3kg)",
+              "header_path": [
+                "Initial Weight (10-3kg)"
+              ],
+              "header_leaf": "Initial Weight (10-3kg)",
+              "header_group": "",
+              "raw_header_cells": [
+                {
+                  "text": "Initial Weight (10-3kg)",
+                  "header_row": 0,
+                  "column": 2
+                }
+              ],
+              "recoverability": "mineru_header_rows",
+              "semantic": {
+                "entity_text": "Initial Weight",
+                "entity_type": "Observation",
+                "unit_text": "10-3kg"
+              }
+            },
+            "evidence_span": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002 row 4, column 2 (Initial Weight (10-3kg)): 100",
+            "value": "100",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "100",
+            "source": "table_ir",
+            "scope": {
+              "kind": "cell",
+              "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+              "row_span": [
+                4,
+                4
+              ],
+              "col_span": [
+                2,
+                2
+              ],
+              "source": "plan_select",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_005",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_010",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_011",
+          "target_name": "Mobiles",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "80",
+          "attributes": {
+            "property": "weight after pyrolysis",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_mobiles"
+            ],
+            "condition_labels": [
+              "Waste PCBs: Mobiles"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "80",
+            "provenance": {
+              "row_idx": 1,
+              "column_idx": 3,
+              "value_cell": "80"
+            },
+            "extraction_path": "direct_repair",
+            "value": "80",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "80",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: Mobiles",
+                "unit": null,
+                "raw_text": "Waste PCBs: Mobiles"
+              }
+            ],
+            "condition": "Waste PCBs: Mobiles"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_006",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_012",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_013",
+          "target_name": "Mother Boards",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "73.35",
+          "attributes": {
+            "property": "weight after pyrolysis",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_mother_boards"
+            ],
+            "condition_labels": [
+              "Waste PCBs: Mother Boards"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "73.35",
+            "provenance": {
+              "row_idx": 2,
+              "column_idx": 3,
+              "value_cell": "73.35"
+            },
+            "extraction_path": "direct_repair",
+            "value": "73.35",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "73.35",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: Mother Boards",
+                "unit": null,
+                "raw_text": "Waste PCBs: Mother Boards"
+              }
+            ],
+            "condition": "Waste PCBs: Mother Boards"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_007",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_014",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_015",
+          "target_name": "Power Supply",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "80.05",
+          "attributes": {
+            "property": "weight after pyrolysis",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_power_supply"
+            ],
+            "condition_labels": [
+              "Waste PCBs: Power Supply"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "80.05",
+            "provenance": {
+              "row_idx": 3,
+              "column_idx": 3,
+              "value_cell": "80.05"
+            },
+            "extraction_path": "direct_repair",
+            "value": "80.05",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "80.05",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: Power Supply",
+                "unit": null,
+                "raw_text": "Waste PCBs: Power Supply"
+              }
+            ],
+            "condition": "Waste PCBs: Power Supply"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_008",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_016",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_017",
+          "target_name": "RAMs",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "87.5",
+          "attributes": {
+            "property": "weight after pyrolysis",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_rams"
+            ],
+            "condition_labels": [
+              "Waste PCBs: RAMs"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "87.5",
+            "provenance": {
+              "row_idx": 4,
+              "column_idx": 3,
+              "value_cell": "87.5"
+            },
+            "extraction_path": "direct_repair",
+            "value": "87.5",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "87.5",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: RAMs",
+                "unit": null,
+                "raw_text": "Waste PCBs: RAMs"
+              }
+            ],
+            "condition": "Waste PCBs: RAMs"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_009",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_010",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_018",
+          "target_name": "copper rich red fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "25",
+          "attributes": {
+            "property": "fraction weight",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_mobiles"
+            ],
+            "condition_labels": [
+              "Waste PCBs: Mobiles"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "25",
+            "provenance": {
+              "row_idx": 1,
+              "column_idx": 4,
+              "value_cell": "25"
+            },
+            "extraction_path": "direct_repair",
+            "value": "25",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "25",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: Mobiles",
+                "unit": null,
+                "raw_text": "Waste PCBs: Mobiles"
+              }
+            ],
+            "condition": "Waste PCBs: Mobiles"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_010",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_012",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_019",
+          "target_name": "copper rich red fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "23.35",
+          "attributes": {
+            "property": "fraction weight",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_mother_boards"
+            ],
+            "condition_labels": [
+              "Waste PCBs: Mother Boards"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "23.35",
+            "provenance": {
+              "row_idx": 2,
+              "column_idx": 4,
+              "value_cell": "23.35"
+            },
+            "extraction_path": "direct_repair",
+            "value": "23.35",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "23.35",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: Mother Boards",
+                "unit": null,
+                "raw_text": "Waste PCBs: Mother Boards"
+              }
+            ],
+            "condition": "Waste PCBs: Mother Boards"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_011",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_014",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_020",
+          "target_name": "copper rich red fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "13.35",
+          "attributes": {
+            "property": "fraction weight",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_power_supply"
+            ],
+            "condition_labels": [
+              "Waste PCBs: Power Supply"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "13.35",
+            "provenance": {
+              "row_idx": 3,
+              "column_idx": 4,
+              "value_cell": "13.35"
+            },
+            "extraction_path": "direct_repair",
+            "value": "13.35",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "13.35",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: Power Supply",
+                "unit": null,
+                "raw_text": "Waste PCBs: Power Supply"
+              }
+            ],
+            "condition": "Waste PCBs: Power Supply"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_012",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_016",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_021",
+          "target_name": "copper rich red fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "16.25",
+          "attributes": {
+            "property": "fraction weight",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_rams"
+            ],
+            "condition_labels": [
+              "Waste PCBs: RAMs"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "16.25",
+            "provenance": {
+              "row_idx": 4,
+              "column_idx": 4,
+              "value_cell": "16.25"
+            },
+            "extraction_path": "direct_repair",
+            "value": "16.25",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "16.25",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: RAMs",
+                "unit": null,
+                "raw_text": "Waste PCBs: RAMs"
+              }
+            ],
+            "condition": "Waste PCBs: RAMs"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_013",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_010",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_022",
+          "target_name": "Lead/tin rich white Fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "15",
+          "attributes": {
+            "property": "fraction weight",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_mobiles"
+            ],
+            "condition_labels": [
+              "Waste PCBs: Mobiles"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "15",
+            "provenance": {
+              "row_idx": 1,
+              "column_idx": 5,
+              "value_cell": "15"
+            },
+            "extraction_path": "direct_repair",
+            "value": "15",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "15",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: Mobiles",
+                "unit": null,
+                "raw_text": "Waste PCBs: Mobiles"
+              }
+            ],
+            "condition": "Waste PCBs: Mobiles"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_014",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_012",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_023",
+          "target_name": "Lead/tin rich white Fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "10",
+          "attributes": {
+            "property": "fraction weight",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_mother_boards"
+            ],
+            "condition_labels": [
+              "Waste PCBs: Mother Boards"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "10",
+            "provenance": {
+              "row_idx": 2,
+              "column_idx": 5,
+              "value_cell": "10"
+            },
+            "extraction_path": "direct_repair",
+            "value": "10",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "10",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: Mother Boards",
+                "unit": null,
+                "raw_text": "Waste PCBs: Mother Boards"
+              }
+            ],
+            "condition": "Waste PCBs: Mother Boards"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_015",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_014",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_024",
+          "target_name": "Lead/tin rich white Fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "20",
+          "attributes": {
+            "property": "fraction weight",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_power_supply"
+            ],
+            "condition_labels": [
+              "Waste PCBs: Power Supply"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "20",
+            "provenance": {
+              "row_idx": 3,
+              "column_idx": 5,
+              "value_cell": "20"
+            },
+            "extraction_path": "direct_repair",
+            "value": "20",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "20",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: Power Supply",
+                "unit": null,
+                "raw_text": "Waste PCBs: Power Supply"
+              }
+            ],
+            "condition": "Waste PCBs: Power Supply"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_016",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_016",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_025",
+          "target_name": "Lead/tin rich white Fraction",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "21.25",
+          "attributes": {
+            "property": "fraction weight",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_rams"
+            ],
+            "condition_labels": [
+              "Waste PCBs: RAMs"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "21.25",
+            "provenance": {
+              "row_idx": 4,
+              "column_idx": 5,
+              "value_cell": "21.25"
+            },
+            "extraction_path": "direct_repair",
+            "value": "21.25",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "21.25",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: RAMs",
+                "unit": null,
+                "raw_text": "Waste PCBs: RAMs"
+              }
+            ],
+            "condition": "Waste PCBs: RAMs"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_017",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_010",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_026",
+          "target_name": "Carbon rich Residue",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "40",
+          "attributes": {
+            "property": "residue weight",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_mobiles"
+            ],
+            "condition_labels": [
+              "Waste PCBs: Mobiles"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "40",
+            "provenance": {
+              "row_idx": 1,
+              "column_idx": 6,
+              "value_cell": "40"
+            },
+            "extraction_path": "direct_repair",
+            "value": "40",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "40",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: Mobiles",
+                "unit": null,
+                "raw_text": "Waste PCBs: Mobiles"
+              }
+            ],
+            "condition": "Waste PCBs: Mobiles"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_018",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_012",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_027",
+          "target_name": "Carbon rich Residue",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "40",
+          "attributes": {
+            "property": "residue weight",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_mother_boards"
+            ],
+            "condition_labels": [
+              "Waste PCBs: Mother Boards"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "40",
+            "provenance": {
+              "row_idx": 2,
+              "column_idx": 6,
+              "value_cell": "40"
+            },
+            "extraction_path": "direct_repair",
+            "value": "40",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "40",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: Mother Boards",
+                "unit": null,
+                "raw_text": "Waste PCBs: Mother Boards"
+              }
+            ],
+            "condition": "Waste PCBs: Mother Boards"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_019",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_014",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_028",
+          "target_name": "Carbon rich Residue",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "46.7",
+          "attributes": {
+            "property": "residue weight",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_power_supply"
+            ],
+            "condition_labels": [
+              "Waste PCBs: Power Supply"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "46.7",
+            "provenance": {
+              "row_idx": 3,
+              "column_idx": 6,
+              "value_cell": "46.7"
+            },
+            "extraction_path": "direct_repair",
+            "value": "46.7",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "46.7",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: Power Supply",
+                "unit": null,
+                "raw_text": "Waste PCBs: Power Supply"
+              }
+            ],
+            "condition": "Waste PCBs: Power Supply"
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_020",
+          "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+          "table_title": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+          "source_id": "table_ir_ent_016",
+          "source_name": "Pyrolysis",
+          "target_id": "table_ir_ent_029",
+          "target_name": "Carbon rich Residue",
+          "relation_type": "HAS_OUTPUT",
+          "evidence_span": "50",
+          "attributes": {
+            "property": "residue weight",
+            "unit": "10-3kg",
+            "condition_ids": [
+              "table_ir_cond_condition_1_waste_pcbs_rams"
+            ],
+            "condition_labels": [
+              "Waste PCBs: RAMs"
+            ],
+            "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "column_header": null,
+            "evidence_span": "50",
+            "provenance": {
+              "row_idx": 4,
+              "column_idx": 6,
+              "value_cell": "50"
+            },
+            "extraction_path": "direct_repair",
+            "value": "50",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "50",
+            "source": "table_ir",
+            "scope": null,
+            "condition_keys": [
+              {
+                "key": "other",
+                "value": "Waste PCBs: RAMs",
+                "unit": null,
+                "raw_text": "Waste PCBs: RAMs"
+              }
+            ],
+            "condition": "Waste PCBs: RAMs"
+          }
+        }
+      ],
+      "conditions": [
+        {
+          "id": "table_ir_cond_temporal_modifier_after",
+          "name": "temporal modifier",
+          "type": "other",
+          "value": "after",
+          "unit": null,
+          "source": {
+            "doc_id": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "title": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "table_chunk:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "text": "{\"table_id\": \"TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002\", \"page_number\": 5, \"caption\": \"e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.\", \"section\": \"2.3. Characterization of pyrolysis residues\", \"explicit_references\": [], \"headers\": [\"S. No.\", \"Waste PCBs\", \"Initial Weight (10-3kg)\", \"Weight after pyrolysis (10-3kg)\", \"Copper rich red Fraction (10-3kg)\", \"Lead/tin rich white Fraction (10-3kg)\", \"Carbon rich Residue (10-3kg)\"], \"header_rows\": [[\"S. No.\", \"Waste PCBs\", \"Initial Weight (10-3kg)\", \"Weight after pyrolysis (10-3kg)\", \"Copper rich red Fraction (10-3kg)\", \"Lead/tin rich white Fraction (10-3kg)\", \"Carbon rich Residue (10-3kg)\"]], \"column_descriptors\": [{\"id\": \"c0\", \"index\": 0, \"flat_label\": \"S. No.\", \"header_path\": [\"S. No.\"], \"header_leaf\": \"S. No.\", \"head",
+            "parent_chunk_id": null,
+            "section_name": null,
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 0,
+            "position_end": 0,
+            "metadata": {}
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "table_ir_cond_condition_1_waste_pcbs_mobiles",
+          "name": "condition_1",
+          "type": "other",
+          "value": "Waste PCBs: Mobiles",
+          "unit": null,
+          "source": {
+            "doc_id": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "title": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "table_chunk:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "text": "{\"table_id\": \"TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002\", \"page_number\": 5, \"caption\": \"e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.\", \"section\": \"2.3. Characterization of pyrolysis residues\", \"explicit_references\": [], \"headers\": [\"S. No.\", \"Waste PCBs\", \"Initial Weight (10-3kg)\", \"Weight after pyrolysis (10-3kg)\", \"Copper rich red Fraction (10-3kg)\", \"Lead/tin rich white Fraction (10-3kg)\", \"Carbon rich Residue (10-3kg)\"], \"header_rows\": [[\"S. No.\", \"Waste PCBs\", \"Initial Weight (10-3kg)\", \"Weight after pyrolysis (10-3kg)\", \"Copper rich red Fraction (10-3kg)\", \"Lead/tin rich white Fraction (10-3kg)\", \"Carbon rich Residue (10-3kg)\"]], \"column_descriptors\": [{\"id\": \"c0\", \"index\": 0, \"flat_label\": \"S. No.\", \"header_path\": [\"S. No.\"], \"header_leaf\": \"S. No.\", \"head",
+            "parent_chunk_id": null,
+            "section_name": null,
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 0,
+            "position_end": 0,
+            "metadata": {}
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "table_ir_cond_condition_1_waste_pcbs_mother_boards",
+          "name": "condition_1",
+          "type": "other",
+          "value": "Waste PCBs: Mother Boards",
+          "unit": null,
+          "source": {
+            "doc_id": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "title": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "table_chunk:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "text": "{\"table_id\": \"TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002\", \"page_number\": 5, \"caption\": \"e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.\", \"section\": \"2.3. Characterization of pyrolysis residues\", \"explicit_references\": [], \"headers\": [\"S. No.\", \"Waste PCBs\", \"Initial Weight (10-3kg)\", \"Weight after pyrolysis (10-3kg)\", \"Copper rich red Fraction (10-3kg)\", \"Lead/tin rich white Fraction (10-3kg)\", \"Carbon rich Residue (10-3kg)\"], \"header_rows\": [[\"S. No.\", \"Waste PCBs\", \"Initial Weight (10-3kg)\", \"Weight after pyrolysis (10-3kg)\", \"Copper rich red Fraction (10-3kg)\", \"Lead/tin rich white Fraction (10-3kg)\", \"Carbon rich Residue (10-3kg)\"]], \"column_descriptors\": [{\"id\": \"c0\", \"index\": 0, \"flat_label\": \"S. No.\", \"header_path\": [\"S. No.\"], \"header_leaf\": \"S. No.\", \"head",
+            "parent_chunk_id": null,
+            "section_name": null,
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 0,
+            "position_end": 0,
+            "metadata": {}
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "table_ir_cond_condition_1_waste_pcbs_power_supply",
+          "name": "condition_1",
+          "type": "other",
+          "value": "Waste PCBs: Power Supply",
+          "unit": null,
+          "source": {
+            "doc_id": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "title": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "table_chunk:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "text": "{\"table_id\": \"TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002\", \"page_number\": 5, \"caption\": \"e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.\", \"section\": \"2.3. Characterization of pyrolysis residues\", \"explicit_references\": [], \"headers\": [\"S. No.\", \"Waste PCBs\", \"Initial Weight (10-3kg)\", \"Weight after pyrolysis (10-3kg)\", \"Copper rich red Fraction (10-3kg)\", \"Lead/tin rich white Fraction (10-3kg)\", \"Carbon rich Residue (10-3kg)\"], \"header_rows\": [[\"S. No.\", \"Waste PCBs\", \"Initial Weight (10-3kg)\", \"Weight after pyrolysis (10-3kg)\", \"Copper rich red Fraction (10-3kg)\", \"Lead/tin rich white Fraction (10-3kg)\", \"Carbon rich Residue (10-3kg)\"]], \"column_descriptors\": [{\"id\": \"c0\", \"index\": 0, \"flat_label\": \"S. No.\", \"header_path\": [\"S. No.\"], \"header_leaf\": \"S. No.\", \"head",
+            "parent_chunk_id": null,
+            "section_name": null,
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 0,
+            "position_end": 0,
+            "metadata": {}
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        },
+        {
+          "id": "table_ir_cond_condition_1_waste_pcbs_rams",
+          "name": "condition_1",
+          "type": "other",
+          "value": "Waste PCBs: RAMs",
+          "unit": null,
+          "source": {
+            "doc_id": "table:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "title": "Table TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "table_chunk:TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+            "text": "{\"table_id\": \"TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002\", \"page_number\": 5, \"caption\": \"e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.\", \"section\": \"2.3. Characterization of pyrolysis residues\", \"explicit_references\": [], \"headers\": [\"S. No.\", \"Waste PCBs\", \"Initial Weight (10-3kg)\", \"Weight after pyrolysis (10-3kg)\", \"Copper rich red Fraction (10-3kg)\", \"Lead/tin rich white Fraction (10-3kg)\", \"Carbon rich Residue (10-3kg)\"], \"header_rows\": [[\"S. No.\", \"Waste PCBs\", \"Initial Weight (10-3kg)\", \"Weight after pyrolysis (10-3kg)\", \"Copper rich red Fraction (10-3kg)\", \"Lead/tin rich white Fraction (10-3kg)\", \"Carbon rich Residue (10-3kg)\"]], \"column_descriptors\": [{\"id\": \"c0\", \"index\": 0, \"flat_label\": \"S. No.\", \"header_path\": [\"S. No.\"], \"header_leaf\": \"S. No.\", \"head",
+            "parent_chunk_id": null,
+            "section_name": null,
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 0,
+            "position_end": 0,
+            "metadata": {}
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "context_records": [],
+      "table_structure": {
+        "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+        "extraction_mode": "semantic_ir",
+        "table_role": "recovery_result",
+        "extractability": {
+          "decision": "extract",
+          "table_role": "recovery_result",
+          "reason": "Table reports post-pyrolysis fraction weights for different waste PCB types after plasma furnace treatment, matching allowed recovery_result fact types.",
+          "confidence": 0.9,
+          "gate_decision": "extract",
+          "gate_table_role": "recovery_result"
+        },
+        "layout": null
+      },
+      "source_table": {
+        "table_id": "TABLE_Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards_0002",
+        "page_number": 5,
+        "caption": "e Table 2 Pyrolysis yield of PCB boards after heat treatment in the plasma furnace. The weights of red and white metallic fractions and carbonaceous residues from various PCBs are given in the table.",
+        "section": "2.3. Characterization of pyrolysis residues",
+        "explicit_references": [],
+        "headers": [
+          "S. No.",
+          "Waste PCBs",
+          "Initial Weight (10-3kg)",
+          "Weight after pyrolysis (10-3kg)",
+          "Copper rich red Fraction (10-3kg)",
+          "Lead/tin rich white Fraction (10-3kg)",
+          "Carbon rich Residue (10-3kg)"
+        ],
+        "header_rows": [
+          [
+            "S. No.",
+            "Waste PCBs",
+            "Initial Weight (10-3kg)",
+            "Weight after pyrolysis (10-3kg)",
+            "Copper rich red Fraction (10-3kg)",
+            "Lead/tin rich white Fraction (10-3kg)",
+            "Carbon rich Residue (10-3kg)"
+          ]
+        ],
+        "column_descriptors": [
+          {
+            "id": "c0",
+            "index": 0,
+            "flat_label": "S. No.",
+            "header_path": [
+              "S. No."
+            ],
+            "header_leaf": "S. No.",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "S. No.",
+                "header_row": 0,
+                "column": 0
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c1",
+            "index": 1,
+            "flat_label": "Waste PCBs",
+            "header_path": [
+              "Waste PCBs"
+            ],
+            "header_leaf": "Waste PCBs",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Waste PCBs",
+                "header_row": 0,
+                "column": 1
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c2",
+            "index": 2,
+            "flat_label": "Initial Weight (10-3kg)",
+            "header_path": [
+              "Initial Weight (10-3kg)"
+            ],
+            "header_leaf": "Initial Weight (10-3kg)",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Initial Weight (10-3kg)",
+                "header_row": 0,
+                "column": 2
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c3",
+            "index": 3,
+            "flat_label": "Weight after pyrolysis (10-3kg)",
+            "header_path": [
+              "Weight after pyrolysis (10-3kg)"
+            ],
+            "header_leaf": "Weight after pyrolysis (10-3kg)",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Weight after pyrolysis (10-3kg)",
+                "header_row": 0,
+                "column": 3
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c4",
+            "index": 4,
+            "flat_label": "Copper rich red Fraction (10-3kg)",
+            "header_path": [
+              "Copper rich red Fraction (10-3kg)"
+            ],
+            "header_leaf": "Copper rich red Fraction (10-3kg)",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Copper rich red Fraction (10-3kg)",
+                "header_row": 0,
+                "column": 4
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c5",
+            "index": 5,
+            "flat_label": "Lead/tin rich white Fraction (10-3kg)",
+            "header_path": [
+              "Lead/tin rich white Fraction (10-3kg)"
+            ],
+            "header_leaf": "Lead/tin rich white Fraction (10-3kg)",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Lead/tin rich white Fraction (10-3kg)",
+                "header_row": 0,
+                "column": 5
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c6",
+            "index": 6,
+            "flat_label": "Carbon rich Residue (10-3kg)",
+            "header_path": [
+              "Carbon rich Residue (10-3kg)"
+            ],
+            "header_leaf": "Carbon rich Residue (10-3kg)",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Carbon rich Residue (10-3kg)",
+                "header_row": 0,
+                "column": 6
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          }
+        ],
+        "unit_scope_candidates": [],
+        "rows": [
+          [
+            "1.",
+            "Mobiles",
+            "100",
+            "80",
+            "25",
+            "15",
+            "40"
+          ],
+          [
+            "2.",
+            "Mother Boards",
+            "100",
+            "73.35",
+            "23.35",
+            "10",
+            "40"
+          ],
+          [
+            "3.",
+            "Power Supply",
+            "100",
+            "80.05",
+            "13.35",
+            "20",
+            "46.7"
+          ],
+          [
+            "4.",
+            "RAMs",
+            "100",
+            "87.5",
+            "16.25",
+            "21.25",
+            "50"
+          ]
+        ],
+        "row_contexts": [],
+        "notes": [],
+        "raw_markdown": "| S. No. | Waste PCBs | Initial Weight (10-3kg) | Weight after pyrolysis (10-3kg) | Copper rich red Fraction (10-3kg) | Lead/tin rich white Fraction (10-3kg) | Carbon rich Residue (10-3kg) |\n| --- | --- | --- | --- | --- | --- | --- |\n| 1. | Mobiles | 100 | 80 | 25 | 15 | 40 |\n| 2. | Mother Boards | 100 | 73.35 | 23.35 | 10 | 40 |\n| 3. | Power Supply | 100 | 80.05 | 13.35 | 20 | 46.7 |\n| 4. | RAMs | 100 | 87.5 | 16.25 | 21.25 | 50 |",
+        "position_start": 15730,
+        "position_end": 15851,
+        "source": "mineru_content_list",
+        "source_kind": "standalone_table",
+        "layout_context": {
+          "previous_block_type": "table",
+          "next_block_type": "text",
+          "between_image_blocks": false
+        },
+        "raw_html": "<table><tr><td>S. No.</td><td>Waste PCBs</td><td>Initial Weight (10-3kg)</td><td>Weight after pyrolysis (10-3kg)</td><td>Copper rich red Fraction (10-3kg)</td><td>Lead/tin rich white Fraction (10-3kg)</td><td>Carbon rich Residue (10-3kg)</td></tr><tr><td>1.</td><td>Mobiles</td><td>100</td><td>80</td><td>25</td><td>15</td><td>40</td></tr><tr><td>2.</td><td>Mother Boards</td><td>100</td><td>73.35</td><td>23.35</td><td>10</td><td>40</td></tr><tr><td>3.</td><td>Power Supply</td><td>100</td><td>80.05</td><td>13.35</td><td>20</td><td>46.7</td></tr><tr><td>4.</td><td>RAMs</td><td>100</td><td>87.5</td><td>16.25</td><td>21.25</td><td>50</td></tr></table>",
+        "image_path": "images/17a5702aeaa0000af6c44252651bc93d8ed074de5cb38eb95d0f72166ce3641f.jpg",
+        "bbox": [
+          52,
+          118,
+          929,
+          195
+        ],
+        "metadata": {
+          "table_reference_sentences": [
+            "The weight loss and yield of various fractions following pyrolysis in the horizontal resistance and plasma furnaces is presented in Tables 1 and 2 respectively."
+          ]
+        },
+        "table_reference_sentences": [
+          "The weight loss and yield of various fractions following pyrolysis in the horizontal resistance and plasma furnaces is presented in Tables 1 and 2 respectively."
+        ]
+      }
+    }
+  }
+]

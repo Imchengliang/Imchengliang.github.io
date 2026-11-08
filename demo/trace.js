@@ -52,11 +52,11 @@ const Trace = (() => {
     if(edge.fusion||normalize(record.linkOrigin).startsWith('scope')){
       result.scope=entries(item,'scope').filter(scope=>evidence(scope)&&evidence(scope)===normalize(record.evidenceSpan)).map(data=>target('scope','scope',data));
       result.preferred=result.scope.length===1?result.scope[0]:null;
-      result.message='This link is produced by fusion / scope projection, not Relation extraction. '+(result.preferred?'A source scope has the exact evidence anchor.':'No unique source scope shares the evidence anchor; browse the source scopes without an inferred match.');return result;
+      result.message=result.preferred?'Source Scope located.':'No unique Scope match. Browse the paper’s Scope records.';return result;
     }
     result.final=entries(item,'final').filter(final=>graphMatches(item,edge,record,final)).map(data=>target('final','final',data));
     if(result.final.length!==1) {
-      result.message=result.final.length?`${result.final.length} final records match this archived ID and its fields. Choose a record; no unique match selected.`:'No exact final record matches this graph record. Source evidence remains available; no stage match is inferred.';
+      result.message=result.final.length?`${result.final.length} matching final records. Choose a record to inspect.`:'No matching final record found. Open the source evidence to inspect.';
       return result;
     }
     const final=result.final[0].data;
@@ -76,9 +76,9 @@ const Trace = (() => {
         result.origin.push(target('relation','process_request',request,{chunk:chunk.chunk_id,section:chunk.section_name}));
     }));
     result.preferred=result.origin.length===1?result.origin[0]:result.final[0];
-    result.message=result.origin.length===1?'Unique final record located by archived ID, endpoints and measurement fields. An earlier output shares its exact evidence / cell anchor; archive timestamps may differ.':
-      result.origin.length?`${result.origin.length} earlier outputs share this anchor. Showing the final record; choose a candidate to inspect. No unique earlier output selected.`:
-      'Exact final record located. No unique earlier output has the same archived evidence / cell anchor; showing the final record only.';
+    result.message=result.origin.length===1?'Matching extraction and final record located.':
+      result.origin.length?`${result.origin.length} matching extraction records. Showing the final record. Choose an extraction record to inspect.`:
+      'Final record located. No unique extraction-stage match.';
     return result;
   }
   return {resolve,graphMatches};

@@ -1,0 +1,317 @@
+{
+  "source_file": "weee_kg_system/data/all_batches/extraction/High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials/triples_final.txt",
+  "source_sha256": "569ea7e1b8a3e6f49b6c61c3f145c31b13f0e9b9168ca24e097d41fdd409734c",
+  "source_passage": "The analysis showed that the largest content of ferromagnetic and paramagnetic ele ments, with the exception of neodymium, was in the material with a grain size more than 1 mm. In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum. However, in the non-magnetic fraction (II), the yield was 72.6% for zinc, 62.5% for molybdenum, 40.7% for copper and 39.0% for tin.",
+  "reason": "Duplicate statements share endpoints, material, numeric value, unit, property and the same literal evidence. Keep the version with the explicit magnetic-fraction condition.",
+  "superseded": [
+    {
+      "index": 64,
+      "retained_index": 67,
+      "triple": {
+        "id": "REL_Process_neodymium_magnet_separation_of__1_mm_fraction_HAS_OUTPUT_Material_Fe",
+        "subject": "Process_neodymium_magnet_separation_of__1_mm_fraction",
+        "predicate": "HAS_OUTPUT",
+        "object": "Material_Fe",
+        "subject_type": "Process",
+        "object_type": "Material",
+        "confidence": 0.8,
+        "evidence_span": "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum.",
+        "source_name": "neodymium magnet separation of >1 mm fraction",
+        "target_name": "Fe",
+        "properties": {
+          "property": "yield",
+          "value": 85.7,
+          "unit": "%",
+          "source_sample": "magnetic fraction (I)",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "treatment_members": [],
+          "property_raw": "yield",
+          "measure_key": "yield",
+          "raw_relation_type": "HAS_OUTPUT",
+          "normalized_relation_type": "HAS_OUTPUT",
+          "normalized_from_raw": false,
+          "source_name": "neodymium magnet separation of >1 mm fraction",
+          "target_name": "Fe",
+          "evidence_span": "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum.",
+          "source": "text",
+          "condition_ids": [],
+          "setting_id": "setting:High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials:neodymium-magnet-separation-of-1-mm-fraction-conditions",
+          "setting_binding_basis": "unique_process_setting",
+          "setting_stage_name": "neodymium magnet separation of >1 mm fraction",
+          "setting_condition_keys": [
+            {
+              "key": "other",
+              "value": "not specified",
+              "unit": null,
+              "raw_text": "not specified",
+              "negated": true
+            }
+          ],
+          "setting_condition": "not specified",
+          "condition": "not specified",
+          "evidence_spans": [
+            "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum."
+          ]
+        }
+      },
+      "retained_triple": {
+        "id": "REL_Process_neodymium_magnet_separation_of__1_mm_fraction_HAS_OUTPUT_Material_Fe",
+        "subject": "Process_neodymium_magnet_separation_of__1_mm_fraction",
+        "predicate": "HAS_OUTPUT",
+        "object": "Material_Fe",
+        "subject_type": "Process",
+        "object_type": "Material",
+        "confidence": 0.8,
+        "evidence_span": "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum.",
+        "source_name": "neodymium magnet separation of >1 mm fraction",
+        "target_name": "Fe",
+        "properties": {
+          "property": "yield",
+          "value": 85.7,
+          "unit": "%",
+          "source_sample": "material with a grain size more than 1 mm",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "conditions": "magnetic fraction (I)",
+          "treatment_members": [],
+          "property_raw": "yield",
+          "measure_key": "yield",
+          "condition_keys": [
+            {
+              "key": "other",
+              "value": "magnetic fraction (I)",
+              "unit": null,
+              "raw_text": "magnetic fraction (I)"
+            }
+          ],
+          "condition_labels": [
+            "magnetic fraction (I)"
+          ],
+          "condition": "magnetic fraction (I)",
+          "condition_ids": [
+            "COND_5264a29d10c0"
+          ],
+          "raw_relation_type": "HAS_OUTPUT",
+          "normalized_relation_type": "HAS_OUTPUT",
+          "normalized_from_raw": false,
+          "source_name": "neodymium magnet separation of >1 mm fraction",
+          "target_name": "Fe",
+          "evidence_span": "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum.",
+          "source": "text",
+          "evidence_spans": [
+            "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum."
+          ]
+        }
+      }
+    },
+    {
+      "index": 65,
+      "retained_index": 68,
+      "triple": {
+        "id": "REL_Process_neodymium_magnet_separation_of__1_mm_fraction_HAS_OUTPUT_Material_Co",
+        "subject": "Process_neodymium_magnet_separation_of__1_mm_fraction",
+        "predicate": "HAS_OUTPUT",
+        "object": "Material_Co",
+        "subject_type": "Process",
+        "object_type": "Material",
+        "confidence": 0.8,
+        "evidence_span": "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum.",
+        "source_name": "neodymium magnet separation of >1 mm fraction",
+        "target_name": "Co",
+        "properties": {
+          "property": "yield",
+          "value": 70.8,
+          "unit": "%",
+          "source_sample": "magnetic fraction (I)",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "treatment_members": [],
+          "property_raw": "yield",
+          "measure_key": "yield",
+          "raw_relation_type": "HAS_OUTPUT",
+          "normalized_relation_type": "HAS_OUTPUT",
+          "normalized_from_raw": false,
+          "source_name": "neodymium magnet separation of >1 mm fraction",
+          "target_name": "Co",
+          "evidence_span": "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum.",
+          "source": "text",
+          "condition_ids": [],
+          "setting_id": "setting:High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials:neodymium-magnet-separation-of-1-mm-fraction-conditions",
+          "setting_binding_basis": "unique_process_setting",
+          "setting_stage_name": "neodymium magnet separation of >1 mm fraction",
+          "setting_condition_keys": [
+            {
+              "key": "other",
+              "value": "not specified",
+              "unit": null,
+              "raw_text": "not specified",
+              "negated": true
+            }
+          ],
+          "setting_condition": "not specified",
+          "condition": "not specified",
+          "evidence_spans": [
+            "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum."
+          ]
+        }
+      },
+      "retained_triple": {
+        "id": "REL_Process_neodymium_magnet_separation_of__1_mm_fraction_HAS_OUTPUT_Material_Co",
+        "subject": "Process_neodymium_magnet_separation_of__1_mm_fraction",
+        "predicate": "HAS_OUTPUT",
+        "object": "Material_Co",
+        "subject_type": "Process",
+        "object_type": "Material",
+        "confidence": 0.8,
+        "evidence_span": "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum.",
+        "source_name": "neodymium magnet separation of >1 mm fraction",
+        "target_name": "Co",
+        "properties": {
+          "property": "yield",
+          "value": 70.8,
+          "unit": "%",
+          "source_sample": "material with a grain size more than 1 mm",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "conditions": "magnetic fraction (I)",
+          "treatment_members": [],
+          "property_raw": "yield",
+          "measure_key": "yield",
+          "condition_keys": [
+            {
+              "key": "other",
+              "value": "magnetic fraction (I)",
+              "unit": null,
+              "raw_text": "magnetic fraction (I)"
+            }
+          ],
+          "condition_labels": [
+            "magnetic fraction (I)"
+          ],
+          "condition": "magnetic fraction (I)",
+          "condition_ids": [
+            "COND_5264a29d10c0"
+          ],
+          "raw_relation_type": "HAS_OUTPUT",
+          "normalized_relation_type": "HAS_OUTPUT",
+          "normalized_from_raw": false,
+          "source_name": "neodymium magnet separation of >1 mm fraction",
+          "target_name": "Co",
+          "evidence_span": "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum.",
+          "source": "text",
+          "evidence_spans": [
+            "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum."
+          ]
+        }
+      }
+    },
+    {
+      "index": 66,
+      "retained_index": 69,
+      "triple": {
+        "id": "REL_Process_neodymium_magnet_separation_of__1_mm_fraction_HAS_OUTPUT_Material_Mo",
+        "subject": "Process_neodymium_magnet_separation_of__1_mm_fraction",
+        "predicate": "HAS_OUTPUT",
+        "object": "Material_Mo",
+        "subject_type": "Process",
+        "object_type": "Material",
+        "confidence": 0.8,
+        "evidence_span": "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum.",
+        "source_name": "neodymium magnet separation of >1 mm fraction",
+        "target_name": "Mo",
+        "properties": {
+          "property": "yield",
+          "value": 21.0,
+          "unit": "%",
+          "source_sample": "magnetic fraction (I)",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "treatment_members": [],
+          "property_raw": "yield",
+          "measure_key": "yield",
+          "raw_relation_type": "HAS_OUTPUT",
+          "normalized_relation_type": "HAS_OUTPUT",
+          "normalized_from_raw": false,
+          "source_name": "neodymium magnet separation of >1 mm fraction",
+          "target_name": "Mo",
+          "evidence_span": "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum.",
+          "source": "text",
+          "condition_ids": [],
+          "setting_id": "setting:High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials:neodymium-magnet-separation-of-1-mm-fraction-conditions",
+          "setting_binding_basis": "unique_process_setting",
+          "setting_stage_name": "neodymium magnet separation of >1 mm fraction",
+          "setting_condition_keys": [
+            {
+              "key": "other",
+              "value": "not specified",
+              "unit": null,
+              "raw_text": "not specified",
+              "negated": true
+            }
+          ],
+          "setting_condition": "not specified",
+          "condition": "not specified",
+          "evidence_spans": [
+            "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum."
+          ]
+        }
+      },
+      "retained_triple": {
+        "id": "REL_Process_neodymium_magnet_separation_of__1_mm_fraction_HAS_OUTPUT_Material_Mo",
+        "subject": "Process_neodymium_magnet_separation_of__1_mm_fraction",
+        "predicate": "HAS_OUTPUT",
+        "object": "Material_Mo",
+        "subject_type": "Process",
+        "object_type": "Material",
+        "confidence": 0.8,
+        "evidence_span": "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum.",
+        "source_name": "neodymium magnet separation of >1 mm fraction",
+        "target_name": "Mo",
+        "properties": {
+          "property": "yield",
+          "value": 21.0,
+          "unit": "%",
+          "source_sample": "material with a grain size more than 1 mm",
+          "study_scope": "current_study",
+          "graph_status": "active",
+          "process_role": "main_process",
+          "conditions": "magnetic fraction (I)",
+          "treatment_members": [],
+          "property_raw": "yield",
+          "measure_key": "yield",
+          "condition_keys": [
+            {
+              "key": "other",
+              "value": "magnetic fraction (I)",
+              "unit": null,
+              "raw_text": "magnetic fraction (I)"
+            }
+          ],
+          "condition_labels": [
+            "magnetic fraction (I)"
+          ],
+          "condition": "magnetic fraction (I)",
+          "condition_ids": [
+            "COND_5264a29d10c0"
+          ],
+          "raw_relation_type": "HAS_OUTPUT",
+          "normalized_relation_type": "HAS_OUTPUT",
+          "normalized_from_raw": false,
+          "source_name": "neodymium magnet separation of >1 mm fraction",
+          "target_name": "Mo",
+          "evidence_span": "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum.",
+          "source": "text",
+          "evidence_spans": [
+            "In the magnetic fraction (I) obtained after the enrichment process using a neodymium magnet, the yield was 85.7% for iron, 70.8% for cobalt and 21.0% for molybdenum."
+          ]
+        }
+      }
+    }
+  ]
+}

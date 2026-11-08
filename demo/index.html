@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OntoWEEE</title><link rel="stylesheet" href="style.css?v=record-hierarchy"><link rel="stylesheet" href="redesign.css?v=process-details-20261103"><link rel="stylesheet" href="battery-overview.css?v=comparison-20261106"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <title>OntoWEEE</title><link rel="stylesheet" href="style.css?v=record-hierarchy"><link rel="stylesheet" href="redesign.css?v=evidence-review-20261107"><link rel="stylesheet" href="battery-overview.css?v=default-help-cursor-20261108"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
 </head>
-<body data-overview="datasets/battery20/overview/data.json?v=e16644c5bd35" data-graph="datasets/battery20/full-traces/data/graph.json?v=e16644c5bd35" data-papers="datasets/battery20/papers.json?v=e16644c5bd35">
+<body data-overview="datasets/battery20/overview/data.json" data-graph="datasets/battery20/full-traces/data/graph.json" data-papers="datasets/battery20/papers.json">
   <header>
     <a class="brand" href="index.html"><span class="brand-mark">O<span>•</span></span><span>OntoWEEE</span></a>
-    <nav aria-label="Main views"><button class="tab active" data-view="overview">Battery overview</button><button class="tab" data-view="fusion">Knowledge graph</button><button class="tab" data-view="replay">Extraction trace</button><button class="tab" data-view="papers">Paper</button><button class="tab" data-view="about">About</button></nav>
+    <nav aria-label="Main views"><button class="tab active" data-view="overview">Feedstock overview</button><button class="tab" data-view="fusion">Knowledge graph</button><button class="tab" data-view="replay">Extraction trace</button><button class="tab" data-view="papers">Paper</button><button class="tab" data-view="about">About</button></nav>
   </header>
   <div class="shell">
     <aside class="sidebar">
       <section id="fusion-controls">
         <div class="eyebrow">LITERATURE × PRODUCT CATALOG</div>
         <label for="search">Find an entity</label><input id="search" placeholder="Nokia 5110 / Cu / bioleaching" autocomplete="off">
+        <details class="graph-browser"><summary>Browse displayed graph</summary><label for="graph-node-select">Node or group</label><select id="graph-node-select"></select><div class="button-row"><button id="graph-node-inspect">Inspect node</button><button id="graph-node-open">Open node</button></div><label for="graph-edge-select">Relation</label><select id="graph-edge-select"></select><button id="graph-edge-inspect">Inspect relation</button></details>
         <div id="search-results" class="search-results" role="list" aria-label="Entity search results"></div>
-        <label for="source-filter">Data source</label><select id="source-filter"><option value="">All 32 sources</option></select>
+        <label for="source-filter">Data source</label><select id="source-filter"><option value="">All 37 sources</option></select>
         <label for="type-filter">Entity type</label><select id="type-filter"><option value="">All types</option></select>
         <label for="relation-filter">Relation type</label><select id="relation-filter"><option value="">All relations</option></select>
-        <label class="switch"><input id="fusion-toggle" type="checkbox" checked>Show cross-source fusion links</label>
+        <label class="switch"><input id="fusion-toggle" type="checkbox">Show cross-source fusion links</label>
         <div class="button-row"><button id="top-level">Top level</button><button id="show-all">All entities</button></div>
       </section>
       <section id="case-controls" class="walkthrough-entry" aria-label="Paper case studies" hidden>
@@ -28,14 +29,14 @@
         <div id="case-summary"></div><button id="case-on-graph" hidden>Locate paper in fused graph</button>
       </section>
       <div class="legend" id="legend"></div>
-      <footer><a id="snapshot-manifest" href="datasets/battery20/full-traces/data/manifest.json" target="_blank" rel="noopener">Snapshot manifest ↗</a><span id="snapshot-counts">20 papers · 12 catalog records</span></footer>
+      <footer><span id="snapshot-counts">25 papers · 12 catalog records</span></footer>
     </aside>
     <main>
-      <section id="overview-view" class="view" aria-label="Battery feedstock overview"><div id="battery-overview">Loading reviewed feedstocks…</div></section>
+      <section id="overview-view" class="view" aria-label="Feedstock overview"><div id="battery-overview">Loading reviewed feedstocks…</div></section>
       <section id="fusion-view" class="view" hidden>
         <div class="view-header"><div><div class="eyebrow">01 / KNOWLEDGE GRAPH</div><h2>Fused graph</h2></div><span id="visible-stats" class="muted"></span></div>
         <div class="graph-layout">
-          <div class="graph-pane"><div class="graph-navigation"><button id="graph-back" disabled>← Back</button><nav id="graph-path" aria-label="Graph location"></nav></div><canvas id="graph" tabindex="0" aria-label="Fused graph: drag a node to move it and its attached edges; drag empty space to pan; scroll to zoom; click to inspect. Entity search is also available in the sidebar."></canvas><div class="graph-tools"><button id="zoom-in" aria-label="Zoom in">＋</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit">Fit view</button><button id="clear-focus">Clear focus</button></div><div class="graph-legend" aria-label="Graph legend"><span><i class="lg-circle"></i>Paper-derived entity</span><span><i class="lg-square"></i>Catalog record</span><span><i class="lg-line"></i>Extracted relation</span><span><i class="lg-dash"></i>Cross-source fusion link</span><span><i class="lg-group">n</i>Display group (not an entity)</span></div><div id="graph-caption" class="graph-caption"></div><div id="graph-tooltip" role="tooltip" hidden></div><div class="graph-hint">Drag a node to move it · Drag empty space to pan · Scroll to zoom · Double-click to expand</div></div>
+          <div class="graph-pane"><div class="graph-navigation"><button id="graph-back" disabled>← Back</button><nav id="graph-path" aria-label="Graph location"></nav></div><canvas id="graph" tabindex="0" aria-label="Fused graph: drag a node to move it and its attached edges; drag empty space to pan; scroll to zoom; click to inspect. Entity search is also available in the sidebar."></canvas><div class="graph-tools"><button id="zoom-in" aria-label="Zoom in">＋</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit">Fit view</button><button id="clear-focus">Clear focus</button></div><div class="graph-legend" aria-label="Graph legend"><span><i class="lg-circle"></i>Paper-derived entity</span><span><i class="lg-square"></i>Catalog record</span><span><i class="lg-line"></i>Extracted relation</span><span><i class="lg-dash"></i>Cross-source fusion link</span><span><i class="lg-group">n</i>Entity group</span></div><div id="graph-caption" class="graph-caption"></div><div id="graph-tooltip" role="tooltip" hidden></div><div class="graph-hint">Drag a node to move it · Drag empty space to pan · Scroll to zoom · Double-click to expand</div></div>
           <aside id="inspector" class="inspector" aria-label="Entity and relation details"></aside>
         </div>
       </section>
@@ -43,7 +44,8 @@
         <div class="view-header"><div><div class="eyebrow">02 / EXTRACTION TRACE</div><h2 id="case-title">Extraction replay</h2></div></div>
         <div class="replay-note">Explore processes, entities and relations, and trace their supporting text and tables.</div>
         <section id="trace-panel" class="trace-panel" aria-label="Graph to evidence trace" hidden></section>
-        <nav id="stages" class="stages" aria-label="Extraction stages"></nav>
+        <section id="overview-evidence" class="overview-evidence" aria-label="Selected overview evidence" hidden></section>
+        <details id="stage-navigation" class="stage-navigation" open><summary>Extraction stages</summary><nav id="stages" class="stages" aria-label="Extraction stages"></nav></details>
         <div class="replay-layout">
           <section class="source-pane"><div class="pane-heading"><strong>Source text &amp; tables<small id="source-match-label" class="source-match-label" hidden></small></strong><div><button id="text-tab" class="small active">Text</button><button id="tables-tab" class="small">Tables</button></div></div><div id="source-content"></div></section>
           <section class="output-pane"><div id="stage-heading" class="pane-heading"></div><div class="output-search"><input id="record-search" placeholder="Filter this stage: Cu / skip / one-step"><span id="record-count"></span></div><div id="stage-records"></div></section>
@@ -52,7 +54,7 @@
       <section id="papers-view" class="view" aria-labelledby="papers-title" hidden>
         <section class="reference-module" aria-labelledby="papers-title">
           <h2 id="papers-title">Papers in this demo</h2>
-          <p class="reference-note">20 papers · Select a title to open its publication page in a new tab.</p>
+          <p class="reference-note">25 papers · Select a title to open its publication page in a new tab.</p>
           <ol id="paper-list" class="reference-list" aria-label="Papers in alphabetical order"></ol>
         </section>
         <section class="catalog-reference reference-module" aria-labelledby="catalog-title">
@@ -111,14 +113,19 @@
             <p>OntoWEEE links samples, materials, methods and results while keeping their source context.</p>
           </article>
         </div>
+        <details>
+          <summary>Data and statistical methods</summary>
+          <p>Ranges describe the reported values for each group. Cross-study means are calculated for compatible measurement contexts, with equal weight for each publication. SD describes the spread of publication-level means.</p>
+          <p><a id="snapshot-manifest" href="datasets/battery20/full-traces/data/manifest.json" target="_blank" rel="noopener">Dataset manifest ↗</a> · <a href="datasets/battery20/overview/review.json" target="_blank" rel="noopener">Sample classifications ↗</a></p>
+        </details>
         <div class="about-bottom">
-          <div><p id="about-dataset" class="about-dataset">Literature and product catalog records</p><p class="about-boundary">Samples and measurements stay distinct. Industrial decisions also depend on scale, product quality, reagent use and cost.</p></div>
+          <div><p id="about-dataset" class="about-dataset">Literature and product catalog records</p><p class="about-boundary">Industrial decisions also depend on scale, product quality, reagent use and cost.</p></div>
           <div class="about-actions"><button class="about-primary" data-view="fusion">Explore the graph →</button><button data-view="replay">Inspect extraction trace →</button></div>
         </div>
       </section>
       <div id="status" role="status">Loading frozen graph…</div>
     </main>
   </div>
-  <script src="hierarchy.js?v=component-name-groups-20261101"></script><script src="replay.js?v=scope-refresh-20261102"></script><script src="trace.js?v=multi-quote-anchors"></script><script src="walkthrough.js?v=about-20261103"></script><script src="battery-overview.js?v=comparison-20261106"></script><script src="battery-static.js?v=comparison-20261106"></script><script src="app.js?v=free-browse-20261106"></script>
+  <script src="hierarchy.js?v=component-name-groups-20261101"></script><script src="replay.js?v=concise-copy-20261108"></script><script src="trace.js?v=concise-copy-20261108"></script><script src="walkthrough.js?v=about-20261103"></script><script src="battery-overview.js?v=concise-route-filters-20261108"></script><script src="battery-static.js?v=component-filter-20261108"></script><script src="app.js?v=catalog-source-20261108"></script>
 </body>
 </html>

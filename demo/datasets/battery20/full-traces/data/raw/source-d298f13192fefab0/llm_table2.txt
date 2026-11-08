@@ -1,0 +1,626 @@
+[
+  {
+    "chunk_id": "Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids__table__TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0001",
+    "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0001",
+    "result": {
+      "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0001",
+      "entity_count": 0,
+      "relation_count": 0,
+      "condition_count": 0,
+      "context_record_count": 0,
+      "entities": [],
+      "relations": [],
+      "conditions": [],
+      "context_records": [],
+      "table_structure": {
+        "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0001",
+        "extraction_mode": "semantic_ir",
+        "table_role": "non_target_context",
+        "extractability": {
+          "decision": "skip",
+          "table_role": "non_target_context",
+          "reason": "Do not extract facts; this table is background ratio context, not target composition or treatment outcome.",
+          "confidence": 0.85
+        }
+      },
+      "source_table": {
+        "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0001",
+        "page_number": 5,
+        "caption": "Table 1. Ratio mass of NdFeB magnets/mass of mobile phones over the years, as a percentage.",
+        "section": "3.1. NdFeB Magnets/Mobile Phones Ratio",
+        "explicit_references": [],
+        "headers": [
+          "Year",
+          "% (Average)"
+        ],
+        "header_rows": [
+          [
+            "Year",
+            "% (Average)"
+          ]
+        ],
+        "column_descriptors": [
+          {
+            "id": "c0",
+            "index": 0,
+            "flat_label": "Year",
+            "header_path": [
+              "Year"
+            ],
+            "header_leaf": "Year",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Year",
+                "header_row": 0,
+                "column": 0
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c1",
+            "index": 1,
+            "flat_label": "% (Average)",
+            "header_path": [
+              "% (Average)"
+            ],
+            "header_leaf": "% (Average)",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "% (Average)",
+                "header_row": 0,
+                "column": 1
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          }
+        ],
+        "unit_scope_candidates": [
+          {
+            "scope": "column",
+            "source": "column.header_path",
+            "columns": [
+              1
+            ],
+            "coverage": 0.5,
+            "evidence_cells": [
+              {
+                "column_index": 1,
+                "source": "column.header_path",
+                "flat_label": "% (Average)",
+                "header_path": [
+                  "% (Average)"
+                ]
+              }
+            ],
+            "interpretation": "unit markers are located in column headers; bind the unit from the current column header path"
+          }
+        ],
+        "rows": [
+          [
+            "1996–2000",
+            "0.47"
+          ],
+          [
+            "2001–2005",
+            "0.64"
+          ],
+          [
+            "2006–2010",
+            "1.08"
+          ],
+          [
+            "2011–2015",
+            "1.07"
+          ],
+          [
+            "2016–2018",
+            "1.11"
+          ],
+          [
+            "2019–2020",
+            "1.13"
+          ]
+        ],
+        "row_contexts": [],
+        "notes": [],
+        "raw_markdown": "| Year | % (Average) |\n| --- | --- |\n| 1996–2000 | 0.47 |\n| 2001–2005 | 0.64 |\n| 2006–2010 | 1.08 |\n| 2011–2015 | 1.07 |\n| 2016–2018 | 1.11 |\n| 2019–2020 | 1.13 |",
+        "position_start": 15737,
+        "position_end": 15849,
+        "source": "mineru_content_list",
+        "source_kind": "standalone_table",
+        "layout_context": {
+          "previous_block_type": "text",
+          "next_block_type": "text",
+          "between_image_blocks": false
+        },
+        "raw_html": "<table><tr><td>Year</td><td>% (Average)</td></tr><tr><td>1996–2000</td><td>0.47</td></tr><tr><td>2001–2005</td><td>0.64</td></tr><tr><td>2006–2010</td><td>1.08</td></tr><tr><td>2011–2015</td><td>1.07</td></tr><tr><td>2016–2018</td><td>1.11</td></tr><tr><td>2019–2020</td><td>1.13</td></tr></table>",
+        "image_path": "images/a2b7408982a27272c673d0a62ff192ea96103205b03a6d07bc5bc6aaf3a0b972.jpg",
+        "bbox": [
+          275,
+          242,
+          939,
+          347
+        ],
+        "metadata": {}
+      }
+    }
+  },
+  {
+    "chunk_id": "Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids__table__TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+    "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+    "result": {
+      "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+      "entity_count": 7,
+      "relation_count": 5,
+      "condition_count": 1,
+      "context_record_count": 0,
+      "entities": [
+        {
+          "id": "table_ir_ent_001",
+          "name": "NdFeB magnets used in mobile phone",
+          "mention_text": "NdFeB magnets used in mobile phones",
+          "type": "Component",
+          "source": "table:TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+          "synonyms": [
+            "NdFeB magnets used in mobile phones"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "literal",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_002",
+          "name": "Fe",
+          "mention_text": "Fe",
+          "type": "Material",
+          "source": "table:TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+          "synonyms": [
+            "iron",
+            "Iron"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "row[0]",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_003",
+          "name": "Neodymium",
+          "mention_text": "Nd",
+          "type": "Material",
+          "source": "table:TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+          "synonyms": [
+            "Nd"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "row[0]",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_004",
+          "name": "praseodymium",
+          "mention_text": "Pr",
+          "type": "Material",
+          "source": "table:TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+          "synonyms": [
+            "Pr",
+            "Praseodymium"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "row[0]",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_005",
+          "name": "dysprosium",
+          "mention_text": "Dy",
+          "type": "Material",
+          "source": "table:TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+          "synonyms": [
+            "Dy",
+            "Dysprosium"
+          ],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "row[0]",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_006",
+          "name": "others",
+          "mention_text": "others",
+          "type": "Material",
+          "source": "table:TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "row[0]",
+            "column_idx": 1
+          }
+        },
+        {
+          "id": "table_ir_ent_007",
+          "name": "NdFeB magnet",
+          "mention_text": "NdFeB magnet",
+          "type": "Material",
+          "source": "table:TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+          "synonyms": [],
+          "condition_ids": [],
+          "source_mark": "table_ir",
+          "evidence": {
+            "source": "direct.record",
+            "index": 0
+          }
+        }
+      ],
+      "relations": [
+        {
+          "id": "table_ir_repair_rel_001",
+          "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+          "table_title": "Table 2. Average chemical composition of NdFeB magnets used in mobile phones.",
+          "source_id": "table_ir_ent_007",
+          "source_name": "NdFeB magnet",
+          "target_id": "table_ir_ent_002",
+          "target_name": "Fe",
+          "relation_type": "CONTAINS",
+          "evidence_span": "61.9%",
+          "attributes": {
+            "property": "content",
+            "unit": "%",
+            "condition_ids": [],
+            "condition_labels": [],
+            "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+            "column_header": null,
+            "evidence_span": "61.9%",
+            "provenance": {
+              "row_idx": 1,
+              "column_idx": 1,
+              "value_cell": "61.9%"
+            },
+            "extraction_path": "direct_repair",
+            "value": "61.9",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "61.9%",
+            "source": "table_ir",
+            "scope": null
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_002",
+          "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+          "table_title": "Table 2. Average chemical composition of NdFeB magnets used in mobile phones.",
+          "source_id": "table_ir_ent_007",
+          "source_name": "NdFeB magnet",
+          "target_id": "table_ir_ent_003",
+          "target_name": "Neodymium",
+          "relation_type": "CONTAINS",
+          "evidence_span": "23.9%",
+          "attributes": {
+            "property": "content",
+            "unit": "%",
+            "condition_ids": [],
+            "condition_labels": [],
+            "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+            "column_header": null,
+            "evidence_span": "23.9%",
+            "provenance": {
+              "row_idx": 2,
+              "column_idx": 1,
+              "value_cell": "23.9%"
+            },
+            "extraction_path": "direct_repair",
+            "value": "23.9",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "23.9%",
+            "source": "table_ir",
+            "scope": null
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_003",
+          "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+          "table_title": "Table 2. Average chemical composition of NdFeB magnets used in mobile phones.",
+          "source_id": "table_ir_ent_007",
+          "source_name": "NdFeB magnet",
+          "target_id": "table_ir_ent_004",
+          "target_name": "praseodymium",
+          "relation_type": "CONTAINS",
+          "evidence_span": "3.8%",
+          "attributes": {
+            "property": "content",
+            "unit": "%",
+            "condition_ids": [],
+            "condition_labels": [],
+            "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+            "column_header": null,
+            "evidence_span": "3.8%",
+            "provenance": {
+              "row_idx": 3,
+              "column_idx": 1,
+              "value_cell": "3.8%"
+            },
+            "extraction_path": "direct_repair",
+            "value": "3.8",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "3.8%",
+            "source": "table_ir",
+            "scope": null
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_004",
+          "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+          "table_title": "Table 2. Average chemical composition of NdFeB magnets used in mobile phones.",
+          "source_id": "table_ir_ent_007",
+          "source_name": "NdFeB magnet",
+          "target_id": "table_ir_ent_005",
+          "target_name": "dysprosium",
+          "relation_type": "CONTAINS",
+          "evidence_span": "1.1%",
+          "attributes": {
+            "property": "content",
+            "unit": "%",
+            "condition_ids": [],
+            "condition_labels": [],
+            "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+            "column_header": null,
+            "evidence_span": "1.1%",
+            "provenance": {
+              "row_idx": 4,
+              "column_idx": 1,
+              "value_cell": "1.1%"
+            },
+            "extraction_path": "direct_repair",
+            "value": "1.1",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "1.1%",
+            "source": "table_ir",
+            "scope": null
+          }
+        },
+        {
+          "id": "table_ir_repair_rel_005",
+          "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+          "table_title": "Table 2. Average chemical composition of NdFeB magnets used in mobile phones.",
+          "source_id": "table_ir_ent_007",
+          "source_name": "NdFeB magnet",
+          "target_id": "table_ir_ent_006",
+          "target_name": "others",
+          "relation_type": "CONTAINS",
+          "evidence_span": "9.3%",
+          "attributes": {
+            "property": "content",
+            "unit": "%",
+            "condition_ids": [],
+            "condition_labels": [],
+            "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+            "column_header": null,
+            "evidence_span": "9.3%",
+            "provenance": {
+              "row_idx": 5,
+              "column_idx": 1,
+              "value_cell": "9.3%"
+            },
+            "extraction_path": "direct_repair",
+            "value": "9.3",
+            "uncertainty": null,
+            "qualifier": null,
+            "secondary_value": null,
+            "secondary_unit": null,
+            "raw_cell": "9.3%",
+            "source": "table_ir",
+            "scope": null
+          }
+        }
+      ],
+      "conditions": [
+        {
+          "id": "table_ir_cond_measurement_basis_content",
+          "name": "measurement_basis",
+          "type": "other",
+          "value": "Content",
+          "unit": null,
+          "source": {
+            "doc_id": "table:TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+            "title": "Table TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+            "year": 2024,
+            "authors": [],
+            "doi": null,
+            "journal": null,
+            "impact_factor": 1.0,
+            "citation_count": 0,
+            "page_number": null,
+            "url": null
+          },
+          "text_chunk": {
+            "chunk_id": "table_chunk:TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+            "text": "{\"table_id\": \"TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002\", \"page_number\": 7, \"caption\": \"Table 2. Average chemical composition of NdFeB magnets used in mobile phones.\", \"section\": \"3.3. Chemical Composition of NdFeB Magnets Used in Mobile Phones3.3. Chemical Composition of NdFeB Magnets Used in Mobile Phones\", \"explicit_references\": [\"The values presented in Table 2 were used as a reference in the leaching of the REE with the aid of organic acids.\"], \"headers\": [\"Element\", \"Content %\"], \"header_rows\": [[\"Element\", \"Content %\"]], \"column_descriptors\": [{\"id\": \"c0\", \"index\": 0, \"flat_label\": \"Element\", \"header_path\": [\"Element\"], \"header_leaf\": \"Element\", \"header_group\": \"\", \"raw_header_cells\": [{\"text\": \"Element\", \"header_row\": 0, \"column\": 0}], \"recoverability\": \"mineru_header_rows\"}, {\"id\": \"c1\", \"index\": 1, \"flat_label\": \"Content %\", \"header_path\": [\"Content %\"], \"header_leaf\": \"Content %\", \"header_group\": \"\", \"raw_header_",
+            "parent_chunk_id": null,
+            "section_name": null,
+            "subsection_name": null,
+            "page_number": 1,
+            "position_start": 0,
+            "position_end": 0,
+            "metadata": {}
+          },
+          "condition_type": "Other",
+          "is_from_table_caption": false
+        }
+      ],
+      "context_records": [],
+      "table_structure": {
+        "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+        "extraction_mode": "semantic_ir",
+        "table_role": "target_composition",
+        "extractability": {
+          "decision": "extract",
+          "table_role": "target_composition",
+          "reason": "Table 2 reports average elemental mass percentages for NdFeB magnets used in mobile phones, which is target composition of the magnet sample.",
+          "confidence": 0.95,
+          "gate_decision": "extract",
+          "gate_table_role": "target_composition"
+        },
+        "layout": null
+      },
+      "source_table": {
+        "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+        "page_number": 7,
+        "caption": "Table 2. Average chemical composition of NdFeB magnets used in mobile phones.",
+        "section": "3.3. Chemical Composition of NdFeB Magnets Used in Mobile Phones3.3. Chemical Composition of NdFeB Magnets Used in Mobile Phones",
+        "explicit_references": [
+          "The values presented in Table 2 were used as a reference in the leaching of the REE with the aid of organic acids."
+        ],
+        "headers": [
+          "Element",
+          "Content %"
+        ],
+        "header_rows": [
+          [
+            "Element",
+            "Content %"
+          ]
+        ],
+        "column_descriptors": [
+          {
+            "id": "c0",
+            "index": 0,
+            "flat_label": "Element",
+            "header_path": [
+              "Element"
+            ],
+            "header_leaf": "Element",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Element",
+                "header_row": 0,
+                "column": 0
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          },
+          {
+            "id": "c1",
+            "index": 1,
+            "flat_label": "Content %",
+            "header_path": [
+              "Content %"
+            ],
+            "header_leaf": "Content %",
+            "header_group": "",
+            "raw_header_cells": [
+              {
+                "text": "Content %",
+                "header_row": 0,
+                "column": 1
+              }
+            ],
+            "recoverability": "mineru_header_rows"
+          }
+        ],
+        "unit_scope_candidates": [
+          {
+            "scope": "column",
+            "source": "column.header_path",
+            "columns": [
+              1
+            ],
+            "coverage": 0.5,
+            "evidence_cells": [
+              {
+                "column_index": 1,
+                "source": "column.header_path",
+                "flat_label": "Content %",
+                "header_path": [
+                  "Content %"
+                ]
+              }
+            ],
+            "interpretation": "unit markers are located in column headers; bind the unit from the current column header path"
+          }
+        ],
+        "rows": [
+          [
+            "Fe",
+            "61.9%"
+          ],
+          [
+            "Nd",
+            "23.9%"
+          ],
+          [
+            "Pr",
+            "3.8%"
+          ],
+          [
+            "Dy",
+            "1.1%"
+          ],
+          [
+            "others",
+            "9.3%"
+          ]
+        ],
+        "row_contexts": [],
+        "notes": [],
+        "raw_markdown": "| Element | Content % |\n| --- | --- |\n| Fe | 61.9% |\n| Nd | 23.9% |\n| Pr | 3.8% |\n| Dy | 1.1% |\n| others | 9.3% |",
+        "position_start": 22211,
+        "position_end": 22323,
+        "source": "mineru_content_list",
+        "source_kind": "standalone_table",
+        "layout_context": {
+          "previous_block_type": "text",
+          "next_block_type": "text",
+          "between_image_blocks": false
+        },
+        "raw_html": "<table><tr><td>Element</td><td>Content %</td></tr><tr><td>Fe</td><td>61.9%</td></tr><tr><td>Nd</td><td>23.9%</td></tr><tr><td>Pr</td><td>3.8%</td></tr><tr><td>Dy</td><td>1.1%</td></tr><tr><td>others</td><td>9.3%</td></tr></table>",
+        "image_path": "images/749c66fdf5a5e94a890c93dbf3a207a225cbeb06d8e17ce4c0ed09e1b2cc98fc.jpg",
+        "bbox": [
+          275,
+          206,
+          939,
+          299
+        ],
+        "metadata": {
+          "table_reference_sentences": [
+            "The values presented in Table 2 were used as a reference in the leaching of the REE with the aid of organic acids.",
+            "The results obtained in this analysis show (Table 2) that the analyzed REE (Nd, Pr and Dy) represent 28.8% of the sample mass (on average), while Fe represents an average of 61.9% of the mass of the samples."
+          ]
+        },
+        "table_reference_sentences": [
+          "The values presented in Table 2 were used as a reference in the leaching of the REE with the aid of organic acids.",
+          "The results obtained in this analysis show (Table 2) that the analyzed REE (Nd, Pr and Dy) represent 28.8% of the sample mass (on average), while Fe represents an average of 61.9% of the mass of the samples."
+        ]
+      }
+    }
+  }
+]

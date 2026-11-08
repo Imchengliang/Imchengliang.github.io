@@ -8,6 +8,7 @@ const colors = {Product:'#1f7a8c',Component:'#4a6fa5',Process:'#b5703a',Material
 const labels = {contains:'CONTAINS',processedBy:'PROCESSED_BY',hasOutput:'HAS_OUTPUT',observedForProductModel:'Observed for product model',variantOf:'Variant of',observedUnderScope:'Observed under scope',modelInDeclaredPopulation:'Model in declared population',comparableSamplePopulation:'Comparable sample population',sameModelStudied:'Same model studied'};
 const state = {data:null, nodes:new Map(), positions:new Map(), shownNodes:[], shownEdges:[], hierarchy:true, expanded:new Set(), navPath:[], graphHistory:[], displayNodes:new Map(), focus:null, selected:null, view:'fusion', case:null, stage:'gate', sourceTab:'text', evidence:'', locationSummary:false, textChoice:null, table:null, located:null, trace:null, spotlight:null, cellLookup:null, cellIndex:new Map(), cache:new Map(), request:0};
 let walkthrough=null;
+let overviewReturn=null;
 const canvas = $('#graph'), ctx = canvas.getContext('2d');
 let width=0, height=0, zoom=1, offset={x:0,y:0}, pointer=null, frame=0, edgeLabels=[];
 function notify(message){ $('#status').textContent=message; }
@@ -94,7 +95,10 @@ function showAllEntities(){
 }
 function setView(view,loadDefault=true){
   state.view=view;
-  document.querySelectorAll('[data-view]').forEach(button=>button.classList.toggle('active',button.dataset.view===view));
+  document.querySelectorAll('[data-view]').forEach(button=>{
+    const active=button.dataset.view===view;button.classList.toggle('active',active);
+    button.setAttribute('aria-pressed',String(active));
+  });
   $('#fusion-view').hidden=view!=='fusion'; $('#replay-view').hidden=view!=='replay';
   if($('#papers-view'))$('#papers-view').hidden=view!=='papers';
   if($('#about-view'))$('#about-view').hidden=view!=='about';
@@ -157,7 +161,7 @@ function updateGraph(fit=true){
   }
   $('#visible-stats').textContent=`${nodes.length} entities · ${edges.length} displayed relations · ${edges.filter(e=>e.fusion).length} fusion links`;
   $('#graph-caption').textContent=state.focus?`Focus: ${state.nodes.get(state.focus)?.label || ''} · direct neighborhood`:
-    source?`Source: ${sourceName(source)}`:'Grouped by source. Relations display separate observation records; measurements are not pooled or averaged.';
+    source?`Source: ${sourceName(source)}`:'Grouped by source.';
   if(state.hierarchy){
     const projection=state.hierarchyData.project(nodes,edges,state.expanded);
     state.shownNodes=projection.nodes;state.shownEdges=projection.edges;
@@ -167,8 +171,26 @@ function updateGraph(fit=true){
   }
   state.displayNodes=new Map(state.shownNodes.map(node=>[node.id,node]));
   if(state.selected && !(state.selected.kind==='node'?state.displayNodes.has(state.selected.id):state.shownEdges.some(edge=>edge.id===state.selected.id)))state.selected=null;
-  updateNavigation();$('#graph-tooltip').hidden=true;
+  updateGraphBrowser();updateNavigation();$('#graph-tooltip').hidden=true;
   if(fit) fitGraph(); else draw();
+}
+// Native controls expose the same displayed graph to keyboard users.
+function updateGraphBrowser(){
+  const fill=(id,items,label)=>{
+    const select=$(id),value=select.value;
+    select.replaceChildren(...items.map(item=>new Option(label(item),item.id)));
+    if(items.some(item=>item.id===value))select.value=value;
+    select.disabled=!items.length;
+  };
+  fill('#graph-node-select',state.shownNodes,node=>`${node.label} · ${node.group?'Group':node.type+(node.source?' · '+sourceName(node.source):'')}`);
+  fill('#graph-edge-select',state.shownEdges,edge=>edge.members?`${displayNode(edge.source).label} ↔ ${displayNode(edge.target).label} · ${relationName(edge)}`:`${displayNode(edge.source).label} → ${relationName(edge)} → ${displayNode(edge.target).label}`);
+  $('#graph-node-inspect').disabled=$('#graph-node-open').disabled=!state.shownNodes.length;
+  $('#graph-edge-inspect').disabled=!state.shownEdges.length;
+}
+function inspectGraphSelection(kind,open=false){
+  const id=$(kind==='node'?'#graph-node-select':'#graph-edge-select').value;if(!id)return;
+  if(kind==='edge')selectEdge(id);else if(open)focusNode(id);else selectNode(id);
+  const inspector=$('#inspector');inspector.tabIndex=-1;inspector.focus({preventScroll:true});
 }
 function resize(){
   if(state.view!=='fusion')return;
@@ -269,7 +291,7 @@ function processDetailsCard(node){
     return `<details class="process-setting"><summary>${esc(setting.name||'Experimental setting')}</summary>${fields({Sample:setting.sample,Treatment:setting.treatment})}${conditions}</details>`;
   }).join('');
   return overview+(resources?`<section class="node-scope">${resources}</section>`:'')+
-    (settings?`<section class="node-scope"><h4>Experimental settings · ${process.settings.length}</h4><p class="muted">Conditions vary by experiment. Open a result for its exact conditions.</p>${settings}</section>`:'');
+    (settings?`<section class="node-scope"><h4>Experimental settings · ${process.settings.length}</h4><p class="muted">Open a result to view its conditions.</p>${settings}</section>`:'');
 }
 function nodeScopeCards(node){
   return (node.scopes||[]).map((scope,index)=>{
@@ -317,22 +339,15 @@ function selectNode(id){
   if(displayNode(id)?.group){selectGroup(id);return;}
   const node=state.nodes.get(id);if(!node)return;state.selected={kind:'node',id};state.navPath=state.hierarchyData.path(id);updateNavigation();draw();
   const connections=state.shownEdges.filter(e=>e.source===id||e.target===id);
-  const classification=state.hierarchyData.classifications.get(id);
   const scopeCards=nodeScopeCards(node);
   const attributes=Object.fromEntries(Object.entries(node.attrs||{}).filter(([key])=>!['label','description','canonicalType'].includes(key)).map(([key,value])=>[key.replace(/([a-z])([A-Z])/g,'$1 $2').replace(/^./,c=>c.toUpperCase()),value]));
-  const description=scopeCards?'':contextSummary(node.attrs?.description);
-  $('#inspector').innerHTML=`<span class="tag">${esc(node.type)}${isCatalog(node)?' · CATALOG':''}</span><h3>${esc(node.label)}</h3><p>${esc(sourceName(node.source))}</p><div class="button-row"><button id="expand-node">Expand neighborhood</button><button id="node-replay">${node.type==='Process'?'View process evidence':'Open paper replay'}</button></div>${description}${fields(attributes)}${scopeCards}${processDetailsCard(node)}<h4>Relations in this view · ${connections.length}</h4><div id="connections"></div>${jsonDetails(node)}`;
-  if(classification){
-    const note=document.createElement('p');note.className='notice';
-    note.textContent=`Display group: ${classification.label}. ${classification.basis}; matched “${classification.matchedLabel}”. Vocabulary source: “${state.nodes.get(classification.declaredBy).label}” (${sourceName(state.nodes.get(classification.declaredBy).source)}). This is browsing only: no entity equivalence, sample membership or inherited experimental conditions are asserted; entities and measurements remain separate.`;
-    $('#inspector h3').after(note);
-  }
+  $('#inspector').innerHTML=`<span class="tag">${esc(node.type)}${isCatalog(node)?' · CATALOG':''}</span><h3>${esc(node.label)}</h3><p>${esc(sourceName(node.source))}</p><div class="button-row"><button id="expand-node">Expand neighborhood</button><button id="node-replay">${node.type==='Process'?'View process evidence':'Open paper replay'}</button></div>${fields({Source:isCatalog(node)?'GSMArena':null,...attributes})}${scopeCards}${processDetailsCard(node)}<h4>Relations in this view · ${connections.length}</h4><div id="connections"></div>${jsonDetails(node)}`;
   $('#expand-node').onclick=()=>focusNode(id);
   const match=state.data.cases.find(c=>c.paper===node.source);$('#node-replay').hidden=!match;
   $('#node-replay').onclick=()=>node.type==='Process'?openProcessEvidence(node):openReplay(match.id);
   $('#inspector').querySelectorAll('.scope-evidence').forEach(button=>{button.onclick=()=>openScopeEvidence(node,node.scopes[Number(button.dataset.scopeIndex)]);});
   for(const edge of connections){const button=document.createElement('button');button.className='connection';
-      button.innerHTML=`${esc(relationName(edge))} <small>${esc(displayNode(edge.source===id?edge.target:edge.source).label)} · ${edge.members?edge.members.length+' underlying relations':edge.records.length+' evidence / observation records'}</small>`;
+      button.innerHTML=`${esc(relationName(edge))} <small>${esc(displayNode(edge.source===id?edge.target:edge.source).label)}${edge.members||edge.records.length?' · ':''}${edge.members?edge.members.length+' underlying relations':edge.records.length?edge.records.length+' evidence / observation records':''}</small>`;
     button.onclick=()=>selectEdge(edge.id);$('#connections').append(button);}
   $('#inspector').scrollTop=0;
 }
@@ -347,16 +362,19 @@ function selectEdge(id,selectedRecord=null){
   if(aggregate){
     state.selected={kind:'edge',id};draw();
     const rows=Object.entries(aggregate.directions).map(([key,count])=>{const [from,predicate,to]=JSON.parse(key);return `<tr><td>${esc(displayNode(from).label)}</td><td>${esc(labels[predicate]||predicate)}</td><td>${esc(displayNode(to).label)}</td><td>${count}</td></tr>`;}).join('');
-    $('#inspector').innerHTML=`<span class="tag">DISPLAY SUMMARY</span><h3>${esc(displayNode(aggregate.source).label)} ↔ ${esc(displayNode(aggregate.target).label)}</h3><p>${aggregate.members.length} underlying relations. This is a display aggregate, not an additional KG assertion.</p><table class="relation-breakdown"><thead><tr><th>From</th><th>Relation</th><th>To</th><th>Count</th></tr></thead><tbody>${rows}</tbody></table><h4>Original relations</h4><div id="summary-relations"></div>`;
+    $('#inspector').innerHTML=`<span class="tag">DISPLAY SUMMARY</span><h3>${esc(displayNode(aggregate.source).label)} ↔ ${esc(displayNode(aggregate.target).label)}</h3><p>${aggregate.members.length} underlying relations.</p><table class="relation-breakdown"><thead><tr><th>From</th><th>Relation</th><th>To</th><th>Count</th></tr></thead><tbody>${rows}</tbody></table><h4>Original relations</h4><div id="summary-relations"></div>`;
     let count=0;
     const more=()=>{const container=$('#summary-relations');container.querySelector('.load-more')?.remove();for(const member of aggregate.members.slice(count,count+25)){const edge=state.data.edges.find(item=>item.id===member);const button=document.createElement('button');button.className='connection';button.textContent=state.nodes.get(edge.source).label+' → '+relationName(edge)+' → '+state.nodes.get(edge.target).label;button.onclick=()=>selectEdge(member);container.append(button);}count+=25;if(count<aggregate.members.length){const button=document.createElement('button');button.className='load-more';button.textContent='Load more relations';button.onclick=more;container.append(button);}};
     more();$('#inspector').scrollTop=0;return;
   }
   const edge=state.data.edges.find(e=>e.id===id);if(!edge)return;state.selected={kind:'edge',id};draw();
+  const sourceNode=state.nodes.get(edge.source),targetNode=state.nodes.get(edge.target);
+  const catalogSource=sourceNode.source===targetNode.source
+    ? state.data.sources.find(source=>source.id===sourceNode.source&&source.kind==='catalog') : null;
   const fusionNote=edge.predicate==='observedForProductModel'?
-    'Model alignment, not measurement pooling. The paper sample and catalog model remain distinct entities, not the same physical device. Measurements keep their original subjects and evidence; values are not copied to the catalog or averaged across sources.':
-    'Fusion links connect source entities; they do not copy or average measured values. Model, variant and scope links have different meanings. Scope applicability alone does not establish that a model was experimentally tested.';
-  $('#inspector').innerHTML=`<span class="tag">${edge.fusion?'FUSION LINK':'SOURCE RELATION'}</span><h3>${esc(state.nodes.get(edge.source).label)}</h3><span class="tag">${esc(relationName(edge))} →</span><h3>${esc(state.nodes.get(edge.target).label)}</h3><p>${edge.records.length} archived evidence / observation records. Records displayed together remain distinct; values are not pooled or averaged.</p>${edge.fusion?`<p class="notice">${esc(fusionNote)}</p>`:''}<div id="edge-records"></div>`;
+    'Links the study sample to its catalog model.':
+    '';
+  $('#inspector').innerHTML=`<span class="tag">${edge.fusion?'FUSION LINK':catalogSource?'CATALOG RELATION':'SOURCE RELATION'}</span><h3>${esc(sourceNode.label)}</h3><span class="tag">${esc(relationName(edge))} →</span><h3>${esc(targetNode.label)}</h3>${catalogSource?`<p>Catalog · ${esc(catalogSource.label)}</p>${fields({Source:'GSMArena'})}`:''}${edge.records.length?`<p>${edge.records.length} evidence / observation records.</p>`:''}${edge.fusion&&fusionNote?`<p>${esc(fusionNote)}</p>`:''}<div id="edge-records"></div>`;
   const records=selectedRecord?[selectedRecord,...edge.records.filter(record=>record!==selectedRecord)]:edge.records;
   let shown=0;
   function more(){
@@ -364,14 +382,14 @@ function selectEdge(id,selectedRecord=null){
     for(const record of records.slice(shown,shown+20)){
       const card=document.createElement('div');card.className='observation'+(record===selectedRecord?' trace-highlight':'');
       const value=text(record.observationValue),unit=text(record.observationUnit);
-      card.innerHTML=`${value?`<strong>${esc(value)} ${esc(unit)}</strong>`:''}${fields({Measure:record.observationProperty,Uncertainty:record.observationUncertainty,Qualifier:record.observationQualifier,'Source sample':record.sourceSample,'Sample state':record.sampleState,'Measurement basis':record.measurementBasis})}${conditionFields({Condition:record.condition,'Condition labels':record.conditionLabel,'Setting condition':record.settingCondition})}${edge.fusion?fields({Basis:record.linkBasis,Reason:record.linkReason,'Alignment score':record.alignmentScore,'Scope role':record.scopeRole}):''}${text(record.sourcePaper)?`<p class="record-source" title="${esc(text(record.sourcePaper))}">Source: ${esc(text(record.sourcePaper))}</p>`:''}${text(record.evidenceSpan)?`<p class="evidence">${esc(text(record.evidenceSpan))}</p>`:''}${jsonDetails(record)}`;
+      card.innerHTML=`${value?`<strong>${esc(value)} ${esc(unit)}</strong>`:''}${fields({Measure:record.observationProperty,Uncertainty:record.observationUncertainty,Qualifier:record.observationQualifier,'Source sample':record.sourceSample,'Sample state':record.sampleState,'Measurement basis':record.measurementBasis})}${conditionFields({Condition:record.condition,'Condition labels':record.conditionLabel,'Setting condition':record.settingCondition})}${edge.fusion?`<details><summary>Link details</summary>${fields({Basis:record.linkBasis,Reason:record.linkReason,'Alignment score':record.alignmentScore,'Scope role':record.scopeRole})}</details>`:''}${text(record.sourcePaper)?`<p class="record-source" title="${esc(text(record.sourcePaper))}">Source: ${esc(text(record.sourcePaper))}</p>`:''}${text(record.evidenceSpan)?`<p class="evidence">${esc(text(record.evidenceSpan))}</p>`:''}${jsonDetails(record)}`;
       const source=replaySource(edge,record);
       if(source){const button=document.createElement('button');button.textContent='View evidence in replay';button.onclick=()=>openReplay(source.replay_id,text(record.evidenceSpan),text(record.tableId),{edge,record});card.append(button);}
       $('#edge-records').append(card);
     }shown+=20;
     if(shown<edge.records.length){const button=document.createElement('button');button.className='load-more';button.textContent=`More records (${edge.records.length-shown} remaining)`;button.onclick=more;$('#edge-records').append(button);}
   }more();
-  if(!edge.records.length)$('#edge-records').innerHTML='<p>The frozen RDF contains no sentence-level evidence for this relation. Inspect the source descriptions of its endpoints.</p>';
+  if(!edge.records.length&&!catalogSource)$('#edge-records').innerHTML='<p>No source passage available.</p>';
   $('#inspector').scrollTop=0;
 }
 function selectGroup(id){
@@ -381,13 +399,7 @@ function selectGroup(id){
   state.navPath=state.hierarchyData.path(id);updateNavigation();draw();
   const children=group.children.filter(child=>state.hierarchyData.groups.get(child).members.some(member=>group.members.includes(member)));
   const members=children.length?children:group.members;
-  const derivedCount=group.members.filter(member=>state.hierarchyData.classifications.has(member)).length;
-  $('#inspector').innerHTML=`<span class="tag">${group.level===0?'TOP LEVEL':group.nameGroup?'NAME GROUP':'TYPE / FAMILY'}</span><h3>${esc(group.label)}</h3><p>${group.members.length} underlying entities.</p><p>${esc(group.basis||'A display entry point into the frozen graph. Expand to browse its types, families or individual materials.')}</p><div class="button-row"><button id="expand-group" ${state.expanded.has(id)?'disabled':''}>Expand group</button><button id="collapse-group" ${state.expanded.has(id)?'':'disabled'}>Collapse group</button></div><h4>${children.length?'Types / families':'Entities'} · ${members.length}</h4><div id="group-members"></div>`;
-  if(derivedCount){
-    const note=document.createElement('p');note.className='notice';
-    note.textContent=`${derivedCount} entities use label-based display classification. Product prefixes require a unique type declared in the same source; Components require an exact type/catalog label or a registered alias. Select an entity to inspect its grouping basis. Samples, scopes, conditions and measurements are not merged.`;
-    $('#inspector h3').after(note);
-  }
+  $('#inspector').innerHTML=`<span class="tag">${group.level===0?'TOP LEVEL':group.nameGroup?'NAME GROUP':'TYPE / FAMILY'}</span><h3>${esc(group.label)}</h3><p>${group.members.length} entities.</p><div class="button-row"><button id="expand-group" ${state.expanded.has(id)?'disabled':''}>Expand group</button><button id="collapse-group" ${state.expanded.has(id)?'':'disabled'}>Collapse group</button></div><h4>${children.length?'Types / families':'Entities'} · ${members.length}</h4><div id="group-members"></div>`;
   $('#expand-group').onclick=()=>expandGroup(id);
   $('#collapse-group').onclick=()=>collapseGroup(id);
   for(const member of members){const node=state.hierarchyData.groups.get(member)||state.nodes.get(member);const button=document.createElement('button');button.className='connection';button.textContent=node.label+(node.group?' · '+node.members.filter(entity=>group.members.includes(entity)).length:'');button.onclick=()=>{if(node.group){state.expanded.add(id);updateGraph();selectGroup(member);}else focusNode(member);};$('#group-members').append(button);}
@@ -483,6 +495,7 @@ async function loadCase(id){
   }catch(error){if(request===state.request)notify('Case loading failed: '+error.message);return false;}
 }
 async function openReplay(id,evidence='',table=null,origin=null){
+  clearOverviewEvidence();
   state.trace=null;state.spotlight=null;state.cellLookup=null;state.evidence=evidence;state.table=table;state.located=null;state.sourceTab=table?'tables':'text';
   state.locationSummary=false;state.textChoice=null;
   $('#record-search').value='';
@@ -524,14 +537,25 @@ function renderTrace(){
 }
 function scrollSourceTo(element){
   if(!element?.isConnected)return;
-  const pane=$('.source-pane'),bounds=pane.getBoundingClientRect(),rect=element.getBoundingClientRect();
-  pane.scrollTop+=rect.top-bounds.top-pane.querySelector('.pane-heading').offsetHeight-30;
-  const tableScroll=element.closest('.table-scroll');
-  if(tableScroll){const bounds=tableScroll.getBoundingClientRect();if(rect.left<bounds.left||rect.right>bounds.right)tableScroll.scrollLeft+=rect.left-bounds.left-25;}
+  const pane=$('.source-pane'),tableScroll=element.closest('.table-scroll');
+  if(tableScroll){
+    const block=element.closest('.table-block');
+    const available=pane.clientHeight-pane.querySelector('.pane-heading').offsetHeight-(tableScroll.getBoundingClientRect().top-block.getBoundingClientRect().top)-24;
+    tableScroll.style.maxHeight=`min(52vh, ${Math.max(140,available)}px)`;
+    const bounds=tableScroll.getBoundingClientRect(),rect=element.getBoundingClientRect();
+    const heading=tableScroll.querySelector('thead')?.offsetHeight||0;
+    if(rect.top<bounds.top+heading||rect.bottom>bounds.bottom)tableScroll.scrollTop+=rect.top-bounds.top-heading-8;
+    if(rect.left<bounds.left||rect.right>bounds.right)tableScroll.scrollLeft+=rect.left-bounds.left-25;
+  }
+  const bounds=pane.getBoundingClientRect();
+  const rect=(tableScroll?element.closest('.table-block'):element).getBoundingClientRect();
+  pane.scrollTop+=rect.top-bounds.top-pane.querySelector('.pane-heading').offsetHeight-12;
 }
 function renderSource(){
   if(!state.case)return;
-  $('#text-tab').classList.toggle('active',state.sourceTab==='text');$('#tables-tab').classList.toggle('active',state.sourceTab==='tables');
+  for(const [id,tab] of [['#text-tab','text'],['#tables-tab','tables']]){
+    $(id).classList.toggle('active',state.sourceTab===tab);$(id).setAttribute('aria-pressed',String(state.sourceTab===tab));
+  }
   const container=$('#source-content');container.replaceChildren();
   const label=$('#source-match-label');label.hidden=true;
   if(state.sourceTab==='text'){
@@ -542,11 +566,11 @@ function renderSource(){
     const approximate=state.locationSummary||!['exact','normalized'].includes(result.kind);
     let status=null;
     if(state.evidence){
-      const title=state.locationSummary?'Summary search · navigation only':result.kind==='exact'?'Exact match':result.kind==='normalized'?'Normalized match':match?'Approximate match · navigation only':result.matches.length?'Choose a passage · navigation only':'No matching passage';
+      const title=state.locationSummary?(result.matches.length?'Summary search':'No matching passage'):result.kind==='exact'?'Exact match':result.kind==='normalized'?'Normalized match':match?'Approximate match':result.matches.length?'Choose a passage':'No matching passage';
       label.textContent=title;label.hidden=false;
       status=document.createElement('section');status.className='match-status';status.setAttribute('aria-label','Text location result');
       const heading=document.createElement('strong');heading.textContent=title;status.append(heading);
-      const explanation=document.createElement('p');explanation.textContent=state.locationSummary?'This is a Process summary, not an archived quotation. '+(result.matches.length?'Candidate passages are for navigation only.':'No sufficiently similar passage was found.'):result.kind==='ambiguous'?'Several passages are similar. No unique passage was selected automatically.':result.kind==='approximate'?'Text overlap suggests related passages, not verified provenance. Check the original wording and values.':result.kind==='unmatched'?'No sufficiently similar passage was found. The archived text is unchanged.':'Highlighting uses the original source characters.';status.append(explanation);
+      if(result.matches.length&&approximate){const explanation=document.createElement('p');explanation.textContent='Choose a passage to inspect.';status.append(explanation);}
       if(result.matches.length&&(approximate||result.matches.length>1))result.matches.forEach((candidate,i)=>{
         const card=document.createElement('div');card.className='text-candidate';
         const button=document.createElement('button');button.textContent=`Candidate ${i+1} · text overlap ${Math.round(candidate.score*100)}%`;button.setAttribute('aria-pressed',String(index===i));
@@ -599,7 +623,7 @@ function renderCellResults(container){
   const lookup=state.cellLookup;if(!lookup)return;
   const panel=document.createElement('section');panel.id='cell-results';panel.className='cell-results';panel.setAttribute('aria-label','Cell extraction matches');
   const heading=document.createElement('strong');heading.textContent=`CELL → EXTRACTION · DATA ROW ${lookup.row}, COLUMN ${lookup.col+1}`;panel.append(heading);
-  const note=document.createElement('p');note.textContent=lookup.targets.length?`${lookup.targets.length} archived records for this cell. Table Agent and final outputs are separate versions, not additional independent facts.${lookup.active?'':' Choose a record to inspect; no unique candidate was selected.'}`:'No cell-level extraction record is archived for this cell. No match is inferred from its value alone.';panel.append(note);
+  const note=document.createElement('p');note.textContent=lookup.targets.length?`${lookup.targets.length} records for this cell.${lookup.active?'':' Choose a record to inspect.'}`:'No extraction record available for this cell.';panel.append(note);
   const actions=document.createElement('div');actions.className='button-row';const counts={};
   lookup.targets.forEach(target=>{
     const button=document.createElement('button'),p=target.data.properties||target.data.attributes||{};
@@ -622,8 +646,32 @@ function graphRecord(record){
   const edge=state.shownEdges.find(e=>e.source===node&&e.target===target&&e.predicate===predicates[record.predicate]);
   if(edge){const matches=edge.records.filter(candidate=>Trace.graphMatches(state.case,edge,candidate,record));selectEdge(edge.id,matches.length===1?matches[0]:null);}
 }
-async function openOverviewRecord(row,destination){
-  if(destination==='source'&&row.process_id)return openProcessEvidence(state.nodes.get(row.node_id));
+function clearOverviewEvidence(){
+  overviewReturn=null;
+  $('#overview-evidence').hidden=true;
+  $('#replay-view').classList.remove('evidence-review');
+  $('#stage-navigation').open=true;
+}
+function showOverviewEvidence(row,trigger,scrollY){
+  overviewReturn={trigger,scrollY};
+  const comparison=$('[data-mode="summary"]').getAttribute('aria-pressed')==='true';
+  const panel=$('#overview-evidence');panel.hidden=false;
+  const profile=state.overview.profiles.find(profile=>profile.id===row.profile_id);
+  panel.innerHTML=`<button id="overview-back">Back to ${comparison?'comparison':'records'}</button><div><strong>${esc(profile?.label||row.label||row.name||'Study sample')}${row.element||row.material?' · '+esc(row.element||row.material):''}${row.value!=null?' · '+esc(row.qualifier||'')+esc(row.value)+(row.uncertainty!=null?' ± '+esc(row.uncertainty):'')+' '+esc(row.display_unit||row.unit):''}</strong>${contextSummary(row.condition||row.assay||'')}<small>${esc(row.paper)}</small></div>`;
+  $('#overview-back').onclick=()=>{
+    const previous=overviewReturn;setView('overview');clearOverviewEvidence();
+    requestAnimationFrame(()=>{window.scrollTo(0,previous.scrollY);previous.trigger?.focus({preventScroll:true});});
+  };
+  $('#replay-view').classList.add('evidence-review');$('#stage-navigation').open=false;
+  window.scrollTo(0,0);
+  const back=$('#overview-back');back.focus({preventScroll:true});
+}
+async function openOverviewRecord(row,destination,trigger){
+  const scrollY=window.scrollY;
+  if(destination==='source'&&row.process_id){
+    await openProcessEvidence(state.nodes.get(row.node_id));
+    showOverviewEvidence(row,trigger,scrollY);return;
+  }
   await openReplay(row.case_id,row.evidence?.[0]||'');
   if(state.case?.id!==row.case_id)throw Error('Reopen this result to continue.');
   if(Number.isInteger(row.final_index)){
@@ -633,7 +681,7 @@ async function openOverviewRecord(row,destination){
     state.spotlight={case:state.case.id,target:{stage:'final',kind:'final',data:record,raw:record},label:'OVERVIEW SOURCE'};
     locateRecord(record);
   }else if(destination==='graph'){graphRecord({node_id:row.node_id});return;}
-  state.stage='final';renderStage();scrollOutputTo('#walkthrough-target');
+  state.stage='final';renderStage();showOverviewEvidence(row,trigger,scrollY);scrollOutputTo('#walkthrough-target');
 }
 function selectStage(id){
   state.stage=id;$('#record-search').value='';
@@ -662,12 +710,13 @@ function renderProcessInventory(container){
 function renderStage(){
   if(!state.case)return;
   const stage=state.case.stages.find(s=>s.id===state.stage)||state.case.stages[0];
-  $('#stages').querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.stage===stage.id));
+  $('#stages').querySelectorAll('button').forEach(b=>{
+    const active=b.dataset.stage===stage.id;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));
+  });
   renderTrace();
   $('#stage-heading').innerHTML=`<strong>${esc(stage.label)}</strong>`+stageFlow(stage.id);
   const container=$('#stage-records');container.replaceChildren();
   const downloads=document.createElement('details');downloads.innerHTML='<summary>Data files</summary>';
-  const note=document.createElement('div');note.className='stage-note';note.textContent=stage.note;downloads.append(note);
   const files=document.createElement('div');files.className='file-links';
   stage.files.forEach(file=>{const link=document.createElement('a');link.href=file.url;link.download=file.name;link.textContent=file.name+' ↗';link.title='SHA-256: '+file.sha256;files.append(link);});downloads.append(files);
   const times=document.createElement('div');times.className='file-time';times.textContent=stage.files.map(f=>`${f.name}: ${new Date(f.modified).toLocaleString('en-GB')}`).join(' · ');downloads.append(times);container.append(downloads);
@@ -714,6 +763,7 @@ function configureDataset(){
 }
 async function start(){
   try{
+    document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setView(b.dataset.view));
     state.data=await fetchJSON(document.body.dataset.graph||'data/graph.json');configureDataset();state.nodes=new Map(state.data.nodes.map(n=>[n.id,n]));state.hierarchyData=createHierarchy(state.data);initializePositions();
     const entityCount=state.data.nodes.filter(n=>['Product','Component','Process','Material'].includes(n.type)).length;
     $('#legend').innerHTML=Object.entries(colors).map(([name,color])=>`<span><i class="dot" style="background:${color}"></i>${name}</span>`).join('')+'<span>┄┄ fusion link</span>';
@@ -735,9 +785,12 @@ async function start(){
     $('#clear-focus').onclick=()=>{state.graphHistory=[];state.focus=null;state.navPath=[];updateGraph();};$('#fit').onclick=fitGraph;$('#zoom-in').onclick=()=>scale(1.3);$('#zoom-out').onclick=()=>scale(1/1.3);
     $('#case-select').onchange=()=>{state.request++;walkthrough?.reset();renderCaseSelection();if(state.view==='replay')openReplay($('#case-select').value);};
     if($('#case-browse'))$('#case-browse').onclick=()=>{walkthrough?.reset();return openReplay($('#case-select').value);};
+    $('#graph-node-inspect').onclick=()=>inspectGraphSelection('node');
+    $('#graph-node-open').onclick=()=>inspectGraphSelection('node',true);
+    $('#graph-edge-inspect').onclick=()=>inspectGraphSelection('edge');
     $('#text-tab').onclick=()=>{state.sourceTab='text';renderSource();};$('#tables-tab').onclick=()=>{state.sourceTab='tables';renderSource();};$('#record-search').oninput=renderStage;
     $('#case-on-graph').onclick=()=>{setView('fusion');state.graphHistory=[];state.hierarchy=false;state.focus=null;state.navPath=[];$('#source-filter').value=state.data.cases.find(item=>item.id===$('#case-select').value).paper;$('#type-filter').value='';$('#relation-filter').value='';updateGraph();};
-    $('#inspector').innerHTML=`<div class="eyebrow">TRACEABLE KNOWLEDGE</div><div class="intro-icon">⌘</div><h3>Four entry points.<br>Explore one level at a time.</h3><p>Select Product, Component, Process or Material. Expand a group to browse types and families, then individual entities.</p><h4>What is underneath?</h4><p>${entityCount} entities and ${state.data.edges.length} displayed relations. ${state.data.observations} quantitative observations remain available in relation details.</p><p>Top-level links summarize existing relations; they are not new KG assertions. Unclassified groups retain entities without a declared type or method family.</p>`;
+    $('#inspector').innerHTML=`<div class="eyebrow">TRACEABLE KNOWLEDGE</div><div class="intro-icon">⌘</div><h3>Four entry points.<br>Explore one level at a time.</h3><p>Select Product, Component, Process or Material. Expand a group to browse types and families, then individual entities.</p><h4>What is underneath?</h4><p>${entityCount} entities and ${state.data.edges.length} displayed relations. ${state.data.observations} quantitative observations remain available in relation details.</p>`;
     if($('#walkthrough-start'))walkthrough=Walkthrough.mount({
       graph:state.data,loadGuide:path=>fetchJSON(path),
       loadArchive:async id=>{if(!state.cache.has(id))state.cache.set(id,await fetchJSON(state.data.sources.find(source=>source.replay_id===id)?.replay_url||`data/cases/${id}.json`));return state.cache.get(id);},
@@ -759,17 +812,10 @@ async function start(){
     $('#case-select').disabled=false;if($('#case-browse'))$('#case-browse').disabled=false;renderCaseSelection();
     window.addEventListener('resize',resize);new ResizeObserver(resize).observe(canvas.parentElement);updateGraph();resize();notify('');
     if(document.body.dataset.overview){
-      const overview=await fetchJSON(document.body.dataset.overview);
+      const overview=await fetchJSON(document.body.dataset.overview);state.overview=overview;
       const actions={open:openOverviewRecord,error:error=>notify(error.message)};
-      if(document.body.dataset.analysis)actions.query=async parameters=>{
-        const response=await fetch(document.body.dataset.analysis,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(parameters)});
-        if(!response.headers.get('Content-Type')?.includes('application/json'))throw Error('The analysis API is unavailable. Start the local demo with server.py.');
-        const result=await response.json();if(!response.ok)throw Error(result.error||'Analysis request failed');return result;
-      };
-      else {
-        const records=await fetchJSON('datasets/battery20/overview/analysis-records.json?v=e16644c5bd35');
-        actions.query=BatteryStatic.create({...overview,...records});
-      }
+      const records=await fetchJSON('datasets/battery20/overview/analysis-records.json');
+      actions.query=BatteryStatic.create({...overview,...records});
       BatteryOverview.mount($('#battery-overview'),overview,actions);
       setView('overview',false);
     }
@@ -790,7 +836,7 @@ const STAGE_FLOW={
 };
 function stageFlow(id){
   const f=STAGE_FLOW[id];if(!f)return '';
-  return `<div class="stage-flow" aria-label="What this stage records"><span><small>Input</small>${esc(f[0])}</span><i>→</i><span><small>Recorded action</small>${esc(f[1])}</span><i>→</i><span><small>Output</small>${esc(f[2])}</span></div><p class="stage-flow-note">Describes the stage type. Where the archive does not record why a decision was made, records show “Not recorded”.</p>`;
+  return `<div class="stage-flow" aria-label="What this stage records"><span><small>Input</small>${esc(f[0])}</span><i>→</i><span><small>Recorded action</small>${esc(f[1])}</span><i>→</i><span><small>Output</small>${esc(f[2])}</span></div>`;
 }
 function processMap(item){
   if(item.source_only)return '<button data-stage="final" class="pm-node pm-final active"><b>Final relations</b><small>Source-only archive · no intermediate stages</small></button>';

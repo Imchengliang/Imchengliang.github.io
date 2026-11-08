@@ -120,7 +120,7 @@ const Replay = (() => {
       if(facts(original).predicate)body+=factHTML(original);else body+=paragraph(original.name||original.id);
       body+=detailFields({'Replacement reference':record.superseded_by,Criterion:record.criterion});quote=evidence(original);tableId=props(original).table_id;locationRecord=original;
     }else if(item.kind==='process_request') {
-      title='Missing Process request';body=badges(['Unresolved draft · not a final KG assertion',record.request_type])+paragraph(record.reason)+factHTML(record.relation_draft||{});
+      title='Missing Process request';body=badges(['Unresolved draft',record.request_type])+paragraph(record.reason)+factHTML(record.relation_draft||{});
     }else if(item.kind==='operation') {
       title=record.op;body=badges(['Revision operation',item.run?.status?'Run: '+item.run.status:item.run?.committed?'Run: committed':'Proposal'])+detailFields({Process:record.canonical_name,'Affected results':record.affected_result_ids?.length});
     }else if(item.kind==='process_setting_reconciliation') {
@@ -129,12 +129,12 @@ const Replay = (() => {
       body+=scalarFields(record.final||{});
       if(record.missing_process)body+='<h5>Missing Process results</h5>'+scalarFields(record.missing_process);
     }else if(item.kind==='empty') {
-      body=paragraph('This chunk has no extracted records. It remains available in the original stage download.');
+      body=paragraph('No extracted records in this chunk.');
     }else body=scalarFields(record);
     card.innerHTML=`<h4>${esc(title)}</h4>${item.section?`<p class="chunk-context">${esc(item.section)}</p>`:''}${body}`;
     if(quote){const p=document.createElement('p');p.className='evidence';const source=props(locationRecord);p.textContent=tableId&&present(source.raw_cell)?'Source cell: '+text(source.raw_cell)+(source.column_header?' · '+text(source.column_header):''):quote;card.append(p);}
     const summary=!quote&&['process','published_process'].includes(item.kind)?(record.content||record.condition_summary||''):'';
-    if(summary||(!quote&&!tableId&&['entity','process'].includes(item.kind))){const note=document.createElement('p');note.className='source-note';note.textContent=summary?'Process summary — not an archived quotation.':'No source quotation is archived for this record.';card.append(note);}
+    if(summary||(!quote&&!tableId&&['entity','process'].includes(item.kind))){const note=document.createElement('p');note.className='source-note';note.textContent=summary?'Process summary':'No source quotation available.';card.append(note);}
     const buttons=document.createElement('div');buttons.className='record-actions';
     if(quote||tableId||summary) {
       const button=document.createElement('button');button.textContent=tableId?'Locate source table / cell':summary?'Find related text (summary)':'Locate text evidence';
@@ -243,17 +243,17 @@ const Replay = (() => {
     const raw=p.raw_cell??provenance.value_cell;
     // Executor coordinates: data rows are 1-based; columns are 0-based.
     if(Number.isInteger(row)&&Number.isInteger(col)&&table.rows[row-1]?.[col]!==undefined) {
-      if(present(raw)&&normalize(table.rows[row-1][col])!==normalize(raw))return {message:'Stored coordinates differ from the archived cell text. No cell highlighted.'};
-      return {row,col,message:`Stored cell coordinates: data row ${row}, column ${col+1}${present(raw)?' · cell text verified':''}.`};
+      if(present(raw)&&normalize(table.rows[row-1][col])!==normalize(raw))return {message:'Cell text differs from the extraction record. No cell highlighted.'};
+      return {row,col};
     }
-    if(Number.isInteger(row)&&table.rows[row-1]&&col===undefined)return {row,message:`Stored data row ${row}. No unique cell column is archived.`};
+    if(Number.isInteger(row)&&table.rows[row-1]&&col===undefined)return {row,message:`Row ${row} located. Exact cell unavailable.`};
     const candidates=[];
     if(present(p.row_label)&&present(p.column_header)&&present(raw))table.rows.forEach((cells,index)=>{
       if(!cells.some(value=>normalize(value)===normalize(p.row_label)))return;
       cells.forEach((value,column)=>{if(normalize(table.headers[column])===normalize(p.column_header)&&normalize(value)===normalize(raw))candidates.push({row:index+1,col:column});});
     });
-    return candidates.length===1?{...candidates[0],message:'Unique exact match of row label, column header and raw cell.'}:
-      {message:'Table located. Exact cell coordinates are unavailable or ambiguous; no cell highlighted.'};
+    return candidates.length===1?{...candidates[0]}:
+      {message:'Table located. Exact cell unavailable or ambiguous.'};
   }
   const cellKey = (table,row,col) => `${tableKey(table)}:${row}:${col}`;
   function cellIndex(archive) {

@@ -1,0 +1,95 @@
+[
+  {
+    "id": "setting:Metal Recovery from the Mobile Phone Waste by Chemical and Biological Treatments:nh4oh-precipitation-conditions",
+    "name": "NH4OH precipitation conditions",
+    "stage_name": "NH4OH precipitation from digested aqua regia",
+    "stage_id": "stage:Metal Recovery from the Mobile Phone Waste by Chemical and Biological Treatments:nh4oh-precipitation-from-digested-aqua-regia",
+    "sample": "metal solution leached in aqua regia",
+    "sample_aliases": [
+      "acidic metal solution"
+    ],
+    "treatment": "ammonium hydroxide addition",
+    "treatment_members": [
+      "NH4OH"
+    ],
+    "treatment_aliases": [],
+    "aliases": [],
+    "condition_summary": "NH4OH (28%) slowly added with rapid stirring; pH adjusted to ranges 3.9-4.2, 5.7-7.7, and 8.3-10.5; stirring continued after addition stopped; precipitates separated by centrifugation; washed with distilled water three times and dried",
+    "condition_keys": [
+      {
+        "key": "concentration",
+        "value": 28.0,
+        "unit": "%",
+        "raw_text": "NH4OH (28%) slowly added with rapid stirring"
+      },
+      {
+        "key": "other",
+        "value": "pH adjusted to ranges 3.9-4.2, 5.7-7.7, and 8.3-10.5",
+        "unit": null,
+        "raw_text": "pH adjusted to ranges 3.9-4.2, 5.7-7.7, and 8.3-10.5"
+      },
+      {
+        "key": "other",
+        "value": "stirring continued after addition stopped",
+        "unit": null,
+        "raw_text": "stirring continued after addition stopped"
+      },
+      {
+        "key": "other",
+        "value": "precipitates separated by centrifugation",
+        "unit": null,
+        "raw_text": "precipitates separated by centrifugation"
+      },
+      {
+        "key": "medium",
+        "value": "washed with distilled water three times and dried",
+        "unit": null,
+        "raw_text": "washed with distilled water three times and dried"
+      }
+    ],
+    "source": "process_pass",
+    "source_table_id": null,
+    "evidence_hint": "NH4OH solution was slowly added into the acidic metal solution to precipitate metals; when pH ranges were reached, addition was stopped but kept stirring; suspension centrifuged to separate precipitate and supernatant.",
+    "evidence": {}
+  },
+  {
+    "id": "setting:Metal Recovery from the Mobile Phone Waste by Chemical and Biological Treatments:biogenic-metal-precipitation-conditions",
+    "name": "biogenic metal precipitation conditions",
+    "stage_name": "biogenic metal precipitation from pH 7.7 filtrate",
+    "stage_id": "stage:Metal Recovery from the Mobile Phone Waste by Chemical and Biological Treatments:biogenic-metal-precipitation-from-ph-7-7-filtrate",
+    "sample": "filtrate at pH 7.7",
+    "sample_aliases": [],
+    "treatment": "metal-reducing bacteria (Suncheon-1) with glucose",
+    "treatment_members": [
+      "Suncheon-1",
+      "glucose"
+    ],
+    "treatment_aliases": [],
+    "aliases": [],
+    "condition_summary": "2 mL filtrate added to medium containing 10 mM glucose and 2 mL enriched metal-reducing bacteria; final medium pH ~8.0; cultivated in shaking incubator at 25 °C under anoxic atmosphere for 2 weeks",
+    "condition_keys": [
+      {
+        "key": "volume",
+        "value": 2.0,
+        "unit": "mL",
+        "raw_text": "2 mL filtrate added to medium containing 10 mM glucose and 2 mL enriched metal-reducing bacteria"
+      },
+      {
+        "key": "medium",
+        "value": "final medium pH ~8.0",
+        "unit": null,
+        "raw_text": "final medium pH ~8.0"
+      },
+      {
+        "key": "temperature",
+        "value": 25.0,
+        "unit": "°C",
+        "raw_text": "cultivated in shaking incubator at 25 °C under anoxic atmosphere for 2 weeks"
+      }
+    ],
+    "source": "process_pass",
+    "source_table_id": null,
+    "evidence_hint": "To produce biogenic metal-precipitates, 2 mL of the filtrate at pH 7.7 was added to the medium containing 10 mM of glucose and 2 mL of enriched metal-reducing bacteria; cultivated at 25 °C under anoxic atmosphere for 2 weeks.",
+    "evidence": {}
+  }
+]

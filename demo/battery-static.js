@@ -11,7 +11,7 @@ const BatteryStatic = (() => {
     }
     function statistics(rows, filters, progress) {
       if (!worker) {
-        worker = new Worker(new URL('battery-statistics-worker.mjs?v=e16644c5bd35', document.baseURI), {type: 'module'});
+        worker = new Worker(new URL('battery-statistics-worker.mjs?v=component-filter-20261108', document.baseURI), {type: 'module'});
         worker.onmessage = ({data: message}) => {
           const job = pending.get(message.id);
           if (!job) return;

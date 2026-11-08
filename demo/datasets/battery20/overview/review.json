@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "review_date": "2026-11-06",
+  "review_date": "2026-11-08",
   "classification_basis": "Source-reviewed material classes and preparation attributes; sample names remain labels, not statistical group keys. Unknown measurement bases are not assumed equivalent.",
   "chemistries": {
     "lco": "LiCoO2-related (LCO)",
@@ -12,7 +12,9 @@
     "chemistry-unspecified": "Battery chemistry unspecified",
     "ni-cd": "Nickel-cadmium (Ni-Cd)",
     "ni-mh": "Nickel-metal hydride (Ni-MH)",
-    "zn-mn": "Zinc-manganese (Zn-Mn)"
+    "zn-mn": "Zinc-manganese (Zn-Mn)",
+    "non-battery-unspecified": "Not specified",
+    "ndfeb": "NdFeB"
   },
   "streams": {
     "whole": "Whole batteries",
@@ -20,7 +22,11 @@
     "anode": "Anode feedstocks",
     "mixed-electrodes": "Mixed electrode materials",
     "separated-fractions": "Separated material fractions",
-    "intermediates": "Recycling intermediates"
+    "intermediates": "Recycling intermediates",
+    "mixed-components": "Mixed components",
+    "intact-boards": "Component-bearing PCBs",
+    "magnet-powder": "Magnet powder",
+    "metal-bearing-leachates": "Metal-bearing leachates"
   },
   "origins": {
     "recycling-company": "Recycling company",
@@ -79,7 +85,8 @@
           "chemistry_resolved": true,
           "classification_evidence": [
             "The spent LIBs used in this study were provided by TES-AMM Co. Ltd. LiCoO and carbon powders were fixed on Al and Cu foils as positive and negative electrodes, respectively. The components of LIBs were separated and measured in the laboratory as follows. First, the crust was removed with pincers and saws. Then, all of the parts were put into hydrochloric acid, heated and agitated at 90 -C for 4 h, dissolving all of the metals. The concentrations of different metals were measured with an inductive coupled plasma atomic emission spectrometer (ICP-AES). Finally, the content of each metal in the battery was calculated. The results indicated that Co accounted for 16% and Li, Cu, Al, Fe accounted for 2%, 10%, 3%, and 19% of the mass, respectively."
-          ]
+          ],
+          "component": "battery"
         },
         {
           "id": "source-98d7e11c7ecce524/electrodes",
@@ -132,7 +139,8 @@
           "chemistry_resolved": true,
           "classification_evidence": [
             "This work proposes a new process of recovering Co from spent Li-ion batteries (LIBs) by a combination of crushing, ultrasonic washing, acid leaching and precipitation, in which ultrasonic washing was used for the first time as an alternative process to improve the recovery efficiency of Co and reduce energy consumption and pollution. Spent LIBs were crushed with a 12 mm aperture screen, and the undersize products were put into an ultrasonic washing container to separate electrode materials from their support substrate. The washed materials were filtered through a 2 mm aperture screen to get underflow products, namely recovered electrodes. Ninety two percent of the Co was transferred to the recovered electrodes where Co accounted for 28% of the mass and impurities, including Al, Fe, and Cu, accounted for 2%. The valuable materials left in 2–12 mm products, including Cu, Al, and Fe, were presented as thin sheets, and could be easily separated. The recovered electrodes were leached with 4.0 M HCl for 2.0 h, at 80 ^∘C, along with concurrent agitation. Ninety seven percent of the Li and 99% of the Co in recovered electrodes could be dissolved. The impurities could be removed at pH 4.5–6.0 with little loss of Co by chemical precipitation. This process is feasible for recycling spent LIBs in scale-up."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -172,7 +180,8 @@
           "chemistry_resolved": false,
           "classification_evidence": [
             "All the batteries were Li-ion, with the exception of the sample n. 20 which was a Ni-MH."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -219,7 +228,8 @@
           "chemistry_resolved": true,
           "classification_evidence": [
             "In order to avoid short-circuit and self-ignition, 100 pieces of spent LIBs with the same type were discharged completely in 5 wt% sodium chloride solution for 48 h and dried naturally for 24 h afterwards. All batteries were manually disassembled into metallic shell, cathode strips, anode strips and organic separators. Then the cathode strips and anode strips were placed in the impact crusher with the number ratio 1:1. After crushing and screening, the fine powder under 0.074 mm was mixed electrode materials (LiCoO2 and graphite). The content of LiCoO2 in mixed electrode powder was measured by the combination of X-ray fluorescence (XRF, Bruker S8 Tiger, Germany) and X-ray diffraction (XRD, Bruker D8 Advance, Germany). Results indicated that LiCoO2 accounted for 66.75% of the mixed electrode powder."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -271,7 +281,8 @@
           "classification_evidence": [
             "EoL smartphones were directly collected from users, through announcements on social media. To improve representativeness, a well distribution of manufacturing years, variety of brands, and devices in good conditions were prioritized: devices from nine different brands were collected, and no model was repeated.",
             "The parameters for acidic digestions were: 20 mL of solution per gram of solids, at 80 ^∘C, under agitation speed of 300 rpm, for 2 h. Reactors (schlenk flasks) coupled with allihn condensers were used to avoid solvent losses. After the established time, samples were filtrated and diluted in volumetric flasks, and the liquors analyzed by ICP-OES."
-          ]
+          ],
+          "component": "battery"
         },
         {
           "id": "smartphones/after",
@@ -315,7 +326,8 @@
           "classification_evidence": [
             "EoL smartphones were directly collected from users, through announcements on social media. To improve representativeness, a well distribution of manufacturing years, variety of brands, and devices in good conditions were prioritized: devices from nine different brands were collected, and no model was repeated.",
             "The parameters for acidic digestions were: 20 mL of solution per gram of solids, at 80 ^∘C, under agitation speed of 300 rpm, for 2 h. Reactors (schlenk flasks) coupled with allihn condensers were used to avoid solvent losses. After the established time, samples were filtrated and diluted in volumetric flasks, and the liquors analyzed by ICP-OES."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -397,7 +409,8 @@
           "classification_evidence": [
             "Spent mobile phone batteries were collected from mobile phone markets. All batteries were Li-ion made from different manufacturers with different sizes and types of cathode. At first, all spent batteries were discharged to avoid self-ignition and shortcircuiting. Spent batteries were then dismantled and separated manually into cathodes, anodes, plastic separators and metal cases. Afterwards, the classified portions were weighed. Next, cathodes and anodes were dried at 60 ^∘𝖢 for 24 h to remove moisture. After drying, the classified cathodes and anodes were once again weighed so as to calculate the percentage of battery components. The average percentage of different parts of batteries is shown in Fig. 1.",
             "The metal composition of LIB powder was determined by both chemical digestion and submitting to X-ray fluorescence (XRF) and subsequent analysis with XRF analyzer (PW2404, Philips, Netherland). In chemical digestion, the metal contents were determined using four acids, namely HCl, HNO, HClO and HF. At first, 0.5 g of powder was subjected to 5 mL HNO3 in a Teflon beaker and heated to 150 \u0005C for 0.5 h. After cooling,10 mL mixture of HClO4 and HF in a ratio of 1:6 was added and heated to 200 ^∘𝖢. After cooling, 20 mL 1:1 HCl was added and heated again for 0.5 h on a hot plate. When the digest was cooled, it was filtered and made up to 200 mL with deionized water, the final dilution factor being 400. Subsequently, the solution was analyzed through the use of an inductively coupled plasma optical emission spectrometer (ICP-OES) (Vistapro, Varian, Australia). In addition, a control sample was prepared, whose metal concentration was subtracted from the main sample in the calculations. The results are shown in Table 1."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -454,7 +467,8 @@
             "In the laboratory, after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries, all samples were divided through a suitable sieve into two further size fractions: U < 1 mm and 1 mm < U < 3 mm. In this way, a possible difference in metal concentration in the various fractions was investigated.",
             "All metals except mercury were measured by ICP/AES; mercury was analysed by cold vapour atomic absorption spectrometry (CVAAS).",
             "Weight loss, mainly due to the vaporisation of moisture and other volatile compounds, was determined by drying the samples to a constant mass at 105 \u0003C (about 3–4 h were needed). All data reported refer to dry weight."
-          ]
+          ],
+          "component": "battery"
         },
         {
           "id": "source-9f8e67169119c4a8/fraction-2",
@@ -506,7 +520,8 @@
             "In the laboratory, after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries, all samples were divided through a suitable sieve into two further size fractions: U < 1 mm and 1 mm < U < 3 mm. In this way, a possible difference in metal concentration in the various fractions was investigated.",
             "All metals except mercury were measured by ICP/AES; mercury was analysed by cold vapour atomic absorption spectrometry (CVAAS).",
             "Weight loss, mainly due to the vaporisation of moisture and other volatile compounds, was determined by drying the samples to a constant mass at 105 \u0003C (about 3–4 h were needed). All data reported refer to dry weight."
-          ]
+          ],
+          "component": "battery"
         },
         {
           "id": "source-9f8e67169119c4a8/fraction-3",
@@ -558,7 +573,8 @@
             "In the laboratory, after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries, all samples were divided through a suitable sieve into two further size fractions: U < 1 mm and 1 mm < U < 3 mm. In this way, a possible difference in metal concentration in the various fractions was investigated.",
             "All metals except mercury were measured by ICP/AES; mercury was analysed by cold vapour atomic absorption spectrometry (CVAAS).",
             "Weight loss, mainly due to the vaporisation of moisture and other volatile compounds, was determined by drying the samples to a constant mass at 105 \u0003C (about 3–4 h were needed). All data reported refer to dry weight."
-          ]
+          ],
+          "component": "battery"
         },
         {
           "id": "source-9f8e67169119c4a8/fraction-4",
@@ -610,7 +626,8 @@
             "In the laboratory, after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries, all samples were divided through a suitable sieve into two further size fractions: U < 1 mm and 1 mm < U < 3 mm. In this way, a possible difference in metal concentration in the various fractions was investigated.",
             "All metals except mercury were measured by ICP/AES; mercury was analysed by cold vapour atomic absorption spectrometry (CVAAS).",
             "Weight loss, mainly due to the vaporisation of moisture and other volatile compounds, was determined by drying the samples to a constant mass at 105 \u0003C (about 3–4 h were needed). All data reported refer to dry weight."
-          ]
+          ],
+          "component": "battery"
         },
         {
           "id": "source-9f8e67169119c4a8/fraction-5",
@@ -662,7 +679,8 @@
             "In the laboratory, after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries, all samples were divided through a suitable sieve into two further size fractions: U < 1 mm and 1 mm < U < 3 mm. In this way, a possible difference in metal concentration in the various fractions was investigated.",
             "All metals except mercury were measured by ICP/AES; mercury was analysed by cold vapour atomic absorption spectrometry (CVAAS).",
             "Weight loss, mainly due to the vaporisation of moisture and other volatile compounds, was determined by drying the samples to a constant mass at 105 \u0003C (about 3–4 h were needed). All data reported refer to dry weight."
-          ]
+          ],
+          "component": "battery"
         },
         {
           "id": "source-9f8e67169119c4a8/fraction-6",
@@ -714,7 +732,8 @@
             "In the laboratory, after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries, all samples were divided through a suitable sieve into two further size fractions: U < 1 mm and 1 mm < U < 3 mm. In this way, a possible difference in metal concentration in the various fractions was investigated.",
             "All metals except mercury were measured by ICP/AES; mercury was analysed by cold vapour atomic absorption spectrometry (CVAAS).",
             "Weight loss, mainly due to the vaporisation of moisture and other volatile compounds, was determined by drying the samples to a constant mass at 105 \u0003C (about 3–4 h were needed). All data reported refer to dry weight."
-          ]
+          ],
+          "component": "battery"
         },
         {
           "id": "source-9f8e67169119c4a8/fraction-7",
@@ -766,7 +785,8 @@
             "In the laboratory, after a magnetic separation of the coarse ferrous residues contained in Ni–Cd batteries, all samples were divided through a suitable sieve into two further size fractions: U < 1 mm and 1 mm < U < 3 mm. In this way, a possible difference in metal concentration in the various fractions was investigated.",
             "All metals except mercury were measured by ICP/AES; mercury was analysed by cold vapour atomic absorption spectrometry (CVAAS).",
             "Weight loss, mainly due to the vaporisation of moisture and other volatile compounds, was determined by drying the samples to a constant mass at 105 \u0003C (about 3–4 h were needed). All data reported refer to dry weight."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -820,7 +840,8 @@
           "classification_evidence": [
             "The cathode scrap, which are the cathodes used for manufacturing lithium-ion battery, was supplied by a local recycling company (Huayou Cobalt, China). Before leaching, the cathode scrap was cut into pieces with the size of 10 mm and dried at 60 ^∘𝖢 for 24 h. To determine the composition, the cathode scrap was dissolved with aqua regia solution (HNO3HCl = 1: 3, v / v) and sulfuric acid one after another. All chemical reagents were of analytical grade and all solutions were prepared with ultrapure water (Millipore Milli-Q). The leaching reagents are organic/inorganic acidic solutions (12 kinds of acids in Table S3) under certain concentrations, and the reductant is introduced to the reagents according to the leaching process.",
             "In this study, a comprehensive investigation and evaluation on the leaching processes with acidic solutions for recovery of metals from spent LIBs (LiCoO2 was used for simplification) was carried out. Among different leaching parameters (e.g., acid species and concentrations, S/L ratios, reductant species and concentrations, leaching times, temperatures, leaching speed and recovery rate), the recovery rate is an important parameter to evaluate the viability of a leaching process, and the leaching speed is an important parameter to analyze the leaching kinetics or effectiveness of a leaching process. Through defining and analyzing these two parameters, the effects of hydrogen ion concentrations, acid species and concentrations on these two parameters were evaluated. In a typical leaching process, inconsistency between the leaching selectivity and efficiency was frequently noticed. Furthermore, the decisive factors of the leaching speed and recovery rate were identified by analyzing the leaching parameters. On one hand, 12 acidic solutions were used to understand the leaching behavior of cathode scrap from spent LIBs and to find out the correlation between the leaching speed and recovery rate of the corresponding metals. On the other hand, it is noticed that the conditions to ensure both high leaching efficiency and leaching selectivity can be achieved by optimized process design. Completion of these objectives will be expected to attain preliminary correlations to control the physiochemical properties of leaching solution and to potentially design process at both lab-scale and industrial levels."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -860,7 +881,8 @@
           "chemistry_resolved": true,
           "classification_evidence": [
             "According to the datas provided by the Tianjin Lishen Battery Joint-Stock Co., Ltd., the slurry for cathode scraps consisted of 93.5 wt.% active materials, 4 wt.% acetylene black and 2.5 wt.% PVDF, so the composition of recovered the scrap materials included 95.9% wt.% active materials and 4.1 wt.% acetylene black (Assume that PVDF had been completely removed)."
-          ]
+          ],
+          "component": "battery"
         },
         {
           "id": "source-088b0419b6777442/foil-mixture",
@@ -892,7 +914,8 @@
           "chemistry_resolved": true,
           "classification_evidence": [
             "In order to investigate the recovery rate of scrap materials, 200 g LiCoO2 scraps were recovered with the above solvent method. After the recovery, 145.82 g scrap materials (active material, acetylene black) and 41.86 g impure Al foil mixtures (Al foil, active material, acetylene black) were directly obtained through the first separation. Then, after the second step, 21.60 g scrap materials (active material, acetylene black) were collected from 41.86 g impure Al foil mixtures after dissolving Al foil mixtures with excessive NaOH solution. From Fig. 8, there is no Al (OH)3 impurity in 21.60 g scrap materials. So the recovery rate of scrap materials is 145.82/ (145.82 + 21.60) ^* 100 % = 87.10 %, and the purity of Al foil mixtures is (41.86 - 21.60) / 41.86 ^∗100 % = 48.40 %"
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -960,7 +983,8 @@
           "classification_evidence": [
             "Procedures of the present work are illustrated in Fig. 1 (a) and (b). The spent LIBs were discharged firstly to prevent the dangers of short-circuits and spontaneous combustion. Then they were dismantled manually to different parts: cathode, anode, organic separator and the plastic case. With aid of scraper and tweezers, active materials were separated from the anode. These partitioned black active materials were placed in a furnace and calcined at 500 ^∘C for one hour to remove the organic components.",
             "Table 1 shows the metal compositions of the anode active materials. From the table, it can be noted that except tiny amounts of Co, Ni and Fe, the main metals contained in the powder materials are Cu and Li. Especially Li, its content is 30.07 mg/g, much higher than that of the environmental standards. The high content of lithium maybe come from two aspects."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -1002,7 +1026,8 @@
           "chemistry_resolved": true,
           "classification_evidence": [
             "The power battery consists of positive electrode, negative electrode, electrolyte, separator and sealed shell. The cathode materials such as lithium manganate, lithium cobalt acid, lithium iron phosphate and three-element system are bonded together to the aluminum foil using binder PVDF, and the negative electrode is formed by bonding a negative electrode material such as carbonbased, tin-based or silicon-based material, or lithium titanate to the copper foil. The electrolyte is mostly made of LiFL6 and organic solvent. The membrane material is mainly polyethylene (PE) or polypropylene (PP) and is used to prevent the electrons passing through the anode and cathode, allowing lithium ions to pass through. The sealed shell protects core and carries electrolyte, and is made of plastic, steel or aluminum alloy. Presently, most power lithium batteries have aluminum shells. The sample used here is a lithium iron phosphate power battery crushed using the production line in HeFei GuoXuan High-Tech Power Energy CO. Ltd. The crushed products of the core breakage are shown in Figure 1. The physical properties are listed in Table 1. The recycling system based on pneumatic separation is presented in Figure 2, and a flow chart of the recycling process is illustrated in Figure 3."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -1059,7 +1084,8 @@
           "chemistry_resolved": false,
           "classification_evidence": [
             "The spent LIBs were manually dismantled into different portions including plastic shell, cathode, anode, aluminum foil and so on. Then the separated active cathode and anode containing dense Co and Li were mixed, ground by milling and sieved to obtain a mesh size of less than 200 lm (Mishra et al., 2008a). The resulting powder, used for bioleaching experiments, was digested by HF - HNO _ 3 –HCl method (USEPA, 1996) to determine the content of Co at 358 mg g ^-1 and Li at 45 mg g ^-1 using AAS."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -1104,7 +1130,8 @@
           "classification_evidence": [
             "The spent LIBs ofBL-5CA (Nokia mobile) series used in this work were collected in the local market. The cathode material was separated from aluminum foil by using concentrated N-methyl pyrrolidone (NMP). The leaching reagents used in this work consisted of glycine and ascorbic acid which were mild organic acids. The reagents used in this study were analytical grade, and all the solutions were prepared with known concentrations in distilled water.",
             "Fig. 2 shows the XRD patterns of spent LiCoO2 cathode material after calcinations and grinding. From XRD data, the crystalline LiCoO2 phase was clearly identified as rock–salt structured [20] and the main compositions of this spent cathode material are LiCoO2 and CoO. In general, the CoO present in the cathode material results from the transformation of LiCoO [29]. Fig. 3 shows SEM/EDX images of the spent LiCoO2 cathode material and the particles were irregularly agglomerated with approximate 5 - 10 μ m diameters. EDXA analysis shows the presence of Co (except Li which cannot be detected by EDXA). SEM/EDX analysis confirms the residual carbon present along with this cathode material due to organic burn off. The source for such carbon might be from the acetylene black used to make sure the electronic conductivity in the cathodes."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -1157,7 +1184,8 @@
             "Materials and Reagents. Spent LIBs from different consumer electronics, including mobile phones, cameras, and portable power storage devices, were collected for this study. The total weight of the samples was 1 kg. Aqua regia (volume ratio of HCl to H V̅O3 = 3: 1) was used to dissolve the cathodic materials fully in order to analyze their metal contents. L-Tartaric acid was employed as the leachant and hydrogen peroxide (H2O2) as the reductant. All the solutions were prepared in deionized water, and all the reagents were of analytical grade.",
             "NCM materials of varying proportions have similar XRD patterns. Moreover, the intensity of peaks in the residues after leaching is clearly weaker than that in the cathodic materials. The content of the metals present in the cathodic materials is shown in Table S1. The metals in the cathodic materials included Li (6.28 wt%), Ni (11.85 wt%), Co (35.52 wt%), Mn (8.15 wt%), and Al (0.11 wt%). The existence of a slight amount of Al is from the already decayed cathode, which was easily shredded during the ultrasonic cleaning.",
             "Analytical Methods. After the sample of cathodic materials was completely dissolved by the aqua regia, the total amounts of Mn, Li, Co, and Ni from the cathodic materials were determined by inductively coupled plasma-atomic emission spectroscopy (ICP-AES, Spectro Arcos FHS12). The concentrations of Mn, Li, Co, and Ni in the leachate were also analyzed using ICP-AES. Leaching efficiency can be calculated using eq 1."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -1206,7 +1234,8 @@
           "chemistry_resolved": true,
           "classification_evidence": [
             "Cathodic active material from lithium ion secondary battery was separated by a series of thermal treatment, high-speed shredding, calcination steps (Lee and Rhee, 2002). First, LIB samples were thermally treated in a muffle furnace at 150 ^∘C for 1 h. Then, the samples were disassembled with a highspeed shredder. Separated segments were simultaneously classified into the range 1–10 mm in size. Second, thermal treatment was performed in a furnace, and electrode materials were separated from the current collectors by vibrating screening. Next, cathodic active material, LiCoO2 was obtained by burning carbon and binder off in the temperature range 700– 900 ^∘C for 1 h. Fig. 2 shows XRD patterns of calcined cathodic active material at temperature of 700– 900 ^∘C.. The diffractogram indicates that the carbon and binder were burnt off by calcining above 800 ^∘C.. The cathodic active material was ground in a ball mill and dried in an oven at 60 ^∘C for 48 h. The mean particle size was about 15 Am, as shown in Fig. 3 (Lee and Rhee, 2002)."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -1271,7 +1300,8 @@
           "classification_evidence": [
             "The spent LIBs powder was obtained from a recycling company in Zhejiang, China. The powder is a retired ternary lithium-ion battery that has been processed through “discharge-disassembly-crushingscreening” and other processes to form a black powder. The metal contents of the powders are shown in Table 1.",
             "The spent LIBs powder was analyzed separately by X-ray diffraction (XRD, D/MAX-C). Its diffraction peaks were indexed to carbon and LNCM (LiNi _ x Co _ y Mn _ z O _ 2) as the major phase (Figure 1)."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -1317,7 +1347,8 @@
           "classification_evidence": [
             "The spent LIBs used in this work were kindly donated to us by Tianjin Lishen Battery Joint Stock Co. Ltd.. N-Methyl-2-pyrrolidone (NMP, supplied by Damao Chemical Reagent Factory, China) was used to separate the cathode materials from the aluminum foil. Sulfuric acid (H2SO4 supplied by Tianjin Fengchuan Chemical Reagent Technologies Co., Ltd., China) was used as the leaching agent. Hydrogen peroxide (H2O2,, supplied by Sinopharm Chemical Reagent Co., Ltd., China) was used as reducing agent. All reagents were of analytical grade and used without further purification.",
             "The XRD patterns of the raw materials and the leaching residues for conventional leaching and ultrasound-assisted leaching under the optimum conditions, respectively, were presented in between conventional leaching and ultrasound-assisted leaching. The main composition was lithium cobalt oxide, which is the same as raw materials. However, the intensity of peaks for LiCoO2 in diffractogram decreased significantly after the ultrasound-assisted leaching and the conventional leaching. This is mainly due to the incomplete reaction of LiCoO2 and the acid [29]."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -1370,7 +1401,8 @@
           "classification_evidence": [
             "The Ni-MH batteries used in this work were cylinder-shaped batteries TOSHIBAŽ TH-3A type. The commercial extractants employed, bis 2-ethylhexyl phosphoric acid. Ž. Ž. Ž. D2EHPA was kindly donated by Daihachi Chemical Industry and trioctylamine TOA was purchased from Aldrich Chemical Company Inc. These reagents were utilized without any further purification. The concentrations of the extractants in the organic solution were 25% by volume. The diluent was kerosene. 1-Dodecanol was used as third phase inhibitor in the TOA system, and its concentration was 15 vol.%. The organic solution of TOA was pre-equilibrated by contacting with twice volume of 2 M hydrochloric acid solution for 10 min before the extraction experiments. Other reagents were of analytical reagent grade quality.",
             "The nickel-metal hydride batteries were cut in half longitudinally to separate the metallic cases from the internal battery rolls which consisted of the positive and negative electrodes plus a nylon separator. The cells weighed an average of 24.8 g each and contained an AB5 - t y p e rare earth metal system negative electrode. The weight of theŽ. positive electrode in one cell was 7.27 g and that of the negative electrode was 10.57 g in which the alloy powder accounted for 87.6% and the metal-mesh 12.4%. The components of the active material on the positive electrode, the alloy powder and the metal-mesh on the negative electrode were determined separately by total dissolution with aqua regia."
-          ]
+          ],
+          "component": "battery"
         },
         {
           "id": "nimh-recovery/negative",
@@ -1415,7 +1447,8 @@
           "classification_evidence": [
             "The Ni-MH batteries used in this work were cylinder-shaped batteries TOSHIBAŽ TH-3A type. The commercial extractants employed, bis 2-ethylhexyl phosphoric acid. Ž. Ž. Ž. D2EHPA was kindly donated by Daihachi Chemical Industry and trioctylamine TOA was purchased from Aldrich Chemical Company Inc. These reagents were utilized without any further purification. The concentrations of the extractants in the organic solution were 25% by volume. The diluent was kerosene. 1-Dodecanol was used as third phase inhibitor in the TOA system, and its concentration was 15 vol.%. The organic solution of TOA was pre-equilibrated by contacting with twice volume of 2 M hydrochloric acid solution for 10 min before the extraction experiments. Other reagents were of analytical reagent grade quality.",
             "The nickel-metal hydride batteries were cut in half longitudinally to separate the metallic cases from the internal battery rolls which consisted of the positive and negative electrodes plus a nylon separator. The cells weighed an average of 24.8 g each and contained an AB5 - t y p e rare earth metal system negative electrode. The weight of theŽ. positive electrode in one cell was 7.27 g and that of the negative electrode was 10.57 g in which the alloy powder accounted for 87.6% and the metal-mesh 12.4%. The components of the active material on the positive electrode, the alloy powder and the metal-mesh on the negative electrode were determined separately by total dissolution with aqua regia."
-          ]
+          ],
+          "component": "battery"
         },
         {
           "id": "nimh-recovery/mixed-scrap",
@@ -1450,7 +1483,8 @@
           "classification_evidence": [
             "Leach tests on cells were carried out using hydrochloric acid solution. In each test, 3.08 g of battery scrap which consisted of 1.25 g of the positive electrode materials and 1.83 g of the negative electrode materials were leached in 50 ml of HCl solutions of suitable concentrations in a 100-ml beaker under electromagnetic stirring, except for the tests on the effect of solid-to-liquid ratio on the leaching of metals. After leaching, the leach solution and insoluble residue were separated by filtration. The concentrations of each metal in the leach solutions were measured.",
             "The nickel-metal hydride batteries were cut in half longitudinally to separate the metallic cases from the internal battery rolls which consisted of the positive and negative electrodes plus a nylon separator. The cells weighed an average of 24.8 g each and contained an AB5 - t y p e rare earth metal system negative electrode. The weight of theŽ. positive electrode in one cell was 7.27 g and that of the negative electrode was 10.57 g in which the alloy powder accounted for 87.6% and the metal-mesh 12.4%. The components of the active material on the positive electrode, the alloy powder and the metal-mesh on the negative electrode were determined separately by total dissolution with aqua regia."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -1509,7 +1543,8 @@
           "chemistry_resolved": true,
           "classification_evidence": [
             "The spent Zn–Mn and Ni–Cd batteries were supplied by the Korea Battery Recycling Association (Ansung, Korea). The batteries were manually dismantled. All dismantled materials were collected and safely discarded except for the electrode powder materials. The powder was mixed, dried, ground by milling, and sieved to obtain a mesh size of less than 200 lm (Mishra et al., 2008). To determine the metal content, the powder was dissolved using the USEPA method 3050B (USEPA, 1986). Analysis was done using an inductively coupled plasma-optical emission spectrometer (ICP-OES) (Agilent, USA). The total metal content of Zn–Mn and Ni–Cd batteries is shown in Table 1."
-          ]
+          ],
+          "component": "battery"
         },
         {
           "id": "znmn-nicd-bioleaching/ni-cd",
@@ -1560,7 +1595,8 @@
           "chemistry_resolved": true,
           "classification_evidence": [
             "The spent Zn–Mn and Ni–Cd batteries were supplied by the Korea Battery Recycling Association (Ansung, Korea). The batteries were manually dismantled. All dismantled materials were collected and safely discarded except for the electrode powder materials. The powder was mixed, dried, ground by milling, and sieved to obtain a mesh size of less than 200 lm (Mishra et al., 2008). To determine the metal content, the powder was dissolved using the USEPA method 3050B (USEPA, 1986). Analysis was done using an inductively coupled plasma-optical emission spectrometer (ICP-OES) (Agilent, USA). The total metal content of Zn–Mn and Ni–Cd batteries is shown in Table 1."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -1628,7 +1664,8 @@
           "classification_evidence": [
             "Composition of the Cathode Active Material and Its Characterization. The Ni, Co, Mn, and Li contents of the cathode material were determined as 17.58, 17.68, 16.46, and",
             "After washing with distilled water and filtration, the cathode active material and Al foil were effectively separated. Al ions in the filtrate were recycled and reused in the next study, and the residue was dried at 60 °C for 24 h. Impurities such as carbon and poly(vinylidene fluoride) (PVdF) binder were burnt of by calcining the cathode material at 610 °C for 5 h in a mufle furnace and cooling to room temperature. The waste gas can be collected and purified in a system, which consists of a cooler, a condensation chamber, activated carbon filters, and bag filters.28 After roasting and cooling, the obtained powder was ground using a planetary ball mill for 30 min to obtain smaller particles with larger surface areas to increase the dissolution rate and leaching efficiency."
-          ]
+          ],
+          "component": "battery"
         }
       ]
     },
@@ -1689,6 +1726,503 @@
           "chemistry_resolved": true,
           "classification_evidence": [
             "Spent LFP batteries were obtained from a company in Shenzhen City, China. To eliminate the risk of short-circuiting and fire during subsequent manual dismantling, the batteries were first immersed in 5 wt% NaCl solution for 24 h to allow complete discharge [25]. The discharged batteries were then manually dismantled to take whole cathode and anode electrodes. The cathode electrodes were cut into pieces measuring 10 mm × 10 mm, followed by vacuum pyrolysis at 450 ^∘C for 2 h to remove the organic binder, thus obtaining cathode materials of spent LFP batteries. The cathode powder was subjected to thermogravimetric analysis (TGA) prior to pyrolysis to determine the appropriate binder removal temperature. The TGA curve of the cathode material showed that the sample mass remained essentially unchanged below 300 ^∘C, beyond which a significant weight-loss event was observed, indicating that effective decomposition of the PVDF binder requires temperatures above 300 ^∘C. PVDF is a semicrystalline fluoropolymer that undergoes thermal decomposition via dehydrofluorination and chain scission predominantly in the range of 350 - 500 ^∘C under inert or vacuum conditions, releasing HF and other gaseous products [26]. A pyrolysis temperature of 450 ^∘C was therefore selected to ensure complete binder removal and reliable detachment of the cathode active material from the aluminum foil current collector, while minimizing energy consumption. The vacuum atmosphere further facilitates the escape of gaseous decomposition products and enhances the overall pretreatment efficiency [27]. These cathode materials were ground and then used as the experimental leaching material. Specimens weighing 25 mg of cathode materials from spent LFP batteries were weighed and dissolved in 10 mL chloroazotic acid to be diluted and reconstructed to 1000 mL. An ICAP-7000 ICP-OES was employed to measure the contents of metals in the cathode materials of spent LFP batteries."
+          ],
+          "component": "battery"
+        }
+      ]
+    },
+    {
+      "case_id": "source-c9b327e23365b8be",
+      "paper": "Comprehensive Process for the Recovery of Value and Critical Materials from Electronic Waste",
+      "input_sha256": "2361aca0153724a9a88799328ad09ffd7ff61f511590889e35b713cc36fb0b33",
+      "text_sha256": "ba09943025b37f9f0b37d760c79f1954d631035447ce83f67e96d80cf12d3bd9",
+      "profiles": [
+        {
+          "id": "source-c9b327e23365b8be/shredded",
+          "label": "Shredded mobile phones without batteries",
+          "component": "mixed-phone-components",
+          "chemistry": "non-battery-unspecified",
+          "stream": "mixed-components",
+          "origin": "end-of-life-phones",
+          "state": "Shredded mobile phones without batteries",
+          "entity_ids": [
+            "Product_cell_phone"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Comprehensive Process for the Recovery of Value and Critical Materials from Electronic Waste_0001",
+              "columns": [
+                1
+              ],
+              "element_axis": "row",
+              "basis": "mass",
+              "assay": "Acid digestion of shredded phone material",
+              "assay_method": "unspecified",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "",
+          "evidence": [
+            "Leaching solutions were prepared in DI water (18 MU cm) using ACS grade or better chemicals. Samples of mechanically processed phones were provided by Advanced Recovery Inc. The device batteries were removed prior to mechanical processing. The phones were shredded followed by magnetic separation of the ferrous fractions including steel and magnets. The non-ferrous material was further size reduced using an in-house designed ball mill. Samples of shredded cell phones before magnetic separation (mean particle size of 0.59 mm), and after magnetic separation (magnetic fraction particle size > 1 mm, and milled nonferrous fraction mean particle size of 0.31 mm) were obtained. The composition of REE and metals in the grinded cell phone material and in the non-ferrous fraction of the cell phone were determined after digestion in aqua regia and concentrated HNO. The results of compositional analysis are presented in Table 1. Due to the heterogeneity of the ferromagnetic fraction, the REE and metals composition in this fraction was determined after the selective dissolution of REE followed by the digestion of the undissolved material in aqua regia."
+          ],
+          "material_class": "mixed-phone-components",
+          "preparation": [
+            "battery-removed",
+            "shredded"
+          ],
+          "size_fraction_mm": 0.59,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "Leaching solutions were prepared in DI water (18 MU cm) using ACS grade or better chemicals. Samples of mechanically processed phones were provided by Advanced Recovery Inc. The device batteries were removed prior to mechanical processing. The phones were shredded followed by magnetic separation of the ferrous fractions including steel and magnets. The non-ferrous material was further size reduced using an in-house designed ball mill. Samples of shredded cell phones before magnetic separation (mean particle size of 0.59 mm), and after magnetic separation (magnetic fraction particle size > 1 mm, and milled nonferrous fraction mean particle size of 0.31 mm) were obtained. The composition of REE and metals in the grinded cell phone material and in the non-ferrous fraction of the cell phone were determined after digestion in aqua regia and concentrated HNO. The results of compositional analysis are presented in Table 1. Due to the heterogeneity of the ferromagnetic fraction, the REE and metals composition in this fraction was determined after the selective dissolution of REE followed by the digestion of the undissolved material in aqua regia."
+          ]
+        },
+        {
+          "id": "source-c9b327e23365b8be/non-magnetic",
+          "label": "Milled non-magnetic phone fraction",
+          "component": "mixed-phone-components",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "end-of-life-phones",
+          "state": "Milled non-magnetic phone fraction",
+          "entity_ids": [
+            "Material_Non_magnetic_fraction"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Comprehensive Process for the Recovery of Value and Critical Materials from Electronic Waste_0001",
+              "columns": [
+                2
+              ],
+              "element_axis": "row",
+              "basis": "mass",
+              "assay": "Acid digestion of the non-magnetic fraction",
+              "assay_method": "unspecified",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [
+            "Process_Fe3__packed_bed_extraction",
+            "Process_electrochemical_recovery_of_base_metal",
+            "Process_acid_thiourea_leaching"
+          ],
+          "method_family": null,
+          "method_families": {
+            "Process_Fe3__packed_bed_extraction": "Ferric-ion leaching",
+            "Process_electrochemical_recovery_of_base_metal": "Electrochemical recovery",
+            "Process_acid_thiourea_leaching": "Thiourea leaching"
+          },
+          "note": "",
+          "evidence": [
+            "Leaching solutions were prepared in DI water (18 MU cm) using ACS grade or better chemicals. Samples of mechanically processed phones were provided by Advanced Recovery Inc. The device batteries were removed prior to mechanical processing. The phones were shredded followed by magnetic separation of the ferrous fractions including steel and magnets. The non-ferrous material was further size reduced using an in-house designed ball mill. Samples of shredded cell phones before magnetic separation (mean particle size of 0.59 mm), and after magnetic separation (magnetic fraction particle size > 1 mm, and milled nonferrous fraction mean particle size of 0.31 mm) were obtained. The composition of REE and metals in the grinded cell phone material and in the non-ferrous fraction of the cell phone were determined after digestion in aqua regia and concentrated HNO. The results of compositional analysis are presented in Table 1. Due to the heterogeneity of the ferromagnetic fraction, the REE and metals composition in this fraction was determined after the selective dissolution of REE followed by the digestion of the undissolved material in aqua regia."
+          ],
+          "material_class": "non-magnetic-phone-fraction",
+          "preparation": [
+            "magnetically-separated",
+            "milled"
+          ],
+          "size_fraction_mm": 0.31,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "Leaching solutions were prepared in DI water (18 MU cm) using ACS grade or better chemicals. Samples of mechanically processed phones were provided by Advanced Recovery Inc. The device batteries were removed prior to mechanical processing. The phones were shredded followed by magnetic separation of the ferrous fractions including steel and magnets. The non-ferrous material was further size reduced using an in-house designed ball mill. Samples of shredded cell phones before magnetic separation (mean particle size of 0.59 mm), and after magnetic separation (magnetic fraction particle size > 1 mm, and milled nonferrous fraction mean particle size of 0.31 mm) were obtained. The composition of REE and metals in the grinded cell phone material and in the non-ferrous fraction of the cell phone were determined after digestion in aqua regia and concentrated HNO. The results of compositional analysis are presented in Table 1. Due to the heterogeneity of the ferromagnetic fraction, the REE and metals composition in this fraction was determined after the selective dissolution of REE followed by the digestion of the undissolved material in aqua regia."
+          ]
+        },
+        {
+          "id": "source-c9b327e23365b8be/ferromagnetic",
+          "label": "Ferromagnetic phone fraction, including steel and magnets",
+          "component": "mixed-phone-components",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "end-of-life-phones",
+          "state": "Ferromagnetic phone fraction, including steel and magnets",
+          "entity_ids": [
+            "Material_Ferromagnetic_fraction"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Comprehensive Process for the Recovery of Value and Critical Materials from Electronic Waste_0001",
+              "columns": [
+                3
+              ],
+              "element_axis": "row",
+              "basis": "mass",
+              "assay": "Selective REE dissolution followed by digestion of the residue",
+              "assay_method": "unspecified",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [
+            "Process_REE_recovery"
+          ],
+          "method_family": null,
+          "method_families": {
+            "Process_REE_recovery": "Acid leaching and precipitation"
+          },
+          "note": "",
+          "evidence": [
+            "Leaching solutions were prepared in DI water (18 MU cm) using ACS grade or better chemicals. Samples of mechanically processed phones were provided by Advanced Recovery Inc. The device batteries were removed prior to mechanical processing. The phones were shredded followed by magnetic separation of the ferrous fractions including steel and magnets. The non-ferrous material was further size reduced using an in-house designed ball mill. Samples of shredded cell phones before magnetic separation (mean particle size of 0.59 mm), and after magnetic separation (magnetic fraction particle size > 1 mm, and milled nonferrous fraction mean particle size of 0.31 mm) were obtained. The composition of REE and metals in the grinded cell phone material and in the non-ferrous fraction of the cell phone were determined after digestion in aqua regia and concentrated HNO. The results of compositional analysis are presented in Table 1. Due to the heterogeneity of the ferromagnetic fraction, the REE and metals composition in this fraction was determined after the selective dissolution of REE followed by the digestion of the undissolved material in aqua regia."
+          ],
+          "material_class": "ferromagnetic-phone-fraction",
+          "preparation": [
+            "magnetically-separated"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "Leaching solutions were prepared in DI water (18 MU cm) using ACS grade or better chemicals. Samples of mechanically processed phones were provided by Advanced Recovery Inc. The device batteries were removed prior to mechanical processing. The phones were shredded followed by magnetic separation of the ferrous fractions including steel and magnets. The non-ferrous material was further size reduced using an in-house designed ball mill. Samples of shredded cell phones before magnetic separation (mean particle size of 0.59 mm), and after magnetic separation (magnetic fraction particle size > 1 mm, and milled nonferrous fraction mean particle size of 0.31 mm) were obtained. The composition of REE and metals in the grinded cell phone material and in the non-ferrous fraction of the cell phone were determined after digestion in aqua regia and concentrated HNO. The results of compositional analysis are presented in Table 1. Due to the heterogeneity of the ferromagnetic fraction, the REE and metals composition in this fraction was determined after the selective dissolution of REE followed by the digestion of the undissolved material in aqua regia."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "source-d298f13192fefab0",
+      "paper": "Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids",
+      "input_sha256": "dc370497bade05acc184c08f260bb06940c85a5af67678bf01b784c158fcc5f1",
+      "text_sha256": "da7ea8274047ea5a6a1af09be8bc2db178120fb4843d2d1fbb10af7ada25dd59",
+      "profiles": [
+        {
+          "id": "source-d298f13192fefab0/magnet-powder",
+          "label": "Demagnetized and ground NdFeB magnets from mobile phones",
+          "component": "magnet",
+          "chemistry": "ndfeb",
+          "stream": "magnet-powder",
+          "origin": "end-of-life-phones",
+          "state": "Demagnetized and ground NdFeB magnets from mobile phones",
+          "entity_ids": [
+            "Component_NdFeB_magnet",
+            "Material_NdFeB_magnet"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Recovery of Rare Earth Elements Present in Mobile Phone Magnets with the Use of Organic Acids_0002",
+              "columns": [
+                1
+              ],
+              "element_axis": "row",
+              "basis": "mass",
+              "assay": "Average composition of the NdFeB magnet samples, nitric-acid digestion / ICP-OES",
+              "assay_method": "icp-oes",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [
+            "Process_microwave_assisted_organic_acid_leaching",
+            "Process_ultrasound_assisted_organic_acid_leaching",
+            "Process_conventional_organic_acid_leaching"
+          ],
+          "method_family": null,
+          "method_families": {
+            "Process_microwave_assisted_organic_acid_leaching": "Microwave-assisted organic acid leaching",
+            "Process_ultrasound_assisted_organic_acid_leaching": "Ultrasound-assisted organic acid leaching",
+            "Process_conventional_organic_acid_leaching": "Organic acid leaching"
+          },
+          "note": "",
+          "evidence": [
+            "The magnets were then subjected to processes of demagnetization, grinding (without previous roasting or oxidative roasting), acid digestion and chemical characterization. For the grinding of the NdFeB magnets, a pestle and mortar were used (Figure 1) and the material was ground to a particle size that would allow it to pass through a 325-mesh sieve."
+          ],
+          "material_class": "ndfeb-magnet-powder",
+          "preparation": [
+            "demagnetized",
+            "ground"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": {
+            "purpose": "demagnetization",
+            "temperature_c": 320,
+            "time_min": 60
+          },
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": true,
+          "classification_evidence": [
+            "The magnets were then subjected to processes of demagnetization, grinding (without previous roasting or oxidative roasting), acid digestion and chemical characterization. For the grinding of the NdFeB magnets, a pestle and mortar were used (Figure 1) and the material was ground to a particle size that would allow it to pass through a 325-mesh sieve."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "source-feacfa0b11e858f0",
+      "paper": "Concentration of Rare Earth Elements During High Temperature Pyrolysis of Waste Printed Circuit Boards",
+      "input_sha256": "46b4d4de623bc3c701d2173f67cb090e658d8899dfa01080fe122fd60649bd68",
+      "text_sha256": "97f9bde80843c81cc130897f509cc38d51b18a71d2dba984dcae74a3e68ffbaf",
+      "profiles": [
+        {
+          "id": "source-feacfa0b11e858f0/populated-boards",
+          "label": "Waste PCBs from mobile phones, motherboards, power supplies and RAM",
+          "component": "pcb",
+          "chemistry": "non-battery-unspecified",
+          "stream": "intact-boards",
+          "origin": "recycling-company",
+          "state": "Waste PCBs from mobile phones, motherboards, power supplies and RAM",
+          "entity_ids": [
+            "Component_printed_circuit_board"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_horizontal_resistance_furnace_pyrolysis",
+            "Process_thermal_plasma_furnace_pyrolysis"
+          ],
+          "method_family": null,
+          "method_families": {
+            "Process_horizontal_resistance_furnace_pyrolysis": "Resistance furnace pyrolysis",
+            "Process_thermal_plasma_furnace_pyrolysis": "Thermal plasma pyrolysis"
+          },
+          "note": "",
+          "evidence": [
+            "Waste printed circuit boards were collected from a range of sources, waste dismantlers/e-waste recyclers in as received sizes and shapes (see Fig. 1 for representative examples of waste PCBs). These PCBs were labelled as: mobile phones: (MB); mother board: (MTB); power supply: (PS); random access memory: (RAM) in the text as well as in the figures. Electronic components mounted on these boards were left intact and were not removed from the boards for two key reasons. Firstly, REEs have a higher probability of presence within some of the electronic components such as capacitors, integrated circuits, resistors, transistors, LEDs, switches than on the copper laminated substrates. Secondly, the removal of components from PCBs by melting solders with infrared heaters, hot fluids, mechanically breaking solder joints with hammers or grinders, chemical etching etc. is associated with local area contamination, health and environmental risks (Lee et al., 2012). Apart from cutting larger boards into smaller pieces depending on the size and volume of the furnace used for heat treatments, no other mechanical treatment (hammering, crushing, grinding, or powdering) was carried out on these PCBs."
+          ],
+          "material_class": "populated-pcb",
+          "preparation": [
+            "cut-to-size"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "Waste printed circuit boards were collected from a range of sources, waste dismantlers/e-waste recyclers in as received sizes and shapes (see Fig. 1 for representative examples of waste PCBs). These PCBs were labelled as: mobile phones: (MB); mother board: (MTB); power supply: (PS); random access memory: (RAM) in the text as well as in the figures. Electronic components mounted on these boards were left intact and were not removed from the boards for two key reasons. Firstly, REEs have a higher probability of presence within some of the electronic components such as capacitors, integrated circuits, resistors, transistors, LEDs, switches than on the copper laminated substrates. Secondly, the removal of components from PCBs by melting solders with infrared heaters, hot fluids, mechanically breaking solder joints with hammers or grinders, chemical etching etc. is associated with local area contamination, health and environmental risks (Lee et al., 2012). Apart from cutting larger boards into smaller pieces depending on the size and volume of the furnace used for heat treatments, no other mechanical treatment (hammering, crushing, grinding, or powdering) was carried out on these PCBs."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "source-ebaeabc9afaa44fc",
+      "paper": "Metal Recovery from the Mobile Phone Waste by Chemical and Biological Treatments",
+      "input_sha256": "1b9c41a521471c12a090165d56c6b5965fbed397c017ab6fb11b12f7b064b5dd",
+      "text_sha256": "37e476734212426f1dbc1fc0b31bd37e6e98c6b83ada7d34c04d41795fa69120",
+      "profiles": [
+        {
+          "id": "source-ebaeabc9afaa44fc/aqua-regia-leachate",
+          "label": "Aqua-regia leachate of crushed PCB and camera parts",
+          "component": "mixed-phone-components",
+          "chemistry": "non-battery-unspecified",
+          "stream": "metal-bearing-leachates",
+          "origin": "end-of-life-phones",
+          "state": "Aqua-regia leachate of crushed PCB and camera parts",
+          "entity_ids": [
+            "Component_printed_circuit_board",
+            "Component_camera"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_NH4OH_precipitation_from_digested_aqua_regia"
+          ],
+          "method_family": null,
+          "method_families": {
+            "Process_NH4OH_precipitation_from_digested_aqua_regia": "pH-controlled precipitation"
+          },
+          "note": "",
+          "evidence": [
+            "First, the camera parts and PCB parts attached to the mobile phone waste were separated and collected for the experiment (Figure 1). The process of separating and recovering metals, including both ferrous and non-ferrous metals, as well as precious metals from the mobile phone waste, is shown in Figure 2. The camera and the PCB parts separated from the mobile phone waste were crushed in a pulverizer for 2 min and were divided into pulverized particles and non-pulverized materials (e.g., copper foil, insulation film, etc.). The non-pulverized material was excluded beforehand and then only the pulverized particles were sieved to test particles less than 2 mm. Since these sieved particles seem to contain soluble metals and insoluble materials (e.g., plastic) in aqua regia, the particles were dissolved in the 1 / 10: (g / m L) ratio in the aqua regia at room temperature for 48 h and only the supernatant was used for the experiments. As a metal solvent, aqua regia was freshly prepared at a48 h and only the supernatant was used for the experiments. As a metal solvent, aqua regia was 3:1 mixture of hydrochloric acid (HCl, 35%, OCI, Seoul, Korea): nitric acid (HNO, 60\\~61%, JUNSEI, Tokyo, Japan). The leached metal concentration in aqua regia was analyzed via inductively coupled(HNO, 60\\~61%, JUNSEI, Tokyo, Japan). The leached metal concentration in aqua regia was plasma-atomic emission spectroscopy (ICP-AES)."
+          ],
+          "material_class": "metal-bearing-leachate",
+          "preparation": [
+            "crushed",
+            "sieved",
+            "aqua-regia-digested"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "First, the camera parts and PCB parts attached to the mobile phone waste were separated and collected for the experiment (Figure 1). The process of separating and recovering metals, including both ferrous and non-ferrous metals, as well as precious metals from the mobile phone waste, is shown in Figure 2. The camera and the PCB parts separated from the mobile phone waste were crushed in a pulverizer for 2 min and were divided into pulverized particles and non-pulverized materials (e.g., copper foil, insulation film, etc.). The non-pulverized material was excluded beforehand and then only the pulverized particles were sieved to test particles less than 2 mm. Since these sieved particles seem to contain soluble metals and insoluble materials (e.g., plastic) in aqua regia, the particles were dissolved in the 1 / 10: (g / m L) ratio in the aqua regia at room temperature for 48 h and only the supernatant was used for the experiments. As a metal solvent, aqua regia was freshly prepared at a48 h and only the supernatant was used for the experiments. As a metal solvent, aqua regia was 3:1 mixture of hydrochloric acid (HCl, 35%, OCI, Seoul, Korea): nitric acid (HNO, 60\\~61%, JUNSEI, Tokyo, Japan). The leached metal concentration in aqua regia was analyzed via inductively coupled(HNO, 60\\~61%, JUNSEI, Tokyo, Japan). The leached metal concentration in aqua regia was plasma-atomic emission spectroscopy (ICP-AES)."
+          ]
+        },
+        {
+          "id": "source-ebaeabc9afaa44fc/ph77-filtrate",
+          "label": "pH 7.7 filtrate from PCB and camera-part leachate",
+          "component": "mixed-phone-components",
+          "chemistry": "non-battery-unspecified",
+          "stream": "metal-bearing-leachates",
+          "origin": "end-of-life-phones",
+          "state": "pH 7.7 filtrate from PCB and camera-part leachate",
+          "entity_ids": [
+            "Component_printed_circuit_board",
+            "Component_camera"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate"
+          ],
+          "method_family": null,
+          "method_families": {
+            "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate": "Biogenic precipitation"
+          },
+          "note": "",
+          "evidence": [
+            "First, the camera parts and PCB parts attached to the mobile phone waste were separated and collected for the experiment (Figure 1). The process of separating and recovering metals, including both ferrous and non-ferrous metals, as well as precious metals from the mobile phone waste, is shown in Figure 2. The camera and the PCB parts separated from the mobile phone waste were crushed in a pulverizer for 2 min and were divided into pulverized particles and non-pulverized materials (e.g., copper foil, insulation film, etc.). The non-pulverized material was excluded beforehand and then only the pulverized particles were sieved to test particles less than 2 mm. Since these sieved particles seem to contain soluble metals and insoluble materials (e.g., plastic) in aqua regia, the particles were dissolved in the 1 / 10: (g / m L) ratio in the aqua regia at room temperature for 48 h and only the supernatant was used for the experiments. As a metal solvent, aqua regia was freshly prepared at a48 h and only the supernatant was used for the experiments. As a metal solvent, aqua regia was 3:1 mixture of hydrochloric acid (HCl, 35%, OCI, Seoul, Korea): nitric acid (HNO, 60\\~61%, JUNSEI, Tokyo, Japan). The leached metal concentration in aqua regia was analyzed via inductively coupled(HNO, 60\\~61%, JUNSEI, Tokyo, Japan). The leached metal concentration in aqua regia was plasma-atomic emission spectroscopy (ICP-AES).",
+            "Abstract: Recycling electronic waste is an important subject not only from the point of view of waste treatment, but also regarding the recovery of valuable metals. This research examined the stepwise recovery of metals in mobile phone waste using chemical treatment via pH swing and the biological method using biomineralization. In chemical treatment, the metal fraction attached to the printed circuit board (PCB) and camera parts were separated from the mobile phone waste and were then pulverized into particles with a size less than \\~2 mm. The metal fraction was dissolved in aqua regia, and the pH of the solution was increased to 10.5 by adding NH4OH.. The first precipitate was iron oxide, produced by raising the pH to 3.1\\~4.2 with NH4OH. Sequentially, copper chloride and rare earth-metal complex were produced at pH 5.7\\~7.7 and 8.3\\~10.5, respectively. In the biological method, the filtrate at pH 7.7 was added to a metal-reducing bacteria growth medium as a precursor. After two weeks of incubation, rhodochrosite and calcite were precipitated as nano-sized minerals. The results indicate that effective metal recovery of mobile phone waste is feasible using chemical and biological treatments, and the recovered metals and rare earth metals can be recycled into raw materials for various industries."
+          ],
+          "material_class": "metal-bearing-leachate",
+          "preparation": [
+            "crushed",
+            "sieved",
+            "aqua-regia-digested",
+            "precipitated",
+            "filtered"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "First, the camera parts and PCB parts attached to the mobile phone waste were separated and collected for the experiment (Figure 1). The process of separating and recovering metals, including both ferrous and non-ferrous metals, as well as precious metals from the mobile phone waste, is shown in Figure 2. The camera and the PCB parts separated from the mobile phone waste were crushed in a pulverizer for 2 min and were divided into pulverized particles and non-pulverized materials (e.g., copper foil, insulation film, etc.). The non-pulverized material was excluded beforehand and then only the pulverized particles were sieved to test particles less than 2 mm. Since these sieved particles seem to contain soluble metals and insoluble materials (e.g., plastic) in aqua regia, the particles were dissolved in the 1 / 10: (g / m L) ratio in the aqua regia at room temperature for 48 h and only the supernatant was used for the experiments. As a metal solvent, aqua regia was freshly prepared at a48 h and only the supernatant was used for the experiments. As a metal solvent, aqua regia was 3:1 mixture of hydrochloric acid (HCl, 35%, OCI, Seoul, Korea): nitric acid (HNO, 60\\~61%, JUNSEI, Tokyo, Japan). The leached metal concentration in aqua regia was analyzed via inductively coupled(HNO, 60\\~61%, JUNSEI, Tokyo, Japan). The leached metal concentration in aqua regia was plasma-atomic emission spectroscopy (ICP-AES).",
+            "Abstract: Recycling electronic waste is an important subject not only from the point of view of waste treatment, but also regarding the recovery of valuable metals. This research examined the stepwise recovery of metals in mobile phone waste using chemical treatment via pH swing and the biological method using biomineralization. In chemical treatment, the metal fraction attached to the printed circuit board (PCB) and camera parts were separated from the mobile phone waste and were then pulverized into particles with a size less than \\~2 mm. The metal fraction was dissolved in aqua regia, and the pH of the solution was increased to 10.5 by adding NH4OH.. The first precipitate was iron oxide, produced by raising the pH to 3.1\\~4.2 with NH4OH. Sequentially, copper chloride and rare earth-metal complex were produced at pH 5.7\\~7.7 and 8.3\\~10.5, respectively. In the biological method, the filtrate at pH 7.7 was added to a metal-reducing bacteria growth medium as a precursor. After two weeks of incubation, rhodochrosite and calcite were precipitated as nano-sized minerals. The results indicate that effective metal recovery of mobile phone waste is feasible using chemical and biological treatments, and the recovered metals and rare earth metals can be recycled into raw materials for various industries."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "source-cf89c40b1cc20921",
+      "paper": "High-Temperature Fluidized Bed Processing of Waste Electrical and Electronic Equipment (WEEE) as a Way to Recover Raw Materials",
+      "input_sha256": "541c634b8a0f4fa6364bdd39105e562b525de5d9df6f7172ecb4f6617ffdd56c",
+      "text_sha256": "f87c5a86c9951c481fa503869155503245a81e37eca935ec3611a5e0cd3ebe37",
+      "profiles": [
+        {
+          "id": "source-cf89c40b1cc20921/phone-parts",
+          "label": "Dismantled mobile phone components without batteries",
+          "component": "mixed-phone-components",
+          "chemistry": "non-battery-unspecified",
+          "stream": "mixed-components",
+          "origin": "end-of-life-phones",
+          "state": "Dismantled mobile phone components without batteries",
+          "entity_ids": [
+            "Product_mobile_phone"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_thermal_treatment_of_mobile_phone_waste_in_a_bubbling_fluidized_bed"
+          ],
+          "method_family": null,
+          "method_families": {
+            "Process_thermal_treatment_of_mobile_phone_waste_in_a_bubbling_fluidized_bed": "Fluidized-bed treatment and magnetic enrichment"
+          },
+          "note": "",
+          "evidence": [
+            "As the raw material, ten used mobile phones were utilised. Initially, the phones were As the raw material, ten used mobile phones were utilised. Initially, the phones were mechanically disassembled, the batteries were separated and the resulting material was mechanically disassembled, the batteries were separated and the resulting material was divided into smaller parts with a guillotine. The raw materials of three selected used mobile ivided into smaller parts with a guillotine. The raw materials of three selected used phones from Kit no. II, Kit no. I and Kit no. III, before and after mechanical dismantling, mobile phones from Kit no. II, Kit no. I and Kit no. III, before and after mechanical are presented in Table 1, and the samples used during testing are shown in Tables 2 and 3."
+          ],
+          "material_class": "mixed-phone-components",
+          "preparation": [
+            "battery-removed",
+            "dismantled",
+            "cut-to-size"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "As the raw material, ten used mobile phones were utilised. Initially, the phones were As the raw material, ten used mobile phones were utilised. Initially, the phones were mechanically disassembled, the batteries were separated and the resulting material was mechanically disassembled, the batteries were separated and the resulting material was divided into smaller parts with a guillotine. The raw materials of three selected used mobile ivided into smaller parts with a guillotine. The raw materials of three selected used phones from Kit no. II, Kit no. I and Kit no. III, before and after mechanical dismantling, mobile phones from Kit no. II, Kit no. I and Kit no. III, before and after mechanical are presented in Table 1, and the samples used during testing are shown in Tables 2 and 3."
+          ],
+          "result_metrics": [
+            "yield",
+            "recovery"
+          ]
+        },
+        {
+          "id": "source-cf89c40b1cc20921/coarse-treated-fraction",
+          "label": "Thermally treated phone fraction above 1 mm",
+          "component": "mixed-phone-components",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "end-of-life-phones",
+          "state": "Thermally treated phone fraction above 1 mm",
+          "entity_ids": [
+            "Product_mobile_phone"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_neodymium_magnet_separation_of__1_mm_fraction"
+          ],
+          "method_family": null,
+          "method_families": {
+            "Process_neodymium_magnet_separation_of__1_mm_fraction": "Magnetic separation"
+          },
+          "note": "",
+          "evidence": [
+            "After thermal treatment in the fluidized bed, solid products were subjected to the crumbling and grinding process, two fractions were obtained after sieving through a crumbling and grinding process, two fractions were obtained after sieving through a crumbling and g inding process, two fractions were obtained after sieving through aAfter thermal treatment in the fluidized bed, solid products were subjected to the sieve, one with grain sizes of less than 1 mm, the other with grain sizes of more than 1 sieve, one with grain sizes of less than 1 mm, the other with grain sizes of more than 1 crumbling and grinding process, two fractions were obtained after sieving through a sieve, mm. Both materials were used in the separation process, the sample over 1 mm was mm. Both materials were used in the separation process, the sample over 1 mm was one with grain sizes of less than 1 mm, the other with grain sizes of more than 1 mm. Both separated using a neodymium magnet. The sample below 1 mm was subjected toseparated using a neodymium magnet. The sample below 1 mm was subjected to two-stage separation. Initially, three-phase plate electromagnetic separator were used materials were used in the separation process, the sample over 1 mm was separated using two-stage separation. Initially, three-phase plate electromagnetic separators were usedtwo-stage separation. Initially, three-phase plate electromagnetic separators were used and the belt type 1-disc separa o was th n applied. After the separ tion processes of a neodymium magnet. The sample below 1 mm was subjected to two-stage separation. and the belt type 1-disc separator was then applied. After the separation processes of and the belt type 1-disc separator was then applied. After the separation processes ofand the belt type 1-disc separator was then applied. After the separation processes of material wi h grain s zes below 1 mm, two magnetic and one non-mag etic fractions material wi h grain s zes below 1 mm, two magnetic and one non-mag etic fractions Initially, three-phase plate electromagnetic separators were used and the belt type 1-disc material with grain sizes below 1 mm, two magnetic and one non-magnetic fractions material with grain sizes below 1 mm, two magnetic and one non-magnetic fractionswere obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm andwer obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and wer obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and separator was then applied. After the separation processes of material with grain sizes were obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and were obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and was again used in the separation process on the belt separator. as again used in the separation pro ess on the belt separato. as again used in the separation pro ess on the belt separato. below 1 mm, two magnetic and one non-magnetic fractions were obtained. The nonwas again used in the separation process on the belt separator. was again used in the separation process on the belt separator. The first device used for the magnetic enrichment was a three-phase plate electro-The first device used for the magnetic enrichment was a three-phase plate electro-The first evice used for the magnetic enrichment was a three-phase plate electro-The first evice used for the magnetic enrichment was a three-phase plate electro-magnetic fraction below 1 mm was ground to below 0.5 mm and was again used in the The first device used for the mamagnetic separator with three oscillamagnetic separator with three oscmagnetic separator with three oscillseparation process on the belt separator."
+          ],
+          "material_class": "thermally-treated-phone-fraction",
+          "preparation": [
+            "thermally-treated",
+            "ground",
+            "sieved"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": {
+            "temperature_range_c": [
+              800,
+              850
+            ],
+            "time_min": 3
+          },
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "After thermal treatment in the fluidized bed, solid products were subjected to the crumbling and grinding process, two fractions were obtained after sieving through a crumbling and grinding process, two fractions were obtained after sieving through a crumbling and g inding process, two fractions were obtained after sieving through aAfter thermal treatment in the fluidized bed, solid products were subjected to the sieve, one with grain sizes of less than 1 mm, the other with grain sizes of more than 1 sieve, one with grain sizes of less than 1 mm, the other with grain sizes of more than 1 crumbling and grinding process, two fractions were obtained after sieving through a sieve, mm. Both materials were used in the separation process, the sample over 1 mm was mm. Both materials were used in the separation process, the sample over 1 mm was one with grain sizes of less than 1 mm, the other with grain sizes of more than 1 mm. Both separated using a neodymium magnet. The sample below 1 mm was subjected toseparated using a neodymium magnet. The sample below 1 mm was subjected to two-stage separation. Initially, three-phase plate electromagnetic separator were used materials were used in the separation process, the sample over 1 mm was separated using two-stage separation. Initially, three-phase plate electromagnetic separators were usedtwo-stage separation. Initially, three-phase plate electromagnetic separators were used and the belt type 1-disc separa o was th n applied. After the separ tion processes of a neodymium magnet. The sample below 1 mm was subjected to two-stage separation. and the belt type 1-disc separator was then applied. After the separation processes of and the belt type 1-disc separator was then applied. After the separation processes ofand the belt type 1-disc separator was then applied. After the separation processes of material wi h grain s zes below 1 mm, two magnetic and one non-mag etic fractions material wi h grain s zes below 1 mm, two magnetic and one non-mag etic fractions Initially, three-phase plate electromagnetic separators were used and the belt type 1-disc material with grain sizes below 1 mm, two magnetic and one non-magnetic fractions material with grain sizes below 1 mm, two magnetic and one non-magnetic fractionswere obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm andwer obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and wer obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and separator was then applied. After the separation processes of material with grain sizes were obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and were obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and was again used in the separation process on the belt separator. as again used in the separation pro ess on the belt separato. as again used in the separation pro ess on the belt separato. below 1 mm, two magnetic and one non-magnetic fractions were obtained. The nonwas again used in the separation process on the belt separator. was again used in the separation process on the belt separator. The first device used for the magnetic enrichment was a three-phase plate electro-The first device used for the magnetic enrichment was a three-phase plate electro-The first evice used for the magnetic enrichment was a three-phase plate electro-The first evice used for the magnetic enrichment was a three-phase plate electro-magnetic fraction below 1 mm was ground to below 0.5 mm and was again used in the The first device used for the mamagnetic separator with three oscillamagnetic separator with three oscmagnetic separator with three oscillseparation process on the belt separator."
+          ],
+          "result_metrics": [
+            "yield"
+          ]
+        },
+        {
+          "id": "source-cf89c40b1cc20921/fine-treated-fraction",
+          "label": "Thermally treated phone fraction below 1 mm",
+          "component": "mixed-phone-components",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "end-of-life-phones",
+          "state": "Thermally treated phone fraction below 1 mm",
+          "entity_ids": [
+            "Product_mobile_phone"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_three_phase_plate_electromagnetic_separation_of__1_mm_fraction",
+            "Process_belt_type_1_disc_separation_of__1_mm_fraction"
+          ],
+          "method_family": null,
+          "method_families": {
+            "Process_three_phase_plate_electromagnetic_separation_of__1_mm_fraction": "Electromagnetic separation",
+            "Process_belt_type_1_disc_separation_of__1_mm_fraction": "Magnetic separation"
+          },
+          "note": "",
+          "evidence": [
+            "After thermal treatment in the fluidized bed, solid products were subjected to the crumbling and grinding process, two fractions were obtained after sieving through a crumbling and grinding process, two fractions were obtained after sieving through a crumbling and g inding process, two fractions were obtained after sieving through aAfter thermal treatment in the fluidized bed, solid products were subjected to the sieve, one with grain sizes of less than 1 mm, the other with grain sizes of more than 1 sieve, one with grain sizes of less than 1 mm, the other with grain sizes of more than 1 crumbling and grinding process, two fractions were obtained after sieving through a sieve, mm. Both materials were used in the separation process, the sample over 1 mm was mm. Both materials were used in the separation process, the sample over 1 mm was one with grain sizes of less than 1 mm, the other with grain sizes of more than 1 mm. Both separated using a neodymium magnet. The sample below 1 mm was subjected toseparated using a neodymium magnet. The sample below 1 mm was subjected to two-stage separation. Initially, three-phase plate electromagnetic separator were used materials were used in the separation process, the sample over 1 mm was separated using two-stage separation. Initially, three-phase plate electromagnetic separators were usedtwo-stage separation. Initially, three-phase plate electromagnetic separators were used and the belt type 1-disc separa o was th n applied. After the separ tion processes of a neodymium magnet. The sample below 1 mm was subjected to two-stage separation. and the belt type 1-disc separator was then applied. After the separation processes of and the belt type 1-disc separator was then applied. After the separation processes ofand the belt type 1-disc separator was then applied. After the separation processes of material wi h grain s zes below 1 mm, two magnetic and one non-mag etic fractions material wi h grain s zes below 1 mm, two magnetic and one non-mag etic fractions Initially, three-phase plate electromagnetic separators were used and the belt type 1-disc material with grain sizes below 1 mm, two magnetic and one non-magnetic fractions material with grain sizes below 1 mm, two magnetic and one non-magnetic fractionswere obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm andwer obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and wer obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and separator was then applied. After the separation processes of material with grain sizes were obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and were obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and was again used in the separation process on the belt separator. as again used in the separation pro ess on the belt separato. as again used in the separation pro ess on the belt separato. below 1 mm, two magnetic and one non-magnetic fractions were obtained. The nonwas again used in the separation process on the belt separator. was again used in the separation process on the belt separator. The first device used for the magnetic enrichment was a three-phase plate electro-The first device used for the magnetic enrichment was a three-phase plate electro-The first evice used for the magnetic enrichment was a three-phase plate electro-The first evice used for the magnetic enrichment was a three-phase plate electro-magnetic fraction below 1 mm was ground to below 0.5 mm and was again used in the The first device used for the mamagnetic separator with three oscillamagnetic separator with three oscmagnetic separator with three oscillseparation process on the belt separator."
+          ],
+          "material_class": "thermally-treated-phone-fraction",
+          "preparation": [
+            "thermally-treated",
+            "ground",
+            "sieved"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": {
+            "temperature_range_c": [
+              800,
+              850
+            ],
+            "time_min": 3
+          },
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "After thermal treatment in the fluidized bed, solid products were subjected to the crumbling and grinding process, two fractions were obtained after sieving through a crumbling and grinding process, two fractions were obtained after sieving through a crumbling and g inding process, two fractions were obtained after sieving through aAfter thermal treatment in the fluidized bed, solid products were subjected to the sieve, one with grain sizes of less than 1 mm, the other with grain sizes of more than 1 sieve, one with grain sizes of less than 1 mm, the other with grain sizes of more than 1 crumbling and grinding process, two fractions were obtained after sieving through a sieve, mm. Both materials were used in the separation process, the sample over 1 mm was mm. Both materials were used in the separation process, the sample over 1 mm was one with grain sizes of less than 1 mm, the other with grain sizes of more than 1 mm. Both separated using a neodymium magnet. The sample below 1 mm was subjected toseparated using a neodymium magnet. The sample below 1 mm was subjected to two-stage separation. Initially, three-phase plate electromagnetic separator were used materials were used in the separation process, the sample over 1 mm was separated using two-stage separation. Initially, three-phase plate electromagnetic separators were usedtwo-stage separation. Initially, three-phase plate electromagnetic separators were used and the belt type 1-disc separa o was th n applied. After the separ tion processes of a neodymium magnet. The sample below 1 mm was subjected to two-stage separation. and the belt type 1-disc separator was then applied. After the separation processes of and the belt type 1-disc separator was then applied. After the separation processes ofand the belt type 1-disc separator was then applied. After the separation processes of material wi h grain s zes below 1 mm, two magnetic and one non-mag etic fractions material wi h grain s zes below 1 mm, two magnetic and one non-mag etic fractions Initially, three-phase plate electromagnetic separators were used and the belt type 1-disc material with grain sizes below 1 mm, two magnetic and one non-magnetic fractions material with grain sizes below 1 mm, two magnetic and one non-magnetic fractionswere obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm andwer obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and wer obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and separator was then applied. After the separation processes of material with grain sizes were obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and were obtained. The non-magnetic fraction below 1 mm was ground to below 0.5 mm and was again used in the separation process on the belt separator. as again used in the separation pro ess on the belt separato. as again used in the separation pro ess on the belt separato. below 1 mm, two magnetic and one non-magnetic fractions were obtained. The nonwas again used in the separation process on the belt separator. was again used in the separation process on the belt separator. The first device used for the magnetic enrichment was a three-phase plate electro-The first device used for the magnetic enrichment was a three-phase plate electro-The first evice used for the magnetic enrichment was a three-phase plate electro-The first evice used for the magnetic enrichment was a three-phase plate electro-magnetic fraction below 1 mm was ground to below 0.5 mm and was again used in the The first device used for the mamagnetic separator with three oscillamagnetic separator with three oscmagnetic separator with three oscillseparation process on the belt separator."
+          ],
+          "result_metrics": [
+            "yield"
           ]
         }
       ]
@@ -1703,7 +2237,14 @@
     "mixed-electrode-material": "Mixed electrode material",
     "cell-core-fragments": "Battery-core fragments",
     "ferrous-fraction": "Magnetically separated ferrous fraction",
-    "foil-fraction": "Foil-rich fraction"
+    "foil-fraction": "Foil-rich fraction",
+    "mixed-phone-components": "Mixed phone components",
+    "non-magnetic-phone-fraction": "Non-magnetic phone fraction",
+    "ferromagnetic-phone-fraction": "Ferromagnetic phone fraction",
+    "populated-pcb": "Component-bearing printed circuit board",
+    "ndfeb-magnet-powder": "NdFeB magnet powder",
+    "metal-bearing-leachate": "Metal-bearing leachate",
+    "thermally-treated-phone-fraction": "Thermally treated phone fraction"
   },
   "comparison_vocabularies": {
     "mass_denominator": {
@@ -1722,5 +2263,11 @@
       "xrf": "XRF",
       "unspecified": "Assay not resolved"
     }
+  },
+  "components": {
+    "battery": "Battery",
+    "pcb": "Printed circuit board (PCB)",
+    "magnet": "Magnet",
+    "mixed-phone-components": "Mixed phone components"
   }
 }

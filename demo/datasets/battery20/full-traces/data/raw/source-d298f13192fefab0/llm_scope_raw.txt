@@ -1,0 +1,106 @@
+{
+  "raw_response": "{\n  \"population_scopes\": [],\n  \"process_scopes\": [\n    {\n      \"root_entity_id\": \"Process_microwave_assisted_organic_acid_leaching\",\n      \"method_family\": \"microwave-assisted organic acid leaching\",\n      \"evidence_ids\": [\"E8d52a81d8c\"]\n    },\n    {\n      \"root_entity_id\": \"Process_conventional_organic_acid_leaching\",\n      \"method_family\": \"conventional organic acid leaching\",\n      \"evidence_ids\": [\"Ea4cb1683ff\"]\n    },\n    {\n      \"root_entity_id\": \"Process_ultrasound_assisted_organic_acid_leaching\",\n      \"method_family\": \"ultrasound-assisted organic acid leaching\",\n      \"evidence_ids\": [\"Ecd84b7403d\"]\n    }\n  ]\n}",
+  "raw_payload": {
+    "population_scopes": [],
+    "process_scopes": [
+      {
+        "root_entity_id": "Process_microwave_assisted_organic_acid_leaching",
+        "method_family": "microwave-assisted organic acid leaching",
+        "evidence_ids": [
+          "E8d52a81d8c"
+        ]
+      },
+      {
+        "root_entity_id": "Process_conventional_organic_acid_leaching",
+        "method_family": "conventional organic acid leaching",
+        "evidence_ids": [
+          "Ea4cb1683ff"
+        ]
+      },
+      {
+        "root_entity_id": "Process_ultrasound_assisted_organic_acid_leaching",
+        "method_family": "ultrasound-assisted organic acid leaching",
+        "evidence_ids": [
+          "Ecd84b7403d"
+        ]
+      }
+    ]
+  },
+  "evidence_records": [
+    {
+      "id": "E8d52a81d8c",
+      "text": "Leach 0.5 g of crushed NdFeB magnets with organic acids (acetic acid or citric acid) at concentrations of 0.25, 0.50, and 1.0 mol/L, solid/liquid ratios of 1/100, 1/50, and 1/10, at 175 °C and 20 bar for 15, 30, or 60 min using microwave-assisted leaching.",
+      "section_name": "unknown",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_microwave_assisted_organic_acid_leaching"
+      ],
+      "entity_aliases": {
+        "Process_microwave_assisted_organic_acid_leaching": [
+          "microwave-assisted organic acid leaching",
+          "microwave-assisted leaching"
+        ]
+      },
+      "entity_types": {
+        "Process_microwave_assisted_organic_acid_leaching": "Process"
+      },
+      "entity_names": {
+        "Process_microwave_assisted_organic_acid_leaching": "microwave-assisted organic acid leaching"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_microwave_assisted_organic_acid_leaching": "Leach 0.5 g of crushed NdFeB magnets with organic acids (acetic acid or citric acid) at concentrations of 0.25, 0.50, and 1.0 mol/L, solid/liquid ratios of 1/100, 1/50, and 1/10, at 175 °C and 20 bar for 15, 30, or 60 min using microwave-assisted leaching. All experiments were performed in triplicate."
+      }
+    },
+    {
+      "id": "Ea4cb1683ff",
+      "text": "Leach crushed NdFeB magnets with organic acids (acetic acid or citric acid) at concentrations of 0.25, 0.50, and 1.0 mol/L, solid/liquid ratios of 1/100, 1/50, and 1/10, at room temperature for 30, 60, or 120 min using conventional stirring at 30 rpm without heating.",
+      "section_name": "unknown",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_conventional_organic_acid_leaching"
+      ],
+      "entity_aliases": {
+        "Process_conventional_organic_acid_leaching": [
+          "conventional organic acid leaching",
+          "conventional leaching"
+        ]
+      },
+      "entity_types": {
+        "Process_conventional_organic_acid_leaching": "Process"
+      },
+      "entity_names": {
+        "Process_conventional_organic_acid_leaching": "conventional organic acid leaching"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_conventional_organic_acid_leaching": "Leach crushed NdFeB magnets with organic acids (acetic acid or citric acid) at concentrations of 0.25, 0.50, and 1.0 mol/L, solid/liquid ratios of 1/100, 1/50, and 1/10, at room temperature for 30, 60, or 120 min using conventional stirring at 30 rpm without heating. All experiments were performed in triplicate."
+      }
+    },
+    {
+      "id": "Ecd84b7403d",
+      "text": "Leach crushed NdFeB magnets with organic acids (acetic acid or citric acid) at concentrations of 0.25, 0.50, and 1.0 mol/L, solid/liquid ratios of 1/100, 1/50, and 1/10, at room temperature for 30, 60, or 120 min using ultrasound-assisted leaching.",
+      "section_name": "unknown",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_ultrasound_assisted_organic_acid_leaching"
+      ],
+      "entity_aliases": {
+        "Process_ultrasound_assisted_organic_acid_leaching": [
+          "ultrasound-assisted organic acid leaching",
+          "ultrasound-assisted leaching"
+        ]
+      },
+      "entity_types": {
+        "Process_ultrasound_assisted_organic_acid_leaching": "Process"
+      },
+      "entity_names": {
+        "Process_ultrasound_assisted_organic_acid_leaching": "ultrasound-assisted organic acid leaching"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_ultrasound_assisted_organic_acid_leaching": "Leach crushed NdFeB magnets with organic acids (acetic acid or citric acid) at concentrations of 0.25, 0.50, and 1.0 mol/L, solid/liquid ratios of 1/100, 1/50, and 1/10, at room temperature for 30, 60, or 120 min using ultrasound-assisted leaching. All experiments were performed in triplicate."
+      }
+    }
+  ]
+}

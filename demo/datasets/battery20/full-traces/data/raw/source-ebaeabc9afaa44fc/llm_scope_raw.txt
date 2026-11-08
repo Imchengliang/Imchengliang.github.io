@@ -1,0 +1,293 @@
+{
+  "raw_response": "{\n  \"population_scopes\": [\n    {\n      \"root_entity_id\": \"Product_mobile_phone\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"mobile phone\",\n      \"scope_summary\": \"Mobile phone waste from which camera parts and PCB parts were separated and collected for the experiment.\",\n      \"evidence_ids\": [\"E043d80e1df\", \"E076f438fc8\"]\n    },\n    {\n      \"root_entity_id\": \"Component_camera\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"camera\",\n      \"scope_summary\": \"Camera parts attached to mobile phone waste, separated and collected for the experiment.\",\n      \"evidence_ids\": [\"E043d80e1df\", \"E076f438fc8\"]\n    },\n    {\n      \"root_entity_id\": \"Component_printed_circuit_board\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"printed circuit board\",\n      \"scope_summary\": \"PCB parts attached to mobile phone waste, separated and collected for the experiment.\",\n      \"evidence_ids\": [\"E043d80e1df\", \"E076f438fc8\"]\n    },\n    {\n      \"root_entity_id\": \"Product_camera\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"camera\",\n      \"scope_summary\": \"Camera parts attached to mobile phone waste, separated and collected for the experiment.\",\n      \"evidence_ids\": [\"E043d80e1df\", \"E076f438fc8\"]\n    }\n  ],\n  \"process_scopes\": [\n    {\n      \"root_entity_id\": \"Process_camera\",\n      \"method_family\": \"chemical precipitation\",\n      \"evidence_ids\": [\"E0bb90a1e21\"]\n    },\n    {\n      \"root_entity_id\": \"Process_biogenic_metal_precipitation_from_pH_7_7_filtrate\",\n      \"method_family\": \"biogenic metal precipitation\",\n      \"evidence_ids\": [\"E0c74869f49\"]\n    },\n    {\n      \"root_entity_id\": \"Process_NH4OH_precipitation_from_digested_aqua_regia\",\n      \"method_family\": \"chemical precipitation\",\n      \"evidence_ids\": [\"E5ba861b63e\"]\n    },\n    {\n      \"root_entity_id\": \"Process_aqua_regia\",\n      \"method_family\": \"acid leaching\",\n      \"evidence_ids\": [\"E82a4572eea\"]\n    },\n    {\n      \"root_entity_id\": \"Process_printed_circuit_board\",\n      \"method_family\": \"chemical precipitation\",\n      \"evidence_ids\": [\"Ef3b84c5f9a\"]\n    }\n  ]\n}",
+  "raw_payload": {
+    "population_scopes": [
+      {
+        "root_entity_id": "Product_mobile_phone",
+        "granularity": "batch",
+        "sample_type": "mobile phone",
+        "scope_summary": "Mobile phone waste from which camera parts and PCB parts were separated and collected for the experiment.",
+        "evidence_ids": [
+          "E043d80e1df",
+          "E076f438fc8"
+        ]
+      },
+      {
+        "root_entity_id": "Component_camera",
+        "granularity": "batch",
+        "sample_type": "camera",
+        "scope_summary": "Camera parts attached to mobile phone waste, separated and collected for the experiment.",
+        "evidence_ids": [
+          "E043d80e1df",
+          "E076f438fc8"
+        ]
+      },
+      {
+        "root_entity_id": "Component_printed_circuit_board",
+        "granularity": "batch",
+        "sample_type": "printed circuit board",
+        "scope_summary": "PCB parts attached to mobile phone waste, separated and collected for the experiment.",
+        "evidence_ids": [
+          "E043d80e1df",
+          "E076f438fc8"
+        ]
+      },
+      {
+        "root_entity_id": "Product_camera",
+        "granularity": "batch",
+        "sample_type": "camera",
+        "scope_summary": "Camera parts attached to mobile phone waste, separated and collected for the experiment.",
+        "evidence_ids": [
+          "E043d80e1df",
+          "E076f438fc8"
+        ]
+      }
+    ],
+    "process_scopes": [
+      {
+        "root_entity_id": "Process_camera",
+        "method_family": "chemical precipitation",
+        "evidence_ids": [
+          "E0bb90a1e21"
+        ]
+      },
+      {
+        "root_entity_id": "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate",
+        "method_family": "biogenic metal precipitation",
+        "evidence_ids": [
+          "E0c74869f49"
+        ]
+      },
+      {
+        "root_entity_id": "Process_NH4OH_precipitation_from_digested_aqua_regia",
+        "method_family": "chemical precipitation",
+        "evidence_ids": [
+          "E5ba861b63e"
+        ]
+      },
+      {
+        "root_entity_id": "Process_aqua_regia",
+        "method_family": "acid leaching",
+        "evidence_ids": [
+          "E82a4572eea"
+        ]
+      },
+      {
+        "root_entity_id": "Process_printed_circuit_board",
+        "method_family": "chemical precipitation",
+        "evidence_ids": [
+          "Ef3b84c5f9a"
+        ]
+      }
+    ]
+  },
+  "evidence_records": [
+    {
+      "id": "E043d80e1df",
+      "text": "First, the camera parts and PCB parts attached to the mobile phone waste were separated and collected for the experiment (Figure 1).",
+      "section_name": "2.1. Preparation of the Metal Solution Using Aqua Regia2.1. Preparation of the Metal Solution Using Aqua Regia",
+      "current_study_signal": "high",
+      "entity_ids": [
+        "Product_mobile_phone",
+        "Component_camera",
+        "Component_printed_circuit_board",
+        "Product_camera"
+      ],
+      "entity_aliases": {
+        "Product_mobile_phone": [
+          "mobile phone waste",
+          "mobile phone"
+        ],
+        "Component_camera": [
+          "camera parts",
+          "camera",
+          "camera part"
+        ],
+        "Component_printed_circuit_board": [
+          "printed circuit board",
+          "pcb"
+        ],
+        "Product_camera": [
+          "camera"
+        ]
+      },
+      "entity_types": {
+        "Product_mobile_phone": "Product",
+        "Component_camera": "Component",
+        "Component_printed_circuit_board": "Component",
+        "Product_camera": "Product"
+      },
+      "entity_names": {
+        "Product_mobile_phone": "mobile phone",
+        "Component_camera": "camera",
+        "Component_printed_circuit_board": "printed circuit board",
+        "Product_camera": "camera"
+      },
+      "entity_sample_identifiers": {}
+    },
+    {
+      "id": "E076f438fc8",
+      "text": "In chemical treatment, the metal fraction attached to the printed circuit board (PCB) and camera parts were separated from the mobile phone waste and were then pulverized into particles with a size less than \\~2 mm.",
+      "section_name": "Metal Recovery from the Mobile Phone Waste by Chemical and Biological Treatments",
+      "current_study_signal": "high",
+      "entity_ids": [
+        "Product_mobile_phone",
+        "Component_camera",
+        "Component_printed_circuit_board",
+        "Product_camera"
+      ],
+      "entity_aliases": {
+        "Product_mobile_phone": [
+          "mobile phone waste",
+          "mobile phone"
+        ],
+        "Component_camera": [
+          "camera parts",
+          "camera",
+          "camera part"
+        ],
+        "Component_printed_circuit_board": [
+          "printed circuit board",
+          "pcb"
+        ],
+        "Product_camera": [
+          "camera"
+        ]
+      },
+      "entity_types": {
+        "Product_mobile_phone": "Product",
+        "Component_camera": "Component",
+        "Component_printed_circuit_board": "Component",
+        "Product_camera": "Product"
+      },
+      "entity_names": {
+        "Product_mobile_phone": "mobile phone",
+        "Component_camera": "camera",
+        "Component_printed_circuit_board": "printed circuit board",
+        "Product_camera": "camera"
+      },
+      "entity_sample_identifiers": {}
+    },
+    {
+      "id": "E0bb90a1e21",
+      "text": "The light blue precipitate formed at pH 7.7 was mainly crystalline copper chloride hydroxides (Cu2Cl(OH)3) (Figure 4b).",
+      "section_name": "unknown",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_camera"
+      ],
+      "entity_aliases": {
+        "Process_camera": [
+          "camera"
+        ]
+      },
+      "entity_types": {
+        "Process_camera": "Process"
+      },
+      "entity_names": {
+        "Process_camera": "camera"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_camera": "The light blue precipitate formed at pH 7.7 was mainly crystalline copper chloride hydroxides (Cu2Cl(OH)3) (Figure 4b)."
+      }
+    },
+    {
+      "id": "E0c74869f49",
+      "text": "reduced Fe(III), Cr(VI), and Se(VI) by extracellularly forming Fe(II/III) minerals, Cr(III) hydroxide and amorphous elemental Se(0) nanoparticles, respectively, via glucose fermentation [15].",
+      "section_name": "The metal-reducing bacteria (S2.3. Biological Method for Metal Recovery",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate"
+      ],
+      "entity_aliases": {
+        "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate": [
+          "biogenic metal precipitation from ph 7.7 filtrate"
+        ]
+      },
+      "entity_types": {
+        "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate": "Process"
+      },
+      "entity_names": {
+        "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate": "biogenic metal precipitation from pH 7.7 filtrate"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate": "2 mL of the pH 7.7 filtrate was added to anaerobic medium containing 10 mM glucose and 2 mL of enriched metal-reducing bacteria (Suncheon-1), and cultivated in a shaking incubator at 25 °C under anoxic atmosphere for 2 weeks to produce biogenic metal precipitates."
+      }
+    },
+    {
+      "id": "E5ba861b63e",
+      "text": "Ammonium hydroxide (NH4OH, 28%, JUNSEI, Tokyo, Japan) solution was slowly added into the acidic metal solution to precipitate ferrous, non-ferrous, and precious metals with gravity only and with rapid stirring.",
+      "section_name": "2.2. Chemical Method for Metal Recove2.2. Chemical Methodfor Metal Recovery",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_NH4OH_precipitation_from_digested_aqua_regia"
+      ],
+      "entity_aliases": {
+        "Process_NH4OH_precipitation_from_digested_aqua_regia": [
+          "nh4oh precipitation from digested aqua regia"
+        ]
+      },
+      "entity_types": {
+        "Process_NH4OH_precipitation_from_digested_aqua_regia": "Process"
+      },
+      "entity_names": {
+        "Process_NH4OH_precipitation_from_digested_aqua_regia": "NH4OH precipitation from digested aqua regia"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_NH4OH_precipitation_from_digested_aqua_regia": "Ammonium hydroxide (28%) was slowly added with rapid stirring to the aqua regia metal leachate to precipitate ferrous, non-ferrous, and precious metals. Precipitation occurred at pH ranges of approximately 3.9-4.2, 5.7-7.7, and 8.3-10.5 with color changes; at each pH range, NH4OH addition was stopped but stirring continued, then the suspension was centrifuged to separate precipitate and supernatant. The precipitate was washed three times with distilled water and dried for mineralogical analysis."
+      }
+    },
+    {
+      "id": "E82a4572eea",
+      "text": "the particles were dissolved in the 1 / 10: (g / m L) ratio in the aqua regia at room temperature for 48 h and only the supernatant was used for the experiments.",
+      "section_name": "2.1. Preparation of the Metal Solution Using Aqua Regia2.1. Preparation of the Metal Solution Using Aqua Regia",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_aqua_regia"
+      ],
+      "entity_aliases": {
+        "Process_aqua_regia": [
+          "aqua regia"
+        ]
+      },
+      "entity_types": {
+        "Process_aqua_regia": "Process"
+      },
+      "entity_names": {
+        "Process_aqua_regia": "aqua regia"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_aqua_regia": "the particles were dissolved in the 1 / 10: (g / m L) ratio in the aqua regia at room temperature for 48 h and only the supernatant was used for the experiments."
+      }
+    },
+    {
+      "id": "Ef3b84c5f9a",
+      "text": "the brown precipitate formed at pH 3.9 was identified as poorly crystalline iron oxides (FeOOH) composed of Fe and O, and a small amount of Cu, Cr, and Sn (Figure 6a,b).",
+      "section_name": "3.2. Chemical Recovery of Copper, Iron, and Rare Earth-Metal Complex",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_printed_circuit_board"
+      ],
+      "entity_aliases": {
+        "Process_printed_circuit_board": [
+          "printed circuit board",
+          "pcb"
+        ]
+      },
+      "entity_types": {
+        "Process_printed_circuit_board": "Process"
+      },
+      "entity_names": {
+        "Process_printed_circuit_board": "printed circuit board"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_printed_circuit_board": "the brown precipitate formed at pH 3.9 was identified as poorly crystalline iron oxides (FeOOH) composed of Fe and O, and a small amount of Cu, Cr, and Sn (Figure 6a,b)."
+      }
+    }
+  ]
+}

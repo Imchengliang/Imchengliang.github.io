@@ -1,0 +1,357 @@
+{
+  "raw_response": "{\n  \"population_scopes\": [\n    {\n      \"root_entity_id\": \"Product_mobile_phone\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"mobile phone\",\n      \"scope_summary\": \"Mobile phones used as raw input material; mechanically disassembled with batteries separated and remaining material cut with a guillotine; from Kit no. III; total mass 450 g.\",\n      \"evidence_ids\": [\"E03d0112e64\", \"E8ab03d2d70\", \"Edb6148396e\"]\n    },\n    {\n      \"root_entity_id\": \"Component_keypad\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"keypad\",\n      \"scope_summary\": \"Keypads from mobile phones, analyzed as part of the study; temporary increases in gas concentrations were measured for keypad samples.\",\n      \"evidence_ids\": [\"E5c7ba209cd\"]\n    }\n  ],\n  \"process_scopes\": [\n    {\n      \"root_entity_id\": \"Process_thermal_treatment_of_mobile_phone_waste_in_a_bubbling_fluidized_bed\",\n      \"method_family\": \"thermal treatment\",\n      \"evidence_ids\": [\"E2ff3983649\"]\n    },\n    {\n      \"root_entity_id\": \"Process_neodymium_magnet_separation_of__1_mm_fraction\",\n      \"method_family\": \"magnetic separation\",\n      \"evidence_ids\": [\"E4e76945395\"]\n    },\n    {\n      \"root_entity_id\": \"Process_three_phase_plate_electromagnetic_separation_of__1_mm_fraction\",\n      \"method_family\": \"magnetic separation\",\n      \"evidence_ids\": [\"E5695e61399\"]\n    },\n    {\n      \"root_entity_id\": \"Process_propane\",\n      \"method_family\": \"thermal treatment\",\n      \"evidence_ids\": [\"E7012806393\"]\n    },\n    {\n      \"root_entity_id\": \"Process_butane\",\n      \"method_family\": \"thermal treatment\",\n      \"evidence_ids\": [\"E80c9947120\"]\n    },\n    {\n      \"root_entity_id\": \"Process_belt_type_1_disc_separation_of__1_mm_fraction\",\n      \"method_family\": \"magnetic separation\",\n      \"evidence_ids\": [\"E8dc1322b8b\"]\n    },\n    {\n      \"root_entity_id\": \"Process_belt_separator_separation_of_ground_non_magnetic_fraction\",\n      \"method_family\": \"magnetic separation\",\n      \"evidence_ids\": [\"E947c62f60e\"]\n    }\n  ]\n}",
+  "raw_payload": {
+    "population_scopes": [
+      {
+        "root_entity_id": "Product_mobile_phone",
+        "granularity": "batch",
+        "sample_type": "mobile phone",
+        "scope_summary": "Mobile phones used as raw input material; mechanically disassembled with batteries separated and remaining material cut with a guillotine; from Kit no. III; total mass 450 g.",
+        "evidence_ids": [
+          "E03d0112e64",
+          "E8ab03d2d70",
+          "Edb6148396e"
+        ]
+      },
+      {
+        "root_entity_id": "Component_keypad",
+        "granularity": "batch",
+        "sample_type": "keypad",
+        "scope_summary": "Keypads from mobile phones, analyzed as part of the study; temporary increases in gas concentrations were measured for keypad samples.",
+        "evidence_ids": [
+          "E5c7ba209cd"
+        ]
+      }
+    ],
+    "process_scopes": [
+      {
+        "root_entity_id": "Process_thermal_treatment_of_mobile_phone_waste_in_a_bubbling_fluidized_bed",
+        "method_family": "thermal treatment",
+        "evidence_ids": [
+          "E2ff3983649"
+        ]
+      },
+      {
+        "root_entity_id": "Process_neodymium_magnet_separation_of__1_mm_fraction",
+        "method_family": "magnetic separation",
+        "evidence_ids": [
+          "E4e76945395"
+        ]
+      },
+      {
+        "root_entity_id": "Process_three_phase_plate_electromagnetic_separation_of__1_mm_fraction",
+        "method_family": "magnetic separation",
+        "evidence_ids": [
+          "E5695e61399"
+        ]
+      },
+      {
+        "root_entity_id": "Process_propane",
+        "method_family": "thermal treatment",
+        "evidence_ids": [
+          "E7012806393"
+        ]
+      },
+      {
+        "root_entity_id": "Process_butane",
+        "method_family": "thermal treatment",
+        "evidence_ids": [
+          "E80c9947120"
+        ]
+      },
+      {
+        "root_entity_id": "Process_belt_type_1_disc_separation_of__1_mm_fraction",
+        "method_family": "magnetic separation",
+        "evidence_ids": [
+          "E8dc1322b8b"
+        ]
+      },
+      {
+        "root_entity_id": "Process_belt_separator_separation_of_ground_non_magnetic_fraction",
+        "method_family": "magnetic separation",
+        "evidence_ids": [
+          "E947c62f60e"
+        ]
+      }
+    ]
+  },
+  "evidence_records": [
+    {
+      "id": "E03d0112e64",
+      "text": "Initially, the phones were mechanically disassembled, the batteries were separated and the resulting material was mechanically disassembled, the batteries were separated and the resulting material was divided into smaller parts with a guillotine.",
+      "section_name": "2.1. The Thermal Treatment Process",
+      "current_study_signal": "high",
+      "entity_ids": [
+        "Product_mobile_phone"
+      ],
+      "entity_aliases": {
+        "Product_mobile_phone": [
+          "mobile phone waste",
+          "mobile phone",
+          "mobile phones",
+          "phones",
+          "used phones",
+          "mphw",
+          "waste mobile phones"
+        ]
+      },
+      "entity_types": {
+        "Product_mobile_phone": "Product"
+      },
+      "entity_names": {
+        "Product_mobile_phone": "mobile phone"
+      },
+      "entity_sample_identifiers": {}
+    },
+    {
+      "id": "E2ff3983649",
+      "text": "The reactor was a 10 kW unit with a transparent quartz cylindrical tube (100 mm outer diameter, 500 mm height, 2–3 mm wall thickness) on a perforated chrome-nickel steel distributor plate (1 mm thickness, 0.6 mm holes, 1.8% open area).",
+      "section_name": "unknown",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_thermal_treatment_of_mobile_phone_waste_in_a_bubbling_fluidized_bed"
+      ],
+      "entity_aliases": {
+        "Process_thermal_treatment_of_mobile_phone_waste_in_a_bubbling_fluidized_bed": [
+          "thermal treatment of mobile phone waste in a bubbling fluidized bed",
+          "fluidized bed thermal treatment",
+          "thermal treatment process"
+        ]
+      },
+      "entity_types": {
+        "Process_thermal_treatment_of_mobile_phone_waste_in_a_bubbling_fluidized_bed": "Process"
+      },
+      "entity_names": {
+        "Process_thermal_treatment_of_mobile_phone_waste_in_a_bubbling_fluidized_bed": "thermal treatment of mobile phone waste in a bubbling fluidized bed"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_thermal_treatment_of_mobile_phone_waste_in_a_bubbling_fluidized_bed": "Ten used mobile phones were mechanically disassembled, batteries separated, and the remaining material cut with a guillotine. Samples were introduced in a heat-resistant mesh basket into a laboratory bubbling fluidized bed reactor at 800–850 °C for three minutes to decompose organic components; the solid residue was then pulled out. The reactor was a 10 kW unit with a transparent quartz cylindrical tube (100 mm outer diameter, 500 mm height, 2–3 mm wall thickness) on a perforated chrome-nickel steel distributor plate (1 mm thickness, 0.6 mm holes, 1.8% open area). Air and propane–butane gas were fed through the distributor. Initial bed conditions before sample introduction were 840–860 °C at 50 mm above the distributor, 6.5% O2, 10% CO2, and 20 ppm NOx. Exhaust gas composition and bed temperature were monitored."
+      }
+    },
+    {
+      "id": "E4e76945395",
+      "text": "After thermal treatment, solid products were crumbled and ground, then sieved into fractions of less than 1 mm and more than 1 mm.",
+      "section_name": "unknown",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_neodymium_magnet_separation_of__1_mm_fraction"
+      ],
+      "entity_aliases": {
+        "Process_neodymium_magnet_separation_of__1_mm_fraction": [
+          "neodymium magnet separation of >1 mm fraction",
+          "separation using a neodymium magnet"
+        ]
+      },
+      "entity_types": {
+        "Process_neodymium_magnet_separation_of__1_mm_fraction": "Process"
+      },
+      "entity_names": {
+        "Process_neodymium_magnet_separation_of__1_mm_fraction": "neodymium magnet separation of >1 mm fraction"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_neodymium_magnet_separation_of__1_mm_fraction": "After thermal treatment, solid products were crumbled and ground, then sieved into fractions of less than 1 mm and more than 1 mm. The fraction with grain sizes over 1 mm was separated using a neodymium magnet."
+      }
+    },
+    {
+      "id": "E5695e61399",
+      "text": "This device had a flat plate of transformer metal plates with windings connected to a three-phase power supply, producing three independent oscillating magnetic fields on a near-vertical positioned plate.",
+      "section_name": "unknown",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_three_phase_plate_electromagnetic_separation_of__1_mm_fraction"
+      ],
+      "entity_aliases": {
+        "Process_three_phase_plate_electromagnetic_separation_of__1_mm_fraction": [
+          "three-phase plate electromagnetic separation of <1 mm fraction",
+          "three-phase plate electromagnetic separator treatment"
+        ]
+      },
+      "entity_types": {
+        "Process_three_phase_plate_electromagnetic_separation_of__1_mm_fraction": "Process"
+      },
+      "entity_names": {
+        "Process_three_phase_plate_electromagnetic_separation_of__1_mm_fraction": "three-phase plate electromagnetic separation of <1 mm fraction"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_three_phase_plate_electromagnetic_separation_of__1_mm_fraction": "The fraction below 1 mm was subjected to two-stage separation. Initially, a three-phase plate electromagnetic separator was used. This device had a flat plate of transformer metal plates with windings connected to a three-phase power supply, producing three independent oscillating magnetic fields on a near-vertical positioned plate. Tests were performed with an electric current of 80 A in the windings. Material moved vertically by gravity while magnetic fractions also moved horizontally, allowing separation into magnetic and non-magnetic fractions."
+      }
+    },
+    {
+      "id": "E5c7ba209cd",
+      "text": "In the case of displays and keypads, a smaller temporary increase in concentrations was obtained than with the PCBA samples—this amounted to: 550–800 ppm for methane; 60–130 ppm for ethane; 60–230 ppm for acetylene; 60–230 ppm for ethylene; 5–50 ppm for naphthalene (with the exception of sample 5, the Kit no.",
+      "section_name": "3. Results and Discussion3. Results and Discussio",
+      "current_study_signal": "high",
+      "entity_ids": [
+        "Component_keypad"
+      ],
+      "entity_aliases": {
+        "Component_keypad": [
+          "keypads",
+          "keypad"
+        ]
+      },
+      "entity_types": {
+        "Component_keypad": "Component"
+      },
+      "entity_names": {
+        "Component_keypad": "keypad"
+      },
+      "entity_sample_identifiers": {}
+    },
+    {
+      "id": "E7012806393",
+      "text": "The air and propane–butane gas are fed to the reactor through a distributor plate.",
+      "section_name": "2.1. The Thermal Treatment Process",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_propane"
+      ],
+      "entity_aliases": {
+        "Process_propane": [
+          "propane"
+        ]
+      },
+      "entity_types": {
+        "Process_propane": "Process"
+      },
+      "entity_names": {
+        "Process_propane": "propane"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_propane": "The air and propane–butane gas are fed to the reactor through a distributor plate."
+      }
+    },
+    {
+      "id": "E80c9947120",
+      "text": "The air and propane–butane gas are fed to the reactor through a distributor plate.",
+      "section_name": "2.1. The Thermal Treatment Process",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_butane"
+      ],
+      "entity_aliases": {
+        "Process_butane": [
+          "butane"
+        ]
+      },
+      "entity_types": {
+        "Process_butane": "Process"
+      },
+      "entity_names": {
+        "Process_butane": "butane"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_butane": "The air and propane–butane gas are fed to the reactor through a distributor plate."
+      }
+    },
+    {
+      "id": "E8ab03d2d70",
+      "text": "III, before and after mechanical dismantling, mobile phones from Kit no.",
+      "section_name": "2.1. The Thermal Treatment Process",
+      "current_study_signal": "high",
+      "entity_ids": [
+        "Product_mobile_phone"
+      ],
+      "entity_aliases": {
+        "Product_mobile_phone": [
+          "mobile phone waste",
+          "mobile phone",
+          "mobile phones",
+          "phones",
+          "used phones",
+          "mphw",
+          "waste mobile phones"
+        ]
+      },
+      "entity_types": {
+        "Product_mobile_phone": "Product"
+      },
+      "entity_names": {
+        "Product_mobile_phone": "mobile phone"
+      },
+      "entity_sample_identifiers": {}
+    },
+    {
+      "id": "E8dc1322b8b",
+      "text": "Magnetic particles were caught by the rotating disc and thrown outside the magnetic field, while non-magnetic material was directed below the plate surface and transferred to a container.",
+      "section_name": "unknown",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_belt_type_1_disc_separation_of__1_mm_fraction"
+      ],
+      "entity_aliases": {
+        "Process_belt_type_1_disc_separation_of__1_mm_fraction": [
+          "belt type 1-disc separation of <1 mm fraction",
+          "belt type 1-disc separator treatment"
+        ]
+      },
+      "entity_types": {
+        "Process_belt_type_1_disc_separation_of__1_mm_fraction": "Process"
+      },
+      "entity_names": {
+        "Process_belt_type_1_disc_separation_of__1_mm_fraction": "belt type 1-disc separation of <1 mm fraction"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_belt_type_1_disc_separation_of__1_mm_fraction": "After the three-phase plate electromagnetic separation, the belt type 1-disc separator was applied to the material with grain sizes below 1 mm. The raw material was loaded through a hopper onto a conveyor belt that transported it into the slit under a rotating disc. Magnetic particles were caught by the rotating disc and thrown outside the magnetic field, while non-magnetic material was directed below the plate surface and transferred to a container. Separation was performed with a 2 A electric current through the windings and a working gap of 2 mm. This yielded two magnetic and one non-magnetic fraction."
+      }
+    },
+    {
+      "id": "E947c62f60e",
+      "text": "The non-magnetic fraction below 1 mm was ground to below 0.5 mm and was again used in the separation process on the belt separator.",
+      "section_name": "2.2. Magnetic EnrichAfter thermal tAfter thermAfter thermal tAfter therm2.2. Magnetic Enrichment",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_belt_separator_separation_of_ground_non_magnetic_fraction"
+      ],
+      "entity_aliases": {
+        "Process_belt_separator_separation_of_ground_non_magnetic_fraction": [
+          "belt separator separation of ground non-magnetic fraction",
+          "belt separator treatment"
+        ]
+      },
+      "entity_types": {
+        "Process_belt_separator_separation_of_ground_non_magnetic_fraction": "Process"
+      },
+      "entity_names": {
+        "Process_belt_separator_separation_of_ground_non_magnetic_fraction": "belt separator separation of ground non-magnetic fraction"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_belt_separator_separation_of_ground_non_magnetic_fraction": "The non-magnetic fraction below 1 mm was ground to below 0.5 mm and was again used in the separation process on the belt separator."
+      }
+    },
+    {
+      "id": "Edb6148396e",
+      "text": "As a result of the thermal treatment process of MPhW in the fluidised bed, solid products with a total weight of 333.6 g were obtained, indicating a reduction in weight of 25.86%.",
+      "section_name": "3. Results and Discussion3. Results and Discussio",
+      "current_study_signal": "high",
+      "entity_ids": [
+        "Product_mobile_phone"
+      ],
+      "entity_aliases": {
+        "Product_mobile_phone": [
+          "mobile phone waste",
+          "mobile phone",
+          "mobile phones",
+          "phones",
+          "used phones",
+          "mphw",
+          "waste mobile phones"
+        ]
+      },
+      "entity_types": {
+        "Product_mobile_phone": "Product"
+      },
+      "entity_names": {
+        "Product_mobile_phone": "mobile phone"
+      },
+      "entity_sample_identifiers": {}
+    }
+  ]
+}

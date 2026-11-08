@@ -1,0 +1,440 @@
+{
+  "raw_response": "{\n  \"population_scopes\": [\n    {\n      \"root_entity_id\": \"Component_printed_circuit_board\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"printed circuit board\",\n      \"scope_summary\": \"Waste printed circuit boards collected from a range of sources, waste dismantlers/e-waste recyclers, in as received sizes and shapes.\",\n      \"evidence_ids\": [\"Ecc22c93123\", \"Ec0fbaccb13\", \"E91dd6d9058\"]\n    }\n  ],\n  \"process_scopes\": [\n    {\n      \"root_entity_id\": \"Process_Lanthanum\",\n      \"method_family\": \"high temperature pyrolysis\",\n      \"evidence_ids\": [\"E09928eaf3e\"]\n    },\n    {\n      \"root_entity_id\": \"Process_Cerium\",\n      \"method_family\": \"high temperature pyrolysis\",\n      \"evidence_ids\": [\"E1d0a831f17\"]\n    },\n    {\n      \"root_entity_id\": \"Process_printed_circuit_board\",\n      \"method_family\": \"high temperature pyrolysis\",\n      \"evidence_ids\": [\"E1d84d7c6f6\"]\n    },\n    {\n      \"root_entity_id\": \"Process_Praseodymium\",\n      \"method_family\": \"high temperature pyrolysis\",\n      \"evidence_ids\": [\"E4f9d6e8900\"]\n    },\n    {\n      \"root_entity_id\": \"Process_thermal_plasma_furnace_pyrolysis\",\n      \"method_family\": \"thermal plasma furnace pyrolysis\",\n      \"evidence_ids\": [\"E53ca674b5c\"]\n    },\n    {\n      \"root_entity_id\": \"Process_Y\",\n      \"method_family\": \"high temperature pyrolysis\",\n      \"evidence_ids\": [\"E53fdfb6faf\"]\n    },\n    {\n      \"root_entity_id\": \"Process_Sm\",\n      \"method_family\": \"high temperature pyrolysis\",\n      \"evidence_ids\": [\"E57f2a3e56d\"]\n    },\n    {\n      \"root_entity_id\": \"Process_Gadolinium\",\n      \"method_family\": \"high temperature pyrolysis\",\n      \"evidence_ids\": [\"E6b94e2fef0\"]\n    },\n    {\n      \"root_entity_id\": \"Process_horizontal_resistance_furnace_pyrolysis\",\n      \"method_family\": \"horizontal resistance furnace pyrolysis\",\n      \"evidence_ids\": [\"E77dbb4f703\"]\n    },\n    {\n      \"root_entity_id\": \"Process_Neodymium\",\n      \"method_family\": \"high temperature pyrolysis\",\n      \"evidence_ids\": [\"Ede4f3c5a18\"]\n    },\n    {\n      \"root_entity_id\": \"Process_Dysprosium\",\n      \"method_family\": \"high temperature pyrolysis\",\n      \"evidence_ids\": [\"Eefc7a11f78\"]\n    }\n  ]\n}",
+  "raw_payload": {
+    "population_scopes": [
+      {
+        "root_entity_id": "Component_printed_circuit_board",
+        "granularity": "batch",
+        "sample_type": "printed circuit board",
+        "scope_summary": "Waste printed circuit boards collected from a range of sources, waste dismantlers/e-waste recyclers, in as received sizes and shapes.",
+        "evidence_ids": [
+          "Ecc22c93123",
+          "Ec0fbaccb13",
+          "E91dd6d9058"
+        ]
+      }
+    ],
+    "process_scopes": [
+      {
+        "root_entity_id": "Process_Lanthanum",
+        "method_family": "high temperature pyrolysis",
+        "evidence_ids": [
+          "E09928eaf3e"
+        ]
+      },
+      {
+        "root_entity_id": "Process_Cerium",
+        "method_family": "high temperature pyrolysis",
+        "evidence_ids": [
+          "E1d0a831f17"
+        ]
+      },
+      {
+        "root_entity_id": "Process_printed_circuit_board",
+        "method_family": "high temperature pyrolysis",
+        "evidence_ids": [
+          "E1d84d7c6f6"
+        ]
+      },
+      {
+        "root_entity_id": "Process_Praseodymium",
+        "method_family": "high temperature pyrolysis",
+        "evidence_ids": [
+          "E4f9d6e8900"
+        ]
+      },
+      {
+        "root_entity_id": "Process_thermal_plasma_furnace_pyrolysis",
+        "method_family": "thermal plasma furnace pyrolysis",
+        "evidence_ids": [
+          "E53ca674b5c"
+        ]
+      },
+      {
+        "root_entity_id": "Process_Y",
+        "method_family": "high temperature pyrolysis",
+        "evidence_ids": [
+          "E53fdfb6faf"
+        ]
+      },
+      {
+        "root_entity_id": "Process_Sm",
+        "method_family": "high temperature pyrolysis",
+        "evidence_ids": [
+          "E57f2a3e56d"
+        ]
+      },
+      {
+        "root_entity_id": "Process_Gadolinium",
+        "method_family": "high temperature pyrolysis",
+        "evidence_ids": [
+          "E6b94e2fef0"
+        ]
+      },
+      {
+        "root_entity_id": "Process_horizontal_resistance_furnace_pyrolysis",
+        "method_family": "horizontal resistance furnace pyrolysis",
+        "evidence_ids": [
+          "E77dbb4f703"
+        ]
+      },
+      {
+        "root_entity_id": "Process_Neodymium",
+        "method_family": "high temperature pyrolysis",
+        "evidence_ids": [
+          "Ede4f3c5a18"
+        ]
+      },
+      {
+        "root_entity_id": "Process_Dysprosium",
+        "method_family": "high temperature pyrolysis",
+        "evidence_ids": [
+          "Eefc7a11f78"
+        ]
+      }
+    ]
+  },
+  "evidence_records": [
+    {
+      "id": "E09928eaf3e",
+      "text": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig.",
+      "section_name": "4.2. The influence of turbulence on REE recovery",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_Lanthanum"
+      ],
+      "entity_aliases": {
+        "Process_Lanthanum": [
+          "la",
+          "lanthanum"
+        ]
+      },
+      "entity_types": {
+        "Process_Lanthanum": "Process"
+      },
+      "entity_names": {
+        "Process_Lanthanum": "Lanthanum"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_Lanthanum": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig. 8."
+      }
+    },
+    {
+      "id": "E1d0a831f17",
+      "text": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig.",
+      "section_name": "4.2. The influence of turbulence on REE recovery",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_Cerium"
+      ],
+      "entity_aliases": {
+        "Process_Cerium": [
+          "ce",
+          "cerium"
+        ]
+      },
+      "entity_types": {
+        "Process_Cerium": "Process"
+      },
+      "entity_names": {
+        "Process_Cerium": "Cerium"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_Cerium": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig. 8."
+      }
+    },
+    {
+      "id": "E1d84d7c6f6",
+      "text": "PCBs boards had separated in to copper rich red fraction, tin and lead rich whitish metallic fraction and a dark carbonaceous ceramic phase (see Fig.",
+      "section_name": "2.3. Characterization of pyrolysis residues",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_printed_circuit_board"
+      ],
+      "entity_aliases": {
+        "Process_printed_circuit_board": [
+          "printed circuit board",
+          "printed circuit boards",
+          "pcbs"
+        ]
+      },
+      "entity_types": {
+        "Process_printed_circuit_board": "Process"
+      },
+      "entity_names": {
+        "Process_printed_circuit_board": "printed circuit board"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_printed_circuit_board": "PCBs boards had separated in to copper rich red fraction, tin and lead rich whitish metallic fraction and a dark carbonaceous ceramic phase (see Fig. 3 for representative examples of these fractions) in both furnaces."
+      }
+    },
+    {
+      "id": "E4f9d6e8900",
+      "text": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig.",
+      "section_name": "4.2. The influence of turbulence on REE recovery",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_Praseodymium"
+      ],
+      "entity_aliases": {
+        "Process_Praseodymium": [
+          "pr",
+          "praseodymium"
+        ]
+      },
+      "entity_types": {
+        "Process_Praseodymium": "Process"
+      },
+      "entity_names": {
+        "Process_Praseodymium": "Praseodymium"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_Praseodymium": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig. 8."
+      }
+    },
+    {
+      "id": "E53ca674b5c",
+      "text": "Size-reduced PCBs were placed in a zircon-coated graphite crucible of a 35 kW DC extended transfer arc plasma reactor; operated at 100 A and 50 V DC with Ar flow at 1 L/min and heating rate ~750 °C/min; heat treated at 850 °C for 15 min, then cooled and residues collected.",
+      "section_name": "unknown",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_thermal_plasma_furnace_pyrolysis"
+      ],
+      "entity_aliases": {
+        "Process_thermal_plasma_furnace_pyrolysis": [
+          "thermal plasma furnace pyrolysis"
+        ]
+      },
+      "entity_types": {
+        "Process_thermal_plasma_furnace_pyrolysis": "Process"
+      },
+      "entity_names": {
+        "Process_thermal_plasma_furnace_pyrolysis": "thermal plasma furnace pyrolysis"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_thermal_plasma_furnace_pyrolysis": "Size-reduced PCBs were placed in a zircon-coated graphite crucible of a 35 kW DC extended transfer arc plasma reactor; operated at 100 A and 50 V DC with Ar flow at 1 L/min and heating rate ~750 °C/min; heat treated at 850 °C for 15 min, then cooled and residues collected."
+      }
+    },
+    {
+      "id": "E53fdfb6faf",
+      "text": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig.",
+      "section_name": "4.2. The influence of turbulence on REE recovery",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_Y"
+      ],
+      "entity_aliases": {
+        "Process_Y": [
+          "y"
+        ]
+      },
+      "entity_types": {
+        "Process_Y": "Process"
+      },
+      "entity_names": {
+        "Process_Y": "Y"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_Y": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig. 8."
+      }
+    },
+    {
+      "id": "E57f2a3e56d",
+      "text": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig.",
+      "section_name": "4.2. The influence of turbulence on REE recovery",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_Sm"
+      ],
+      "entity_aliases": {
+        "Process_Sm": [
+          "sm"
+        ]
+      },
+      "entity_types": {
+        "Process_Sm": "Process"
+      },
+      "entity_names": {
+        "Process_Sm": "Sm"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_Sm": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig. 8."
+      }
+    },
+    {
+      "id": "E6b94e2fef0",
+      "text": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig.",
+      "section_name": "4.2. The influence of turbulence on REE recovery",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_Gadolinium"
+      ],
+      "entity_aliases": {
+        "Process_Gadolinium": [
+          "gd",
+          "gadolinium"
+        ]
+      },
+      "entity_types": {
+        "Process_Gadolinium": "Process"
+      },
+      "entity_names": {
+        "Process_Gadolinium": "Gadolinium"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_Gadolinium": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig. 8."
+      }
+    },
+    {
+      "id": "E77dbb4f703",
+      "text": "Waste PCB pieces were placed on the sample holder and heated in a horizontal resistance furnace to 850 °C, held for 15 min (up to 60 min in some cases), then furnace cooled; Ar gas flow at 1 L/min; heating rate up to 40 °C/min; sample weight up to 0.02 kg.",
+      "section_name": "unknown",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_horizontal_resistance_furnace_pyrolysis"
+      ],
+      "entity_aliases": {
+        "Process_horizontal_resistance_furnace_pyrolysis": [
+          "horizontal resistance furnace pyrolysis"
+        ]
+      },
+      "entity_types": {
+        "Process_horizontal_resistance_furnace_pyrolysis": "Process"
+      },
+      "entity_names": {
+        "Process_horizontal_resistance_furnace_pyrolysis": "horizontal resistance furnace pyrolysis"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_horizontal_resistance_furnace_pyrolysis": "Waste PCB pieces were placed on the sample holder and heated in a horizontal resistance furnace to 850 °C, held for 15 min (up to 60 min in some cases), then furnace cooled; Ar gas flow at 1 L/min; heating rate up to 40 °C/min; sample weight up to 0.02 kg."
+      }
+    },
+    {
+      "id": "E91dd6d9058",
+      "text": "REEs recovered from the high temperature pyrolysis of waste PCBs were separated in two distinct groups: Light Rare Earth Elements (LREE) and Heavy Rare Earth Elements (HREE) (Gschneider, 1966).",
+      "section_name": "3. Results",
+      "current_study_signal": "high",
+      "entity_ids": [
+        "Component_printed_circuit_board"
+      ],
+      "entity_aliases": {
+        "Component_printed_circuit_board": [
+          "printed circuit board",
+          "pcbs",
+          "printed circuit boards"
+        ]
+      },
+      "entity_types": {
+        "Component_printed_circuit_board": "Component"
+      },
+      "entity_names": {
+        "Component_printed_circuit_board": "printed circuit board"
+      },
+      "entity_sample_identifiers": {}
+    },
+    {
+      "id": "Ec0fbaccb13",
+      "text": "Waste PCBs were heat treated at 850 ^∘C for 15 min, and the pyrolysis residues were collected after the furnace had cooled down.",
+      "section_name": "2.2. High temperature pyrolysis",
+      "current_study_signal": "high",
+      "entity_ids": [
+        "Component_printed_circuit_board"
+      ],
+      "entity_aliases": {
+        "Component_printed_circuit_board": [
+          "printed circuit board",
+          "pcbs",
+          "printed circuit boards"
+        ]
+      },
+      "entity_types": {
+        "Component_printed_circuit_board": "Component"
+      },
+      "entity_names": {
+        "Component_printed_circuit_board": "printed circuit board"
+      },
+      "entity_sample_identifiers": {}
+    },
+    {
+      "id": "Ecc22c93123",
+      "text": "Waste printed circuit boards were collected from a range of sources, waste dismantlers/e-waste recyclers in as received sizes and shapes (see Fig.",
+      "section_name": "2.1. Materials",
+      "current_study_signal": "high",
+      "entity_ids": [
+        "Component_printed_circuit_board"
+      ],
+      "entity_aliases": {
+        "Component_printed_circuit_board": [
+          "printed circuit board",
+          "pcbs",
+          "printed circuit boards"
+        ]
+      },
+      "entity_types": {
+        "Component_printed_circuit_board": "Component"
+      },
+      "entity_names": {
+        "Component_printed_circuit_board": "printed circuit board"
+      },
+      "entity_sample_identifiers": {}
+    },
+    {
+      "id": "Ede4f3c5a18",
+      "text": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig.",
+      "section_name": "4.2. The influence of turbulence on REE recovery",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_Neodymium"
+      ],
+      "entity_aliases": {
+        "Process_Neodymium": [
+          "nd",
+          "neodymium"
+        ]
+      },
+      "entity_types": {
+        "Process_Neodymium": "Process"
+      },
+      "entity_names": {
+        "Process_Neodymium": "Neodymium"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_Neodymium": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig. 8."
+      }
+    },
+    {
+      "id": "Eefc7a11f78",
+      "text": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig.",
+      "section_name": "4.2. The influence of turbulence on REE recovery",
+      "current_study_signal": "process_registry",
+      "entity_ids": [
+        "Process_Dysprosium"
+      ],
+      "entity_aliases": {
+        "Process_Dysprosium": [
+          "dy",
+          "dysprosium"
+        ]
+      },
+      "entity_types": {
+        "Process_Dysprosium": "Process"
+      },
+      "entity_names": {
+        "Process_Dysprosium": "Dysprosium"
+      },
+      "entity_sample_identifiers": {},
+      "entity_provenance": {
+        "Process_Dysprosium": "Average recoveries of various REEs from the horizontal resistance furnace (‘black columns’) and from the thermal plasma furnace (‘spotted columns’) are shown in Fig. 8."
+      }
+    }
+  ]
+}

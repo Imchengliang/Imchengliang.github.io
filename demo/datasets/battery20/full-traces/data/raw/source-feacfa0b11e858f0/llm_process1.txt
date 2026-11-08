@@ -1,0 +1,64 @@
+{
+  "process_stages": [
+    {
+      "name": "horizontal resistance furnace pyrolysis",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Waste PCB pieces were placed on the sample holder and the furnace was heated to 850 C, held at that temperature for 15 min (up to 60 min in some cases), and then furnace cooled. Pyrolysis residues were collected for further characterization."
+    },
+    {
+      "name": "thermal plasma furnace pyrolysis",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Size reduced PCBs were placed in the graphite crucible of the plasma reactor. Waste PCBs were heat treated at 850 C for 15 min, and the pyrolysis residues were collected after the furnace had cooled down."
+    }
+  ],
+  "experiment_settings": [
+    {
+      "name": "horizontal resistance furnace pyrolysis conditions",
+      "stage_name": "horizontal resistance furnace pyrolysis",
+      "sample": "waste PCB pieces",
+      "sample_aliases": [],
+      "treatment": "horizontal resistance furnace pyrolysis",
+      "treatment_members": [],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "850 C; 15 min (up to 60 min in some cases); Ar gas at 1 L/min; furnace length 1200 mm; heating zone 630 mm long, 54 mm diameter, 3 mm wall thickness; heating rate up to 40 C/min; sample weight up to 0.02 kg",
+      "evidence_hint": "Waste PCB pieces were placed on the sample holder and the furnace was heated to 850 C, held at that temperature for 15 min (up to 60 min in some cases), and then furnace cooled."
+    },
+    {
+      "name": "thermal plasma furnace pyrolysis conditions",
+      "stage_name": "thermal plasma furnace pyrolysis",
+      "sample": "size reduced PCBs",
+      "sample_aliases": [],
+      "treatment": "thermal plasma furnace pyrolysis",
+      "treatment_members": [],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "850 C; 15 min; 100 A current; DC voltage 50 V; Ar gas at 1 L/min; typical heating rates 750 C/min; pot type 35 kW DC extended transfer arc plasma reactor; zircon coated graphite crucible; graphite electrodes vertical configuration",
+      "evidence_hint": "Size reduced PCBs were placed in the graphite crucible of the plasma reactor. The plasma furnace was operated using 100 A current and a DC voltage of 50 V. Argon gas was passed continuously through the furnace at a flow rate of 1 L/min with typical heating rates 750 C/min. Waste PCBs were heat treated at 850 C for 15 min, and the pyrolysis residues were collected after the furnace had cooled down."
+    }
+  ],
+  "process_targets": [
+    {
+      "name": "horizontal resistance furnace pyrolysis",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Waste PCB pieces were placed on the sample holder and the furnace was heated to 850 C, held at that temperature for 15 min (up to 60 min in some cases), and then furnace cooled. Pyrolysis residues were collected for further characterization."
+    },
+    {
+      "name": "thermal plasma furnace pyrolysis",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Size reduced PCBs were placed in the graphite crucible of the plasma reactor. Waste PCBs were heat treated at 850 C for 15 min, and the pyrolysis residues were collected after the furnace had cooled down."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "process_stages": [
+    {
+      "name": "NH4OH precipitation from digested aqua regia",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": false,
+      "evidence_hint": "Ammonium hydroxide was slowly added to the acidic metal solution to precipitate ferrous, non-ferrous, and precious metals; precipitates formed at specific pH ranges."
+    },
+    {
+      "name": "biogenic metal precipitation from pH 7.7 filtrate",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": false,
+      "evidence_hint": "2 mL of the filtrate at pH 7.7 was added to medium containing 10 mM glucose and 2 mL of enriched metal-reducing bacteria, and cultivated for 2 weeks to produce biogenic metal-precipitates."
+    }
+  ],
+  "experiment_settings": [
+    {
+      "name": "NH4OH precipitation conditions",
+      "stage_name": "NH4OH precipitation from digested aqua regia",
+      "sample": "metal solution leached in aqua regia",
+      "sample_aliases": [
+        "acidic metal solution"
+      ],
+      "treatment": "ammonium hydroxide addition",
+      "treatment_members": [
+        "NH4OH"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "NH4OH (28%) slowly added with rapid stirring; pH adjusted to ranges 3.9-4.2, 5.7-7.7, and 8.3-10.5; stirring continued after addition stopped; precipitates separated by centrifugation; washed with distilled water three times and dried",
+      "evidence_hint": "NH4OH solution was slowly added into the acidic metal solution to precipitate metals; when pH ranges were reached, addition was stopped but kept stirring; suspension centrifuged to separate precipitate and supernatant."
+    },
+    {
+      "name": "biogenic metal precipitation conditions",
+      "stage_name": "biogenic metal precipitation from pH 7.7 filtrate",
+      "sample": "filtrate at pH 7.7",
+      "sample_aliases": [],
+      "treatment": "metal-reducing bacteria (Suncheon-1) with glucose",
+      "treatment_members": [
+        "Suncheon-1",
+        "glucose"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "2 mL filtrate added to medium containing 10 mM glucose and 2 mL enriched metal-reducing bacteria; final medium pH ~8.0; cultivated in shaking incubator at 25 °C under anoxic atmosphere for 2 weeks",
+      "evidence_hint": "To produce biogenic metal-precipitates, 2 mL of the filtrate at pH 7.7 was added to the medium containing 10 mM of glucose and 2 mL of enriched metal-reducing bacteria; cultivated at 25 °C under anoxic atmosphere for 2 weeks."
+    }
+  ],
+  "process_targets": [
+    {
+      "name": "NH4OH precipitation from digested aqua regia",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": false,
+      "evidence_hint": "Ammonium hydroxide was slowly added to the acidic metal solution to precipitate ferrous, non-ferrous, and precious metals; precipitates formed at specific pH ranges."
+    },
+    {
+      "name": "biogenic metal precipitation from pH 7.7 filtrate",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": false,
+      "evidence_hint": "2 mL of the filtrate at pH 7.7 was added to medium containing 10 mM glucose and 2 mL of enriched metal-reducing bacteria, and cultivated for 2 weeks to produce biogenic metal-precipitates."
+    }
+  ]
+}

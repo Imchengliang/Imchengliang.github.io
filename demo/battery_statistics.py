@@ -15,7 +15,7 @@ def pooling_context(row, profile, composition):
         issues.append('Battery chemistry is mixed or unresolved')
     if not profile.get('material_class') or not profile.get('preparation') or not profile.get('feedstock_history'):
         issues.append('Material identity or preparation is not fully classified')
-    context = {key: profile.get(key) for key in ('chemistry', 'material_class', 'feedstock_history', 'size_fraction_mm')}
+    context = {key: profile.get(key) for key in ('component', 'chemistry', 'material_class', 'feedstock_history', 'size_fraction_mm')}
     context['preparation'] = row.get('preparation', profile.get('preparation', []))
     context['thermal_treatment'] = row.get('thermal_treatment', profile.get('thermal_treatment'))
     if composition:
@@ -42,19 +42,19 @@ def summarize(rows, profiles, methods, filters):
         profile = profiles[row['profile_id']]
         method = methods.get(row.get('method_id'), {})
         key, issues = pooling_context(row, profile, composition)
-        records.append(dict(row, chemistry=profile['chemistry'], stream=profile['stream'],
+        records.append(dict(row, component=profile.get('component', ''), chemistry=profile['chemistry'], stream=profile['stream'],
                             material_class=profile.get('material_class', 'unspecified'),
                             sample_label=profile['label'], state=profile['state'],
                             family=method.get('family', ''), method_name=method.get('name', ''),
                             target=row.get('element') if composition else row['material'],
                             metric='Elemental mass content' if composition else row['metric'],
-                            analysis_unit='wt%' if composition else '%',
-                            analysis_value=row['wt_percent'] if composition else float(row['value']),
+                            analysis_unit=(row.get('display_unit') or row['unit']) if composition else '%',
+                            analysis_value=float(row['value']),
                             measurement_id=row.get('observation_id') or row['id'], pool_key=key, issues=issues))
     if not records:
         return []
     frame = pd.DataFrame(records).drop_duplicates(['profile_id', 'measurement_id'])
-    grouping = ['chemistry', 'target', 'metric', 'analysis_unit']
+    grouping = ['component', 'chemistry', 'target', 'metric', 'analysis_unit']
     if not composition:
         grouping += ['family']
     if filters.get('summary_level') == 'sample':
@@ -103,7 +103,7 @@ def summarize(rows, profiles, methods, filters):
             issues.insert(0, 'Only one publication contributes to this comparison')
         elif not syntheses and not issues:
             issues.append('No matching measurement context spans multiple publications')
-        summaries.append(dict(label=first['chemistry'], chemistry=first['chemistry'], target=first['target'],
+        summaries.append(dict(label=first['chemistry'], component=first['component'], chemistry=first['chemistry'], target=first['target'],
                               metric=first['metric'], unit=first['analysis_unit'], family=first['family'],
                               records=len(group), studies=int(group['paper'].nunique()),
                               sample_groups=int(group['profile_id'].nunique()), entries=entries,

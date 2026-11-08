@@ -1,0 +1,132 @@
+{
+  "process_stages": [
+    {
+      "name": "Fe3+ packed bed extraction",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "The oxidizer breakthrough and metal elution curves were obtained using a vertical glass column packed with 5 g of milled, non-magnetic cell phone material."
+    },
+    {
+      "name": "electrochemical recovery of base metals",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "A diagram of the ER system is shown in Fig. 3. The electrochemical cell used a trough flow-cell configuration. Solution pulled from the anode was pumped through a leaching column and returned to the cathode section."
+    },
+    {
+      "name": "precious metals extraction",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Seven grams of the e-waste material after ER treatment in chloride matrix were packed in a 1.5 cm diameter glass column for the dissolution of precious metals Ag, Au, and Pd."
+    },
+    {
+      "name": "REE recovery",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Selective extraction of REE from the ferromagnetic fraction of cell phone materials was performed in deaerated 1 M H2SO4 for 72 h."
+    }
+  ],
+  "experiment_settings": [
+    {
+      "name": "Fe3+ packed bed extraction conditions",
+      "stage_name": "Fe3+ packed bed extraction",
+      "sample": "milled, non-magnetic cell phone material",
+      "sample_aliases": [],
+      "treatment": "0.1 M Fe2(SO4)3 in 1 M H2SO4",
+      "treatment_members": [
+        "Fe2(SO4)3",
+        "H2SO4"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "5 g of milled, non-magnetic cell phone material; flow rate 1 mL min-1; 0.1 M Fe2(SO4)3 in 1 M H2SO4",
+      "evidence_hint": "The oxidizer breakthrough and metal elution curves were obtained using a vertical glass column packed with 5 g of milled, non-magnetic cell phone material. The oxidizer solution was pumped at a rate of 1 mL min-1. Two tests were performed with 0.1 M Fe2(SO4)3 in 1 M H2SO4, and 0.2 M FeCl3 in 0.5 M HCl solutions."
+    },
+    {
+      "name": "electrochemical recovery of base metals conditions",
+      "stage_name": "electrochemical recovery of base metals",
+      "sample": "grinded (non-ferrous) cell phone material",
+      "sample_aliases": [],
+      "treatment": "0.1 M Fe2(SO4)3 in 1 M H2SO4",
+      "treatment_members": [
+        "Fe2(SO4)3",
+        "H2SO4"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "70 g of grinded (non-ferrous) cell phone material; flow rate 3 mL min-1; 310 mL leaching solution; current density 138.9 A m-2; 0.1 M Fe2(SO4)3 in 1 M H2SO4",
+      "evidence_hint": "The packed bed column consisted of a 15 cm long Tygon tubing (1'' ID) vertically oriented and packed with 70 g of grinded (non-ferrous) cell phone material. To start the experiment, fresh leaching solution (either 0.1 M Fe2(SO4)3 in 1 M H2SO4 or 0.2 M FeCl3 in 0.5 M HCl) was pumped through the packed bed column at a rate of 3 mL min-1. A total of 310 mL of leaching solution was loaded to the system. At the same time a current density of 138.9 Am-2 was applied to the electrochemical cell."
+    },
+    {
+      "name": "precious metals extraction conditions",
+      "stage_name": "precious metals extraction",
+      "sample": "e-waste material after ER treatment in chloride matrix",
+      "sample_aliases": [],
+      "treatment": "acidic thiourea with FeCl oxidant",
+      "treatment_members": [
+        "thiourea",
+        "HCl",
+        "FeCl"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "7 g of e-waste material; 0.2 M SC(NH2)2 in 0.5 M HCl; 0.1 M FeCl as oxidant",
+      "evidence_hint": "Seven grams of the e-waste material after ER treatment in chloride matrix were packed in a 1.5 cm diameter glass column for the dissolution of precious metals Ag, Au, and Pd. Leaching of precious metals was performed with acidic thiourea using 0.2 M SC(NH2)2 in 0.5 M HCl solution. 0.1 M FeCl was used as the oxidant."
+    },
+    {
+      "name": "REE recovery conditions",
+      "stage_name": "REE recovery",
+      "sample": "ferromagnetic fraction of cell phone materials",
+      "sample_aliases": [],
+      "treatment": "deaerated 1 M H2SO4",
+      "treatment_members": [
+        "H2SO4"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "72 h; deaerated with N2 gas; 1 M H2SO4",
+      "evidence_hint": "Selective extraction of REE from the ferromagnetic fraction of cell phone materials was performed in deaerated 1 M H2SO4 for 72 h. The leaching solution was deaerated with N2 gas to suppress steel corrosion with dissolved O2."
+    }
+  ],
+  "process_targets": [
+    {
+      "name": "Fe3+ packed bed extraction",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "The oxidizer breakthrough and metal elution curves were obtained using a vertical glass column packed with 5 g of milled, non-magnetic cell phone material."
+    },
+    {
+      "name": "electrochemical recovery of base metals",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "A diagram of the ER system is shown in Fig. 3. The electrochemical cell used a trough flow-cell configuration. Solution pulled from the anode was pumped through a leaching column and returned to the cathode section."
+    },
+    {
+      "name": "precious metals extraction",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Seven grams of the e-waste material after ER treatment in chloride matrix were packed in a 1.5 cm diameter glass column for the dissolution of precious metals Ag, Au, and Pd."
+    },
+    {
+      "name": "REE recovery",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "Selective extraction of REE from the ferromagnetic fraction of cell phone materials was performed in deaerated 1 M H2SO4 for 72 h."
+    }
+  ]
+}
