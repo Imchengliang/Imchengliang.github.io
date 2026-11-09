@@ -11,7 +11,7 @@ const BatteryStatic = (() => {
     }
     function statistics(rows, filters, progress) {
       if (!worker) {
-        worker = new Worker(new URL('battery-statistics-worker.mjs?v=component-filter-20261108', document.baseURI), {type: 'module'});
+        worker = new Worker(new URL('battery-statistics-worker.mjs?v=light-statistics-20261109', document.baseURI), {type: 'module'});
         worker.onmessage = ({data: message}) => {
           const job = pending.get(message.id);
           if (!job) return;
@@ -28,6 +28,9 @@ const BatteryStatic = (() => {
         worker.postMessage({id, rows, filters, profiles: data.profiles, methods: data.methods});
       });
     }
+    const warmup = () => statistics([], {template: 'composition'}).catch(() => {});
+    if (typeof requestIdleCallback === 'function') requestIdleCallback(warmup, {timeout: 2000});
+    else setTimeout(warmup, 0);
     return async (filters, progress) => {
       const rows = BatteryOverview.query(data, filters);
       return {rows, statistics: filters.statistics && rows.length ? await statistics(rows, filters, progress) : [], backend: 'Browser Python'};

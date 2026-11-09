@@ -1,7 +1,7 @@
 """Compare reviewed samples; pool only matching, sufficiently described contexts."""
 import json
-import numpy as np
-import pandas as pd
+from collections import defaultdict
+from statistics import fmean, median, stdev
 
 
 def signature(value):
@@ -33,6 +33,16 @@ def pooling_context(row, profile, composition):
     return None if issues else signature(context), issues
 
 
+def group_rows(rows, fields, sort=False):
+    groups = defaultdict(list)
+    for row in rows:
+        groups[tuple(row.get(field) for field in fields)].append(row)
+    if sort:
+        keys = sorted(groups, key=lambda key: tuple((value is None, value or '') for value in key))
+        return [groups[key] for key in keys]
+    return list(groups.values())
+
+
 def summarize(rows, profiles, methods, filters):
     if filters['template'] == 'routes':
         return []
@@ -53,62 +63,69 @@ def summarize(rows, profiles, methods, filters):
                             measurement_id=row.get('observation_id') or row['id'], pool_key=key, issues=issues))
     if not records:
         return []
-    frame = pd.DataFrame(records).drop_duplicates(['profile_id', 'measurement_id'])
+    seen, distinct = set(), []
+    for row in records:
+        key = (row['profile_id'], row['measurement_id'])
+        if key not in seen:
+            distinct.append(row)
+            seen.add(key)
     grouping = ['component', 'chemistry', 'target', 'metric', 'analysis_unit']
     if not composition:
         grouping += ['family']
     if filters.get('summary_level') == 'sample':
         grouping += ['profile_id']
     summaries = []
-    for _, group in frame.groupby(grouping, dropna=False, sort=True):
-        first = group.iloc[0]
-        numeric = group[group['qualifier'].fillna('').eq('')]
+    for group in group_rows(distinct, grouping, sort=True):
+        first = group[0]
+        numeric = [row for row in group if row.get('qualifier') in (None, '')]
         entries = []
         member_keys = ['profile_id', 'assay_method'] if composition else ['profile_id', 'method_id']
-        if composition and 'assay_method' not in group:
-            group = group.assign(assay_method='unspecified')
-        for _, member in group.groupby(member_keys, dropna=False, sort=False):
-            item = member.iloc[0]
-            exact = member[member['qualifier'].fillna('').eq('')]
+        if composition and not any('assay_method' in row for row in group):
+            group = [dict(row, assay_method='unspecified') for row in group]
+        for member in group_rows(group, member_keys):
+            item = member[0]
+            exact = [row['analysis_value'] for row in member if row.get('qualifier') in (None, '')]
             entries.append(dict(profile_id=item['profile_id'], label=item['sample_label'],
                                 material_class=item['material_class'], state=item['state'], paper=item['paper'],
                                 assay=item.get('assay', ''), method=item['method_name'],
                                 mass_denominator=item.get('mass_denominator', 'unspecified'),
                                 moisture_basis=item.get('moisture_basis', 'unspecified'),
                                 measurement_state_note=item.get('measurement_state_note', ''),
-                                conditions=int(member['condition'].nunique()) if not composition else 0,
-                                records=len(member), record_ids=member['id'].tolist(),
-                                minimum=float(exact['analysis_value'].min()) if len(exact) else None,
-                                maximum=float(exact['analysis_value'].max()) if len(exact) else None))
+                                conditions=len({row['condition'] for row in member if row.get('condition') is not None}) if not composition else 0,
+                                records=len(member), record_ids=[row['id'] for row in member],
+                                minimum=min(exact) if exact else None,
+                                maximum=max(exact) if exact else None))
         syntheses = []
-        for _, pool in numeric.dropna(subset=['pool_key']).groupby('pool_key', sort=False):
-            if pool['paper'].nunique() < 2:
+        for pool in group_rows([row for row in numeric if row['pool_key'] is not None], ['pool_key']):
+            if len({row['paper'] for row in pool}) < 2:
                 continue
             # Repeated reports/assays are not independent samples; publications receive equal default weights.
-            sample_means = pool.groupby(['paper', 'profile_id'])['analysis_value'].mean()
-            study_means = sample_means.groupby(level='paper').mean()
+            sample_means = [dict(paper=sample[0]['paper'], value=fmean(row['analysis_value'] for row in sample))
+                            for sample in group_rows(pool, ['paper', 'profile_id'], sort=True)]
+            study_means = [fmean(row['value'] for row in study)
+                           for study in group_rows(sample_means, ['paper'], sort=True)]
             basis = filters.get('summary_basis', 'study')
-            values = (study_means if basis == 'study' else sample_means).to_numpy(dtype=float)
-            syntheses.append(dict(mean=float(np.mean(values)), median=float(np.median(values)),
-                                  minimum=float(np.min(values)), maximum=float(np.max(values)),
-                                  sd=float(np.std(values, ddof=1)), statistical_units=len(values),
-                                  studies=int(pool['paper'].nunique()), sample_groups=int(pool['profile_id'].nunique()),
-                                  summary_basis=basis, record_ids=pool['id'].tolist()))
-        issues = sorted({issue for values in group['issues'] for issue in values})
+            values = study_means if basis == 'study' else [row['value'] for row in sample_means]
+            syntheses.append(dict(mean=fmean(values), median=median(values),
+                                  minimum=min(values), maximum=max(values),
+                                  sd=stdev(values), statistical_units=len(values),
+                                  studies=len({row['paper'] for row in pool}), sample_groups=len({row['profile_id'] for row in pool}),
+                                  summary_basis=basis, record_ids=[row['id'] for row in pool]))
+        issues = sorted({issue for row in group for issue in row['issues']})
         for field, label in [('material_class', 'Material forms'), ('preparation', 'Preparation states'),
                              ('assay_method', 'Assay methods'), ('mass_denominator', 'Mass denominators')]:
-            if field in group and len({signature(value) for value in group[field]}) > 1:
+            if any(field in row for row in group) and len({signature(row.get(field)) for row in group}) > 1:
                 issues.append(label + ' differ and remain separate')
-        if group['paper'].nunique() < 2:
+        if len({row['paper'] for row in group}) < 2:
             issues.insert(0, 'Only one publication contributes to this comparison')
         elif not syntheses and not issues:
             issues.append('No matching measurement context spans multiple publications')
         summaries.append(dict(label=first['chemistry'], component=first['component'], chemistry=first['chemistry'], target=first['target'],
                               metric=first['metric'], unit=first['analysis_unit'], family=first['family'],
-                              records=len(group), studies=int(group['paper'].nunique()),
-                              sample_groups=int(group['profile_id'].nunique()), entries=entries,
-                              minimum=float(numeric['analysis_value'].min()) if len(numeric) else None,
-                              maximum=float(numeric['analysis_value'].max()) if len(numeric) else None,
+                              records=len(group), studies=len({row['paper'] for row in group}),
+                              sample_groups=len({row['profile_id'] for row in group}), entries=entries,
+                              minimum=min(row['analysis_value'] for row in numeric) if numeric else None,
+                              maximum=max(row['analysis_value'] for row in numeric) if numeric else None,
                               mean=None, median=None, sd=None, syntheses=syntheses, pooling_issues=issues,
-                              record_ids=group['id'].tolist()))
+                              record_ids=[row['id'] for row in group]))
     return summaries

@@ -3,8 +3,7 @@ import {loadPyodide} from 'https://cdn.jsdelivr.net/pyodide/v314.0.7/full/pyodid
 let runtime, queue = Promise.resolve();
 async function initialize() {
   const python = await loadPyodide();
-  await python.loadPackage(['numpy', 'pandas']);
-  const response = await fetch(new URL('battery_statistics.py?v=component-filter-20261108', import.meta.url));
+  const response = await fetch(new URL('battery_statistics.py?v=light-statistics-20261109', import.meta.url));
   if (!response.ok) throw Error('Statistics code unavailable');
   await python.runPythonAsync(await response.text());
   return python;
