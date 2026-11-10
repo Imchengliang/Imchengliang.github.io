@@ -802,7 +802,12 @@ async function start(){
         $('#paper-list').textContent='Unable to load the paper list. Please reload the page.';console.error(error);
       });
     }
-    for(const id of ['source-filter','type-filter','relation-filter','fusion-toggle'])$('#'+id).onchange=()=>{state.graphHistory=[];if(id==='source-filter'){state.focus=null;state.navPath=[];}if(id==='type-filter'&&$('#type-filter').value.endsWith('Family'))state.hierarchy=false;updateGraph();};
+    for(const id of ['source-filter','type-filter','relation-filter','fusion-toggle'])$('#'+id).onchange=()=>{
+      if(id==='source-filter'){showAllEntities();return;}
+      state.graphHistory=[];
+      if(id==='type-filter'&&$('#type-filter').value.endsWith('Family'))state.hierarchy=false;
+      updateGraph();
+    };
     $('#top-level').onclick=resetHierarchy;$('#graph-back').onclick=goUp;
     $('#search').oninput=searchNodes;$('#show-all').onclick=showAllEntities;
     $('#clear-focus').onclick=()=>{state.graphHistory=[];state.focus=null;state.navPath=[];updateGraph();};$('#fit').onclick=fitGraph;$('#zoom-in').onclick=()=>scale(1.3);$('#zoom-out').onclick=()=>scale(1/1.3);
