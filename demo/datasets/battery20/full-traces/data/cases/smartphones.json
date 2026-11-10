@@ -3,7 +3,7 @@
   "paper": "Assessment of Smartphones’ Components and Materials for a Recycling Perspective- Tendencies of Composition and Target Elements",
   "tag": "Battery composition & cohorts",
   "description": "Distinguish battery composition, uncertainty and manufacturing cohorts from recovery results.",
-  "triple_count": 457,
+  "triple_count": 454,
   "tables": [
     {
       "table_id": "TABLE_Assessment of Smartphones’ Components and Materials for a Recycling Perspective- Tendencies of Composition and Target Elements_0001",
@@ -1835,7 +1835,7 @@
           "name": "llm_table1.txt",
           "url": "datasets/battery20/full-traces/data/raw/smartphones/llm_table1.txt",
           "sha256": "98d81c8e5bd4217ccd019544811ab3e47ccf6816dbdeba7dc0026e79e85cc322",
-          "modified": "2026-11-01T18:31:16.728336+00:00"
+          "modified": "2026-11-09T16:20:24.759911+00:00"
         }
       ],
       "note": "Archived table-role decisions. Extract, context_extract and skip are shown exactly as recorded."
@@ -55551,7 +55551,7 @@
           "name": "llm_table2.txt",
           "url": "datasets/battery20/full-traces/data/raw/smartphones/llm_table2.txt",
           "sha256": "e8fca08eeecd6a644edcdb8cd269482068e797231aeb6f213fe6083e2a2d4e48",
-          "modified": "2026-11-01T18:31:16.735294+00:00"
+          "modified": "2026-11-09T16:20:24.760856+00:00"
         }
       ],
       "note": "Compare semantic IR, verification and execution records with extracted output. Download the Table Gate file for complete raw responses."
@@ -55816,19 +55816,19 @@
           "name": "llm_process1.txt",
           "url": "datasets/battery20/full-traces/data/raw/smartphones/llm_process1.txt",
           "sha256": "dab4a4bb1902c9ba2d8e1a5d16437373861d9ec1593ef52d187922eb0ddeab6c",
-          "modified": "2026-11-01T18:31:16.737866+00:00"
+          "modified": "2026-11-09T16:20:24.757656+00:00"
         },
         {
           "name": "llm_process2.txt",
           "url": "datasets/battery20/full-traces/data/raw/smartphones/llm_process2.txt",
           "sha256": "675ce0828aebf75c235d39b4f13ea95f9a1acfdc03c6bc39e580f877124adb8f",
-          "modified": "2026-11-01T18:31:16.738435+00:00"
+          "modified": "2026-11-09T16:20:24.757827+00:00"
         },
         {
           "name": "llm_process_settings.txt",
           "url": "datasets/battery20/full-traces/data/raw/smartphones/llm_process_settings.txt",
           "sha256": "f22ccf313dbbf077e5d46c4fb0eb75261967eda93e0220e927ac1111861dc270",
-          "modified": "2026-11-01T18:31:16.738708+00:00"
+          "modified": "2026-11-09T16:20:24.758477+00:00"
         }
       ],
       "note": "Archived outputs for process discovery, process descriptions and experimental settings."
@@ -59795,7 +59795,7 @@
           "name": "llm_entity.txt",
           "url": "datasets/battery20/full-traces/data/raw/smartphones/llm_entity.txt",
           "sha256": "03b9d617a72652751c0bdf645d3f67451fcbc6652f9bf51a63802bf1db8d84b2",
-          "modified": "2026-11-01T18:31:16.739671+00:00"
+          "modified": "2026-11-09T16:20:24.757255+00:00"
         }
       ],
       "note": "Inspect entities and audit fields by chunk. Stage outputs may include records removed before the final export."
@@ -62331,78 +62331,7 @@
             "binding_group_conflict_count": 0,
             "binding_group_conflicts": [],
             "conditions": [],
-            "relations": [
-              {
-                "id": "REL_text_Product_mobile_phone_CONTAINS_text_Material_Au",
-                "source_id": "text_Product_mobile_phone",
-                "source_name": "mobile phone",
-                "target_id": "text_Material_Au",
-                "target_name": "Au",
-                "relation_type": "CONTAINS",
-                "confidence": 0.8,
-                "evidence_span": "For the EV of entire smartphones, Au represents 59% of the total economic potential and is two times higher than the second most valuable material (Pd) (USD 42,415.02 and USD 23,247.13, respectively).",
-                "properties": {
-                  "property": "price",
-                  "value": 59,
-                  "unit": "%",
-                  "study_scope": "current_study",
-                  "property_raw": "economic_value_share",
-                  "measure_key": "price",
-                  "raw_relation_type": "CONTAINS",
-                  "normalized_relation_type": "CONTAINS",
-                  "normalized_from_raw": false,
-                  "source_name": "mobile phone",
-                  "target_name": "Au",
-                  "evidence_span": "For the EV of entire smartphones, Au represents 59% of the total economic potential and is two times higher than the second most valuable material (Pd) (USD 42,415.02 and USD 23,247.13, respectively)."
-                }
-              },
-              {
-                "id": "REL_text_Product_mobile_phone_CONTAINS_text_Material_Pd",
-                "source_id": "text_Product_mobile_phone",
-                "source_name": "mobile phone",
-                "target_id": "text_Material_Pd",
-                "target_name": "Pd",
-                "relation_type": "CONTAINS",
-                "confidence": 0.8,
-                "evidence_span": "For the EV of entire smartphones, Au represents 59% of the total economic potential and is two times higher than the second most valuable material (Pd) (USD 42,415.02 and USD 23,247.13, respectively).",
-                "properties": {
-                  "property": "economic_value",
-                  "value": 23247.13,
-                  "unit": "USD",
-                  "study_scope": "current_study",
-                  "raw_relation_type": "CONTAINS",
-                  "normalized_relation_type": "CONTAINS",
-                  "normalized_from_raw": false,
-                  "source_name": "mobile phone",
-                  "target_name": "Pd",
-                  "evidence_span": "For the EV of entire smartphones, Au represents 59% of the total economic potential and is two times higher than the second most valuable material (Pd) (USD 42,415.02 and USD 23,247.13, respectively)."
-                }
-              },
-              {
-                "id": "REL_text_Component_battery_CONTAINS_text_Material_Co",
-                "source_id": "text_Component_battery",
-                "source_name": "battery",
-                "target_id": "text_Material_Co",
-                "target_name": "Co",
-                "relation_type": "CONTAINS",
-                "confidence": 0.8,
-                "evidence_span": "In batteries, Co is the element with the highest EV (78% of the total EV of the component), and represents an exception in relation to Au and Pd.",
-                "properties": {
-                  "property": "price",
-                  "value": 78,
-                  "unit": "%",
-                  "study_scope": "current_study",
-                  "property_raw": "economic_value_share",
-                  "measure_key": "price",
-                  "raw_relation_type": "CONTAINS",
-                  "normalized_relation_type": "CONTAINS",
-                  "normalized_from_raw": false,
-                  "source_name": "battery",
-                  "target_name": "Co",
-                  "evidence_span": "In batteries, Co is the element with the highest EV (78% of the total EV of the component), and represents an exception in relation to Au and Pd."
-                }
-              }
-            ],
+            "relations": [],
             "discarded_pairs": [],
             "deleted_relations": [],
             "failed_prompt": null,
@@ -63160,8 +63089,8 @@
         {
           "name": "llm_relation.txt",
           "url": "datasets/battery20/full-traces/data/raw/smartphones/llm_relation.txt",
-          "sha256": "0122c8a41fc73f06377fa5a18709c8785f80e0c68bd7ef7f608f0e806ccc528c",
-          "modified": "2026-11-01T18:31:16.742635+00:00"
+          "sha256": "25072e4295e7fad0eafe1917648c758ebd7305c2c6655eaa60aa486a2efbf416",
+          "modified": "2026-11-10T09:00:10.802294+00:00"
         }
       ],
       "note": "Inspect relations and audit fields by chunk. Stage outputs may include records removed before the final export."
@@ -63428,13 +63357,13 @@
           "name": "llm_process_revision.txt",
           "url": "datasets/battery20/full-traces/data/raw/smartphones/llm_process_revision.txt",
           "sha256": "03625703a042252d672d7b63f903011b2859cf21e7a29b47266033cac10c5258",
-          "modified": "2026-11-01T18:31:16.743553+00:00"
+          "modified": "2026-11-09T16:20:24.758162+00:00"
         },
         {
           "name": "material_identity_revision.json",
           "url": "datasets/battery20/full-traces/data/raw/smartphones/material_identity_revision.json",
           "sha256": "076cb0b7365584b0e0d61c3cf392efccaf7f5bf34e94e1bc74f06b5fe497aee3",
-          "modified": "2026-11-01T18:31:16.743995+00:00"
+          "modified": "2026-11-09T16:20:24.762055+00:00"
         }
       ],
       "note": "Actual archived revision, binding, merge and deletion records. Missing steps are not reconstructed."
@@ -63552,19 +63481,19 @@
           "name": "llm_scope.txt",
           "url": "datasets/battery20/full-traces/data/raw/smartphones/llm_scope.txt",
           "sha256": "767a0498df376898328d7751540dca358b928356829839eb215bd6925a17d322",
-          "modified": "2026-11-02T10:51:31.849870+00:00"
+          "modified": "2026-11-09T16:20:24.759307+00:00"
         },
         {
           "name": "llm_scope_raw.txt",
           "url": "datasets/battery20/full-traces/data/raw/smartphones/llm_scope_raw.txt",
           "sha256": "76f2307309cc6c51ccc65f04b689ecc697de1bf6df68a9e2d8a8e054aab69d04",
-          "modified": "2026-11-02T10:51:31.850489+00:00"
+          "modified": "2026-11-09T16:20:24.759494+00:00"
         },
         {
           "name": "llm_scope_rejected.txt",
           "url": "datasets/battery20/full-traces/data/raw/smartphones/llm_scope_rejected.txt",
           "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-          "modified": "2026-11-02T10:51:31.850842+00:00"
+          "modified": "2026-11-09T16:20:24.759686+00:00"
         }
       ],
       "note": "Scope may have been updated after the original extraction. Timestamps and evidence come from the archived files."
@@ -64206,50 +64135,6 @@
             "unit": "%",
             "property": "composition",
             "measure_key": "composition"
-          }
-        },
-        {
-          "id": "REL_Product_mobile_phone_CONTAINS_Material_Au",
-          "subject": "Product_mobile_phone",
-          "object": "Material_Au",
-          "subject_name": "mobile phone",
-          "object_name": "Au",
-          "predicate": "CONTAINS",
-          "evidence_span": "For the EV of entire smartphones, Au represents 59% of the total economic potential and is two times higher than the second most valuable material (Pd) (USD 42,415.02 and USD 23,247.13, respectively).",
-          "properties": {
-            "value": 59,
-            "unit": "%",
-            "property": "price",
-            "measure_key": "price"
-          }
-        },
-        {
-          "id": "REL_Product_mobile_phone_CONTAINS_Material_Pd",
-          "subject": "Product_mobile_phone",
-          "object": "Material_Pd",
-          "subject_name": "mobile phone",
-          "object_name": "Pd",
-          "predicate": "CONTAINS",
-          "evidence_span": "For the EV of entire smartphones, Au represents 59% of the total economic potential and is two times higher than the second most valuable material (Pd) (USD 42,415.02 and USD 23,247.13, respectively).",
-          "properties": {
-            "value": 23247.13,
-            "unit": "USD",
-            "property": "economic_value"
-          }
-        },
-        {
-          "id": "REL_Component_battery_CONTAINS_Material_Co",
-          "subject": "Component_battery",
-          "object": "Material_Co",
-          "subject_name": "battery",
-          "object_name": "Co",
-          "predicate": "CONTAINS",
-          "evidence_span": "In batteries, Co is the element with the highest EV (78% of the total EV of the component), and represents an exception in relation to Au and Pd.",
-          "properties": {
-            "value": 78,
-            "unit": "%",
-            "property": "price",
-            "measure_key": "price"
           }
         },
         {
@@ -83357,8 +83242,8 @@
         {
           "name": "triples_final.txt",
           "url": "datasets/battery20/full-traces/data/raw/smartphones/triples_final.txt",
-          "sha256": "6acd541c4bc23b29c0a7cff37558ce21dc93c112835ed83b67583e5323cac5b9",
-          "modified": "2026-11-02T10:51:32.032466+00:00"
+          "sha256": "44936b296e4cd571dfd2c4a8f02e7dda57b4faa6082960cb394009b19427b4a6",
+          "modified": "2026-11-10T09:00:10.793712+00:00"
         }
       ],
       "note": "The triples_final.txt used by this fusion run. Source identities are preserved; quantitative observations appear in relation details."
@@ -83368,11 +83253,11 @@
   "source_note": "Source text and tables are frozen copies verified against the selected dataset manifest. Earlier stage archives may still differ from the source version; this is not a new extraction run.",
   "source_files": [
     {
-      "path": "demo/ontoweee/datasets/battery20/updates/cohort-refresh-20261106/inputs/Assessment of Smartphones’ Components and Materials for a Recycling Perspective- Tendencies of Composition and Target Elements/source/text.md",
+      "path": "demo/ontoweee/datasets/battery20/updates/expanded26-20261109/inputs/Assessment of Smartphones’ Components and Materials for a Recycling Perspective- Tendencies of Composition and Target Elements/source/text.md",
       "sha256": "d6cc4f900510f51e1a402bd0cf48f35267033418b7f24b7244ab78aad29b5e01"
     },
     {
-      "path": "demo/ontoweee/datasets/battery20/updates/cohort-refresh-20261106/inputs/Assessment of Smartphones’ Components and Materials for a Recycling Perspective- Tendencies of Composition and Target Elements/source/tables.json",
+      "path": "demo/ontoweee/datasets/battery20/updates/expanded26-20261109/inputs/Assessment of Smartphones’ Components and Materials for a Recycling Perspective- Tendencies of Composition and Target Elements/source/tables.json",
       "sha256": "32791f73e7b4952d0b9f88d4d465ec8b3c2c5d79f35458c40451765dc3ce5b33"
     }
   ],

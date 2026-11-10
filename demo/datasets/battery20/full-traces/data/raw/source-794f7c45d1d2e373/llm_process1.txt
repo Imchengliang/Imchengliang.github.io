@@ -1,0 +1,66 @@
+{
+  "process_stages": [
+    {
+      "name": "dry ashing of edge contacts from PCBs",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "To concentrate CRMs and increase grade for recovery, dry ashing of isolated edge contacts from PCBs was conducted at 800 C for 30 minutes."
+    },
+    {
+      "name": "sieving of disassembled SMD PCB components",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "In order to concentrate CRMs in mixed simultaneously disassembled SMD PCB components into distinct fractions, sieving with mesh sizes of 9.52, 2.80, 1.68 and 1.4 mm was used."
+    }
+  ],
+  "experiment_settings": [
+    {
+      "name": "dry ashing conditions",
+      "stage_name": "dry ashing of edge contacts from PCBs",
+      "sample": "isolated edge contacts from PCBs",
+      "sample_aliases": [],
+      "treatment": "microwave muffle furnace ashing",
+      "treatment_members": [
+        "CEM Phoenix microwave muffle furnace"
+      ],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "800 C for 30 minutes",
+      "evidence_hint": "Dry ashing of isolated edge contacts from PCBs was conducted at 800 C for 30 minutes using a CEM Phoenix microwave muffle furnace."
+    },
+    {
+      "name": "sieving conditions",
+      "stage_name": "sieving of disassembled SMD PCB components",
+      "sample": "isolated SMDs combined with virgin SMDs",
+      "sample_aliases": [],
+      "treatment": "stacked sieve shaking",
+      "treatment_members": [],
+      "treatment_aliases": [],
+      "aliases": [],
+      "condition_summary": "mesh sizes 9.52, 2.80, 1.68 and 1.4 mm; shaken for 60 s",
+      "evidence_hint": "Components were shaken in the stack of sieves for 60 s using mesh sizes of 9.52, 2.80, 1.68 and 1.4 mm."
+    }
+  ],
+  "process_targets": [
+    {
+      "name": "dry ashing of edge contacts from PCBs",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "To concentrate CRMs and increase grade for recovery, dry ashing of isolated edge contacts from PCBs was conducted at 800 C for 30 minutes."
+    },
+    {
+      "name": "sieving of disassembled SMD PCB components",
+      "parent_process": null,
+      "aliases": [],
+      "stage_role": "recovery_process",
+      "acts_on_weee": true,
+      "evidence_hint": "In order to concentrate CRMs in mixed simultaneously disassembled SMD PCB components into distinct fractions, sieving with mesh sizes of 9.52, 2.80, 1.68 and 1.4 mm was used."
+    }
+  ]
+}

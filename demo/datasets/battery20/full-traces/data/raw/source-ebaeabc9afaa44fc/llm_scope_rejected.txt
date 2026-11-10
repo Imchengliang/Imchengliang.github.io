@@ -1,90 +1,56 @@
 [
   {
     "reason": [
-      "method_family_not_grounded_in_process_evidence"
+      "quotation_not_in_cited_source_passage"
     ],
     "item": {
       "root_entity_ids": [
-        "Process_camera"
+        "Product_mobile_phone"
       ],
-      "method_family": "chemical precipitation",
-      "evidence_ids": [
-        "E0bb90a1e21"
-      ]
-    },
-    "evidence_ids": [
-      "E0bb90a1e21"
-    ]
+      "evidence": [
+        {
+          "evidence_id": "E93b8609178",
+          "quote": "First, the camera parts and PCB parts attached to the mobile phone waste were separated and collected for the experiment (Figure 1)."
+        },
+        {
+          "evidence_id": "Ea66e342b4a",
+          "quote": "In chemical treatment, the metal fraction attached to the printed circuit board (PCB) and camera parts were separated from the mobile phone waste and were then pulverized into particles with a size less than ~2 mm."
+        }
+      ],
+      "evidence_ids": null,
+      "population_granularity": "batch",
+      "sample_type": "mobile phone waste",
+      "scope_description": "Mobile phone waste from which the camera parts and PCB parts were separated and collected for the experiments; the parts were crushed, sieved to particles under 2 mm, and dissolved in aqua regia."
+    }
   },
   {
     "reason": [
-      "method_family_not_grounded_in_process_evidence"
+      "quotation_not_in_cited_source_passage"
     ],
     "item": {
       "root_entity_ids": [
-        "Process_NH4OH_precipitation_from_digested_aqua_regia"
+        "Process_biogenic_metal_precipitation_by_metal_reducing_bacteria"
       ],
-      "method_family": "chemical precipitation",
-      "evidence_ids": [
-        "E5ba861b63e"
-      ]
-    },
-    "evidence_ids": [
-      "E5ba861b63e"
-    ]
-  },
-  {
-    "reason": [
-      "method_family_not_grounded_in_process_evidence"
-    ],
-    "item": {
-      "root_entity_ids": [
-        "Process_aqua_regia"
+      "evidence": [
+        {
+          "evidence_id": "E3506ea6467",
+          "quote": "To produce biogenic metal-precipitates, 2 mL of the filtrate at pH 7.7 was added to the medium containing 10 mM of glucose (C6H12O6) and 2 mL of enriched metal-reducing bacteria. The bacteria were cultivated in a shaking incubator at 25 ◦C under an anoxic atmosphere for 2 weeks."
+        },
+        {
+          "evidence_id": "Ea66e342b4a",
+          "quote": "In the biological method, the filtrate at pH 7.7 was added to a metal-reducing bacteria growth medium as a precursor. After two weeks of incubation, rhodochrosite and calcite were precipitated as nano-sized minerals."
+        }
       ],
-      "method_family": "acid leaching",
-      "evidence_ids": [
-        "E82a4572eea"
-      ]
-    },
-    "evidence_ids": [
-      "E82a4572eea"
-    ]
-  },
-  {
-    "reason": [
-      "method_family_not_grounded_in_process_evidence"
-    ],
-    "item": {
-      "root_entity_ids": [
-        "Process_printed_circuit_board"
-      ],
-      "method_family": "chemical precipitation",
-      "evidence_ids": [
-        "Ef3b84c5f9a"
-      ]
-    },
-    "evidence_ids": [
-      "Ef3b84c5f9a"
-    ]
+      "evidence_ids": null,
+      "method_family": "microbial biomineralization"
+    }
   },
   {
     "reason": "missing_required_root_scope",
-    "scope_kind": "process_method_family",
-    "root_entity_id": "Process_NH4OH_precipitation_from_digested_aqua_regia"
+    "root_entity_id": "Process_biogenic_metal_precipitation_by_metal_reducing_bacteria"
   },
   {
     "reason": "missing_required_root_scope",
-    "scope_kind": "process_method_family",
-    "root_entity_id": "Process_aqua_regia"
-  },
-  {
-    "reason": "missing_required_root_scope",
-    "scope_kind": "process_method_family",
-    "root_entity_id": "Process_camera"
-  },
-  {
-    "reason": "missing_required_root_scope",
-    "scope_kind": "process_method_family",
-    "root_entity_id": "Process_printed_circuit_board"
+    "root_entity_id": "Product_mobile_phone"
   }
 ]

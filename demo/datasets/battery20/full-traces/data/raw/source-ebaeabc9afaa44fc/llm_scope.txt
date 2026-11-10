@@ -1,78 +1,48 @@
 [
   {
     "root_entity_ids": [
-      "Product_mobile_phone"
+      "Process_metal_precipitation_by_NH4OH_addition"
     ],
-    "scope_subject_text": "mobile phone",
-    "scope_label": "mobile phone",
+    "scope_subject_text": "metal precipitation by NH4OH addition",
+    "scope_label": "metal precipitation by NH4OH addition",
     "evidence_ids": [
-      "E043d80e1df",
-      "E076f438fc8"
+      "Ec4b75c3fdb",
+      "E1f468219d2"
     ],
-    "evidence_span": "First, the camera parts and PCB parts attached to the mobile phone waste were separated and collected for the experiment (Figure 1).",
-    "population_granularity": "batch",
-    "sample_type": "mobile phone",
-    "scope_description": "Mobile phone waste from which camera parts and PCB parts were separated and collected for the experiment.",
-    "sample_size": null
+    "evidence_span": "Ammonium hydroxide (NH4OH, 28%, JUNSEI, Tokyo, Japan) solution was slowly added into the acidic metal solution to precipitate ferrous, non-ferrous, and precious metals with gravity only and with rapid stirring.",
+    "evidence": [
+      {
+        "evidence_id": "Ec4b75c3fdb",
+        "quote": "Ammonium hydroxide (NH4OH, 28%, JUNSEI, Tokyo, Japan) solution was slowly added into the acidic metal solution to precipitate ferrous, non-ferrous, and precious metals with gravity only and with rapid stirring."
+      },
+      {
+        "evidence_id": "E1f468219d2",
+        "quote": "These results showed that the metals leached in aqua regia could be recovered using a simple chemical method, such as a pH swing."
+      }
+    ],
+    "method_family": "ammonium hydroxide pH-swing precipitation"
   },
   {
     "root_entity_ids": [
-      "Component_camera"
+      "Process_metal_dissolution_in_aqua_regia"
     ],
-    "scope_subject_text": "camera",
-    "scope_label": "camera",
+    "scope_subject_text": "metal dissolution in aqua regia",
+    "scope_label": "metal dissolution in aqua regia",
     "evidence_ids": [
-      "E043d80e1df",
-      "E076f438fc8"
+      "E93b8609178",
+      "E7828afaaa1"
     ],
-    "evidence_span": "First, the camera parts and PCB parts attached to the mobile phone waste were separated and collected for the experiment (Figure 1).",
-    "population_granularity": "batch",
-    "sample_type": "camera",
-    "scope_description": "Camera parts attached to mobile phone waste, separated and collected for the experiment.",
-    "sample_size": null
-  },
-  {
-    "root_entity_ids": [
-      "Component_printed_circuit_board"
+    "evidence_span": "the particles were dissolved in the 1 / 10: (g / m L) ratio in the aqua regia at room temperature for 48 h and only the supernatant was used for the experiments.",
+    "evidence": [
+      {
+        "evidence_id": "E93b8609178",
+        "quote": "the particles were dissolved in the 1 / 10: (g / m L) ratio in the aqua regia at room temperature for 48 h and only the supernatant was used for the experiments."
+      },
+      {
+        "evidence_id": "E7828afaaa1",
+        "quote": "The weight % of the initial leached metals from the camera and PCB parts into aqua regia were determined via ICP-AES (Figure 3)."
+      }
     ],
-    "scope_subject_text": "printed circuit board",
-    "scope_label": "printed circuit board",
-    "evidence_ids": [
-      "E043d80e1df",
-      "E076f438fc8"
-    ],
-    "evidence_span": "First, the camera parts and PCB parts attached to the mobile phone waste were separated and collected for the experiment (Figure 1).",
-    "population_granularity": "batch",
-    "sample_type": "printed circuit board",
-    "scope_description": "PCB parts attached to mobile phone waste, separated and collected for the experiment.",
-    "sample_size": null
-  },
-  {
-    "root_entity_ids": [
-      "Product_camera"
-    ],
-    "scope_subject_text": "camera",
-    "scope_label": "camera",
-    "evidence_ids": [
-      "E043d80e1df",
-      "E076f438fc8"
-    ],
-    "evidence_span": "First, the camera parts and PCB parts attached to the mobile phone waste were separated and collected for the experiment (Figure 1).",
-    "population_granularity": "batch",
-    "sample_type": "camera",
-    "scope_description": "Camera parts attached to mobile phone waste, separated and collected for the experiment.",
-    "sample_size": null
-  },
-  {
-    "root_entity_ids": [
-      "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate"
-    ],
-    "scope_subject_text": "biogenic metal precipitation from pH 7.7 filtrate",
-    "scope_label": "biogenic metal precipitation from pH 7.7 filtrate",
-    "evidence_ids": [
-      "E0c74869f49"
-    ],
-    "evidence_span": "reduced Fe(III), Cr(VI), and Se(VI) by extracellularly forming Fe(II/III) minerals, Cr(III) hydroxide and amorphous elemental Se(0) nanoparticles, respectively, via glucose fermentation [15].",
-    "method_family": "biogenic metal precipitation"
+    "method_family": "aqua regia leaching"
   }
 ]

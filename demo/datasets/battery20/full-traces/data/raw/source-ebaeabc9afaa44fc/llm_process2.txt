@@ -1,29 +1,58 @@
 [
   {
-    "canonical_name": "NH4OH precipitation from digested aqua regia",
+    "canonical_name": "metal precipitation by NH4OH addition",
     "parent_process": null,
-    "content": "Ammonium hydroxide (28%) was slowly added with rapid stirring to the aqua regia metal leachate to precipitate ferrous, non-ferrous, and precious metals. Precipitation occurred at pH ranges of approximately 3.9-4.2, 5.7-7.7, and 8.3-10.5 with color changes; at each pH range, NH4OH addition was stopped but stirring continued, then the suspension was centrifuged to separate precipitate and supernatant. The precipitate was washed three times with distilled water and dried for mineralogical analysis.",
+    "content": "Slowly add 28% NH4OH to the strongly acidic aqua regia metal leachate with rapid stirring; precipitation occurs at pH ranges of ~3.9-4.2, 5.7-7.7, and 8.3-10.5, stopping NH4OH addition at each range while continuing stirring, then centrifuge to separate precipitate from supernatant; wash precipitate three times with distilled water and dry.",
     "equipment": [
       "centrifuge"
     ],
     "process_agents": [
-      "NH4OH"
+      "NH4OH",
+      "distilled water"
     ],
-    "synonyms": [],
-    "aliases": []
+    "synonyms": [
+      "chemical method for metal recovery",
+      "ammonium hydroxide precipitation"
+    ],
+    "aliases": [
+      "chemical method for metal recovery",
+      "ammonium hydroxide precipitation"
+    ]
   },
   {
-    "canonical_name": "biogenic metal precipitation from pH 7.7 filtrate",
+    "canonical_name": "biogenic metal precipitation by metal-reducing bacteria",
     "parent_process": null,
-    "content": "2 mL of the pH 7.7 filtrate was added to anaerobic medium containing 10 mM glucose and 2 mL of enriched metal-reducing bacteria (Suncheon-1), and cultivated in a shaking incubator at 25 °C under anoxic atmosphere for 2 weeks to produce biogenic metal precipitates.",
+    "content": "Add 2 mL of pH 7.7 filtrate to pre-reduced anoxic medium containing 10 mM glucose and 2 mL enriched metal-reducing bacteria (Suncheon-1), then cultivate in a shaking incubator at 25 C under anoxic atmosphere for 2 weeks to form biogenic metal precipitates.",
     "equipment": [
-      "shaking incubator"
+      "shaking incubator",
+      "125 mL serum bottles"
     ],
     "process_agents": [
       "glucose",
-      "metal-reducing bacteria Suncheon-1"
+      "metal-reducing bacteria (Suncheon-1)",
+      "NaHCO3",
+      "CaCl2",
+      "NH4Cl",
+      "MgCl2",
+      "NaCl",
+      "HEPES",
+      "trace mineral solution",
+      "vitamin solution"
     ],
-    "synonyms": [],
-    "aliases": []
+    "synonyms": [
+      "biological method for metal recovery"
+    ],
+    "aliases": [
+      "biological method for metal recovery"
+    ]
+  },
+  {
+    "canonical_name": "metal dissolution in aqua regia",
+    "content": "The weight % of the initial leached metals from the camera and PCB parts into aqua regia were determined via ICP-AES (Figure 3). The major metals (over 800 mg/L) leached from the camera parts were Cu (4610 mg/L), Fe (3380 mg/L), Zn (1930 mg/L), Ni (1690 mg/L), and Nd (874 mg/L)",
+    "evidence_span": "The weight % of the initial leached metals from the camera and PCB parts into aqua regia were determined via ICP-AES (Figure 3). The major metals (over 800 mg/L) leached from the camera parts were Cu (4610 mg/L), Fe (3380 mg/L), Zn (1930 mg/L), Ni (1690 mg/L), and Nd (874 mg/L)",
+    "aliases": [
+      "aqua regia leaching",
+      "dissolution of metals in aqua regia"
+    ]
   }
 ]

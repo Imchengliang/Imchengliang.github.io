@@ -1,0 +1,166 @@
+[
+  {
+    "reason": [
+      "quotation_not_in_cited_source_passage"
+    ],
+    "item": {
+      "root_entity_ids": [
+        "Component_hard_disk_drive_magnet"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E3cee4a332c",
+          "quote": "HDD NIB magnets were found to contain ~35 wt% Nd in thei alloy"
+        },
+        {
+          "evidence_id": "E7dbf830f76",
+          "quote": "Samples selected were high-volume items in WEEE received by the AATF"
+        }
+      ],
+      "evidence_ids": null,
+      "population_granularity": "batch",
+      "sample_type": "WEEE component",
+      "scope_description": "NdFeB magnets from HDDs in WEEE samples; Nd content measured at ~35 wt%."
+    }
+  },
+  {
+    "reason": [
+      "quotation_not_in_cited_source_passage"
+    ],
+    "item": {
+      "root_entity_ids": [
+        "Component_CCFL"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E3cee4a332c",
+          "quote": "An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (~13 mg)"
+        },
+        {
+          "evidence_id": "E7dbf830f76",
+          "quote": "Samples selected were high-volume items in WEEE received by the AATF"
+        }
+      ],
+      "evidence_ids": null,
+      "population_granularity": "batch",
+      "sample_type": "WEEE component",
+      "scope_description": "CCFL backlights from laptop LCD screens in WEEE samples; Y content measured in CCFL phosphor."
+    }
+  },
+  {
+    "reason": [
+      "quotation_not_in_cited_source_passage"
+    ],
+    "item": {
+      "root_entity_ids": [
+        "Component_speaker_magnet"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E3cee4a332c",
+          "quote": "Nd content of NIB speaker magnets was found to be ~28 wt%"
+        },
+        {
+          "evidence_id": "E7dbf830f76",
+          "quote": "Samples selected were high-volume items in WEEE received by the AATF"
+        }
+      ],
+      "evidence_ids": null,
+      "population_granularity": "batch",
+      "sample_type": "WEEE component",
+      "scope_description": "NdFeB speaker magnets from WEEE samples; Nd content measured at ~28 wt%."
+    }
+  },
+  {
+    "reason": [
+      "quotation_not_in_cited_source_passage"
+    ],
+    "item": {
+      "root_entity_ids": [
+        "Component_packet_type_LIB"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E3cee4a332c",
+          "quote": "Co content of packet type LIBs from phones and MP3 players correlates well with literature data (~19 wt%)"
+        },
+        {
+          "evidence_id": "E7dbf830f76",
+          "quote": "Samples selected were high-volume items in WEEE received by the AATF"
+        }
+      ],
+      "evidence_ids": null,
+      "population_granularity": "batch",
+      "sample_type": "lithium-ion battery",
+      "scope_description": "Packet-type LIBs from phones and MP3 players in WEEE samples; Co content measured."
+    }
+  },
+  {
+    "reason": [
+      "quotation_not_in_cited_source_passage"
+    ],
+    "item": {
+      "root_entity_ids": [
+        "Component_laptop_battery_packs_Li_ion_battery"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E3cee4a332c",
+          "quote": "Co content of laptop battery packs was found to be ~50 g (15.8 wt%)"
+        },
+        {
+          "evidence_id": "E7dbf830f76",
+          "quote": "Samples selected were high-volume items in WEEE received by the AATF"
+        }
+      ],
+      "evidence_ids": null,
+      "population_granularity": "batch",
+      "sample_type": "lithium-ion battery",
+      "scope_description": "Laptop Li-ion battery packs from WEEE samples; Co content measured at ~50 g (15.8 wt%)."
+    }
+  },
+  {
+    "reason": [
+      "quotation_not_in_cited_source_passage"
+    ],
+    "item": {
+      "root_entity_ids": [
+        "Component_CCFLs_phosphor"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E3cee4a332c",
+          "quote": "measured Y content of CCFL phosphor in laptop LCD samples presented here (~13 mg)"
+        }
+      ],
+      "evidence_ids": null,
+      "population_granularity": "batch",
+      "sample_type": "WEEE component",
+      "scope_description": "Phosphor from CCFLs in laptop LCD screens of WEEE samples; Y content measured."
+    }
+  },
+  {
+    "reason": "missing_required_root_scope",
+    "root_entity_id": "Component_CCFL"
+  },
+  {
+    "reason": "missing_required_root_scope",
+    "root_entity_id": "Component_CCFLs_phosphor"
+  },
+  {
+    "reason": "missing_required_root_scope",
+    "root_entity_id": "Component_hard_disk_drive_magnet"
+  },
+  {
+    "reason": "missing_required_root_scope",
+    "root_entity_id": "Component_laptop_battery_packs_Li_ion_battery"
+  },
+  {
+    "reason": "missing_required_root_scope",
+    "root_entity_id": "Component_packet_type_LIB"
+  },
+  {
+    "reason": "missing_required_root_scope",
+    "root_entity_id": "Component_speaker_magnet"
+  }
+]

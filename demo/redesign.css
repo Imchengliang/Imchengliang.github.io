@@ -101,7 +101,7 @@ button.active{color:var(--teal);background:var(--teal-bg);border-color:color-mix
 .graph-legend .lg-line,.graph-legend .lg-dash{position:relative}
 .graph-legend .lg-line::after,.graph-legend .lg-dash::after{content:'';position:absolute;right:-1px;top:-4px;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:6px solid #8fa5a3}
 .graph-legend .lg-dash::after{border-left-color:#1c8a78}
-.graph-legend .lg-group{width:18px;height:18px;border-radius:50%;background:#1f7a8c;color:#fff;font-style:normal;font-size:9px;text-align:center;line-height:18px;margin:0 2px}
+.graph-legend .lg-group{width:18px;height:18px;border-radius:50%;background:#1f7a8c;color:#fff;font-style:normal;font-size:9px;text-align:center;line-height:18px;margin:0}
 .graph-legend{top:14px;bottom:auto}
 
 .source-match-label:not([hidden]){display:block;font-size:11px;font-weight:400;color:var(--teal);margin-top:4px}
@@ -204,3 +204,5 @@ button:focus-visible,summary:focus-visible,select:focus-visible,input:focus-visi
 .overview-evidence>div{min-width:0;flex:1}
 .overview-evidence .context-summary summary{font-size:13px;line-height:1.6}
 .overview-evidence .context-summary{margin:6px 0}
+
+#group-members .connection small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}

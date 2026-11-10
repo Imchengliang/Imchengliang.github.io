@@ -25,21 +25,36 @@ function conditionFields(object){
 function jsonDetails(value){ return `<details><summary>View complete record JSON</summary><pre>${esc(JSON.stringify(value,null,2))}</pre></details>`; }
 function sourceName(id){ return state.data.sources.find(s=>s.id===id)?.label || id || 'Shared material / family'; }
 function relationName(edge){ return edge.predicates?`${Object.keys(edge.predicates).length} relation types`:labels[edge.predicate] || edge.predicate; }
-function isCatalog(node){return node.source.startsWith('catalog:');}
+function isCatalog(node){return node.source?.startsWith('catalog:')||false;}
 function displayNode(id){return state.displayNodes.get(id)||state.nodes.get(id);}
 function nodeSize(node){return node.group?(node.level===0?39:16):node.type==='Product'?7:node.type==='Material'?4.5:6;}
+function nodeBounds(node){
+  const r=nodeSize(node)+(state.selected?.kind==='node'&&state.selected.id===node.id&&!node.group?4:0);
+  return {x:r,y:r};
+}
+function nodeSourceLabel(node,compact=false){
+  const source=state.data?.sources?.find(source=>source.id===node.source);
+  if(!source)return '';
+  const kind=source.kind==='catalog'?'Catalog':'Study';
+  return compact?`${kind} ${state.data.sources.indexOf(source)+1}`:`${kind} · ${source.label}`;
+}
 function updateNavigation(){
   const container=$('#graph-path');container.replaceChildren();
-  const overview=document.createElement('button');overview.textContent='Overview';overview.onclick=resetHierarchy;container.append(overview);
-  state.navPath.forEach((id,index)=>{
+  const overview=document.createElement('button');overview.textContent=state.hierarchy?'Categories':'All entities';overview.onclick=state.hierarchy?resetHierarchy:showAllEntities;container.append(overview);
+  const route=state.hierarchy?state.navPath:state.focus?[state.focus]:[];
+  route.forEach((id,index)=>{
     const item=state.hierarchyData.groups.get(id)||state.nodes.get(id);
     if(!item)return;
     const separator=document.createElement('span');separator.textContent='›';separator.setAttribute('aria-hidden','true');container.append(separator);
     const button=document.createElement('button');button.textContent=item.label;button.title=item.label;
-    if(index===state.navPath.length-1)button.setAttribute('aria-current','location');
+    if(index===route.length-1)button.setAttribute('aria-current','location');
     button.onclick=()=>item.group?navigateGroup(id):focusNode(id);container.append(button);
   });
-  if(!state.navPath.length)overview.setAttribute('aria-current','location');
+  if(!route.length)overview.setAttribute('aria-current','location');
+  const group=[...route].reverse().map(id=>state.hierarchyData.groups.get(id)).find(Boolean);
+  $('#graph-caption').textContent=state.hierarchy
+    ? group?`${group.label} · ${group.members.filter(id=>state.visibleEntityIds.has(id)).length} records`:'Browse categories'
+    : state.focus?`Connections for ${state.nodes.get(state.focus).label}`:`Entity view · ${state.shownNodes.length} records`;
   $('#graph-back').disabled=!state.graphHistory.length&&!state.navPath.length;
 }
 // Entity drill-down history is separate from the taxonomy breadcrumb path.
@@ -160,14 +175,11 @@ function updateGraph(fit=true){
     }));
   }
   $('#visible-stats').textContent=`${nodes.length} entities · ${edges.length} displayed relations · ${edges.filter(e=>e.fusion).length} fusion links`;
-  $('#graph-caption').textContent=state.focus?`Focus: ${state.nodes.get(state.focus)?.label || ''} · direct neighborhood`:
-    source?`Source: ${sourceName(source)}`:'Grouped by source.';
   if(state.hierarchy){
     const projection=state.hierarchyData.project(nodes,edges,state.expanded);
     state.shownNodes=projection.nodes;state.shownEdges=projection.edges;
     state.localPositions=state.hierarchyData.positions(projection.nodes);
     $('#visible-stats').textContent=`${projection.nodes.length} displayed nodes · ${nodes.filter(n=>!n.type.endsWith('Family')).length} underlying entities`;
-    $('#graph-caption').textContent='Product · Component · Process · Material. Select a group to expand; materials stay grouped until opened.';
   }
   state.displayNodes=new Map(state.shownNodes.map(node=>[node.id,node]));
   if(state.selected && !(state.selected.kind==='node'?state.displayNodes.has(state.selected.id):state.shownEdges.some(edge=>edge.id===state.selected.id)))state.selected=null;
@@ -210,7 +222,8 @@ function point(id){const p=(state.localPositions||state.positions).get(id);retur
 function draw(){if(frame)return;frame=requestAnimationFrame(()=>{frame=0;paint();});}
 function paintArrow(source,target){
   const a=point(source),b=point(target),node=displayNode(target),angle=Math.atan2(b.y-a.y,b.x-a.x);
-  const radius=nodeSize(node)+(state.selected?.kind==='node'&&state.selected.id===target&&!node.group?4:0)+4;
+  const bounds=nodeBounds(node);
+  const radius=(isCatalog(node)?1/Math.max(Math.abs(Math.cos(angle))/bounds.x,Math.abs(Math.sin(angle))/bounds.y):bounds.x)+4;
   if(Math.hypot(b.x-a.x,b.y-a.y)<=radius)return;
   const x=b.x-Math.cos(angle)*radius,y=b.y-Math.sin(angle)*radius;
   ctx.setLineDash([]);ctx.fillStyle=ctx.strokeStyle;ctx.beginPath();ctx.moveTo(x,y);
@@ -221,6 +234,8 @@ function paint(){
   edgeLabels=[];
   ctx.fillStyle='#e3ece6';for(let x=((offset.x%30)+30)%30;x<width;x+=30)for(let y=((offset.y%30)+30)%30;y<height;y+=30)ctx.fillRect(x,y,1,1);
   const chosen=state.selected?.kind==='node'?state.selected.id:null;
+  const nameCounts=new Map();
+  for(const node of state.shownNodes)if(!node.group)nameCounts.set(node.label,(nameCounts.get(node.label)||0)+1);
   const adjacent=new Set();if(chosen)state.shownEdges.forEach(e=>{if(e.source===chosen||e.target===chosen){adjacent.add(e.source);adjacent.add(e.target);}});
   const isRoot=id=>displayNode(id)?.group&&displayNode(id).level===0;
   const selectedEdgeId=state.selected?.kind==='edge'?state.selected.id:null;
@@ -254,26 +269,30 @@ function paint(){
   }
   ctx.globalAlpha=1;ctx.setLineDash([]);
   for(const node of state.shownNodes){
-    const p=point(node.id),selected=chosen===node.id,r=nodeSize(node)+(selected&&!node.group?4:0);
+    const p=point(node.id),selected=chosen===node.id,r=nodeSize(node)+(selected&&!node.group?4:0),bounds=nodeBounds(node);
     if(p.x< -100||p.x>width+100||p.y< -50||p.y>height+50)continue;
     ctx.globalAlpha=chosen&&!adjacent.has(node.id)&&!selected ? .35 : 1;
     if(selected){ctx.fillStyle='#c2703233';ctx.beginPath();ctx.arc(p.x,p.y,r+9,0,Math.PI*2);ctx.fill();}
     ctx.fillStyle=colors[node.type]||'#8c979b';ctx.beginPath();
-    // Shape carries meaning beyond colour: catalog records are squares, paper-derived entities are circles.
-    if(!node.group&&isCatalog(node))ctx.rect(p.x-r,p.y-r,r*2,r*2);else ctx.arc(p.x,p.y,r,0,Math.PI*2);
+    // Groups are counted circles; catalog records are squares.
+    if(isCatalog(node))ctx.rect(p.x-bounds.x,p.y-bounds.y,bounds.x*2,bounds.y*2);else ctx.arc(p.x,p.y,r,0,Math.PI*2);
     ctx.fill();
     ctx.strokeStyle=selected?'#112f34':isCatalog(node)?'#e4ab61':'#fff';ctx.lineWidth=selected?3:isCatalog(node)?2:1;ctx.stroke();
     if(node.group){
       ctx.globalAlpha=1;ctx.fillStyle=node.level===0?'#fff':'#ffffff';ctx.font=`600 ${node.level===0?'20':'11'}px sans-serif`;ctx.textAlign='center';ctx.fillText(node.members.length,p.x,p.y+(node.level===0?6:4));
       const max=node.level===0?35:20,label=node.label.length>max?node.label.slice(0,max-2)+'…':node.label;
-      ctx.font=`600 ${node.level===0?13:11}px sans-serif`;ctx.lineWidth=3;ctx.strokeStyle='#fafcfb';ctx.strokeText(label,p.x,p.y+r+15);ctx.fillStyle='#25424a';ctx.fillText(label,p.x,p.y+r+15);
-      if(node.level>0){ctx.font='9px sans-serif';ctx.fillStyle='#68817e';ctx.fillText(`${node.members.length} ${node.members.length===1?'entity':'entities'} · group`,p.x,p.y+r+27);}
+      ctx.font=`600 ${node.level===0?13:11}px sans-serif`;ctx.lineWidth=3;ctx.strokeStyle='#fafcfb';ctx.strokeText(label,p.x,p.y+bounds.y+15);ctx.fillStyle='#25424a';ctx.fillText(label,p.x,p.y+bounds.y+15);
+      if(node.level>0){ctx.font='9px sans-serif';ctx.fillStyle='#68817e';ctx.fillText(`${node.members.length} ${node.members.length===1?'entity':'entities'} · group`,p.x,p.y+bounds.y+27);}
       ctx.textAlign='left';continue;
     }
+    const source=nameCounts.get(node.label)>1?nodeSourceLabel(node,true):'';
     if(state.hierarchy){const label=node.label.length>22?node.label.slice(0,20)+'…':node.label;ctx.textAlign='center';
-      ctx.font=`${selected?'600 ':''}10px sans-serif`;ctx.lineWidth=3;ctx.strokeStyle='#fafcfb';ctx.strokeText(label,p.x,p.y+r+13);ctx.fillStyle='#314b50';ctx.fillText(label,p.x,p.y+r+13);ctx.textAlign='left';continue;}
+      ctx.font=`${selected?'600 ':''}10px sans-serif`;ctx.lineWidth=3;ctx.strokeStyle='#fafcfb';ctx.strokeText(label,p.x,p.y+r+13);ctx.fillStyle='#314b50';ctx.fillText(label,p.x,p.y+r+13);
+      if(source){ctx.font='9px sans-serif';ctx.fillStyle='#506b66';ctx.fillText(source,p.x,p.y+r+26);}
+      ctx.textAlign='left';continue;}
     if(zoom>.8||selected||adjacent.has(node.id)||state.shownNodes.length<50){const label=node.label.length>34?node.label.slice(0,32)+'…':node.label;
-      ctx.font=`${selected?'600 13':'11'}px -apple-system, sans-serif`;ctx.lineWidth=3;ctx.strokeStyle='#fafcfb';ctx.strokeText(label,p.x+r+6,p.y+4);ctx.fillStyle=selected?'#112f34':'#314b50';ctx.fillText(label,p.x+r+6,p.y+4);}
+      ctx.font=`${selected?'600 13':'11'}px -apple-system, sans-serif`;ctx.lineWidth=3;ctx.strokeStyle='#fafcfb';ctx.strokeText(label,p.x+r+6,p.y+4);ctx.fillStyle=selected?'#112f34':'#314b50';ctx.fillText(label,p.x+r+6,p.y+4);
+      if(source){ctx.font='9px sans-serif';ctx.fillStyle='#506b66';ctx.fillText(source,p.x+r+6,p.y+17);}}
   }ctx.globalAlpha=1;
   if(!state.shownNodes.length){ctx.fillStyle='#68817e';ctx.font='14px sans-serif';ctx.fillText('No entities match. Clear the focus or adjust the filters.',25,height/2);}
 }
@@ -341,7 +360,7 @@ function selectNode(id){
   const connections=state.shownEdges.filter(e=>e.source===id||e.target===id);
   const scopeCards=nodeScopeCards(node);
   const attributes=Object.fromEntries(Object.entries(node.attrs||{}).filter(([key])=>!['label','description','canonicalType'].includes(key)).map(([key,value])=>[key.replace(/([a-z])([A-Z])/g,'$1 $2').replace(/^./,c=>c.toUpperCase()),value]));
-  $('#inspector').innerHTML=`<span class="tag">${esc(node.type)}${isCatalog(node)?' · CATALOG':''}</span><h3>${esc(node.label)}</h3><p>${esc(sourceName(node.source))}</p><div class="button-row"><button id="expand-node">Expand neighborhood</button><button id="node-replay">${node.type==='Process'?'View process evidence':'Open paper replay'}</button></div>${fields({Source:isCatalog(node)?'GSMArena':null,...attributes})}${scopeCards}${processDetailsCard(node)}<h4>Relations in this view · ${connections.length}</h4><div id="connections"></div>${jsonDetails(node)}`;
+  $('#inspector').innerHTML=`<span class="tag">${esc(node.type)}${isCatalog(node)?' · CATALOG':''}</span><h3>${esc(node.label)}</h3><p>${esc(sourceName(node.source))}</p><div class="button-row"><button id="expand-node">Explore connections</button><button id="node-replay">${node.type==='Process'?'View process evidence':'Open paper replay'}</button></div>${fields({Source:isCatalog(node)?'GSMArena':null,...attributes})}${scopeCards}${processDetailsCard(node)}<h4>Relations in this view · ${connections.length}</h4><div id="connections"></div>${jsonDetails(node)}`;
   $('#expand-node').onclick=()=>focusNode(id);
   const match=state.data.cases.find(c=>c.paper===node.source);$('#node-replay').hidden=!match;
   $('#node-replay').onclick=()=>node.type==='Process'?openProcessEvidence(node):openReplay(match.id);
@@ -399,10 +418,10 @@ function selectGroup(id){
   state.navPath=state.hierarchyData.path(id);updateNavigation();draw();
   const children=group.children.filter(child=>state.hierarchyData.groups.get(child).members.some(member=>group.members.includes(member)));
   const members=children.length?children:group.members;
-  $('#inspector').innerHTML=`<span class="tag">${group.level===0?'TOP LEVEL':group.nameGroup?'NAME GROUP':'TYPE / FAMILY'}</span><h3>${esc(group.label)}</h3><p>${group.members.length} entities.</p><div class="button-row"><button id="expand-group" ${state.expanded.has(id)?'disabled':''}>Expand group</button><button id="collapse-group" ${state.expanded.has(id)?'':'disabled'}>Collapse group</button></div><h4>${children.length?'Types / families':'Entities'} · ${members.length}</h4><div id="group-members"></div>`;
+  $('#inspector').innerHTML=`<span class="tag">${group.level===0?'Category':'Group'}</span><h3>${esc(group.label)} · ${group.members.length} records</h3><div class="button-row"><button id="expand-group" ${state.expanded.has(id)?'disabled':''}>Open group</button><button id="collapse-group" ${state.expanded.has(id)?'':'disabled'}>Collapse group</button></div><h4>${children.length?'Groups':'Records'} · ${members.length}</h4><div id="group-members"></div>`;
   $('#expand-group').onclick=()=>expandGroup(id);
   $('#collapse-group').onclick=()=>collapseGroup(id);
-  for(const member of members){const node=state.hierarchyData.groups.get(member)||state.nodes.get(member);const button=document.createElement('button');button.className='connection';button.textContent=node.label+(node.group?' · '+node.members.filter(entity=>group.members.includes(entity)).length:'');button.onclick=()=>{if(node.group){state.expanded.add(id);updateGraph();selectGroup(member);}else focusNode(member);};$('#group-members').append(button);}
+  for(const member of members){const node=state.hierarchyData.groups.get(member)||state.nodes.get(member);const button=document.createElement('button');button.className='connection';button.innerHTML=`${esc(node.label)}<small>${node.group?node.members.filter(entity=>group.members.includes(entity)).length+' records':esc(nodeSourceLabel(node))}</small>`;button.title=nodeSourceLabel(node)||node.label;button.onclick=()=>{if(node.group){state.expanded.add(id);updateGraph();selectGroup(member);}else focusNode(member);};$('#group-members').append(button);}
   $('#inspector').scrollTop=0;
 }
 function expandGroup(id){state.graphHistory=[];state.hierarchyData.path(id).forEach(group=>state.expanded.add(group));updateGraph();selectGroup(id);}
@@ -423,7 +442,7 @@ function searchNodes(){
   if(!found.length)$('#search-results').textContent='No matching entities.';
 }
 function hitTest(x,y){
-  const node=state.shownNodes.slice().reverse().find(n=>{const p=point(n.id);return Math.hypot(p.x-x,p.y-y)<nodeSize(n)+5;});if(node)return {kind:'node',id:node.id};
+  const node=state.shownNodes.slice().reverse().find(n=>{const p=point(n.id),bounds=nodeBounds(n);return isCatalog(n)?Math.abs(p.x-x)<bounds.x+5&&Math.abs(p.y-y)<bounds.y+5:Math.hypot(p.x-x,p.y-y)<bounds.x+5;});if(node)return {kind:'node',id:node.id};
   const label=edgeLabels.find(label=>x>=label.x&&x<=label.x+label.width&&y>=label.y&&y<=label.y+label.height);if(label)return {kind:'edge',id:label.id};
   let nearest=null, distance=7;
   for(const edge of state.shownEdges){const a=point(edge.source),b=point(edge.target),dx=b.x-a.x,dy=b.y-a.y;const t=Math.max(0,Math.min(1,((x-a.x)*dx+(y-a.y)*dy)/(dx*dx+dy*dy||1)));const d=Math.hypot(x-a.x-t*dx,y-a.y-t*dy);if(d<distance){nearest={kind:'edge',id:edge.id};distance=d;}}return nearest;
@@ -431,11 +450,15 @@ function hitTest(x,y){
 function scale(factor,x=width/2,y=height/2){const previous=zoom;zoom=Math.max(.08,Math.min(10,zoom*factor));offset={x:x-(x-offset.x)*zoom/previous,y:y-(y-offset.y)*zoom/previous};draw();}
 function showTooltip(event){
   const tooltip=$('#graph-tooltip'),hit=hitTest(event.offsetX,event.offsetY);
-  const edge=hit?.kind==='edge'?state.shownEdges.find(edge=>edge.id===hit.id):null;
-  if(!edge){tooltip.hidden=true;canvas.style.cursor='grab';return;}
-  canvas.style.cursor='pointer';
-  const counts=edge.predicates||{[edge.predicate]:1};
-  tooltip.innerHTML=`<strong>${esc(displayNode(edge.source).label)} ${edge.members?'↔':'→'} ${esc(displayNode(edge.target).label)}</strong>${Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([predicate,count])=>`<div>${esc(labels[predicate]||predicate)} · ${count}</div>`).join('')}<div class="muted">Click for directions and original evidence.</div>`;
+  if(!hit){tooltip.hidden=true;canvas.style.cursor='grab';return;}
+  canvas.style.cursor=hit.kind==='edge'?'pointer':'grab';
+  if(hit.kind==='node'){
+    const node=displayNode(hit.id);
+    tooltip.innerHTML=`<strong>${esc(node.label)}</strong><div>${node.group?node.members.length+' records':esc(nodeSourceLabel(node))}</div><div class="muted">Double-click to ${node.group?'open group':'explore connections'}.</div>`;
+  }else{
+    const edge=state.shownEdges.find(edge=>edge.id===hit.id),counts=edge.predicates||{[edge.predicate]:1};
+    tooltip.innerHTML=`<strong>${esc(displayNode(edge.source).label)} ${edge.members?'↔':'→'} ${esc(displayNode(edge.target).label)}</strong>${Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([predicate,count])=>`<div>${esc(labels[predicate]||predicate)} · ${count}</div>`).join('')}<div class="muted">Click to inspect relations.</div>`;
+  }
   tooltip.hidden=false;
   tooltip.style.left=Math.max(8,Math.min(event.offsetX+15,width-tooltip.offsetWidth-8))+'px';
   tooltip.style.top=Math.max(8,Math.min(event.offsetY+15,height-tooltip.offsetHeight-8))+'px';
@@ -764,7 +787,7 @@ function configureDataset(){
 async function start(){
   try{
     document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setView(b.dataset.view));
-    state.data=await fetchJSON(document.body.dataset.graph||'data/graph.json');configureDataset();state.nodes=new Map(state.data.nodes.map(n=>[n.id,n]));state.hierarchyData=createHierarchy(state.data);initializePositions();
+    state.data=await fetchJSON(document.body.dataset.graph||'data/graph.json');configureDataset();state.nodes=new Map(state.data.nodes.map(n=>[n.id,n]));state.hierarchyData=createHierarchy(state.data,JSON.parse($('#display-vocabulary')?.textContent||'{}'));initializePositions();
     const entityCount=state.data.nodes.filter(n=>['Product','Component','Process','Material'].includes(n.type)).length;
     $('#legend').innerHTML=Object.entries(colors).map(([name,color])=>`<span><i class="dot" style="background:${color}"></i>${name}</span>`).join('')+'<span>┄┄ fusion link</span>';
     for(const kind of ['paper','catalog']){const sources=state.data.sources.filter(s=>s.kind===kind),group=document.createElement('optgroup');group.label=`${sources.length} ${kind==='paper'?'papers':'catalog records'}`;sources.forEach(source=>{const option=document.createElement('option');option.value=source.id;option.textContent=source.label;group.append(option);});$('#source-filter').append(group);}

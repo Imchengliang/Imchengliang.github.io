@@ -1,11 +1,17 @@
 /* A display projection only. Every member and relation refers to the frozen graph. */
 'use strict';
-function createHierarchy(data) {
+function createHierarchy(data, vocabulary = {}) {
   const roots = {Product:'Product', Component:'Component', Process:'Process', Material:'Material'};
   const groups = new Map(), parent = new Map(), nodes = new Map(data.nodes.map(node=>[node.id,node]));
   const families = new Map();
   const classifications = new Map(), productTypes = new Map();
   const normalize = value=>value.normalize('NFKC').toLowerCase().trim().replace(/\s+/g,' ');
+  const displayTypes = new Map();
+  for (const [type, labels] of Object.entries(vocabulary)) {
+    for (const [canonical, aliases] of Object.entries(labels)) {
+      for (const label of [canonical, ...aliases]) displayTypes.set(type+'|'+normalize(label), canonical);
+    }
+  }
   const componentKey = value=>normalize(value).replace(/[-_‐‑‒–—]+/g,' ').replace(/\s+/g,' ');
   const sourceKinds=new Map((data.sources || []).map(source=>[source.id,source.kind]));
   const componentTypes=new Map(), ambiguousComponents=new Set();
@@ -97,6 +103,7 @@ function createHierarchy(data) {
       if(matches?.size===1)label=matches.values().next().value.label;
     }
     label ||= inferProductType(node) || inferComponentType(node) || 'Unclassified';
+    label = displayTypes.get(node.type+'|'+normalize(label)) || label;
     const id = root.id+':'+normalize(label);
     if (!groups.has(id)) {
       groups.set(id,{id,label,type:node.type,source:'',group:true,level:1,parent:root.id,members:[],children:[],

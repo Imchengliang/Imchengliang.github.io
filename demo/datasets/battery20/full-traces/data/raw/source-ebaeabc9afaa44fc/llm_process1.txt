@@ -1,71 +1,110 @@
 {
   "process_stages": [
     {
-      "name": "NH4OH precipitation from digested aqua regia",
+      "name": "metal precipitation by NH4OH addition",
       "parent_process": null,
-      "aliases": [],
+      "aliases": [
+        "chemical method for metal recovery",
+        "ammonium hydroxide precipitation"
+      ],
       "stage_role": "recovery_process",
       "acts_on_weee": false,
-      "evidence_hint": "Ammonium hydroxide was slowly added to the acidic metal solution to precipitate ferrous, non-ferrous, and precious metals; precipitates formed at specific pH ranges."
+      "evidence_hint": "NH4OH was slowly added to the acidic aqua regia metal solution with rapid stirring; precipitates formed at pH ranges and were centrifuged, washed, and dried."
     },
     {
-      "name": "biogenic metal precipitation from pH 7.7 filtrate",
+      "name": "biogenic metal precipitation by metal-reducing bacteria",
       "parent_process": null,
-      "aliases": [],
+      "aliases": [
+        "biological method for metal recovery"
+      ],
       "stage_role": "recovery_process",
       "acts_on_weee": false,
-      "evidence_hint": "2 mL of the filtrate at pH 7.7 was added to medium containing 10 mM glucose and 2 mL of enriched metal-reducing bacteria, and cultivated for 2 weeks to produce biogenic metal-precipitates."
+      "evidence_hint": "2 mL of the pH 7.7 filtrate was added to medium containing 10 mM glucose and 2 mL enriched metal-reducing bacteria and cultivated anoxically for 2 weeks to produce biogenic metal-precipitates."
+    },
+    {
+      "name": "metal dissolution in aqua regia",
+      "parent_process": null,
+      "aliases": [
+        "aqua regia leaching",
+        "dissolution of metals in aqua regia"
+      ],
+      "stage_role": null,
+      "acts_on_weee": null,
+      "evidence_hint": "The weight % of the initial leached metals from the camera and PCB parts into aqua regia were determined via ICP-AES (Figure 3). The major metals (over 800 mg/L) leached from the camera parts were Cu (4610 mg/L), Fe (3380 mg/L), Zn (1930 mg/L), Ni (1690 mg/L), and Nd (874 mg/L)"
     }
   ],
   "experiment_settings": [
     {
       "name": "NH4OH precipitation conditions",
-      "stage_name": "NH4OH precipitation from digested aqua regia",
-      "sample": "metal solution leached in aqua regia",
+      "stage_name": "metal precipitation by NH4OH addition",
+      "sample": "aqua regia metal solution",
       "sample_aliases": [
-        "acidic metal solution"
+        "acidic metal solution",
+        "leachate"
       ],
-      "treatment": "ammonium hydroxide addition",
+      "treatment": "ammonium hydroxide (28%) addition with rapid stirring",
       "treatment_members": [
+        "ammonium hydroxide"
+      ],
+      "treatment_aliases": [
         "NH4OH"
       ],
-      "treatment_aliases": [],
       "aliases": [],
-      "condition_summary": "NH4OH (28%) slowly added with rapid stirring; pH adjusted to ranges 3.9-4.2, 5.7-7.7, and 8.3-10.5; stirring continued after addition stopped; precipitates separated by centrifugation; washed with distilled water three times and dried",
-      "evidence_hint": "NH4OH solution was slowly added into the acidic metal solution to precipitate metals; when pH ranges were reached, addition was stopped but kept stirring; suspension centrifuged to separate precipitate and supernatant."
+      "condition_summary": "NH4OH slowly added with rapid stirring; precipitation at pH ~3.9-4.2, ~5.7-7.7, and ~8.3-10.5; stirring continued after addition; precipitate centrifuged, washed 3x with distilled water, dried",
+      "evidence_hint": "NH4OH was slowly added to the acidic metal solution with rapid stirring; precipitates formed at the stated pH ranges and were centrifuged, washed, and dried."
     },
     {
-      "name": "biogenic metal precipitation conditions",
-      "stage_name": "biogenic metal precipitation from pH 7.7 filtrate",
+      "name": "biogenic precipitation conditions",
+      "stage_name": "biogenic metal precipitation by metal-reducing bacteria",
       "sample": "filtrate at pH 7.7",
-      "sample_aliases": [],
-      "treatment": "metal-reducing bacteria (Suncheon-1) with glucose",
+      "sample_aliases": [
+        "pH 7.7 filtrate"
+      ],
+      "treatment": "enriched metal-reducing bacteria Suncheon-1 with glucose",
       "treatment_members": [
-        "Suncheon-1",
+        "Suncheon-1 metal-reducing bacteria",
         "glucose"
       ],
-      "treatment_aliases": [],
+      "treatment_aliases": [
+        "Suncheon-1"
+      ],
       "aliases": [],
-      "condition_summary": "2 mL filtrate added to medium containing 10 mM glucose and 2 mL enriched metal-reducing bacteria; final medium pH ~8.0; cultivated in shaking incubator at 25 °C under anoxic atmosphere for 2 weeks",
-      "evidence_hint": "To produce biogenic metal-precipitates, 2 mL of the filtrate at pH 7.7 was added to the medium containing 10 mM of glucose and 2 mL of enriched metal-reducing bacteria; cultivated at 25 °C under anoxic atmosphere for 2 weeks."
+      "condition_summary": "2 mL filtrate + 10 mM glucose + 2 mL enriched bacteria in pre-reduced medium (pH ~8.0); 25 C; anoxic; shaking incubator; 2 weeks",
+      "evidence_hint": "2 mL of the pH 7.7 filtrate was added to medium containing 10 mM glucose and 2 mL enriched metal-reducing bacteria and cultivated at 25 C anoxically for 2 weeks."
     }
   ],
   "process_targets": [
     {
-      "name": "NH4OH precipitation from digested aqua regia",
+      "name": "metal precipitation by NH4OH addition",
       "parent_process": null,
-      "aliases": [],
+      "aliases": [
+        "chemical method for metal recovery",
+        "ammonium hydroxide precipitation"
+      ],
       "stage_role": "recovery_process",
       "acts_on_weee": false,
-      "evidence_hint": "Ammonium hydroxide was slowly added to the acidic metal solution to precipitate ferrous, non-ferrous, and precious metals; precipitates formed at specific pH ranges."
+      "evidence_hint": "NH4OH was slowly added to the acidic aqua regia metal solution with rapid stirring; precipitates formed at pH ranges and were centrifuged, washed, and dried."
     },
     {
-      "name": "biogenic metal precipitation from pH 7.7 filtrate",
+      "name": "biogenic metal precipitation by metal-reducing bacteria",
       "parent_process": null,
-      "aliases": [],
+      "aliases": [
+        "biological method for metal recovery"
+      ],
       "stage_role": "recovery_process",
       "acts_on_weee": false,
-      "evidence_hint": "2 mL of the filtrate at pH 7.7 was added to medium containing 10 mM glucose and 2 mL of enriched metal-reducing bacteria, and cultivated for 2 weeks to produce biogenic metal-precipitates."
+      "evidence_hint": "2 mL of the pH 7.7 filtrate was added to medium containing 10 mM glucose and 2 mL enriched metal-reducing bacteria and cultivated anoxically for 2 weeks to produce biogenic metal-precipitates."
+    },
+    {
+      "name": "metal dissolution in aqua regia",
+      "parent_process": null,
+      "aliases": [
+        "aqua regia leaching",
+        "dissolution of metals in aqua regia"
+      ],
+      "stage_role": null,
+      "acts_on_weee": null,
+      "evidence_hint": "The weight % of the initial leached metals from the camera and PCB parts into aqua regia were determined via ICP-AES (Figure 3). The major metals (over 800 mg/L) leached from the camera parts were Cu (4610 mg/L), Fe (3380 mg/L), Zn (1930 mg/L), Ni (1690 mg/L), and Nd (874 mg/L)"
     }
   ]
 }

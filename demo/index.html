@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OntoWEEE</title><link rel="stylesheet" href="style.css?v=record-hierarchy"><link rel="stylesheet" href="redesign.css?v=evidence-review-20261107"><link rel="stylesheet" href="battery-overview.css?v=default-help-cursor-20261108"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <title>OntoWEEE</title><link rel="stylesheet" href="style.css?v=1fef2f779334"><link rel="stylesheet" href="redesign.css?v=19cac48151ca"><link rel="stylesheet" href="battery-overview.css?v=00986de63220"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
 </head>
 <body data-overview="datasets/battery20/overview/data.json" data-graph="datasets/battery20/full-traces/data/graph.json" data-papers="datasets/battery20/papers.json">
   <header>
@@ -16,7 +16,7 @@
         <label for="search">Find an entity</label><input id="search" placeholder="Nokia 5110 / Cu / bioleaching" autocomplete="off">
         <details class="graph-browser"><summary>Browse displayed graph</summary><label for="graph-node-select">Node or group</label><select id="graph-node-select"></select><div class="button-row"><button id="graph-node-inspect">Inspect node</button><button id="graph-node-open">Open node</button></div><label for="graph-edge-select">Relation</label><select id="graph-edge-select"></select><button id="graph-edge-inspect">Inspect relation</button></details>
         <div id="search-results" class="search-results" role="list" aria-label="Entity search results"></div>
-        <label for="source-filter">Data source</label><select id="source-filter"><option value="">All 37 sources</option></select>
+        <label for="source-filter">Data source</label><select id="source-filter"><option value="">All 38 sources</option></select>
         <label for="type-filter">Entity type</label><select id="type-filter"><option value="">All types</option></select>
         <label for="relation-filter">Relation type</label><select id="relation-filter"><option value="">All relations</option></select>
         <label class="switch"><input id="fusion-toggle" type="checkbox">Show cross-source fusion links</label>
@@ -29,7 +29,7 @@
         <div id="case-summary"></div><button id="case-on-graph" hidden>Locate paper in fused graph</button>
       </section>
       <div class="legend" id="legend"></div>
-      <footer><span id="snapshot-counts">25 papers · 12 catalog records</span></footer>
+      <footer><span id="snapshot-counts">26 papers · 12 catalog records</span></footer>
     </aside>
     <main>
       <section id="overview-view" class="view" aria-label="Feedstock overview"><div id="battery-overview">Loading reviewed feedstocks…</div></section>
@@ -54,7 +54,7 @@
       <section id="papers-view" class="view" aria-labelledby="papers-title" hidden>
         <section class="reference-module" aria-labelledby="papers-title">
           <h2 id="papers-title">Papers in this demo</h2>
-          <p class="reference-note">25 papers · Select a title to open its publication page in a new tab.</p>
+          <p class="reference-note">26 papers · Select a title to open its publication page in a new tab.</p>
           <ol id="paper-list" class="reference-list" aria-label="Papers in alphabetical order"></ol>
         </section>
         <section class="catalog-reference reference-module" aria-labelledby="catalog-title">
@@ -126,6 +126,7 @@
       <div id="status" role="status">Loading frozen graph…</div>
     </main>
   </div>
-  <script src="hierarchy.js?v=component-name-groups-20261101"></script><script src="replay.js?v=concise-copy-20261108"></script><script src="trace.js?v=concise-copy-20261108"></script><script src="walkthrough.js?v=about-20261103"></script><script src="battery-overview.js?v=concise-route-filters-20261108"></script><script src="battery-static.js?v=light-statistics-20261109"></script><script src="app.js?v=catalog-source-20261108"></script>
+  <script id="display-vocabulary" type="application/json">{"Product": {"mobile phone": ["mobile phones", "mobile phone e-waste", "mobile phone ewaste", "mobile-phone e-waste", "mobile-phone ewaste", "cell phone", "cell phones", "smartphone", "smartphones", "Phone", "end-of-life mobile phone", "end-of-life mobile phones", "end-of-life smartphones"]}}</script>
+  <script src="hierarchy.js?v=614bec6b6308"></script><script src="replay.js?v=df0ade202378"></script><script src="trace.js?v=40f9d23ded08"></script><script src="walkthrough.js?v=544de085e883"></script><script src="battery-overview.js?v=c730c1db6bc6"></script><script src="battery-static.js?v=dbe06daac444"></script><script src="app.js?v=6e98667892ee"></script>
 </body>
 </html>

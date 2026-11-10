@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "review_date": "2026-11-08",
+  "review_date": "2026-11-10",
   "classification_basis": "Source-reviewed material classes and preparation attributes; sample names remain labels, not statistical group keys. Unknown measurement bases are not assumed equivalent.",
   "chemistries": {
     "lco": "LiCoO2-related (LCO)",
@@ -14,7 +14,8 @@
     "ni-mh": "Nickel-metal hydride (Ni-MH)",
     "zn-mn": "Zinc-manganese (Zn-Mn)",
     "non-battery-unspecified": "Not specified",
-    "ndfeb": "NdFeB"
+    "ndfeb": "NdFeB",
+    "strontium-ferrite": "Strontium ferrite"
   },
   "streams": {
     "whole": "Whole batteries",
@@ -236,7 +237,7 @@
     {
       "case_id": "smartphones",
       "paper": "Assessment of Smartphones’ Components and Materials for a Recycling Perspective- Tendencies of Composition and Target Elements",
-      "input_sha256": "6acd541c4bc23b29c0a7cff37558ce21dc93c112835ed83b67583e5323cac5b9",
+      "input_sha256": "44936b296e4cd571dfd2c4a8f02e7dda57b4faa6082960cb394009b19427b4a6",
       "text_sha256": "d6cc4f900510f51e1a402bd0cf48f35267033418b7f24b7244ab78aad29b5e01",
       "profiles": [
         {
@@ -1999,7 +2000,7 @@
     {
       "case_id": "source-ebaeabc9afaa44fc",
       "paper": "Metal Recovery from the Mobile Phone Waste by Chemical and Biological Treatments",
-      "input_sha256": "1b9c41a521471c12a090165d56c6b5965fbed397c017ab6fb11b12f7b064b5dd",
+      "input_sha256": "eccb85852aa5eaadbeb980b1267ed4ba4e73bdd5cd70884ddb7ca33b611c6080",
       "text_sha256": "37e476734212426f1dbc1fc0b31bd37e6e98c6b83ada7d34c04d41795fa69120",
       "profiles": [
         {
@@ -2016,11 +2017,11 @@
           ],
           "composition": [],
           "process_ids": [
-            "Process_NH4OH_precipitation_from_digested_aqua_regia"
+            "Process_metal_precipitation_by_NH4OH_addition"
           ],
           "method_family": null,
           "method_families": {
-            "Process_NH4OH_precipitation_from_digested_aqua_regia": "pH-controlled precipitation"
+            "Process_metal_precipitation_by_NH4OH_addition": "pH-controlled precipitation"
           },
           "note": "",
           "evidence": [
@@ -2054,11 +2055,11 @@
           ],
           "composition": [],
           "process_ids": [
-            "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate"
+            "Process_biogenic_metal_precipitation_by_metal_reducing_bacteria"
           ],
           "method_family": null,
           "method_families": {
-            "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate": "Biogenic precipitation"
+            "Process_biogenic_metal_precipitation_by_metal_reducing_bacteria": "Biogenic precipitation"
           },
           "note": "",
           "evidence": [
@@ -2226,6 +2227,1164 @@
           ]
         }
       ]
+    },
+    {
+      "case_id": "source-794f7c45d1d2e373",
+      "paper": "Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes",
+      "input_sha256": "42383849cb66d43c6e43feeab9b838825802cf79e940aedc35e15531fb8b7aa8",
+      "text_sha256": "c0447c543a97e4ab5dc642ad8c45d2bceefa13daa7b61ae959cc3d73e89cd645",
+      "profiles": [
+        {
+          "id": "source-794f7c45d1d2e373/laptop-pack",
+          "label": "Laptop lithium-ion battery pack",
+          "component": "battery",
+          "chemistry": "li-ion-unspecified",
+          "stream": "whole",
+          "origin": "recycling-company",
+          "state": "Laptop lithium-ion battery pack",
+          "entity_ids": [
+            "Component_Laptop_Li_ion_battery__LIB__pack"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0006",
+              "rows": [
+                10
+              ],
+              "columns": [
+                4
+              ],
+              "element_axis": "row",
+              "element_column": 3,
+              "elements": [
+                "Co"
+              ],
+              "subject_ids": [
+                "Component_Laptop_Li_ion_battery__LIB__pack"
+              ],
+              "basis": "mass",
+              "assay_method": "aas",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified",
+              "qualifier": null,
+              "measurement_state_note": "Mass fraction of Laptop lithium-ion battery pack."
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "The reported mass fraction refers to the complete pack or cell as labelled. The source lists example cathode chemistries without resolving the chemistry of every measured sample.",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ],
+          "material_class": "battery-pack",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/laptop-cell",
+          "label": "Cylindrical lithium-ion cells from laptop battery packs",
+          "component": "battery",
+          "chemistry": "li-ion-unspecified",
+          "stream": "whole",
+          "origin": "recycling-company",
+          "state": "Cylindrical lithium-ion cells from laptop battery packs",
+          "entity_ids": [
+            "Component_Laptop_Li_ion_battery__LIB__packs_Cylinder_LIB_cells___6_"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0006",
+              "rows": [
+                10
+              ],
+              "columns": [
+                4
+              ],
+              "element_axis": "row",
+              "element_column": 3,
+              "elements": [
+                "Co"
+              ],
+              "subject_ids": [
+                "Component_Laptop_Li_ion_battery__LIB__packs_Cylinder_LIB_cells___6_"
+              ],
+              "basis": "mass",
+              "assay_method": "aas",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified",
+              "qualifier": null,
+              "measurement_state_note": "Mass fraction of Cylindrical lithium-ion cells from laptop battery packs."
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "The reported mass fraction refers to the complete pack or cell as labelled. The source lists example cathode chemistries without resolving the chemistry of every measured sample.",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ],
+          "material_class": "whole-cell",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/phone-cell",
+          "label": "Mobile phone lithium-ion battery cells",
+          "component": "battery",
+          "chemistry": "li-ion-unspecified",
+          "stream": "whole",
+          "origin": "recycling-company",
+          "state": "Mobile phone lithium-ion battery cells",
+          "entity_ids": [
+            "Component_Mobile_Phones_e__assorted__LIB"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0006",
+              "rows": [
+                14
+              ],
+              "columns": [
+                4
+              ],
+              "element_axis": "row",
+              "element_column": 3,
+              "elements": [
+                "Co"
+              ],
+              "subject_ids": [
+                "Component_Mobile_Phones_e__assorted__LIB"
+              ],
+              "basis": "mass",
+              "assay_method": "aas",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified",
+              "qualifier": null,
+              "measurement_state_note": "Mass fraction of Mobile phone lithium-ion battery cells."
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "The reported mass fraction refers to the complete pack or cell as labelled. The source lists example cathode chemistries without resolving the chemistry of every measured sample.",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ],
+          "material_class": "whole-cell",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/mp3-cell",
+          "label": "MP3 player lithium-ion battery cells",
+          "component": "battery",
+          "chemistry": "li-ion-unspecified",
+          "stream": "whole",
+          "origin": "recycling-company",
+          "state": "MP3 player lithium-ion battery cells",
+          "entity_ids": [
+            "Component_MP3_players___assorted_e___LIB"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0006",
+              "rows": [
+                19
+              ],
+              "columns": [
+                4
+              ],
+              "element_axis": "row",
+              "element_column": 3,
+              "elements": [
+                "Co"
+              ],
+              "subject_ids": [
+                "Component_MP3_players___assorted_e___LIB"
+              ],
+              "basis": "mass",
+              "assay_method": "aas",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified",
+              "qualifier": null,
+              "measurement_state_note": "Mass fraction of MP3 player lithium-ion battery cells."
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "The reported mass fraction refers to the complete pack or cell as labelled. The source lists example cathode chemistries without resolving the chemistry of every measured sample.",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ],
+          "material_class": "whole-cell",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/magnetron-ring",
+          "label": "Magnetron strontium-ferrite ring magnets",
+          "component": "magnet",
+          "chemistry": "strontium-ferrite",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "Magnetron strontium-ferrite ring magnets",
+          "entity_ids": [
+            "Component_Domestic_microwave_magnetron_a_Ring_magnets___2_"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0006",
+              "rows": [
+                1
+              ],
+              "columns": [
+                4
+              ],
+              "element_axis": "row",
+              "element_column": 3,
+              "elements": [
+                "Co"
+              ],
+              "subject_ids": [
+                "Component_Domestic_microwave_magnetron_a_Ring_magnets___2_"
+              ],
+              "basis": "mass",
+              "assay_method": "aas",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified",
+              "qualifier": null,
+              "measurement_state_note": "Mass fraction of Magnetron strontium-ferrite ring magnets."
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ],
+          "material_class": "ferrite-magnet",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": true,
+          "classification_evidence": [
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/magnetron-core",
+          "label": "Magnetron filter-box ferrite cores",
+          "component": "electronic-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "Magnetron filter-box ferrite cores",
+          "entity_ids": [
+            "Component_Domestic_microwave_magnetron_a_Filter_box_ferrite_cores___2_"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0006",
+              "rows": [
+                2
+              ],
+              "columns": [
+                4
+              ],
+              "element_axis": "row",
+              "element_column": 3,
+              "elements": [
+                "Co"
+              ],
+              "subject_ids": [
+                "Component_Domestic_microwave_magnetron_a_Filter_box_ferrite_cores___2_"
+              ],
+              "basis": "mass",
+              "assay_method": "aas",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified",
+              "qualifier": null,
+              "measurement_state_note": "Mass fraction of Magnetron filter-box ferrite cores."
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ],
+          "material_class": "ferrite-core",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/hdd-magnet",
+          "label": "Hard-disk-drive NdFeB magnets",
+          "component": "magnet",
+          "chemistry": "ndfeb",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "Hard-disk-drive NdFeB magnets",
+          "entity_ids": [
+            "Component_31_2_inch_Hard_DiskDrives___HDDs__b_Voice_coil_accelerator_magnets___2_"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0006",
+              "rows": [
+                4
+              ],
+              "columns": [
+                4
+              ],
+              "element_axis": "row",
+              "element_column": 3,
+              "elements": [
+                "Nd"
+              ],
+              "subject_ids": [
+                "Component_31_2_inch_Hard_DiskDrives___HDDs__b_Voice_coil_accelerator_magnets___2_"
+              ],
+              "basis": "mass",
+              "assay_method": "icp-ms",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified",
+              "qualifier": null,
+              "measurement_state_note": "Mass fraction of Hard-disk-drive NdFeB magnets."
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ],
+          "material_class": "ndfeb-magnet",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": true,
+          "classification_evidence": [
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/speaker-magnet",
+          "label": "Mobile phone speaker NdFeB magnets",
+          "component": "magnet",
+          "chemistry": "ndfeb",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "Mobile phone speaker NdFeB magnets",
+          "entity_ids": [
+            "Component_Mobile_Phones_e__assorted__Speaker_Magnet"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0006",
+              "rows": [
+                17
+              ],
+              "columns": [
+                4
+              ],
+              "element_axis": "row",
+              "element_column": 3,
+              "elements": [
+                "Nd"
+              ],
+              "subject_ids": [
+                "Component_Mobile_Phones_e__assorted__Speaker_Magnet"
+              ],
+              "basis": "mass",
+              "assay_method": "icp-ms",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified",
+              "qualifier": null,
+              "measurement_state_note": "Mass fraction of Mobile phone speaker NdFeB magnets."
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ],
+          "material_class": "ndfeb-magnet",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": true,
+          "classification_evidence": [
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/ccfl",
+          "label": "Laptop-screen CCFLs without connecting wires",
+          "component": "lighting-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "Laptop-screen CCFLs without connecting wires",
+          "entity_ids": [
+            "Component_Laptop_screens_e_CCFL"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0006",
+              "rows": [
+                13
+              ],
+              "columns": [
+                4
+              ],
+              "element_axis": "row",
+              "element_column": 3,
+              "elements": [
+                "Y"
+              ],
+              "subject_ids": [
+                "Component_Laptop_screens_e_CCFL"
+              ],
+              "basis": "mass",
+              "assay_method": "icp-ms",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified",
+              "qualifier": null,
+              "measurement_state_note": "Mass fraction of Laptop-screen CCFLs without connecting wires."
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ],
+          "material_class": "ccfl",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "Details of CRMs identified in samples are given in Table 5 along with literature data from previous studies of CRMs in WEEE items. XRF failed to reveal the presence of the REMs Dy and Pr known to be present in NIB alloy (Buchert et al., 2012) and Ce, La, Eu, Gd and Tb known to be present in CCFL phosphors (Dupont and Binnemans, 2015; Hobohm et al., 2016). Pt in HDD platers and In in LCD screens of all devices were also undetected by XRF although known to be present (Buchert et al. 2012). In all cases this is probably due to the low levels of CRMs present falling below the instrument detection limit. Quantitative analysis of identified CRMs in certain samples, i.e. Co in LIBs, Nd in NIB magnets, and Y in CCFLs, was conducted to give a basis for discussion of recovery potential with industry experts. Co content of packet type LIBs from phones and MP3 players correlates well with literature data (\\~19 wt%) Co content of laptop battery packs was found to be \\~50 g (15.8 wt%) which difers from data presented by Buchert et al. (2012) of 65 g (13.8 wt%). HDD NIB magnets were found to contain \\~35 wt% Nd in thei alloy, \\~5% higher than reported for 2½ inch HDD magnets by Buchert et al., (2012) and \\~12% higher than reported by Ueberschaar and Rotter (2015). Nd content of NIB speaker magnets was found to be \\~28 wt%, which correlates well with literature data. An order of magnitude discrepancy was found between measured Y content of CCFL phosphor in laptop LCD samples presented here (\\~13 mg) and that reported by Buchert et al. (2012) (1.8 mg). One likely source of discrepancy is that Buchert et al., (2012) have calculated this quantity from mean mea surements of CCFL tube masses from numerous samples, and used as sumptions and estimates of mass fractions of luminescent substances in CCFL tubes and Y within the phosphor itself, resulting in considerable uncertainty in the final calculated value, something the authors them selves highlight. Disassembly of components from the security dongle was not possible because all internal components, including a primary Li button-cell, LCD display and PCB were encapsulated in resin. The only viable recycling of this item is via comminution which eliminate any opportunity for reuse, and results in CRM dissipation. Table 6 summarises locations of individual CRMs identified across WEEE sam ples. Overall, the greatest variety of CRMs are found within PCBs particularly in those which have been miniaturised. Sb is frequently found in plastics as a flame retardant (Sb2O3), Co in magnets and ferrite cores of magnetrons, Mg-alloy is used for laptop housings, Y is present in the phosphors of LCD CCFL backlights, Ga is consistently found in LEDs, and Nd is present in NIB magnets of HDDs and mobile phone speakers."
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/mlcc-small",
+          "label": "MLCCs, 0.55 × 0.25 mm",
+          "component": "electronic-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "MLCCs, 0.55 × 0.25 mm",
+          "entity_ids": [
+            "Component_0_55_0_25_mm_MLCCs_Multi_layered_ceramic_capacitor"
+          ],
+          "composition": [
+            {
+              "elements": [
+                "Y"
+              ],
+              "subject_ids": [
+                "Component_0_55_0_25_mm_MLCCs_Multi_layered_ceramic_capacitor"
+              ],
+              "basis": "mass",
+              "assay_method": "icp-ms",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ],
+          "material_class": "ceramic-capacitor",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/mlcc-large",
+          "label": "MLCCs, 0.9 × 0.6 mm",
+          "component": "electronic-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "MLCCs, 0.9 × 0.6 mm",
+          "entity_ids": [
+            "Component_0_9_x0_6_mm_MLCCs_Multi_layered_ceramic_capacitor"
+          ],
+          "composition": [
+            {
+              "elements": [
+                "Y"
+              ],
+              "subject_ids": [
+                "Component_0_9_x0_6_mm_MLCCs_Multi_layered_ceramic_capacitor"
+              ],
+              "basis": "mass",
+              "assay_method": "icp-ms",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ],
+          "material_class": "ceramic-capacitor",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/ta-capacitor",
+          "label": "Tantalum capacitors, 100 μF 10 V 107A",
+          "component": "electronic-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "Tantalum capacitors, 100 μF 10 V 107A",
+          "entity_ids": [
+            "Component_tantalum_capacitor"
+          ],
+          "composition": [
+            {
+              "elements": [
+                "Ta",
+                "Ag",
+                "Sb"
+              ],
+              "subject_ids": [
+                "Component_tantalum_capacitor"
+              ],
+              "basis": "mass",
+              "assay_method": "xrf",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ],
+          "material_class": "tantalum-capacitor",
+          "preparation": [
+            "dismantled",
+            "ground"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/pcb-table9-row1",
+          "label": "Mounted contacts from mobile phone PCBs",
+          "component": "electronic-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "Mounted contacts from mobile phone PCBs",
+          "entity_ids": [
+            "Component_Mobile_phone_Mounted_contact"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0012",
+              "rows": [
+                1
+              ],
+              "columns": [
+                2
+              ],
+              "element_axis": "cell",
+              "elements": [
+                "Au",
+                "Ag",
+                "Pd"
+              ],
+              "subject_ids": [
+                "Component_Mobile_phone_Mounted_contact"
+              ],
+              "basis": "mass",
+              "assay_method": "aas",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "Table 9 reports composition of isolated components. Disassembly times are not recovery efficiencies. Approximate concentrations remain approximate.",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ],
+          "material_class": "pcb-contact",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/pcb-table9-row2",
+          "label": "Coated edge contacts from TV-LCD PCBs",
+          "component": "electronic-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "Coated edge contacts from TV-LCD PCBs",
+          "entity_ids": [
+            "Component_TV_LCD_PCB_Coated_edge_contact"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0012",
+              "rows": [
+                2
+              ],
+              "columns": [
+                2
+              ],
+              "element_axis": "cell",
+              "elements": [
+                "Au",
+                "Ag",
+                "Pd"
+              ],
+              "subject_ids": [
+                "Component_TV_LCD_PCB_Coated_edge_contact"
+              ],
+              "basis": "mass",
+              "assay_method": "aas",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "Table 9 reports composition of isolated components. Disassembly times are not recovery efficiencies. Approximate concentrations remain approximate.",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ],
+          "material_class": "pcb-contact",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/pcb-table9-row3",
+          "label": "Coated edge contacts from Ethernet cards",
+          "component": "electronic-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "Coated edge contacts from Ethernet cards",
+          "entity_ids": [
+            "Component_Ethernet_card_Coated_edge_contact"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0012",
+              "rows": [
+                3
+              ],
+              "columns": [
+                2
+              ],
+              "element_axis": "cell",
+              "elements": [
+                "Au",
+                "Ag",
+                "Pd"
+              ],
+              "subject_ids": [
+                "Component_Ethernet_card_Coated_edge_contact"
+              ],
+              "basis": "mass",
+              "assay_method": "aas",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "Table 9 reports composition of isolated components. Disassembly times are not recovery efficiencies. Approximate concentrations remain approximate.",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ],
+          "material_class": "pcb-contact",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/pcb-table9-row4",
+          "label": "Coated edge contacts from server boards",
+          "component": "electronic-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "Coated edge contacts from server boards",
+          "entity_ids": [
+            "Component_Server_board_Coated_edge_contact"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0012",
+              "rows": [
+                4
+              ],
+              "columns": [
+                2
+              ],
+              "element_axis": "cell",
+              "elements": [
+                "Au",
+                "Ag",
+                "Pd"
+              ],
+              "subject_ids": [
+                "Component_Server_board_Coated_edge_contact"
+              ],
+              "basis": "mass",
+              "assay_method": "aas",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "Table 9 reports composition of isolated components. Disassembly times are not recovery efficiencies. Approximate concentrations remain approximate.",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ],
+          "material_class": "pcb-contact",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/pcb-table9-row6",
+          "label": "SMD components from MP3 player PCBs",
+          "component": "electronic-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "SMD components from MP3 player PCBs",
+          "entity_ids": [
+            "Component_MP3_player_main_PCB_SMD"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0012",
+              "rows": [
+                6
+              ],
+              "columns": [
+                2
+              ],
+              "element_axis": "cell",
+              "elements": [
+                "Au",
+                "Ag",
+                "Pd"
+              ],
+              "subject_ids": [
+                "Component_MP3_player_main_PCB_SMD"
+              ],
+              "basis": "mass",
+              "assay_method": "unspecified",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "Table 9 reports composition of isolated components. Disassembly times are not recovery efficiencies. Approximate concentrations remain approximate.",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ],
+          "material_class": "surface-mounted-components",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/pcb-table9-row7",
+          "label": "SMD components from LCD main PCBs",
+          "component": "electronic-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "SMD components from LCD main PCBs",
+          "entity_ids": [
+            "Component_LCD_main_PCB_SMD"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0012",
+              "rows": [
+                7
+              ],
+              "columns": [
+                2
+              ],
+              "element_axis": "cell",
+              "elements": [
+                "Au",
+                "Ag",
+                "Pd"
+              ],
+              "subject_ids": [
+                "Component_LCD_main_PCB_SMD"
+              ],
+              "basis": "mass",
+              "assay_method": "unspecified",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "Table 9 reports composition of isolated components. Disassembly times are not recovery efficiencies. Approximate concentrations remain approximate.",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ],
+          "material_class": "surface-mounted-components",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/pcb-table9-row8",
+          "label": "SMD components from mobile phone PCBs",
+          "component": "electronic-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "SMD components from mobile phone PCBs",
+          "entity_ids": [
+            "Component_Mobile_phone_SMD"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0012",
+              "rows": [
+                8
+              ],
+              "columns": [
+                2
+              ],
+              "element_axis": "cell",
+              "elements": [
+                "Au",
+                "Ag",
+                "Pd"
+              ],
+              "subject_ids": [
+                "Component_Mobile_phone_SMD"
+              ],
+              "basis": "mass",
+              "assay_method": "unspecified",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "Table 9 reports composition of isolated components. Disassembly times are not recovery efficiencies. Approximate concentrations remain approximate.",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ],
+          "material_class": "surface-mounted-components",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/pcb-table9-row9",
+          "label": "SMD components from camera PCBs",
+          "component": "electronic-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "SMD components from camera PCBs",
+          "entity_ids": [
+            "Component_Camera_SMD"
+          ],
+          "composition": [
+            {
+              "table_id": "TABLE_Towards Increased Recovery of Critical Raw Materials from Weee– Evaluation of Crms at a Component Level and Pre-Processing Methods for Interface Optimisation with Recovery Processes_0012",
+              "rows": [
+                9
+              ],
+              "columns": [
+                2
+              ],
+              "element_axis": "cell",
+              "elements": [
+                "Au",
+                "Ag",
+                "Pd"
+              ],
+              "subject_ids": [
+                "Component_Camera_SMD"
+              ],
+              "basis": "mass",
+              "assay_method": "unspecified",
+              "mass_denominator": "sample-mass",
+              "moisture_basis": "unspecified"
+            }
+          ],
+          "process_ids": [],
+          "method_family": null,
+          "method_families": {},
+          "note": "Table 9 reports composition of isolated components. Disassembly times are not recovery efficiencies. Approximate concentrations remain approximate.",
+          "evidence": [
+            "Samples selected were high-volume items in WEEE received by the AATF, and known, from operator knowledge and literature data, to contain CRMs and therefore represent the highest potential for CRM recovery (Buchert et al., 2012, 2008; Cucchiella et al., 2015; Jandric et al., 2018; Oguchi et al., 2011). Those selected are given in Table 3. Samples 1-6 and 11-16 were generated through existing manual disassembly operations at the AATF. Samples 7-10 are whole products which are not currently disassembled as it is uneconomical due to poor product design for recycling. Samples 11- 16 were chosen to demonstrate/evaluate methods for disassembly of CRM bearing components from PCBs. Duplicates were gathered for repeat analyses and evaluation of multiple recycling methods.",
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ],
+          "material_class": "surface-mounted-components",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "CRMs identified in common PCB components, including SMDs and Au-alloy coated on PCB surfaces and contacts, are summarised in Table 7. Two main kinds of Au contacts are found on PCBs: those coated directly onto PCBs such as edge contacts on PC PCI cards and those in connectors mounted and soldered onto PCBs e.g. HDMI and USB ports (Figure 2). Pd was found in combination with Au on occasion, sug gesting Pd is alloyed with Au in the coating. Many PCBs had large areas of their surfaces coated with Au. This surface Au was prevalent in mo bile phones and LCD screen PCBs (Figure 3). XRF confirmed the alloy was similar in composition to that used in contacts i.e. Au occasionally alloyed with Pd. Ag is found in solder of samples as Ag. -Sn alloy, pre valent in RoHS compliant equipment with Pb-free solder. Chip resistors were the most commonly encountered SMDs and contained Ag, Ru and Sb; with Pd in approximately half of those analysed; and Co in less common larger resistors. Integrated circuits (ICs) were found in all PCBs to contain Au, Ag., often Sb, and occasionally Pd and Wa known in terconnect material in ICs which was identified by XRF in ground samples. Multi-layered ceramic capacitors (MLCCs) are common on PCB surfaces in a variety of sizes and colours. CRM content varies and can be distinguished by component colour. Y is present in brown MLCCs, probably as an additive in BaTiO3 to control formation of ‘core shell’ microstructure (Kim et al., 2008). ICP-MS of two common sizes of MLCCs revealed Y content of the 0.55×0.25 mm and 0.9 x0.6 mm components to be 0.3 wt% and 0.8 wt% respectively. Less prevalent, but common in highly miniaturised electronics e.g. phones and MP3 players, were MLCCs containing Nb, which is used as an additive in Ba ΓiO3 to control microstructure (Kim et al., 2008). Nb is found in combination with: Pd in purple, blue and red MLCCs; Ag in gold coloured MLCCs; and Ir in of-white coloured SMDs (1.8×1.1 mm and 0.9 x0.6 mm sizes). Transistors appear in two forms: standard small outline transistors, and smaller 3-pin small outline transistors. The former, which contain Au, Ag and Pd were found in PCBs of items such as HDDs and TVs, but not in miniaturised PCBs. In minaturised PCBs two types of 3-pin transistors are common. Both contain Au and Ag, with the more common black numbered components containing Sb, and the less common coloured components (pink yellow, green) on server boards containing Ga. Ta-capacitors of numerous sizes and capacitances were found. Typically, 1-3 Ta-capacitors were found per PCBs in min iaturised samples, where high charge storage density is required, the exception being the server board sample which contained 15. To detect Ta with XRF in these plastic encapsulations, components were cut open or ground into powder. The plastic itself contains Sb (probably as Sb2O3 flame retardant), and Ag was detected at component terminals. Quan titative analysis revealed 100 μF 10V 107A Ta-capacitors isolated from samples contained 62 ± 9 wt% Ta, with 3 ±1 wt% Ag and 1.6 ± 0.5 wt % Sb. Chip arrays containing Ag with either Ru or Pd and Au were common to all PCBs with the exception of power boards. Inductors of three types were found on mobile phone PCBs, and less frequently on other miniaturised PCBs. These were distinguishable by colour, with Pd, Ag and Nb in brown, Ag in grey, and Ag and Co in purple inductors Polarized moulded body diodes were infrequently found across samples, appearing similar to Ta-capacitors to the naked eye due to the shape of their plastic encapsulation, these were found to contain Sb, probably as Sb2O3"
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/edge-contact-treatment",
+          "label": "Isolated PCB edge contacts",
+          "component": "electronic-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "Isolated PCB edge contacts",
+          "entity_ids": [
+            "Component_edge_contact"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_dry_ashing_of_edge_contacts_from_PCB"
+          ],
+          "method_family": "Dry ashing",
+          "method_families": {},
+          "note": "The frozen extraction records this pre-processing method without a numeric material-recovery result.",
+          "evidence": [
+            "To concentrate CRMs and increase grade for recovery, dry ashing of isolated edge contacts from PCBs was conducted at 800 °C for 30 minutes using a CEM Phoenix microwave mufle furnace, (Marlon and Moraes, 2014). In order to concentrate CRMs in mixed simultaneously disassembled SMD PCB components into distinct fractions, sieving with mesh sizes of: 9.52 mm, 2.80 mm, 1.68 mm and 1.4 mm was used. Isolated SMDs were combined with virgin SMDs to give an appropriate quantity for evaluation of the sieving procedure. Components were shaken in the stack of sieves for 60 s."
+          ],
+          "material_class": "pcb-contact",
+          "preparation": [
+            "dismantled"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "To concentrate CRMs and increase grade for recovery, dry ashing of isolated edge contacts from PCBs was conducted at 800 °C for 30 minutes using a CEM Phoenix microwave mufle furnace, (Marlon and Moraes, 2014). In order to concentrate CRMs in mixed simultaneously disassembled SMD PCB components into distinct fractions, sieving with mesh sizes of: 9.52 mm, 2.80 mm, 1.68 mm and 1.4 mm was used. Isolated SMDs were combined with virgin SMDs to give an appropriate quantity for evaluation of the sieving procedure. Components were shaken in the stack of sieves for 60 s."
+          ]
+        },
+        {
+          "id": "source-794f7c45d1d2e373/mixed-smd-sieving",
+          "label": "Isolated SMD components mixed with virgin SMDs",
+          "component": "electronic-component",
+          "chemistry": "non-battery-unspecified",
+          "stream": "separated-fractions",
+          "origin": "recycling-company",
+          "state": "Isolated SMD components mixed with virgin SMDs",
+          "entity_ids": [
+            "Component_SMD_PCB_component",
+            "Component_surface_mounted_device_component"
+          ],
+          "composition": [],
+          "process_ids": [
+            "Process_sieving_of_disassembled_SMD_PCB_component"
+          ],
+          "method_family": "Sieving",
+          "method_families": {},
+          "note": "The frozen extraction records this pre-processing method without a numeric material-recovery result.",
+          "evidence": [
+            "To concentrate CRMs and increase grade for recovery, dry ashing of isolated edge contacts from PCBs was conducted at 800 °C for 30 minutes using a CEM Phoenix microwave mufle furnace, (Marlon and Moraes, 2014). In order to concentrate CRMs in mixed simultaneously disassembled SMD PCB components into distinct fractions, sieving with mesh sizes of: 9.52 mm, 2.80 mm, 1.68 mm and 1.4 mm was used. Isolated SMDs were combined with virgin SMDs to give an appropriate quantity for evaluation of the sieving procedure. Components were shaken in the stack of sieves for 60 s."
+          ],
+          "material_class": "surface-mounted-components",
+          "preparation": [
+            "dismantled",
+            "mixed-with-virgin-components"
+          ],
+          "size_fraction_mm": null,
+          "thermal_treatment": null,
+          "feedstock_history": "end-of-life-and-virgin-components",
+          "chemistry_resolved": false,
+          "classification_evidence": [
+            "To concentrate CRMs and increase grade for recovery, dry ashing of isolated edge contacts from PCBs was conducted at 800 °C for 30 minutes using a CEM Phoenix microwave mufle furnace, (Marlon and Moraes, 2014). In order to concentrate CRMs in mixed simultaneously disassembled SMD PCB components into distinct fractions, sieving with mesh sizes of: 9.52 mm, 2.80 mm, 1.68 mm and 1.4 mm was used. Isolated SMDs were combined with virgin SMDs to give an appropriate quantity for evaluation of the sieving procedure. Components were shaken in the stack of sieves for 60 s."
+          ]
+        }
+      ]
     }
   ],
   "material_classes": {
@@ -2244,7 +3403,16 @@
     "populated-pcb": "Component-bearing printed circuit board",
     "ndfeb-magnet-powder": "NdFeB magnet powder",
     "metal-bearing-leachate": "Metal-bearing leachate",
-    "thermally-treated-phone-fraction": "Thermally treated phone fraction"
+    "thermally-treated-phone-fraction": "Thermally treated phone fraction",
+    "battery-pack": "Battery pack",
+    "ndfeb-magnet": "NdFeB magnet",
+    "ferrite-magnet": "Ferrite magnet",
+    "ferrite-core": "Ferrite core",
+    "ccfl": "Cold-cathode fluorescent lamp",
+    "ceramic-capacitor": "Ceramic capacitor",
+    "tantalum-capacitor": "Tantalum capacitor",
+    "pcb-contact": "PCB contact",
+    "surface-mounted-components": "Surface-mounted components"
   },
   "comparison_vocabularies": {
     "mass_denominator": {
@@ -2261,13 +3429,16 @@
       "icp-aes": "Digestion / ICP-AES",
       "aas": "Digestion / AAS",
       "xrf": "XRF",
-      "unspecified": "Assay not resolved"
+      "unspecified": "Assay not resolved",
+      "icp-ms": "Digestion / ICP-MS"
     }
   },
   "components": {
     "battery": "Battery",
     "pcb": "Printed circuit board (PCB)",
     "magnet": "Magnet",
-    "mixed-phone-components": "Mixed phone components"
+    "mixed-phone-components": "Mixed phone components",
+    "electronic-component": "Electronic component",
+    "lighting-component": "Lighting component"
   }
 }

@@ -1,293 +1,261 @@
 {
-  "raw_response": "{\n  \"population_scopes\": [\n    {\n      \"root_entity_id\": \"Product_mobile_phone\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"mobile phone\",\n      \"scope_summary\": \"Mobile phone waste from which camera parts and PCB parts were separated and collected for the experiment.\",\n      \"evidence_ids\": [\"E043d80e1df\", \"E076f438fc8\"]\n    },\n    {\n      \"root_entity_id\": \"Component_camera\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"camera\",\n      \"scope_summary\": \"Camera parts attached to mobile phone waste, separated and collected for the experiment.\",\n      \"evidence_ids\": [\"E043d80e1df\", \"E076f438fc8\"]\n    },\n    {\n      \"root_entity_id\": \"Component_printed_circuit_board\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"printed circuit board\",\n      \"scope_summary\": \"PCB parts attached to mobile phone waste, separated and collected for the experiment.\",\n      \"evidence_ids\": [\"E043d80e1df\", \"E076f438fc8\"]\n    },\n    {\n      \"root_entity_id\": \"Product_camera\",\n      \"granularity\": \"batch\",\n      \"sample_type\": \"camera\",\n      \"scope_summary\": \"Camera parts attached to mobile phone waste, separated and collected for the experiment.\",\n      \"evidence_ids\": [\"E043d80e1df\", \"E076f438fc8\"]\n    }\n  ],\n  \"process_scopes\": [\n    {\n      \"root_entity_id\": \"Process_camera\",\n      \"method_family\": \"chemical precipitation\",\n      \"evidence_ids\": [\"E0bb90a1e21\"]\n    },\n    {\n      \"root_entity_id\": \"Process_biogenic_metal_precipitation_from_pH_7_7_filtrate\",\n      \"method_family\": \"biogenic metal precipitation\",\n      \"evidence_ids\": [\"E0c74869f49\"]\n    },\n    {\n      \"root_entity_id\": \"Process_NH4OH_precipitation_from_digested_aqua_regia\",\n      \"method_family\": \"chemical precipitation\",\n      \"evidence_ids\": [\"E5ba861b63e\"]\n    },\n    {\n      \"root_entity_id\": \"Process_aqua_regia\",\n      \"method_family\": \"acid leaching\",\n      \"evidence_ids\": [\"E82a4572eea\"]\n    },\n    {\n      \"root_entity_id\": \"Process_printed_circuit_board\",\n      \"method_family\": \"chemical precipitation\",\n      \"evidence_ids\": [\"Ef3b84c5f9a\"]\n    }\n  ]\n}",
+  "raw_response": "{\"population_scopes\":[{\"root_entity_id\":\"Product_mobile_phone\",\"granularity\":\"batch\",\"sample_type\":\"mobile phone waste\",\"scope_summary\":\"Mobile phone waste from which the camera parts and PCB parts were separated and collected for the experiments; the parts were crushed, sieved to particles under 2 mm, and dissolved in aqua regia.\",\"evidence\":[{\"evidence_id\":\"E93b8609178\",\"quote\":\"First, the camera parts and PCB parts attached to the mobile phone waste were separated and collected for the experiment (Figure 1).\"},{\"evidence_id\":\"Ea66e342b4a\",\"quote\":\"In chemical treatment, the metal fraction attached to the printed circuit board (PCB) and camera parts were separated from the mobile phone waste and were then pulverized into particles with a size less than ~2 mm.\"}]}],\"process_scopes\":[{\"root_entity_id\":\"Process_metal_precipitation_by_NH4OH_addition\",\"method_family\":\"ammonium hydroxide pH-swing precipitation\",\"evidence\":[{\"evidence_id\":\"Ec4b75c3fdb\",\"quote\":\"Ammonium hydroxide (NH4OH, 28%, JUNSEI, Tokyo, Japan) solution was slowly added into the acidic metal solution to precipitate ferrous, non-ferrous, and precious metals with gravity only and with rapid stirring.\"},{\"evidence_id\":\"E1f468219d2\",\"quote\":\"These results showed that the metals leached in aqua regia could be recovered using a simple chemical method, such as a pH swing.\"}]},{\"root_entity_id\":\"Process_biogenic_metal_precipitation_by_metal_reducing_bacteria\",\"method_family\":\"microbial biomineralization\",\"evidence\":[{\"evidence_id\":\"E3506ea6467\",\"quote\":\"To produce biogenic metal-precipitates, 2 mL of the filtrate at pH 7.7 was added to the medium containing 10 mM of glucose (C6H12O6) and 2 mL of enriched metal-reducing bacteria. The bacteria were cultivated in a shaking incubator at 25 ◦C under an anoxic atmosphere for 2 weeks.\"},{\"evidence_id\":\"Ea66e342b4a\",\"quote\":\"In the biological method, the filtrate at pH 7.7 was added to a metal-reducing bacteria growth medium as a precursor. After two weeks of incubation, rhodochrosite and calcite were precipitated as nano-sized minerals.\"}]},{\"root_entity_id\":\"Process_metal_dissolution_in_aqua_regia\",\"method_family\":\"aqua regia leaching\",\"evidence\":[{\"evidence_id\":\"E93b8609178\",\"quote\":\"the particles were dissolved in the 1 / 10: (g / m L) ratio in the aqua regia at room temperature for 48 h and only the supernatant was used for the experiments.\"},{\"evidence_id\":\"E7828afaaa1\",\"quote\":\"The weight % of the initial leached metals from the camera and PCB parts into aqua regia were determined via ICP-AES (Figure 3).\"}]}],\"unscoped_candidates\":[]}",
   "raw_payload": {
     "population_scopes": [
       {
         "root_entity_id": "Product_mobile_phone",
         "granularity": "batch",
-        "sample_type": "mobile phone",
-        "scope_summary": "Mobile phone waste from which camera parts and PCB parts were separated and collected for the experiment.",
-        "evidence_ids": [
-          "E043d80e1df",
-          "E076f438fc8"
-        ]
-      },
-      {
-        "root_entity_id": "Component_camera",
-        "granularity": "batch",
-        "sample_type": "camera",
-        "scope_summary": "Camera parts attached to mobile phone waste, separated and collected for the experiment.",
-        "evidence_ids": [
-          "E043d80e1df",
-          "E076f438fc8"
-        ]
-      },
-      {
-        "root_entity_id": "Component_printed_circuit_board",
-        "granularity": "batch",
-        "sample_type": "printed circuit board",
-        "scope_summary": "PCB parts attached to mobile phone waste, separated and collected for the experiment.",
-        "evidence_ids": [
-          "E043d80e1df",
-          "E076f438fc8"
-        ]
-      },
-      {
-        "root_entity_id": "Product_camera",
-        "granularity": "batch",
-        "sample_type": "camera",
-        "scope_summary": "Camera parts attached to mobile phone waste, separated and collected for the experiment.",
-        "evidence_ids": [
-          "E043d80e1df",
-          "E076f438fc8"
+        "sample_type": "mobile phone waste",
+        "scope_summary": "Mobile phone waste from which the camera parts and PCB parts were separated and collected for the experiments; the parts were crushed, sieved to particles under 2 mm, and dissolved in aqua regia.",
+        "evidence": [
+          {
+            "evidence_id": "E93b8609178",
+            "quote": "First, the camera parts and PCB parts attached to the mobile phone waste were separated and collected for the experiment (Figure 1)."
+          },
+          {
+            "evidence_id": "Ea66e342b4a",
+            "quote": "In chemical treatment, the metal fraction attached to the printed circuit board (PCB) and camera parts were separated from the mobile phone waste and were then pulverized into particles with a size less than ~2 mm."
+          }
         ]
       }
     ],
     "process_scopes": [
       {
-        "root_entity_id": "Process_camera",
-        "method_family": "chemical precipitation",
-        "evidence_ids": [
-          "E0bb90a1e21"
+        "root_entity_id": "Process_metal_precipitation_by_NH4OH_addition",
+        "method_family": "ammonium hydroxide pH-swing precipitation",
+        "evidence": [
+          {
+            "evidence_id": "Ec4b75c3fdb",
+            "quote": "Ammonium hydroxide (NH4OH, 28%, JUNSEI, Tokyo, Japan) solution was slowly added into the acidic metal solution to precipitate ferrous, non-ferrous, and precious metals with gravity only and with rapid stirring."
+          },
+          {
+            "evidence_id": "E1f468219d2",
+            "quote": "These results showed that the metals leached in aqua regia could be recovered using a simple chemical method, such as a pH swing."
+          }
         ]
       },
       {
-        "root_entity_id": "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate",
-        "method_family": "biogenic metal precipitation",
-        "evidence_ids": [
-          "E0c74869f49"
+        "root_entity_id": "Process_biogenic_metal_precipitation_by_metal_reducing_bacteria",
+        "method_family": "microbial biomineralization",
+        "evidence": [
+          {
+            "evidence_id": "E3506ea6467",
+            "quote": "To produce biogenic metal-precipitates, 2 mL of the filtrate at pH 7.7 was added to the medium containing 10 mM of glucose (C6H12O6) and 2 mL of enriched metal-reducing bacteria. The bacteria were cultivated in a shaking incubator at 25 ◦C under an anoxic atmosphere for 2 weeks."
+          },
+          {
+            "evidence_id": "Ea66e342b4a",
+            "quote": "In the biological method, the filtrate at pH 7.7 was added to a metal-reducing bacteria growth medium as a precursor. After two weeks of incubation, rhodochrosite and calcite were precipitated as nano-sized minerals."
+          }
         ]
       },
       {
-        "root_entity_id": "Process_NH4OH_precipitation_from_digested_aqua_regia",
-        "method_family": "chemical precipitation",
-        "evidence_ids": [
-          "E5ba861b63e"
-        ]
-      },
-      {
-        "root_entity_id": "Process_aqua_regia",
-        "method_family": "acid leaching",
-        "evidence_ids": [
-          "E82a4572eea"
-        ]
-      },
-      {
-        "root_entity_id": "Process_printed_circuit_board",
-        "method_family": "chemical precipitation",
-        "evidence_ids": [
-          "Ef3b84c5f9a"
+        "root_entity_id": "Process_metal_dissolution_in_aqua_regia",
+        "method_family": "aqua regia leaching",
+        "evidence": [
+          {
+            "evidence_id": "E93b8609178",
+            "quote": "the particles were dissolved in the 1 / 10: (g / m L) ratio in the aqua regia at room temperature for 48 h and only the supernatant was used for the experiments."
+          },
+          {
+            "evidence_id": "E7828afaaa1",
+            "quote": "The weight % of the initial leached metals from the camera and PCB parts into aqua regia were determined via ICP-AES (Figure 3)."
+          }
         ]
       }
-    ]
+    ],
+    "unscoped_candidates": []
   },
   "evidence_records": [
     {
-      "id": "E043d80e1df",
-      "text": "First, the camera parts and PCB parts attached to the mobile phone waste were separated and collected for the experiment (Figure 1).",
-      "section_name": "2.1. Preparation of the Metal Solution Using Aqua Regia2.1. Preparation of the Metal Solution Using Aqua Regia",
-      "current_study_signal": "high",
+      "id": "candidates",
+      "kind": "candidates",
       "entity_ids": [
         "Product_mobile_phone",
-        "Component_camera",
-        "Component_printed_circuit_board",
-        "Product_camera"
+        "Process_metal_precipitation_by_NH4OH_addition",
+        "Process_biogenic_metal_precipitation_by_metal_reducing_bacteria",
+        "Process_metal_dissolution_in_aqua_regia"
       ],
+      "entity_types": {
+        "Product_mobile_phone": "Product",
+        "Process_metal_precipitation_by_NH4OH_addition": "Process",
+        "Process_biogenic_metal_precipitation_by_metal_reducing_bacteria": "Process",
+        "Process_metal_dissolution_in_aqua_regia": "Process"
+      },
+      "entity_names": {
+        "Product_mobile_phone": "mobile phone",
+        "Process_metal_precipitation_by_NH4OH_addition": "metal precipitation by NH4OH addition",
+        "Process_biogenic_metal_precipitation_by_metal_reducing_bacteria": "biogenic metal precipitation by metal-reducing bacteria",
+        "Process_metal_dissolution_in_aqua_regia": "metal dissolution in aqua regia"
+      },
       "entity_aliases": {
         "Product_mobile_phone": [
           "mobile phone waste",
           "mobile phone"
         ],
-        "Component_camera": [
-          "camera parts",
-          "camera",
-          "camera part"
+        "Process_metal_precipitation_by_NH4OH_addition": [
+          "metal precipitation by NH4OH addition",
+          "chemical method for metal recovery",
+          "ammonium hydroxide precipitation"
         ],
-        "Component_printed_circuit_board": [
-          "printed circuit board",
-          "pcb"
+        "Process_biogenic_metal_precipitation_by_metal_reducing_bacteria": [
+          "biogenic metal precipitation by metal-reducing bacteria",
+          "biological method for metal recovery"
         ],
-        "Product_camera": [
-          "camera"
+        "Process_metal_dissolution_in_aqua_regia": [
+          "metal dissolution in aqua regia",
+          "aqua regia leaching",
+          "dissolution of metals in aqua regia"
         ]
       },
-      "entity_types": {
-        "Product_mobile_phone": "Product",
-        "Component_camera": "Component",
-        "Component_printed_circuit_board": "Component",
-        "Product_camera": "Product"
-      },
-      "entity_names": {
-        "Product_mobile_phone": "mobile phone",
-        "Component_camera": "camera",
-        "Component_printed_circuit_board": "printed circuit board",
-        "Product_camera": "camera"
-      },
-      "entity_sample_identifiers": {}
+      "entity_provenance": {
+        "Process_metal_precipitation_by_NH4OH_addition": "Slowly add 28% NH4OH to the strongly acidic aqua regia metal leachate with rapid stirring; precipitation occurs at pH ranges of ~3.9-4.2, 5.7-7.7, and 8.3-10.5, stopping NH4OH addition at each range while continuing stirring, then centrifuge to separate precipitate from supernatant; wash precipitate three times with distilled water and dry.",
+        "Process_biogenic_metal_precipitation_by_metal_reducing_bacteria": "Add 2 mL of pH 7.7 filtrate to pre-reduced anoxic medium containing 10 mM glucose and 2 mL enriched metal-reducing bacteria (Suncheon-1), then cultivate in a shaking incubator at 25 C under anoxic atmosphere for 2 weeks to form biogenic metal precipitates.",
+        "Process_metal_dissolution_in_aqua_regia": "The weight % of the initial leached metals from the camera and PCB parts into aqua regia were determined via ICP-AES (Figure 3). The major metals (over 800 mg/L) leached from the camera parts were Cu (4610 mg/L), Fe (3380 mg/L), Zn (1930 mg/L), Ni (1690 mg/L), and Nd (874 mg/L)"
+      }
     },
     {
-      "id": "E076f438fc8",
-      "text": "In chemical treatment, the metal fraction attached to the printed circuit board (PCB) and camera parts were separated from the mobile phone waste and were then pulverized into particles with a size less than \\~2 mm.",
+      "id": "Ee3af967a53",
+      "kind": "source",
       "section_name": "Metal Recovery from the Mobile Phone Waste by Chemical and Biological Treatments",
-      "current_study_signal": "high",
-      "entity_ids": [
-        "Product_mobile_phone",
-        "Component_camera",
-        "Component_printed_circuit_board",
-        "Product_camera"
-      ],
-      "entity_aliases": {
-        "Product_mobile_phone": [
-          "mobile phone waste",
-          "mobile phone"
-        ],
-        "Component_camera": [
-          "camera parts",
-          "camera",
-          "camera part"
-        ],
-        "Component_printed_circuit_board": [
-          "printed circuit board",
-          "pcb"
-        ],
-        "Product_camera": [
-          "camera"
-        ]
-      },
-      "entity_types": {
-        "Product_mobile_phone": "Product",
-        "Component_camera": "Component",
-        "Component_printed_circuit_board": "Component",
-        "Product_camera": "Product"
-      },
-      "entity_names": {
-        "Product_mobile_phone": "mobile phone",
-        "Component_camera": "camera",
-        "Component_printed_circuit_board": "printed circuit board",
-        "Product_camera": "camera"
-      },
-      "entity_sample_identifiers": {}
+      "text": "Yumi Kim, Hyunhee Seo and Yul Roh \\*"
     },
     {
-      "id": "E0bb90a1e21",
-      "text": "The light blue precipitate formed at pH 7.7 was mainly crystalline copper chloride hydroxides (Cu2Cl(OH)3) (Figure 4b).",
-      "section_name": "unknown",
-      "current_study_signal": "process_registry",
-      "entity_ids": [
-        "Process_camera"
-      ],
-      "entity_aliases": {
-        "Process_camera": [
-          "camera"
-        ]
-      },
-      "entity_types": {
-        "Process_camera": "Process"
-      },
-      "entity_names": {
-        "Process_camera": "camera"
-      },
-      "entity_sample_identifiers": {},
-      "entity_provenance": {
-        "Process_camera": "The light blue precipitate formed at pH 7.7 was mainly crystalline copper chloride hydroxides (Cu2Cl(OH)3) (Figure 4b)."
-      }
+      "id": "E3722addd78",
+      "kind": "source",
+      "section_name": "Metal Recovery from the Mobile Phone Waste by Chemical and Biological Treatments",
+      "text": "Received: 30 November 2017; Accepted: 28 December 2017; Published: 2 January 2018"
     },
     {
-      "id": "E0c74869f49",
-      "text": "reduced Fe(III), Cr(VI), and Se(VI) by extracellularly forming Fe(II/III) minerals, Cr(III) hydroxide and amorphous elemental Se(0) nanoparticles, respectively, via glucose fermentation [15].",
-      "section_name": "The metal-reducing bacteria (S2.3. Biological Method for Metal Recovery",
-      "current_study_signal": "process_registry",
-      "entity_ids": [
-        "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate"
-      ],
-      "entity_aliases": {
-        "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate": [
-          "biogenic metal precipitation from ph 7.7 filtrate"
-        ]
-      },
-      "entity_types": {
-        "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate": "Process"
-      },
-      "entity_names": {
-        "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate": "biogenic metal precipitation from pH 7.7 filtrate"
-      },
-      "entity_sample_identifiers": {},
-      "entity_provenance": {
-        "Process_biogenic_metal_precipitation_from_pH_7_7_filtrate": "2 mL of the pH 7.7 filtrate was added to anaerobic medium containing 10 mM glucose and 2 mL of enriched metal-reducing bacteria (Suncheon-1), and cultivated in a shaking incubator at 25 °C under anoxic atmosphere for 2 weeks to produce biogenic metal precipitates."
-      }
+      "id": "Ea66e342b4a",
+      "kind": "source",
+      "section_name": "Metal Recovery from the Mobile Phone Waste by Chemical and Biological Treatments",
+      "text": "Abstract: Recycling electronic waste is an important subject not only from the point of view of waste treatment, but also regarding the recovery of valuable metals. This research examined the stepwise recovery of metals in mobile phone waste using chemical treatment via pH swing and the biological method using biomineralization. In chemical treatment, the metal fraction attached to the printed circuit board (PCB) and camera parts were separated from the mobile phone waste and were then pulverized into particles with a size less than \\~2 mm. The metal fraction was dissolved in aqua regia, and the pH of the solution was increased to 10.5 by adding NH4OH.. The first precipitate was iron oxide, produced by raising the pH to 3.1\\~4.2 with NH4OH. Sequentially, copper chloride and rare earth-metal complex were produced at pH 5.7\\~7.7 and 8.3\\~10.5, respectively. In the biological method, the filtrate at pH 7.7 was added to a metal-reducing bacteria growth medium as a precursor. After two weeks of incubation, rhodochrosite and calcite were precipitated as nano-sized minerals. The results indicate that effective metal recovery of mobile phone waste is feasible using chemical and biological treatments, and the recovered metals and rare earth metals can be recycled into raw materials for various industries."
     },
     {
-      "id": "E5ba861b63e",
-      "text": "Ammonium hydroxide (NH4OH, 28%, JUNSEI, Tokyo, Japan) solution was slowly added into the acidic metal solution to precipitate ferrous, non-ferrous, and precious metals with gravity only and with rapid stirring.",
-      "section_name": "2.2. Chemical Method for Metal Recove2.2. Chemical Methodfor Metal Recovery",
-      "current_study_signal": "process_registry",
-      "entity_ids": [
-        "Process_NH4OH_precipitation_from_digested_aqua_regia"
-      ],
-      "entity_aliases": {
-        "Process_NH4OH_precipitation_from_digested_aqua_regia": [
-          "nh4oh precipitation from digested aqua regia"
-        ]
-      },
-      "entity_types": {
-        "Process_NH4OH_precipitation_from_digested_aqua_regia": "Process"
-      },
-      "entity_names": {
-        "Process_NH4OH_precipitation_from_digested_aqua_regia": "NH4OH precipitation from digested aqua regia"
-      },
-      "entity_sample_identifiers": {},
-      "entity_provenance": {
-        "Process_NH4OH_precipitation_from_digested_aqua_regia": "Ammonium hydroxide (28%) was slowly added with rapid stirring to the aqua regia metal leachate to precipitate ferrous, non-ferrous, and precious metals. Precipitation occurred at pH ranges of approximately 3.9-4.2, 5.7-7.7, and 8.3-10.5 with color changes; at each pH range, NH4OH addition was stopped but stirring continued, then the suspension was centrifuged to separate precipitate and supernatant. The precipitate was washed three times with distilled water and dried for mineralogical analysis."
-      }
+      "id": "E059c1a6f08",
+      "kind": "source",
+      "section_name": "Metal Recovery from the Mobile Phone Waste by Chemical and Biological Treatments",
+      "text": "Keywords: metal recovery; electronic waste; urban mining; pH swing process; biomineralization"
     },
     {
-      "id": "E82a4572eea",
-      "text": "the particles were dissolved in the 1 / 10: (g / m L) ratio in the aqua regia at room temperature for 48 h and only the supernatant was used for the experiments.",
+      "id": "E3f1b9d9efc",
+      "kind": "source",
+      "section_name": "1. Introduction",
+      "text": "The amount of generated waste of electrical and electronic equipment (WEEE) has been growing due to rapid economic growth and technological advances all over the world. In the European Union (EU), 9 million tonnes of WEEE were generated in 2005, and this figure is expected to grow to more than 12 million tonnes by 2020 [1]. Recycling WEEE may provide a substantial source of both (non) ferrous and precious metals. Although most metals are base metals such as copper, iron, nickel, tin, lead, aluminum, and zinc, a significant amount of attention has been expended on the recovery of precious metals, including gold, silver, and palladium [2]. Waste mobile phones usually consist of a body, printed circuit board (PCB), liquid crystal display (LCD), camera, key board, etc. Since the PCBs contain a great amount of useful and precious metals, including gold, silver, and palladium, researchers have focused on PCBs for precious metal recovery [3,4]. However, camera parts including neodymium magnets (NdFeB48H) have rarely been studied despite the high need for neodymium recovery [5]. Increasing the pH of metal leached solution to the desired value is connected with the metal precipitation in the form of hydroxides. In a previous study, the selective recovery of leached metals in acid mine drainage by NaOH addition resulted in the precipitation rate of 97% Fe at pH 4.05, 95% Cu at pH range 4.49 to 6.11, and 89% Zn at pH range 5.5 to 7.2 [6]. Although hydrometallurgical processes using various reagents (e.g., cyanide, thiosulfate, aqua regia, etc.) have shown high efficiency in metal recovery, their high cost and toxic byproducts remain to be addressed [5–8]. To solve these cost-related and environmental disadvantages, some microbiological processes have recently been proposed as alternatives to chemical methods. Some microbes, suchdisadvantages, some microbiological processes have recently been proposed as alternatives to as C. violaceum, A. ferrooxidansm, Chromobacterium violaceum, and Aspergillus sp. increased Au andchemical methods. Some microbes, such as C. violaceum, A. ferrooxidansm, Chromobacterium violaceum, Cu leaching/recovery from mobile phone PCBs waste [9–13]. Also, Brandl et al. (2001) reportedand Aspergillus sp. increased Au and Cu leaching/recovery from mobile phone PCBs waste [9–13]. that bacteria such as Thiobacillus ferrooxidans and T. thiooxidans and fungi such as Aspergillus nigerAlso, Brandl et al. (2001) reported that bacteria such as Thiobacillus ferrooxidans and T. thiooxidans and Penicillium simplicissimum were able to mobilize high percentages of Cu, Sn, Al, Ni, Pb, andfungi such as Aspergillus niger and Penicillium simplicissimum were able to mobilize high percentages Zn particles from WEEE [13]. Therefore, the combination of chemical and biological methods canof Cu, Sn, Al, Ni, Pb, and Zn particles from WEEE [13]. Therefore, the combination of chemical and increase the efficiency of metal recovery from mobile phone waste and achieve the effect of anbiological methods can increase the efficiency of metal recovery from mobile phone waste and environmentally-friendly treatment. Thus, the objectives of this study were to investigate the stepwiseachieve the effect of an environmentally-friendly treatment. Thus, the objectives of this study were separation and recovery of metals including both (non) ferrous and precious metals from mobile phoneto investigate the stepwise separation and recovery of metals including both (non) ferrous and waste by combining chemical and biological methods.precious metals from mobile phone waste by combini"
+    },
+    {
+      "id": "E93b8609178",
+      "kind": "source",
       "section_name": "2.1. Preparation of the Metal Solution Using Aqua Regia2.1. Preparation of the Metal Solution Using Aqua Regia",
-      "current_study_signal": "process_registry",
-      "entity_ids": [
-        "Process_aqua_regia"
-      ],
-      "entity_aliases": {
-        "Process_aqua_regia": [
-          "aqua regia"
-        ]
-      },
-      "entity_types": {
-        "Process_aqua_regia": "Process"
-      },
-      "entity_names": {
-        "Process_aqua_regia": "aqua regia"
-      },
-      "entity_sample_identifiers": {},
-      "entity_provenance": {
-        "Process_aqua_regia": "the particles were dissolved in the 1 / 10: (g / m L) ratio in the aqua regia at room temperature for 48 h and only the supernatant was used for the experiments."
-      }
+      "text": "First, the camera parts and PCB parts attached to the mobile phone waste were separated and collected for the experiment (Figure 1). The process of separating and recovering metals, including both ferrous and non-ferrous metals, as well as precious metals from the mobile phone waste, is shown in Figure 2. The camera and the PCB parts separated from the mobile phone waste were crushed in a pulverizer for 2 min and were divided into pulverized particles and non-pulverized materials (e.g., copper foil, insulation film, etc.). The non-pulverized material was excluded beforehand and then only the pulverized particles were sieved to test particles less than 2 mm. Since these sieved particles seem to contain soluble metals and insoluble materials (e.g., plastic) in aqua regia, the particles were dissolved in the 1 / 10: (g / m L) ratio in the aqua regia at room temperature for 48 h and only the supernatant was used for the experiments. As a metal solvent, aqua regia was freshly prepared at a48 h and only the supernatant was used for the experiments. As a metal solvent, aqua regia was 3:1 mixture of hydrochloric acid (HCl, 35%, OCI, Seoul, Korea): nitric acid (HNO, 60\\~61%, JUNSEI, Tokyo, Japan). The leached metal concentration in aqua regia was analyzed via inductively coupled(HNO, 60\\~61%, JUNSEI, Tokyo, Japan). The leached metal concentration in aqua regia was plasma-atomic emission spectroscopy (ICP-AES)."
     },
     {
-      "id": "Ef3b84c5f9a",
-      "text": "the brown precipitate formed at pH 3.9 was identified as poorly crystalline iron oxides (FeOOH) composed of Fe and O, and a small amount of Cu, Cr, and Sn (Figure 6a,b).",
+      "id": "Ec4b75c3fdb",
+      "kind": "source",
+      "section_name": "2.2. Chemical Method for Metal Recove2.2. Chemical Methodfor Metal Recovery",
+      "text": "The metal solution leached in aqua regia was a very strong acid. Ammonium hydroxide (NH4OH, 28%, JUNSEI, Tokyo, Japan) solution was slowly added into the acidic metal solution to precipitate ferrous, non-ferrous, and precious metals with gravity only and with rapid stirring. The increase in pH with the addition of NH4OH induced the formation of precipitates. When pH ranges were pH rareached at 3.9 approximately4.2, 5.7 approximately7.7, of NH4OH into the suspension was stopped, but kept stirring for a sufficient and 8.3\\~10.5, precipitates were formed with change in color. At the pH time. The suspenranges, the addition of NH4OH centrifuged to separate into a precipitate and a supernatant. The into the suspension was stopped, but kept stirring for a sufficient time. precipitate was washed with distilled water three times and then dried for mineralogical analyses. The suspension was centrifuged to separate into a precipitate and a supernatant. The precipitate was The supernatant was filtered with a syringe filter (0.45 μm), and then the filtrate was analyzed for washed with distilled water three times and then dried for mineralogical analyses. The supernatant the change in the concentration of metal ions via ICP-AES. The remaining supernatant was used to was filtered with a syringe filter (0.45 µm), and then the filtrate was analyzed for the change in the concentration of metal ions via ICP-AES. The remaining supernatant was used to recover the other metal ions, and the experiment was continuously carried out in the same process."
+    },
+    {
+      "id": "E22f1e62045",
+      "kind": "source",
+      "section_name": "The metal-reducing bacteria (S2.3. Biological Method for Metal Recovery",
+      "text": "The metal-reducing bacteria (Suncheon-1) were enriched from intertidal flat sediments of 0.5 yeast extract, 7.2 HEPES (hydroxyl-ethylpiperazine-N′-2-ethanesulfonic acid), 10 mL trace Suncheon in the Jeonnam province of South Korea. The medium for the bacterial growth contained mineral, and 1 mL vithe following ingredients (g / L); 2.5: NaHCO3, 0.08: CaCl2 2 H2O, 1.0: NH4Cl, 0.2: MgCl2 6 H2O, ): 1.5, 10 NaCl, nitrilotriacetic acid, 0.2 FeCl2∙4H2O, 0.1 MgCl2∙6H2O, 0.02 sodium tungstate, 0.1 MnCl2∙4H2O, 0.1 0.5 yeast extract, 7.2 HEPES (hydroxyl-ethylpiperazine-N0-2-ethanesulfonic acid), 10 mL trace mineral, CoCl2∙6H2O, 1 CaCl2∙2H2O, 0.05 ZnCl2, 0.002 CuCl2∙2H2O, 0.005 H3BO3, 0.01 sodium molybdate, 1 and 1 mL vitamin. Trace mineral solution contained the following ingredients (g/L): 1.5 nitrilotriacetic acid, 0.2 FeCl2 4 H2O, 0.1 MgCl2 6 H2O, 0.02 2O. Also, vitamin solution contained the following sodium tungstate, 0.1 MnCl ·4H O, 0.1 CoCl ·6H O, [ 1 CaCl2 2 H2O, 0.05 ZnCl2, 0.002 CuCl2 2 H2O, 0.005 H3BO; ], 0.01 sodium molybdate, 1 NaCl, 0.017 Na2SeO3, and 0.024 NiCl2 6 H2O.. Also, vitamin solution contained the following ingredients (g / L ): 0.02 biotin, 0.02 folic acid, 0.1 B6 (pyridoxine) HCl, 0.05 B1 (thiamine) HCl, 0.05 B2 (riboflavin),"
+    },
+    {
+      "id": "E3506ea6467",
+      "kind": "source",
+      "section_name": "The metal-reducing bacteria (S2.3. Biological Method for Metal Recovery",
+      "text": "0.05 nicotinic acid (niacin), 0.05 pantothenic acid, 0.001 B12 (cyanobalamine) crystalline, 0.05 PABA0.05 PABA (P-aminobenzoic acid), and 0.05 lipoic acid (thioctic) [14,15]. The medium was (P-aminobenzoic acid), and 0.05 lipoic acid (thioctic) [14,15]. The medium was pre-reduced by boilingpre-reduced by boiling and purging with nitrogen gas and dispensing into 125 mL serum bottles. and purging with nitrogen gas and dispensing into 125 mL serum bottles. The bottles were sealedThe bottles were sealed with butyl rubber stoppers and autoclaved for 20 min at 121°C and 1.2 with butyl rubber stoppers and autoclaved for 20 min at 121 ◦C and 1.2kgf/cm. The final pH of the medium was about 8.0 [14,15]. In a pr kgf / cm ^2.. The final pH ofdy, Suncheon-1, the medium was about 8.0consisting of Shewanella sp. [ 14, 15 ]. In a previous study, Suncheon-1, consisting of Shewanella sp.,idium sp., and Vibrio sp., reduced Fe(III), Cr(VI), and Se(VI) by Clostridium sp., and Vibrio sp., reduced Fe(III), Cr(VI), and Se(VI) by extracellularly forming Fe(II/III) minerals, Cr(III) hydroxide and amorphous elemental Se(0) nanoparticles, respectively, via glucose fermentation [15]. To produce biogenic metal-precipitates, 2 mL of the filtrate at pH 7.7 was added to6 12 6 the medium containing 10 mM of glucose (C6H12O6) and 2 mL of enriched metal-reducing bacteria. The bacteria were cultivated in a shaking incubator at 25 ^∘C under an anoxic atmosphere for 2 weeks."
+    },
+    {
+      "id": "Ecfa367f124",
+      "kind": "source",
+      "section_name": "2.4. Analytical Methods2.4. Analytical Methods",
+      "text": "The mineralogical characteristics of the precipitates formed during experiments were examinedThe mineralogical characteristics of the precipitates formed during experiments were examined using X-ray diffraction (XRD) and scanning electron microscopy (SEM) with energy dispersive X-rayusing X-ray diffraction (XRD) and scanning electron microscopy (SEM) with energy dispersive X-ray (EDS) analyses. The X-ray diffraction analysis was performed using an X’Pert PRO (PANalytical,(EDS) analyses. The X-ray diffraction analysis was performed using an X’Pert PRO (PANalytical, Almelo, The Netherlands) equipped with Cu Kα radiation (40 kV, 20 mA) at a scan speed of 5 θ/min.Almelo, The Netherlands) equipped with Cu Kα radiation (40 kV, 20 mA) at a scan speed of 5 θ/min. An SEM analysis was done on a JSM-7500F (JEOL, Tokyo, Japan) with an accelerating voltageAn SEM analysis was done on a JSM-7500F (JEOL, Tokyo, Japan) with an accelerating voltage of 200 kV to determine the morphology and elemental composition of the synthesized biogenickV to determine the morphology and elemental composition of the synthesized biogenic precipitates. The metal concentrations were measured using inductively coupled plasma atomicThe metal concentrations were measured using inductively coupled plasma atomic emission spectroscopy (ICP-AES) on an Optima 8300 (Perkin-Elmer, Waltham, MA, USA) followingspectroscopy (ICP-AES) on an Optima 8300 (Perkin-Elmer, Waltham, MA, USA) following the standard method. Every experiment was run in triplicate, and the average values were used in thestandard method. Every experiment was run in triplicate, and the average values were used in the graph. The minimum detection limit for the ICP-AES of the metals was about 0.004 mg/L.graph. The minimum detection limit for the ICP-AES of the metals was about 0.004 mg/L."
+    },
+    {
+      "id": "E7828afaaa1",
+      "kind": "source",
+      "section_name": "3.1. Dissolution ofMetals in Aqua Regia3.1. Dissolution of Metals in Aqua Regia",
+      "text": "The weight % of the initial leached metals from the camera and PCB parts into aqua regia were determined via ICP-AES (Figure 3). The major metals (over 800 mg/L) leached from the camera partsdetermined via ICP-AES (Figure 3). The major metals (over 800 mg/L) leached from the camera parts were Cu (4610 mg/L), Fe (3380 mg/L), Zn (1930 mg/L), Ni (1690 mg/L), and Nd (874 mg/L), whereas minor metals (less than 200 mg/L) were Pr (200 mg/L), Cr (168 mg/L), Sn (114 mg/L), Dy (38 mg/L), and Tb (34 mg/L). In the case of the PCB parts, the major leached metals (over 2500 mg/L) were Cu (23,600 mg/L), Fe (22,200 mg/L), Cr (4460 mg/L), Ni (4120 mg/L), and Zn (2800 mg/L), whereas the minor metals (less than 500 mg/L) were Nd (425 mg/L), Pr (152 mg/L), Ag (63.6 mg/L), Mg (30.7 mg/L),minor metals (less than 500 mg/L) were Nd (425 mg/L), Pr (152 mg/L), Ag (63.6 mg/L), Mg (30.7 and Au (20.9 mg/L). Thus, the types of leached metals showed similar trends, and the concentrations of Cu and Fe were the highest in both the camera and the PCB parts. However, the leaching rate of Nd was relatively high in the camera due to the Nd-magnet attached to the part. Also, the concentrations of all leached metals in the PCB were higher than those of the camera parts, and precious metals suchAlso, the concentrations of all leached metals in the PCB were higher than those of the camera parts, as Ag and Au were leached out only from the PCB.and precious metals such as Ag and Au were leac"
+    },
+    {
+      "id": "E18dcf55b3f",
+      "kind": "source",
       "section_name": "3.2. Chemical Recovery of Copper, Iron, and Rare Earth-Metal Complex",
-      "current_study_signal": "process_registry",
-      "entity_ids": [
-        "Process_printed_circuit_board"
-      ],
-      "entity_aliases": {
-        "Process_printed_circuit_board": [
-          "printed circuit board",
-          "pcb"
-        ]
-      },
-      "entity_types": {
-        "Process_printed_circuit_board": "Process"
-      },
-      "entity_names": {
-        "Process_printed_circuit_board": "printed circuit board"
-      },
-      "entity_sample_identifiers": {},
-      "entity_provenance": {
-        "Process_printed_circuit_board": "the brown precipitate formed at pH 3.9 was identified as poorly crystalline iron oxides (FeOOH) composed of Fe and O, and a small amount of Cu, Cr, and Sn (Figure 6a,b)."
-      }
+      "text": "The pH of the metal solution with a strong acidic solution treatment was slowly increased byinitial pH of 0.4. As the pH increased, the color became darker, and a brown precipitate wa injecting the ammonia solution dropwise. The metal solution from the camera part was dark greenformed at pH 4.2. The precipitate was separated by centrifugation, and the supernatant was filtered at the initial pH of 0.4. As the pH increased, the color became darker, and a brown precipitate wasusing a syringe filter (0.45 μm). The filtrate was reacted with the ammonia solution in the sam formed at pH 4.2. The precipitate was separated by centrifugation, and the supernatant was filteredmanner. When the pH of the filtrate gradually was increased to pH 7.7, it transformed into a ligh using a syringe filter (0.45 µm). The filtrate was reacted with the ammonia solution in the same manner.blue precipitate. The precipitate was also separated by centrifugation. The pH of the supernatant When the pH of the filtrate gradually was increased to pH 7.7, it transformed into a light blue precipitate.was increased using the same method, and it turned to dark blue with the formation of a light gray The precipitate was also separated by centrifugation. The pH of the supernatant was increased usingprecipitate at pH 10.5. the same method, and it turned to dark blue with the formation of a light gray precipitate at pH 10.5.The mineralogical characteristics of the precipitate were investigated via XRD analysis. In th"
+    },
+    {
+      "id": "Ec4b269418d",
+      "kind": "source",
+      "section_name": "3.2. Chemical Recovery of Copper, Iron, and Rare Earth-Metal Complex",
+      "text": "The mineralogical characteristics of the precipitate were investigated via XRD analysis. In thelts, the brown precipitate formed at pH 4.2 was difficult to identify in terms of the mineral typ results, the brown precipitate formed at pH 4.2 was difficult to identify in terms of the mineral typedue to the low crystallinity (Figure 4a), but ICP-AES analysis confirmed that the poorly crystallin due to the low crystallinity (Figure 4a), but ICP-AES analysis confirmed that the poorly crystallineminerals were composed of Fe, Cu, Cr, and Sn (Figure 5a,b). In particular, Fe, which was present at minerals were composed of Fe, Cu, Cr, and Sn (Figure 5a,b). In particular, Fe, which was presenthigh concentration in the metal solution, was found to have completely precipitated near 100% at a high concentration in the metal solution, was found to have completely precipitated near 100%removal from the solution at pH 4.2. The light blue precipitate formed at pH 7.7 was mainly removal from the solution at pH 4.2. The light blue precipitate formed at pH 7.7 was mainly crystallinecrystalline copper chloride hydroxides (Cu2Cl(OH)3) (Figure 4b). The elemental analysis also copper chloride hydroxidesshowed that the concentrat (Cu2Cl (OH)3) (Figure 4b). The elemental analysis also showed that thee supernatant had greatly reduced (Figure 5a). In the las concentration of Cu in the supernatant had greatly reduced (Figure 5a). In the last step, a small amountstep, a small amount of gray precipitate that formed at pH 10.5 showed no peak in the XRD analysi of gray precipitate that formed at pH 10.5 showed no peak in the XRD analysis and was considered toand was considered to be an amorphous mineral (Figure 4c). However, the presence of rare earth be an amorphous mineral (Figure 4c). However, the presence of rare earth mixed minerals composedmixed minerals composed of Cu, Nd, Pr, Dy, and Tb were confirmed via ICP-AES analysi of Cu, Nd, Pr, Dy, and Tb were confirmed via ICP-AES analysis (Figure 5a,b).(Figure 5a,b)."
+    },
+    {
+      "id": "E606cd9949b",
+      "kind": "source",
+      "section_name": "3.2. Chemical Recovery of Copper, Iron, and Rare Earth-Metal Complex",
+      "text": "The chemical metal recovery experiments using PCB part were conducted in the same manner as above. The PCB metal solution was also dark green at the initial pH of 0.4. As the pH increased, the color became darker, and a brown precipitate was formed at pH 3.9. The precipitate was separated via centrifugation, and the supernatant was filtered using a syringe filter (0.45 µm). Subsequently, the pH of the filtrate gradually increased to pH 5.7 by injecting the ammonia solution, and then a light blue precipitate formed. The precipitate was also separated via by centrifugation. The pH of the supernatant was increased using the same method, and it turned dark blue with the formation of light gray precipitates at pH 8.3. The mineralogical characteristics of the precipitate were investigated via XRD and SEM-EDS analyses."
+    },
+    {
+      "id": "E75c4283c1f",
+      "kind": "source",
+      "section_name": "3.2. Chemical Recovery of Copper, Iron, and Rare Earth-Metal Complex",
+      "text": "As results of the analyses, the brown precipitate formed at pH 3.9 was identified as poorly crystalline iron oxides (FeOOH) composed of Fe and O, and a small amount of Cu, Cr, and Sn (Figure 6a,b). The ICP-AES analysis confirmed that the leached metals in the solution became precipitated as minerals through the reduction of the element concentration in the supernatant (Figure 5c,d). The light blue precipitate formed at pH 5.7 was identified as mainly crystalline copper chloride hydroxides (Cu Cl(OH) ), and the minerals were observed in the form of agglomerated particles of about 100 nm in size (Figure 6c,d). The elemental analysis also showed that the concentration of Cu in the supernatant had greatly reduced (Figure 5c). In the last step, a minor amount of gray precipitate formed at pH 8.3 was difficult to identify the mineral due to the low crystallinity (Figure 6f). However, it was found that the metal-rare earth mixed minerals composed of Ni, Zn, Nd, Pr, Au, and Ag were confirmed through SEM-EDS and inversely correlated to ICP-AES analyses (Figures 5c,d and 6e)."
+    },
+    {
+      "id": "E550c934010",
+      "kind": "source",
+      "section_name": "3.2. Chemical Recovery of Copper, Iron, and Rare Earth-Metal Complex",
+      "text": "These results indicated that the degree of acidity influences the order of the precipitation in this study: Fe precipitated in an acidic condition (pH 3.9\\~4.2), Cu precipitated in a slightly acidic to neutral condition (pH 5.7\\~7.7), and the rare earth-metal complex precipitated in an alkaline condition (pH 8.3\\~10.5) using a simple chemical method. The tendency of metal precipitates of two metal leached solutions from the PCB part and the camera part was similar in order, but the degree of pH to precipitate in the PCB part was 1\\~2 order lower than which in the camera part."
+    },
+    {
+      "id": "Ea54dee5dfa",
+      "kind": "source",
+      "section_name": "3.3. Biological Recovery ofManganese and Calcium",
+      "text": "In the experiment using the camera part, after removed Fe and Cu precipitates, the filtrate (pH 7.7) and the metal-reducing bacteria were reacted for 2 weeks. As a result, a small amount of white precipitate was formed (Figure 7a) and identified as rhodochrosite (MnCO3) and calcite (CaCO3) via XRD (Figure 7b) and SEM-EDS analyses (Figure 7c–e). The calcite and manganese carbonate were observed as cubic and spherical particles, respectively, and the particle size varied from 1 to 5 µm (Figure 7c–e). The morphology of these minerals was similar to those of previously reported microbial synthesized carbonate minerals [16,17]."
+    },
+    {
+      "id": "Eae52ae50b1",
+      "kind": "source",
+      "section_name": "3.3. Biological Recovery ofManganese and Calcium",
+      "text": "The results of ICP-AES analysis confirmed that the concentrations of Ca (24.26 mg/L to 14.3 mg/L), Co (1.83 mg/L to 0.88 mg/L), Cu (21.52 mg/L to 9.05 mg/L), Ni (54.55 mg/L to 28.3 mg/L), and B (1.02 mg/L to 0.55 mg/L) present with trace amount in the filtrate decreased, on average, by 49% after microbial reaction, but Mn (5.86 mg/L to 5.78 mg/L) decreased by 1.4%. The reduction of the metal concentration in the leached metals after pH swing process seemed to reflect mineral composition of the precipitates by SEM-EDS and XRD, but the reduction of the metal concentration in the growth media was not directly correlated to the components of minerals. In addition, although the concentrations of diverse dissolved metals in the microbial growth media reduced by ICP-AES, only CaCO3 and MnCO3 in the precipitates were observed by SEM-EDS and XRD. Therefore, only the change of the metal concentrations was unable to conclude as the amount of conversion of metal ions into minerals. In the biological process, the interaction between microorganisms and metal ions might induce various and complicated pathways such as cell wall adsorption, intracellular uptake, precipitation into amorphous phase, and mineral synthesis. Although the metal-reducing bacteria did not form reduced metal minerals, its metabolic byproducts such as bicarbonate enhanced formation of carbonates minerals under an anaerobic environment [18]. These indicated that the metal ions remaining in the filtrate could be mineralized by the metal-reducing bacteria via diverse pathways."
+    },
+    {
+      "id": "E1f468219d2",
+      "kind": "source",
+      "section_name": "4. Conclusions",
+      "text": "These results showed that the metals leached in aqua regia could be recovered using a simple chemical method, such as a pH swing. The order of precipitation in metal leached solutions appeared as Fe precipitated in an acidic condition (pH 3.9\\~4.2), Cu precipitated in a slightly acidic to neutral condition (pH 5.7\\~7.7), and rare earth-metal complex precipitated in an alkaline condition (pH 8.3\\~10.5), respectively. In addition, the pHs of the precipitation of the metal ions differed between metal leached solutions in the PCB part and the camera part. The pH of the precipitate in the PCB metal solution was 1\\~2 order lower pH than which in the camera solution."
+    },
+    {
+      "id": "E1d28ae0990",
+      "kind": "source",
+      "section_name": "4. Conclusions",
+      "text": "Although most previous studies have focused on the recovery of precious metals in the PCB, there are disadvantages that complex processes and various toxic substances are used only for one or two kinds of selective metal recovery. To recover precious metals effectively, it is necessary to concentrate the precious and rare earth-metals that account for more than 80% of the total intrinsic value, despite less than 1 wt % of the amount in the PCB. In this study, the rare earth-metal complex obtained in alkaline conditions could be materials suitable for the separation and recovery of single precious or rare earth-metal."
+    },
+    {
+      "id": "Efc648111fe",
+      "kind": "source",
+      "section_name": "4. Conclusions",
+      "text": "Therefore, these results indicate that simple and effective metal recovery of the mobile phone waste might be feasible via chemical and biological treatments, and the recovered metals such as Fe, Cu, and rare earth-metal complex can be recycled as raw materials for diverse industries."
+    },
+    {
+      "id": "E3acea45f84",
+      "kind": "source",
+      "section_name": "4. Conclusions",
+      "text": "Acknowledgments: This research was supported by the “Basic Science Research Program” of the National Research Foundation of Korea funded by the Ministry of Education (NRF-2015R1D1A4A01016016 and 2016R1D1A1A09917588). We are grateful to Cho and Bae at KBSI-Gwangju Branch for SEM-EDS and ICP-AES analyses, and Jung at CCRF in Chonnam National University for XRD analysis."
+    },
+    {
+      "id": "E4132129485",
+      "kind": "source",
+      "section_name": "4. Conclusions",
+      "text": "Author Contributions: Y.K. designed the experiments, performed analysis on all samples, interpreted data, wrote manuscript; H.S. provided critical feedback and helped to evaluate and edit the manuscript; Y.R. conceived the original idea, provided critical feedback, acted as corresponding author."
+    },
+    {
+      "id": "E0c2c0e3ea0",
+      "kind": "source",
+      "section_name": "4. Conclusions",
+      "text": "Conflicts of Interest: The authors declare no conflict of interest."
     }
   ]
 }
