@@ -1,11 +1,24 @@
 """Compare reviewed samples; pool only matching, sufficiently described contexts."""
 import json
+import math
+import re
+import unicodedata
 from collections import defaultdict
 from statistics import fmean, median, stdev
+
+EXTRACTION_METRICS = ('leaching', 'recovery', 'dissolution', 'extraction', 'recovery_rate', 'released_efficiency')
 
 
 def signature(value):
     return json.dumps(value, sort_keys=True, ensure_ascii=False)
+
+
+def unit_key(unit):
+    """Unify notation only, without changing scale or the reported unit."""
+    text = unicodedata.normalize('NFKC', unit).replace('−', '-')
+    text = re.sub(r'\.\s*%', '%', text)
+    text = re.sub(r'(\w+)\s+(\w+)\s*\^?\s*-1\b', r'\1/\2', text)
+    return re.sub(r'\s+', '', text)
 
 
 def pooling_context(row, profile, composition):
@@ -43,10 +56,58 @@ def group_rows(rows, fields, sort=False):
     return list(groups.values())
 
 
+def literature_summary(rows, methods, composition):
+    """Each publication contributes one median to each material / method cell."""
+    groups, seen = {}, set()
+    for row in rows:
+        identity = (row['profile_id'], row.get('observation_id') or row['id'])
+        if identity in seen:
+            continue
+        seen.add(identity)
+        converted = composition and row.get('wt_percent') is not None and math.isfinite(float(row['wt_percent']))
+        value = float(row['wt_percent'] if converted else row['value'])
+        target = row['element'] if composition else row['material']
+        unit = 'wt%' if converted else (row.get('display_unit') or row['unit']) if composition else '%'
+        metric = 'Element content' if composition else 'Recovery / extraction' if row['metric'] in EXTRACTION_METRICS else row['metric']
+        family = '' if composition else methods[row['method_id']]['family']
+        key = (metric, unit, family, target)
+        if key not in groups:
+            groups[key] = dict(target=target, metric=metric, unit=unit, family=family, papers={})
+        papers = groups[key]['papers']
+        if row['paper'] not in papers:
+            papers[row['paper']] = dict(paper=row['paper'], record_ids=[], values=[], points=[])
+        study = papers[row['paper']]
+        study['record_ids'].append(row['id'])
+        study['values'].append(dict(id=row['id'], value=value))
+        # Approximate point estimates retain their values. Inequalities do not define a point median.
+        if not re.search(r'[<>≤≥]', str(row.get('qualifier') or '')):
+            study['points'].append(value)
+    result = []
+    for key in sorted(groups):
+        group = groups[key]
+        entries = []
+        for paper in sorted(group.pop('papers').values(), key=lambda study: study['paper']):
+            points = paper.pop('points')
+            paper['median'] = median(points) if points else None
+            paper['numeric_records'] = len(points)
+            paper['record_ids'].sort()
+            paper['values'].sort(key=lambda entry: entry['id'])
+            entries.append(paper)
+        study_medians = [entry['median'] for entry in entries if entry['median'] is not None]
+        result.append(dict(group, entries=entries, studies=len(entries), numeric_studies=len(study_medians),
+                           median=median(study_medians) if study_medians else None,
+                           minimum=min(study_medians) if study_medians else None,
+                           maximum=max(study_medians) if study_medians else None,
+                           record_ids=[record for entry in entries for record in entry['record_ids']]))
+    return result
+
+
 def summarize(rows, profiles, methods, filters):
     if filters['template'] == 'routes':
         return []
     composition = filters['template'] in ('composition', 'rich')
+    if filters.get('summary_level') == 'literature':
+        return literature_summary(rows, methods, composition)
     records = []
     for row in rows:
         profile = profiles[row['profile_id']]
@@ -58,7 +119,8 @@ def summarize(rows, profiles, methods, filters):
                             family=method.get('family', ''), method_name=method.get('name', ''),
                             target=row.get('element') if composition else row['material'],
                             metric='Elemental mass content' if composition else row['metric'],
-                            analysis_unit=(row.get('display_unit') or row['unit']) if composition else '%',
+                            analysis_unit=row.get('display_unit') or row['unit'],
+                            unit_key=unit_key(row.get('display_unit') or row['unit']),
                             analysis_value=float(row['value']),
                             measurement_id=row.get('observation_id') or row['id'], pool_key=key, issues=issues))
     if not records:
@@ -69,7 +131,8 @@ def summarize(rows, profiles, methods, filters):
         if key not in seen:
             distinct.append(row)
             seen.add(key)
-    grouping = ['component', 'chemistry', 'target', 'metric', 'analysis_unit']
+    distinct.sort(key=lambda row: row['id'])
+    grouping = ['component', 'material_class', 'target', 'metric', 'unit_key']
     if not composition:
         grouping += ['family']
     if filters.get('summary_level') == 'sample':
@@ -86,7 +149,7 @@ def summarize(rows, profiles, methods, filters):
             item = member[0]
             exact = [row['analysis_value'] for row in member if row.get('qualifier') in (None, '')]
             entries.append(dict(profile_id=item['profile_id'], label=item['sample_label'],
-                                material_class=item['material_class'], state=item['state'], paper=item['paper'],
+                                material_class=item['material_class'], chemistry=item['chemistry'], state=item['state'], paper=item['paper'],
                                 assay=item.get('assay', ''), method=item['method_name'],
                                 mass_denominator=item.get('mass_denominator', 'unspecified'),
                                 moisture_basis=item.get('moisture_basis', 'unspecified'),
@@ -120,8 +183,15 @@ def summarize(rows, profiles, methods, filters):
             issues.insert(0, 'Only one publication contributes to this comparison')
         elif not syntheses and not issues:
             issues.append('No matching measurement context spans multiple publications')
-        summaries.append(dict(label=first['chemistry'], component=first['component'], chemistry=first['chemistry'], target=first['target'],
-                              metric=first['metric'], unit=first['analysis_unit'], family=first['family'],
+        profile_ids = {row['profile_id'] for row in group}
+        units = sorted({row['analysis_unit'] for row in group})
+        summaries.append(dict(label=first['material_class'], material_class=first['material_class'],
+                              component=first['component'], chemistries=sorted({row['chemistry'] for row in group}), target=first['target'],
+                              metric=first['metric'], unit=units[0], unit_key=first['unit_key'],
+                              units=units, family=first['family'],
+                              method_ids=sorted({key for key, method in methods.items() if method['profile_id'] in profile_ids}) if composition
+                              else sorted({row['method_id'] for row in group}),
+                              conditions=len({(row['method_id'], row['condition']) for row in group if row.get('condition')}) if not composition else 0,
                               records=len(group), studies=len({row['paper'] for row in group}),
                               sample_groups=len({row['profile_id'] for row in group}), entries=entries,
                               minimum=min(row['analysis_value'] for row in numeric) if numeric else None,

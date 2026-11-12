@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OntoWEEE</title><link rel="stylesheet" href="style.css?v=1fef2f779334"><link rel="stylesheet" href="redesign.css?v=19cac48151ca"><link rel="stylesheet" href="battery-overview.css?v=00986de63220"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+  <title>OntoWEEE</title><link rel="stylesheet" href="style.css?v=1fef2f779334"><link rel="stylesheet" href="redesign.css?v=84bb9bb461ad"><link rel="stylesheet" href="battery-overview.css?v=8a9e08581669"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
 </head>
 <body data-overview="datasets/battery20/overview/data.json" data-graph="datasets/battery20/full-traces/data/graph.json" data-papers="datasets/battery20/papers.json">
   <header>
@@ -67,34 +67,36 @@
       </section>
       <section id="about-view" class="view" aria-labelledby="about-title" hidden>
         <div class="about-heading">
-          <div class="eyebrow">ABOUT ONTOWEEE</div>
-          <h2 id="about-title">From battery waste to<br>traceable recovery evidence.</h2>
-          <p>Explore what a sample contains, how it was treated, and what the study reports. Inspect results alongside their conditions and supporting text or tables.</p>
+          <h2 id="about-title">From WEEE to<br>traceable recovery evidence.</h2>
+          <p>OntoWEEE connects information on waste electrical and electronic equipment: its material composition, treatment routes and reported results, with links back to the original studies.</p>
+          <p>This demo focuses on batteries, with additional evidence on PCBs and their components, magnets, mixed phone materials, other electronic parts and lighting components.</p>
         </div>
         <div class="about-story" aria-label="From a recycling question to connected evidence">
           <article class="about-step">
             <span class="about-step-label">01 / THE RECYCLING QUESTION</span>
-            <div class="about-battery">
-              <svg viewBox="0 0 180 120" role="img" aria-label="A collection of battery cells">
+            <div class="about-feedstocks">
+              <svg viewBox="0 0 240 120" role="img" aria-label="Examples of WEEE feedstocks: a battery, a circuit board and a magnet">
                 <g fill="#eaf4f4" stroke="#0f6f78" stroke-width="2">
-                  <rect x="23" y="22" width="36" height="83" rx="8"/><rect x="72" y="15" width="36" height="90" rx="8"/><rect x="121" y="27" width="36" height="78" rx="8"/>
-                  <path d="M34 22v-6h14v6m35-7V9h14v6m35 12v-6h14v6" fill="none"/>
-                  <path d="M41 38v14m-7-7h14m42-14v14m-7-7h14m42 5v14m-7-7h14" fill="none"/>
+                  <rect x="18" y="24" width="40" height="64" rx="6"/><path d="M30 24v-6h16v6m-8 14v16m-8-8h16" fill="none"/>
+                  <rect x="93" y="24" width="55" height="64" rx="4"/><rect x="109" y="43" width="23" height="25" rx="2"/>
+                  <path d="M120 43V30m-11 25H99m33 0h10m-22 13v14" fill="none"/>
                 </g>
+                <path d="M179 26v35a22 22 0 0 0 44 0V26" fill="none" stroke="#0f6f78" stroke-width="10"/>
+                <g fill="#405b63" font-family="IBM Plex Sans, sans-serif" font-size="12" text-anchor="middle"><text x="38" y="110">Battery</text><text x="120" y="110">PCB</text><text x="201" y="110">Magnet</text></g>
               </svg>
             </div>
-            <h3>Start with the sample.</h3>
-            <p>Identify the materials, sample source and preparation state. Then explore relevant treatment routes.</p>
+            <h3>Choose a feedstock.</h3>
+            <p>Filter by component, feedstock and material system to identify the material you want to explore.</p>
           </article>
           <article class="about-step">
             <span class="about-step-label">02 / THE LITERATURE CHALLENGE</span>
             <div class="about-papers" aria-label="Studies describe different samples">
-              <div><span class="about-paper-icon" aria-hidden="true">↗</span><b>Whole batteries</b><small>Composition &amp; sample origin</small></div>
-              <div><span class="about-paper-icon" aria-hidden="true">↗</span><b>Electrode materials</b><small>Treatment &amp; experimental conditions</small></div>
-              <div><span class="about-paper-icon" aria-hidden="true">↗</span><b>Prepared powders</b><small>Reported results &amp; measurements</small></div>
+              <div><span class="about-paper-icon" aria-hidden="true">↗</span><b>Batteries &amp; electrodes</b><small>Sample origin &amp; material form</small></div>
+              <div><span class="about-paper-icon" aria-hidden="true">↗</span><b>PCBs &amp; separated parts</b><small>Composition &amp; target metals</small></div>
+              <div><span class="about-paper-icon" aria-hidden="true">↗</span><b>Magnets &amp; other components</b><small>Treatments &amp; reported results</small></div>
             </div>
-            <h3>Evidence is spread across studies.</h3>
-            <p>Different samples, methods and conditions make results difficult to compare.</p>
+            <h3>Compare reported evidence.</h3>
+            <p>Explore composition and treatment results across studies, with sample identity, units and conditions available alongside the measurements.</p>
           </article>
           <article class="about-step about-connected">
             <span class="about-step-label">03 / CONNECTED EVIDENCE</span>
@@ -110,23 +112,24 @@
               </g>
             </svg>
             <h3>Follow the connections.</h3>
-            <p>OntoWEEE links samples, materials, methods and results while keeping their source context.</p>
+            <p>Use the knowledge graph to connect samples, materials and processes. Open the extraction trace to inspect the supporting text or table.</p>
           </article>
         </div>
         <details>
           <summary>Data and statistical methods</summary>
-          <p>Ranges describe the reported values for each group. Cross-study means are calculated for compatible measurement contexts, with equal weight for each publication. SD describes the spread of publication-level means.</p>
+          <p>Records retain the reported values and units. Charts use a shared display unit and show measurements by component, feedstock and material system.</p>
+          <p>In Visualization, each publication contributes one median. The overall median and range are calculated from these publication medians; the range spans their lowest and highest values. In Compare &amp; Summarize, cross-study means and SD are shown for matching measurement contexts, with equal weight for each publication.</p>
           <p><a id="snapshot-manifest" href="datasets/battery20/full-traces/data/manifest.json" target="_blank" rel="noopener">Dataset manifest ↗</a> · <a href="datasets/battery20/overview/review.json" target="_blank" rel="noopener">Sample classifications ↗</a></p>
         </details>
         <div class="about-bottom">
           <div><p id="about-dataset" class="about-dataset">Literature and product catalog records</p><p class="about-boundary">Industrial decisions also depend on scale, product quality, reagent use and cost.</p></div>
-          <div class="about-actions"><button class="about-primary" data-view="fusion">Explore the graph →</button><button data-view="replay">Inspect extraction trace →</button></div>
+          <div class="about-actions"><button class="about-primary" data-view="overview">Explore feedstocks →</button><button data-view="fusion">Explore the graph →</button><button data-view="replay">Inspect extraction trace →</button></div>
         </div>
       </section>
       <div id="status" role="status">Loading frozen graph…</div>
     </main>
   </div>
   <script id="display-vocabulary" type="application/json">{"Product": {"mobile phone": ["mobile phones", "mobile phone e-waste", "mobile phone ewaste", "mobile-phone e-waste", "mobile-phone ewaste", "cell phone", "cell phones", "smartphone", "smartphones", "Phone", "end-of-life mobile phone", "end-of-life mobile phones", "end-of-life smartphones"]}}</script>
-  <script src="hierarchy.js?v=614bec6b6308"></script><script src="replay.js?v=df0ade202378"></script><script src="trace.js?v=40f9d23ded08"></script><script src="walkthrough.js?v=544de085e883"></script><script src="battery-overview.js?v=c730c1db6bc6"></script><script src="battery-static.js?v=dbe06daac444"></script><script src="app.js?v=c740efa64b1c"></script>
+  <script src="hierarchy.js?v=614bec6b6308"></script><script src="replay.js?v=df0ade202378"></script><script src="trace.js?v=40f9d23ded08"></script><script src="walkthrough.js?v=544de085e883"></script><script src="battery-overview.js?v=68ffb4715818"></script><script src="battery-static.js?v=d2dd1d2b461d"></script><script src="app.js?v=bd9299d85208"></script>
 </body>
 </html>

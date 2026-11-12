@@ -8,6 +8,7 @@ const colors = {Product:'#1f7a8c',Component:'#4a6fa5',Process:'#b5703a',Material
 const labels = {contains:'CONTAINS',processedBy:'PROCESSED_BY',hasOutput:'HAS_OUTPUT',observedForProductModel:'Observed for product model',variantOf:'Variant of',observedUnderScope:'Observed under scope',modelInDeclaredPopulation:'Model in declared population',comparableSamplePopulation:'Comparable sample population',sameModelStudied:'Same model studied'};
 const state = {data:null, nodes:new Map(), positions:new Map(), shownNodes:[], shownEdges:[], hierarchy:true, expanded:new Set(), navPath:[], graphHistory:[], displayNodes:new Map(), focus:null, selected:null, view:'fusion', case:null, stage:'gate', sourceTab:'text', evidence:'', locationSummary:false, textChoice:null, table:null, located:null, trace:null, spotlight:null, cellLookup:null, cellIndex:new Map(), cache:new Map(), request:0};
 let walkthrough=null;
+let extractionTest=null;
 let overviewReturn=null;
 const canvas = $('#graph'), ctx = canvas.getContext('2d');
 let width=0, height=0, zoom=1, offset={x:0,y:0}, pointer=null, frame=0, edgeLabels=[];
@@ -118,9 +119,11 @@ function setView(view,loadDefault=true){
   if($('#papers-view'))$('#papers-view').hidden=view!=='papers';
   if($('#about-view'))$('#about-view').hidden=view!=='about';
   if($('#overview-view'))$('#overview-view').hidden=view!=='overview';
+  if($('#test-view'))$('#test-view').hidden=view!=='test';
   $('#fusion-controls').hidden=view!=='fusion'; $('#case-on-graph').hidden=view!=='replay';
   $('#case-controls').hidden=view!=='replay';
   walkthrough?.viewChanged(view);
+  if(view==='test')extractionTest?.open();
   if(view==='fusion'){resize();} else if(view==='replay'&&loadDefault&&state.case?.id!==$('#case-select').value){openReplay($('#case-select').value);}
 }
 function initializePositions(){
@@ -678,9 +681,10 @@ function clearOverviewEvidence(){
 function showOverviewEvidence(row,trigger,scrollY){
   overviewReturn={trigger,scrollY};
   const comparison=$('[data-mode="summary"]').getAttribute('aria-pressed')==='true';
+  const visualization=$('[data-mode="visualization"]').getAttribute('aria-pressed')==='true';
   const panel=$('#overview-evidence');panel.hidden=false;
   const profile=state.overview.profiles.find(profile=>profile.id===row.profile_id);
-  panel.innerHTML=`<button id="overview-back">Back to ${comparison?'comparison':'records'}</button><div><strong>${esc(profile?.label||row.label||row.name||'Study sample')}${row.element||row.material?' · '+esc(row.element||row.material):''}${row.value!=null?' · '+esc(row.qualifier||'')+esc(row.value)+(row.uncertainty!=null?' ± '+esc(row.uncertainty):'')+' '+esc(row.display_unit||row.unit):''}</strong>${contextSummary(row.condition||row.assay||'')}<small>${esc(row.paper)}</small></div>`;
+  panel.innerHTML=`<button id="overview-back">Back to ${comparison?'comparison':visualization?'visualization':'records'}</button><div><strong>${esc(row.name||profile?.label||row.label||'Study sample')}${row.element||row.material?' · '+esc(row.element||row.material):''}${row.value!=null?' · '+esc(row.qualifier||'')+esc(row.value)+(row.uncertainty!=null?' ± '+esc(row.uncertainty):'')+' '+esc(row.display_unit||row.unit):''}</strong>${contextSummary(row.condition||row.assay||'')}<small>${esc(row.paper)}</small></div>`;
   $('#overview-back').onclick=()=>{
     const previous=overviewReturn;setView('overview');clearOverviewEvidence();
     requestAnimationFrame(()=>{window.scrollTo(0,previous.scrollY);previous.trigger?.focus({preventScroll:true});});
@@ -786,8 +790,12 @@ function configureDataset(){
 }
 async function start(){
   try{
+    const testJob=new URLSearchParams(location.search).get('test-job');
+    if(testJob&&!/^[a-f0-9]{32}$/.test(testJob))throw Error('Invalid extraction job');
+    if(testJob)document.body.dataset.testResult='true';
+    if(!testJob&&$('#test-view')&&typeof ExtractionTest!=='undefined')extractionTest=ExtractionTest.mount($('#test-view'));
     document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setView(b.dataset.view));
-    state.data=await fetchJSON(document.body.dataset.graph||'data/graph.json');configureDataset();state.nodes=new Map(state.data.nodes.map(n=>[n.id,n]));state.hierarchyData=createHierarchy(state.data,JSON.parse($('#display-vocabulary')?.textContent||'{}'));initializePositions();
+    state.data=await fetchJSON(testJob?`api/test/jobs/${testJob}/graph`:document.body.dataset.graph||'data/graph.json');configureDataset();state.nodes=new Map(state.data.nodes.map(n=>[n.id,n]));state.hierarchyData=createHierarchy(state.data,JSON.parse($('#display-vocabulary')?.textContent||'{}'));initializePositions();
     const entityCount=state.data.nodes.filter(n=>['Product','Component','Process','Material'].includes(n.type)).length;
     $('#legend').innerHTML=Object.entries(colors).map(([name,color])=>`<span><i class="dot" style="background:${color}"></i>${name}</span>`).join('')+'<span>┄┄ fusion link</span>';
     for(const kind of ['paper','catalog']){const sources=state.data.sources.filter(s=>s.kind===kind),group=document.createElement('optgroup');group.label=`${sources.length} ${kind==='paper'?'papers':'catalog records'}`;sources.forEach(source=>{const option=document.createElement('option');option.value=source.id;option.textContent=source.label;group.append(option);});$('#source-filter').append(group);}
@@ -797,7 +805,7 @@ async function start(){
     }
     for(const option of $('#case-select').options){const item=state.data.cases.find(item=>item.id===option.value);if(!item)throw Error('Unknown paper case: '+option.value);option.textContent=item.paper;}
     document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setView(b.dataset.view));
-    if(document.body.dataset.papers){
+    if(!testJob&&document.body.dataset.papers){
       fetchJSON(document.body.dataset.papers).then(renderPapers).catch(error=>{
         $('#paper-list').textContent='Unable to load the paper list. Please reload the page.';console.error(error);
       });
@@ -839,11 +847,24 @@ async function start(){
     });
     $('#case-select').disabled=false;if($('#case-browse'))$('#case-browse').disabled=false;renderCaseSelection();
     window.addEventListener('resize',resize);new ResizeObserver(resize).observe(canvas.parentElement);updateGraph();resize();notify('');
-    if(document.body.dataset.overview){
+    if(testJob){
+      $('#fusion-view h2').textContent='Extracted graph';
+      $('#search').placeholder='Search extracted entities';
+      canvas.setAttribute('aria-label','Extracted graph: drag nodes to move them, drag empty space to pan, scroll to zoom, and click to inspect.');
+      $('#inspector').innerHTML=`<h3>${esc(state.data.sources[0].label)}</h3><p>${entityCount} connected entities · ${state.data.edges.reduce((n,edge)=>n+edge.records.length,0)} final relations.</p><p>Select a node or relation to inspect the extracted information and supporting evidence. Drag nodes, pan or zoom to explore.</p>`;
+      state.hierarchy=false;setView('fusion',false);updateGraph();
+    }else if(document.body.dataset.overview){
       const overview=await fetchJSON(document.body.dataset.overview);state.overview=overview;
       const actions={open:openOverviewRecord,error:error=>notify(error.message)};
-      const records=await fetchJSON('datasets/battery20/overview/analysis-records.json');
-      actions.query=BatteryStatic.create({...overview,...records});
+      if(document.body.dataset.analysis)actions.query=async parameters=>{
+        const response=await fetch(document.body.dataset.analysis,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(parameters)});
+        if(!response.headers.get('Content-Type')?.includes('application/json'))throw Error('The analysis service is unavailable. Restart the local demo server and retry.');
+        const result=await response.json();if(!response.ok)throw Error(result.error||'Analysis request failed');return result;
+      };
+      else {
+        const records=await fetchJSON('datasets/battery20/overview/analysis-records.json');
+        actions.query=BatteryStatic.create({...overview,...records});
+      }
       BatteryOverview.mount($('#battery-overview'),overview,actions);
       setView('overview',false);
     }

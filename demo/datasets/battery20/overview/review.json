@@ -2741,7 +2741,7 @@
         {
           "id": "source-794f7c45d1d2e373/mlcc-small",
           "label": "MLCCs, 0.55 × 0.25 mm",
-          "component": "electronic-component",
+          "component": "pcb",
           "chemistry": "non-battery-unspecified",
           "stream": "separated-fractions",
           "origin": "recycling-company",
@@ -2786,7 +2786,7 @@
         {
           "id": "source-794f7c45d1d2e373/mlcc-large",
           "label": "MLCCs, 0.9 × 0.6 mm",
-          "component": "electronic-component",
+          "component": "pcb",
           "chemistry": "non-battery-unspecified",
           "stream": "separated-fractions",
           "origin": "recycling-company",
@@ -2831,7 +2831,7 @@
         {
           "id": "source-794f7c45d1d2e373/ta-capacitor",
           "label": "Tantalum capacitors, 100 μF 10 V 107A",
-          "component": "electronic-component",
+          "component": "pcb",
           "chemistry": "non-battery-unspecified",
           "stream": "separated-fractions",
           "origin": "recycling-company",
@@ -2879,7 +2879,7 @@
         {
           "id": "source-794f7c45d1d2e373/pcb-table9-row1",
           "label": "Mounted contacts from mobile phone PCBs",
-          "component": "electronic-component",
+          "component": "pcb",
           "chemistry": "non-battery-unspecified",
           "stream": "separated-fractions",
           "origin": "recycling-company",
@@ -2934,7 +2934,7 @@
         {
           "id": "source-794f7c45d1d2e373/pcb-table9-row2",
           "label": "Coated edge contacts from TV-LCD PCBs",
-          "component": "electronic-component",
+          "component": "pcb",
           "chemistry": "non-battery-unspecified",
           "stream": "separated-fractions",
           "origin": "recycling-company",
@@ -2989,7 +2989,7 @@
         {
           "id": "source-794f7c45d1d2e373/pcb-table9-row3",
           "label": "Coated edge contacts from Ethernet cards",
-          "component": "electronic-component",
+          "component": "pcb",
           "chemistry": "non-battery-unspecified",
           "stream": "separated-fractions",
           "origin": "recycling-company",
@@ -3044,7 +3044,7 @@
         {
           "id": "source-794f7c45d1d2e373/pcb-table9-row4",
           "label": "Coated edge contacts from server boards",
-          "component": "electronic-component",
+          "component": "pcb",
           "chemistry": "non-battery-unspecified",
           "stream": "separated-fractions",
           "origin": "recycling-company",
@@ -3099,7 +3099,7 @@
         {
           "id": "source-794f7c45d1d2e373/pcb-table9-row6",
           "label": "SMD components from MP3 player PCBs",
-          "component": "electronic-component",
+          "component": "pcb",
           "chemistry": "non-battery-unspecified",
           "stream": "separated-fractions",
           "origin": "recycling-company",
@@ -3154,7 +3154,7 @@
         {
           "id": "source-794f7c45d1d2e373/pcb-table9-row7",
           "label": "SMD components from LCD main PCBs",
-          "component": "electronic-component",
+          "component": "pcb",
           "chemistry": "non-battery-unspecified",
           "stream": "separated-fractions",
           "origin": "recycling-company",
@@ -3209,7 +3209,7 @@
         {
           "id": "source-794f7c45d1d2e373/pcb-table9-row8",
           "label": "SMD components from mobile phone PCBs",
-          "component": "electronic-component",
+          "component": "pcb",
           "chemistry": "non-battery-unspecified",
           "stream": "separated-fractions",
           "origin": "recycling-company",
@@ -3264,7 +3264,7 @@
         {
           "id": "source-794f7c45d1d2e373/pcb-table9-row9",
           "label": "SMD components from camera PCBs",
-          "component": "electronic-component",
+          "component": "pcb",
           "chemistry": "non-battery-unspecified",
           "stream": "separated-fractions",
           "origin": "recycling-company",
@@ -3319,7 +3319,7 @@
         {
           "id": "source-794f7c45d1d2e373/edge-contact-treatment",
           "label": "Isolated PCB edge contacts",
-          "component": "electronic-component",
+          "component": "pcb",
           "chemistry": "non-battery-unspecified",
           "stream": "separated-fractions",
           "origin": "recycling-company",
@@ -3352,7 +3352,7 @@
         {
           "id": "source-794f7c45d1d2e373/mixed-smd-sieving",
           "label": "Isolated SMD components mixed with virgin SMDs",
-          "component": "electronic-component",
+          "component": "pcb",
           "chemistry": "non-battery-unspecified",
           "stream": "separated-fractions",
           "origin": "recycling-company",
@@ -3440,5 +3440,14 @@
     "mixed-phone-components": "Mixed phone components",
     "electronic-component": "Electronic component",
     "lighting-component": "Lighting component"
+  },
+  "target_aliases": {
+    "Rare earth elements (REEs)": [
+      "rare earth element",
+      "rare earth elements"
+    ],
+    "Recovered cathode material": [
+      "cathode active material"
+    ]
   }
 }

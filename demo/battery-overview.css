@@ -21,6 +21,8 @@
 .battery-results{margin-top:24px}
 .battery-results-heading{display:flex;justify-content:space-between;align-items:center;gap:15px}
 .battery-results-heading h3{font-size:21px;margin:0}
+.battery-component-context{max-width:680px;font-size:13px;line-height:1.6;color:var(--muted);margin:7px 0 0}
+.battery-component-context strong{color:var(--ink);font-weight:500}
 .battery-results-note{font-size:13px;line-height:1.65;color:var(--muted);margin:10px 0 14px;max-width:1000px}
 .battery-table-scroll{overflow:auto;max-height:650px;background:var(--surface);border:1px solid var(--line);border-radius:6px}
 .battery-table-scroll table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed;min-width:870px}
@@ -39,11 +41,6 @@
 .battery-empty{padding:32px;background:var(--surface);border:1px dashed var(--line);border-radius:8px}
 .battery-empty h4{margin:0 0 8px}
 .battery-empty p{color:var(--muted);font-size:13px;margin:0}
-.battery-audit{margin-top:32px;border-top:1px solid var(--line);padding-top:20px}
-.battery-audit>summary{cursor:pointer;font-size:14px;color:var(--teal)}
-.battery-audit>p{font-size:13px;color:var(--muted);line-height:1.7}
-.battery-audit-table .battery-table-scroll{max-height:550px}
-.battery-audit-table td{font-size:12px}
 .battery-query-form{display:block}
 .battery-switch{display:flex;gap:4px;flex-wrap:wrap}
 .battery-switch button{font-size:13px;padding:9px 16px;border-color:transparent;background:transparent}
@@ -71,3 +68,82 @@
 .battery-condition b{font-weight:600}
 .battery-condition-preview p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
 @media(max-width:700px){.battery-primary-filters,.battery-query-form.composition .battery-primary-filters{grid-template-columns:1fr}}
+
+/* Reported treatment results retain their shared display scales. */
+.battery-value-bar{display:grid;grid-template-columns:minmax(45px,1fr) auto;align-items:center;gap:12px;min-width:0;font-variant-numeric:tabular-nums}
+.battery-value-bar strong{font-size:13px;font-weight:600;white-space:nowrap}
+.battery-bar-track{position:relative;display:block;height:14px;min-width:0;background:#edf4f3;border-radius:2px}
+.battery-bar-track i{position:absolute;top:0;bottom:0;display:block;background:var(--teal);border-radius:2px;box-sizing:border-box}
+.battery-bar-track i.qualified{background:var(--teal-bg);border:1px dashed var(--teal)}
+
+
+
+/* Literature summaries show metals and method / metal cells before their sources. */
+.battery-metal-summary,.battery-bubble-panel{margin-top:26px}
+.battery-metal-summary h4,.battery-bubble-panel h4{font-size:19px;margin:0 0 12px}
+.battery-aggregate-key{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--muted)}
+.battery-key-dot{width:10px;height:10px;border-radius:50%;background:var(--ink)}
+.battery-key-range{width:28px;height:8px;background:var(--teal);margin-left:14px}
+.battery-metal-axis{display:flex;justify-content:space-between;margin:18px 150px 8px 145px;font-size:12px;color:var(--muted)}
+.battery-metal-rows{border:1px solid var(--line);border-radius:6px;background:var(--surface);overflow:hidden}
+.battery-metal-row{display:grid;grid-template-columns:125px minmax(80px,1fr) 130px;gap:20px;align-items:center;width:100%;padding:14px 18px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;text-align:left;color:var(--ink);font:inherit;font-size:14px}
+.battery-metal-row small{display:block;color:var(--muted);font-size:12px;margin-top:5px}
+.battery-metal-row:hover,.battery-metal-row[aria-pressed="true"]{background:var(--teal-bg)}
+.battery-metal-value{text-align:right;font-variant-numeric:tabular-nums}
+.battery-metal-track{position:relative;display:block;height:28px}
+.battery-metal-track::before{content:"";position:absolute;left:0;right:0;top:13px;border-top:1px solid var(--line)}
+.battery-metal-track i{position:absolute;top:9px;height:10px;min-width:2px;background:var(--teal);opacity:.55}
+.battery-metal-track b{position:absolute;top:8px;width:12px;height:12px;background:var(--ink);border:2px solid var(--surface);border-radius:50%;transform:translateX(-6px);box-sizing:border-box}
+.battery-metal-row:focus-visible,.battery-bubble-cell:focus-visible{outline:2px solid var(--teal);outline-offset:-3px}
+.battery-bubble-panel>p{font-size:13px;color:var(--muted);line-height:1.6}
+.battery-bubble-scroll{overflow:auto;max-height:70vh;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+.battery-bubble-table{width:100%;border-collapse:collapse;font-size:13px}
+.battery-bubble-table>thead>tr>th,.battery-bubble-table>tbody>tr>th,.battery-bubble-table>tbody>tr>td{padding:10px;border-bottom:1px solid var(--line);text-align:center;min-width:90px;white-space:normal;overflow-wrap:anywhere}
+.battery-bubble-table>thead>tr>th{position:sticky;top:0;background:#edf4f3;color:var(--muted);font-size:12px;z-index:2}
+.battery-bubble-table>thead>tr>th:first-child{left:0;z-index:3}
+.battery-bubble-table>tbody>tr>th{position:sticky;left:0;background:var(--surface);text-align:left;min-width:155px;max-width:190px;font-weight:500;z-index:1}
+.battery-bubble-cell{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;min-width:75px;min-height:92px;padding:3px;border:1px solid transparent;background:transparent;color:var(--ink);font-size:12px}
+.battery-bubble-cell:hover,.battery-bubble-cell[aria-pressed="true"]{background:var(--teal-bg);border-color:var(--teal)}
+.battery-bubble-cell svg{display:block;width:48px;height:48px}
+.battery-bubble-cell small{display:block;margin-top:4px;font-size:11px;color:var(--muted)}
+.battery-aggregate-detail{padding:18px;max-width:min(1100px,calc(100vw - 120px));box-sizing:border-box;outline:none;background:var(--surface)}
+.battery-aggregate-detail h4{font-size:17px;line-height:1.5;margin:14px 0 8px}
+.battery-aggregate-detail>p{font-size:13px;color:var(--muted)}
+.battery-aggregate-detail .battery-table-scroll{margin-top:14px}
+.battery-aggregate-expanded>td{padding:0!important;text-align:left!important}
+.battery-aggregate-expanded:has(>td>.battery-aggregate-detail[hidden]){display:none}
+.battery-measurement-plot{margin:24px 0}
+.battery-measurement-plot h5{font-size:16px;margin:0 0 12px}
+.battery-measurement-plot>p{font-size:12px;color:var(--muted);line-height:1.6}
+.battery-cloud-scroll{overflow-x:auto}
+.battery-cloud-chart{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:6px;padding:14px 12px 10px}
+.battery-cloud-value-title{font-size:12px;color:var(--muted);margin:0 0 18px 64px}
+.battery-cloud-canvas{position:relative;height:300px;margin:0 18px 0 64px;border-left:1px solid var(--line)}
+.battery-cloud-grid{position:absolute;left:0;right:0;border-top:1px solid var(--line);pointer-events:none}
+.battery-cloud-tick{position:absolute;left:-62px;width:50px;text-align:right;transform:translateY(-50%);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.battery-cloud-reference{position:absolute;left:0;right:0;border-top:1px dashed var(--teal);pointer-events:none}
+.battery-cloud-point{position:absolute;transform:translate(-50%,-50%);width:18px;height:18px;min-height:0;padding:0;border:0;border-radius:50%;background:transparent;cursor:pointer}
+.battery-cloud-point:not(.bound)::after{content:"";position:absolute;inset:4px;border:1px solid var(--chemistry-colour);border-radius:50%;background:var(--chemistry-colour);opacity:.85}
+.battery-cloud-point:hover,.battery-cloud-point[aria-pressed="true"]{outline:1px solid var(--chemistry-colour);outline-offset:1px}
+.battery-cloud-point:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.battery-cloud-point svg{width:18px;height:18px;fill:none;stroke:var(--chemistry-colour);stroke-width:1.5}
+.battery-cloud-categories{display:grid;margin:12px 18px 0 64px;font-size:12px;line-height:1.5;text-align:center}
+.battery-cloud-categories>div{padding:0 8px}
+.battery-cloud-categories strong,.battery-cloud-categories span,.battery-cloud-categories small{display:block}
+.battery-cloud-categories strong{font-weight:500}
+.battery-cloud-categories small{font-size:11px;color:var(--muted);margin-top:6px}
+.battery-cloud-axis-title{font-size:12px;color:var(--muted);text-align:center;margin:14px 18px 0 64px}
+.battery-chemistry-key{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:12px;line-height:1.6;margin:16px 0 10px}
+.battery-chemistry-key>span{display:flex;align-items:center;gap:6px}
+.battery-chemistry-key i{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.battery-cloud-key{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin:12px 0}
+.battery-reference-key{width:24px;height:0;border-top:1px dashed var(--teal)}
+.battery-point-detail{border-top:1px solid var(--line);padding-top:12px;margin-top:16px;font-size:13px;outline:none}
+.battery-point-detail h5{font-size:14px;line-height:1.6;margin:8px 0}
+.battery-point-detail p{line-height:1.6;margin:8px 0}
+.battery-point-detail small{display:block;color:var(--muted);margin-top:4px}
+.battery-study-data>summary{cursor:pointer;font-size:13px;color:var(--teal)}
+@media(max-width:700px){.battery-results-heading .battery-switch{width:100%}.battery-results-heading .battery-switch button{padding:9px 8px;font-size:12px}.battery-metal-row{grid-template-columns:90px minmax(55px,1fr) 90px;gap:10px;padding:12px 10px;font-size:12px}.battery-metal-row small{font-size:11px}.battery-metal-axis{margin:18px 110px 8px 110px}.battery-aggregate-detail{padding:12px;max-width:calc(100vw - 60px)}}
+
+.battery-filter select option:not(:disabled){color:var(--ink);-webkit-text-fill-color:var(--ink)}
+.battery-filter select option:disabled{color:#b2bcc1;-webkit-text-fill-color:#b2bcc1}

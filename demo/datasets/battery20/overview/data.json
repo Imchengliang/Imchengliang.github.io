@@ -1894,7 +1894,7 @@
     {
       "id": "source-794f7c45d1d2e373/mlcc-small",
       "label": "MLCCs, 0.55 × 0.25 mm",
-      "component": "electronic-component",
+      "component": "pcb",
       "chemistry": "non-battery-unspecified",
       "stream": "separated-fractions",
       "origin": "recycling-company",
@@ -1926,7 +1926,7 @@
     {
       "id": "source-794f7c45d1d2e373/mlcc-large",
       "label": "MLCCs, 0.9 × 0.6 mm",
-      "component": "electronic-component",
+      "component": "pcb",
       "chemistry": "non-battery-unspecified",
       "stream": "separated-fractions",
       "origin": "recycling-company",
@@ -1958,7 +1958,7 @@
     {
       "id": "source-794f7c45d1d2e373/ta-capacitor",
       "label": "Tantalum capacitors, 100 μF 10 V 107A",
-      "component": "electronic-component",
+      "component": "pcb",
       "chemistry": "non-battery-unspecified",
       "stream": "separated-fractions",
       "origin": "recycling-company",
@@ -1991,7 +1991,7 @@
     {
       "id": "source-794f7c45d1d2e373/pcb-table9-row1",
       "label": "Mounted contacts from mobile phone PCBs",
-      "component": "electronic-component",
+      "component": "pcb",
       "chemistry": "non-battery-unspecified",
       "stream": "separated-fractions",
       "origin": "recycling-company",
@@ -2023,7 +2023,7 @@
     {
       "id": "source-794f7c45d1d2e373/pcb-table9-row2",
       "label": "Coated edge contacts from TV-LCD PCBs",
-      "component": "electronic-component",
+      "component": "pcb",
       "chemistry": "non-battery-unspecified",
       "stream": "separated-fractions",
       "origin": "recycling-company",
@@ -2055,7 +2055,7 @@
     {
       "id": "source-794f7c45d1d2e373/pcb-table9-row3",
       "label": "Coated edge contacts from Ethernet cards",
-      "component": "electronic-component",
+      "component": "pcb",
       "chemistry": "non-battery-unspecified",
       "stream": "separated-fractions",
       "origin": "recycling-company",
@@ -2087,7 +2087,7 @@
     {
       "id": "source-794f7c45d1d2e373/pcb-table9-row4",
       "label": "Coated edge contacts from server boards",
-      "component": "electronic-component",
+      "component": "pcb",
       "chemistry": "non-battery-unspecified",
       "stream": "separated-fractions",
       "origin": "recycling-company",
@@ -2119,7 +2119,7 @@
     {
       "id": "source-794f7c45d1d2e373/pcb-table9-row6",
       "label": "SMD components from MP3 player PCBs",
-      "component": "electronic-component",
+      "component": "pcb",
       "chemistry": "non-battery-unspecified",
       "stream": "separated-fractions",
       "origin": "recycling-company",
@@ -2151,7 +2151,7 @@
     {
       "id": "source-794f7c45d1d2e373/pcb-table9-row7",
       "label": "SMD components from LCD main PCBs",
-      "component": "electronic-component",
+      "component": "pcb",
       "chemistry": "non-battery-unspecified",
       "stream": "separated-fractions",
       "origin": "recycling-company",
@@ -2183,7 +2183,7 @@
     {
       "id": "source-794f7c45d1d2e373/pcb-table9-row8",
       "label": "SMD components from mobile phone PCBs",
-      "component": "electronic-component",
+      "component": "pcb",
       "chemistry": "non-battery-unspecified",
       "stream": "separated-fractions",
       "origin": "recycling-company",
@@ -2215,7 +2215,7 @@
     {
       "id": "source-794f7c45d1d2e373/pcb-table9-row9",
       "label": "SMD components from camera PCBs",
-      "component": "electronic-component",
+      "component": "pcb",
       "chemistry": "non-battery-unspecified",
       "stream": "separated-fractions",
       "origin": "recycling-company",
@@ -2247,7 +2247,7 @@
     {
       "id": "source-794f7c45d1d2e373/edge-contact-treatment",
       "label": "Isolated PCB edge contacts",
-      "component": "electronic-component",
+      "component": "pcb",
       "chemistry": "non-battery-unspecified",
       "stream": "separated-fractions",
       "origin": "recycling-company",
@@ -2278,7 +2278,7 @@
     {
       "id": "source-794f7c45d1d2e373/mixed-smd-sieving",
       "label": "Isolated SMD components mixed with virgin SMDs",
-      "component": "electronic-component",
+      "component": "pcb",
       "chemistry": "non-battery-unspecified",
       "stream": "separated-fractions",
       "origin": "recycling-company",
@@ -15924,11 +15924,12 @@
       "unit": "%",
       "qualifier": null,
       "method_id": "source-088b0419b6777442/Process_solvent_method_for_scrap_material_recovery",
-      "material": "cathode active material",
+      "material": "Recovered cathode material",
       "metric": "recovery",
       "condition": "one step recovery process",
       "experiment_group": "",
       "temperature_upper": null,
+      "reported_material": "cathode active material",
       "experiment_key": "0eba1e7cbda0b8a717e02f587223e6652ef51946a6e4f13be9516bb4040cda12",
       "condition_keys": [
         {
@@ -15953,11 +15954,12 @@
       "unit": "%",
       "qualifier": null,
       "method_id": "source-088b0419b6777442/Process_solvent_method_for_scrap_material_recovery",
-      "material": "cathode active material",
+      "material": "Recovered cathode material",
       "metric": "recovery",
       "condition": "two step recovery processes",
       "experiment_group": "",
       "temperature_upper": null,
+      "reported_material": "cathode active material",
       "experiment_key": "5a9b6a7ee595e8925cf8a6c739344983760d41acc351fe3ed69590db5aeb7d53",
       "condition_keys": [
         {
@@ -19922,11 +19924,12 @@
       "unit": "%",
       "qualifier": null,
       "method_id": "nimh-recovery/Process_hydrochloric_acid_leaching_of_battery",
-      "material": "rare earth elements",
+      "material": "Rare earth elements (REEs)",
       "metric": "recovery",
       "condition": "3 M HCl, 95 °C, 3-h leach time, 5.5 g scrap in 50 ml acid solution",
       "experiment_group": "",
       "temperature_upper": 95.0,
+      "reported_material": "rare earth elements",
       "experiment_key": "d9ef9a409346fe0b81c9b2c0f1ec3d5ce7d82067319b52507536f58fb38d6ad6",
       "condition_keys": [
         {
@@ -20125,11 +20128,12 @@
       "unit": "%",
       "qualifier": null,
       "method_id": "nimh-recovery/Process_hydrochloric_acid_leaching_of_battery",
-      "material": "rare earth elements",
+      "material": "Rare earth elements (REEs)",
       "metric": "leaching",
       "condition": "scrap mass 6.2 g",
       "experiment_group": "",
       "temperature_upper": null,
+      "reported_material": "rare earth elements",
       "experiment_key": "b3d5036cfd55510076b108fde63d3d9c1e83defaeb2d73c72a4512947df36c71",
       "condition_keys": [
         {
@@ -20299,11 +20303,12 @@
       "unit": "%",
       "qualifier": null,
       "method_id": "nimh-recovery/Process_hydrochloric_acid_leaching_of_battery",
-      "material": "rare earth elements",
+      "material": "Rare earth elements (REEs)",
       "metric": "leaching",
       "condition": "scrap mass 5.4 g",
       "experiment_group": "",
       "temperature_upper": null,
+      "reported_material": "rare earth elements",
       "experiment_key": "22ac20843809c02a9cb7875b7c9834f80e786e319cfa2797288aa5820276fca4",
       "condition_keys": [
         {
@@ -20444,11 +20449,12 @@
       "unit": "%",
       "qualifier": null,
       "method_id": "nimh-recovery/Process_hydrochloric_acid_leaching_of_battery",
-      "material": "rare earth elements",
+      "material": "Rare earth elements (REEs)",
       "metric": "leaching",
       "condition": "scrap mass 4.6 g",
       "experiment_group": "",
       "temperature_upper": null,
+      "reported_material": "rare earth elements",
       "experiment_key": "38071b8a5526845c8857670975952ce884c00805db446c81990be2f165fb8482",
       "condition_keys": [
         {
@@ -28088,11 +28094,12 @@
       "unit": "%",
       "qualifier": null,
       "method_id": "source-c9b327e23365b8be/Process_REE_recovery",
-      "material": "rare earth element",
+      "material": "Rare earth elements (REEs)",
       "metric": "extraction",
       "condition": "anaerobic extraction process",
       "experiment_group": "",
       "temperature_upper": null,
+      "reported_material": "rare earth element",
       "experiment_key": "ccb24305c8390ff656bcaa0cfd333ad6c8bdaeea05032c9b426ba43b47dd75f1",
       "condition_keys": [
         {
@@ -30139,7 +30146,7 @@
   ],
   "provenance": {
     "graph_sha256": "46f210fbc26ca8f2b544aa944c8a9f7cefe882766fa3140c792907557758f0fd",
-    "review_sha256": "7b6fb6df0ccc2d30449de5ddb6bf9abca3f089f2e763721ee84a68d1fb346cd8",
+    "review_sha256": "a6af1b6459e683644e859ef7ae0aa15d271fd8095014877b922dcafa746bbbde",
     "extraction_api_calls": 0
   }
 }
