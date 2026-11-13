@@ -359,9 +359,9 @@ const BatteryOverview = (() => {
       const heading = `<tr class="battery-comparison-group"><td colspan="4"><strong>${summary.component ? escape(data.components[summary.component]) + ' · ' : ''}${escape(data.material_classes[summary.material_class] || summary.material_class)} · ${escape(summary.target)}</strong>
         <small>${escape(summary.metric)} · ${unit}${summary.family ? ' · ' + escape(summary.family) : ''} · ${count(summary.studies, 'study', 'studies')} · ${count(summary.sample_groups, 'sample group')}${summary.records > 1 ? ' · Observed range ' + rangeText(summary) : ''}</small>
         ${statisticsPanel}${routes}</td></tr>`;
-      if (!composition) return [heading, ...summary.record_ids.map(id => treatmentRow(contributing.get(id), summary, scale))];
-      return [heading, ...summary.entries.map(entry => {
-        const records = entry.record_ids.map(id => contributing.get(id));
+      if (!composition) return [heading, ...summary.record_ids.map(id => contributing.get(id)).sort((a,b) => Number(b.value) - Number(a.value)).map(row => treatmentRow(row, summary, scale))];
+      return [heading, ...[...summary.entries].sort((a,b) => (b.maximum ?? -Infinity) - (a.maximum ?? -Infinity)).map(entry => {
+        const records = entry.record_ids.map(id => contributing.get(id)).sort((a,b) => Number(b.value) - Number(a.value));
         const first = records[0], profile = profiles.get(entry.profile_id);
         const value = records.length === 1 ? reportedValue(first) : rangeText({...entry, units: unique(records.map(row => row.display_unit || row.unit))});
         const basis = data.comparison_vocabularies;
