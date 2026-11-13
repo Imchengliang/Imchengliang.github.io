@@ -365,7 +365,8 @@ const BatteryOverview = (() => {
         const first = records[0], profile = profiles.get(entry.profile_id);
         const value = records.length === 1 ? reportedValue(first) : rangeText({...entry, units: unique(records.map(row => row.display_unit || row.unit))});
         const basis = data.comparison_vocabularies;
-        const context = `${escape(entry.assay)}<details><summary>Measurement basis</summary>${escape(basis.mass_denominator[entry.mass_denominator])}<br>${escape(basis.moisture_basis[entry.moisture_basis])}${entry.measurement_state_note ? '<p>' + escape(entry.measurement_state_note) + '</p>' : ''}</details>`;
+        const basisNotes = [!['sample-mass','unspecified'].includes(entry.mass_denominator) && basis.mass_denominator[entry.mass_denominator], entry.moisture_basis !== 'unspecified' && basis.moisture_basis[entry.moisture_basis], entry.measurement_state_note].filter(Boolean);
+        const context = `${escape(entry.assay)}${basisNotes.length ? `<details><summary>Measurement basis</summary>${basisNotes.map(note => '<p>' + escape(note) + '</p>').join('')}</details>` : ''}`;
         return `<tr><td><strong>${escape(data.material_classes[entry.material_class])}</strong><small>${escape(entry.label)}</small><small>${escape(data.chemistries[profile.chemistry])} · ${escape(profile.state)}</small></td>
           <td><strong>${value}</strong>${records.length > 1 ? `<small>${count(records.length, 'reported value')} · descriptive range</small>` : ''}</td>
           <td>${context}</td><td>${paperCell(first)}${contributingRecords(entry, contributing)}</td></tr>`;

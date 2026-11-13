@@ -62,7 +62,7 @@ function updateNavigation(){
 function rememberGraph(){
   const copy=positions=>positions&&new Map([...positions].map(([id,p])=>[id,{...p}]));
   state.graphHistory.push({hierarchy:state.hierarchy,focus:state.focus,expanded:[...state.expanded],navPath:[...state.navPath],selected:state.selected,
-    filters:Object.fromEntries(['source-filter','type-filter','relation-filter'].map(id=>[id,$('#'+id).value])),fusion:$('#fusion-toggle').checked,
+    filters:Object.fromEntries(['source-filter','source-filter-2','type-filter','relation-filter'].map(id=>[id,$('#'+id).value])),fusion:$('#fusion-toggle').checked,
     positions:copy(state.positions),localPositions:copy(state.localPositions),zoom,offset:{...offset}});
 }
 function restoreGraph(previous){
@@ -139,14 +139,14 @@ function initializePositions(){
   }));
 }
 function updateGraph(fit=true){
-  const source=$('#source-filter').value, kind=$('#type-filter').value;
+  const sources=[$('#source-filter').value,$('#source-filter-2').value].filter(Boolean), kind=$('#type-filter').value;
   const families=kind.endsWith('Family')||state.nodes.get(state.focus)?.type.endsWith('Family');
   let edges=state.data.edges.filter(e=>($('#fusion-toggle').checked||!e.fusion)&&(!$('#relation-filter').value||e.predicate===$('#relation-filter').value));
   let nodes=state.data.nodes;
-  if(source){
-    edges=edges.filter(e=>e.sources.includes(source));
+  if(sources.length){
+    edges=edges.filter(e=>e.sources.some(source=>sources.includes(source)));
     const ids=new Set(edges.flatMap(e=>[e.source,e.target]));
-    nodes=nodes.filter(n=>n.source===source||ids.has(n.id));
+    nodes=nodes.filter(n=>sources.includes(n.source)||ids.has(n.id));
   }
   nodes=nodes.filter(n=>(families || !n.type.endsWith('Family')) && (!kind||n.type===kind));
   const allowed=new Set(nodes.map(n=>n.id));
@@ -159,7 +159,7 @@ function updateGraph(fit=true){
   state.shownNodes=nodes; state.shownEdges=edges;
   state.visibleEntityIds=new Set(nodes.map(node=>node.id));
   state.localPositions=null;
-  if(state.focus || source){
+  if(state.focus || sources.length){
     const levels=new Map();
     if(state.focus){
       levels.set(state.focus,0);
@@ -430,7 +430,7 @@ function selectGroup(id){
 function expandGroup(id){state.graphHistory=[];state.hierarchyData.path(id).forEach(group=>state.expanded.add(group));updateGraph();selectGroup(id);}
 function focusNode(id,clearFilters=false){
   if(displayNode(id)?.group){expandGroup(id);return;}
-  const filters=['source-filter','type-filter','relation-filter'];
+  const filters=['source-filter','source-filter-2','type-filter','relation-filter'];
   if(state.focus===id&&!state.hierarchy&&(!clearFilters||filters.every(key=>!$('#'+key).value))){selectNode(id);return;}
   rememberGraph();
   if(clearFilters)for(const key of filters)$('#'+key).value='';
@@ -667,7 +667,7 @@ function renderCellResults(container){
 }
 function graphRecord(record){
   const node=record.node_id||state.case.entity_map[record.subject];if(!state.nodes.has(node))return;
-  setView('fusion');$('#source-filter').value=state.case.paper;$('#type-filter').value='';$('#relation-filter').value='';focusNode(node);
+  setView('fusion');$('#source-filter').value=state.case.paper;$('#source-filter-2').value='';$('#type-filter').value='';$('#relation-filter').value='';focusNode(node);
   const target=state.case.entity_map[record.object],predicates={CONTAINS:'contains',HAS_OUTPUT:'hasOutput',PROCESSED_BY:'processedBy'};
   const edge=state.shownEdges.find(e=>e.source===node&&e.target===target&&e.predicate===predicates[record.predicate]);
   if(edge){const matches=edge.records.filter(candidate=>Trace.graphMatches(state.case,edge,candidate,record));selectEdge(edge.id,matches.length===1?matches[0]:null);}
@@ -783,7 +783,6 @@ function configureDataset(){
   picker.value=picker.options[0]?.value||'';
   const papers=state.data.sources.filter(source=>source.kind==='paper').length;
   const catalogs=state.data.sources.filter(source=>source.kind==='catalog').length;
-  $('#source-filter').options[0].textContent=`All ${papers+catalogs} sources`;
   $('#snapshot-counts').textContent=`${papers} papers · ${catalogs} catalog records`;
   if($('#about-dataset'))$('#about-dataset').textContent=`${papers} papers + ${catalogs} product catalog records`;
   $('#snapshot-manifest').href=state.data.snapshot.manifest_url||'data/manifest.json';
@@ -798,7 +797,7 @@ async function start(){
     state.data=await fetchJSON(testJob?`api/test/jobs/${testJob}/graph`:document.body.dataset.graph||'data/graph.json');configureDataset();state.nodes=new Map(state.data.nodes.map(n=>[n.id,n]));state.hierarchyData=createHierarchy(state.data,JSON.parse($('#display-vocabulary')?.textContent||'{}'));initializePositions();
     const entityCount=state.data.nodes.filter(n=>['Product','Component','Process','Material'].includes(n.type)).length;
     $('#legend').innerHTML=Object.entries(colors).map(([name,color])=>`<span><i class="dot" style="background:${color}"></i>${name}</span>`).join('')+'<span>┄┄ fusion link</span>';
-    for(const kind of ['paper','catalog']){const sources=state.data.sources.filter(s=>s.kind===kind),group=document.createElement('optgroup');group.label=`${sources.length} ${kind==='paper'?'papers':'catalog records'}`;sources.forEach(source=>{const option=document.createElement('option');option.value=source.id;option.textContent=source.label;group.append(option);});$('#source-filter').append(group);}
+    for(const kind of ['paper','catalog']){const sources=state.data.sources.filter(s=>s.kind===kind),group=document.createElement('optgroup');group.label=`${sources.length} ${kind==='paper'?'papers':'catalog records'}`;sources.forEach(source=>{const option=document.createElement('option');option.value=source.id;option.textContent=source.label;group.append(option);});$('#source-filter').append(group);$('#source-filter-2').append(group.cloneNode(true));}
     for(const kind of Object.keys(colors)){$('#type-filter').insertAdjacentHTML('beforeend',`<option>${kind}</option>`);}
     for(const predicate of [...new Set(state.data.edges.map(edge=>edge.predicate))].sort()){
       const option=document.createElement('option');option.value=predicate;option.textContent=labels[predicate]||predicate;$('#relation-filter').append(option);
@@ -810,8 +809,8 @@ async function start(){
         $('#paper-list').textContent='Unable to load the paper list. Please reload the page.';console.error(error);
       });
     }
-    for(const id of ['source-filter','type-filter','relation-filter','fusion-toggle'])$('#'+id).onchange=()=>{
-      if(id==='source-filter'){showAllEntities();return;}
+    for(const id of ['source-filter','source-filter-2','type-filter','relation-filter','fusion-toggle'])$('#'+id).onchange=()=>{
+      if(id==='source-filter'||id==='source-filter-2'){showAllEntities();return;}
       state.graphHistory=[];
       if(id==='type-filter'&&$('#type-filter').value.endsWith('Family'))state.hierarchy=false;
       updateGraph();
@@ -825,7 +824,7 @@ async function start(){
     $('#graph-node-open').onclick=()=>inspectGraphSelection('node',true);
     $('#graph-edge-inspect').onclick=()=>inspectGraphSelection('edge');
     $('#text-tab').onclick=()=>{state.sourceTab='text';renderSource();};$('#tables-tab').onclick=()=>{state.sourceTab='tables';renderSource();};$('#record-search').oninput=renderStage;
-    $('#case-on-graph').onclick=()=>{setView('fusion');state.graphHistory=[];state.hierarchy=false;state.focus=null;state.navPath=[];$('#source-filter').value=state.data.cases.find(item=>item.id===$('#case-select').value).paper;$('#type-filter').value='';$('#relation-filter').value='';updateGraph();};
+    $('#case-on-graph').onclick=()=>{setView('fusion');state.graphHistory=[];state.hierarchy=false;state.focus=null;state.navPath=[];$('#source-filter').value=state.data.cases.find(item=>item.id===$('#case-select').value).paper;$('#source-filter-2').value='';$('#type-filter').value='';$('#relation-filter').value='';updateGraph();};
     $('#inspector').innerHTML=`<div class="eyebrow">TRACEABLE KNOWLEDGE</div><div class="intro-icon">⌘</div><h3>Four entry points.<br>Explore one level at a time.</h3><p>Select Product, Component, Process or Material. Expand a group to browse types and families, then individual entities.</p><h4>What is underneath?</h4><p>${entityCount} entities and ${state.data.edges.length} displayed relations. ${state.data.observations} quantitative observations remain available in relation details.</p>`;
     if($('#walkthrough-start'))walkthrough=Walkthrough.mount({
       graph:state.data,loadGuide:path=>fetchJSON(path),
@@ -839,7 +838,7 @@ async function start(){
       graphView:({node,edge},step)=>{
         state.graphHistory=[];
         state.spotlight=null;state.trace=null;renderTrace();setView('fusion');
-        for(const id of ['source-filter','type-filter','relation-filter','search'])$('#'+id).value='';
+        for(const id of ['source-filter','source-filter-2','type-filter','relation-filter','search'])$('#'+id).value='';
         searchNodes();$('#fusion-toggle').checked=step.fusion;focusNode(node);
         if(edge)selectEdge(edge.id);
       },
