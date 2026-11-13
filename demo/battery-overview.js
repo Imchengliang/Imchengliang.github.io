@@ -289,9 +289,9 @@ const BatteryOverview = (() => {
       <div class="battery-primary-filters">
       ${field('component', 'Component', `<select>${options(available(data.components, 'component'), 'All components')}</select>`)}
       ${field('stream', 'Feedstock', `<select>${options(available(data.streams, 'stream'), 'All feedstocks')}</select>`)}
+      ${field('chemistry', 'Material system', `<select>${options(available(data.chemistries, 'chemistry'), 'All material systems')}</select>`, 'composition')}
       ${field('target', 'Target', '<select></select>')}
       ${field('co_target', 'Co-existing target', '<select></select>', 'treatments')}
-      ${field('chemistry', 'Material system', `<select>${options(available(data.chemistries, 'chemistry'), 'All material systems')}</select>`, 'composition')}
       ${field('method', 'Treatment family', `<select>${options(unique(data.methods.map(method => method.family)).sort().map(family => [family, family]), 'All treatments')}</select>`, 'treatments')}
       <button type="button" class="battery-reset">Reset</button></div>
       </form></section>
