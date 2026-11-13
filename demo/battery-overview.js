@@ -358,7 +358,7 @@ const BatteryOverview = (() => {
       }).join('')}</details>` : '';
       const heading = `<tr class="battery-comparison-group"><td colspan="4"><strong>${summary.component ? escape(data.components[summary.component]) + ' · ' : ''}${escape(data.material_classes[summary.material_class] || summary.material_class)} · ${escape(summary.target)}</strong>
         <small>${escape(summary.metric)} · ${unit}${summary.family ? ' · ' + escape(summary.family) : ''} · ${count(summary.studies, 'study', 'studies')} · ${count(summary.sample_groups, 'sample group')}${summary.records > 1 ? ' · Observed range ' + rangeText(summary) : ''}</small>
-        ${summary.conditions ? '<small>' + count(summary.conditions, 'reported condition set') + '</small>' : ''}${statisticsPanel}${routes}</td></tr>`;
+        ${statisticsPanel}${routes}</td></tr>`;
       if (!composition) return [heading, ...summary.record_ids.map(id => treatmentRow(contributing.get(id), summary, scale))];
       return [heading, ...summary.entries.map(entry => {
         const records = entry.record_ids.map(id => contributing.get(id));
@@ -377,7 +377,6 @@ const BatteryOverview = (() => {
     }
     async function render() {
       const current = ++request;
-      rowsById = new Map(data.profiles.map(profile => [profile.id, profile]));
       const composition = workspace === 'composition';
       const placeholders = {component:'All components',stream:'All feedstocks',target:'All targets',chemistry:'All material systems',method:'All treatments',co_target:'Any additional target'};
       for (const [field, values] of Object.entries(filterOptions(data,controls,workspace,mode))) {
@@ -398,8 +397,7 @@ const BatteryOverview = (() => {
       componentContext.innerHTML = controls.component ? `<strong>${escape(data.components[controls.component])}</strong> · ${escape(componentDescriptions[controls.component] || '')}` : '';
       const counter = container.querySelector('.battery-result-count');
       counter.textContent = 'Loading…';
-      const output = container.querySelector('.battery-table');output.innerHTML = '';
-      container.querySelector('.battery-results-note').textContent = '';
+      const output = container.querySelector('.battery-table');output.setAttribute('aria-busy', 'true');
       let response;
       try {
         const key = JSON.stringify(parameters);
@@ -413,11 +411,13 @@ const BatteryOverview = (() => {
       } catch (error) {
         if (current !== request) return;
         cachedQuery = null;
+        output.innerHTML = '';output.setAttribute('aria-busy', 'false');
         counter.textContent = 'Query unavailable';
         container.querySelector('.battery-results-note').textContent = error.message;
         actions.error(error);return;
       }
       if (current !== request) return;
+      rowsById = new Map(data.profiles.map(profile => [profile.id, profile]));
       const rows = response.rows;
       comparisonRecords = new Map(rows.map(row => [row.id,row]));
       counter.textContent = `${count(rows.length, routes ? 'treatment' : 'record')} · ${count(unique(rows.map(row => row.paper)).length, 'study', 'studies')}`;
@@ -456,6 +456,7 @@ const BatteryOverview = (() => {
       }
       const coverage = rows.length ? null : emptyCoverage(data, parameters);
       output.innerHTML = visual || (body.length ? table(headers, body) : `<div class="battery-empty"><h4>${rows.length ? 'No unqualified values for this summary.' : 'No reviewed records match these filters.'}</h4><p>${escape(coverage?.reason || 'Open Records to inspect the individual reported values.')}</p>${coverage?.treatments ? `<div class="battery-row-actions"><button type="button" data-browse-treatments>Browse all ${coverage.treatments} treatments for this selection</button></div>` : ''}</div>`);
+      output.setAttribute('aria-busy', 'false');
     }
     form.addEventListener('change', event => {
       controls[event.target.name] = event.target.value;
