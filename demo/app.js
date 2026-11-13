@@ -499,7 +499,7 @@ canvas.addEventListener('keydown',e=>{if(e.key==='+'||e.key==='=')scale(1.25);if
 
 function renderCaseSelection(){
   const item=state.data.cases.find(item=>item.id===$('#case-select').value);
-  if(item)$('#case-summary').innerHTML=`<p><span class="tag">${esc(item.tag)}</span></p><p>${esc(item.description)}</p><p>${item.triple_count} final relations · ${item.tables} tables</p>`;
+  if(item)$('#case-summary').innerHTML=`<p><span class="tag">${esc(item.tag)}</span></p><p>${esc(item.description)}</p><p>${item.triple_count} final triples · ${item.tables} tables</p>`;
 }
 async function loadCase(id){
   const request=++state.request;notify('Loading archived case…');
@@ -512,7 +512,7 @@ async function loadCase(id){
     if(state.case.source_only){state.stage='final';walkthrough?.reset();}
     else if($('#case-select').value!==id){$('#case-select').value=id;walkthrough?.reset();}
     state.cellIndex=Replay.cellIndex(state.case);$('#case-title').textContent=state.case.paper;
-    $('.replay-note').textContent=state.case.source_only?'Explore this paper’s final relations and source evidence.':'Explore processes, entities and relations, and trace their supporting text and tables.';
+    $('.replay-note').textContent=state.case.source_only?'Explore this paper’s final triples and source evidence.':'Explore processes, entities and relations, and trace their supporting text and tables.';
     const item=state.case;
     renderCaseSelection();
     $('#stages').innerHTML=processMap(item);
@@ -741,7 +741,7 @@ function renderStage(){
     const active=b.dataset.stage===stage.id;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));
   });
   renderTrace();
-  $('#stage-heading').innerHTML=`<strong>${esc(stage.label)}</strong>`+stageFlow(stage.id);
+  $('#stage-heading').innerHTML=`<strong>${esc(stage.id==='final'?'Final triples':stage.label)}</strong>`+stageFlow(stage.id);
   const container=$('#stage-records');container.replaceChildren();
   const downloads=document.createElement('details');downloads.innerHTML='<summary>Data files</summary>';
   const files=document.createElement('div');files.className='file-links';
@@ -880,18 +880,18 @@ const STAGE_FLOW={
   relation:['Source sentence and available context','Archived candidate','Endpoints and measurement, or unresolved request'],
   revision:['Unresolved requests','Recorded operation and status','Committed output or unresolved state'],
   scope:['Merged entities, relations and paper evidence','Post-merge sample / model / method annotation','Scope records for final export and fusion'],
-  final:['Postprocessed relations','Final serialization','Final relations used for fusion'],
+  final:['Postprocessed triples','Final serialization','Final triples used for fusion'],
 };
 function stageFlow(id){
   const f=STAGE_FLOW[id];if(!f)return '';
   return `<div class="stage-flow" aria-label="What this stage records"><span><small>Input</small>${esc(f[0])}</span><i>→</i><span><small>Recorded action</small>${esc(f[1])}</span><i>→</i><span><small>Output</small>${esc(f[2])}</span></div>`;
 }
 function processMap(item){
-  if(item.source_only)return '<button data-stage="final" class="pm-node pm-final active"><b>Final relations</b><small>Source-only archive · no intermediate stages</small></button>';
+  if(item.source_only)return '<button data-stage="final" class="pm-node pm-final active"><b>Final triples</b><small>Source-only archive · no intermediate stages</small></button>';
   const by=Object.fromEntries(item.stages.map(s=>[s.id,s]));
   const node=id=>{const s=by[id];if(!s)return '<span class="pm-missing">—</span>';
     const count=id==='process'&&item.process_inventory?`${item.process_inventory.final_count} Processes`:`${s.records.length} records`;
-    return `<button data-stage="${s.id}" class="pm-node pm-${s.id} ${s.id===state.stage?'active':''}"><b>${esc(s.label)}</b><small>${count}</small></button>`;};
+    return `<button data-stage="${s.id}" class="pm-node pm-${s.id} ${s.id===state.stage?'active':''}"><b>${esc(s.id==='final'?'Final triples':s.label)}</b><small>${count}</small></button>`;};
   return `<div class="pm">
     <div class="pm-lane"><span class="pm-lane-label">1 · Parallel planning</span>${node('gate')}${node('process')}${node('entity')}<span class="pm-hint">Gate / IR planning, Process and Entity run in parallel.</span></div>
     <div class="pm-lane"><span class="pm-lane-label">2 · Grounded extraction</span>${node('table')}${node('relation')}<span class="pm-hint">Table execution and Relation extraction use the available entity / Process context.</span></div>
