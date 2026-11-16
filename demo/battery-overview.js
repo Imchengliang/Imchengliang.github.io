@@ -6,6 +6,7 @@ const BatteryOverview = (() => {
   const unique = values => [...new Set(values)];
   const count = (value, singular, plural = singular + 's') => `${value} ${value === 1 ? singular : plural}`;
   const extractionMetrics = new Set(['leaching', 'recovery', 'dissolution', 'extraction', 'recovery_rate', 'released_efficiency']);
+  const matchesTarget = (row, target) => row.material === target || row.target_group === target;
 
   function hasAbsentReagent(row, method, reagent) {
     const clean = value => String(value || '').normalize('NFKC').replace(/\s+/g, ' ');
@@ -36,12 +37,12 @@ const BatteryOverview = (() => {
       ).sort((left, right) => (left.display_unit || left.unit).localeCompare(right.display_unit || right.unit) || Number(right.value) - Number(left.value));
     }
     let results = data.results.filter(row => methods.has(row.method_id) &&
-      (!filters.target || row.material === filters.target) &&
+      (!filters.target || matchesTarget(row, filters.target)) &&
       (filters.template === 'routes' || ['time', 'concentration'].every(key =>
         !filters[key + '_condition'] || (row[key + '_conditions'] || []).includes(filters[key + '_condition']))));
     if (filters.co_target) {
-      const experiments = new Set(data.results.filter(row => row.material === filters.co_target && row.experiment_key).map(row => row.experiment_key));
-      results = results.filter(row => row.material !== filters.co_target && row.experiment_key && experiments.has(row.experiment_key));
+      const experiments = new Set(data.results.filter(row => matchesTarget(row, filters.co_target) && row.experiment_key).map(row => row.experiment_key));
+      results = results.filter(row => !matchesTarget(row, filters.co_target) && row.experiment_key && experiments.has(row.experiment_key));
     }
     if (filters.template === 'routes') {
       const ids = new Set(results.map(row => row.method_id));
@@ -108,7 +109,7 @@ const BatteryOverview = (() => {
   function filterOptions(data, filters, workspace, mode) {
     const composition = workspace === 'composition';
     const profileOptions = (labels, field) => Object.entries(labels).filter(([value]) => data.profiles.some(profile => profile[field] === value));
-    const targets = unique((composition ? data.compositions : data.results).map(row => composition ? row.element : row.material)).sort().map(value => [value,value]);
+    const targets = unique((composition ? data.compositions : data.results).map(row => composition ? row.element : row.target_group || row.material)).sort().map(value => [value,value]);
     const catalogs = {
       component: profileOptions(data.components,'component'), stream: profileOptions(data.streams,'stream'),
       chemistry: profileOptions(data.chemistries,'chemistry'), target: targets, co_target: targets,
@@ -322,7 +323,7 @@ const BatteryOverview = (() => {
     function coResults(records) {
       if (!controls.co_target) return '';
       const experiments = new Set(records.map(row => row.experiment_key).filter(Boolean));
-      const peers = data.results.filter(row => row.material === controls.co_target && experiments.has(row.experiment_key));
+      const peers = data.results.filter(row => matchesTarget(row, controls.co_target) && experiments.has(row.experiment_key));
       if (!peers.length) return '';
       return `<details><summary>Co-existing ${escape(controls.co_target)} results (${peers.length})</summary>${peers.map(row =>
         `<p><strong>${escape(row.material)} · ${escape(row.qualifier || '')}${escape(row.value)} ${escape(row.unit)}</strong></p>${actionButtons(row)}`).join('')}</details>`;
