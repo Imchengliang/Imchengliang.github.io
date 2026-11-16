@@ -344,7 +344,7 @@ const BatteryOverview = (() => {
       const method = methods.get(row.method_id);
       return `<tr><td><strong>${escape(method.name)}</strong><small>${escape(profiles.get(row.profile_id).label)}</small><small>${escape(group.target)} · ${escape(group.metric.replaceAll('_', ' '))}</small></td>
         <td>${valueBar(row, scale)}<small>Scale ${format(scale.minimum)}–${format(scale.maximum)} ${escape(scale.units.join(' / '))}</small>${coResults([row])}</td>
-        <td><div class="battery-condition-preview"><p>${escape(row.condition || 'Conditions not recorded')}</p></div>${row.condition ? '<details><summary>Full conditions</summary><p>' + escape(row.condition) + '</p></details>' : ''}</td><td>${paperCell(row)}</td></tr>`;
+        <td><p>${escape(row.condition || 'Conditions not recorded')}</p></td><td>${paperCell(row)}</td></tr>`;
     }
     function comparisonRows(summary, contributing, composition, scale) {
       const unit = escape((summary.units || [summary.unit]).join(' / '));
@@ -444,7 +444,7 @@ const BatteryOverview = (() => {
         headers = ['Study feedstock', 'Treatment', 'Reported result', 'Conditions', 'Source'];
         body = rows.map(row => {
           const method = methods.get(row.method_id);
-          return `<tr><td>${sampleCell(row)}</td><td><strong>${escape(method.name)}</strong><small>${escape(method.family)}</small></td><td><strong>${escape(row.material)} · ${escape(row.qualifier || '')}${escape(row.value)} ${escape(row.unit)}</strong><small>${escape(row.metric.replaceAll('_', ' '))}</small>${coResults([row])}</td><td>${row.temperature_upper == null ? '' : `Temperature ≤ ${format(row.temperature_upper)} °C`}<details><summary>Conditions</summary><p>${escape(row.condition || 'See source record.')}</p></details></td><td>${paperCell(row)}</td></tr>`;
+          return `<tr><td>${sampleCell(row)}</td><td><strong>${escape(method.name)}</strong><small>${escape(method.family)}</small></td><td><strong>${escape(row.material)} · ${escape(row.qualifier || '')}${escape(row.value)} ${escape(row.unit)}</strong><small>${escape(row.metric.replaceAll('_', ' '))}</small>${coResults([row])}</td><td><p>${escape(row.condition || 'Conditions not recorded')}</p></td><td>${paperCell(row)}</td></tr>`;
         });
       }
       if (mode === 'visualization') {
